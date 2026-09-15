@@ -579,9 +579,11 @@ Funcionalidades deseadas: Si utilizara esta nueva plataforma en el día a día, 
 - Link: [Ver entrevista](https://youtu.be/Il90kC2yYTM)
 - Inicia en: 0:02
 - Duración: 10:48
+
 **Contexto de la entrevista**
 Al igual que en la primera entrevista, el objetivo fue conocer la perspectiva de un trabajador de restaurante de comida rápida sobre una propuesta de proyecto IoT para monitorear componentes eléctricos en la cocina y prevenir accidentes.
-Aspectos clave mencionados por la entrevistada:
+
+**Aspectos clave mencionados por la entrevistada:**
 - Protocolos ante fallas eléctricas: Lo primero que hacen es avisar al encargado de turno. Si es un corte general, esperan indicaciones; pero si es un equipo específico (freidora, horno, plancha), evitan manipularlo por seguridad (especialmente si hay humo, chispas o cables dañados). Mientras tanto, el equipo de cocina se reorganiza para seguir trabajando con las máquinas operativas y priorizar pedidos.
 - Tiempos de respuesta: Depende de la gravedad. Si la falla afecta directamente la producción y operación, se reporta rápidamente como emergencia para coordinar con mantenimiento. Si es algo menor, puede esperar. Los tiempos también dependen de la disponibilidad del técnico o de si se necesitan repuestos.
 **Impacto de las fallas en el trabajo y servicio:**
