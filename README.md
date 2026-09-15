@@ -546,6 +546,31 @@ En esta sección se presenta el diseño de las entrevistas por segmento objetivo
 
 ### 2.2.2. Registro de entrevistas
 
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+- Entrevista: Mark Mori
+- Edad: 21 años
+- Link: [Ver entrevista](https://youtu.be/P8z1pkmBKxY)
+- Inicia en: 0:10
+- Duración: 7:38
+
+**Contexto de la entrevista**
+El objetivo de la charla fue conocer la perspectiva del personal operativo sobre una propuesta de proyecto basada en dispositivos IoT (sensores inteligentes) para medir el consumo eléctrico, evitar sobrecalentamientos y prevenir accidentes en locales comerciales.
+
+**Aspectos clave mencionados por el entrevistado:**
+- Protocolos ante fallas eléctricas: Cuando ocurre un corte de luz o falla un equipo (como freidoras u hornos), se avisa inmediatamente al gerente de turno. El gerente baja el interruptor y se emite un ticket de soporte. Priorizan revisar las llaves termomagnéticas para asegurar que las cámaras de frío no pierdan temperatura y se echen a perder los insumos.
+- Tiempos de respuesta: Para fallas críticas reportadas por su plataforma interna, el tiempo estimado de atención y arreglo por parte de los técnicos es de 1 a 3 horas, ya que no pueden detener operaciones esenciales.
+Impacto de las fallas en el trabajo y servicio:
+- Atención y ventas: Se paralizan las operaciones. Caen los sistemas POS (puntos de venta) por falta de internet y las pantallas de cocina se apagan, impidiendo ver o tomar nuevos pedidos.
+- Delivery: Los repartidores no pueden ser despachados.
+- Seguridad: Las fallas incrementan el riesgo de accidentes, posibles fugas de gas o problemas de iluminación en el entorno de la cocina.
+**Mantenimientos preventivos y seguridad:**
+El mantenimiento en su local se realiza cada dos meses. Es vital porque la grasa y el calor constante de la cocina pueden afectar los circuitos.
+Mark considera crítico el cumplimiento normativo. Reciben capacitaciones mensuales sobre cómo actuar en estas emergencias, lo cual es fundamental al convivir con pisos húmedos, freidoras y altas temperaturas.
+**Opinión sobre la plataforma propuesta (IoT y reportes):**
+Considera útil la idea para el seguimiento en tiempo real, aunque menciona que actualmente su empresa ya terceriza esa función con proveedores establecidos.
+Funcionalidades deseadas: Si utilizara esta nueva plataforma en el día a día, le gustaría que incluyera el seguimiento en tiempo real del ticket de soporte, la opción de adjuntar fotografías del problema, un historial de fallas y un chat directo con el técnico para agilizar la solución y mejorar la trazabilidad.
+
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
