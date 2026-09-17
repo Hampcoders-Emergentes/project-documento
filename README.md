@@ -924,6 +924,13 @@ Las restricciones arquitectónicas para el proyecto ElectroLink se han categoriz
 
 - Modelo de Negocio SaaS: La arquitectura de software debe estar acoplada a un modelo comercial Software as a Service (SaaS), permitiendo la gestión, acceso y facturación recurrente segregada por local, tablero eléctrico o conjunto de sensores.  
 
+##### Restricciones de Integración (Integration Constraints)
+
+- Procesamiento de Pagos: El sistema debe delegar el procesamiento de pagos de suscripciones (mensuales o anuales) y la autogestión de facturación interactuando exclusivamente con la pasarela Stripe mediante Webhooks.  
+
+- Servicio de Notificaciones: El envío de alertas de anomalías y notificaciones push en tiempo real hacia los dispositivos móviles y web de los usuarios debe integrarse con los servicios de FCM (Firebase Cloud Messaging) / APNs.  
+
+- Servicios de Mapeo: Las funcionalidades de renderizado de mapas, geolocalización de las tiendas y geocodificación deben depender de las APIs de Mapbox o Google Maps.
 
 ### 4.1.3. Architectural Drivers Backlog
 
