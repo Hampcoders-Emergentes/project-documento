@@ -932,6 +932,10 @@ Las restricciones arquitectónicas para el proyecto ElectroLink se han categoriz
 
 - Servicios de Mapeo: Las funcionalidades de renderizado de mapas, geolocalización de las tiendas y geocodificación deben depender de las APIs de Mapbox o Google Maps.
 
+##### Restricciones Legales y Regulatorias (Regulatory/Legal Constraints)
+
+- Cumplimiento Normativo Nacional (SST): El diseño de la plataforma, el manejo de logs inmutables y la generación de reportes deben cumplir con los estándares técnicos y de evidencia exigidos por las autoridades fiscalizadoras peruanas en Seguridad y Salud en el Trabajo, específicamente SUNAFIL, OSINERGMIN e INDECI.
+
 ### 4.1.3. Architectural Drivers Backlog
 
 ### 4.1.4. Architectural Design Decisions
