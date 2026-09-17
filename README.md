@@ -918,6 +918,13 @@ Las restricciones arquitectónicas para el proyecto ElectroLink se han categoriz
 
 - Infraestructura Cloud: El despliegue de los contenedores de la API, la aplicación web estática y la base de datos debe realizarse sobre la infraestructura de la nube de Microsoft Azure (utilizando Azure App Service y Azure Database for PostgreSQL).
 
+##### Restricciones Operativas y de Entorno (Business/Operational Constraints)
+
+- Entorno Físico Hostil: El hardware IoT (sensores, cableado y gateways) debe estar diseñado para operar de manera ininterrumpida y confiable bajo las condiciones extremas de las cocinas de comida rápida, soportando exposición constante a grasa, calor extremo y humedad.  
+
+- Modelo de Negocio SaaS: La arquitectura de software debe estar acoplada a un modelo comercial Software as a Service (SaaS), permitiendo la gestión, acceso y facturación recurrente segregada por local, tablero eléctrico o conjunto de sensores.  
+
+
 ### 4.1.3. Architectural Drivers Backlog
 
 ### 4.1.4. Architectural Design Decisions
