@@ -1063,6 +1063,14 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 ## 4.2. Strategic-Level Domain-Driven Design
 
 ### 4.2.1. EventStorming
+\
+![](assets-emergentes/EventStorming1.png)
+\
+![](assets-emergentes/EventStorming2.png)
+\
+![](assets-emergentes/EventStorming3.png)
+\
+![](assets-emergentes/EventStorming4.png)
 
 ### 4.2.2. Candidate Context Discovery
 \
