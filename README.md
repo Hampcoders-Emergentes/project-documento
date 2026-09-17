@@ -606,6 +606,40 @@ Funcionalidades deseadas:
 
 ---
 
+- Entrevista: Akemy Garcia
+- Edad: 19 años
+- Link: [Ver la entrevista](https://youtu.be/GX1SwyIyH_w)
+- Inicia: 0:08
+- Duración: 4:21
+
+**Contexto de la entrevista**
+Esta entrevista continúa explorando la perspectiva del personal de atención y operaciones (en este caso, en cines) frente a la propuesta de usar sensores IoT para medir el consumo eléctrico y evitar el sobrecalentamiento de los equipos.
+
+**Aspectos clave mencionados por la entrevistada:**
+- Protocolos ante fallas eléctricas: Su primera acción es avisar al encargado y dejar de usar el equipo inmediatamente para evitar cualquier accidente. Si la situación es más grave, se recurre a llamar a un técnico.
+- Tiempos de respuesta: La rapidez de la atención depende del tipo de problema. Si afecta considerablemente el trabajo y la operación, intentan solucionarlo lo más rápido posible, aunque Akemy señala que a veces el técnico se demora en llegar.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención al cliente: Considera que afecta bastante porque retrasa los pedidos, genera molestias directas en los clientes y puede llegar a paralizar por completo parte de la atención.
+- Seguridad: También lo identifica como un riesgo latente para la integridad de los propios trabajadores.
+
+Experiencias previas con malas instalaciones: Ha vivido situaciones donde un equipo empezó a fallar debido a una conexión en mal estado. La solución fue detener el uso de la máquina y llamar a un técnico para que revisara y cambiara la instalación.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia: Señala que el mantenimiento preventivo no es muy seguido. Generalmente, los equipos solo se revisan de manera reactiva (cuando ya presentan alguna falla) en lugar de tener revisiones preventivas constantes.
+- Cumplimiento normativo: Le da bastante importancia a las normas de seguridad, ya que una reparación mal hecha puede causar accidentes graves, dañar aún más los equipos o generar problemas a futuro.
+
+**Opinión sobre la plataforma propuesta:**
+- Considera que sería una herramienta muy útil, especialmente si permite hacer el reporte de manera rápida y ayuda a encontrar técnicos confiables (verificados) que estén cerca del local.
+ 
+**Funcionalidades deseadas:** Para que le sea útil en su día a día, le gustaría que la plataforma incluyera:
+- Reporte rápido de la falla.
+- Seguimiento del técnico y su tiempo estimado de llegada.
+- Chat directo.
+- Un historial que registre las fallas y las reparaciones previas.
+
+---
+
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
