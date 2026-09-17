@@ -905,6 +905,19 @@ En conjunto, estas funcionalidades influyen directamente en decisiones posterior
 
 #### 4.1.2.3. Constraints
 
+Las restricciones arquitectónicas para el proyecto ElectroLink se han categorizado en técnicas, operativas, de integración y regulatorias, estableciendo los límites dentro de los cuales debe diseñarse y operar la solución:
+
+##### Restricciones Tecnicas (Technical Constraints)
+- Hardware IoT Predefinido: Los dispositivos físicos de monitoreo e interceptación eléctrica instalados en las propiedades deben estar basados estrictamente en microcontroladores ESP32
+
+- Stack Tecnológico de Backend: La arquitectura del backend debe implementarse como un monolito modular (RESTful API) utilizando el framework C# / ASP.NET Core. Asimismo, el acceso a datos debe realizarse a través del ORM Entity Framework Core (EF Core).
+
+- Gestor de Base de Datos: La persistencia principal de la plataforma, que almacenará información de usuarios, credenciales y logs, debe realizarse obligatoriamente en un motor de base de datos relacional PostgreSQL.
+
+- Stack Tecnológico de Frontend: La plataforma web debe ser construida como una Single-Page Application (SPA) utilizando JavaScript / React, mientras que el desarrollo de la aplicación móvil debe realizarse utilizando Dart / Flutter.
+
+- Infraestructura Cloud: El despliegue de los contenedores de la API, la aplicación web estática y la base de datos debe realizarse sobre la infraestructura de la nube de Microsoft Azure (utilizando Azure App Service y Azure Database for PostgreSQL).
+
 ### 4.1.3. Architectural Drivers Backlog
 
 ### 4.1.4. Architectural Design Decisions
