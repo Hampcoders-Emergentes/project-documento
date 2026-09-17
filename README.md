@@ -907,34 +907,17 @@ En conjunto, estas funcionalidades influyen directamente en decisiones posterior
 
 Las restricciones arquitectónicas para el proyecto ElectroLink se han categorizado en técnicas, operativas, de integración y regulatorias, estableciendo los límites dentro de los cuales debe diseñarse y operar la solución:
 
-##### Restricciones Tecnicas (Technical Constraints)
-- Hardware IoT Predefinido: Los dispositivos físicos de monitoreo e interceptación eléctrica instalados en las propiedades deben estar basados estrictamente en microcontroladores ESP32
+| ID | Título | Descripción | Aceptación | EPIC | 
+|---|---|---|---|---|
+| CON-01 | Hardware IoT Predefinido (ESP32) | Los dispositivos físicos de monitoreo (sensores y gateways) deben estar basados estrictamente en microcontroladores ESP32, adaptados para operar bajo las condiciones del entorno. | Escenario 1: Captura de datos en entorno hostilDado que el microcontrolador ESP32 está instalado en un tablero de cocina,Cuando las temperaturas y humedad aumentan por la operación,Entonces el dispositivo debe mantener su conectividad y continuar transmitiendo telemetría. | EP01 y EP02 |
+| CON-02 | Arquitectura Monolítica Modular en C# | El backend debe implementarse como una API RESTful utilizando C# / ASP.NET Core y Entity Framework Core, garantizando la separación por módulos de negocio (monolito modular). | Escenario 1: Estructura del proyectoDado que un desarrollador inspecciona el código fuente,Cuando revisa las dependencias y la solución,Entonces se evidencia el uso de C#, ASP.NET Core y una separación interna por Bounded Contexts bien definidos. | Todas |
+| CON-03 | Persistencia en PostgreSQL | Toda la información relacional, incluyendo datos de usuarios, credenciales, locales e historiales de mantenimiento, debe persistirse obligatoriamente en PostgreSQL. | Escenario 1: Almacenamiento de transaccionesDado que un manager registra la asignación de un técnico,Cuando el sistema guarda la transacción,Entonces los datos se persisten asegurando atomicidad dentro de la base de datos PostgreSQL. | Todas |
+| CON-04 | Frontend Segregado (React y Flutter) | El ecosistema cliente debe separar la tecnología: la web administrativa (SPA) se construirá con JavaScript/React, mientras que la aplicación móvil se desarrollará con Dart/Flutter. | Escenario 1: Uso de dashboard administrativoDado que el manager de tienda abre la plataforma web,Cuando visualiza el consumo eléctrico en tiempo real,Entonces la interfaz reacciona de forma fluida e interactiva usando componentes de React.Escenario 2: Notificaciones en campoDado que un técnico o trabajador usa la app móvil,Cuando recibe una alerta de voltaje,Entonces la experiencia nativa es soportada por el framework Flutter. | EP02 y EP03 |
+| CON-05 | Infraestructura Cloud en Microsoft Azure | El despliegue de los servicios (Backend, Frontend SPA y Base de Datos) debe realizarse exclusivamente sobre la nube de Microsoft Azure, usando Azure App Service. | Escenario 1: Despliegue en producciónDado que se finaliza un sprint y se lanza una nueva versión,Cuando el pipeline de CI/CD sube los contenedores,Entonces estos son alojados y orquestados dentro de la infraestructura de Azure. | Todas | 
+| CON-06 | Integraciones de Terceros Obligatorias | La plataforma está restringida a usar Stripe para la facturación SaaS, Firebase Cloud Messaging (FCM/APNs) para alertas Push, y Mapbox/Google Maps para geolocalización. | Escenario 1: Pago de suscripciónDado que una cadena de comida rápida adquiere el plan Premium,Cuando realiza el pago mensual,Entonces el cobro se procesa obligatoriamente a través de los webhooks de Stripe.Escenario 2: Alerta Crítica PushDado que el sistema detecta una fuga de corriente,Cuando dispara la alerta móvil,Entonces la notificación viaja a través de FCM/APNs. | EP02 y EP05 |
+| CON-07 | Cumplimiento Normativo SST | El sistema debe generar evidencias, bitácoras y reportes inmutables de incidentes que cumplan estrictamente con los estándares legales peruanos (SUNAFIL, OSINERGMIN, INDECI). | Escenario 1: Auditoría de seguridad oficialDado que el local recibe una inspección inopinada de SUNAFIL,Cuando el administrador exporta el reporte de salud técnica,Entonces el PDF generado contiene firmas digitales y un registro inalterable que sustenta el cumplimiento legal del local. | EP04 |
 
-- Stack Tecnológico de Backend: La arquitectura del backend debe implementarse como un monolito modular (RESTful API) utilizando el framework C# / ASP.NET Core. Asimismo, el acceso a datos debe realizarse a través del ORM Entity Framework Core (EF Core).
-
-- Gestor de Base de Datos: La persistencia principal de la plataforma, que almacenará información de usuarios, credenciales y logs, debe realizarse obligatoriamente en un motor de base de datos relacional PostgreSQL.
-
-- Stack Tecnológico de Frontend: La plataforma web debe ser construida como una Single-Page Application (SPA) utilizando JavaScript / React, mientras que el desarrollo de la aplicación móvil debe realizarse utilizando Dart / Flutter.
-
-- Infraestructura Cloud: El despliegue de los contenedores de la API, la aplicación web estática y la base de datos debe realizarse sobre la infraestructura de la nube de Microsoft Azure (utilizando Azure App Service y Azure Database for PostgreSQL).
-
-##### Restricciones Operativas y de Entorno (Business/Operational Constraints)
-
-- Entorno Físico Hostil: El hardware IoT (sensores, cableado y gateways) debe estar diseñado para operar de manera ininterrumpida y confiable bajo las condiciones extremas de las cocinas de comida rápida, soportando exposición constante a grasa, calor extremo y humedad.  
-
-- Modelo de Negocio SaaS: La arquitectura de software debe estar acoplada a un modelo comercial Software as a Service (SaaS), permitiendo la gestión, acceso y facturación recurrente segregada por local, tablero eléctrico o conjunto de sensores.  
-
-##### Restricciones de Integración (Integration Constraints)
-
-- Procesamiento de Pagos: El sistema debe delegar el procesamiento de pagos de suscripciones (mensuales o anuales) y la autogestión de facturación interactuando exclusivamente con la pasarela Stripe mediante Webhooks.  
-
-- Servicio de Notificaciones: El envío de alertas de anomalías y notificaciones push en tiempo real hacia los dispositivos móviles y web de los usuarios debe integrarse con los servicios de FCM (Firebase Cloud Messaging) / APNs.  
-
-- Servicios de Mapeo: Las funcionalidades de renderizado de mapas, geolocalización de las tiendas y geocodificación deben depender de las APIs de Mapbox o Google Maps.
-
-##### Restricciones Legales y Regulatorias (Regulatory/Legal Constraints)
-
-- Cumplimiento Normativo Nacional (SST): El diseño de la plataforma, el manejo de logs inmutables y la generación de reportes deben cumplir con los estándares técnicos y de evidencia exigidos por las autoridades fiscalizadoras peruanas en Seguridad y Salud en el Trabajo, específicamente SUNAFIL, OSINERGMIN e INDECI.
+La tabla de restricciones arquitectónicas establece las condiciones que deben cumplirse durante el diseño del proyecto, evitando dudas o decisiones técnicas innecesarias desde el inicio. Estas restricciones tecnológicas, operativas y legales se organizan mediante escenarios BDD (Dado/Cuando/Entonces), lo que permite definir pruebas claras para validar su cumplimiento. Para ElectroLink, esta tabla ayuda a garantizar que la arquitectura funcione correctamente en el entorno de una cocina de comida rápida y cumpla con las normas de seguridad y regulación correspondientes (SUNAFIL/INDECI). De esta manera, se busca que la solución tecnológica sea viable y contribuya a los objetivos del negocio.
 
 ### 4.1.3. Architectural Drivers Backlog
 
