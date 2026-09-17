@@ -1065,6 +1065,8 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 ### 4.2.1. EventStorming
 
 ### 4.2.2. Candidate Context Discovery
+\
+![](assets-emergentes/CCD.png)
 
 ### 4.2.3. Domain Message Flows Modeling
 
