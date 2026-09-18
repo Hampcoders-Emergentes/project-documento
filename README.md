@@ -676,7 +676,7 @@ Esta entrevista explora la perspectiva de la gestión administrativa y operativa
 - Criterios de contratación: Valora que el proveedor ofrezca rapidez, disponibilidad, certificación técnica, garantía por el trabajo efectuado y facturación formal.
 
 **Opinión sobre la plataforma propuesta:**
-- CDisposición de pago: Estaría dispuesto a pagar una suscripción mensual que ofrezca proveedores verificados, monitoreo preventivo y atención prioritaria, siempre que la tarifa sea razonable y garantice el nivel de servicio requerido para emergencias comerciales.
+- Disposición de pago: Estaría dispuesto a pagar una suscripción mensual que ofrezca proveedores verificados, monitoreo preventivo y atención prioritaria, siempre que la tarifa sea razonable y garantice el nivel de servicio requerido para emergencias comerciales.
  
 **Funcionalidades deseadas:** Para optimizar la gestión del local, le gustaría que la plataforma incorporara:
 - Panel centralizado con historial de incidencias para facilitar evaluaciones preventivas.
@@ -684,6 +684,41 @@ Esta entrevista explora la perspectiva de la gestión administrativa y operativa
 - Seguimiento del técnico en tiempo real ante servicios de emergencia.
 - Sistema de calificación y reseñas de proveedores.
 - Emisión y gestión directa de facturación formal a través de la misma plataforma.
+
+---
+
+- Entrevista: Brayan Serna
+- Edad: 22 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQCtaN_OFEvlQ7zNkrOtlpl_AQnp0_46b9VtNGby__Ef7uc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9cNZyk>
+- Inicia en: 0:25
+- Duración: 7:33
+- Entrevistador: Ivo Marcelo Machado Bracamonte
+
+![assets/cap2/interviews/entrevista_2_2](assets/cap2/interviews/entrevista_2_2.png)
+
+**Contexto de la entrevista**
+Esta entrevista explora la perspectiva operativa y de gestión de tienda en el rubro de comida rápida con Brayan Serna, gerente de tienda de Little Caesars Arenales frente a los desafíos del mantenimiento correctivo y preventivo de equipos e instalaciones eléctricas, el protocolo de escalamiento interno y la disposición a adoptar una plataforma digital con modelo de suscripción para asegurar continuidad operativa y altos estándares de inocuidad.
+
+**Aspectos clave mencionados por el entrevistado**
+- PProtocolos ante fallas eléctricas: Siguen una línea de reporte jerárquica; ante una avería, el gerente de tienda notifica de inmediato al gerente zonal, quien coordina y gestiona la asignación de técnicos tercerizados ya homologados por la empresa. Si la incidencia es de extrema urgencia, se prioriza contactar al técnico o cuadrilla disponible más cercana al local.
+- Tiempos de respuesta y disponibilidad: Requieren resolución inmediata debido al impacto directo en la producción continua. Brayan resalta que, ante imprevistos graves (como un corte de energía reciente de 30 minutos), la velocidad de respuesta para suministrar soluciones de contingencia como conectar un grupo electrógeno al tablero general es determinante para no detener la operación.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención y continuidad del negocio: Una avería crítica en maquinaria clave puede frenar por completo el flujo de venta y elevar los sobrecostos. Relata un incidente con la batidora industrial de masa tras un mal servicio técnico, lo que obligó a suspender la producción diaria de masa, trasladar insumos y una máquina pesada desde otra sucursal (Miraflores), y asumir altos costos logísticos y operativos.
+- Seguridad y riesgos: Su máxima preocupación al ingresar personal externo es la inocuidad y seguridad alimentaria. Teme que técnicos dejen residuos o herramientas en áreas de preparación que puedan generar focos infecciosos o riesgos sanitarios antes de la apertura de tienda.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia y enfoque: Manejan programas periódicos para componentes críticos (limpieza de hornos, sumideros y cámaras frigoríficas), aunque reconoce que con frecuencia se termina actuando y priorizando intervenciones cuando ya se manifiesta una falla.
+- Criterios de contratación: Exige indispensables como facturación formal obligatoria, certificaciones técnicas que garanticen pericia, rapidez de llegada y disponibilidad permanente ante imprevistos en plena operación.
+
+**Opinión sobre la plataforma propuesta:**
+- Disposición de pago: Totalmente dispuesto a pagar una suscripción mensual, siempre que garantice una reducción comprobable en tiempos de respuesta, disminuya la frecuencia de averías y asegure técnicos verificados y confiables que respalden la operación en tiempo real. También muestra gran interés en integrarse a una red con estándares comunes de seguridad.
+ 
+**Funcionalidades deseadas:** Para optimizar el control y mantenimiento de la tienda, desearía que la plataforma incorporara:
+- Registro e historial detallado por el equipo o dispositivo especificando qué intervenciones y reparaciones se le han realizado.
+- Catálogo de técnicos certificados disponibles en la zona con tiempos de atención.
+- Sistema automatizado de alertas y recordatorios de vencimiento para mantenimientos regulatorios y preventivos.
+- Módulo de gestión y emisión de facturación formal para agilizar la rendición corporativa.
 
 ---
 
