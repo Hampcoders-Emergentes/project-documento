@@ -722,6 +722,34 @@ Esta entrevista explora la perspectiva operativa y de gestión de tienda en el r
 
 ---
 
+- Entrevista: Renzo LLontop
+- Edad: 33 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231e215_upc_edu_pe/IQC2fFE-AwWBRIpyQ-H9BOR2Ad6CiMUm5RY42tvdyMJz8EQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XUjm7t>
+- Inicia en: 0:01
+- Duración: 7:49
+- Entrevistador: Leandro Saul Contreras Lopez
+
+**Contexto de la entrevista**
+A diferencia de las entrevistas anteriores enfocadas en el personal operativo, esta charla explora la perspectiva gerencial respecto a la propuesta de usar dispositivos IoT para monitorear el consumo eléctrico y prevenir fallas en un local de alta demanda.
+
+**Aspectos clave mencionados por el entrevistado:**
+- Gestión de fallas y mantenimiento preventivo: Por normas de la empresa, realizan una revisión de todas las instalaciones eléctricas cada 3 meses para asegurar que todo esté en buen estado.
+Cuentan con un pequeño generador en el edificio (aunque no siempre es suficiente) y tienen contratada a una empresa externa que se encarga de todo el tema eléctrico y de utilería. Si hay una falla, simplemente los llaman, los técnicos resuelven el problema y luego pasan la factura.
+
+- Tiempos de respuesta e impacto operativo: El tiempo de respuesta de los técnicos debe ser muy rápido, ya que sin electricidad la tienda queda inoperativa por completo: no pueden cobrar, las máquinas de café no funcionan, los hornos se apagan y se cae el Wi-Fi. Renzo destaca que cada minuto u hora sin operación se traduce en miles de dólares en pérdida.
+
+- Experiencia con fallas eléctricas: Aunque no han tenido problemas por "instalaciones mal hechas", sí han sufrido pérdidas económicas importantes por cortes de luz imprevistos (la última vez fue entre febrero y marzo de ese año).
+
+**Opinión sobre pagar una suscripción por la plataforma IoT:** Si su local no tuviera ya una empresa contratada, probablemente sí pagaría la suscripción que ofrece proveedores verificados y atención prioritaria.
+Sin embargo, como administrador, tendría que evaluar el costo-beneficio. Si en todo el año solo tienen una falla eléctrica, pagar una suscripción mensual no le resultaría rentable. Lo vería más útil si se enfoca puramente en el aspecto preventivo para evitar esa única gran falla.
+
+**Funcionalidades y usabilidad de la app:**
+
+- Renzo hace una observación clave sobre la usabilidad: si la aplicación solo sirve para reportar emergencias, la usaría muy poco y probablemente la terminaría borrando del teléfono. En una urgencia, siente que es mucho más rápido llamar por teléfono que abrir una app.
+- Acepta que la plataforma sería útil si le permite ver información adicional de valor (como facturas, estado de las revisiones o reportes técnicos pasados), pero recalca que la acción principal ante una falla debe ser garantizar una respuesta rápida (por ejemplo, con una llamada directa).
+
+---
+
 ### 2.2.3. Análisis de entrevistas
 
 **Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
