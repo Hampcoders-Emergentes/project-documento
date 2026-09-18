@@ -691,10 +691,38 @@ Esta entrevista explora la perspectiva de la gestión administrativa y operativa
 
 **Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
 
+Para este análisis se revisaron 3 entrevistas: Mark Mori (21 años, comida rápida), Anyelina Rivera (21 años, comida rápida) y Akemy Garcia (19 años, atención en cines). Los tres trabajan en atención al público y operación diaria, por lo que conocen de primera mano lo que pasa cuando falla un equipo eléctrico.
+
+#### a) Resumen comparativo de lo encontrado
+
+| Tema | Mark Mori | Anyelina Rivera | Akemy Garcia | En qué coinciden |
+|---|---|---|---|---|
+| **Qué hacen ante una falla** | Avisa al gerente, el gerente baja la llave y genera un ticket. Revisan que no se apaguen las cámaras de frío. | Avisa al encargado y no toca el equipo si ve humo, chispas o cables dañados. Siguen trabajando con las otras máquinas. | Avisa al encargado y deja de usar el equipo. Si es grave, llaman al técnico. | **Todos avisan al encargado y prefieren no tocar el equipo por seguridad.** |
+| **Cuánto demoran en atenderlos** | De 1 a 3 horas cuando es una falla grave. | Depende de qué tan grave sea y si hay técnico o repuestos disponibles. | Depende del problema, a veces el técnico demora en llegar. | **Solo lo urgente se atiende rápido. Sienten que la ayuda demora.** |
+| **Cómo les afecta en su trabajo** | Se paraliza todo: no hay ventas, se apagan pantallas, no salen deliveries. | Se acumulan pedidos, los clientes esperan más y se molestan. | Se retrasan los pedidos y los clientes se incomodan. | **Toda falla eléctrica frena la atención y molesta al cliente.** |
+| **Mantenimiento** | Lo hacen cada 2 meses y les dan charlas cada mes. La grasa y el calor dañan los cables. | Sabe que hay mantenimiento, pero no conoce las fechas. Dice que esperar a que se malogre sale más caro. | Casi no hay mantenimiento, solo revisan cuando algo ya se malogró. | **No todos tienen mantenimiento seguido y el trabajador no sabe cuándo toca.** |
+| **Seguridad y normas** | Lo ve muy importante porque trabajan con pisos mojados, freidoras y calor. | Lo ve vital: no basta con que la máquina prenda, tiene que ser segura para usarla. | También lo ve importante: una mala reparación puede causar un accidente. | **Los 3 están muy preocupados por su seguridad, aunque no sean técnicos.** |
+| **Qué opinan de la plataforma propuesta** | Le parece útil para ver el estado del reporte. Pide seguimiento del ticket, subir fotos, historial y chat con el técnico. | Le parece muy útil y ordenaría el trabajo. Pide reporte rápido con foto/video, saber cuándo llega el técnico, historial y chat. | Le parece muy útil si es rápida y conecta con técnicos de confianza. Pide lo mismo: reporte rápido, seguimiento, chat e historial. | **A los 3 les gusta la idea, siempre que sea fácil de usar. Piden las mismas 4 funciones.** |
+
+#### b) Ideas que se repiten en las 3 entrevistas
+
+1. **No tocan, solo avisan:** los trabajadores detectan señales como ruidos raros, olor a quemado o pequeños toques eléctricos, pero su única opción es avisar al encargado y alejarse. A veces demoran en avisar por miedo a parar la venta y que les llamen la atención.
+2. **Los avisos se pierden:** hoy avisan de palabra o por WhatsApp (“la máquina suena raro”), sin foto ni registro. Por eso la misma máquina se malogra varias veces y nadie lleva la cuenta.
+3. **La seguridad está primero:** aunque estén en hora pico y con presión por sacar pedidos, los 3 dicen que prefieren apagar el equipo antes que arriesgarse a una descarga. Esto confirma que lo que más valoran es trabajar sin miedo a accidentarse.
+4. **Limpiar es el momento de más miedo:** cuando trapean o echan agua cerca de enchufes y cables sienten mucho temor a electrocutarse. No tienen ninguna señal que les confirme que es seguro limpiar.
+5. **Quieren algo simple y rápido:** no piden gráficos ni datos complicados. Piden lo mismo en los 3 casos: reportar con 1 clic y foto, saber si ya viene el técnico y a qué hora llega, ver el historial de fallas y poder chatear con el técnico.
+
+#### c) En qué se diferencian
+
+- **No todos tienen el mismo orden:** Mark ya trabaja con tickets y tiempos de 1 a 3 horas, mientras Akemy trabaja en un local donde solo actúan cuando algo se malogra. La solución debe servir para ambos casos.
+- **Distinto rubro, mismo problema:** Akemy trabaja en cines y no en comida rápida, pero cuenta lo mismo. Esto muestra que el problema existe en otros locales, aunque por ahora el proyecto se enfoca en cocinas de comida rápida.
+- **Distinto nivel de detalle:** Mark y Anyelina ya piensan en usar el historial para decidir si conviene cambiar una máquina que falla mucho, mientras Akemy solo pide que el técnico llegue rápido y sea de confianza.
+
+**Conclusión del segmento:** el trabajador operativo no necesita ver gráficos ni datos técnicos. Necesita tres cosas bien simples; que le digan si es seguro tocar o limpiar, que pueda avisar rápido con su celular o pantalla sin dejar de atender, y que le confirmen que su aviso fue recibido y que ya viene ayuda. Si ElectroLink logra eso, lo van a ver como una protección y no como un control más. 
 
 ---
 
-**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**-
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
 
 
 ## 2.3. Needfinding
