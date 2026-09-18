@@ -551,9 +551,12 @@ En esta sección se presenta el diseño de las entrevistas por segmento objetivo
 
 - Entrevista: Mark Mori
 - Edad: 21 años
-- Link: [Ver entrevista](https://youtu.be/P8z1pkmBKxY)
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQC_gpWtSKeTSrFrsrdrAfTKAe0JfPhBuHVNk-_JEgFhSUE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVrcff>
 - Inicia en: 0:10
 - Duración: 7:38
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_1_1](assets/cap2/interviews/entrevista_1_1.png)
 
 **Contexto de la entrevista**
 El objetivo de la charla fue conocer la perspectiva del personal operativo sobre una propuesta de proyecto basada en dispositivos IoT (sensores inteligentes) para medir el consumo eléctrico, evitar sobrecalentamientos y prevenir accidentes en locales comerciales.
@@ -576,9 +579,12 @@ Funcionalidades deseadas: Si utilizara esta nueva plataforma en el día a día, 
 
 - Entrevista: Anyelina Rivera
 - Edad: 21 años
-- Link: [Ver entrevista](https://youtu.be/Il90kC2yYTM)
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAX6Iov-xwKTo_Qebu0DG0XAeUEGuaYWgN4DCkzuRwMtwU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=rgjWEW>
 - Inicia en: 0:02
 - Duración: 10:48
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_2_1](assets/cap2/interviews/entrevista_2_1.png)
 
 **Contexto de la entrevista**
 Al igual que en la primera entrevista, el objetivo fue conocer la perspectiva de un trabajador de restaurante de comida rápida sobre una propuesta de proyecto IoT para monitorear componentes eléctricos en la cocina y prevenir accidentes.
@@ -606,11 +612,14 @@ Funcionalidades deseadas:
 
 ---
 
-- Entrevista: Akemy Garcia
+- Entrevista: Akemy Garcia 
 - Edad: 19 años
-- Link: [Ver la entrevista](https://youtu.be/GX1SwyIyH_w)
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQC32NumMX-ARa1xo0SfJfSFARvM3lt5n7Bb8uW5LlNo7RY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oJpFbp>
 - Inicia: 0:08
 - Duración: 4:21
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_3_1](assets/cap2/interviews/entrevista_3_1.png)
 
 **Contexto de la entrevista**
 Esta entrevista continúa explorando la perspectiva del personal de atención y operaciones (en este caso, en cines) frente a la propuesta de usar sensores IoT para medir el consumo eléctrico y evitar el sobrecalentamiento de los equipos.
@@ -640,7 +649,53 @@ Experiencias previas con malas instalaciones: Ha vivido situaciones donde un equ
 
 ---
 
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
+
+- Entrevista: Juan Carrion
+- Edad: 30 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQDlpevVloNBT6gdiUm1e88qAR_TuWgp_v3K431_OOzYjQk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=fVegXG>
+- Inicia en: 0:17
+- Duración: 5:51
+- Entrevistador: Vanessa May Lang Choy Robles
+
+![assets/cap2/interviews/entrevista_1_2](assets/cap2/interviews/entrevista_1_2.png)
+
+**Contexto de la entrevista**
+Esta entrevista explora la perspectiva de la gestión administrativa y operativa en el rubro de comida rápida (con Juan Carrión, administrador) frente a los desafíos del mantenimiento eléctrico, la búsqueda de técnicos calificados y la disposición a adoptar una plataforma digital con modelo de suscripción para soporte preventivo y correctivo.
+
+**Aspectos clave mencionados por la entrevistada:**
+- Protocolos ante fallas eléctricas: Actualmente lo gestionan de manera reactiva; al ocurrir un incidente buscan resolverlo lo antes posible para no frenar la operación. Su primer recurso es recurrir a contactos conocidos y, si no están disponibles, buscar en internet.
+- Tiempos de respuesta y disponibilidad: Requieren una respuesta prácticamente inmediata ante una emergencia. Destaca que encontrar técnicos en sí no es complejo, pero hallar uno que esté disponible de inmediato, sea confiable, esté certificado y sepa trabajar con la rapidez que demanda una cadena de comida rápida resulta bastante difícil.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención y continuidad del negocio: Una avería crítica (por ejemplo, en cocinas o refrigeración) puede causar pérdidas directas de ventas, merma de insumos o incluso la paralización parcial o total de la operación del local.
+- Seguridad y riesgos: La seguridad es una de sus principales preocupaciones; priorizan la calidad y confiabilidad técnica por encima de un costo bajo si este último implica incurrir en mayores riesgos operativos o de integridad.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia y enfoque: Intentan realizar mantenimientos de manera periódica según el tipo de equipo y las políticas corporativas, pero admiten que en las instalaciones eléctricas generales suelen terminar actuando de forma reactiva cuando ya se presenta el problema.
+- Criterios de contratación: Valora que el proveedor ofrezca rapidez, disponibilidad, certificación técnica, garantía por el trabajo efectuado y facturación formal.
+
+**Opinión sobre la plataforma propuesta:**
+- CDisposición de pago: Estaría dispuesto a pagar una suscripción mensual que ofrezca proveedores verificados, monitoreo preventivo y atención prioritaria, siempre que la tarifa sea razonable y garantice el nivel de servicio requerido para emergencias comerciales.
+ 
+**Funcionalidades deseadas:** Para optimizar la gestión del local, le gustaría que la plataforma incorporara:
+- Panel centralizado con historial de incidencias para facilitar evaluaciones preventivas.
+- Tiempos de atención claramente definidos (SLA de respuesta).
+- Seguimiento del técnico en tiempo real ante servicios de emergencia.
+- Sistema de calificación y reseñas de proveedores.
+- Emisión y gestión directa de facturación formal a través de la misma plataforma.
+
+---
+
 ### 2.2.3. Análisis de entrevistas
+
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+
+---
+
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**-
+
 
 ## 2.3. Needfinding
 
