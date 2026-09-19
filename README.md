@@ -1087,6 +1087,14 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.3. Domain Message Flows Modeling
 
+El Domain Message Flow Modeling es una técnica visual utilizada en la metodología de Domain-Driven Design (DDD) para diagramar y documentar cómo los comandos, eventos y mensajes transitan entre los actores y los Bounded Contexts dentro de una arquitectura de software. Su objetivo es mapear las interacciones clave entre los componentes del sistema para entender cómo un suceso específico desencadena una reacción en cadena a través de diferentes partes del dominio.
+
+#### Scenario 1: Detección Automática y Alerta de Fuga a Tierra o Sobrecalentamiento
+Cuando un sensor IoT detecta un umbral crítico de temperatura o corriente, el contexto de monitoreo emite un evento de anomalía. Esta alerta acciona inmediatamente el semáforo rojo en la cocina para proteger al operario y envía una notificación de emergencia al teléfono del administrador a través de Firebase, garantizando una respuesta rápida.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow.png)
+
+
+
 ### 4.2.4. Bounded Context Canvases
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
