@@ -1093,20 +1093,16 @@ En esta sección se presentan los bounded contexts identificados para la soluci�
 
 ## 1. Identity and Access Management (IAM)
 Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
-
 \
-
 ![](assets-emergentes/IAM-bd.PNG)
 
 ---
-
+\
 ## 2. Subscription and Payments
 Gestión de planes, facturación y control de acceso a funcionalidades.
 
 ---
-
 \
-
 ![](assets-emergentes/bd-subscription.PNG)
 
 
@@ -1116,9 +1112,7 @@ Gestión de planes, facturación y control de acceso a funcionalidades.
 Administración de perfiles de usuarios, técnicos y configuración personalizada.
 
 ---
-
 \
-
 ![](assets-emergentes/bd-profiles.PNG)
 
 
@@ -1128,9 +1122,7 @@ Administración de perfiles de usuarios, técnicos y configuración personalizad
 Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
 
 ---
-
 \
-
 ![](assets-emergentes/service-desing-bd.PNG)
 
 ---
@@ -1139,9 +1131,7 @@ Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
 Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
 
 ---
-
 \
-
 ![](assets-emergentes/bd-service-operation.PNG)
 
 
@@ -1152,7 +1142,6 @@ Gestión de propiedades, dispositivos IoT e inventario de técnicos.
 
 ---
 \
-
 ![](assets-emergentes/bd-assets.PNG)
 
 ---
@@ -1161,9 +1150,7 @@ Gestión de propiedades, dispositivos IoT e inventario de técnicos.
 Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
 
 ---
-
 \
-
 ![](assets-emergentes/bd-iot.PNG)
 
 ---
@@ -1172,15 +1159,16 @@ Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
 Visualización, reportes e insights a partir de datos históricos y en tiempo real.
 
 ---
-
 \
-
 ![](assets-emergentes/bd-analytics.PNG)
 
 
 ---
 
 ### 4.2.5. Context Mapping
+\
+![](assets-emergentes/Context-Mapping-Electrolink.PNG)
+
 
 ## 4.3. Software Architecture
 
