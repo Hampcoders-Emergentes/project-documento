@@ -1193,11 +1193,11 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 ## 4.3. Software Architecture
 
+### 4.3.1. Software Architecture System Landscape Diagram
+
 \
 
-![](assets/img/cap4/c4-model/SystemContext.png)
-
-### 4.3.1. Software Architecture System Landscape Diagram
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.1. Software Architecture Context Level Diagrams
 
