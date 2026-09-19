@@ -14,14 +14,14 @@
   Curso: Arquitecturas De Software Emergentes
   <br><br>
   Sección: 9056
-  <br><br>
+  <br><br>  
   Profesor: Enrique Alejandro Valdivia Verde
   <br><br>
   Informe del Trabajo Final
   <br><br>
-  Startup: HampCoders New Generation
+  Startup: HampCoders
   <br><br>
-  Producto: ElectroLonk
+  Producto: ElectroLink
 </h3>
 
 <table style="margin: 0 auto; width: auto; display: table; border-collapse: collapse; font-size: 12pt;">
@@ -32,8 +32,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Cesar Augusto Arostegui Alzamora</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">u202114548</td></tr>
-    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">********************************</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">**********</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Cesar Augusto Arostegui Alzamora</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202114548</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Vanessa May Lang Choy Robles</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202317450</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Natalia Ximena Valverde Portuguez</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231A816</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Leandro Saul Contreras López</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231E215</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Ivo Marcelo Machado Bracamonte</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231C368</td></tr>
   </tbody>
 </table>
 
@@ -175,8 +178,8 @@
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** |  |  |
-| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería..** |  |  |
+| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Choy Robles, Vanessa May Lang**<br>**AV1:** Sinteticé la dinámica del To-Be Scenario Mapping explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local (operarios) y en las decisiones estratégicas del Manager del Local (administradores).<br> |  |
+| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería..** | **Choy Robles, Vanessa May Lang**<br>**AV1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el To-Be Scenario Mapping, las User Stories con criterios de aceptación en formato Gherkin, el Impact Mapping alineado a objetivos y el Product Backlog consolidado. |  |
 
 # Capítulo I: Introducción
 
@@ -192,11 +195,11 @@ Nuestra propuesta de valor se centra en ElectroLink, un ecosistema inteligente q
 
 |   Código   |     Apellidos      |     Nombres     |                                                                                                                                                                         Perfil Académico y Profesional                                                                                                                                                                          | Perfil                                               |
 |:----------:|:------------------:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------------------------------------------------|
-| u202317450 |   Choy Robles    | Vanessa May Lang | Estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. | ![vanessa-choy.png](assets/cap1/vanessa-choy.png)         |
+| u202317450 |   Choy Robles    | Vanessa May Lang | Estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. | ![vanessa-choy.png](assets-emergentes/vanessa-choy.jpg)         |
 | U20231A816 | Valverde Portuguez | Natalia Ximena  | Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con conocimientos de Marketing y estoy interesada en el UX Design y base de datos con sql. Experiencia en trabajos de creación de startups en el ámbito laboral, lo que fortalece mis capacidades tanto en trabajos grupales e individuales para las bases de un proyecto. | ![natalia-valverde.png](assets/cap1/natalia-valverde.png) |  
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| U20231E215 | Contreras López | Leandro Saúl | Mucho gusto, soy Leandro Contreras, estudiante de la carrera de Ingeniería de Software en la UPC, sede San Miguel. Tengo 20 años y estoy cursando el séptimo ciclo académico. Me considero una persona adaptativa, perseverante y comprometida con lo que me propongo. En este proyecto tengo como objetivo buscar múltiples soluciones que beneficien a todo el grupo. Por experiencia propia, suelo trabajar de manera colaborativa y eficaz. Al terminar la carrera de ingeniería, me gustaría estudiar una segunda carrera: Gastronomía y Gestión Culinaria. | ![widdsito.png](assets-emergentes/leandro.png) |
+| U20231C368 | Machado Bracamonte | Ivo Marcelo | Mi nombre es Ivo Machado, tengo 19 años y soy estudiante del sexto ciclo de Ingeniería de Software en la UPC. Me caracterizo por mi mentalidad resiliente, ya que no me rindo con facilidad y no le tengo miedo al error. Tengo empatía con los demás, disfruto resolver problemas y busco mejorar constantemente en lo que hago. Poseo conocimientos en lenguajes de programación como C++, Java y Python, así como en HTML, CSS y JavaScript. Además, domino el inglés y tengo conocimientos de portugués y alemán. | ![ivo.png](assets-emergentes/ivo.png) |
+| U202114548 | Arostegui Alzamora | César Augusto | Soy César Augusto, estudiante de Ingeniería de Software. Actualmente tengo 21 años. Mi lenguaje de programación más utilizado y favorito es TypeScript. Actualmente me encuentro desarrollando habilidades en áreas como DevOps y frameworks de desarrollo móvil. | ![cesar.png](assets-emergentes/cesar.png) |
 
 ## 1.2. Solution Profile
 
@@ -386,83 +389,1039 @@ El servicio de monitoreo de infraestructura en las cadenas de comida rápida en 
 
 # Capítulo II: Requirements Elicitation & Analysis
 
+En esta sección se presentan los resultados del análisis de requerimientos, incluyendo la identificación de competidores, entrevistas con stakeholders y la definición de necesidades clave para el desarrollo de la solución ElectroLink.
+
 ## 2.1. Competidores
+
+Tenemos los siguientes competidores directos e indirectos en el mercado de soluciones IoT para monitoreo energético y seguridad eléctrica en restaurantes multisede:
+
+| Empresa / solución | Tipo | Descripción | Similitud con ElectroLink |
+|---|---|---|---|
+| ElectroLink | Solución propia | Plataforma IoT para monitorear tableros y equipos de cocina con alertas locales, remotas, dashboard multisede e historial. | Propuesta de referencia. Orientada a cadenas de comida rápida en Lima. |
+| Powerhouse Dynamics – Open Kitchen | Competidor directo | Plataforma IoT e inteligencia energética para restaurantes multisede. Supervisa cocina, refrigeración, HVAC, iluminación y consumo por circuito en cloud. | Alta. Atiende restaurantes, monitorea equipos y circuitos, centraliza información y gestiona energía y operaciones. |
+| MachineQ Foodservice | Competidor directo | Monitoreo IoT para equipos, enchufes, breakers y activos. MQinsights con datos actuales e históricos, tendencias, alertas configurables e información predictiva. | Alta en monitoreo energético y prevención de paradas. Menor en seguridad eléctrica laboral y cumplimiento local. |
+| Acrel Smart Power Distribution | Competidor directo o indirecto especializado | Ecosistema de medidores, sensores, gateways y plataforma IoT para distribución eléctrica, energía, alarmas y seguridad multisede. | Alta en tableros, circuitos y alarmas. Enfoque más industrial que gastronómico. |
 
 ### 2.1.1. Análisis competitivo
 
+Realizando una comparación de las soluciones mencionadas, se observa que ElectroLink se diferencia por su enfoque en la seguridad eléctrica laboral y la prevención de accidentes en entornos de cocina, mientras que los competidores se centran más en la eficiencia energética y el monitoreo de equipos. Además, ElectroLink busca adaptarse a las necesidades específicas de las cadenas de comida rápida, ofreciendo una solución local y personalizada.
+
+#### Competitive Analysis Landscape
+
+| ¿Por qué llevar a cabo este análisis? | Escriba en el recuadro la pregunta que busca responder o el objetivo de este análisis. |
+|---|---|
+| Conocer cómo se posiciona ElectroLink frente a soluciones internacionales de monitoreo energético, gestión IoT y seguridad eléctrica para restaurantes multisede. | ¿Qué ventajas, limitaciones y oportunidades tiene ElectroLink frente a Powerhouse Dynamics–Open Kitchen, MachineQ Foodservice y Acrel Smart Power Distribution? |
+| Identificar funcionalidades ya validadas en el mercado. | ¿Qué características debe incluir el producto mínimo viable de ElectroLink para ser competitivo? |
+| Encontrar un espacio de diferenciación. | ¿Cómo puede ElectroLink competir desde la seguridad eléctrica, la prevención de accidentes y la adaptación a cadenas de comida rápida en Lima Metropolitana? |
+| Comparar modelos comerciales y canales de llegada al cliente. | ¿Qué propuesta de producto, precio, distribución y marketing resulta más conveniente para una startup local? |
+
+|  | ![assets/cap2/logos/hampcoders_logo](assets/cap2/logos/hampcoders_logo.png) | ![assets/cap2/logos/powerhouse-straight_logo](assets/cap2/logos/powerhouse-straight_logo.png) | ![assets/cap2/logos/machineq_logo](assets/cap2/logos/machineq_logo.png) | ![assets/cap2/logos/acrel_logo](assets/cap2/logos/acrel_logo.png) |
+|---|---|---|---|---|
+|  | **ElectroLink** | **Powerhouse Dynamics – Open Kitchen** | **MachineQ Foodservice** | **Acrel Smart Power Distribution** |
+| **Overview** | Plataforma IoT enfocada en seguridad eléctrica, eficiencia energética y continuidad operativa en cadenas de comida rápida de Lima. | Plataforma empresarial IoT para optimizar energía, refrigeración, HVAC, iluminación y equipos de restaurantes multisede. | Plataforma IoT para monitorear consumo y utilización de equipos mediante datos en tiempo real, históricos, tendencias y alertas. | Sistema de distribución eléctrica inteligente con medidores, sensores, gateways, alarmas y plataforma cloud para instalaciones multisede. |
+
+**Perfil de Marketing**
+
+| Perfil | Factor de análisis | ElectroLink | Open Kitchen | MachineQ | Acrel |
+|---|---|---|---|---|---|
+| **Perfil de Marketing** | **Ventaja competitiva ¿Qué valor ofrece a los clientes?** | Prevención de accidentes eléctricos, detección temprana de anomalías, alertas para personal no técnico, reducción de consumo y evidencia para mantenimiento y SST. | Visibilidad centralizada de locales, automatización energética, control de equipos y reducción de costos operativos. | Información accionable sobre consumo y rendimiento de activos, prevención de downtime y optimización del uso energético. | Medición detallada de parámetros eléctricos, alarmas configurables, monitoreo remoto y gestión de seguridad de la distribución. |
+|  | **Mercado objetivo** | Cadenas y franquicias de comida rápida en Lima con más de 5 locales. Compradores: operaciones, SST, mantenimiento corporativo. Usuarios: cocina y limpieza. | Marcas de restaurantes, foodservice, retail y operadores multisede con infraestructura energética compleja. | Empresas de foodservice y organizaciones que necesitan monitorear equipos, consumo, utilización y mantenimiento. | Restaurantes, retail, edificios, centros industriales e instalaciones comerciales que requieren gestión multisede. |
+|  | **Estrategias de marketing** | Venta B2B directa, pilotos en locales, demos de ahorro y seguridad, alianzas con mantenimiento eléctrico, asociaciones empresariales y consultores SST. | Venta empresarial, demostraciones, alianzas con fabricantes de equipos y paquetes con hardware, instalación y servicios administrados. | Venta consultiva B2B basada en casos de ahorro, monitoreo remoto, reducción de fallas e integración con sistemas empresariales. | Venta técnica por cotización, distribuidores, integradores eléctricos y proyectos de infraestructura o automatización. |
+
+**Perfil de Producto**
+
+| Perfil | Factor de análisis | ElectroLink | Open Kitchen | MachineQ | Acrel |
+|---|---|---|---|---|---|
+| **Perfil de Producto** | **Productos & Servicios** | Kit de sensores corriente, voltaje y temperatura; detección de fugas; gateway; dashboard web; alertas push/SMS/locales; historial; reportes; mantenimiento preventivo. | Open Kitchen, monitoreo por circuito, control HVAC, refrigeración, iluminación, alertas, analítica, reportes, instalación/soporte y reducción de demanda con IA. | MQinsights, transformadores de corriente, smart plugs, gateways, monitoreo por activo/enchufe/breaker, alertas, tendencias y predictivo. | Medidores mono/trifásicos, sensores inalámbricos y temperatura, gateways, plataforma IoT EMS, alarmas, históricos, monitoreo y control. |
+|  | **Precios & Costos** | Modelo propuesto: costo inicial por kit + instalación + suscripción SaaS mensual por local/tablero. Accesible para cadenas medianas, piloto de bajo riesgo. | Cotización empresarial. Ref. no oficial USD 150-400 mensual por local. Incluye hardware, instalación, software y servicios. No hay tarifa pública. | Cotización según sensores, activos, conectividad, locales, integración y servicios. Depende de infraestructura IoT y suscripción. | Cotización por proyecto. Ref. hardware desde USD 200-1.000 por caja inteligente. No equivale al costo total de implementación. |
+|  | **Canales de distribución (Web y/o Móvil)** | Dashboard web central, interfaz simple en tienda, push/SMS y señalizadores locales. Futuro: app móvil para técnicos y administradores. | Plataforma cloud en navegador, reportes centralizados y control remoto. Enfoque en gestión empresarial multisede. | Plataforma MQinsights, dashboards, alertas e integración por API REST o integraciones nativas empresariales. | Plataforma cloud y paneles; gateways con Modbus, RS485, Wi-Fi, 4G o LoRa según dispositivo. |
+
+**Análisis SWOT**
+
+| Perfil | Factor de análisis | ElectroLink | Open Kitchen | MachineQ | Acrel |
+|---|---|---|---|---|---|
+| **Análisis SWOT** | **Fortalezas** | Propuesta vertical para restaurantes; prioridad en seguridad laboral; alertas simples; adaptación a Lima y SST; integra seguridad, energía y mantenimiento. | Marca y experiencia IoT; enfoque restaurantes; amplia cobertura; monitoreo por circuito; control HVAC y refrigeración; escala grande. | Arquitectura escalable; monitoreo por activo/enchufe/breaker; datos históricos y tiempo real; alertas configurables; predictiva; APIs. | Amplio catálogo hardware; medición multicircuito; alarmas e históricos; seguridad eléctrica; personalización y arquitectura distribuida. |
+|  | **Debilidades** | Startup sin historial ni casos; hardware y algoritmos por validar en grasa, calor y humedad; requiere certificación e instalación segura; debe validar reducción de accidentes. | Posiblemente sobredimensionada y costosa para cadenas pequeñas; depende de implementación empresarial; más eficiencia que prevención de electrocución. | Requiere varios dispositivos y arquitectura compleja; propuesta horizontal no adaptada a normativa peruana, SST o limpieza en cocinas. | Enfoque técnico-industrial; complejo para no técnicos; requiere personal eléctrico para instalación; no diseñado para flujo de restaurante. |
+|  | **Oportunidades** | Ser solución local en seguridad foodservice; implementación rápida y bajo costo; reportes SST; alianzas con instaladores, aseguradoras y mantenimiento; expansión a retail, hoteles y dark kitchens. | Crecimiento multisede y necesidad de reducir costos energéticos favorecen plataformas inteligentes. Ampliación vía fabricantes. | Demanda de visibilidad energética, sostenibilidad, menos downtime y gestión remota. API permite integración con software existente. | Expansión IoT energético y modernización comercial crean oportunidad para distribución conectada, medición por circuito y alarmas remotas. |
+|  | **Amenazas** | Competidores con capital y marca; resistencia a hardware; falsas alarmas; responsabilidad legal; dificultad para demostrar ROI; certificación y seguridad eléctrica. | Puede capturar cuentas grandes con solución integral, marca internacional, instalación y soporte administrado. | Puede competir con plataforma IoT reutilizable multindustria y respaldo Comcast/MachineQ. | Puede competir por precio en hardware, vía integradores locales y como proveedor de infraestructura en proyectos grandes. |
+
+**Comparación de capacidades**
+
+| Capacidad | ElectroLink | Open Kitchen | MachineQ | Acrel |
+|---|---|---|---|---|
+| Orientación específica a restaurantes | Alta | Alta | Alta en foodservice | Media |
+| Monitoreo por local | Sí | Sí | Sí | Sí |
+| Monitoreo por circuito | Sí, como función central | Sí | Sí | Sí |
+| Monitoreo de corriente y voltaje | Sí | Sí, según configuración | Sí | Sí |
+| Monitoreo de temperatura | Sí, en equipos y tableros | Sí, principalmente en equipos y refrigeración | Disponible según sensores y caso de uso | Sí |
+| Detección de fugas o fallas a tierra | Debe ser función central, validada técnicamente | No aparece como eje principal | No aparece como eje principal | Puede cubrir condiciones eléctricas y alarmas, según componentes |
+| Alertas configurables | Sí | Sí | Sí | Sí |
+| Alertas para personal no técnico | Sí, mediante interfaz local simple | Principalmente gestión centralizada | Principalmente dashboard y notificaciones | Principalmente alarmas técnicas |
+| Analítica energética | Sí | Sí, con funciones avanzadas de demanda | Sí | Sí |
+| Mantenimiento predictivo | En desarrollo; debe validarse con datos piloto | Sí, mediante monitoreo de equipos y analítica | Sí, con insights predictivos | Sí, mediante monitoreo de condición y alarmas |
+| Control remoto de equipos | Opcional o futura | Sí, especialmente HVAC, iluminación y equipos compatibles | Depende de los dispositivos instalados | Disponible según dispositivos y salidas |
+| Gestión de órdenes de trabajo | Debe integrarse en el roadmap | Puede requerir integración o servicio adicional | Puede integrarse mediante API | Puede requerir integración con CMMS |
+| Reportes para SST y auditorías locales | Diferenciador principal | Reportes operativos y energéticos | Reportes de consumo, activos y eventos | Registros técnicos y de eventos |
+| Adaptación a Perú | Alta, si se implementa correctamente | Baja o requiere localización | Baja o requiere localización | Baja o requiere integrador local |
+| Complejidad para una cadena mediana | Diseñable como baja o media | Media o alta | Media | Media o alta |
+| Modelo comercial | Kit + instalación + SaaS | Cotización empresarial | Cotización empresarial | Hardware/proyecto + plataforma/cotización |
+
+**SWOT consolidado de ElectroLink**
+
+| Fortalezas | Debilidades |
+|---|---|
+| Enfoque especializado en cadenas de comida rápida y cocinas de alta exigencia. | Falta de validación comercial y técnica en condiciones reales. |
+| Integra seguridad eléctrica, consumo energético y mantenimiento preventivo. | Dependencia de la precisión de sensores y algoritmos de detección. |
+| Alertas diseñadas para usuarios no técnicos en la tienda. | Costos iniciales de diseño, certificación, instalación y soporte. |
+| Posibilidad de generar evidencia para inspecciones y auditorías internas. | Riesgo de falsas alarmas o de que el personal ignore las alertas. |
+| Adaptación a procesos, idioma, operación y necesidades regulatorias locales. | Todavía no cuenta con marca, referencias ni economías de escala de proveedores internacionales. |
+| Modelo SaaS recurrente por local, tablero o conjunto de sensores. | La detección de fugas y el protocolo de apagado seguro requieren validación por especialistas eléctricos. |
+| **Oportunidades** | **Amenazas** |
+| Digitalización de la operación de cadenas y franquicias. | Open Kitchen puede ofrecer una plataforma integral a grandes cadenas. |
+| Necesidad de disminuir paradas, accidentes, consumo y costos de mantenimiento. | MachineQ puede aprovechar una plataforma IoT horizontal y escalable. |
+| Alianzas con empresas de mantenimiento eléctrico, SST, aseguradoras e integradores. | Acrel puede competir con hardware de menor costo y amplia variedad de medidores. |
+| Venta de pilotos para demostrar ahorro y reducción de riesgos. | Las cadenas pueden preferir proveedores eléctricos tradicionales. |
+| Expansión a minimarkets, hoteles, dark kitchens, centros comerciales y retail. | Problemas de conectividad, calor, grasa, humedad o interferencias en cocina. |
+| Integración con CMMS, ERP, sistemas de tickets y plataformas de mantenimiento. | Una falla del sistema podría generar responsabilidad operativa o reputacional. |
+| Posibilidad de construir una base de datos local para modelos predictivos. | Requisitos de seguridad eléctrica, certificación, responsabilidad profesional y protección de datos. |
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+ElectroLink no debería competir únicamente con el argumento de medir el consumo. Open Kitchen, MachineQ y Acrel ya cubren medición energética, monitoreo remoto, alarmas y análisis de activos. La oportunidad está en combinar esas capacidades con seguridad eléctrica del trabajador, respuesta inmediata en tienda y trazabilidad del mantenimiento.
+
+Posicionamiento recomendado: ElectroLink es una plataforma IoT de seguridad eléctrica y continuidad operativa para cadenas de restaurantes, capaz de detectar anomalías en tableros y equipos, alertar al personal antes de una falla crítica y generar evidencia para la gestión de mantenimiento y SST.
+
+Prioridades del producto mínimo viable:
+
+1. Medición segura y confiable de corriente, voltaje y temperatura.
+2. Detección técnicamente validada de sobrecargas, sobrecalentamiento, pérdida de fase y eventos anómalos.
+3. Alertas locales claras, con instrucciones de acción para personal no técnico.
+4. Dashboard multisede para administradores y gerentes de operaciones.
+5. Historial de eventos, responsables, acciones correctivas y reportes descargables.
+6. Pilotos controlados en uno o dos locales antes de prometer porcentajes de ahorro o reducción de accidentes.
+7. Integración posterior con órdenes de trabajo, mantenimiento corporativo y sistemas de auditoría.
+
+Conviene validar antes de la versión final las cifras sobre accidentes, número de locales, porcentajes de sobrecosto energético y requisitos de OSINERGMIN, SUNAFIL e INDECI. Debe distinguirse entre detectar una anomalía eléctrica y garantizar la ausencia de riesgo de electrocución: ElectroLink debe complementar, no reemplazar, las protecciones eléctricas, inspecciones certificadas y procedimientos de SST.
 
 ## 2.2. Entrevistas
 
+
 ### 2.2.1. Diseño de entrevistas
+En esta sección se presenta el diseño de las entrevistas por segmento objetivo.
+
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+**Preguntas principales:**
+- ¿Cómo actúas cuando surge un problema eléctrico, como un corte de luz, una freidora o que deja de funcionar un horno?
+- ¿Qué tan rápido se atiende normalmente ese tipo de problemas en tu local?
+- ¿De qué manera una falla eléctrica afecta tu trabajo con relación a la atención al cliente, tiempos de entrega y seguridad?
+- ¿Has vivido alguna situación donde una instalación mal hecha o falta de mantenimiento haya causado un problema mayor en el local? ¿Cómo se resolvió?
+- ¿Con qué frecuencia ves que se hace mantenimiento preventivo a los equipos e instalaciones eléctricas de tu local?
+- ¿Qué importancia le das a que las reparaciones eléctricas del local cumplan normas de seguridad y cumplimiento normativo?
+- ¿Considerarías útil usar una plataforma que permita reportar rápido una falla y conectar con proveedores verificados para tu zona?
+- ¿Qué funcionalidades crees que harían esa plataforma útil para ti en el día a día (reporte en 1 clic, seguimiento en tiempo real, historial de fallas, chat con técnico)?
+
+**Preguntas complementarias:**
+- ¿Qué sueles hacer o buscar en internet cuando no sabes si una falla es eléctrica o del equipo?
+- ¿Cuánto confías en que tu reporte será atendido rápidamente por el encargado o un técnico?
+- ¿En qué momentos específicos del turno crees que sería más útil tener acceso a soporte eléctrico certificado (hora punta, cierre, apertura)?
+- ¿Te sentirías cómodo usando una aplicación para reportar fallas y agendar mantenimientos preventivos sin depender solo de WhatsApp o aviso verbal?
+
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
+
+**Preguntas principales:**
+- ¿Cómo está actualmente con la forma en que gestionas fallas y mantenimientos eléctricos en tu local?
+- ¿Qué haces normalmente cuando necesitas encontrar a alguien que repare o revise una instalación eléctrica del local?
+- ¿Qué tan fácil o difícil te resulta encontrar técnicos eléctricos certificados que atiendan con la rapidez que exige una cadena de comida rápida?
+- ¿Cuando has contratado un servicio eléctrico antes, ¿qué fue lo que más te preocupó (tiempo de inactividad, costo, seguridad alimentaria, cumplimiento normativo)?
+- ¿Qué cosas valoras más al contratar un proveedor para tu local (disponibilidad 24/7, certificación, garantía, precio, rapidez, facturación formal)?
+- ¿Con qué frecuencia realizas mantenimiento preventivo a tableros, cableado, refrigeración y equipos de cocina eléctrica?
+- ¿Te ha pasado que una instalación mal hecha haya causado pérdida de ventas, cierre temporal o riesgo sanitario? ¿Cómo lo resolviste?
+- ¿Estarías dispuesto a pagar una suscripción mensual si eso te garantiza proveedores verificados, atención prioritaria y monitoreo preventivo? ¿Por qué?
+- ¿Qué funcionalidades crees que te facilitarían la gestión desde una plataforma (panel multi-local, Acuerdo de Nivel de Servicio y tiempos de atención, calificaciones, pagos y facturación, historial y alertas preventivas)?
+
+**Preguntas complementarias:**
+- ¿Dónde buscas actualmente técnicos o proveedores (contactos de la cadena, Facebook, WhatsApp, proveedores corporativos)?
+- ¿Has probado plataformas para solicitar servicios de mantenimiento? ¿Cómo fue la experiencia?
+- ¿Qué herramientas digitales usas hoy para organizar mantenimientos y pedidos (Excel, WhatsApp, sistema interno de la franquicia)?
+- ¿Qué tan dispuesto estarías a formar parte de una red de locales y proveedores certificados con estándares comunes de seguridad eléctrica?
 
 ### 2.2.2. Registro de entrevistas
 
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+- Entrevista: Mark Mori
+- Edad: 21 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQC_gpWtSKeTSrFrsrdrAfTKAe0JfPhBuHVNk-_JEgFhSUE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jVrcff>
+- Inicia en: 0:10
+- Duración: 7:38
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_1_1](assets/cap2/interviews/entrevista_1_1.png)
+
+**Contexto de la entrevista**
+El objetivo de la charla fue conocer la perspectiva del personal operativo sobre una propuesta de proyecto basada en dispositivos IoT (sensores inteligentes) para medir el consumo eléctrico, evitar sobrecalentamientos y prevenir accidentes en locales comerciales.
+
+**Aspectos clave mencionados por el entrevistado:**
+- Protocolos ante fallas eléctricas: Cuando ocurre un corte de luz o falla un equipo (como freidoras u hornos), se avisa inmediatamente al gerente de turno. El gerente baja el interruptor y se emite un ticket de soporte. Priorizan revisar las llaves termomagnéticas para asegurar que las cámaras de frío no pierdan temperatura y se echen a perder los insumos.
+- Tiempos de respuesta: Para fallas críticas reportadas por su plataforma interna, el tiempo estimado de atención y arreglo por parte de los técnicos es de 1 a 3 horas, ya que no pueden detener operaciones esenciales.
+Impacto de las fallas en el trabajo y servicio:
+- Atención y ventas: Se paralizan las operaciones. Caen los sistemas POS (puntos de venta) por falta de internet y las pantallas de cocina se apagan, impidiendo ver o tomar nuevos pedidos.
+- Delivery: Los repartidores no pueden ser despachados.
+- Seguridad: Las fallas incrementan el riesgo de accidentes, posibles fugas de gas o problemas de iluminación en el entorno de la cocina.
+**Mantenimientos preventivos y seguridad:**
+El mantenimiento en su local se realiza cada dos meses. Es vital porque la grasa y el calor constante de la cocina pueden afectar los circuitos.
+Mark considera crítico el cumplimiento normativo. Reciben capacitaciones mensuales sobre cómo actuar en estas emergencias, lo cual es fundamental al convivir con pisos húmedos, freidoras y altas temperaturas.
+**Opinión sobre la plataforma propuesta (IoT y reportes):**
+Considera útil la idea para el seguimiento en tiempo real, aunque menciona que actualmente su empresa ya terceriza esa función con proveedores establecidos.
+Funcionalidades deseadas: Si utilizara esta nueva plataforma en el día a día, le gustaría que incluyera el seguimiento en tiempo real del ticket de soporte, la opción de adjuntar fotografías del problema, un historial de fallas y un chat directo con el técnico para agilizar la solución y mejorar la trazabilidad.
+
+---
+
+- Entrevista: Anyelina Rivera
+- Edad: 21 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAX6Iov-xwKTo_Qebu0DG0XAeUEGuaYWgN4DCkzuRwMtwU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=rgjWEW>
+- Inicia en: 0:02
+- Duración: 10:48
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_2_1](assets/cap2/interviews/entrevista_2_1.png)
+
+**Contexto de la entrevista**
+Al igual que en la primera entrevista, el objetivo fue conocer la perspectiva de un trabajador de restaurante de comida rápida sobre una propuesta de proyecto IoT para monitorear componentes eléctricos en la cocina y prevenir accidentes.
+
+**Aspectos clave mencionados por la entrevistada:**
+- Protocolos ante fallas eléctricas: Lo primero que hacen es avisar al encargado de turno. Si es un corte general, esperan indicaciones; pero si es un equipo específico (freidora, horno, plancha), evitan manipularlo por seguridad (especialmente si hay humo, chispas o cables dañados). Mientras tanto, el equipo de cocina se reorganiza para seguir trabajando con las máquinas operativas y priorizar pedidos.
+- Tiempos de respuesta: Depende de la gravedad. Si la falla afecta directamente la producción y operación, se reporta rápidamente como emergencia para coordinar con mantenimiento. Si es algo menor, puede esperar. Los tiempos también dependen de la disponibilidad del técnico o de si se necesitan repuestos.
+
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención y tiempos: Los pedidos se acumulan, el tiempo de preparación aumenta y los clientes terminan esperando más de lo habitual, lo cual afecta la calidad del servicio de comida rápida.
+- Seguridad: Anyelina resalta que la seguridad es prioritaria. Preferirán detener el uso de un equipo antes que arriesgarse a una descarga eléctrica o accidente mayor por querer sacar los pedidos rápido.
+
+**Mantenimientos preventivos y seguridad:**
+Sabe que hay un mantenimiento periódico coordinado por los encargados, aunque los empleados no manejan el cronograma exacto.
+Considera vital el mantenimiento preventivo porque en un restaurante los equipos se usan intensamente todo el día. Esperar a que se malogren genera más costos y afecta la atención.
+Cumplimiento normativo: Le da mucha importancia. Las reparaciones no solo deben hacer que la máquina vuelva a funcionar, sino que deben garantizar la seguridad del personal, dado que trabajan en un entorno riesgoso con calor, agua, grasa y electricidad.
+
+**Opinión sobre la plataforma propuesta (IoT y reportes):**
+Considera que sería muy útil para ordenar y acelerar el proceso. Valora especialmente que la plataforma ofrezca técnicos y proveedores verificados, ya que los temas eléctricos no deben dejarse en manos de cualquier persona.
+Funcionalidades deseadas:
+- Reportes rápidos y sencillos: Seleccionar el equipo, hacer una descripción corta y poder adjuntar fotos/videos de prueba sin que sea un proceso engorroso.
+- Seguimiento en tiempo real: Saber si el técnico ya fue asignado y a qué hora llegará.
+- Historial de fallas: Para identificar si un equipo se malogra repetidamente y evaluar si es mejor reemplazarlo.
+- Chat directo con el técnico: Para poder explicar mejor el problema antes de que llegue al local.
+
+---
+
+- Entrevista: Akemy Garcia 
+- Edad: 19 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQC32NumMX-ARa1xo0SfJfSFARvM3lt5n7Bb8uW5LlNo7RY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oJpFbp>
+- Inicia: 0:08
+- Duración: 4:21
+- Entrevistador: Leandro Saul Contreras López
+
+![assets/cap2/interviews/entrevista_3_1](assets/cap2/interviews/entrevista_3_1.png)
+
+**Contexto de la entrevista**
+Esta entrevista continúa explorando la perspectiva del personal de atención y operaciones (en este caso, en cines) frente a la propuesta de usar sensores IoT para medir el consumo eléctrico y evitar el sobrecalentamiento de los equipos.
+
+**Aspectos clave mencionados por la entrevistada:**
+- Protocolos ante fallas eléctricas: Su primera acción es avisar al encargado y dejar de usar el equipo inmediatamente para evitar cualquier accidente. Si la situación es más grave, se recurre a llamar a un técnico.
+- Tiempos de respuesta: La rapidez de la atención depende del tipo de problema. Si afecta considerablemente el trabajo y la operación, intentan solucionarlo lo más rápido posible, aunque Akemy señala que a veces el técnico se demora en llegar.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención al cliente: Considera que afecta bastante porque retrasa los pedidos, genera molestias directas en los clientes y puede llegar a paralizar por completo parte de la atención.
+- Seguridad: También lo identifica como un riesgo latente para la integridad de los propios trabajadores.
+
+Experiencias previas con malas instalaciones: Ha vivido situaciones donde un equipo empezó a fallar debido a una conexión en mal estado. La solución fue detener el uso de la máquina y llamar a un técnico para que revisara y cambiara la instalación.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia: Señala que el mantenimiento preventivo no es muy seguido. Generalmente, los equipos solo se revisan de manera reactiva (cuando ya presentan alguna falla) en lugar de tener revisiones preventivas constantes.
+- Cumplimiento normativo: Le da bastante importancia a las normas de seguridad, ya que una reparación mal hecha puede causar accidentes graves, dañar aún más los equipos o generar problemas a futuro.
+
+**Opinión sobre la plataforma propuesta:**
+- Considera que sería una herramienta muy útil, especialmente si permite hacer el reporte de manera rápida y ayuda a encontrar técnicos confiables (verificados) que estén cerca del local.
+ 
+**Funcionalidades deseadas:** Para que le sea útil en su día a día, le gustaría que la plataforma incluyera:
+- Reporte rápido de la falla.
+- Seguimiento del técnico y su tiempo estimado de llegada.
+- Chat directo.
+- Un historial que registre las fallas y las reparaciones previas.
+
+---
+
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
+
+- Entrevista: Juan Carrion
+- Edad: 30 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQDlpevVloNBT6gdiUm1e88qAR_TuWgp_v3K431_OOzYjQk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=fVegXG>
+- Inicia en: 0:17
+- Duración: 5:51
+- Entrevistador: Vanessa May Lang Choy Robles
+
+![assets/cap2/interviews/entrevista_1_2](assets/cap2/interviews/entrevista_1_2.png)
+
+**Contexto de la entrevista**
+Esta entrevista explora la perspectiva de la gestión administrativa y operativa en el rubro de comida rápida (con Juan Carrión, administrador) frente a los desafíos del mantenimiento eléctrico, la búsqueda de técnicos calificados y la disposición a adoptar una plataforma digital con modelo de suscripción para soporte preventivo y correctivo.
+
+**Aspectos clave mencionados por la entrevistada:**
+- Protocolos ante fallas eléctricas: Actualmente lo gestionan de manera reactiva; al ocurrir un incidente buscan resolverlo lo antes posible para no frenar la operación. Su primer recurso es recurrir a contactos conocidos y, si no están disponibles, buscar en internet.
+- Tiempos de respuesta y disponibilidad: Requieren una respuesta prácticamente inmediata ante una emergencia. Destaca que encontrar técnicos en sí no es complejo, pero hallar uno que esté disponible de inmediato, sea confiable, esté certificado y sepa trabajar con la rapidez que demanda una cadena de comida rápida resulta bastante difícil.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención y continuidad del negocio: Una avería crítica (por ejemplo, en cocinas o refrigeración) puede causar pérdidas directas de ventas, merma de insumos o incluso la paralización parcial o total de la operación del local.
+- Seguridad y riesgos: La seguridad es una de sus principales preocupaciones; priorizan la calidad y confiabilidad técnica por encima de un costo bajo si este último implica incurrir en mayores riesgos operativos o de integridad.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia y enfoque: Intentan realizar mantenimientos de manera periódica según el tipo de equipo y las políticas corporativas, pero admiten que en las instalaciones eléctricas generales suelen terminar actuando de forma reactiva cuando ya se presenta el problema.
+- Criterios de contratación: Valora que el proveedor ofrezca rapidez, disponibilidad, certificación técnica, garantía por el trabajo efectuado y facturación formal.
+
+**Opinión sobre la plataforma propuesta:**
+- Disposición de pago: Estaría dispuesto a pagar una suscripción mensual que ofrezca proveedores verificados, monitoreo preventivo y atención prioritaria, siempre que la tarifa sea razonable y garantice el nivel de servicio requerido para emergencias comerciales.
+ 
+**Funcionalidades deseadas:** Para optimizar la gestión del local, le gustaría que la plataforma incorporara:
+- Panel centralizado con historial de incidencias para facilitar evaluaciones preventivas.
+- Tiempos de atención claramente definidos (SLA de respuesta).
+- Seguimiento del técnico en tiempo real ante servicios de emergencia.
+- Sistema de calificación y reseñas de proveedores.
+- Emisión y gestión directa de facturación formal a través de la misma plataforma.
+
+---
+
+- Entrevista: Brayan Serna
+- Edad: 22 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQCtaN_OFEvlQ7zNkrOtlpl_AQnp0_46b9VtNGby__Ef7uc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9cNZyk>
+- Inicia en: 0:25
+- Duración: 7:33
+- Entrevistador: Ivo Marcelo Machado Bracamonte
+
+![assets/cap2/interviews/entrevista_2_2](assets/cap2/interviews/entrevista_2_2.png)
+
+**Contexto de la entrevista**
+Esta entrevista explora la perspectiva operativa y de gestión de tienda en el rubro de comida rápida con Brayan Serna, gerente de tienda de Little Caesars Arenales frente a los desafíos del mantenimiento correctivo y preventivo de equipos e instalaciones eléctricas, el protocolo de escalamiento interno y la disposición a adoptar una plataforma digital con modelo de suscripción para asegurar continuidad operativa y altos estándares de inocuidad.
+
+**Aspectos clave mencionados por el entrevistado**
+- PProtocolos ante fallas eléctricas: Siguen una línea de reporte jerárquica; ante una avería, el gerente de tienda notifica de inmediato al gerente zonal, quien coordina y gestiona la asignación de técnicos tercerizados ya homologados por la empresa. Si la incidencia es de extrema urgencia, se prioriza contactar al técnico o cuadrilla disponible más cercana al local.
+- Tiempos de respuesta y disponibilidad: Requieren resolución inmediata debido al impacto directo en la producción continua. Brayan resalta que, ante imprevistos graves (como un corte de energía reciente de 30 minutos), la velocidad de respuesta para suministrar soluciones de contingencia como conectar un grupo electrógeno al tablero general es determinante para no detener la operación.
+  
+**Impacto de las fallas en el trabajo y servicio:**
+- Atención y continuidad del negocio: Una avería crítica en maquinaria clave puede frenar por completo el flujo de venta y elevar los sobrecostos. Relata un incidente con la batidora industrial de masa tras un mal servicio técnico, lo que obligó a suspender la producción diaria de masa, trasladar insumos y una máquina pesada desde otra sucursal (Miraflores), y asumir altos costos logísticos y operativos.
+- Seguridad y riesgos: Su máxima preocupación al ingresar personal externo es la inocuidad y seguridad alimentaria. Teme que técnicos dejen residuos o herramientas en áreas de preparación que puedan generar focos infecciosos o riesgos sanitarios antes de la apertura de tienda.
+
+**Mantenimientos preventivos y seguridad:**
+- Frecuencia y enfoque: Manejan programas periódicos para componentes críticos (limpieza de hornos, sumideros y cámaras frigoríficas), aunque reconoce que con frecuencia se termina actuando y priorizando intervenciones cuando ya se manifiesta una falla.
+- Criterios de contratación: Exige indispensables como facturación formal obligatoria, certificaciones técnicas que garanticen pericia, rapidez de llegada y disponibilidad permanente ante imprevistos en plena operación.
+
+**Opinión sobre la plataforma propuesta:**
+- Disposición de pago: Totalmente dispuesto a pagar una suscripción mensual, siempre que garantice una reducción comprobable en tiempos de respuesta, disminuya la frecuencia de averías y asegure técnicos verificados y confiables que respalden la operación en tiempo real. También muestra gran interés en integrarse a una red con estándares comunes de seguridad.
+ 
+**Funcionalidades deseadas:** Para optimizar el control y mantenimiento de la tienda, desearía que la plataforma incorporara:
+- Registro e historial detallado por el equipo o dispositivo especificando qué intervenciones y reparaciones se le han realizado.
+- Catálogo de técnicos certificados disponibles en la zona con tiempos de atención.
+- Sistema automatizado de alertas y recordatorios de vencimiento para mantenimientos regulatorios y preventivos.
+- Módulo de gestión y emisión de facturación formal para agilizar la rendición corporativa.
+
+---
+
+- Entrevista: Renzo LLontop
+- Edad: 33 años
+- Link: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231e215_upc_edu_pe/IQC2fFE-AwWBRIpyQ-H9BOR2Ad6CiMUm5RY42tvdyMJz8EQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XUjm7t>
+- Inicia en: 0:01
+- Duración: 7:49
+- Entrevistador: Leandro Saul Contreras Lopez
+
+![assets/cap2/interviews/entrevista_3_2](assets/cap2/interviews/entrevista_3_2.png)
+
+**Contexto de la entrevista**
+A diferencia de las entrevistas anteriores enfocadas en el personal operativo, esta charla explora la perspectiva gerencial respecto a la propuesta de usar dispositivos IoT para monitorear el consumo eléctrico y prevenir fallas en un local de alta demanda.
+
+**Aspectos clave mencionados por el entrevistado:**
+- Gestión de fallas y mantenimiento preventivo: Por normas de la empresa, realizan una revisión de todas las instalaciones eléctricas cada 3 meses para asegurar que todo esté en buen estado.
+Cuentan con un pequeño generador en el edificio (aunque no siempre es suficiente) y tienen contratada a una empresa externa que se encarga de todo el tema eléctrico y de utilería. Si hay una falla, simplemente los llaman, los técnicos resuelven el problema y luego pasan la factura.
+
+- Tiempos de respuesta e impacto operativo: El tiempo de respuesta de los técnicos debe ser muy rápido, ya que sin electricidad la tienda queda inoperativa por completo: no pueden cobrar, las máquinas de café no funcionan, los hornos se apagan y se cae el Wi-Fi. Renzo destaca que cada minuto u hora sin operación se traduce en miles de dólares en pérdida.
+
+- Experiencia con fallas eléctricas: Aunque no han tenido problemas por "instalaciones mal hechas", sí han sufrido pérdidas económicas importantes por cortes de luz imprevistos (la última vez fue entre febrero y marzo de ese año).
+
+**Opinión sobre pagar una suscripción por la plataforma IoT:** Si su local no tuviera ya una empresa contratada, probablemente sí pagaría la suscripción que ofrece proveedores verificados y atención prioritaria.
+Sin embargo, como administrador, tendría que evaluar el costo-beneficio. Si en todo el año solo tienen una falla eléctrica, pagar una suscripción mensual no le resultaría rentable. Lo vería más útil si se enfoca puramente en el aspecto preventivo para evitar esa única gran falla.
+
+**Funcionalidades y usabilidad de la app:**
+
+- Renzo hace una observación clave sobre la usabilidad: si la aplicación solo sirve para reportar emergencias, la usaría muy poco y probablemente la terminaría borrando del teléfono. En una urgencia, siente que es mucho más rápido llamar por teléfono que abrir una app.
+- Acepta que la plataforma sería útil si le permite ver información adicional de valor (como facturas, estado de las revisiones o reportes técnicos pasados), pero recalca que la acción principal ante una falla debe ser garantizar una respuesta rápida (por ejemplo, con una llamada directa).
+
+---
+
 ### 2.2.3. Análisis de entrevistas
+
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+Para este análisis se revisaron 3 entrevistas: Mark Mori (21 años, comida rápida), Anyelina Rivera (21 años, comida rápida) y Akemy Garcia (19 años, atención en cines). Los tres trabajan en atención al público y operación diaria, por lo que conocen de primera mano lo que pasa cuando falla un equipo eléctrico.
+
+#### a) Resumen comparativo de lo encontrado
+
+| Tema | Mark Mori | Anyelina Rivera | Akemy Garcia | En qué coinciden |
+|---|---|---|---|---|
+| **Qué hacen ante una falla** | Avisa al gerente, el gerente baja la llave y genera un ticket. Revisan que no se apaguen las cámaras de frío. | Avisa al encargado y no toca el equipo si ve humo, chispas o cables dañados. Siguen trabajando con las otras máquinas. | Avisa al encargado y deja de usar el equipo. Si es grave, llaman al técnico. | **Todos avisan al encargado y prefieren no tocar el equipo por seguridad.** |
+| **Cuánto demoran en atenderlos** | De 1 a 3 horas cuando es una falla grave. | Depende de qué tan grave sea y si hay técnico o repuestos disponibles. | Depende del problema, a veces el técnico demora en llegar. | **Solo lo urgente se atiende rápido. Sienten que la ayuda demora.** |
+| **Cómo les afecta en su trabajo** | Se paraliza todo: no hay ventas, se apagan pantallas, no salen deliveries. | Se acumulan pedidos, los clientes esperan más y se molestan. | Se retrasan los pedidos y los clientes se incomodan. | **Toda falla eléctrica frena la atención y molesta al cliente.** |
+| **Mantenimiento** | Lo hacen cada 2 meses y les dan charlas cada mes. La grasa y el calor dañan los cables. | Sabe que hay mantenimiento, pero no conoce las fechas. Dice que esperar a que se malogre sale más caro. | Casi no hay mantenimiento, solo revisan cuando algo ya se malogró. | **No todos tienen mantenimiento seguido y el trabajador no sabe cuándo toca.** |
+| **Seguridad y normas** | Lo ve muy importante porque trabajan con pisos mojados, freidoras y calor. | Lo ve vital: no basta con que la máquina prenda, tiene que ser segura para usarla. | También lo ve importante: una mala reparación puede causar un accidente. | **Los 3 están muy preocupados por su seguridad, aunque no sean técnicos.** |
+| **Qué opinan de la plataforma propuesta** | Le parece útil para ver el estado del reporte. Pide seguimiento del ticket, subir fotos, historial y chat con el técnico. | Le parece muy útil y ordenaría el trabajo. Pide reporte rápido con foto/video, saber cuándo llega el técnico, historial y chat. | Le parece muy útil si es rápida y conecta con técnicos de confianza. Pide lo mismo: reporte rápido, seguimiento, chat e historial. | **A los 3 les gusta la idea, siempre que sea fácil de usar. Piden las mismas 4 funciones.** |
+
+#### b) Ideas que se repiten en las 3 entrevistas
+
+1. **No tocan, solo avisan:** los trabajadores detectan señales como ruidos raros, olor a quemado o pequeños toques eléctricos, pero su única opción es avisar al encargado y alejarse. A veces demoran en avisar por miedo a parar la venta y que les llamen la atención.
+2. **Los avisos se pierden:** hoy avisan de palabra o por WhatsApp (“la máquina suena raro”), sin foto ni registro. Por eso la misma máquina se malogra varias veces y nadie lleva la cuenta.
+3. **La seguridad está primero:** aunque estén en hora pico y con presión por sacar pedidos, los 3 dicen que prefieren apagar el equipo antes que arriesgarse a una descarga. Esto confirma que lo que más valoran es trabajar sin miedo a accidentarse.
+4. **Limpiar es el momento de más miedo:** cuando trapean o echan agua cerca de enchufes y cables sienten mucho temor a electrocutarse. No tienen ninguna señal que les confirme que es seguro limpiar.
+5. **Quieren algo simple y rápido:** no piden gráficos ni datos complicados. Piden lo mismo en los 3 casos: reportar con 1 clic y foto, saber si ya viene el técnico y a qué hora llega, ver el historial de fallas y poder chatear con el técnico.
+
+#### c) En qué se diferencian
+
+- **No todos tienen el mismo orden:** Mark ya trabaja con tickets y tiempos de 1 a 3 horas, mientras Akemy trabaja en un local donde solo actúan cuando algo se malogra. La solución debe servir para ambos casos.
+- **Distinto rubro, mismo problema:** Akemy trabaja en cines y no en comida rápida, pero cuenta lo mismo. Esto muestra que el problema existe en otros locales, aunque por ahora el proyecto se enfoca en cocinas de comida rápida.
+- **Distinto nivel de detalle:** Mark y Anyelina ya piensan en usar el historial para decidir si conviene cambiar una máquina que falla mucho, mientras Akemy solo pide que el técnico llegue rápido y sea de confianza.
+
+**Conclusión del segmento:** el trabajador operativo no necesita ver gráficos ni datos técnicos. Necesita tres cosas bien simples; que le digan si es seguro tocar o limpiar, que pueda avisar rápido con su celular o pantalla sin dejar de atender, y que le confirmen que su aviso fue recibido y que ya viene ayuda. Si ElectroLink logra eso, lo van a ver como una protección y no como un control más. 
+
+---
+
+**Segmento 2: Manager del Local, Administrador y Jefe de Tienda**
+
+Para este análisis se revisaron tres entrevistas: Juan Carrion, de 30 años, administrador de comida rápida; Brayan Serna, de 22 años, gerente de tienda Little Caesars Arenales; y Renzo LLontop, de 33 años, perfil gerencial. Los tres son responsables de continuidad operativa, costos, seguridad e inocuidad en locales de alta demanda.
+
+#### A. Resumen comparativo de lo encontrado
+
+| Tema | Juan Carrion | Brayan Serna | Renzo LLontop | En qué coinciden |
+|---|---|---|---|---|
+| **Cómo gestionan fallas** | Reactivo. Recurre a contactos conocidos y, si no obtiene respuesta, busca en internet. | Jerárquico. Reporta a gerente zonal, quien asigna técnicos tercerizados homologados. Si la urgencia es extrema, busca la cuadrilla más cercana. | Tercerizado fijo. Revisión cada tres meses por norma y empresa externa contratada. Ante una falla, los llama, ellos resuelven y luego facturan. | **Ninguno resuelve con personal propio. Todos dependen de terceros y actúan de forma reactiva cuando falla el sistema eléctrico general.** |
+| **Tiempos de respuesta** | Exige inmediatez. Encontrar un técnico es sencillo, pero encontrar uno disponible en el momento, certificado y rápido para el ritmo de comida rápida resulta complejo. | Exige resolución inmediata. En un corte de 30 minutos, fue determinante conectar el grupo electrógeno al tablero general para no detener la operación. | Exige rapidez total. Sin electricidad la tienda queda inoperativa: no es posible cobrar, no funcionan las máquinas de café ni los hornos y se pierde la conexión wifi. Cada minuto detenido representa miles de dólares en pérdida. | **La velocidad es innegociable. Treinta minutos detenidos generan pérdida directa de ventas.** |
+| **Cómo les afecta** | Una avería crítica en cocina o refrigeración genera pérdida de ventas, merma de insumos y paralización parcial o total. | Una avería en la batidora industrial por un mal servicio obligó a suspender la producción de masa, trasladar insumos y una máquina pesada desde Miraflores, con un alto costo logístico. | No sufrió por mala instalación interna, pero sí por cortes externos ocurridos entre febrero y marzo. El último corte generó una pérdida económica importante. | **Toda falla crítica frena la venta y genera sobrecosto logístico y operativo.** |
+| **Mantenimiento** | Intenta un esquema periódico según tipo de equipo y política corporativa, pero en el sistema eléctrico general termina actuando de forma reactiva. | Maneja un programa periódico en equipos críticos como hornos, sumideros y cámaras, pero reconoce que se prioriza la intervención cuando ya existe una falla. | Cumple revisión cada tres meses por norma y cuenta con un generador pequeño que resulta insuficiente. El preventivo está contratado y no lo gestiona directamente. | **El preventivo existe en documentos y políticas, pero el sistema eléctrico se atiende cuando ya falló.** |
+| **Seguridad y criterios de contratación** | Prioriza calidad y confiabilidad sobre costo bajo. Valora rapidez, disponibilidad, certificación, garantía y facturación formal. | Su máxima preocupación es la inocuidad. Teme que personal externo deje residuos o herramientas en zona de preparación. Exige facturación formal, certificación, rapidez y disponibilidad permanente. | Prioriza continuidad y costo beneficio. No le preocupa tanto quién atiende, sino que responda de inmediato y que la tienda no se detenga. | **No contratan por precio. Contratan por certificación, garantía, factura formal y disponibilidad.** |
+| **Disposición a pagar suscripción** | Sí, si la tarifa es razonable y garantiza acuerdo de nivel de servicio para emergencias. | Totalmente dispuesto, si reduce tiempos, disminuye la frecuencia de averías y asegura técnicos verificados. Desea una red con estándares comunes. | Postura condicional y escéptica. Si no contara con empresa contratada, sí pagaría. Con su empresa actual, si solo ocurre una falla al año, la mensualidad no resulta rentable. Solo lo considera útil con enfoque puramente preventivo. | **Dos de tres pagarían de inmediato. El tercero solo pagaría si se demuestra retorno preventivo y no solo correctivo.** |
+| **Funcionalidades deseadas** | Panel centralizado con historial, acuerdos de servicio definidos, seguimiento en tiempo real, calificación de proveedores y facturación en plataforma. | Historial por equipo o dispositivo, catálogo de certificados por zona con tiempos de atención, alertas y recordatorios de vencimiento, además de facturación formal. | No desea otra aplicación solo para emergencias, pues dejaría de usarla. En una urgencia prefiere llamar antes que abrir una aplicación. Sí valora ver facturas, estado de revisiones y reportes pasados, con botón de llamada directa. | **Todos solicitan la misma base: historial, tiempos de atención definidos, seguimiento y factura. Renzo agrega el filtro de usabilidad.** |
+
+#### B. Ideas que se repiten en las tres entrevistas
+
+1. **Operan a ciegas hasta que ocurre la falla:** abren con lista de verificación en papel y desconocen qué circuito o equipo consume en exceso o presenta fuga. Se enteran cuando se dispara la llave termomagnética en plena hora pico.
+2. **Lo reactivo resulta muy costoso:** merma, traslado entre locales, tarifa de emergencia, uso de generador y ventas perdidas. El preventivo programado no evita la falla intempestiva.
+3. **El problema no es la falta de técnicos, sino la falta del técnico correcto en el momento necesario:** el dolor no es el precio, es la disponibilidad inmediata, la certificación, el conocimiento del ritmo de comida rápida, el cuidado de la inocuidad y la emisión de factura formal para rendir cuentas a nivel corporativo.
+4. **La suscripción solo se justifica si previene:** están dispuestos a pagar una mensualidad, pero no por un directorio. Pagan si garantiza atención prioritaria con acuerdos de servicio medibles, menos averías y evidencia para justificar el gasto ante la gerencia regional.
+5. **Desean gestión y no solo alertas:** panel central para varios locales, historial por máquina para decidir entre reemplazo y reparación, recordatorios de mantenimiento regulatorio y preventivo, y facturación dentro de la misma plataforma.
+6. **Existe riesgo de abandono:** si ElectroLink se presenta solo como botón de emergencia, no la usarán a diario. Debe aportar valor de consulta frecuente, como consumo en soles por máquina, estado de revisiones y reportes descargables, y resolver la emergencia en un solo toque mediante llamada directa y no solo con un ticket en la aplicación.
+
+#### C. En qué se diferencian
+
+- **Modelo de abastecimiento distinto:** Juan usa red informal y buscadores, Brayan usa red corporativa homologada mediante el nivel zonal, Renzo mantiene contrato fijo con empresa externa. La solución debe servir para los tres casos: no imponer un único proveedor, sino integrar y homologar los existentes y medir su nivel de servicio.
+- **Naturaleza del incidente:** Brayan sufrió mala praxis técnica interna en la batidora, Renzo sufrió corte externo de red entre febrero y marzo, Juan teme falla en cocina o refrigeración. Esto obliga a separar en el producto la anomalía interna detectable con sensores IoT de la interrupción externa no prevenible pero mitigable con grupo electrógeno y protocolo definido.
+- **Postura frente al pago:** Juan y Brayan son promotores tempranos de la suscripción. Renzo representa el freno económico: exige cálculo de costo beneficio anual y enfoque preventivo puro. Este caso permite justificar el módulo de eficiencia energética con ahorro de 12 por ciento en factura como fuente de pago de la suscripción.
+- **Énfasis funcional:** Juan solicita control mediante acuerdos de servicio y calificación, Brayan solicita estandarización e inocuidad mediante protocolos y alertas de vencimiento, Renzo solicita simplicidad extrema para ver facturas y reportes y llamar de inmediato.
+
+**Conclusión del segmento:** el Manager no necesita otro buscador de electricistas. Necesita tres condiciones para firmar: primero, visibilidad preventiva por equipo para no enterarse por el disparo de la llave en viernes por la noche; segundo, respuesta de emergencia garantizada con acuerdo de servicio, seguimiento y facturación formal sin fricción corporativa; y tercero, evidencia descargable para SST, SUNAFIL e INDECI y para justificar sobrecostos ante el nivel regional. Si ElectroLink solo promete monitoreo sin acuerdo operativo, Renzo no renovará. Si combina sensores IoT, acuerdo de servicio y ahorro energético comprobable, Juan y Brayan sí pagarán e impulsarán la red de locales.
+
+---
 
 ## 2.3. Needfinding
 
+Continuando con esta sección, se presentan los hallazgos de las entrevistas y la investigación de campo, organizados en herramientas de análisis de necesidades, incluyendo la creación de user personas, matrices de tareas, mapas de empatía y escenarios actuales (as-is).
+
 ### 2.3.1. User Personas
+
+Segmento 1:
+
+![assets/cap2/needfinding/arturo_sanchez_user_persona](assets/cap2/needfinding/arturo_sanchez_user_persona.png)
+
+Segmento 2:
+
+![assets/cap2/needfinding/patricia_morales_user_persona](assets/cap2/needfinding/patricia_morales_user_persona.png)
 
 ### 2.3.2. User Task Matrix
 
+En esta sección se detallan las tareas que realizan los diferentes segmentos de usuarios representados por los User Personas de ElectroLink, con el objetivo de cumplir sus metas relacionadas con la prevención de accidentes laborales, el monitoreo y control técnico, y la optimización del consumo eléctrico en cadenas de comida rápida.
+
+**Segmento: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+| Persona | Actividad | Frecuencia | Importancia |
+| :--- | :--- | :--- | :--- |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Verificar el indicador visual de seguridad antes de baldear o limpiar la cocina | Frecuentemente | Alta |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Recibir alertas inmediatas ante fugas de corriente o sobrecalentamiento en máquinas | Frecuentemente | Alta |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Reportar anomalías físicas o ruidos extraños en los equipos de cocina | Frecuentemente | Alta |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Detener el uso o desconexión de una máquina riesgosa ante una alerta crítica | Ocasionalmente | Alta |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Confirmar el restablecimiento seguro de un equipo tras la intervención de mantenimiento | Ocasionalmente | Media |
+| Arturo Sanchez - Operario de Cocina y Limpieza | Revisar instructivos rápidos de seguridad y apagado seguro en pantalla de cocina | Ocasionalmente | Media |
+
+---
+
+**Segmento: Managers del Local (Administradores / Jefes de Tienda)**
+
+| Persona | Actividad | Frecuencia | Importancia |
+| :--- | :--- | :--- | :--- |
+| Patricia Morales - Store Manager | Monitorear en tiempo real la salud de la red y el estado de los equipos críticos | Frecuentemente | Alta |
+| Patricia Morales - Store Manager | Recibir y gestionar notificaciones de fugas eléctricas y riesgos de electrocución | Frecuentemente | Alta |
+| Patricia Morales - Store Manager | Coordinar servicios de mantenimiento preventivo y correctivo con técnicos | Frecuentemente | Alta |
+| Patricia Morales - Store Manager | Analizar reportes de consumo energético detallados por máquina | Ocasionalmente | Alta |
+| Patricia Morales - Store Manager | Descargar bitácoras y reportes de seguridad para inspecciones (SUNAFIL / INDECI) | Ocasionalmente | Alta |
+| Patricia Morales - Store Manager | Evaluar indicadores de ahorro energético y sobrecostos en la facturación mensual | Ocasionalmente | Alta |
+| Patricia Morales - Store Manager | Supervisar el historial de alertas e incidencias técnicas de la tienda | Ocasionalmente | Media |
+
 ### 2.3.3. Empathy Mapping
+
+Segmento 1:
+
+![assets/cap2/needfinding/arturo_sanchez_empathy_mapping](assets/cap2/needfinding/arturo_sanchez_empathy_mapping.png)
+
+
+Segmento 2:
+
+![assets/cap2/needfinding/patricia_morales_empathy_mapping](assets/cap2/needfinding/patricia_morales_empathy_mapping.png)
 
 ### 2.3.4. As-is Scenario Mapping
 
+En esta sección se modela la situación operativa y de gestión actual ("As-Is") en las tiendas de comida rápida de Lima Metropolitana, evidenciando las fricciones, riesgos y vacíos tecnológicos que existen antes de la adopción de ElectroLink.
+
+### As-Is Scenario Mapping - Segmento 1: Trabajadores del Local (Staff Operativo y de Limpieza)
+
+| Fases | Fase 1: Inicio de Turno e Inspección Empírica | Fase 2: Operación Diaria Bajo Presión | Fase 3: Aparición de Falla No Notificada | Fase 4: Limpieza y Baldeado de Alto Riesgo | Fase 5: Cierre de Turno y Reporte Verbal |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Enciende freidoras, tostadoras y hornos directamente por inercia, confiando únicamente en que la máquina encienda sin emitir chispas a simple vista. | Prepara alimentos a alta velocidad en hora pico; manipula perillas, carcasas y switches sin saber si existe una fuga de corriente parásita en la carcasa. | Siente un leve hormigueo ("toque") al rozar la freidora o percibe un olor sutil a cable caliente; no sabe si es normal y duda si avisar para no detener la línea de despacho. | Arroja baldes con agua y desengrasante sobre el piso de la cocina para trapear rápido, pasando trapeadores húmedos cerca de cables de conexión y enchufes industriales a nivel del suelo. | Apaga las máquinas manualmente de prisa para no perder el último transporte nocturno; le avisa de pasada o por WhatsApp al supervisor sobre "el zumbido extraño" del equipo. |
+| **Thinking** | *"Ojalá todo prenda bien hoy; no tengo forma de saber si los cables de atrás están pelados o haciendo masa."* | *"Tengo que sacar los combos en menos de 3 minutos, no me da el tiempo para fijarme en detalles técnicos."* | *"Sentí una descarga pequeña al tocar el borde metálico, pero si paro la freidora la jefa me llamará la atención por retrasar los pedidos."* | *"Tengo que baldear con mucho cuidado; el piso está inundado de agua cerca de las conexiones y temo electrocutarme como ocurrió en otros locales."* | *"Ya le dije al encargado que esa máquina da toques; espero que no se le olvide y que mañana nadie se accidente."* |
+| **Feeling** | Incertidumbre y resignación. | Estrés constante y distracción por temor al entorno de trabajo. | Miedo, duda e indefensión ante un peligro invisible. | Pánico latente, vulnerabilidad y extrema tensión física. | Agotamiento, frustración e intranquilidad por la seguridad del equipo. |
+
+---
+
+### As-Is Scenario Mapping - Segmento 2: Manager del Local (Administrador / Jefe de Tienda)
+
+| Fases | Fase 1: Apertura y Revisión Manual | Fase 2: Operación Ciegas del Consumo | Fase 3: Ocurrencia de Avería Intempestiva | Fase 4: Mantenimiento Correctivo de Emergencia | Fase 5: Cierre Mensual y Enfrentamiento de Costos |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Firma checklists físicos de apertura en hojas de papel; verifica visualmente que las luces del tablero no estén bajadas, sin conocer los niveles reales de voltaje ni fugas. | Supervisa la operación de venta ignorando por completo qué equipo específico está provocando picos de demanda o fugas a tierra durante la jornada. | Recibe el reporte urgente del colapso de una conservadora en pleno viernes por la noche; el interruptor termomagnético general salta y deja a oscuras parte de la cocina. | Llama de urgencia a servicios técnicos externos no verificados; suspende temporalmente la venta de ítems del menú y reubica insumos perecibles para evitar mermas masivas. | Recibe la factura eléctrica con un sobrecosto del 20% que no puede justificar ante la gerencia regional; llena manualmente bitácoras desactualizadas ante una inspección de SUNAFIL. |
+| **Thinking** | *"Lleno estos formatos de seguridad en papel por protocolo, pero no garantizan que la red interna esté a salvo de un cortocircuito."* | *"No sé qué máquina consume más luz; solo me entero de los gastos cuando llega el recibo a fin de mes."* | *"Justo colapsa en la hora de mayor venta; perderemos miles de soles en pedidos y los insumos de la congeladora corren riesgo."* | *"El técnico cobrará tarifa de emergencia y demorará horas en llegar; la cocina está paralizada y el personal expuesto a riesgos."* | *"El recibo vino altísimo otra vez y no sé qué falló; si me cae una auditoría de SUNAFIL o INDECI no tengo reportes técnicos para sustentar el estado del local."* |
+| **Feeling** | Falsa sensación de control y desconfianza en los registros manuales. | Ceguera operativa e impotencia presupuestal. | Desesperación, estrés extremo y alarma ante la paralización de ventas. | Agobio, reactividad y preocupación por la continuidad de la franquicia. | Frustración financiera, incertidumbre legal y alta presión corporativa. |
+
 ## 2.4. Ubiquitous Language
+
+### 1. Términos del Dominio de Seguridad y Parámetros Eléctricos
+
+*   **Fuga a tierra (Ground Fault Leakage):** Derivación anómala de corriente eléctrica hacia partes metálicas o carcasa exterior de una máquina debido a fallas en el aislamiento o humedad. Es el principal precursor de descargas eléctricas y accidentes laborales en cocina.
+*   **Corriente Residual (Residual Current):** Diferencia medible entre la corriente que entra y la que sale de un circuito cerrado; indica la presencia activa de una fuga hacia tierra o masa.
+*   **Sobrecorriente / Sobrecarga (Overcurrent / Overload):** Condición operativa en la que la demanda de corriente supera la capacidad nominal de diseño de un circuito o motor por un tiempo prolongado, generando sobrecalentamiento.
+*   **Caída de Tensión (Voltage Sag):** Disminución transitoria del voltaje nominal en la red interna de la tienda producida por el arranque simultáneo de cargas inductivas pesadas (motores, compresores).
+*   **Pozo a Tierra (Grounding System):** Mecanismo de seguridad obligatorio en instalaciones eléctricas que disipa hacia el suelo las corrientes de falla y sobretensiones, protegiendo tanto a los operarios como a los equipos.
+*   **Temperatura de Circuito/Equipo (Operating Temperature):** Nivel térmico medido en bornes, cables y carcasas de maquinaria para prevenir conatos de incendio y desgaste de material dieléctrico.
+
+### 2. Términos de Hardware e Infraestructura IoT
+
+*   **Kit de Sensores (Sensor Kit):** Conjunto modular de hardware industrial compuesto por transformadores de corriente de núcleo abierto (sensores de efecto Hall/corriente), sondas térmicas y módulos de medición de voltaje instalados sin cortar el suministro de la red.
+*   **Gateway IoT (IoT Edge Gateway):** Dispositivo central de comunicaciones local instalado en el tablero general que recolecta, preprocesa y encripta las lecturas de telemetría de los sensores de cocina para enviarlas a la nube mediante Wi-Fi o red celular (4G/LTE).
+*   **Tablero de Distribución / General (Distribution Board):** Panel eléctrico que aloja los interruptores termomagnéticos, diferenciales y barras de conexión que alimentan los subcircuitos de la tienda.
+*   **Telemetría Eléctrica (Electrical Telemetry):** Flujo de datos periódicos de alta resolución (amperaje, voltaje, factor de potencia, temperatura) transmitido en tiempo real desde el hardware IoT hacia la plataforma cloud.
+
+### 3. Términos de Software, Alertas y Operación en Tienda
+
+*   **Umbral de Disparo (Alert Threshold):** Límite paramétrico preestablecido (ej. corriente de fuga > 30 mA, temperatura de cable > 65 °C) que, al superarse, activa automáticamente eventos de contingencia en el sistema.
+*   **Alerta Crítica (Critical Alert / Hazard):** Notificación de máxima prioridad desencadenada por una falla que compromete la vida humana o la integridad estructural de la tienda (ej. fuga eléctrica viva en entorno húmedo). Requiere apagado o bloqueo inmediato.
+*   **Alerta Preventiva (Warning / Anomaly):** Notificación temprana emitida cuando una máquina opera fuera de su curva normal de consumo o temperatura, anticipando una falla antes de su interrupción total.
+*   **Semáforo de Seguridad (Visual Safety Indicator):** Interfaz simplificada para el personal de piso que traduce métricas técnicas en estados cromáticos comprensibles:
+    *   *Verde (Seguro):* Parámetros óptimos; seguro para operar y baldear.
+    *   *Amarillo (Precaución):* Fluctuación o anomalía leve registrada; requiere supervisión.
+    *   *Rojo (Peligro Inminente):* Fuga activa o sobrecalentamiento crítico; prohibido tocar o limpiar el equipo.
+*   **Protocolo de Apagado Seguro (Safe Shutdown Protocol):** Secuencia asistida de instrucciones que guía al personal operativo para aislar la maquinaria comprometida de la fuente de energía antes de intervenirla físicamente.
+*   **Bitácora Técnica Digital (Digital Incident Log):** Registro inmutable y cronológico de todas las lecturas de telemetría, anomalías disparadas, alertas notificadas y acciones de mitigación adoptadas por el personal de tienda.
+
+### 4. Términos de Gestión Operativa, Auditoría y Negocio
+
+*   **Monitoreo por Circuito (Circuit-Level Monitoring):** Capacidad analítica de aislar y auditar el comportamiento eléctrico y consumo energético de una sola línea dedicada o máquina específica (ej. freidora de papas, cámara de congelación).
+*   **Continuidad Operativa (Uptime / Operational Continuity):** Métrica que evalúa el tiempo que la línea de preparación y despacho de alimentos se mantiene en servicio ininterrumpido durante los horarios de atención al cliente.
+*   **Eficiencia de Red (Power Quality Efficiency):** Razón entre la energía activa efectivamente utilizada y la energía reactiva/pérdida facturada por distorsiones armónicas o sobrecargas en equipos envejecidos.
+*   **Reporte de Cumplimiento SST (OSH Compliance Report):** Documento descargable generado por la plataforma que consolida evidencias técnicas sobre la estabilidad eléctrica de la tienda, utilizado en auditorías ante la SUNAFIL, OSINERGMIN e INDECI.
+*   **Store Manager (Administrador de Tienda):** Usuario directivo responsable de la gestión de costos, cumplimiento normativo, respuesta ante fiscalizaciones y coordinación de órdenes de mantenimiento en el local.
+*   **Operario de Cocina / Limpieza (Kitchen Crew):** Usuario operativo expuesto directamente a la interacción física con la maquinaria pesada de cocina y a tareas de limpieza profunda (baldeado de pisos).
 
 # Capítulo III: Requirements Specification
 
 ## 3.1. To-Be Scenario Mapping
 
+### To-Be Scenario Mapping - Segmento 1: Trabajadores del Local (Staff Operativo y de Limpieza)
+
+| Fases | Fase 1: Inicio de Turno y Verificación | Fase 2: Operación Diaria de Equipos | Fase 3: Detección y Notificación de Anomalía | Fase 4: Protocolo de Limpieza Segura | Fase 5: Cierre de Turno y Reporte |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Revisa el panel táctil/señalizador local en cocina antes de encender freidoras y hornos. | Trabaja en la preparación de alimentos observando los indicadores visuales en verde. | Escucha una alerta auditiva local y ve que la pantalla cambia a indicador Rojo "Fuga Detectada". | Consulta el estado del equipo en la pantalla local antes de trapear o baldear la zona de cocina. | Presiona el botón de reporte rápido de fin de turno para confirmar equipos seguros. |
+| **Thinking** | "Es genial poder ver con una luz verde si los equipos están seguros antes de empezar a trabajar." | "Puedo concentrarme en sacar los pedidos rápido sin miedo a tocar una máquina en mal estado." | "El sistema me avisa de inmediato que hay peligro; debo alejarme y reportar según el protocolo." | "No debo preocuparme por un shock eléctrico al trapear la cocina porque la pantalla me confirma la seguridad." | "Terminé mi turno tranquilo sabiendo que dejé todo reportado sin trámites complicados." |
+| **Feeling** | Confianza y tranquilidad. | Seguridad y concentración. | Alerta pero respaldado por la señalización clara. | Alivio y protección. | Satisfacción y seguridad laboral. |
+
+### To-Be Scenario Mapping - Segmento 2: Manager del Local (Administrador / Jefe de Tienda)
+
+| Fases | Fase 1: Supervisión Inicial del Dashboard | Fase 2: Monitoreo Continuo de Consumo | Fase 3: Gestión Inmediata de Alerta Crítica | Fase 4: Coordinación de Mantenimiento | Fase 5: Auditoría y Cierre Mensual |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Doing** | Abre el Dashboard Web de ElectroLink al inicio de la jornada para verificar el estado de la red. | Revisa la gráfica de consumo en kWh y Soles por máquina para identificar ineficiencias. | Recibe una alerta push/SMS sobre sobrecalentamiento en un congelador clave. | Revisa la recomendación del sistema y agenda revisión técnica en horario fuera de pico. | Exporta el reporte consolidado en PDF para la inspección interna y cumplimiento de SST. |
+| **Thinking** | "Tengo visibilidad completa de toda la tienda desde mi laptop sin tener que revisar tablero por tablero." | "Veo claramente qué freidora está consumiendo más energía de lo normal este mes." | "La alerta me llegó a tiempo; puedo actuar antes de que la máquina se queme o cause un accidente." | "Puedo programar la reparación técnica sin interrumpir el flujo de ventas de la hora pico." | "Tengo toda la documentación lista y sustentada para presentar ante fiscalizaciones oficiales." |
+| **Feeling** | Control y certidumbre. | Claridad y capacidad de optimización. | Urgencia gestionada con efectividad. | Proactividad y alivio. | Respaldo, cumplimiento y profesionalismo. |
+
+---
+
 ## 3.2. User Stories
+
+| Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+| :--- | :--- | :--- | :--- | :--- |
+| **EP01** | **Gestión de Seguridad Operativa en Tienda** | Módulo orientado a proteger la integridad física del staff operativo mediante monitoreo y señalización local. | N/A (Epic) | N/A |
+| **EP02** | **Monitoreo Técnico y Alertas para la Administración** | Módulo central para la gestión preventiva, supervisión de red y notificaciones ejecutivas. | N/A (Epic) | N/A |
+| **EP03** | **Gestión Energética y Costos Operativos** | Módulo para la visualización, desglose y optimización del consumo eléctrico en el local. | N/A (Epic) | N/A |
+| **EP04** | **Cumplimiento Normativo y Reportes de Seguridad** | Módulo para la generación de evidencias técnicas exigidas por entes reguladores (SUNAFIL, OSINERGMIN, INDECI). | N/A (Epic) | N/A |
+| **EP05** | **Configuración de Perfiles y Control de Acceso** | Módulo administrativo para la personalización de usuarios y acceso a datos del local. | N/A (Epic) | N/A |
+| **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | **Dado** que el trabajador se encuentra en el área de cocina, **cuando** el sensor registra una fuga de corriente o sobrecalentamiento, **entonces** la pantalla muestra el indicador en Rojo y despliega el mensaje "NO TOCAR". | EP01 |
+| **US02** | Botón de Reporte Rápido de Falla | Como Trabajador del Local, deseo presionar un botón de reporte en la pantalla local, para notificar al Manager sobre anomalías o ruidos en una máquina sin pausar la atención al cliente. | **Dado** que un equipo emite un ruido inusual, **cuando** el operario presiona "Reportar Falla", **entonces** el sistema envía una alerta inmediata al Dashboard del Manager con la máquina y hora registrada. | EP01 |
+| **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | **Dado** que ocurre una fuga de corriente crítica, **cuando** el sensor la detecta en tiempo real, **entonces** el sistema activa la bocina local y parpadea la pantalla en rojo con el instructivo de seguridad. | EP01 |
+| **US04** | Confirmación de Equipo Apagado | Como Trabajador del Local, deseo consultar en pantalla la confirmación de desenergización, para realizar el baldeado o trapeado del piso con total seguridad. | **Dado** que se va a iniciar la limpieza, **cuando** el trabajador selecciona "Verificar Limpieza", **entonces** la pantalla confirma que el circuito eléctrico del área está aislado y es seguro trapear. | EP01 |
+| **US05** | Consulta de Protocolo de Apagado | Como Trabajador del Local, deseo visualizar los pasos de apagado seguro en pantalla, para cortar la energía de una máquina en emergencia sin correr riesgos. | **Dado** que se activa una alerta de peligro, **cuando** el trabajador mira la pantalla local, **entonces** el sistema lista 3 pasos simples numerados para ejecutar el corte de energía seguro. | EP01 |
+| **US06** | Registro de Incidencia de Turno | Como Trabajador del Local, deseo confirmar la entrega de turno mediante un check rápido, para dejar constancia del estado de los equipos al siguiente grupo de trabajo. | **Dado** que finaliza el turno, **cuando** el operario presiona "Cerrar Turno Operativo", **entonces** el sistema registra el estado de las máquinas y envía un resumen al Manager. | EP01 |
+| **US07** | Guía Rápida de Primeros Auxilios Eléctricos | Como Trabajador del Local, deseo consultar un botón de ayuda rápida en pantalla, para conocer las acciones inmediatas en caso de contacto accidental de un compañero con corriente. | **Dado** que ocurre un incidente, **cuando** el trabajador presiona "Ayuda / Emergencia", **entonces** la pantalla despliega gráficos con las instrucciones de aislamiento y socorro. | EP01 |
+| **US08** | Alerta Visual de Humedad en Zona de Cocina | Como Trabajador del Local, deseo ver una advertencia en la interfaz cuando se detecte humedad excesiva cerca a tableros, para evitar conectar equipos en superficies mojadas. | **Dado** que el sensor ambiental detecta agua cerca al tablero, **cuando** el operario se aproxima, **entonces** el panel muestra una advertencia amarilla de "Superficie Húmeda". | EP01 |
+| **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | **Dado** que el Manager ingresa a la plataforma web, **cuando** carga la vista principal, **entonces** el sistema despliega el estado de salud técnica, voltaje y temperatura de todos los equipos del local. | EP02 |
+| **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | **Dado** que se sobrepasa el límite seguro de amperaje en un equipo, **cuando** el sensor registra el evento, **entonces** el sistema envía un mensaje SMS y notificación al teléfono del Manager. | EP02 |
+| **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | **Dado** que el Manager edita la ficha de una freidora, **cuando** ingresa los límites máximos permitidos y guarda, **entonces** el sistema actualiza la lógica de disparo de alertas para dicho equipo. | EP02 |
+| **US12** | Historial Filtrable de Alertas | Como Manager del Local, deseo filtrar las alertas por fecha, nivel de severidad y equipo, para analizar los patrones de fallas más recurrentes en la cocina. | **Dado** que el Manager accede al historial de eventos, **cuando** selecciona el filtro "Severidad Alta" y "Últimos 30 días", **entonces** el sistema muestra únicamente las alertas críticas registradas en ese periodo. | EP02 |
+| **US13** | Asignación de Tareas de Revisión | Como Manager del Local, deseo asignar una alerta no crítica al técnico de mantenimiento, para programar su revisión antes de que se convierta en una avería total. | **Dado** que se genera una alerta amarilla, **cuando** el Manager selecciona "Asignar a Técnico", **entonces** el sistema notifica al técnico designado con el detalle del equipo y nivel de urgencia. | EP02 |
+| **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | **Dado** que un sensor pierde conexión a la red local, **entonces** el Dashboard muestra el icono del equipo en gris e informa "Sensor Desconectado". | EP02 |
+| **US15** | Panel de Mantenimiento Preventivo | Como Manager del Local, deseo recibir recomendaciones automáticas de mantenimiento predictivo, para programar revisiones sin congelar la cocina en horas pico. | **Dado** que el sistema detecta desgaste en las resistencias de un horno, **cuando** la probabilidad de falla es alta, **entonces** sugiere agendar mantenimiento en las próximas 48 horas. | EP02 |
+| **US16** | Registro de Turnos del Personal Operativo | Como Manager del Local, deseo visualizar qué trabajador estuvo a cargo de la cocina durante una alerta, para realizar el seguimiento operativo correspondiente. | **Dado** que se registra una falla operativa, **cuando** el Manager consulta el detalle del evento, **entonces** el sistema muestra el turno y nombre del trabajador responsable en ese horario. | EP02 |
+| **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | **Dado** que el Manager entra al módulo de energía, **cuando** selecciona un rango de fechas, **entonces** el sistema muestra una gráfica interactiva con el gasto en PEN por cada equipo de cocina. | EP03 |
+| **US18** | Comparativa de Consumo Histórico | Como Manager del Local, deseo comparar el gasto energético del mes actual con el del mes anterior, para evaluar si las medidas de ahorro implementadas funcionaron. | **Dado** que el Manager selecciona "Comparar Periodos", **cuando** elige "Mes Actual vs Mes Anterior", **entonces** el sistema muestra la variación porcentual de consumo y costo. | EP03 |
+| **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | **Dado** que la tienda está fuera de horario comercial, **cuando** un equipo registra un consumo superior al modo de espera (standby), **entonces** el sistema envía una alerta de "Consumo Inusual Fuera de Horario". | EP03 |
+| **US20** | Proyección de Factura Eléctrica | Como Manager del Local, deseo ver una proyección del costo total de la factura eléctrica al cierre del mes, para ajustar los presupuestos operacionales del local. | **Dado** que transcurren los primeros 15 días del mes, **cuando** el Manager consulta la proyección, **entonces** el sistema estima el monto total final en PEN aplicando la tarifa eléctrica vigente. | EP03 |
+| **US21** | Exportación de Reportes de Eficiencia | Como Manager del Local, deseo descargar en Excel/PDF el reporte de consumo energético, para presentarlo en la reunión de revisión de costos con la gerencia general. | **Dado** que el Manager está en la vista de reportes, **cuando** hace clic en "Exportar Excel", **entonces** se descarga la hoja de cálculo con el desglose diario por circuito y equipo. | EP03 |
+| **US22** | Metas de Ahorro Energético por Tienda | Como Manager del Local, deseo fijar un tope de consumo mensual en kWh, para recibir alertas cuando la tienda esté próxima a superar el presupuesto energético. | **Dado** que el Manager ingresa un límite de 3000 kWh, **cuando** el consumo acumulado alcanza el 85%, **entonces** el sistema envía una notificación de advertencia de presupuesto. | EP03 |
+| **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | **Dado** que se realiza una auditoría oficial, **cuando** el Manager presiona "Exportar Reporte SST", **entonces** el sistema genera un documento PDF con registro cronológico de alertas resueltas. | EP04 |
+| **US24** | Checklist Digital de Inspección Eléctrica | Como Manager del Local, deseo completar un checklist digital semanal de la red, para registrar el cumplimiento de los estándares de seguridad industrial. | **Dado** que inicia la semana, **cuando** el Manager completa las preguntas del checklist en la plataforma, **entonces** el sistema guarda el registro asociado a la fecha y usuario. | EP04 |
+| **US25** | Registro de Mantenimientos Realizados | Como Manager del Local, deseo adjuntar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | **Dado** que concluye una reparación, **cuando** el Manager sube el comprobante escaneado a la ficha del equipo, **entonces** el sistema actualiza la fecha del último mantenimiento efectuado. | EP04 |
+| **US26** | Certificado de Salud Técnica del Local | Como Manager del Local, deseo consultar el nivel de cumplimiento normativo del local (0% a 100%), para corregir observaciones antes de una inspección municipal. | **Dado** que el Manager revisa el módulo de cumplimiento, **cuando** carga la página, **entonces** el sistema muestra el porcentaje global de salud técnica de la infraestructura del local. | EP04 |
+| **US27** | Recordatorio de Renovación de Mantenimiento | Como Manager del Local, deseo recibir alertas cuando venza el periodo de garantía o mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | **Dado** que faltan 7 días para el vencimiento de revisión de una congeladora, **cuando** el Manager ingresa a la app, **entonces** el sistema muestra una notificación en el panel de tareas. | EP04 |
+| **US28** | Creación de Cuentas para Trabajadores | Como Manager del Local, deseo registrar las cuentas de los operarios de cocina en el sistema, para que puedan identificarse al iniciar sus turnos en el panel local. | **Dado** que se contrata un nuevo trabajador, **cuando** el Manager ingresa su nombre y DNI, **entonces** el sistema genera un código PIN de 4 dígitos para su acceso rápido en tienda. | EP05 |
+| **US29** | Configuración de Notificaciones Preferidas | Como Manager del Local, deseo elegir si recibir alertas por WhatsApp, SMS o correo, para ajustar los canales de comunicación según mi disponibilidad de señal. | **Dado** que el Manager entra a su perfil, **cuando** selecciona "WhatsApp" como canal primario, **entonces** el sistema envía las alertas críticas prioritariamente a su número registrado. | EP05 |
+| **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | **Dado** que el Manager ingresa sus credenciales válidas en la página de login, **cuando** presiona "Ingresar", **entonces** el sistema le otorga acceso al Dashboard administrativo. | EP05 |
+| **US31** | Recuperación de Contraseña de Administrador | Como Manager del Local, deseo solicitar la restauración de mi clave por correo, para recuperar el acceso a la plataforma si la olvido. | **Dado** que el Manager presiona "Olvidé mi contraseña", **cuando** ingresa su correo corporativo, **entonces** el sistema envía un enlace seguro de restablecimiento con validez de 15 minutos. | EP05 |
+| **US32** | Personalización de Mapa de Cocina | Como Manager del Local, deseo organizar visualmente los iconos de los equipos según la distribución real de mi cocina, para ubicar rápidamente la máquina en falla. | **Dado** que el Manager está en la vista de configuración, **cuando** arrastra el icono "Freidora 1" a la zona izquierda, **entonces** la plataforma guarda el diseño espacial del local. | EP05 |
+| **US33** | Registro de Firma Digital de Conformidad | Como Manager del Local, deseo registrar mi firma digital en la plataforma, para validar automáticamente los reportes descargables de inspección SST. | **Dado** que el Manager adjunta su firma en formato imagen, **cuando** se genera un reporte PDF, **entonces** el sistema incluye la firma al pie del documento normativo. | EP05 |
+| **US34** | Visualización de Logs de Actividad en Tienda | Como Manager del Local, deseo revisar la bitácora de acciones realizadas en el panel local, para verificar quién atendió una alerta o registró un reporte rápido. | **Dado** que el Manager consulta la sección de auditoría, **cuando** filtra por fecha, **entonces** el sistema lista la hora, usuario y acción ejecutada en el panel de la cocina. | EP05 |
+| **US35** | Bloqueo Temporal de Teclado Local por Limpieza | Como Trabajador del Local, deseo activar la función "Modo Limpieza" en el panel táctil, para trapear la pantalla sin accionar botones por error. | **Dado** que el trabajador va a trapear el panel, **cuando** mantiene presionado el botón "Limpieza" por 3 segundos, **entonces** la pantalla inhabilita los toques táctiles durante 30 segundos. | EP01 |
+
+---
 
 ## 3.3. Impact Mapping
 
+![ImpactMapping](assets/cap3/ImpactMapping.png) 
+
 ## 3.4. Product Backlog
+
+| # Orden | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | 3 |
+| 2 | **US02** | Botón de Reporte Rápido de Falla | Como Trabajador del Local, deseo presionar un botón de reporte en la pantalla local, para notificar al Manager sobre anomalías o ruidos en una máquina sin pausar la atención al cliente. | 2 |
+| 3 | **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | 3 |
+| 4 | **US04** | Confirmación de Equipo Apagado | Como Trabajador del Local, deseo consultar en pantalla la confirmación de desenergización, para realizar el baldeado o trapeado del piso con total seguridad. | 2 |
+| 5 | **US05** | Consulta de Protocolo de Apagado | Como Trabajador del Local, deseo visualizar los pasos de apagado seguro en pantalla, para cortar la energía de una máquina en emergencia sin correr riesgos. | 2 |
+| 6 | **US06** | Registro de Incidencia de Turno | Como Trabajador del Local, deseo confirmar la entrega de turno mediante un check rápido, para dejar constancia del estado de los equipos al siguiente grupo de trabajo. | 2 |
+| 7 | **US07** | Guía Rápida de Primeros Auxilios Eléctricos | Como Trabajador del Local, deseo consultar un botón de ayuda rápida en pantalla, para conocer las acciones inmediatas en caso de contacto accidental de un compañero con corriente. | 2 |
+| 8 | **US08** | Alerta Visual de Humedad en Zona de Cocina | Como Trabajador del Local, deseo ver una advertencia en la interfaz cuando se detecte humedad excesiva cerca a tableros, para evitar conectar equipos en superficies mojadas. | 2 |
+| 9 | **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | 5 |
+| 10 | **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | 3 |
+| 11 | **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | 3 |
+| 12 | **US12** | Historial Filtrable de Alertas | Como Manager del Local, deseo filtrar las alertas por fecha, nivel de severidad y equipo, para analizar los patrones de fallas más recurrentes en la cocina. | 3 |
+| 13 | **US13** | Asignación de Tareas de Revisión | Como Manager del Local, deseo asignar una alerta no crítica al técnico de mantenimiento, para programar su revisión antes de que se convierta en una avería total. | 3 |
+| 14 | **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | 2 |
+| 15 | **US15** | Panel de Mantenimiento Preventivo | Como Manager del Local, deseo recibir recomendaciones automáticas de mantenimiento predictivo, para programar revisiones sin congelar la cocina en horas pico. | 8 |
+| 16 | **US16** | Registro de Turnos del Personal Operativo | Como Manager del Local, deseo visualizar qué trabajador estuvo a cargo de la cocina durante una alerta, para realizar el seguimiento operativo correspondiente. | 2 |
+| 17 | **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | 8 |
+| 18 | **US18** | Comparativa de Consumo Histórico | Como Manager del Local, deseo comparar el gasto energético del mes actual con el del mes anterior, para evaluar si las medidas de ahorro implementadas funcionaron. | 5 |
+| 19 | **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | 3 |
+| 20 | **US20** | Proyección de Factura Eléctrica | Como Manager del Local, deseo ver una proyección del costo total de la factura eléctrica al cierre del mes, para ajustar los presupuestos operacionales del local. | 5 |
+| 21 | **US21** | Exportación de Reportes de Eficiencia | Como Manager del Local, deseo descargar en Excel/PDF el reporte de consumo energético, para presentarlo en la reunión de revisión de costos con la gerencia general. | 3 |
+| 22 | **US22** | Metas de Ahorro Energético por Tienda | Como Manager del Local, deseo fijar un tope de consumo mensual en kWh, para recibir alertas cuando la tienda esté próxima a superar el presupuesto energético. | 3 |
+| 23 | **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | 5 |
+| 24 | **US24** | Checklist Digital de Inspección Eléctrica | Como Manager del Local, deseo completar un checklist digital semanal de la red, para registrar el cumplimiento de los estándares de seguridad industrial. | 3 |
+| 25 | **US25** | Registro de Mantenimientos Realizados | Como Manager del Local, deseo adjuntar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | 2 |
+| 26 | **US26** | Certificado de Salud Técnica del Local | Como Manager del Local, deseo consultar el nivel de cumplimiento normativo del local (0% a 100%), para corregir observaciones antes de una inspección municipal. | 3 |
+| 27 | **US27** | Recordatorio de Renovación de Mantenimiento | Como Manager del Local, deseo recibir alertas cuando venza el periodo de garantía o mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | 2 |
+| 28 | **US28** | Creación de Cuentas para Trabajadores | Como Manager del Local, deseo registrar las cuentas de los operarios de cocina en el sistema, para que puedan identificarse al iniciar sus turnos en el panel local. | 3 |
+| 29 | **US29** | Configuración de Notificaciones Preferidas | Como Manager del Local, deseo elegir si recibir alertas por WhatsApp, SMS o correo, para ajustar los canales de comunicación según mi disponibilidad de señal. | 2 |
+| 30 | **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | 3 |
+| 31 | **US31** | Recuperación de Contraseña de Administrador | Como Manager del Local, deseo solicitar la restauración de mi clave por correo, para recuperar el acceso a la plataforma si la olvido. | 2 |
+| 32 | **US32** | Personalización de Mapa de Cocina | Como Manager del Local, deseo organizar visualmente los iconos de los equipos según la distribución real de mi cocina, para ubicar rápidamente la máquina en falla. | 5 |
+| 33 | **US33** | Registro de Firma Digital de Conformidad | Como Manager del Local, deseo registrar mi firma digital en la plataforma, para validar automáticamente los reportes descargables de inspección SST. | 2 |
+| 34 | **US34** | Visualización de Logs de Actividad en Tienda | Como Manager del Local, deseo revisar la bitácora de acciones realizadas en el panel local, para verificar quién atendió una alerta o registró un reporte rápido. | 3 |
+| 35 | **US35** | Bloqueo Temporal de Teclado Local por Limpieza | Como Trabajador del Local, deseo activar la función "Modo Limpieza" en el panel táctil, para trapear la pantalla sin accionar botones por error. | 1 |
+
+---
 
 # Capítulo IV: Strategic-Level Software Design
 
 ## 4.1. Strategic-Level Attribute-Driven Design
 
+En esta sección se presenta el proceso de diseño arquitectónico de ElectroLink abordando la definición de la arquitectura desde una perspectiva estratégica y orientada tanto a los atributos de calidad como al dominio del negocio.
+
 ### 4.1.1. Design Purpose
+
+El propósito del proceso de diseño de ElectroLink es definir una arquitectura de software que permita soportar de manera confiable, escalable y mantenible el monitoreo continuo de los componentes eléctricos presentes en establecimientos de cadenas de comida rápida. La solución busca responder a la problemática asociada con la detección tardía de anomalías eléctricas, posibles fugas de corriente, sobrecargas, fallas de funcionamiento y consumos energéticos ineficientes, situaciones que pueden generar interrupciones operativas, riesgos de seguridad y mayores costos de mantenimiento.
+
+Los principales propósitos que orientan el diseño de la solución son:
+
+- **Facilitar el monitoreo continuo del estado eléctrico de los establecimientos:** ElectroLink debe permitir visualizar de manera centralizada las mediciones obtenidas por los dispositivos IoT instalados en los diferentes componentes y equipos eléctricos de cada local. Esto permitirá a los responsables de mantenimiento y operaciones conocer el estado de los activos eléctricos sin necesidad de realizar inspecciones constantes de manera presencial.
+
+- **Detectar oportunamente anomalías y posibles fallas eléctricas:** La solución deberá analizar las mediciones obtenidas por los dispositivos IoT para identificar comportamientos fuera de los rangos esperados, tales como consumos anómalos, sobrecargas, variaciones de voltaje, temperaturas elevadas o posibles fugas de corriente. Ante estas situaciones, el sistema deberá generar alertas que permitan al personal responsable actuar antes de que una anomalía pueda convertirse en una falla crítica.
+
+- **Reducir interrupciones operativas y costos de mantenimiento:** El acceso a información histórica y en tiempo real permitirá identificar tendencias y comportamientos anormales en los equipos eléctricos, facilitando la ejecución de mantenimiento preventivo y reduciendo la dependencia de intervenciones correctivas posteriores a una falla. De esta manera, la solución busca disminuir tiempos de inactividad y costos asociados a reparaciones inesperadas.
+
+- **Optimizar el consumo energético de los establecimientos:** ElectroLink deberá proporcionar información sobre el consumo eléctrico de los equipos y componentes monitoreados, permitiendo identificar patrones de uso ineficientes o consumos fuera de los valores habituales. Esta información podrá ser utilizada por los responsables de operaciones para tomar decisiones orientadas a mejorar la eficiencia energética de los establecimientos.
+
+- **Atender las necesidades de los principales segmentos de usuario:**
+    - **Responsables de mantenimiento:** requieren identificar rápidamente anomalías, consultar el historial de mediciones y recibir alertas que permitan priorizar las actividades de mantenimiento.
+    - **Responsables de operaciones:** necesitan conocer el estado general de los implementos eléctricos registrados por cada establecimiento y detectar situaciones que puedan afectar la continuidad de las operaciones.
+    - **Administradores o responsables de la cadena:** requieren disponer de información consolidada sobre distintos locales para analizar consumo energético, incidencias y desempeño operativo.
+
+- **Asegurar un monitoreo confiable y oportuno:** Debido a que la solución dependerá de dispositivos IoT y comunicación continua con la plataforma, el diseño arquitectónico deberá considerar atributos de calidad relacionados con disponibilidad, confiabilidad, rendimiento, seguridad y escalabilidad. La información crítica deberá ser transmitida y procesada oportunamente, mientras que la plataforma deberá ser capaz de soportar el incremento progresivo de establecimientos, dispositivos y mediciones sin comprometer la operación del sistema.
+
 
 ### 4.1.2. Attribute-Driven Design Inputs
 
+En esta sección se presentan los tres tipos principales de entradas consideradas para el proceso de diseño: la funcionalidad primaria, representada mediante las historias de usuario más relevantes para la operación del sistema; los escenarios de atributos de calidad, que permiten establecer expectativas medibles relacionadas con aspectos como disponibilidad, rendimiento, seguridad, confiabilidad y escalabilidad; y las restricciones, que delimitan las decisiones arquitectónicas debido a condiciones tecnológicas, operativas o de negocio.
+
+Estas entradas servirán posteriormente como base para la identificación y priorización de los drivers arquitectónicos, así como para la definición de las decisiones de diseño que estructurarán la arquitectura de ElectroLink.
+
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
+Para el proceso de Attribute-Driven Design (ADD) de ElectroLink se han seleccionado las User Stories que representan las funcionalidades esenciales de la solución y que generan un impacto significativo sobre su arquitectura. La selección considera principalmente aquellas capacidades relacionadas con la adquisición y procesamiento de información proveniente de dispositivos IoT, el monitoreo del estado eléctrico de los equipos, la detección y comunicación de situaciones de riesgo, la configuración de parámetros operativos, el análisis del consumo energético y la protección del acceso a la plataforma.
+
+| Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+| :--- | :--- | :--- | :--- | :--- |
+| **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | **Dado** que el trabajador se encuentra en el área de cocina, **cuando** el sensor registra una fuga de corriente o sobrecalentamiento, **entonces** la pantalla muestra el indicador en Rojo y despliega el mensaje "NO TOCAR". | EP01 |
+| **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | **Dado** que ocurre una fuga de corriente crítica, **cuando** el sensor la detecta en tiempo real, **entonces** el sistema activa la bocina local y parpadea la pantalla en rojo con el instructivo de seguridad. | EP01 |
+| **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | **Dado** que el Manager ingresa a la plataforma web, **cuando** carga la vista principal, **entonces** el sistema despliega el estado de salud técnica, voltaje y temperatura de todos los equipos del local. | EP02 |
+| **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | **Dado** que se sobrepasa el límite seguro de amperaje en un equipo, **cuando** el sensor registra el evento, **entonces** el sistema envía un mensaje SMS y notificación al teléfono del Manager. | EP02 |
+| **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | **Dado** que el Manager edita la ficha de una freidora, **cuando** ingresa los límites máximos permitidos y guarda, **entonces** el sistema actualiza la lógica de disparo de alertas para dicho equipo. | EP02 |
+| **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | **Dado** que un sensor pierde conexión a la red local, **entonces** el Dashboard muestra el icono del equipo en gris e informa "Sensor Desconectado". | EP02 |
+| **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | **Dado** que el Manager entra al módulo de energía, **cuando** selecciona un rango de fechas, **entonces** el sistema muestra una gráfica interactiva con el gasto en PEN por cada equipo de cocina. | EP03 |
+| **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | **Dado** que la tienda está fuera de horario comercial, **cuando** un equipo registra un consumo superior al modo de espera (standby), **entonces** el sistema envía una alerta de "Consumo Inusual Fuera de Horario". | EP03 |
+| **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | **Dado** que se realiza una auditoría oficial, **cuando** el Manager presiona "Exportar Reporte SST", **entonces** el sistema genera un documento PDF con registro cronológico de alertas resueltas. | EP04 |
+| **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | **Dado** que el Manager ingresa sus credenciales válidas en la página de login, **cuando** presiona "Ingresar", **entonces** el sistema le otorga acceso al Dashboard administrativo. | EP05 |
+
+En conjunto, estas funcionalidades influyen directamente en decisiones posteriores relacionadas con los mecanismos de comunicación entre dispositivos, procesamiento de eventos, almacenamiento de telemetría, generación de alertas, gestión de identidad y acceso, así como en la disponibilidad y escalabilidad de la plataforma.
 
 #### 4.1.2.2. Quality Attribute Scenarios
 
+| Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta | Medida |
+|---|---|---|---|---|---|---|
+| **Rendimiento** | Sensor IoT | Se detecta una condición eléctrica crítica, como fuga de corriente, sobrecorriente o temperatura fuera del umbral permitido. | Servicio de recepción y procesamiento de telemetría / sistema de alertas | Operación normal del establecimiento | El sistema procesa la medición, determina su criticidad y genera la alerta correspondiente para el panel local y el Manager. | La alerta crítica debe generarse en un máximo de **3 segundos** desde la recepción de la medición. |
+| **Disponibilidad** | Infraestructura del sistema | Una instancia o servicio encargado del monitoreo deja de estar disponible inesperadamente. | Plataforma de monitoreo de ElectroLink | Operación normal o periodo de alta actividad del local | La plataforma continúa brindando las funciones esenciales de monitoreo mediante mecanismos de recuperación o redundancia. | Restablecer el servicio afectado en un máximo de **60 segundos** y mantener una disponibilidad mensual de al menos **99.9 %**. |
+| **Confiabilidad** | Red de comunicaciones / dispositivo IoT | Se produce una pérdida temporal de conexión entre un dispositivo IoT y el backend. | Gateway o mecanismo de transmisión de telemetría | Conectividad inestable o interrupción temporal de Internet | Las mediciones son almacenadas temporalmente y transmitidas cuando se recupera la conexión, evitando la pérdida de información relevante. | Recuperar y sincronizar al menos el **99.5 % de las mediciones** generadas durante la interrupción. |
+| **Confiabilidad** | Dispositivo IoT | Un sensor deja de enviar información durante su operación. | Servicio de supervisión de dispositivos | Operación normal | El sistema identifica la pérdida de comunicación, cambia el estado del sensor a desconectado y comunica la situación al responsable del local. | Detectar e informar la desconexión en un máximo de **30 segundos** desde la última comunicación esperada. |
+| **Seguridad** | Usuario no autorizado o atacante externo | Se intenta acceder al Dashboard o a recursos protegidos utilizando credenciales inválidas o inexistentes. | Servicio de autenticación y autorización | Plataforma accesible desde Internet | El sistema rechaza el acceso, registra el intento y evita que el usuario acceda a información o funcionalidades protegidas. | El **100 % de los endpoints protegidos** debe requerir autenticación válida y los intentos rechazados deben quedar registrados. |
+| **Seguridad** | Manager autenticado | Se intenta modificar los umbrales eléctricos o parámetros de configuración de un equipo. | Servicio de configuración de dispositivos y equipos | Operación normal | El sistema verifica que el usuario posea los permisos requeridos antes de aplicar el cambio y registra la modificación realizada. | El **100 % de las modificaciones de parámetros críticos** debe validar autorización y generar un registro de auditoría. |
+| **Escalabilidad** | Administrador de la cadena | Se incorporan nuevos establecimientos y dispositivos IoT a ElectroLink. | Plataforma IoT y servicios de procesamiento de telemetría | Crecimiento progresivo de la cadena | La infraestructura incrementa su capacidad de procesamiento sin requerir cambios importantes en la arquitectura ni afectar significativamente los tiempos de respuesta. | La solución debe soportar inicialmente hasta **5 000 dispositivos IoT conectados**, manteniendo los tiempos de procesamiento de alertas críticas dentro del límite establecido. |
+| **Modificabilidad** | Equipo de desarrollo | Se requiere incorporar un nuevo tipo de sensor o una nueva variable de monitoreo. | Módulo de integración y procesamiento IoT | Sistema en evolución | La arquitectura permite integrar el nuevo dispositivo o tipo de medición sin modificar significativamente otros módulos del sistema. | La incorporación debe limitar los cambios principalmente al módulo de integración correspondiente y requerir como máximo **2 días-persona de desarrollo**, excluyendo pruebas de hardware. |
+
 #### 4.1.2.3. Constraints
+
+Las restricciones arquitectónicas para el proyecto ElectroLink se han categorizado en técnicas, operativas, de integración y regulatorias, estableciendo los límites dentro de los cuales debe diseñarse y operar la solución:
+
+| ID | Título | Descripción | Aceptación | EPIC | 
+|---|---|---|---|---|
+| CON-01 | Hardware IoT Predefinido (ESP32) | Los dispositivos físicos de monitoreo (sensores y gateways) deben estar basados estrictamente en microcontroladores ESP32, adaptados para operar bajo las condiciones del entorno. | Escenario 1: Captura de datos en entorno hostilDado que el microcontrolador ESP32 está instalado en un tablero de cocina,Cuando las temperaturas y humedad aumentan por la operación,Entonces el dispositivo debe mantener su conectividad y continuar transmitiendo telemetría. | EP01 y EP02 |
+| CON-02 | Arquitectura Monolítica Modular en C# | El backend debe implementarse como una API RESTful utilizando C# / ASP.NET Core y Entity Framework Core, garantizando la separación por módulos de negocio (monolito modular). | Escenario 1: Estructura del proyectoDado que un desarrollador inspecciona el código fuente,Cuando revisa las dependencias y la solución,Entonces se evidencia el uso de C#, ASP.NET Core y una separación interna por Bounded Contexts bien definidos. | Todas |
+| CON-03 | Persistencia en PostgreSQL | Toda la información relacional, incluyendo datos de usuarios, credenciales, locales e historiales de mantenimiento, debe persistirse obligatoriamente en PostgreSQL. | Escenario 1: Almacenamiento de transaccionesDado que un manager registra la asignación de un técnico,Cuando el sistema guarda la transacción,Entonces los datos se persisten asegurando atomicidad dentro de la base de datos PostgreSQL. | Todas |
+| CON-04 | Frontend Segregado (React y Flutter) | El ecosistema cliente debe separar la tecnología: la web administrativa (SPA) se construirá con JavaScript/React, mientras que la aplicación móvil se desarrollará con Dart/Flutter. | Escenario 1: Uso de dashboard administrativoDado que el manager de tienda abre la plataforma web,Cuando visualiza el consumo eléctrico en tiempo real,Entonces la interfaz reacciona de forma fluida e interactiva usando componentes de React.Escenario 2: Notificaciones en campoDado que un técnico o trabajador usa la app móvil,Cuando recibe una alerta de voltaje,Entonces la experiencia nativa es soportada por el framework Flutter. | EP02 y EP03 |
+| CON-05 | Infraestructura Cloud en Microsoft Azure | El despliegue de los servicios (Backend, Frontend SPA y Base de Datos) debe realizarse exclusivamente sobre la nube de Microsoft Azure, usando Azure App Service. | Escenario 1: Despliegue en producciónDado que se finaliza un sprint y se lanza una nueva versión,Cuando el pipeline de CI/CD sube los contenedores,Entonces estos son alojados y orquestados dentro de la infraestructura de Azure. | Todas | 
+| CON-06 | Integraciones de Terceros Obligatorias | La plataforma está restringida a usar Stripe para la facturación SaaS, Firebase Cloud Messaging (FCM/APNs) para alertas Push, y Mapbox/Google Maps para geolocalización. | Escenario 1: Pago de suscripciónDado que una cadena de comida rápida adquiere el plan Premium,Cuando realiza el pago mensual,Entonces el cobro se procesa obligatoriamente a través de los webhooks de Stripe.Escenario 2: Alerta Crítica PushDado que el sistema detecta una fuga de corriente,Cuando dispara la alerta móvil,Entonces la notificación viaja a través de FCM/APNs. | EP02 y EP05 |
+| CON-07 | Cumplimiento Normativo SST | El sistema debe generar evidencias, bitácoras y reportes inmutables de incidentes que cumplan estrictamente con los estándares legales peruanos (SUNAFIL, OSINERGMIN, INDECI). | Escenario 1: Auditoría de seguridad oficialDado que el local recibe una inspección inopinada de SUNAFIL,Cuando el administrador exporta el reporte de salud técnica,Entonces el PDF generado contiene firmas digitales y un registro inalterable que sustenta el cumplimiento legal del local. | EP04 |
+
+La tabla de restricciones arquitectónicas establece las condiciones que deben cumplirse durante el diseño del proyecto, evitando dudas o decisiones técnicas innecesarias desde el inicio. Estas restricciones tecnológicas, operativas y legales se organizan mediante escenarios BDD (Dado/Cuando/Entonces), lo que permite definir pruebas claras para validar su cumplimiento. Para ElectroLink, esta tabla ayuda a garantizar que la arquitectura funcione correctamente en el entorno de una cocina de comida rápida y cumpla con las normas de seguridad y regulación correspondientes (SUNAFIL/INDECI). De esta manera, se busca que la solución tecnológica sea viable y contribuya a los objetivos del negocio.
 
 ### 4.1.3. Architectural Drivers Backlog
 
+| Driver ID | Título de Driver | Descripción | Importancia para Stakeholders | Architecture Technical Complexity |
+|---|---|---|---|---|
+| **DR-01** | **Rendimiento** | Capacidad de ElectroLink para recibir y procesar continuamente las mediciones generadas por los sensores IoT, detectar condiciones críticas como fugas de corriente, sobrecorriente o sobrecalentamiento y generar las alertas correspondientes en un tiempo máximo de **3 segundos** desde la recepción del evento, garantizando una respuesta oportuna ante situaciones que puedan comprometer la seguridad del establecimiento. | Alta | Alta |
+| **DR-02** | **Disponibilidad** | Capacidad de la plataforma para mantener operativas las funciones esenciales de monitoreo eléctrico ante fallos parciales de servicios, dispositivos o infraestructura, buscando una disponibilidad mensual mínima de **99.9 %** y permitiendo recuperar un servicio afectado en un máximo de **60 segundos**, sin comprometer las funciones críticas de seguridad. | Alta | Alta |
+| **DR-03** | **Confiabilidad** | Capacidad del sistema para mantener un monitoreo consistente incluso ante interrupciones temporales de conectividad, almacenando localmente las mediciones pendientes y sincronizándolas posteriormente con la plataforma. Asimismo, ElectroLink debe detectar sensores desconectados en un máximo de **30 segundos** y recuperar al menos el **99.5 % de las mediciones** generadas durante una pérdida temporal de comunicación. | Alta | Alta |
+| **DR-04** | **Escalabilidad** | Capacidad de la arquitectura para soportar el crecimiento progresivo de ElectroLink mediante la incorporación de nuevos establecimientos, equipos eléctricos y dispositivos IoT sin requerir una reestructuración significativa del sistema. La solución deberá poder soportar inicialmente hasta **5 000 dispositivos IoT conectados**, manteniendo los tiempos establecidos para el procesamiento de eventos críticos. | Alta | Alta |
+| **DR-05** | **Monitoreo y Detección de Anomalías** | Capacidad funcional para recibir información proveniente de sensores IoT, visualizar en tiempo real el estado eléctrico y térmico de los equipos, evaluar las mediciones respecto a umbrales configurados y detectar condiciones anómalas que puedan representar riesgos de seguridad, fallas operativas o funcionamiento ineficiente. | Alta | Alta |
+| **DR-06** | **Operación Local ante Pérdida de Conectividad** | Capacidad de los componentes locales de ElectroLink para conservar funciones esenciales de seguridad cuando se interrumpe la comunicación con los servicios remotos. Las alertas críticas locales no deberán depender exclusivamente de la disponibilidad de Internet, permitiendo advertir al personal del establecimiento y almacenar temporalmente los eventos hasta recuperar la conexión. | Alta | Alta |
+| **DR-07** | **Seguridad** | Implementación de mecanismos para proteger la información operativa y la configuración de los equipos mediante autenticación, autorización y comunicación segura. El **100 % de los recursos protegidos** deberá requerir autenticación válida, mientras que toda modificación de parámetros críticos, como umbrales eléctricos y térmicos, deberá verificar los permisos correspondientes y generar registros de auditoría. | Alta | Media |
+| **DR-08** | **Interoperabilidad IoT** | Capacidad de ElectroLink para comunicarse con diferentes sensores, dispositivos y componentes IoT utilizados para medir variables como corriente, voltaje, consumo energético y temperatura, empleando interfaces y protocolos definidos que permitan desacoplar los dispositivos físicos de los servicios encargados del procesamiento y análisis de la información. | Alta | Media |
+| **DR-09** | **Gestión de Alertas** | Capacidad del sistema para clasificar los eventos detectados según su nivel de severidad y distribuir las alertas hacia los mecanismos correspondientes, incluyendo señalización visual o auditiva local, Dashboard administrativo y canales de notificación remotos para el Manager del establecimiento. | Alta | Media |
+| **DR-10** | **Gestión Energética** | Capacidad de la plataforma para almacenar y procesar información histórica sobre el consumo eléctrico de los equipos, permitiendo calcular consumos en kWh, estimar costos, comparar periodos e identificar patrones anómalos como consumo fuera del horario comercial. | Media | Media |
+| **DR-11** | **Modificabilidad** | Facilidad con la que la arquitectura permite incorporar nuevos tipos de sensores, variables eléctricas o mecanismos de análisis sin generar modificaciones significativas en componentes no relacionados. La integración de un nuevo tipo de sensor deberá concentrar los cambios principalmente en su módulo de integración y requerir como máximo **2 días-persona de desarrollo**, excluyendo las pruebas asociadas al hardware. | Media | Media |
+| **DR-12** | **Persistencia y Trazabilidad** | Capacidad del sistema para conservar mediciones de telemetría, alertas, cambios de configuración y eventos relevantes de los equipos, permitiendo realizar consultas históricas, análisis energético, auditorías y seguimiento de incidentes sin perder la relación entre el dispositivo, equipo y establecimiento que originó la información. | Media | Media |
+
 ### 4.1.4. Architectural Design Decisions
 
+A continuación se presenta la evaluación de las decisiones de diseño arquitectónico para ElectroLink, comparando el estilo de Monolito Modular (DDD) frente a una arquitectura basada en Microservicios, evaluándolos según los Drivers Arquitectónicos definidos.
+
+| Driver ID | Título de Driver | Monolito Modular (DDD) Pro | Monolito Modular (DDD) Contra | Microservicios Pro | Microservicios Contra | 
+|---|---|---|---|---|---|
+|DR01|Rendimiento|Las llamadas entre los módulos de telemetría IoT y el gestor de alertas ocurren en memoria, lo que elimina la latencia de red interna y facilita cumplir el tiempo de respuesta $\le 3$ segundos.|El procesamiento intensivo de datos de los sensores IoT puede competir por recursos de CPU/RAM con otros módulos (ej. consultas al Dashboard administrativo).|Los servicios especializados (ej. Ingesta IoT) pueden optimizarse independientemente, asignando hardware específico para la lectura de telemetría.|El overhead de comunicación por red entre microservicios (ej. Ingesta $\rightarrow$ Alertas $\rightarrow$ Notificación) puede incrementar la latencia en flujos críticos.|
+|DR02|Disponibilidad|Despliegue simple y unificado en Azure App Service. Menor cantidad de partes móviles e infraestructura que puedan fallar en la comunicación interna.|Cualquier fallo crítico en un módulo (ej. un bucle infinito procesando datos de sensores) puede tumbar toda la instancia y afectar la operación de todos los locales.|El aislamiento de fallos permite que, si el servicio de reportes SST falla, la detección de fugas de corriente y alertas siga funcionando sin interrupciones.|La alta disponibilidad requiere infraestructura compleja (Service Mesh, Kubernetes) y manejo de tolerancia a fallos entre red (Circuit Breakers).|
+|DR04|Escalabilidad|La modularización interna mediante DDD permite escalar horizontalmente replicando la instancia completa para absorber la demanda.|Limitaciones de eficiencia en costos: para escalar la capacidad de 5,000 dispositivos IoT, se debe escalar también el módulo de facturación y usuarios innecesariamente.|Escalabilidad horizontal elástica y granular: el servicio de ingesta IoT puede escalar masivamente por demanda sin afectar o sobredimensionar el resto del sistema.|Costo operativo inicial elevado y alta complejidad de orquestación requerida para mantener la consistencia entre múltiples bases de datos.|
+|DR07|Seguridad|Seguridad centralizada con un único flujo de autenticación, gestión de tokens JWT y control de accesos uniforme para las APIs y la configuración de umbrales.|Mayor superficie de impacto: el compromiso o vulneración de un módulo compromete el acceso directo a la base de datos completa (PostgreSQL).|Seguridad aislada por servicio; los datos de facturación (Stripe) están separados de los datos de telemetría, aplicando el principio de menor privilegio.|Requiere una gestión distribuida compleja de tokens de autorización y validación de identidades en cada salto entre servicios.|
+|DR11|Modificabilidad|La separación lógica por dominios (DDD) facilita incorporar nuevos tipos de sensores IoT limitando el impacto al módulo correspondiente, lográndolo en $\le 2$ días-persona.|Si no se respeta la disciplina arquitectónica, los límites de los módulos pueden difuminarse, creando un alto acoplamiento (Big Ball of Mud).|Servicios pequeños y totalmente independientes permiten la evolución tecnológica y despliegue aislado de nuevas funcionalidades IoT sin afectar el resto.|Requiere gobernanza fuerte y coordinación exhaustiva para gestionar cambios en contratos de APIs o transacciones distribuidas (Patrón Saga).|
+
+
 ### 4.1.5. Quality Attribute Scenario Refinements
+
+Luego del proceso de **Quality Attribute Workshop**, el equipo revisó los escenarios de atributos de calidad identificados inicialmente y priorizó aquellos con mayor influencia sobre la arquitectura de ElectroLink. La priorización consideró principalmente el impacto de cada escenario sobre la seguridad del personal, la continuidad del monitoreo eléctrico, la capacidad de respuesta ante anomalías y el crecimiento futuro de la solución.
+
+Como resultado, se refinaron los escenarios relacionados con **rendimiento, confiabilidad, disponibilidad, seguridad y escalabilidad**, incorporando mayor detalle acerca de las condiciones en las que ocurren los estímulos, los componentes involucrados, las respuestas esperadas y sus respectivas métricas. Asimismo, se identificaron preguntas e issues arquitectónicos que deberán ser considerados durante el diseño de la solución.
+
+### Scenario Refinement for Scenario 1
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como Manager del Local, quiero recibir alertas automáticas cuando se detecte una condición eléctrica crítica, para tomar acciones antes de que se produzca una falla o una situación que comprometa la seguridad del personal. |
+| **Business Goals** | Reducir el riesgo de accidentes eléctricos y disminuir el impacto operativo de fallas en los equipos mediante la detección y comunicación temprana de condiciones peligrosas. |
+| **Relevant Quality Attributes** | Rendimiento, Confiabilidad, Disponibilidad |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Un sensor registra una condición crítica, como fuga de corriente, sobrecorriente o temperatura superior al umbral configurado. |
+| **Stimulus Source** | Sensor IoT instalado en un equipo eléctrico del establecimiento. |
+| **Environment** | Operación normal del local, incluyendo periodos de alta actividad en los que múltiples dispositivos transmiten telemetría simultáneamente. |
+| **Artifact (if Known)** | Dispositivo IoT, gateway local, servicio de procesamiento de telemetría y sistema de alertas. |
+| **Response** | El sistema recibe la medición, identifica que supera un umbral crítico, registra el evento y activa las alertas locales y remotas correspondientes. |
+| **Response Measure** | La alerta crítica debe generarse en un máximo de **3 segundos** desde la recepción de la medición. |
+| **Questions** | ¿La detección de una situación crítica debe realizarse únicamente en el backend o también localmente? ¿Qué ocurre si varias alertas críticas se producen simultáneamente? |
+| **Issues** | La dependencia exclusiva de servicios cloud podría incrementar la latencia o impedir la generación de alertas ante una pérdida de conectividad. |
+
+### Scenario Refinement for Scenario 2
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como trabajador del local, quiero que las alertas críticas continúen funcionando aunque se pierda la conexión a Internet, para mantener las funciones de seguridad dentro del establecimiento. |
+| **Business Goals** | Mantener la protección del personal y la capacidad de reacción ante riesgos eléctricos incluso cuando la comunicación con la plataforma central no esté disponible. |
+| **Relevant Quality Attributes** | Confiabilidad, Disponibilidad, Tolerancia a fallos |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Se interrumpe temporalmente la conexión entre el establecimiento y el backend de ElectroLink. |
+| **Stimulus Source** | Red de comunicaciones o proveedor de Internet del establecimiento. |
+| **Environment** | Operación normal del local mientras los sensores continúan generando información. |
+| **Artifact (if Known)** | Gateway o dispositivo Edge local, sensores IoT y backend central. |
+| **Response** | El componente local continúa procesando condiciones críticas, activa las alertas locales y almacena temporalmente las mediciones y eventos pendientes. Cuando se recupera la conexión, sincroniza la información con la plataforma central. |
+| **Response Measure** | Las funciones de alerta local deben permanecer disponibles durante la interrupción y al menos el **99.5 % de las mediciones almacenadas** deben sincronizarse luego de restablecerse la comunicación. |
+| **Questions** | ¿Cuánto tiempo debe poder almacenar información el dispositivo local? ¿Cómo se resuelven conflictos al sincronizar los datos? |
+| **Issues** | Será necesario disponer de almacenamiento local y mecanismos de sincronización para evitar pérdida o duplicación de información. |
+
+### Scenario Refinement for Scenario 3
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como Manager del Local, quiero que la plataforma permanezca disponible ante fallos parciales, para continuar supervisando el estado eléctrico de los equipos. |
+| **Business Goals** | Evitar periodos prolongados sin monitoreo y mantener la continuidad operativa de ElectroLink ante fallos en componentes de software o infraestructura. |
+| **Relevant Quality Attributes** | Disponibilidad, Confiabilidad |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Uno de los servicios responsables del monitoreo o procesamiento de telemetría deja de responder inesperadamente. |
+| **Stimulus Source** | Infraestructura o componente interno de la plataforma. |
+| **Environment** | Operación normal o periodo de alta actividad del establecimiento. |
+| **Artifact (if Known)** | Servicios backend responsables de telemetría, monitoreo y alertas. |
+| **Response** | La plataforma detecta la falla, ejecuta mecanismos de recuperación y mantiene disponibles las funciones esenciales de monitoreo mediante instancias o mecanismos alternativos. |
+| **Response Measure** | Mantener una disponibilidad mensual mínima de **99.9 %** y recuperar el servicio afectado en un máximo de **60 segundos**. |
+| **Questions** | ¿Qué servicios requieren redundancia? ¿Qué componentes pueden degradarse temporalmente sin afectar la seguridad? |
+| **Issues** | Incrementar la disponibilidad puede requerir redundancia, health checks, reinicio automático y balanceo de carga, aumentando la complejidad de infraestructura. |
+
+### Scenario Refinement for Scenario 4
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como Manager del Local, quiero conocer cuando un sensor deja de transmitir información, para evitar zonas o equipos sin monitoreo dentro del establecimiento. |
+| **Business Goals** | Reducir los puntos ciegos en el monitoreo eléctrico y permitir que el personal intervenga rápidamente cuando un dispositivo IoT presenta problemas de comunicación. |
+| **Relevant Quality Attributes** | Confiabilidad, Disponibilidad |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Un dispositivo IoT deja de transmitir sus mensajes o señales periódicas al sistema. |
+| **Stimulus Source** | Sensor o dispositivo IoT. |
+| **Environment** | Operación normal con los dispositivos registrados como activos. |
+| **Artifact (if Known)** | Servicio de monitoreo de conectividad de dispositivos y Dashboard administrativo. |
+| **Response** | El sistema identifica la ausencia de comunicación, cambia el estado del sensor a desconectado y muestra una alerta al Manager. |
+| **Response Measure** | La pérdida de comunicación debe detectarse y comunicarse en un máximo de **30 segundos** desde la última transmisión esperada. |
+| **Questions** | ¿Con qué frecuencia debe enviar heartbeat cada dispositivo? ¿Cómo se diferencia una caída de red de una falla física del sensor? |
+| **Issues** | Un intervalo demasiado reducido podría aumentar innecesariamente el tráfico de la red, mientras que uno demasiado amplio retrasaría la detección de dispositivos desconectados. |
+
+### Scenario Refinement for Scenario 5
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como Manager del Local, quiero que únicamente usuarios autorizados puedan acceder y modificar parámetros críticos, para evitar alteraciones que puedan comprometer el monitoreo de los equipos. |
+| **Business Goals** | Proteger la información operativa y evitar modificaciones no autorizadas sobre configuraciones relacionadas con la seguridad eléctrica del establecimiento. |
+| **Relevant Quality Attributes** | Seguridad, Auditabilidad |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Un usuario intenta acceder a un recurso protegido o modificar los umbrales de corriente o temperatura de un equipo. |
+| **Stimulus Source** | Usuario autenticado sin permisos suficientes o usuario no autorizado. |
+| **Environment** | Plataforma web disponible mediante Internet durante la operación normal. |
+| **Artifact (if Known)** | Servicio de autenticación y autorización, módulo de configuración y registros de auditoría. |
+| **Response** | El sistema valida la identidad y permisos del usuario, rechaza las operaciones no autorizadas y registra los intentos o modificaciones realizadas. |
+| **Response Measure** | El **100 % de los endpoints protegidos** debe exigir autenticación válida y el **100 % de las modificaciones de parámetros críticos** debe verificar autorización y generar un registro de auditoría. |
+| **Questions** | ¿Qué roles tendrán permisos para modificar umbrales? ¿Se requiere autenticación adicional para cambios particularmente sensibles? |
+| **Issues** | Será necesario definir adecuadamente roles y permisos para evitar tanto accesos excesivos como restricciones que dificulten la operación. |
+
+### Scenario Refinement for Scenario 6
+
+| Campo | Descripción |
+|---|---|
+| **Scenario(s)** | Como administrador de una cadena de establecimientos, quiero incorporar progresivamente nuevos locales y dispositivos sin afectar el funcionamiento de los existentes. |
+| **Business Goals** | Permitir que ElectroLink pueda ser implementado progresivamente en cadenas de comida rápida y acompañar el crecimiento del número de establecimientos monitoreados. |
+| **Relevant Quality Attributes** | Escalabilidad, Rendimiento, Disponibilidad |
+
+| Scenario Components | Descripción |
+|---|---|
+| **Stimulus** | Se incrementa significativamente la cantidad de establecimientos, equipos y dispositivos IoT conectados simultáneamente. |
+| **Stimulus Source** | Crecimiento de la cadena y despliegue de nuevos dispositivos ElectroLink. |
+| **Environment** | Plataforma en operación mientras se incorporan nuevos establecimientos y sensores. |
+| **Artifact (if Known)** | Infraestructura cloud, servicios de ingesta y procesamiento de telemetría, almacenamiento y sistema de alertas. |
+| **Response** | La plataforma incrementa su capacidad para recibir y procesar telemetría sin requerir una reestructuración significativa y mantiene los tiempos definidos para los eventos críticos. |
+| **Response Measure** | Soportar inicialmente hasta **5 000 dispositivos IoT conectados**, manteniendo la generación de alertas críticas dentro del límite de **3 segundos**. |
+| **Questions** | ¿El escalamiento se realizará horizontal o verticalmente? ¿Qué componente se convertirá primero en cuello de botella: ingesta, procesamiento o almacenamiento? |
+| **Issues** | El crecimiento del volumen de telemetría puede requerir procesamiento asíncrono, particionamiento de datos y escalamiento independiente de determinados servicios. |
 
 ## 4.2. Strategic-Level Domain-Driven Design
 
 ### 4.2.1. EventStorming
+\
+![](assets-emergentes/EventStorming1.png)
+\
+![](assets-emergentes/EventStorming2.png)
+\
+![](assets-emergentes/EventStorming3.png)
+\
+![](assets-emergentes/EventStorming4.png)
 
 ### 4.2.2. Candidate Context Discovery
+\
+![](assets-emergentes/CCD.png)
 
 ### 4.2.3. Domain Message Flows Modeling
 
 ### 4.2.4. Bounded Context Canvases
 
+En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
+
+## 1. Identity and Access Management (IAM)
+Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
+
+---
+\
+![](assets-emergentes/IAM-bd.PNG)
+
+---
+## 2. Subscription and Payments
+Gestión de planes, facturación y control de acceso a funcionalidades.
+
+---
+\
+![](assets-emergentes/bd-subscription.PNG)
+
+
+---
+
+## 3. Profiles and Preferences
+Administración de perfiles de usuarios, técnicos y configuración personalizada.
+
+---
+\
+![](assets-emergentes/bd-profiles.PNG)
+
+
+---
+
+## 4. Service Design and Planning
+Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
+
+---
+\
+![](assets-emergentes/service-desing-bd.PNG)
+
+---
+
+## 5. Service Operation and Monitoring
+Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
+
+---
+\
+![](assets-emergentes/bd-service-operation.PNG)
+
+
+---
+
+## 6. Assets and Resource Management
+Gestión de propiedades, dispositivos IoT e inventario de técnicos.
+
+---
+\
+![](assets-emergentes/bd-assets.PNG)
+
+---
+
+## 7. IoT Monitoring and Edge Processing
+Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
+
+---
+\
+![](assets-emergentes/bd-iot.PNG)
+
+---
+
+## 8. Analytics
+Visualización, reportes e insights a partir de datos históricos y en tiempo real.
+
+---
+\
+![](assets-emergentes/bd-analytics.PNG)
+
+
+---
+
 ### 4.2.5. Context Mapping
+\
+El Context Mapping es una técnica esencial en el diseño de ElectroLink que nos permite visualizar las relaciones estructurales y de comunicación entre los ocho Bounded Contexts identificados en el dominio de la gestión eléctrica inteligente. A través de esta técnica, hemos identificado las interacciones, dependencias y posibles puntos de integración entre los contextos, asegurando que el flujo de información desde los sensores hasta la toma de decisiones proactivas sea consistente.
+\
+En el desarrollo de nuestro proyecto, el proceso se estructuró siguiendo las fases metodológicas del diseño guiado por el dominio:
+\
+**Identificación de Relaciones:** Se comenzó por definir las interdependencias entre contextos, estableciendo roles de Upstream (U) y Downstream (D). Un ejemplo crítico es la relación entre IoT Monitoring (Upstream) y Service Design (Downstream), donde los eventos de anomalías dictan el comportamiento proactivo del sistema.
+
+**Anticorruption Layer (ACL):** Aplicada en Service Design para proteger el algoritmo de asignación técnica de cambios en los modelos de activos o perfiles.
+
+**Shared Kernel:** Utilizado entre Service Operation y Assets para gestionar el estado compartido de los dispositivos instalados en tiempo real.
+
+**Open Host Service (OHS):** El contexto de IoT Monitoring expone una interfaz estandarizada para el control seguro de relés eléctricos.
+
+**Customer/Supplier:** Establecido entre Profiles e IoT Monitoring, donde los umbrales configurados por el cliente guían la detección de anomalías.
+
+**Conformist:** El BC de Analytics se adhiere a los contratos de datos de telemetría impuestos por la ingesta de dispositivos para garantizar reportes precisos.
+
+A continuación, se presenta el Context Map elegido que resume visualmente estas relaciones y sirve como hoja de ruta para la implementación técnica de la solución:
+\
+![](assets-emergentes/Context-Mapping-Electrolink.jpg)
+
 
 ## 4.3. Software Architecture
 
 ### 4.3.1. Software Architecture System Landscape Diagram
+\
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.1. Software Architecture Context Level Diagrams
+\
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
+\
+![](assets-emergentes/Containers.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
+\
+![](assets-emergentes/DeploymentDiagram-dark.png)
 
 # Capítulo V: Tactical-Level Software Design
 
@@ -568,3 +1527,10 @@ El servicio de monitoreo de infraestructura en las cadenas de comida rápida en 
 
 # Video About-the-Team
 
+# Anexos
+
+- Link del la organización del equipo: [https://github.com/Hampcoders-Emergentes](https://github.com/Hampcoders-Emergentes)
+
+- Link del repositorio del reporte: [https://github.com/Hampcoders-Emergentes/project-documento](https://github.com/Hampcoders-Emergentes/project-documento)
+
+- Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
