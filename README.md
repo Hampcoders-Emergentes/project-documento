@@ -32,9 +32,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Cesar Augusto Arostegui Alzamora</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">u202114548</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Cesar Augusto Arostegui Alzamora</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202114548</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Vanessa May Lang Choy Robles</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202317450</td></tr>
-    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Natalia Ximena Valverde Portuguez</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202317450</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Natalia Ximena Valverde Portuguez</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231A816</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Leandro Saul Contreras López</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231E215</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Ivo Marcelo Machado Bracamonte</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231C368</td></tr>
   </tbody>
