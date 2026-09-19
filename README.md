@@ -1097,6 +1097,10 @@ Cuando un sensor IoT detecta un umbral crítico de temperatura o corriente, el c
 Un operario reporta rápidamente una falla desde el panel local, generando un evento en el sistema. El contexto de diseño y planificación recibe la alerta, evalúa el inventario de técnicos disponibles y permite al administrador asignar la tarea. Finalmente, se notifica al técnico seleccionado mediante SMS o Push para su intervención.
 ![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow2.png)
 
+#### Scenario 3:Verificación de Apagado Seguro para Limpieza
+Antes de limpiar, el personal solicita verificar el aislamiento de energía. El sistema consulta directamente la telemetría de los sensores IoT para confirmar la ausencia de voltaje o amperaje. Al certificarse la desenergización, la pantalla local cambia a luz verde, indicando que el área es totalmente segura para trapear sin riesgo de electrocución.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow3.png)
+
 ### 4.2.4. Bounded Context Canvases
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
