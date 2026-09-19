@@ -1200,6 +1200,8 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 ![](assets-emergentes/SystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
+\
+![](assets-emergentes/Containers.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
 
