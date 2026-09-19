@@ -1089,17 +1089,123 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.4. Bounded Context Canvases
 
+En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
+
+## 1. Identity and Access Management (IAM)
+Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
+
+---
+\
+![](assets-emergentes/IAM-bd.PNG)
+
+---
+## 2. Subscription and Payments
+Gestión de planes, facturación y control de acceso a funcionalidades.
+
+---
+\
+![](assets-emergentes/bd-subscription.PNG)
+
+
+---
+
+## 3. Profiles and Preferences
+Administración de perfiles de usuarios, técnicos y configuración personalizada.
+
+---
+\
+![](assets-emergentes/bd-profiles.PNG)
+
+
+---
+
+## 4. Service Design and Planning
+Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
+
+---
+\
+![](assets-emergentes/service-desing-bd.PNG)
+
+---
+
+## 5. Service Operation and Monitoring
+Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
+
+---
+\
+![](assets-emergentes/bd-service-operation.PNG)
+
+
+---
+
+## 6. Assets and Resource Management
+Gestión de propiedades, dispositivos IoT e inventario de técnicos.
+
+---
+\
+![](assets-emergentes/bd-assets.PNG)
+
+---
+
+## 7. IoT Monitoring and Edge Processing
+Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
+
+---
+\
+![](assets-emergentes/bd-iot.PNG)
+
+---
+
+## 8. Analytics
+Visualización, reportes e insights a partir de datos históricos y en tiempo real.
+
+---
+\
+![](assets-emergentes/bd-analytics.PNG)
+
+
+---
+
 ### 4.2.5. Context Mapping
+\
+El Context Mapping es una técnica esencial en el diseño de ElectroLink que nos permite visualizar las relaciones estructurales y de comunicación entre los ocho Bounded Contexts identificados en el dominio de la gestión eléctrica inteligente. A través de esta técnica, hemos identificado las interacciones, dependencias y posibles puntos de integración entre los contextos, asegurando que el flujo de información desde los sensores hasta la toma de decisiones proactivas sea consistente.
+\
+En el desarrollo de nuestro proyecto, el proceso se estructuró siguiendo las fases metodológicas del diseño guiado por el dominio:
+\
+**Identificación de Relaciones:** Se comenzó por definir las interdependencias entre contextos, estableciendo roles de Upstream (U) y Downstream (D). Un ejemplo crítico es la relación entre IoT Monitoring (Upstream) y Service Design (Downstream), donde los eventos de anomalías dictan el comportamiento proactivo del sistema.
+
+**Anticorruption Layer (ACL):** Aplicada en Service Design para proteger el algoritmo de asignación técnica de cambios en los modelos de activos o perfiles.
+
+**Shared Kernel:** Utilizado entre Service Operation y Assets para gestionar el estado compartido de los dispositivos instalados en tiempo real.
+
+**Open Host Service (OHS):** El contexto de IoT Monitoring expone una interfaz estandarizada para el control seguro de relés eléctricos.
+
+**Customer/Supplier:** Establecido entre Profiles e IoT Monitoring, donde los umbrales configurados por el cliente guían la detección de anomalías.
+
+**Conformist:** El BC de Analytics se adhiere a los contratos de datos de telemetría impuestos por la ingesta de dispositivos para garantizar reportes precisos.
+
+A continuación, se presenta el Context Map elegido que resume visualmente estas relaciones y sirve como hoja de ruta para la implementación técnica de la solución:
+\
+![](assets-emergentes/Context-Mapping-Electrolink.jpg)
+
 
 ## 4.3. Software Architecture
 
 ### 4.3.1. Software Architecture System Landscape Diagram
+\
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.1. Software Architecture Context Level Diagrams
+\
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
+\
+![](assets-emergentes/Containers.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
+\
+![](assets-emergentes/DeploymentDiagram-dark.png)
 
 # Capítulo V: Tactical-Level Software Design
 
