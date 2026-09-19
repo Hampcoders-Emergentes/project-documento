@@ -1101,6 +1101,10 @@ Un operario reporta rápidamente una falla desde el panel local, generando un ev
 Antes de limpiar, el personal solicita verificar el aislamiento de energía. El sistema consulta directamente la telemetría de los sensores IoT para confirmar la ausencia de voltaje o amperaje. Al certificarse la desenergización, la pantalla local cambia a luz verde, indicando que el área es totalmente segura para trapear sin riesgo de electrocución.
 ![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow3.png)
 
+#### Scenario 4: Sincronización de Telemetría Tras Caída de Conexión
+Ante un corte de Internet, el Edge Node local almacena la telemetría para evitar pérdida de datos. Una vez restaurada la conexión, se activa una política que sincroniza masivamente la información retenida hacia la nube de Azure. Esto actualiza los consumos históricos y las métricas del dashboard administrativo de forma transparente.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow4.png)
+
 ### 4.2.4. Bounded Context Canvases
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
