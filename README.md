@@ -19,7 +19,7 @@
   <br><br>
   Informe del Trabajo Final
   <br><br>
-  Startup: HNG
+  Startup: HampCoders
   <br><br>
   Producto: ElectroLink
 </h3>
