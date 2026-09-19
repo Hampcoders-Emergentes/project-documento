@@ -1089,6 +1089,97 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.4. Bounded Context Canvases
 
+En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
+
+## 1. Identity and Access Management (IAM)
+Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
+
+\
+
+![](assets-emergentes/IAM-bd.PNG)
+
+---
+
+## 2. Subscription and Payments
+Gestión de planes, facturación y control de acceso a funcionalidades.
+
+---
+
+\
+
+![](assets-emergentes/bd-subscription.PNG)
+
+
+---
+
+## 3. Profiles and Preferences
+Administración de perfiles de usuarios, técnicos y configuración personalizada.
+
+---
+
+\
+
+![](assets-emergentes/bd-profiles.PNG)
+
+
+---
+
+## 4. Service Design and Planning
+Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
+
+---
+
+\
+
+![](assets-emergentes/service-desing-bd.PNG)
+
+---
+
+## 5. Service Operation and Monitoring
+Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
+
+---
+
+\
+
+![](assets-emergentes/bd-service-operation.PNG)
+
+
+---
+
+## 6. Assets and Resource Management
+Gestión de propiedades, dispositivos IoT e inventario de técnicos.
+
+---
+\
+
+![](assets-emergentes/bd-assets.PNG)
+
+---
+
+## 7. IoT Monitoring and Edge Processing
+Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
+
+---
+
+\
+
+![](assets-emergentes/bd-iot.PNG)
+
+---
+
+## 8. Analytics
+Visualización, reportes e insights a partir de datos históricos y en tiempo real.
+
+---
+
+\
+
+![](assets-emergentes/bd-analytics.PNG)
+
+
+---
+
 ### 4.2.5. Context Mapping
 
 ## 4.3. Software Architecture
