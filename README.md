@@ -1185,21 +1185,19 @@ En el desarrollo de nuestro proyecto, el proceso se estructuró siguiendo las fa
 **Conformist:** El BC de Analytics se adhiere a los contratos de datos de telemetría impuestos por la ingesta de dispositivos para garantizar reportes precisos.
 
 A continuación, se presenta el Context Map elegido que resume visualmente estas relaciones y sirve como hoja de ruta para la implementación técnica de la solución:
-
 \
-
 ![](assets-emergentes/Context-Mapping-Electrolink.jpg)
 
 
 ## 4.3. Software Architecture
 
 ### 4.3.1. Software Architecture System Landscape Diagram
-
 \
-
 ![](assets-emergentes/SystemContext.png)
 
 ### 4.3.1. Software Architecture Context Level Diagrams
+\
+![](assets-emergentes/SystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
 
