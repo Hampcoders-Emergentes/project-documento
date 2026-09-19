@@ -1527,3 +1527,10 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 # Video About-the-Team
 
+# Anexos
+
+- Link del la organización del equipo: [https://github.com/Hampcoders-Emergentes](https://github.com/Hampcoders-Emergentes)
+
+- Link del repositorio del reporte: [https://github.com/Hampcoders-Emergentes/project-documento](https://github.com/Hampcoders-Emergentes/project-documento)
+
+- Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
