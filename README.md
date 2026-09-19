@@ -1093,11 +1093,12 @@ En esta secci처n se presentan los bounded contexts identificados para la soluci�
 
 ## 1. Identity and Access Management (IAM)
 Gesti처n de autenticaci처n, autorizaci처n y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesi처n y manejo de roles.
+
+---
 \
 ![](assets-emergentes/IAM-bd.PNG)
 
 ---
-\
 ## 2. Subscription and Payments
 Gesti처n de planes, facturaci처n y control de acceso a funcionalidades.
 
@@ -1167,7 +1168,7 @@ Visualizaci처n, reportes e insights a partir de datos hist처ricos y en tiempo re
 
 ### 4.2.5. Context Mapping
 \
-![](assets-emergentes/Context-Mapping-Electrolink.PNG)
+![](assets-emergentes/Context-Mapping-Electrolink.jpg)
 
 
 ## 4.3. Software Architecture
