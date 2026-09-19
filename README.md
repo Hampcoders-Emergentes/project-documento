@@ -1093,7 +1093,9 @@ El Domain Message Flow Modeling es una técnica visual utilizada en la metodolog
 Cuando un sensor IoT detecta un umbral crítico de temperatura o corriente, el contexto de monitoreo emite un evento de anomalía. Esta alerta acciona inmediatamente el semáforo rojo en la cocina para proteger al operario y envía una notificación de emergencia al teléfono del administrador a través de Firebase, garantizando una respuesta rápida.
 ![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow.png)
 
-
+#### Scenario 2: Reporte Rápido Operativo y Asignación Técnica
+Un operario reporta rápidamente una falla desde el panel local, generando un evento en el sistema. El contexto de diseño y planificación recibe la alerta, evalúa el inventario de técnicos disponibles y permite al administrador asignar la tarea. Finalmente, se notifica al técnico seleccionado mediante SMS o Push para su intervención.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow2.png)
 
 ### 4.2.4. Bounded Context Canvases
 
