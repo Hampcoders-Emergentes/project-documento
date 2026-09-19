@@ -34,6 +34,7 @@
   <tbody>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Cesar Augusto Arostegui Alzamora</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">u202114548</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Vanessa May Lang Choy Robles</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202317450</td></tr>
+    <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Natalia Ximena Valverde Portuguez</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U202317450</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Leandro Saul Contreras López</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231E215</td></tr>
     <tr><td style="border:1px solid #000; padding:6px 12px; text-align:center;">Ivo Marcelo Machado Bracamonte</td><td style="border:1px solid #000; padding:6px 12px; text-align:center;">U20231C368</td></tr>
   </tbody>
@@ -729,6 +730,8 @@ Esta entrevista explora la perspectiva operativa y de gestión de tienda en el r
 - Duración: 7:49
 - Entrevistador: Leandro Saul Contreras Lopez
 
+![assets/cap2/interviews/entrevista_3_2](assets/cap2/interviews/entrevista_3_2.png)
+
 **Contexto de la entrevista**
 A diferencia de las entrevistas anteriores enfocadas en el personal operativo, esta charla explora la perspectiva gerencial respecto a la propuesta de usar dispositivos IoT para monitorear el consumo eléctrico y prevenir fallas en un local de alta demanda.
 
@@ -785,8 +788,41 @@ Para este análisis se revisaron 3 entrevistas: Mark Mori (21 años, comida ráp
 
 ---
 
-**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
+**Segmento 2: Manager del Local, Administrador y Jefe de Tienda**
 
+Para este análisis se revisaron tres entrevistas: Juan Carrion, de 30 años, administrador de comida rápida; Brayan Serna, de 22 años, gerente de tienda Little Caesars Arenales; y Renzo LLontop, de 33 años, perfil gerencial. Los tres son responsables de continuidad operativa, costos, seguridad e inocuidad en locales de alta demanda.
+
+#### A. Resumen comparativo de lo encontrado
+
+| Tema | Juan Carrion | Brayan Serna | Renzo LLontop | En qué coinciden |
+|---|---|---|---|---|
+| **Cómo gestionan fallas** | Reactivo. Recurre a contactos conocidos y, si no obtiene respuesta, busca en internet. | Jerárquico. Reporta a gerente zonal, quien asigna técnicos tercerizados homologados. Si la urgencia es extrema, busca la cuadrilla más cercana. | Tercerizado fijo. Revisión cada tres meses por norma y empresa externa contratada. Ante una falla, los llama, ellos resuelven y luego facturan. | **Ninguno resuelve con personal propio. Todos dependen de terceros y actúan de forma reactiva cuando falla el sistema eléctrico general.** |
+| **Tiempos de respuesta** | Exige inmediatez. Encontrar un técnico es sencillo, pero encontrar uno disponible en el momento, certificado y rápido para el ritmo de comida rápida resulta complejo. | Exige resolución inmediata. En un corte de 30 minutos, fue determinante conectar el grupo electrógeno al tablero general para no detener la operación. | Exige rapidez total. Sin electricidad la tienda queda inoperativa: no es posible cobrar, no funcionan las máquinas de café ni los hornos y se pierde la conexión wifi. Cada minuto detenido representa miles de dólares en pérdida. | **La velocidad es innegociable. Treinta minutos detenidos generan pérdida directa de ventas.** |
+| **Cómo les afecta** | Una avería crítica en cocina o refrigeración genera pérdida de ventas, merma de insumos y paralización parcial o total. | Una avería en la batidora industrial por un mal servicio obligó a suspender la producción de masa, trasladar insumos y una máquina pesada desde Miraflores, con un alto costo logístico. | No sufrió por mala instalación interna, pero sí por cortes externos ocurridos entre febrero y marzo. El último corte generó una pérdida económica importante. | **Toda falla crítica frena la venta y genera sobrecosto logístico y operativo.** |
+| **Mantenimiento** | Intenta un esquema periódico según tipo de equipo y política corporativa, pero en el sistema eléctrico general termina actuando de forma reactiva. | Maneja un programa periódico en equipos críticos como hornos, sumideros y cámaras, pero reconoce que se prioriza la intervención cuando ya existe una falla. | Cumple revisión cada tres meses por norma y cuenta con un generador pequeño que resulta insuficiente. El preventivo está contratado y no lo gestiona directamente. | **El preventivo existe en documentos y políticas, pero el sistema eléctrico se atiende cuando ya falló.** |
+| **Seguridad y criterios de contratación** | Prioriza calidad y confiabilidad sobre costo bajo. Valora rapidez, disponibilidad, certificación, garantía y facturación formal. | Su máxima preocupación es la inocuidad. Teme que personal externo deje residuos o herramientas en zona de preparación. Exige facturación formal, certificación, rapidez y disponibilidad permanente. | Prioriza continuidad y costo beneficio. No le preocupa tanto quién atiende, sino que responda de inmediato y que la tienda no se detenga. | **No contratan por precio. Contratan por certificación, garantía, factura formal y disponibilidad.** |
+| **Disposición a pagar suscripción** | Sí, si la tarifa es razonable y garantiza acuerdo de nivel de servicio para emergencias. | Totalmente dispuesto, si reduce tiempos, disminuye la frecuencia de averías y asegura técnicos verificados. Desea una red con estándares comunes. | Postura condicional y escéptica. Si no contara con empresa contratada, sí pagaría. Con su empresa actual, si solo ocurre una falla al año, la mensualidad no resulta rentable. Solo lo considera útil con enfoque puramente preventivo. | **Dos de tres pagarían de inmediato. El tercero solo pagaría si se demuestra retorno preventivo y no solo correctivo.** |
+| **Funcionalidades deseadas** | Panel centralizado con historial, acuerdos de servicio definidos, seguimiento en tiempo real, calificación de proveedores y facturación en plataforma. | Historial por equipo o dispositivo, catálogo de certificados por zona con tiempos de atención, alertas y recordatorios de vencimiento, además de facturación formal. | No desea otra aplicación solo para emergencias, pues dejaría de usarla. En una urgencia prefiere llamar antes que abrir una aplicación. Sí valora ver facturas, estado de revisiones y reportes pasados, con botón de llamada directa. | **Todos solicitan la misma base: historial, tiempos de atención definidos, seguimiento y factura. Renzo agrega el filtro de usabilidad.** |
+
+#### B. Ideas que se repiten en las tres entrevistas
+
+1. **Operan a ciegas hasta que ocurre la falla:** abren con lista de verificación en papel y desconocen qué circuito o equipo consume en exceso o presenta fuga. Se enteran cuando se dispara la llave termomagnética en plena hora pico.
+2. **Lo reactivo resulta muy costoso:** merma, traslado entre locales, tarifa de emergencia, uso de generador y ventas perdidas. El preventivo programado no evita la falla intempestiva.
+3. **El problema no es la falta de técnicos, sino la falta del técnico correcto en el momento necesario:** el dolor no es el precio, es la disponibilidad inmediata, la certificación, el conocimiento del ritmo de comida rápida, el cuidado de la inocuidad y la emisión de factura formal para rendir cuentas a nivel corporativo.
+4. **La suscripción solo se justifica si previene:** están dispuestos a pagar una mensualidad, pero no por un directorio. Pagan si garantiza atención prioritaria con acuerdos de servicio medibles, menos averías y evidencia para justificar el gasto ante la gerencia regional.
+5. **Desean gestión y no solo alertas:** panel central para varios locales, historial por máquina para decidir entre reemplazo y reparación, recordatorios de mantenimiento regulatorio y preventivo, y facturación dentro de la misma plataforma.
+6. **Existe riesgo de abandono:** si ElectroLink se presenta solo como botón de emergencia, no la usarán a diario. Debe aportar valor de consulta frecuente, como consumo en soles por máquina, estado de revisiones y reportes descargables, y resolver la emergencia en un solo toque mediante llamada directa y no solo con un ticket en la aplicación.
+
+#### C. En qué se diferencian
+
+- **Modelo de abastecimiento distinto:** Juan usa red informal y buscadores, Brayan usa red corporativa homologada mediante el nivel zonal, Renzo mantiene contrato fijo con empresa externa. La solución debe servir para los tres casos: no imponer un único proveedor, sino integrar y homologar los existentes y medir su nivel de servicio.
+- **Naturaleza del incidente:** Brayan sufrió mala praxis técnica interna en la batidora, Renzo sufrió corte externo de red entre febrero y marzo, Juan teme falla en cocina o refrigeración. Esto obliga a separar en el producto la anomalía interna detectable con sensores IoT de la interrupción externa no prevenible pero mitigable con grupo electrógeno y protocolo definido.
+- **Postura frente al pago:** Juan y Brayan son promotores tempranos de la suscripción. Renzo representa el freno económico: exige cálculo de costo beneficio anual y enfoque preventivo puro. Este caso permite justificar el módulo de eficiencia energética con ahorro de 12 por ciento en factura como fuente de pago de la suscripción.
+- **Énfasis funcional:** Juan solicita control mediante acuerdos de servicio y calificación, Brayan solicita estandarización e inocuidad mediante protocolos y alertas de vencimiento, Renzo solicita simplicidad extrema para ver facturas y reportes y llamar de inmediato.
+
+**Conclusión del segmento:** el Manager no necesita otro buscador de electricistas. Necesita tres condiciones para firmar: primero, visibilidad preventiva por equipo para no enterarse por el disparo de la llave en viernes por la noche; segundo, respuesta de emergencia garantizada con acuerdo de servicio, seguimiento y facturación formal sin fricción corporativa; y tercero, evidencia descargable para SST, SUNAFIL e INDECI y para justificar sobrecostos ante el nivel regional. Si ElectroLink solo promete monitoreo sin acuerdo operativo, Renzo no renovará. Si combina sensores IoT, acuerdo de servicio y ahorro energético comprobable, Juan y Brayan sí pagarán e impulsarán la red de locales.
+
+---
 
 ## 2.3. Needfinding
 
