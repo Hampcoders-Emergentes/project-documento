@@ -1109,6 +1109,12 @@ Ante un corte de Internet, el Edge Node local almacena la telemetría para evita
 Al cumplirse la fecha de corte, el sistema emite automáticamente un cobro mediante la pasarela Stripe. Tras recibir la confirmación exitosa del pago vía webhook, se genera un evento de dominio que instruye a los módulos de identidad y perfiles a renovar las credenciales, asegurando que el local mantenga su acceso ininterrumpido a la plataforma.
 ![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow5.png)
 
+#### Scenario 6: Generación de Evidencia Normativa (SST)
+El administrador solicita un reporte de cumplimiento para auditorías oficiales como SUNAFIL. El módulo analítico orquesta la recopilación de telemetría de sensores, el historial de reparaciones y la firma digital del usuario. Finalmente, consolida estos datos para generar y entregar un documento PDF inmutable que certifica la seguridad y operatividad del local
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow6.png)
+
+---
+
 ### 4.2.4. Bounded Context Canvases
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
