@@ -1204,6 +1204,8 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 ![](assets-emergentes/Containers.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
+\
+![](assets-emergentes/DeploymentDiagram-dark.png)
 
 # Capítulo V: Tactical-Level Software Design
 
