@@ -200,8 +200,10 @@ A continuación se presenta la evidencia de colaboración en GitHub correspondie
     - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
   - [7.4. Video About-the-Product](#74-video-about-the-product)
 - [Conclusiones](#conclusiones)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-- [Video About-the-Team](#video-about-the-team)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  - [Video About-the-Team](#video-about-the-team)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
 
 # Student Outcome
 
@@ -1484,6 +1486,104 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 \
 ![](assets-emergentes/DeploymentDiagram-dark.png)
 
+# Capítulo V: Tactical-Level Software Design
+
+## 5.X. Bounded Context: <Bounded Context Name>
+
+### 5.X.1. Domain Layer
+
+### 5.X.2. Interface Layer
+
+### 5.X.3. Application Layer
+
+### 5.X.4. Infrastructure Layer
+
+### 5.X.6. Bounded Context Software Architecture Component Level Diagrams
+
+### 5.X.7. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.X.7.1. Bounded Context Domain Layer Class Diagrams
+
+#### 5.X.7.2. Bounded Context Database Design Diagram
+
+# Capítulo VI: Solution UX Design
+
+## 6.1. Style Guidelines
+
+### 6.1.1. General Style Guidelines
+
+### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+## 6.2. Information Architecture
+
+### 6.2.2. Labeling Systems
+
+### 6.2.3. Searching Systems
+
+### 6.2.4. SEO Tags and Meta Tags
+
+### 6.2.5. Navigation Systems
+
+## 6.3. Landing Page UI Design
+
+### 6.3.1. Landing Page Wireframe
+
+### 6.3.2. Landing Page Mock-up
+
+## 6.4. Applications UX/UI Design
+
+### 6.4.1. Applications Wireframes
+
+### 6.4.2. Applications Wireflow Diagrams
+
+### 6.4.2. Applications Mock-ups
+
+### 6.4.3. Applications User Flow Diagrams
+
+## 6.5. Applications Prototyping
+
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+### 7.1.1. Software Development Environment Configuration
+
+### 7.1.2. Source Code Management
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+### 7.1.4. Software Deployment Configuration
+
+## 7.2. Solution Implementation
+
+### 7.2.X. Sprint n
+
+#### 7.2.X.1. Sprint Planning n
+
+#### 7.2.X.2. Sprint Backlog n
+
+#### 7.2.X.3. Development Evidence for Sprint Review
+
+#### 7.2.X.4. Testing Suite Evidence for Sprint Review
+
+#### 7.2.X.5. Execution Evidence for Sprint Review
+
+#### 7.2.X.6. Services Documentation Evidence for Sprint Review
+
+#### 7.2.X.7. Software Deployment Evidence for Sprint Review
+
+#### 7.2.X.8. Team Collaboration Insights during Sprint
+
+## 7.3. Validation Interviews
+
+### 7.3.1. Diseño de Entrevistas
+
+### 7.3.2. Registro de Entrevistas
+
+### 7.3.3. Evaluaciones según heurísticas
+
+## 7.4. Video About-the-Product
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
@@ -1495,6 +1595,8 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 - El diseño estratégico logrado en la entrega AV1, con arquitectura de monolito modular, ingesta IoT y alertas tempranas, deja una base viable y escalable para avanzar hacia la implementación sin necesidad de un rediseño mayor. Se recomienda incorporar desde el inicio el almacenamiento local y la sincronización posterior de telemetría, para mantener la alerta local activa aun con pérdida de conectividad y evitar vacíos de información.
 
 - El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
+
+## Video About-the-Team
 
 # Bibliografía
 
