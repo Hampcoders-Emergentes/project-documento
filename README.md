@@ -46,21 +46,50 @@
 
 <div style="page-break-after: always;"></div>
 
-# Registro de Versiones del Informe  
+# Registro de Versiones del Informe
 ---
+
+En esta sección se registra el historial de cambios del informe del proyecto ElectroLink, solución IoT para el monitoreo de la infraestructura eléctrica y la continuidad operativa en cadenas de comida rápida en Lima Metropolitana. Cada versión identifica fecha, responsable y detalle específico de lo elaborado para asegurar trazabilidad del trabajo colaborativo.
 
 <div align="center">
 
 | Versión | Fecha       | Autor(es)                                                                 | Descripción de modificación |
 |---------|-------------|---------------------------------------------------------------------------|------------------------------|
+|   AV1   | 2026-09-19  | Valverde Portuguez, Natalia Ximena                                       | Redacción integral del Capítulo I Introducción con descripción de la startup HampCoders y del producto ElectroLink, perfiles del equipo, antecedentes y problemática del sector, proceso Lean UX con declaraciones de problema, supuestos, hipótesis y lienzo, y caracterización de los segmentos objetivo Trabajador del Local y Manager del Local con sustento estadístico |
+|   AV1   | 2026-09-19  | Arostegui Alzamora, Cesar Augusto                                         | Redacción del Capítulo II Requirements Elicitation and Analysis con análisis competitivo y paisaje competitivo, estrategias y tácticas frente a competidores, análisis de entrevistas del segmento Manager del Local, matriz de tareas, escenarios actuales As Is de ambos segmentos y lenguaje ubicuo del dominio eléctrico, IoT y gestión operativa |
+|   AV1   | 2026-09-19  | Contreras López, Leandro Saúl                                             | Redacción del Capítulo II con diseño de entrevistas por segmento, registro detallado de entrevistas a personal operativo y gerencial con evidencias audiovisuales y análisis del segmento Trabajador del Local, y avance del Capítulo IV con modelado de flujos de mensajes de dominio para los escenarios de detección de anomalías, reporte operativo, verificación de apagado, sincronización de telemetría, suscripción y evidencia normativa |
+|   AV1   | 2026-09-19  | Choy Robles, Vanessa May Lang                                             | Redacción integral del Capítulo III Requirements Specification con escenario futuro To Be de ambos segmentos, historias de usuario por épicas de seguridad operativa, monitoreo técnico, gestión energética, cumplimiento normativo y control de acceso con criterios de aceptación en formato Gherkin, mapa de impacto y backlog de producto priorizado con puntaje por historia |
+|   AV1   | 2026-09-19  | Machado Bracamonte, Ivo Marcelo                                           | Redacción del Capítulo IV Strategic Level Software Design con EventStorming, descubrimiento de contextos candidatos, lienzos de contextos delimitados para identidad y acceso, suscripción y pagos, perfiles, diseño y operación de servicios, activos, monitoreo IoT y analítica, mapa de contexto y arquitectura de software en niveles de paisaje, contexto, contenedores y despliegue, y apoyo en la matriz de trazabilidad |
 
 </div>
 
-# Project Report Collaboration Insights  
+# Project Report Collaboration Insights
 
+En esta sección se presenta el URL del repositorio en la organización de GitHub del equipo y un resumen de cómo se ha desarrollado la elaboración del informe, asegurando la participación de todos los miembros del equipo en cada entrega.
+
+**Repositorio del Project Report:**
+[https://github.com/Hampcoders-Emergentes/project-documento](https://github.com/Hampcoders-Emergentes/project-documento)
+
+**Organización del equipo:**
+[https://github.com/Hampcoders-Emergentes](https://github.com/Hampcoders-Emergentes)
+
+## Desarrollo de las actividades de elaboración del informe
+
+El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones claro y detallado, que refleja la contribución de cada miembro en la entrega AV1 del proyecto ElectroLink. La solución propone un ecosistema IoT para monitorear tableros y equipos de cocina en cadenas de comida rápida en Lima Metropolitana, con alertas locales y remotas, dashboard multisede e historial para mantenimiento y cumplimiento normativo. A continuación se describe cómo se organizaron el trabajo y las evidencias de colaboración:
+
+### AV1
+
+1. Valverde Portuguez Natalia Ximena elaboró el Capítulo I con la visión de la startup HampCoders, la problemática del monitoreo eléctrico en cadenas de comida rápida en Lima Metropolitana y el proceso Lean UX completo, unificando el lenguaje del dominio para todo el equipo.
+2. Arostegui Alzamora Cesar Augusto y Contreras López Leandro Saúl desarrollaron el Capítulo II con análisis competitivo frente a soluciones internacionales, entrevistas a personal operativo y gerencial, análisis por segmento, needfinding con personas, matriz de tareas, mapas de empatía, escenarios actuales y lenguaje ubicuo.
+3. Choy Robles Vanessa May Lang desarrolló el Capítulo III con escenarios futuros, historias de usuario por épicas, mapa de impacto y backlog priorizado, asegurando trazabilidad entre necesidades detectadas y funcionalidades propuestas.
+4. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo avanzaron el Capítulo IV con propósito de diseño, entradas de diseño guiado por atributos, drivers arquitectónicos, decisiones entre monolito modular y microservicios, refinamiento de escenarios, EventStorming, descubrimiento de contextos, flujos de mensajes, lienzos de contexto, mapa de contexto y diagramas de paisaje, contexto, contenedores y despliegue.
+5. El equipo configuró el control de versiones con ramas por capítulo, solicitudes de integración revisadas y registro de anexos con enlaces a organización, repositorio y carpeta compartida, asegurando revisión cruzada antes de la consolidación en la rama principal.
 
 ## Evidencia de colaboración en GitHub
 
+A continuación se presenta la evidencia de colaboración en GitHub correspondiente a la entrega AV1, con el historial de commits y la actividad del repositorio del informe:
+
+![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-av1.png)
 
 ---
 
@@ -176,10 +205,14 @@
 
 # Student Outcome
 
+## ABET – EAC - Student Outcome 3
+
+Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3. 
+
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Choy Robles, Vanessa May Lang**<br>**AV1:** Sinteticé la dinámica del To-Be Scenario Mapping explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local (operarios) y en las decisiones estratégicas del Manager del Local (administradores).<br> |  |
-| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería..** | **Choy Robles, Vanessa May Lang**<br>**AV1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el To-Be Scenario Mapping, las User Stories con criterios de aceptación en formato Gherkin, el Impact Mapping alineado a objetivos y el Product Backlog consolidado. |  |
+| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**AV1:** Logre ante el equipo el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:** Sinteticé la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**AV1:** Logre realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br><br>**Contreras López, Leandro Saúl**<br>**AV1:** Dirigí entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustenté ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**AV1:** Conduje la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y expliqué al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia. | **AV1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa. |
+| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**AV1:** Redacté el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br><br>**Choy Robles, Vanessa May Lang**<br>**AV1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**AV1:** Redacté el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br><br>**Contreras López, Leandro Saúl**<br>**AV1:** Documenté el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**AV1:** Documenté el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial. | **AV1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink. |
 
 # Capítulo I: Introducción
 
