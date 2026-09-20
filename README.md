@@ -19,7 +19,7 @@
   <br><br>
   Informe del Trabajo Final
   <br><br>
-  Startup: HNG
+  Startup: HampCoders
   <br><br>
   Producto: ElectroLink
 </h3>
@@ -46,21 +46,50 @@
 
 <div style="page-break-after: always;"></div>
 
-# Registro de Versiones del Informe  
+# Registro de Versiones del Informe
 ---
+
+En esta sección se registra el historial de cambios del informe del proyecto ElectroLink, solución IoT para el monitoreo de la infraestructura eléctrica y la continuidad operativa en cadenas de comida rápida en Lima Metropolitana. Cada versión identifica fecha, responsable y detalle específico de lo elaborado para asegurar trazabilidad del trabajo colaborativo.
 
 <div align="center">
 
 | Versión | Fecha       | Autor(es)                                                                 | Descripción de modificación |
 |---------|-------------|---------------------------------------------------------------------------|------------------------------|
+|   TB1   | 2026-09-19  | Valverde Portuguez, Natalia Ximena                                       | Redacción integral del Capítulo I Introducción con descripción de la startup HampCoders y del producto ElectroLink, perfiles del equipo, antecedentes y problemática del sector, proceso Lean UX con declaraciones de problema, supuestos, hipótesis y lienzo, y caracterización de los segmentos objetivo Trabajador del Local y Manager del Local con sustento estadístico |
+|   TB1   | 2026-09-19  | Arostegui Alzamora, Cesar Augusto                                         | Redacción del Capítulo II Requirements Elicitation and Analysis con análisis competitivo y paisaje competitivo, estrategias y tácticas frente a competidores, análisis de entrevistas del segmento Manager del Local, matriz de tareas, escenarios actuales As Is de ambos segmentos y lenguaje ubicuo del dominio eléctrico, IoT y gestión operativa |
+|   TB1   | 2026-09-19  | Contreras López, Leandro Saúl                                             | Redacción del Capítulo II con diseño de entrevistas por segmento, registro detallado de entrevistas a personal operativo y gerencial con evidencias audiovisuales y análisis del segmento Trabajador del Local, y avance del Capítulo IV con modelado de flujos de mensajes de dominio para los escenarios de detección de anomalías, reporte operativo, verificación de apagado, sincronización de telemetría, suscripción y evidencia normativa |
+|   TB1   | 2026-09-19  | Choy Robles, Vanessa May Lang                                             | Redacción integral del Capítulo III Requirements Specification con escenario futuro To Be de ambos segmentos, historias de usuario por épicas de seguridad operativa, monitoreo técnico, gestión energética, cumplimiento normativo y control de acceso con criterios de aceptación en formato Gherkin, mapa de impacto y backlog de producto priorizado con puntaje por historia |
+|   TB1   | 2026-09-19  | Machado Bracamonte, Ivo Marcelo                                           | Redacción del Capítulo IV Strategic Level Software Design con EventStorming, descubrimiento de contextos candidatos, lienzos de contextos delimitados para identidad y acceso, suscripción y pagos, perfiles, diseño y operación de servicios, activos, monitoreo IoT y analítica, mapa de contexto y arquitectura de software en niveles de paisaje, contexto, contenedores y despliegue, y apoyo en la matriz de trazabilidad |
 
 </div>
 
-# Project Report Collaboration Insights  
+# Project Report Collaboration Insights
 
+En esta sección se presenta el URL del repositorio en la organización de GitHub del equipo y un resumen de cómo se ha desarrollado la elaboración del informe, asegurando la participación de todos los miembros del equipo en cada entrega.
+
+**Repositorio del Project Report:**
+[https://github.com/Hampcoders-Emergentes/project-documento](https://github.com/Hampcoders-Emergentes/project-documento)
+
+**Organización del equipo:**
+[https://github.com/Hampcoders-Emergentes](https://github.com/Hampcoders-Emergentes)
+
+## Desarrollo de las actividades de elaboración del informe
+
+El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones claro y detallado, que refleja la contribución de cada miembro en la entrega TB1 del proyecto ElectroLink. La solución propone un ecosistema IoT para monitorear tableros y equipos de cocina en cadenas de comida rápida en Lima Metropolitana, con alertas locales y remotas, dashboard multisede e historial para mantenimiento y cumplimiento normativo. A continuación se describe cómo se organizaron el trabajo y las evidencias de colaboración:
+
+### TB1
+
+1. Valverde Portuguez Natalia Ximena elaboró el Capítulo I con la visión de la startup HampCoders, la problemática del monitoreo eléctrico en cadenas de comida rápida en Lima Metropolitana y el proceso Lean UX completo, unificando el lenguaje del dominio para todo el equipo.
+2. Arostegui Alzamora Cesar Augusto y Contreras López Leandro Saúl desarrollaron el Capítulo II con análisis competitivo frente a soluciones internacionales, entrevistas a personal operativo y gerencial, análisis por segmento, needfinding con personas, matriz de tareas, mapas de empatía, escenarios actuales y lenguaje ubicuo.
+3. Choy Robles Vanessa May Lang desarrolló el Capítulo III con escenarios futuros, historias de usuario por épicas, mapa de impacto y backlog priorizado, asegurando trazabilidad entre necesidades detectadas y funcionalidades propuestas.
+4. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo avanzaron el Capítulo IV con propósito de diseño, entradas de diseño guiado por atributos, drivers arquitectónicos, decisiones entre monolito modular y microservicios, refinamiento de escenarios, EventStorming, descubrimiento de contextos, flujos de mensajes, lienzos de contexto, mapa de contexto y diagramas de paisaje, contexto, contenedores y despliegue.
+5. El equipo configuró el control de versiones con ramas por capítulo, solicitudes de integración revisadas y registro de anexos con enlaces a organización, repositorio y carpeta compartida, asegurando revisión cruzada antes de la consolidación en la rama principal.
 
 ## Evidencia de colaboración en GitHub
 
+A continuación se presenta la evidencia de colaboración en GitHub correspondiente a la entrega TB1, con el historial de commits y la actividad del repositorio del informe:
+
+![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-av1.png)
 
 ---
 
@@ -171,15 +200,21 @@
     - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
   - [7.4. Video About-the-Product](#74-video-about-the-product)
 - [Conclusiones](#conclusiones)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-- [Video About-the-Team](#video-about-the-team)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  - [Video About-the-Team](#video-about-the-team)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
 
 # Student Outcome
 
+## ABET – EAC - Student Outcome 3
+
+Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3. 
+
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** |  |  |
-| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería..** |  |  |
+| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Logre ante el equipo el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Sinteticé la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Logre realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Dirigí entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustenté ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Conduje la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y expliqué al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia. | **TB1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa. |
+| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Redacté el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Redacté el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Documenté el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Documenté el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial. | **TB1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink. |
 
 # Capítulo I: Introducción
 
@@ -195,7 +230,7 @@ Nuestra propuesta de valor se centra en ElectroLink, un ecosistema inteligente q
 
 |   Código   |     Apellidos      |     Nombres     |                                                                                                                                                                         Perfil Académico y Profesional                                                                                                                                                                          | Perfil                                               |
 |:----------:|:------------------:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------------------------------------------------|
-| u202317450 |   Choy Robles    | Vanessa May Lang | Estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. | ![vanessa-choy.png](assets/cap1/vanessa-choy.png)         |
+| u202317450 |   Choy Robles    | Vanessa May Lang | Estudiante de Ingeniería de Software con experiencia en distintos lenguajes de programación, diseño UX/UI y trabajo bajo metodologías ágiles como Scrum. Aporto al equipo una visión orientada tanto a la funcionalidad como a la experiencia del usuario, contribuyendo en el desarrollo y mejora continua del producto. Me caracterizo por mi responsabilidad, cumplimiento de plazos y participación activa en el trabajo colaborativo. | ![vanessa-choy.png](assets-emergentes/vanessa-choy.jpg)         |
 | U20231A816 | Valverde Portuguez | Natalia Ximena  | Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Cuento con conocimientos de Marketing y estoy interesada en el UX Design y base de datos con sql. Experiencia en trabajos de creación de startups en el ámbito laboral, lo que fortalece mis capacidades tanto en trabajos grupales e individuales para las bases de un proyecto. | ![natalia-valverde.png](assets/cap1/natalia-valverde.png) |  
 | U20231E215 | Contreras López | Leandro Saúl | Mucho gusto, soy Leandro Contreras, estudiante de la carrera de Ingeniería de Software en la UPC, sede San Miguel. Tengo 20 años y estoy cursando el séptimo ciclo académico. Me considero una persona adaptativa, perseverante y comprometida con lo que me propongo. En este proyecto tengo como objetivo buscar múltiples soluciones que beneficien a todo el grupo. Por experiencia propia, suelo trabajar de manera colaborativa y eficaz. Al terminar la carrera de ingeniería, me gustaría estudiar una segunda carrera: Gastronomía y Gestión Culinaria. | ![widdsito.png](assets-emergentes/leandro.png) |
 | U20231C368 | Machado Bracamonte | Ivo Marcelo | Mi nombre es Ivo Machado, tengo 19 años y soy estudiante del sexto ciclo de Ingeniería de Software en la UPC. Me caracterizo por mi mentalidad resiliente, ya que no me rindo con facilidad y no le tengo miedo al error. Tengo empatía con los demás, disfruto resolver problemas y busco mejorar constantemente en lo que hago. Poseo conocimientos en lenguajes de programación como C++, Java y Python, así como en HTML, CSS y JavaScript. Además, domino el inglés y tengo conocimientos de portugués y alemán. | ![ivo.png](assets-emergentes/ivo.png) |
@@ -1551,7 +1586,48 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 # Conclusiones
 
-# Conclusiones y recomendaciones
+## Conclusiones y recomendaciones
 
-# Video About-the-Team
+- Las entrevistas evidencian que la operación actual en cocina es reactiva y sin visibilidad del estado eléctrico, por lo que el monitoreo continuo con señalización simple responde a un riesgo real para la seguridad del personal y la continuidad de la venta. Se recomienda ejecutar un piloto controlado en uno o dos locales para validar la precisión de los sensores en condiciones de calor, grasa y humedad antes de comprometer metas de ahorro o de reducción de incidentes.
 
+- El análisis competitivo confirma que el valor diferencial de ElectroLink está en la prevención de accidentes y en la generación de evidencia para fiscalización, más que en la sola medición de consumo, lo cual da sustento a lo definido en historias, backlog y arquitectura. Se recomienda priorizar en la implementación las funciones de historial por equipo, facturación formal y reporte para fiscalización, pues son las que justifican el pago de la suscripción ante la gerencia regional.
+
+- El diseño estratégico logrado en la entrega AV1, con arquitectura de monolito modular, ingesta IoT y alertas tempranas, deja una base viable y escalable para avanzar hacia la implementación sin necesidad de un rediseño mayor. Se recomienda incorporar desde el inicio el almacenamiento local y la sincronización posterior de telemetría, para mantener la alerta local activa aun con pérdida de conectividad y evitar vacíos de información.
+
+- El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
+
+## Video About-the-Team
+
+# Bibliografía
+
+Collyns, D. (2019, 17 de diciembre). Every McDonald's in Peru closes amid protests at death of two workers. *The Guardian*. https://www.theguardian.com/global-development/2019/dec/18/every-mcdonalds-peru-closes-amid-protests-at-death-of-two-workers
+
+Deutsche Welle. (2019, 22 de diciembre). *Perú: máquina de bebidas causó muerte de empleados en McDonald’s*. https://www.dw.com/es/per%C3%BA-m%C3%A1quina-de-bebidas-caus%C3%B3-muerte-de-empleados-en-mcdonalds/a-51771494
+
+Fowks, J. (2019, 18 de diciembre). La muerte de dos empleados de McDonald’s indigna a Perú. *El País*. https://elpais.com/internacional/2019/12/18/america/1576627016_774946.html
+
+Jiangsu Acrel Electrical Manufacturing Co., Ltd. (2024, 10 de octubre). *IOT power online management cloud platform*. https://www.acrel.qa/solution/iot-power-online-management-cloud-platform
+
+Ley 29783. (2011). *Ley de seguridad y salud en el trabajo*. Congreso de la República del Perú. https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/462576-29783
+
+MachineQ. (s. f.). *Foodservice: IoT-enabled power monitoring*. https://www.machineq.com/foodservices-solutions/power-monitoring
+
+Organismo Supervisor de la Inversión en Energía y Minería. (s. f.). *Organismo Supervisor de la Inversión en Energía y Minería*. Recuperado el 20 de septiembre de 2026, de https://www.osinergmin.gob.pe/SitePages/default.aspx
+
+Powerhouse Dynamics. (s. f.). *Open Kitchen: Optimize operations for multi-site food service and retail facilities*. https://powerhousedynamics.com/
+
+Resolución de Consejo Directivo 228-2009-OS-CD. (2009). *Procedimiento para la supervisión de las instalaciones de distribución eléctrica por seguridad pública*. Organismo Supervisor de la Inversión en Energía y Minería. https://www.osinergmin.gob.pe/seccion/centro_documental/PlantillaMarcoLegalBusqueda/Osinergmin-228-2009-OS-CD.pdf
+
+Superintendencia Nacional de Fiscalización Laboral. (2024, 2 de junio). *Más de 2,800 inspecciones de accidentes de trabajo realizó la Sunafil entre el 2023 y 2024*. Plataforma del Estado Peruano. https://www.gob.pe/institucion/sunafil/noticias/964567-mas-de-2-800-inspecciones-de-accidentes-de-trabajo-realizo-la-sunafil-entre-el-2023-y-2024
+
+Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del consumidor en el sector eléctrico peruano: una perspectiva preventiva* (Documento de Trabajo N.º 26). Organismo Supervisor de la Inversión en Energía y Minería. https://revistas.indecopi.gob.pe/index.php/rcpi/article/view/106
+
+# Anexos
+
+- Link del la organización del equipo: [https://github.com/Hampcoders-Emergentes](https://github.com/Hampcoders-Emergentes)
+
+- Link del repositorio del reporte: [https://github.com/Hampcoders-Emergentes/project-documento](https://github.com/Hampcoders-Emergentes/project-documento)
+
+- Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
+
+- Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
