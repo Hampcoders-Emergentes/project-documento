@@ -1584,9 +1584,41 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 # Conclusiones
 
-# Conclusiones y recomendaciones
+## Conclusiones y recomendaciones
 
-# Video About-the-Team
+- Las entrevistas evidencian que la operación actual en cocina es reactiva y sin visibilidad del estado eléctrico, por lo que el monitoreo continuo con señalización simple responde a un riesgo real para la seguridad del personal y la continuidad de la venta. Se recomienda ejecutar un piloto controlado en uno o dos locales para validar la precisión de los sensores en condiciones de calor, grasa y humedad antes de comprometer metas de ahorro o de reducción de incidentes.
+
+- El análisis competitivo confirma que el valor diferencial de ElectroLink está en la prevención de accidentes y en la generación de evidencia para fiscalización, más que en la sola medición de consumo, lo cual da sustento a lo definido en historias, backlog y arquitectura. Se recomienda priorizar en la implementación las funciones de historial por equipo, facturación formal y reporte para fiscalización, pues son las que justifican el pago de la suscripción ante la gerencia regional.
+
+- El diseño estratégico logrado en la entrega AV1, con arquitectura de monolito modular, ingesta IoT y alertas tempranas, deja una base viable y escalable para avanzar hacia la implementación sin necesidad de un rediseño mayor. Se recomienda incorporar desde el inicio el almacenamiento local y la sincronización posterior de telemetría, para mantener la alerta local activa aun con pérdida de conectividad y evitar vacíos de información.
+
+- El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
+
+## Video About-the-Team
+
+# Bibliografía
+
+Collyns, D. (2019, 17 de diciembre). Every McDonald's in Peru closes amid protests at death of two workers. *The Guardian*. https://www.theguardian.com/global-development/2019/dec/18/every-mcdonalds-peru-closes-amid-protests-at-death-of-two-workers
+
+Deutsche Welle. (2019, 22 de diciembre). *Perú: máquina de bebidas causó muerte de empleados en McDonald’s*. https://www.dw.com/es/per%C3%BA-m%C3%A1quina-de-bebidas-caus%C3%B3-muerte-de-empleados-en-mcdonalds/a-51771494
+
+Fowks, J. (2019, 18 de diciembre). La muerte de dos empleados de McDonald’s indigna a Perú. *El País*. https://elpais.com/internacional/2019/12/18/america/1576627016_774946.html
+
+Jiangsu Acrel Electrical Manufacturing Co., Ltd. (2024, 10 de octubre). *IOT power online management cloud platform*. https://www.acrel.qa/solution/iot-power-online-management-cloud-platform
+
+Ley 29783. (2011). *Ley de seguridad y salud en el trabajo*. Congreso de la República del Perú. https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/462576-29783
+
+MachineQ. (s. f.). *Foodservice: IoT-enabled power monitoring*. https://www.machineq.com/foodservices-solutions/power-monitoring
+
+Organismo Supervisor de la Inversión en Energía y Minería. (s. f.). *Organismo Supervisor de la Inversión en Energía y Minería*. Recuperado el 20 de septiembre de 2026, de https://www.osinergmin.gob.pe/SitePages/default.aspx
+
+Powerhouse Dynamics. (s. f.). *Open Kitchen: Optimize operations for multi-site food service and retail facilities*. https://powerhousedynamics.com/
+
+Resolución de Consejo Directivo 228-2009-OS-CD. (2009). *Procedimiento para la supervisión de las instalaciones de distribución eléctrica por seguridad pública*. Organismo Supervisor de la Inversión en Energía y Minería. https://www.osinergmin.gob.pe/seccion/centro_documental/PlantillaMarcoLegalBusqueda/Osinergmin-228-2009-OS-CD.pdf
+
+Superintendencia Nacional de Fiscalización Laboral. (2024, 2 de junio). *Más de 2,800 inspecciones de accidentes de trabajo realizó la Sunafil entre el 2023 y 2024*. Plataforma del Estado Peruano. https://www.gob.pe/institucion/sunafil/noticias/964567-mas-de-2-800-inspecciones-de-accidentes-de-trabajo-realizo-la-sunafil-entre-el-2023-y-2024
+
+Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del consumidor en el sector eléctrico peruano: una perspectiva preventiva* (Documento de Trabajo N.º 26). Organismo Supervisor de la Inversión en Energía y Minería. https://www.osinergmin.gob.pe/seccion/centro_documental/Institucional/Estudios_Economicos/Documentos_de_Trabajo/Documento_de_Trabajo_26.pdf
 
 # Anexos
 
@@ -1596,4 +1628,4 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 - Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
 
-- Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=5rh22F>
+- Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
