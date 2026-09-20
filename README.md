@@ -1303,6 +1303,34 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.3. Domain Message Flows Modeling
 
+El Domain Message Flow Modeling es una técnica visual utilizada en la metodología de Domain-Driven Design (DDD) para diagramar y documentar cómo los comandos, eventos y mensajes transitan entre los actores y los Bounded Contexts dentro de una arquitectura de software. Su objetivo es mapear las interacciones clave entre los componentes del sistema para entender cómo un suceso específico desencadena una reacción en cadena a través de diferentes partes del dominio.
+
+#### Scenario 1: Detección Automática y Alerta de Fuga a Tierra o Sobrecalentamiento
+Cuando un sensor IoT detecta un umbral crítico de temperatura o corriente, el contexto de monitoreo emite un evento de anomalía. Esta alerta acciona inmediatamente el semáforo rojo en la cocina para proteger al operario y envía una notificación de emergencia al teléfono del administrador a través de Firebase, garantizando una respuesta rápida.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow.png)
+
+#### Scenario 2: Reporte Rápido Operativo y Asignación Técnica
+Un operario reporta rápidamente una falla desde el panel local, generando un evento en el sistema. El contexto de diseño y planificación recibe la alerta, evalúa el inventario de técnicos disponibles y permite al administrador asignar la tarea. Finalmente, se notifica al técnico seleccionado mediante SMS o Push para su intervención.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow2.png)
+
+#### Scenario 3:Verificación de Apagado Seguro para Limpieza
+Antes de limpiar, el personal solicita verificar el aislamiento de energía. El sistema consulta directamente la telemetría de los sensores IoT para confirmar la ausencia de voltaje o amperaje. Al certificarse la desenergización, la pantalla local cambia a luz verde, indicando que el área es totalmente segura para trapear sin riesgo de electrocución.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow3.png)
+
+#### Scenario 4: Sincronización de Telemetría Tras Caída de Conexión
+Ante un corte de Internet, el Edge Node local almacena la telemetría para evitar pérdida de datos. Una vez restaurada la conexión, se activa una política que sincroniza masivamente la información retenida hacia la nube de Azure. Esto actualiza los consumos históricos y las métricas del dashboard administrativo de forma transparente.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow4.png)
+
+#### Scenario 5: Renovación de Suscripción SaaS del Local
+Al cumplirse la fecha de corte, el sistema emite automáticamente un cobro mediante la pasarela Stripe. Tras recibir la confirmación exitosa del pago vía webhook, se genera un evento de dominio que instruye a los módulos de identidad y perfiles a renovar las credenciales, asegurando que el local mantenga su acceso ininterrumpido a la plataforma.
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow5.png)
+
+#### Scenario 6: Generación de Evidencia Normativa (SST)
+El administrador solicita un reporte de cumplimiento para auditorías oficiales como SUNAFIL. El módulo analítico orquesta la recopilación de telemetría de sensores, el historial de reparaciones y la firma digital del usuario. Finalmente, consolida estos datos para generar y entregar un documento PDF inmutable que certifica la seguridad y operatividad del local
+![](assets/cap4/domain-diagram-flows-modeling/IoT%20Monitoring%20Command%20Flow6.png)
+
+---
+
 ### 4.2.4. Bounded Context Canvases
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
