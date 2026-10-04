@@ -998,6 +998,8 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 
 ## 3.2. User Stories
 
+### Epics
+
 | Epic ID | Título | Descripción |
 | --- | --- | --- |
 | **EP01** | **Presentación y Acceso mediante Landing Page** | Módulo orientado a presentar la propuesta de valor de ElectroLink a visitantes y dirigir hacia la aplicación web. |
@@ -1008,6 +1010,8 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 | **EP06** | **Configuración de Perfiles y Control de Acceso** | Módulo administrativo para la personalización de usuarios y acceso a datos del local. |
 
 ---
+
+#### User Stories
 
 | ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
 | --- | --- | --- | --- | --- |
@@ -1055,6 +1059,8 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 | **US42** | Activación de pausa temporal de interacción del panel | Como Trabajador del Local, desea activar la pausa temporal de interacción del panel, para asear el equipo sin generar acciones involuntarias. | Scenario 1: Activación exitosa de pausa<br>**Given** el trabajador inicia el aseo del panel<br>**When** activa la pausa temporal de interacción<br>**Then** el panel conserva la señal de riesgo visible e ignora interacciones durante el periodo definido<br><br>Scenario 2: Alerta crítica durante la pausa<br>**Given** la pausa temporal se encuentra activa<br>**When** el sensor registra una fuga crítica<br>**Then** el sistema interrumpe la pausa y emite el aviso sonoro con la indicación de alejamiento<br><br>Scenario 3: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador activa la pausa temporal<br>**Then** el sistema aplica la pausa local y registra el evento para sincronización posterior | EP02 |
 
 ---
+
+### Technical Stories
 
 | ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
 | --- | --- | --- | --- | --- |
