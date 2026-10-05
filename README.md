@@ -1561,27 +1561,193 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 # Capítulo VI: Solution UX Design
 
+En este capítulo se presentan los lineamientos de diseño de experiencia de usuario y la arquitectura de información que guiarán la implementación de la solución ElectroLink. Se detallan las pautas de estilo, la estructura de navegación, los flujos de interacción y los prototipos visuales que aseguran una experiencia coherente, intuitiva y alineada con los objetivos del proyecto.
+
 ## 6.1. Style Guidelines
+
+El sistema de diseño de ElectroLink adopta una identidad visual basada en la paleta general unificada, orientada a conferir un acabado sobrio, tecnológico y de precisión industrial para entornos críticos de monitoreo IoT y automatización RPA. La paleta es única para los tres productos: landing page, web application y mobile application.
 
 ### 6.1.1. General Style Guidelines
 
+**Branding**
+
+El logo de ElectroLink representa el mensaje que nosotros queremos dar con nuestra startup que es una búsqueda de seguridad eléctrica y continuidad operativa en cadenas de comida rápida. El logo se compone de un rayo estilizado integrado a un nodo de conexión, utilizado para referenciar la telemetría en tiempo real de tableros y equipos de cocina. Asimismo, se incorpora el nombre en tipografía geométrica, con esto queremos dar a entender que los locales monitoreados gracias al servicio de ElectroLink serán supervisados con precisión preventiva y respuesta inmediata ante fugas o sobrecargas. Los colores azul principal y cian que hemos elegido para nuestro proyecto transmiten una sensación de estar en un servicio industrial confiable, sobrio y eficaz.
+
+**Variantes del Logo**
+
+#### Logo
+
+<img src="assets/cap6/logo/electrolink-logo.svg" width="200" height="100">
+
+**Typography**
+
+Nuestra tipografía Exo 2 proyecta una imagen de profesionalidad y confianza que se alinea con la misión de ElectroLink. Con su estilo moderno y geométrico, transmite una sensación de tecnología e innovación, mostrando que estamos al día con las últimas herramientas del mundo IoT industrial. Además, su claridad y legibilidad refuerzan la transparencia de nuestro servicio. Utilizaremos Exo 2 en sus variantes más gruesas para títulos, métricas de telemetría y llamadas a la acción, aportando un dinamismo que capta la atención. Para el cuerpo del texto, optaremos por un estilo más ligero, garantizando que toda la información sea fácil de leer, lo que contribuye a una experiencia de usuario que se percibe como limpia, ordenada y fiable. Todo esto se ve reforzado con los colores azul y cian que impulsan y agilizan la lectura dentro de la página web. Todas las visualizaciones numéricas de corriente, tensión y costos en soles configuran `font-feature-settings: "tnum" 1` para evitar oscilaciones cuando los datos IoT varían en tiempo real.
+
+| Jerarquía | Peso | Tamaño / Interlineado |
+| :--- | :--- | :--- |
+| Hero Display / Alerta Crítica | Exo 2 Bold (700) | 40px (Line-height: 48px) |
+| Métrica Principal IoT / KPIs | Exo 2 Bold (700) | 32px (Line-height: 38px, tnum) |
+| Heading 1 (Vistas Principales) | Exo 2 Bold (700) | 28px (Line-height: 36px) |
+| Heading 2 (Títulos de Tarjeta) | Exo 2 SemiBold (600) | 20px (Line-height: 28px) |
+| Controles / Botones / Tabs | Exo 2 Medium (500) | 16px (Line-height: 24px) |
+| Cuerpo de Texto (Body) | Exo 2 Regular (400) | 16px (Line-height: 24px) |
+| Metadatos, Badges y Leyendas | Exo 2 Regular (400) | 13px (Line-height: 18px) |
+
+**Colors**
+
+La paleta de colores elegida para la web de ElectroLink fue diseñada para transmitir un mensaje dirigido a los consumidores. El azul principal se asocia con la seguridad, la profesionalidad y la fiabilidad, convirtiéndose en el color principal de la marca. El azul oscuro tiene la función de reforzar estados hover y fondos de secciones oscuras. El cian actúa como acento de conectividad IoT y visualización de datos. El azul noche y el fondo claro transmiten sobriedad industrial, limpieza y frescura, con estos colores nuestra página es más ligera a la hora de navegar en ella. El semáforo funcional (verde, ámbar, rojo) refuerza la seguridad eléctrica y la criticidad, mientras que el gris pizarra aporta equilibrio para sensores desconectados.
+
+#### Estilos
+
+![Paleta de colores](assets/cap6/style-guidelines/palette.png)
+
+**Paleta general unificada**
+| Color | Código HEX | Uso general |
+| :--- | :--- | :--- |
+| Azul principal | `#1D4ED8` | Color principal de marca: botones, enlaces, navegación activa, foco, iconos destacados y elementos clave de la landing |
+| Azul oscuro | `#1E40AF` | Hover/pressed de controles primarios, fondos de secciones oscuras y detalles de marca |
+| Cian | `#0891B2` | Conectividad IoT, visualizaciones de datos, ilustraciones técnicas y detalles secundarios |
+| Azul noche | `#0B2239` | Hero y footer de la landing, sidebar, top bar y modo oscuro en pantallas operativas |
+| Fondo claro | `#F8FAFC` | Fondo general de la web app y la app móvil; secciones claras de la landing |
+| Blanco | `#FFFFFF` | Cards, inputs, modales, tablas y contenedores elevados |
+| Tinta | `#172033` | Títulos, métricas, texto principal y contenido de alta prioridad |
+| Gris pizarra | `#475569` | Descripciones, labels, metadata y texto auxiliar |
+| Gris borde | `#CBD5E1` | Bordes, separadores, estados inactivos y estructura visual de formularios |
+| Verde seguro | `#15803D` | Operación completada, dispositivo saludable, conexión confirmada y condición eléctrica segura |
+| Ámbar alerta | `#B45309` | Mantenimiento requerido, consumo elevado, advertencia operativa o acción pendiente |
+| Rojo peligro | `#B91C1C` | Alerta crítica, riesgo eléctrico, fuga detectada y apagado de emergencia |
+| Gris offline | `#64748B` | Sensor desconectado, ausencia de telemetría o dispositivo no disponible |
+
+**Aplicación por producto**
+| Producto | Predominio visual | Uso de color |
+| :--- | :--- | :--- |
+| Landing page | Azul noche, azul principal, cian y superficies claras | Hero oscuro, acentos cian en diagramas de la integración IoT y RPA, secciones alternadas claras y oscuras |
+| Web application | Fondo claro, blanco, tinta y gris borde | Interfaz clara orientada a dashboards, tablas, formularios, gestión y análisis operativo |
+| Mobile application | Fondo claro, blanco, azul principal y estados semánticos | Flujos simples, acciones táctiles claras, tarjetas ligeras y alertas visibles pero no invasivas |
+
+**Reglas de consistencia**
+- El azul principal representa la acción principal; no lo reutilices para alertas ni estados de seguridad.
+- El cian representa información técnica o conectividad, no una condición segura.
+- El verde seguro, el ámbar alerta, el rojo peligro y el gris offline deben aparecer con icono y etiqueta de texto, no dependas solo del color. WCAG indica que el color no debe ser el único medio para comunicar información o estados.
+- Reserva el rojo peligro únicamente para riesgo eléctrico real. Para un error normal de formulario o autenticación, muestra una descripción textual y un borde/estado visual no asociado a emergencias.
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+Respecto al estilo de la estructura de la web, se ha empleado el patrón Persistent Navigation, con una barra lateral (Sidebar) en azul noche mediante la cual el usuario podrá tener acceso a las secciones principales sin perderse en el flujo y con la posibilidad de volver. Con este patrón se puede cumplir la heurística de visibilidad del estado del sistema donde el menú de navegación resaltará la sección activa con barra de 3px en azul principal y fondo azul suave en todo momento.
+El patrón de diseño Card Layout es visible en el dashboard y landing, este se encarga de organizar telemetría, consumos y planes en bloques con fondo blanco y borde sutil en gris borde.
+En la web de ElectroLink se puede visualizar el uso de la heurística de brindar retroalimentación al usuario mediante badges de estado con icono, texto y barras de progreso RPA que permiten rastrear si un proceso de mantenimiento preventivo está en curso o finalizado. Los acentos cian se reservan para conectividad y datos, no para estados seguros.
+En cuanto a los botones, destaca el patrón Primary Call to Action en azul principal con hover en azul oscuro, con el que se permite destacar lo importante mediante un contraste mínimo 4.5:1 y se guía al usuario hacia acciones críticas. En cocina se aplica jerarquía de un solo toque con áreas táctiles amplias y pausa táctil de limpieza de 30 segundos que se interrumpe ante fuga mayor a 30 mA con fondo en rojo peligro y alerta sonora. El rojo peligro se reserva solo para riesgo eléctrico real.
 
 ## 6.2. Information Architecture
 
+En esta sección se detallará parte importante de la estructura y etiquetado del aplicativo.
+
 ### 6.2.2. Labeling Systems
+
+| Sección | Etiqueta | Descripción |
+| :--- | :--- | :--- |
+| Menú principal | Monitoreo en tiempo real | Apartado que muestra el estado eléctrico de tableros y equipos por local. Este se mostrará tanto para el Manager del Local como para el Trabajador del Local en vista simplificada |
+|  | Alertas | Muestra fugas a tierra, sobrecargas y desviaciones térmicas con severidad y protocolo de acción |
+|  | Consumos | Visualiza kWh por máquina, costos en soles y desvíos sobre la meta presupuestada |
+|  | Mantenimiento | Contiene órdenes preventivas derivadas por RPA y su estado de atención |
+| Perfil | Editar perfil | Botón que permitirá que el usuario pueda cambiar información de su perfil |
+| Locales | Agregar local | Permite que un Manager con más de un local los pueda registrar según sus necesidades |
+| Equipos | Registrar equipo | El Manager deberá registrar freidoras, hornos y congeladores para asociarles sensores |
+|  | Verificar seguridad | Es un apartado diseñado para que el Trabajador pueda verificar si un equipo es apto para contacto o limpieza |
+| Historial | Historial de eventos | Contiene información relevante sobre alertas, consumos y mantenimientos ya atendidos |
+| Reportes | Reporte SST | Muestra el reporte descargable para fiscalizaciones SUNAFIL, INDECI y OSINERGMIN |
+| Configuración | Cambiar contraseña | Se le brinda a ambos tipos de usuario la posibilidad de cambiar las contraseñas que correspondan a la cuenta |
+|  | Suscripción | Muestra el plan de suscripción SaaS adquirido por local monitoreado |
+|  | Modo limpieza | Permite que el Trabajador pueda activar la pausa táctil de 30 segundos para aseo de pantalla |
 
 ### 6.2.3. Searching Systems
 
+ElectroLink cuenta con un sistema de búsqueda que permite al usuario poder encontrar locales, equipos y eventos que sean más críticos para su operación, esto a través de múltiples filtros:
+
+| Filtros | Descripción |
+| :--- | :--- |
+| Sede / Local | Filtro geográfico que ayuda a encontrar los locales monitoreados en Lima Metropolitana. |
+| Equipo | Filtra por freidoras, hornos, congeladores o tableros según el activo registrado. |
+| Estado | Filtra por seguro, preventivo, peligro u offline según el semáforo funcional. |
+| Severidad | Filtro que muestra eventos críticos o preventivos según prioridad. |
+| Rango de fechas | Filtra el historial de telemetría y eventos para auditoría y análisis de consumo. |
+
 ### 6.2.4. SEO Tags and Meta Tags
+
+**Landing Page Title:** ElectroLink
+
+**Description:** ElectroLink es una startup que se especializa en el desarrollo de soluciones IoT para monitoreo eléctrico. Con ElectroLink, facilitamos la prevención de accidentes por fugas a tierra y la optimización del consumo energético en cadenas de comida rápida, lo que facilita la conexión entre sensores en cocina y decisiones gerenciales.
+
+**Meta Keywords:** Monitoreo eléctrico IoT, seguridad eléctrica cocina, fuga a tierra, eficiencia energética restaurantes, mantenimiento preventivo.
+
+**Meta Author:** HampCoders
+
+**Meta Description:** Prevenir accidentes laborales y optimizar el consumo energético con telemetría en tiempo real, alertas locales y dashboard multisede.
+
+**Title:** ElectroLink
+
+**Description:** ElectroLink, la plataforma de HampCoders, conecta tableros y equipos de cocina con alertas inmediatas y analítica centralizada, ofreciendo seguridad operativa y cumplimiento normativo con una experiencia moderna, clara y eficiente.
+
+**Meta Author:** HampCoders
 
 ### 6.2.5. Navigation Systems
 
+Los sistemas de navegación de ElectroLink han sido diseñados para poder guiar de forma intuitiva a los usuarios a través de la Landing Page y dentro de la aplicación, facilitando la exploración del contenido y el acceso a las distintas funcionalidades que la aplicación ofrece. ElectroLink sigue una estructura lógica clara que permite al usuario encontrar rápidamente lo que necesita mediante menús jerárquicos, enlaces destacados y botones de acción visibles para el usuario.
+
+| Icono | Funcionalidad |
+| :--- | :--- |
+| <img src="assets/cap6/icons/home.svg"> | Este ícono permite que el usuario pueda dirigirse a la pantalla inicial que brinda información vital sobre el funcionamiento de ElectroLink. |
+| <img src="assets/cap6/icons/chart-bar.svg"> | Este ícono, que pertenece al Manager del Local, permite visualizar el estado multisede de tableros y equipos. |
+| <img src="assets/cap6/icons/alert-triangle.svg"> | Este ícono permite visualizar fugas, sobrecargas y su protocolo de parada segura. |
+| <img src="assets/cap6/icons/search.svg"> | Este ícono permite buscar un equipo y verificar si es apto para contacto o limpieza. |
+| <img src="assets/cap6/icons/history.svg"> | Este ícono dirige al usuario al apartado de Historial, donde podrá visualizar eventos y mantenimientos anteriores. |
+| <img src="assets/cap6/icons/tool.svg"> | Permite visualizar las órdenes preventivas derivadas por RPA dentro del local. |
+| <img src="assets/cap6/icons/report-analytics.svg"> | Permite gestionar y descargar evidencias para fiscalización SST. |
+| <img src="assets/cap6/icons/user.svg"> | Permite al usuario visualizar el perfil con el que se ha registrado, brindando información pertinente como nombres, sede, rol, etc. |
+
 ## 6.3. Landing Page UI Design
+
+A continuación se mostrarán los diseños realizados en Figma para la creación de la landing page de ElectroLink.
 
 ### 6.3.1. Landing Page Wireframe
 
+![Landing Page Wireframe 1](assets/cap6/wireframes/landing/landing-wireframe-1.png)
+
+![Landing Page Wireframe 2](assets/cap6/wireframes/landing/landing-wireframe-2.png)
+
+![Landing Page Wireframe 3](assets/cap6/wireframes/landing/landing-wireframe-3.png)
+
+![Landing Page Wireframe 4](assets/cap6/wireframes/landing/landing-wireframe-4.png)
+
+![Landing Page Wireframe 5](assets/cap6/wireframes/landing/landing-wireframe-5.png)
+
+![Landing Page Wireframe 6](assets/cap6/wireframes/landing/landing-wireframe-6.png)
+
+![Landing Page Wireframe 7](assets/cap6/wireframes/landing/landing-wireframe-7.png)
+
+![Landing Page Wireframe 8](assets/cap6/wireframes/landing/landing-wireframe-8.png)
+
+![Landing Page Wireframe 9](assets/cap6/wireframes/landing/landing-wireframe-9.png)
+
 ### 6.3.2. Landing Page Mock-up
+
+![Landing Page Mock-up 1](assets/cap6/mockups/landing/landing-mockup-1.png)
+
+![Landing Page Mock-up 2](assets/cap6/mockups/landing/landing-mockup-2.png)
+
+![Landing Page Mock-up 3](assets/cap6/mockups/landing/landing-mockup-3.png)
+
+![Landing Page Mock-up 4](assets/cap6/mockups/landing/landing-mockup-4.png)
+
+![Landing Page Mock-up 5](assets/cap6/mockups/landing/landing-mockup-5.png)
+
+![Landing Page Mock-up 6](assets/cap6/mockups/landing/landing-mockup-6.png)
+
+![Landing Page Mock-up 7](assets/cap6/mockups/landing/landing-mockup-7.png)
+
+![Landing Page Mock-up 8](assets/cap6/mockups/landing/landing-mockup-8.png)
+
+![Landing Page Mock-up 9](assets/cap6/mockups/landing/landing-mockup-9.png)
 
 ## 6.4. Applications UX/UI Design
 
