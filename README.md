@@ -1729,6 +1729,10 @@ A continuación se mostrarán los diseños realizados en Figma para la creación
 
 ![Landing Page Wireframe 9](assets/cap6/wireframes/landing/landing-wireframe-9.png)
 
+Los wireframes muestran la estructura y disposición de los elementos en la landing page, incluyendo encabezados, secciones de contenido, botones de acción y áreas de navegación. Estos diseños preliminares sirven como guía para el desarrollo visual y funcional, asegurando que la experiencia del usuario sea coherente y efectiva.
+
+---
+
 ### 6.3.2. Landing Page Mock-up
 
 ![Landing Page Mock-up 1](assets/cap6/mockups/landing/landing-mockup-1.png)
@@ -1748,6 +1752,10 @@ A continuación se mostrarán los diseños realizados en Figma para la creación
 ![Landing Page Mock-up 8](assets/cap6/mockups/landing/landing-mockup-8.png)
 
 ![Landing Page Mock-up 9](assets/cap6/mockups/landing/landing-mockup-9.png)
+
+Con la acentuación de los colores azul principal y cian, los mock-ups presentan una interfaz visualmente atractiva y profesional, destacando la información crítica y facilitando la navegación intuitiva para los usuarios. La disposición de los elementos asegura que los usuarios puedan acceder rápidamente a las funcionalidades clave de ElectroLink, mientras que el diseño responsivo garantiza una experiencia consistente en diferentes dispositivos.
+
+---
 
 ## 6.4. Applications UX/UI Design
 
