@@ -1605,7 +1605,7 @@ La paleta de colores elegida para la web de ElectroLink fue diseñada para trans
 | Color | Código HEX | Uso general |
 | :--- | :--- | :--- |
 | Azul principal | `#1D4ED8` | Color principal de marca: botones, enlaces, navegación activa, foco, iconos destacados y elementos clave de la landing |
-| Azul oscuro | `#1E40AF` | Hover/pressed de controles primarios, fondos de secciones oscuras y detalles de marca |
+| Azul oscuro | `#1E40AF` | Hover de controles primarios, fondos de secciones oscuras y detalles de marca |
 | Cian | `#0891B2` | Conectividad IoT, visualizaciones de datos, ilustraciones técnicas y detalles secundarios |
 | Azul noche | `#0B2239` | Hero y footer de la landing, sidebar, top bar y modo oscuro en pantallas operativas |
 | Fondo claro | `#F8FAFC` | Fondo general de la web app y la app móvil; secciones claras de la landing |
