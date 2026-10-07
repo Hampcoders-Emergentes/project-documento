@@ -1957,8 +1957,327 @@ Estas decisiones deben permanecer fuera de la capa de presentación.
 | `RequestPasswordResetCommandFromRequestAssembler` | Assembler | Transforma la solicitud de recuperación en un command. | Interface |
 | `UserAccountResponseFromEntityAssembler` | Assembler | Construye la respuesta pública de una cuenta a partir del resultado interno. | Interface |
 
+### 5.1.3. Application Layer
 
-### 5.X.3. Application Layer
+La Application Layer del bounded context Identity & Access Management coordina los casos de uso relacionados con el registro, autenticación, asignación de roles, deshabilitación de cuentas y recuperación de acceso en ElectroLink.
+
+Su responsabilidad consiste en recibir las intenciones provenientes de la Interface Layer, recuperar o crear los objetos de dominio correspondientes, invocar las reglas definidas en `UserAccount` y los Domain Services, utilizar las abstracciones de persistencia y producir los resultados necesarios para la capa superior.
+
+Esta capa no contiene reglas propias del negocio. Por ejemplo, no determina directamente si una cuenta deshabilitada puede autenticarse ni implementa los algoritmos utilizados para proteger contraseñas. En su lugar, coordina los elementos definidos en la Domain Layer para ejecutar cada flujo.
+
+#### Commands
+Los **Commands** representan intenciones de modificar el estado del bounded context.
+
+**RegisterUserCommand**
+Representa la solicitud de creación de una nueva cuenta.
+```
+RegisterUserCommand
+- email
+- credential
+- role
+- authenticationType
+```
+
+Para una cuenta administrativa se utiliza principalmente correo y credencial. En el caso de trabajadores, el flujo debe considerar el mecanismo de acceso rápido mediante PIN requerido por US28.
+
+**AuthenticateUserCommand**
+Representa un intento de autenticación.
+```
+AuthenticateUserCommand
+- identifier
+- credential
+- authenticationType
+```
+
+**AsignRoleCommand**
+Representa la intención de asigna un rol a una cuenta existente.
+```
+AssignRoleCommand
+- userId
+- role
+```
+
+**DisableUserCommand**
+Representa la intención de impedar que una cuenta continúe accediento a ElectroLink.
+```
+DisableUserCommand
+- userId
+```
+
+#### Command Handlers
+
+Los Command Handlers implementan la coordinación de cada caso de uso. Siguen el mismo patrón observado en el ejemplo entregado: recuperan aggregates, invocan servicios, persisten cambios y coordinan dependencias externas sin incorporar reglas propias del dominio.
+
+**RegisterUserCommandHandler**
+`RegisterUserCommandHandler` coordina el registro de una nueva cuenta.
+Su flujo general es:
+```
+RegisterUserCommand
+        ↓
+Verificar duplicidad
+        ↓
+Proteger credencial
+        ↓
+Crear UserAccount
+        ↓
+Asignar Role
+        ↓
+Persistir UserAccount
+        ↓
+UserRegistered
+```
+
+El handler utiliza `IUserAccountRepository` para comprobar si ya existe una cuenta asociada al identificador recibido.
+
+Si los datos permiten continuar, utiliza `ICredentialHashingService` para proteger la credencial y crea el aggregate `UserAccount`. Finalmente lo persiste mediante `IUserAccountRepository`.
+
+Después de una creación satisfactoria se produce el evento `UserRegistered`, identificado explícitamente en el EventStorming.
+
+El EventStorming también establece la política “Create initial profile after user registration”, por lo que `UserRegistered` funciona como punto de integración para que Profiles & Preferences pueda crear posteriormente el perfil correspondiente. Identity & Access Management no crea ni administra dicho perfil.
+---
+**AuthenticateUserCommandHandler**
+`AuthenticateUserCommandHandler` coordina el acceso con un usuario.
+Su lfujo es:
+```
+AuthenticateUserCommand
+        ↓
+Buscar UserAccount
+        ↓
+Comprobar estado
+        ↓
+Verificar credencial
+        ↓
+Autorizar autenticación
+        ↓
+Generar credencial de acceso
+        ↓
+UserAuthenticated
+```
+
+El handler recupera la cuenta mediante `IUserAccountRepository`.
+
+Posteriormente delega la verificación de la credencial a `ICredentialHashingService` y utiliza las reglas del aggregate o de `IAccessPolicyService` para determinar si la cuenta puede autenticarse.
+
+Si la autenticación es satisfactoria, solicita a `IAuthenticationTokenService` la generación de la credencial de acceso requerida por la sesión.
+
+Finalmente, el proceso genera `UserAuthenticated`.
+---
+**AssignRoleCommandHandler**
+`AssignRoleCommandHandler` coordina la asignación de un rol a una cuenta registrada.
+El flujo es:
+```
+AssignRoleCommand
+        ↓
+Recuperar UserAccount
+        ↓
+Validar asignación
+        ↓
+UserAccount.assignRole()
+        ↓
+Persistir cambios
+        ↓
+RoleAssigned
+```
+
+El handler recupera el aggregate correspondiente mediante `IUserAccountRepository`.
+
+Posteriormente solicita al dominio validar la asignación mediante `IAccessPolicyService` y ejecuta `assignRole()` sobre `UserAccount`.
+
+Una vez persistido el nuevo estado se produce `RoleAssigned`, manteniendo correspondencia directa con el EventStorming.
+---
+**DisableUserCommandHandler**
+`DisableUserCommandHandler` implementa el caso de uso asociado a la deshabilitación de una cuenta.
+```
+DisableUserCommand
+        ↓
+Recuperar UserAccount
+        ↓
+Validar operación
+        ↓
+UserAccount.disable()
+        ↓
+Persistir cambios
+        ↓
+UserDisabled
+```
+
+El handler recupera la cuenta y delega al dominio la validación de la operación.
+
+Cuando la operación es válida ejecuta `disable()` sobre el aggregate y persiste su nuevo estado.
+
+Como resultado se genera el evento `UserDisabled`.
+
+A partir de este momento, posteriores intentos de autenticación deberán ser rechazados por las reglas de dominio asociadas al `AccountStatus`.
+---
+
+**RequestPasswordResetCommandHandler**
+Este handler coordina el inicio de la recuperación de contraseña requerida por US31.
+Su flujo es:
+
+```
+RequestPasswordResetCommand
+        ↓
+Buscar cuenta por Email
+        ↓
+Crear PasswordResetToken
+        ↓
+Persistir solicitud
+        ↓
+Solicitar entrega del mecanismo de recuperación
+```
+
+La historia de usuario establece que el Manager puede solicitar la restauración mediante su correo y recibir un enlace seguro con vigencia limitada.
+
+El Application Handler no envía directamente el correo ni implementa el proveedor de mensajería. Únicamente coordina el proceso. La implementación concreta de dicha integración corresponderá a Infrastructure Layer.
+---
+
+**ResetPasswordCommandHandler**
+`ResetPasswordCommandHandler` coordina la utilización de una solicitud previamente generada.
+
+```
+ResetPasswordCommand
+        ↓
+Recuperar PasswordResetToken
+        ↓
+Comprobar vigencia
+        ↓
+Recuperar UserAccount
+        ↓
+Proteger nueva credencial
+        ↓
+UserAccount.changeCredential()
+        ↓
+Persistir cambios
+        ↓
+Invalidar token
+```
+
+La validez del `PasswordResetToken` se comprueba utilizando las reglas definidas en la Domain Layer.
+
+Después de establecer correctamente la nueva credencial, el token queda invalidado para impedir su reutilización.
+---
+
+#### Queries
+A diferencia de los comandos, las **Queries** permiten consultar información del bounded context sin modificar el estado del dominio.
+
+Para el alcance actual se consideran dos consultas básicas.
+
+**GetUserAccountByIDQuery**
+```
+GetUserAccountByIdQuery
+- userId
+```
+Permite recuperar información básico de una cuenta registrada.
+
+**GetUserRoleQuery**
+```
+GetuserRoleIdQuery
+- userId
+```
+
+Permite conocer el rol actualmente asociado al usuario.
+
+No se incluye una consulta que devuelva credenciales, hashes, PIN ni tokens de recuperación debido a que dicha información no debe exponerse hacia las capas superiores.
+---
+
+#### Query Handlers
+**GetUserAccountByIdQueryHandler** 
+consulta `IUserAccountRepository`, recupera la cuenta mediante su identificador y devuelve únicamente la información necesaria para construir un `UserAccountResponse`.
+
+**GetUserRoleQueryHandler** recupera el usuario y retorna su `UserRole`, permitiendo que otras capacidades determinen la clasificación general de la cuenta sin acceder directamente al modelo persistente.
+
+La separación entre commands y queries mantiene coherencia con el enfoque empleado en el ejemplo del ciclo anterior, donde las operaciones que modifican estado se gestionan mediante Command Handlers y las lecturas se realizan mediante Query Handlers.
+---
+
+#### Event Handling
+Los eventos indetificados dentro de este bounded context son:
+```
+UserRegistered
+UserAuthenticated
+RoleAssigned
+UserDisabled
+```
+
+En particular, **UserRegistered** tiene relevancia fuera del propio contexto. El Event Storming establece que después del registro debe crearse el perfil inicial del usuario.
+
+El flujo entre contextos queda conceptualmente de esta manera:
+```
+Identity & Access Management
+        ↓
+UserRegistered
+        ↓
+Profiles & Preferences
+        ↓
+CreateProfile
+        ↓
+ProfileCreated
+```
+El IAM únicamente publica la ocurrencia de `UserRegistered`. La reacción que crea el perfil debe pertenecer al bounded context Profiles & Preferences, evitando que IAM asuma una responsabilidad ajena a su dominio.
+
+Por esta razón, dentro de este contexto se propone:
+
+**UserRegisteredEventPublisher**
+Responsable de solicitar la publicación del evento generado después de registrar correctamente una cuenta.
+
+La implementación técnica del mecanismo de mensajería no pertenece a Application Layer y será tratada en Infrastructure Layer.
+
+No conviene crear aquí un `CreateProfileEventHandler` porque eso trasladaría a IAM una responsabilidad que en el Event Storming pertenece a otro bounded context.
+---
+
+#### Flujo completo de autenticación
+
+La interacción entre las capas para el escenario de US30 se puede representar de esta manera:
+```
+Manager
+   ↓
+AuthenticationController
+   ↓
+AuthenticateUserRequest
+   ↓
+AuthenticateUserCommand
+   ↓
+AuthenticateUserCommandHandler
+   ↓
+IUserAccountRepository
+   ↓
+UserAccount
+   ↓
+ICredentialHashingService
+   ↓
+IAccessPolicyService
+   ↓
+IAuthenticationTokenService
+   ↓
+AuthenticationResponse
+```
+
+La Application Layer actúa como orquestador del flujo, mientras que:
+- Interface recibe y devuelve información.
+- Domain decide las reglas.
+- Infrastructure implementa persistencia y servicios tecnológicos.
+
+---
+#### Clases de la Aplication Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterUserCommand` | Command | Contiene los datos necesarios para registrar una cuenta. | Application |
+| `AuthenticateUserCommand` | Command | Representa un intento de autenticación. | Application |
+| `AssignRoleCommand` | Command | Solicita asignar un rol a una cuenta. | Application |
+| `DisableUserCommand` | Command | Solicita deshabilitar una cuenta. | Application |
+| `RequestPasswordResetCommand` | Command | Inicia la recuperación de contraseña requerida por US31. | Application |
+| `ResetPasswordCommand` | Command | Solicita establecer una nueva credencial mediante una recuperación válida. | Application |
+| `RegisterUserCommandHandler` | Command Handler | Valida duplicidad, crea y persiste `UserAccount`. | Application |
+| `AuthenticateUserCommandHandler` | Command Handler | Coordina la validación de identidad y generación del acceso. | Application |
+| `AssignRoleCommandHandler` | Command Handler | Recupera una cuenta, asigna el rol y persiste el cambio. | Application |
+| `DisableUserCommandHandler` | Command Handler | Deshabilita una cuenta y persiste el nuevo estado. | Application |
+| `RequestPasswordResetCommandHandler` | Command Handler | Coordina el inicio de la recuperación de acceso. | Application |
+| `ResetPasswordCommandHandler` | Command Handler | Coordina el establecimiento de una nueva credencial. | Application |
+| `GetUserAccountByIdQuery` | Query | Solicita información básica de una cuenta. | Application |
+| `GetUserRoleQuery` | Query | Solicita el rol de una cuenta. | Application |
+| `GetUserAccountByIdQueryHandler` | Query Handler | Recupera la información de una cuenta sin modificarla. | Application |
+| `GetUserRoleQueryHandler` | Query Handler | Recupera el rol asociado a una cuenta. | Application |
+| `UserRegisteredEventPublisher` | Event Publisher | Coordina la publicación de `UserRegistered` para otros bounded contexts. | Application |
 
 ### 5.X.4. Infrastructure Layer
 
