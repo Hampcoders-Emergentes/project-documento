@@ -1554,7 +1554,160 @@ A partir de los elementos actualmente establecidos en el Event Storming, el mode
 | `RoleAssigned` | Domain Event | Indica que un rol fue asignado satisfactoriamente al usuario. |
 | `UserDisabled` | Domain Event | Indica que una cuenta dejó de estar habilitada para acceder a ElectroLink. |
 
-### 5.X.1. Domain Layer
+### 5.1.1. Domain Layer
+
+La Domain Layer del bounded context Identity & Access Management contiene las clases que representan el núcleo relacionado con la identidad, autenticación, autorización y estado de acceso de los usuarios de ElectroLink. Esta capa concentra las reglas necesarias para registrar cuentas, validar su estado, administrar roles y controlar las credenciales utilizadas por los diferentes tipos de usuario.
+
+El alcance del contexto se mantiene limitado a la identidad y el control de acceso. Por ello, información como preferencias de notificación o datos configurables del perfil no forma parte de esta capa, debido a que dichas responsabilidades pertenecen al bounded context Profiles & Preferences.
+
+#### Aggregate Roots
+
+UserAccount constituye el aggregate root principal del bounded context. Representa una cuenta con capacidad para autenticarse en ElectroLink y controla las reglas que determinan si esta puede utilizarse para acceder al sistema.
+
+El aggregate mantiene la identidad del usuario, sus credenciales, el rol asignado y el estado actual de la cuenta. Asimismo, centraliza las operaciones que modifican estos elementos, evitando que otras capas alteren directamente su estado interno.
+
+Entre sus pricipales responsabilidades se encuentran:
+
+- registrar una neuva cuenta con credenciales válidas;
+- verificar si la cuenta se encuentra habilitada para autenticarse;
+- asignar o cambiar el rol correspondiente;
+- deshabilitar una cuenta cuando esta ya no debe tener acceso;
+- actualizar las credenciales cuando corresponda a un proceso válido de recuperación.
+
+A partir de estas responsabilidades, `User Account` considera los siguientes elementos principales:
+
+| Atributo | Tipo propuesto | Propósito |
+|---|---|---|
+| `userId` | `UserId` | Identificador único de la cuenta. |
+| `email` | `Email` | Correo utilizado principalmente por el Manager para autenticarse y recuperar su acceso. |
+| `credential` | `Credential` | Representa de manera protegida las credenciales utilizadas para acceder al sistema. |
+| `role` | `UserRole` | Determina el rol asignado a la cuenta. |
+| `status` | `AccountStatus` | Determina si la cuenta puede acceder actualmente a ElectroLink. |
+| `createdAt` | `DateTime` | Fecha de creación de la cuenta. |
+| `updatedAt` | `DateTime` | Última modificación relevante de la cuenta. |
+
+#### Role 
+
+El Event Storming identifica explícitamente Role como un aggregate asociado al comando `AssignRole`y al evento `RoleAssigned`. En el diseño táctico se modela mediante UserRole, que representa los roles reconocidos por ElectroLink y permite establecer las capacidades generales asociadas a una cuenta.
+
+Para el alcance actualmente definido por las historias de usuario y los segmentos de ElectroLink, se consideran principalmente:
+- `MANAGER`
+- `WORKER`
+
+El Manager del Local utiliza la aplicación administrativa y posee responsabilidades como registrar trabajadores, mientras que el Trabajador del Local interactúa principalmente con las capacidades operativas disponibles en el establecimiento.
+
+#### Value Objects
+
+La Domain Layer propone los siguientes Value Objects para encapsular información que posee reglas propias pero que no requiere una identidad independiente.
+
+`UserId` representa el identificador único e inmutable de una cuenta dentro de ElectroLink. Permite distinguir inequívocamente a cada usuario independientemente de que posteriormente modifique otros datos.
+
+Email representa una dirección de correo válida utilizada como identificador de autenticación para las cuentas que emplean acceso mediante correo y contraseña. También permite soportar el proceso de recuperación de contraseña establecido para el Manager en la US31.     
+
+Credential representa la información necesaria para verificar la identidad de un usuario sin exponer directamente su valor sensible. El dominio distingue la existencia de diferentes mecanismos de acceso: la autenticación del Manager mediante correo y contraseña, contemplada en la US30, y el acceso rápido del trabajador mediante el PIN de cuatro dígitos definido en la US28.  
+
+La transformación criptográfica o comparación técnica de estas credenciales no se realiza directamente dentro del Value Object, debido a que dichos mecanismos dependen de servicios de infraestructura.
+
+AccountStatus representa el estado de una cuenta y controla si esta puede utilizarse para autenticación. Para el alcance establecido por el Event Storming se consideran inicialmente los estados:
+- `ACTIVE` — la cuenta se encuentra habilitada para acceder a ElectroLink.
+- `DISABLED` — la cuenta ha sido deshabilitada y no debe obtener acceso al sistema.
+
+Esta distinción permite materializar dentro del modelo de dominio el comando DisableUser y su correspondiente evento UserDisabled, identificados en el Event Storming.
+
+Password Reset
+
+La historia US31 Recuperación de Contraseña de Administrador establece que el Manager puede solicitar un mecanismo de restauración mediante su correo corporativo y que el enlace seguro posee una vigencia limitada.
+
+Para representar esta regla sin incorporar todavía detalles de correo electrónico o enlaces HTTP dentro del dominio, se propone el Value Object PasswordResetToken, encargado de mantener conceptualmente:
+
+| Atributo | Propósito |
+|---|---|
+| `tokenId` | Identifica la solicitud de recuperación. |
+| `userId` | Indica la cuenta asociada. |
+| `expiresAt` | Define el momento en que deja de ser válido. |
+| `used` | Indica si ya fue utilizado. |
+
+#### Repository Interfaces 
+
+La Domain Layer define contratos de persistencia sin conocer qué motor de base de datos será utilizado. Esta separación permite mantener el dominio independiente de decisiones tecnológicas, siguiendo el mismo criterio aplicado en el ejemplo proporcionado.
+
+Se propone la interfaz **IUserAccountRepository**, responsable de persistir y recuperar el aggregate `UserAccount`.
+
+Sus operaciones principales son:
+
+```
+save(UserAccount)
+findById(UserId)
+findByEmail(Email)
+existsByEmail(Email)
+update(UserAccount)
+```
+
+`findById()` permite recuperar una cuenta a partir de su identificador.
+`findByEmail()` permite localizar la cuenta utilizada durante autenticación o recuperación de acceso.
+`existsByEmail()` permite verificar que no se registren cuentas administrativas duplicadas con el mismo correo.
+`save()` y `update()` permiten persistir la creación y los cambios válidos realizados sobre el aggregate.
+
+Para los procesos de recuperación se propone adicionalmente IPasswordResetRepository, encargado únicamente del ciclo de vida de las solicitudes de recuperación:
+
+```
+save(PasswordResetToken)
+findValidByUserId(UserId)
+invalidate(PasswordResetToken)
+
+```
+#### Domain Services 
+
+Algunas reglas relacionadas con identidad requieren colaborar con mecanismos que no pertenecen directamente a una única entidad. Para ello se definen contratos de dominio que serán implementados posteriormente por la infraestructura.
+
+**ICredentialHashingService** representa el contrato requerido para proteger y comprobar credenciales sensibles. Su objetivo es evitar que `UserAccount` conozca algoritmos específicos de hashing
+
+```
+hash(rawCredential)
+verify(rawCredential, hashedCredential)
+```
+
+**IAuthenticationTokenService** representa la capacidad requerida por el sistema para producir una credencial de acceso después de una autenticación válida. La Domain Layer únicamente establece el contrato; tecnologías concretas como JWT no se fijan en este nivel.
+
+`generateToken(UserAccount)``
+
+**IAccessPolicyService** concreta las validaciones relacionadas con el acceso de una cuenta y su rol cuando dichas reglas requieran evaluar más de un elemento del dominio.
+
+```
+canAuthenticate(UserAccount)
+canAssignRole(UserAccount, UserRole)
+canDisableAccount(UserAccount)
+```
+
+#### Reglas principales del dominio
+
+Con base en el Event Storming y las historias de usuario, la Domain Layer debe preservar las siguientes invariantes:
+
+1. Cada `UserAccount` posse un identificador único.
+2. Una cuenta debe posser un mecanismo válido de identificación antes de poder autenticarse.
+3. Una cuenta deshabilitada no puede obtener acceso a ElectroLink.
+4. La asignación de un rol debe corresponder a uno de los roles reocnoces por el dominio.
+5. Las credenciales sensibles no se almacenan ni manipulan como texto plano.
+6. Una solicitud de recuperación solo puede utilizarse mientras permanezca vigente y no haya sido consumida previamente.
+7. La autenticación de un usuario no modifica información correspondiente a `Profiles & Preferences`.
+8. La creación de una cuenta puede originar posteriormente la creación de un perfil inicial en otro bounded context, pero dicho perfil no pertenece al aggregate `UserAccount`.
+
+##### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccount` | Aggregate Root | Representa la cuenta de acceso y controla identidad, rol, credenciales y estado. | Domain |
+| `UserRole` | Value Object / Domain Concept | Representa el rol asignado al usuario, como Manager o Worker. | Domain |
+| `UserId` | Value Object | Identificador único e inmutable de la cuenta. | Domain |
+| `Email` | Value Object | Representa y valida el correo utilizado para autenticación y recuperación. | Domain |
+| `Credential` | Value Object | Encapsula la representación protegida de las credenciales de acceso. | Domain |
+| `AccountStatus` | Value Object | Representa si una cuenta está activa o deshabilitada. | Domain |
+| `PasswordResetToken` | Value Object | Representa una solicitud temporal de recuperación de acceso. | Domain |
+| `IUserAccountRepository` | Repository Interface | Contrato para persistir y recuperar cuentas. | Domain |
+| `IPasswordResetRepository` | Repository Interface | Contrato para gestionar solicitudes de recuperación. | Domain |
+| `ICredentialHashingService` | Domain/Outbound Service | Define las operaciones requeridas para proteger y verificar credenciales. | Domain |
+| `IAuthenticationTokenService` | Outbound Service | Define la generación de credenciales de sesión después de una autenticación válida. | Domain |
+| `IAccessPolicyService` | Domain Service | Centraliza reglas de autorización y validación de acceso. | Domain |
 
 ### 5.X.2. Interface Layer
 
