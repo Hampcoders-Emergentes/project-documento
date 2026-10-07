@@ -2279,7 +2279,345 @@ La Application Layer actúa como orquestador del flujo, mientras que:
 | `GetUserRoleQueryHandler` | Query Handler | Recupera el rol asociado a una cuenta. | Application |
 | `UserRegisteredEventPublisher` | Event Publisher | Coordina la publicación de `UserRegistered` para otros bounded contexts. | Application |
 
-### 5.X.4. Infrastructure Layer
+### 5.1.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context Identity & Access Management implementa los contratos definidos en la Domain Layer y proporciona los mecanismos técnicos necesarios para persistencia, protección de credenciales, generación de tokens de acceso, recuperación de contraseña y publicación de eventos de integración.
+
+#### Repository Implementations
+
+Las interfaces definidas en Domain Layer se implementan mediante repositorios concretos que utilizan Entity Framework Core para comunicarse con PostgreSQL.
+
+**UserAccountRepository** implementa `IUserAccountRepository` y es responsable de persistir y recuperar el aggregate `UserAccount`.
+
+Entre sus principales operaciones se encuentran:
+```
+save(UserAccount)
+findById(UserId)
+findByEmail(Email)
+existsByEmail(Email)
+update(UserAccount)
+```
+
+Su responsabilidad técnica incluye:
+- registrar nuevas cuentas;
+- consultar usuarios por identificador;
+- localizar cuentas mediante correo;
+- verificar duplicidad de cuentas;
+- actualizar rol, estado y credenciales;
+- reconstruir un UserAccount desde la información persistida.
+
+**PasswordResetRepository** implementa `IPasswordResetRepository` y administra la persistencia técnica de las solicitudes de recuperación.
+Sus operaciones principales son:
+```
+save(PasswordResetToken)
+findValidByUserId(UserId)
+invalidate(PasswordResetToken)
+```
+---
+#### Persistance Context
+Para encapsular el acceso a PostgreSQL se propone IdentityDbContext, implementado mediante Entity Framework Core.
+Conceptualmente contiene los conjuntos asociados a las entidades persistentes del contexto:
+
+```
+IdentityDbContext
+
+DbSet<UserAccountEntity> UserAccounts
+DbSet<PasswordResetEntity> PasswordResets
+```
+
+El DbContext no representa reglas del dominio. Su función es exclusivamente técnica:
+- establecer la conexión con PostgreSQL;
+- mapear entidades de persistencia;
+- ejecutar consultas;
+- gestionar transacciones;
+- aplicar configuraciones y constraints;
+- persistir modificaciones.
+---
+#### Persistance Mappers
+Para evitar que las entidades del dominio dependan directamente de Entity Framework Core se propone el uso de **Persistence Mappers**.
+**UserAccountPersistenceMapper** transforma:
+```
+UserAccount
+   ↕
+UserAccountEntity
+```
+
+De esta manera, anotaciones, configuraciones de tablas, foreign keys o particularidades de PostgreSQL permanecen fuera del modelo de dominio.
+**PasswordResetPersistenceMapper** realiza la misma función para `PasswordResetToken`.
+---
+**CredentialHashingService**
+`CredentialHashingService` implementa `ICredentialHashingService`.
+
+Su responsabilidad consiste en proteger las credenciales antes de almacenarlas y comparar las credenciales proporcionadas durante una autenticación.
+
+Conceptualmente implementa:
+
+```
+hash(rawCredential)
+verify(rawCredential, hashedCredential)
+```
+Este servicio es utilizado por:
+- RegisterUserCommandHandler;
+- AuthenticateUserCommandHandler;
+- ResetPasswordCommandHandler.
+
+---
+**AuthenticationTokenService**
+`AuthenticationTokenService` implementa `IAuthenticationTokenService`.
+
+Su responsabilidad es generar la credencial de acceso después de que A`uthenticateUserCommandHandler` haya validado correctamente la cuenta.
+
+La documentación estratégica de ElectroLink ya indica que la seguridad centralizada debe utilizar tokens JWT para autenticar y controlar el acceso a las APIs.     
+
+Por ello, la implementación concreta puede denominarse: **JwtTokenService** sus responsabilidades son:
+
+```
+generateToken(UserAccount)
+validateToken(token)
+```
+
+El token puede incorporar información necesaria para autorización, como:
+```
+userId
+role
+expiration
+```
+
+De modo conceptual:
+```
+AuthenticateUserCommandHandler
+           ↓
+IAuthenticationTokenService
+           ↓
+JwtTokenService
+           ↓
+JWT
+```
+
+Esto permite que el backend mantenga una estrategia de autenticación centralizada y consistente con las decisiones arquitectónicas del proyecto.
+---
+
+#### Authentication Middleware
+
+Debido a que el sistema utiliza ASP.NET Core y JWT, se requiere un mecanismo técnico que intercepte las solicitudes dirigidas a recursos protegidos.
+
+Se propone **JwtAuthenticationMiddleware**, encargado de:
+- obtener el token enviado por el cliente;
+- comprobar que se encuentre presente;
+- validar su integridad y vigencia;
+- obtener el `userId` y `role`;
+- incorporar la identidad autenticada al contexto de la petición;
+- rechazar solicitudes que no posean una autenticación válida.
+
+El middleware no decide reglas funcionales propias del negocio. Su responsabilidad es únicamente validar técnicamente la identidad presentada.
+El flujo conceptual es:
+
+```
+HTTP Request
+     ↓
+JwtAuthenticationMiddleware
+     ↓
+Validate JWT
+     ↓
+Authenticated User Context
+     ↓
+Controller
+```
+---
+
+#### Password Recovery Infrastructre
+
+El Manager puede solicitar la recuperación de contraseña mediante su correo y recibir un enlace temporal. El documento especifica además una vigencia de 15 minutos para dicho mecanismo.
+
+Para soportar esta capacidad se propone **PasswordResetService**, responsable de generar técnicamente el token que después será representado por `PasswordResetToken`.
+
+Sus responsabilidades incluyen:
+
+```
+generateResetToken()
+buildResetLink()
+```
+
+La vigencia del token pertenece al modelo definido en la Domain Layer, mientras que la generación segura del valor corresponde a Infrastructure.
+
+También se requiere **EmailService**, cuya responsabilidad consiste en enviar el enlace generado al correo asociado a la cuenta.
+
+Conceptualmente:
+
+```
+RequestPasswordResetCommandHandler
+             ↓
+PasswordResetService
+             ↓
+PasswordResetRepository
+             ↓
+EmailService
+             ↓
+Manager
+```
+---
+
+#### Event Publisher
+
+El EventStorming establece que, después de `UserRegistered`, debe iniciarse la creación del perfil en Profiles & Preferences.
+
+Para soportar esta interacción se propone **IdentityEventPublisher**, responsable de publicar eventos originados por IAM.
+
+Entre ellos:
+```
+UserRegistered
+RoleAssigned
+UserDisabled
+```
+
+El evento con mayor relevancia inmediata para la integración es:
+`UserRegistered`
+
+porque activa el flujo posterior:
+```
+Identity & Access Management
+           ↓
+UserRegistered
+           ↓
+Profiles & Preferences
+           ↓
+CreateProfile
+```
+---
+#### Persistence Entities
+
+Para evitar contaminar las entidades de dominio con preocupaciones de infraestructura se utilizan objetos específicos para persistencia.
+
+**UserAccountEntity**
+```
+UserAccountEntity
+- Id
+- Email
+- CredentialHash
+- Role
+- Status
+- CreatedAt
+- UpdatedAt
+```
+
+**PasswordRestEntity**
+```
+PasswordResetEntity
+- Id
+- UserId
+- TokenHash
+- ExpiresAt
+- Used
+- CreatedAt
+```
+---
+
+#### Configurations
+
+Entity Framework Core requiere configuraciones específicas para traducir correctamente los objetos hacia PostgreSQL.
+Se proponen:
+
+**UserAccountEntityConfiguration**
+
+Responsable de definir:
+- tabla asociada;
+- primary key;
+- longitud y obligatoriedad de campos;
+- índice único del correo;
+- conversión de `UserRole`;
+- conversión de `AccountStatus`.
+
+**PasswordResetEntityConfiguration**
+
+Responsable de configurar:
+- primary key;
+- foreign key hacia la cuenta;
+- fecha de expiración;
+- estado de utilización;
+- constraints requeridos.
+
+Estas clases pertenecen exclusivamente a Infrastructure Layer.
+---
+
+#### Flujo completo de registro
+El flujo técnico puede visualizarse de la siguiente manera:
+
+```
+RegisterUserCommandHandler
+          ↓
+ICredentialHashingService
+          ↓
+CredentialHashingService
+          ↓
+UserAccount
+          ↓
+IUserAccountRepository
+          ↓
+UserAccountRepository
+          ↓
+Entity Framework Core
+          ↓
+PostgreSQL
+          ↓
+IdentityEventPublisher
+          ↓
+UserRegistered
+```
+La capa de aplicación conoce las interfaces, pero no las clases concretas.
+---
+
+#### Flujo completo de autenticación
+```
+AuthenticateUserCommandHandler
+            ↓
+IUserAccountRepository
+            ↓
+UserAccountRepository
+            ↓
+PostgreSQL
+            ↓
+ICredentialHashingService
+            ↓
+CredentialHashingService
+            ↓
+IAuthenticationTokenService
+            ↓
+JwtTokenService
+            ↓
+JWT
+```
+
+Posteriormente, cada solicitud protegida utiliza:
+```
+JWT
+ ↓
+JwtAuthenticationMiddleware
+ ↓
+Authenticated User
+ ↓
+Protected Resource
+```
+---
+
+#### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccountRepository` | Repository | Implementa `IUserAccountRepository` mediante Entity Framework Core y PostgreSQL. | Infrastructure |
+| `PasswordResetRepository` | Repository | Implementa `IPasswordResetRepository`. | Infrastructure |
+| `IdentityDbContext` | Persistence Context | Gestiona la conexión y persistencia del módulo IAM. | Infrastructure |
+| `UserAccountEntity` | Persistence Entity | Representación persistente de una cuenta de usuario. | Infrastructure |
+| `PasswordResetEntity` | Persistence Entity | Representación persistente de una solicitud de recuperación. | Infrastructure |
+| `UserAccountPersistenceMapper` | Mapper | Convierte entre `UserAccount` y `UserAccountEntity`. | Infrastructure |
+| `PasswordResetPersistenceMapper` | Mapper | Convierte entre `PasswordResetToken` y su representación persistente. | Infrastructure |
+| `CredentialHashingService` | Infrastructure Service | Implementa la protección y verificación de credenciales. | Infrastructure |
+| `JwtTokenService` | Infrastructure Service | Implementa generación y validación de JWT. | Infrastructure |
+| `JwtAuthenticationMiddleware` | Middleware | Valida el JWT en las solicitudes protegidas. | Infrastructure |
+| `PasswordResetService` | Infrastructure Service | Genera técnicamente los tokens y enlaces de recuperación. | Infrastructure |
+| `EmailService` | Infrastructure Service | Envía el mecanismo de recuperación al correo del usuario. | Infrastructure |
+| `IdentityEventPublisher` | Event Publisher | Publica eventos del bounded context hacia otros módulos. | Infrastructure |
+| `UserAccountEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de cuentas. | Infrastructure |
+| `PasswordResetEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de recuperación de contraseñas. | Infrastructure |
 
 ### 5.X.6. Bounded Context Software Architecture Component Level Diagrams
 
