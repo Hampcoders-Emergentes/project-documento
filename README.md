@@ -1353,8 +1353,27 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 ![](assets-emergentes/EventStorming/EventStorming_Analytics.png)
 
 ### 4.2.2. Candidate Context Discovery
+A partir de los eventos, comandos, actores, políticas y agregados identificados durante el EventStorming de ElectroLink, se analizaron las responsabilidades del dominio y sus relaciones con el objetivo de identificar agrupaciones funcionales con alta cohesión interna y límites claros de responsabilidad.
+
+Este análisis permitió descubrir diez contextos candidatos que representan las principales capacidades de negocio de la solución. La separación propuesta busca evitar que responsabilidades como monitoreo eléctrico, generación de alertas, distribución de notificaciones y mantenimiento sean tratadas como una única unidad, permitiendo que cada contexto mantenga su propio modelo y lenguaje del dominio.
+
+| Candidate Context | Responsabilidad principal |
+| --- | --- |
+| **Identity & Access Management** | Gestionar el registro, autenticación, roles y control de acceso de los usuarios de la plataforma. |
+| **Profiles & Preferences** | Administrar los perfiles de usuario y sus preferencias, incluyendo la configuración de notificaciones. |
+| **Subscriptions & Payments** | Gestionar la creación, activación, renovación y suspensión de suscripciones, así como sus pagos asociados. |
+| **Store & Electrical Asset Management** | Administrar los locales, áreas eléctricas y equipos que forman parte de la infraestructura monitoreada. |
+| **IoT Device Management** | Gestionar el registro, vinculación con equipos, configuración, conectividad y estado operativo de los dispositivos IoT. |
+| **Electrical Monitoring** | Recibir y validar mediciones eléctricas, evaluar el estado de los equipos y detectar umbrales excedidos o anomalías. |
+| **Alert Management** | Crear, clasificar y gestionar el ciclo de vida de las alertas generadas automática o manualmente. |
+| **Notifications** | Distribuir las alertas a los usuarios mediante los canales de comunicación disponibles y gestionar los reintentos de entrega. |
+| **Energy & Maintenance Management** | Registrar y analizar el consumo energético, calcular costos y gestionar las solicitudes y actividades de mantenimiento. |
+| **Analytics** | Consolidar información del sistema para generar indicadores, tendencias, resúmenes de consumo y reportes. |
+
+La identificación de estos contextos candidatos establece una primera delimitación del dominio de ElectroLink. Posteriormente, estos límites serán refinados mediante el análisis de los flujos de mensajes entre contextos, los Bounded Context Canvases y el Context Mapping.
+
 \
-![](assets-emergentes/CCD.png)
+![](assets-emergentes/CDD/New_CDD.png)
 
 ### 4.2.3. Domain Message Flows Modeling
 
