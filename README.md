@@ -1324,13 +1324,33 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.1. EventStorming
 \
-![](assets-emergentes/EventStorming1.png)
+![](assets-emergentes/EventStorming/core_domain_events.png)
 \
-![](assets-emergentes/EventStorming2.png)
+![](assets-emergentes/EventStorming/commands_actors.png)
 \
-![](assets-emergentes/EventStorming3.png)
+![](assets-emergentes/EventStorming/timeline.png)
 \
-![](assets-emergentes/EventStorming4.png)
+![](assets-emergentes/EventStorming/legend.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_IAM.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Profiles.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Subscriptions.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Assets.png)
+\ 
+![](assets-emergentes/EventStorming/EventStorming_IoT_Management.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Monitoring.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Alerts.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Notiications.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Maintenance.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Analytics.png)
 
 ### 4.2.2. Candidate Context Discovery
 \
