@@ -1709,7 +1709,254 @@ Con base en el Event Storming y las historias de usuario, la Domain Layer debe p
 | `IAuthenticationTokenService` | Outbound Service | Define la generación de credenciales de sesión después de una autenticación válida. | Domain |
 | `IAccessPolicyService` | Domain Service | Centraliza reglas de autorización y validación de acceso. | Domain |
 
-### 5.X.2. Interface Layer
+### 5.1.2. Interface Layer
+
+La Interface Layer del bounded context Identity & Access Management constituye el punto de entrada para las operaciones relacionadas con registro, autenticación, asignación de roles, administración del estado de las cuentas y recuperación de acceso.
+
+Su responsabilidad consiste en recibir las solicitudes provenientes de las aplicaciones de ElectroLink, realizar validaciones básicas sobre la estructura de los datos recibidos y transformarlos en objetos que puedan ser procesados posteriormente por la Application Layer.
+
+Esta capa no implementa reglas relacionadas con la validez de una cuenta, asignación permitida de roles, verificación de credenciales o autorización. Dichas reglas permanecen encapsuladas en la Domain Layer y son coordinadas mediante los casos de uso definidos en la Application Layer.
+
+#### Controllers 
+
+Se proponen tres controllers principales para exponer las capacidades del bounded context.
+
+**UserAccountController** concentra las operaciones relacionadas con la administración de las cuentas de usuario.
+
+Sus responsabilidades incluyen recibir solicitudes para:
+
+- registrar un nueva cuenta;
+- obtener información básica sobre una cuenta;
+- deshabilitar una cuenta;
+- iniciar procesos relacionados con la admnistarción del estado del usuario.
+
+Este controller permite representar desde la capa de presentación los comandos `RegisterUser` y `DisableUser` identificados durante el EventStorming. 
+
+**AuthenticationController** recibe las solicitudes relacionadas con el acceso de los usuarios del sistema.
+
+Su responsabilidad es exponer las operaciones necesarias para: 
+
+- autenticar a un Manager mediante sus credenciales;
+- autenticar a un trabajador mediante el mecanismo de acceso definido para el panel local;
+- solicitar la recuperación de una contraseña;
+- completar el restablecimiento de una credencial cuando el proceso de recuperación sea válido.
+
+El controller no comprueba directamente contraseñas, PIN ni estados de cuenta. Únicamente recibe la información y la envía hacia los casos de uso correspondientes.
+
+*+RoleController** expone las oepraciones ivnculadas con la asignación de roles dentro del sistema.
+
+Su principal responsabilidad es recibir la solicitud de asignación de un rol a una cuenta y transformarla en la intención correspondiente para la Application Layer, representando el comando `AssignRole` definido en el EventStorming.
+
+#### Request DTOs
+
+Los **Request DTOS** representan los datos que la Interface Layer recibe desde las aplicaciones cliente. Su propósito es impedir que los objetos del dominio sean expuestos directamente hacia el exterior.
+
+Se proponen los siguentes objetos de entrada:
+
+**RegisterUserRequest** contiene la información necesaria para solicitar la creación de una cuenta.
+```
+RegisterUserRequest
+- email
+- credential
+- role
+- authenticationType
+```
+
+En el caso de cuentas de trabajadores, la información requerida desde la experiencia de usuario puede diferir debido a que la US28 establece un acceso mediante PIN. La generación y las reglas asociadas a dicho PIN no son responsabilidad del DTO, sino del flujo de aplicación correspondiente.
+
+**AuthenticateUserRequest** contiene las credenciales presentadas por un usuario al intentar acceder al sistema.
+```
+AuthenticateUserRequest
+- identifier
+- credential
+- authenticationType
+```
+
+**AssignRoleRequest** representa la solicitud para asignar un rol a una cuenta existente.
+```
+AssignRoleRequest
+- userId
+- role
+```
+
+**DisableUserRequest** contiene la información necesaria para solicitar la deshabilitación de una cuenta.
+```
+DisableUserRequest
+- userId
+```
+
+**RequestPasswordResetRequest** representa el inicio del proceso de recuperación contemplado en US31.
+```
+RequestPasswordResetRequest
+- email
+```
+
+**ResetPasswordRequest** contiene la información requerida para completar una recuperación previamente autorizada.
+```
+ResetPasswordRequest
+- resetToken
+- newCredential
+```
+Estos DTOs únicamente validan aspectos estructurales como la presencia de valores obligatorios o un formato de solicitud correcto. La vigencia del token, la validez del usuario o las políticas de modificación de credenciales corresponden al dominio.
+
+#### Response DTOs
+
+La Interface Layer también define objetos de salida destinados a entregar información al cliente sin exponer directamente entidades o Value Objects internos.
+
+**UserAccountResponse** proporciona información básica y segura sobre una cuenta.
+```
+UserAccountResponse
+- userId
+- role
+- status
+```
+
+**AuthenticationResponse** representa el resultado satisfactorio de una operación de autenticación.
+```
+AuthenticationResponse
+- userId
+- role
+- accessToken
+```
+
+El `accessToken` representa de manera abstracta la credencial que permite continuar utilizando recursos protegidos. La tecnología concreta empleada para producirlo se definirá en Infrastructure Layer.
+
+**PasswordResetResponse** comunica el resultado del inicio o finalización del proceso de recuperación sin exponer información sensible.
+```
+PasswordResetResponse
+- accepted
+- message
+```
+
+#### Assemblers
+
+Para mantener desacoplada la API respecto al modelo interno se utilizan Assemblers, responsables de transformar DTOs en comandos o resultados de aplicación en objetos de respuesta.
+
+Este patrón también se emplea en el ejemplo del ciclo anterior, donde se utilizan ensambladores para evitar que los Controllers trabajen directamente con las entidades del dominio.
+
+**RegisterUserCommandFromRequestAssembler**
+Transforma:
+```
+RegisterUserRequest
+        ↓
+RegisterUserCommand
+```
+
+**AuthenticateUserCommandFromRequestAssembler**
+Transforma:
+```
+AuthenticateUserRequest
+        ↓
+AuthenticateUserCommand
+```
+
+**AssignRoleCommandFromRequestAssembler**
+Transforma:
+```
+AssignRoleRequest
+        ↓
+AssignRoleCommand
+```
+
+**DisableUserCommandFromRequestAssembler**
+Transforma:
+```
+DisableUserRequest
+        ↓
+DisableUserCommand
+```
+
+**RequestPasswordResetCommandFromRequestAssembler** Transforma la solicitud de recuperación en la intención correspondiente de la Application Layer.
+**UserAccountResponseFromEntityAssembler** Transforma los datos retornados por el caso de uso en un `UserAccountResponse`, evitando exponer directamente el aggregate `UserAccount`.
+
+#### Flujo de interacción de la capa
+
+La interación general de esta capa puede expresarse de la siguiente manera:
+```
+Web App / Local Panel
+        ↓
+Controller
+        ↓
+Request DTO
+        ↓
+Assembler
+        ↓
+Command / Query
+        ↓
+Application Layer
+```
+
+Para lar espuesta se aplica el flujo inverso:
+```
+Application Layer
+        ↓
+Resultado
+        ↓
+Response Assembler
+        ↓
+Response DTO
+        ↓
+Web App / Local Panel
+```
+
+Por ejemplo, para la autenticación del Manager:
+```
+Manager
+   ↓
+AuthenticationController
+   ↓
+AuthenticateUserRequest
+   ↓
+AuthenticateUserCommandFromRequestAssembler
+   ↓
+AuthenticateUserCommand
+   ↓
+Application Layer
+```
+
+#### Validaciones de la Interface Layer
+Es importante diferenciar las validaciones estructurales de las reglas del dominio.
+
+La Interface Layer sí puede validar aspectos como:
+- campos obligatorios ausentes;
+- estructura incorrecta de una solicitud;
+- tipos de datos inválidos;
+- formato general de los parámetros recibidos;
+- solicitudes incompletas.
+
+Sin embargo, no debe decidir:
+- si las credenciales son correctas;
+- si una cuenta está autorizada para ingresar;
+- si una cuenta deshabilitada puede autenticarse;
+- si un rol puede ser asignado;
+- si un token de recuperación sigue vigente;
+- si una contraseña o PIN satisface las reglas del negocio;
+- si debe generarse un evento de dominio.
+
+Estas decisiones deben permanecer fuera de la capa de presentación.
+
+#### Clases dde lo Interface Layer
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccountController` | Controller | Recibe solicitudes relacionadas con registro y administración del estado de las cuentas. | Interface |
+| `AuthenticationController` | Controller | Expone autenticación y recuperación de acceso. | Interface |
+| `RoleController` | Controller | Recibe solicitudes relacionadas con asignación de roles. | Interface |
+| `RegisterUserRequest` | Request DTO | Datos recibidos para solicitar el registro de una cuenta. | Interface |
+| `AuthenticateUserRequest` | Request DTO | Credenciales proporcionadas durante un intento de autenticación. | Interface |
+| `AssignRoleRequest` | Request DTO | Datos requeridos para solicitar la asignación de un rol. | Interface |
+| `DisableUserRequest` | Request DTO | Identifica la cuenta que se solicita deshabilitar. | Interface |
+| `RequestPasswordResetRequest` | Request DTO | Datos requeridos para iniciar una recuperación de acceso. | Interface |
+| `ResetPasswordRequest` | Request DTO | Datos utilizados para establecer una nueva credencial después de una recuperación válida. | Interface |
+| `UserAccountResponse` | Response DTO | Expone información no sensible de una cuenta. | Interface |
+| `AuthenticationResponse` | Response DTO | Representa el resultado de una autenticación satisfactoria. | Interface |
+| `PasswordResetResponse` | Response DTO | Representa el resultado del proceso de recuperación. | Interface |
+| `RegisterUserCommandFromRequestAssembler` | Assembler | Convierte una solicitud de registro en un command. | Interface |
+| `AuthenticateUserCommandFromRequestAssembler` | Assembler | Convierte los datos de autenticación en un command. | Interface |
+| `AssignRoleCommandFromRequestAssembler` | Assembler | Convierte una solicitud de asignación de rol en un command. | Interface |
+| `DisableUserCommandFromRequestAssembler` | Assembler | Convierte una solicitud de deshabilitación en un command. | Interface |
+| `RequestPasswordResetCommandFromRequestAssembler` | Assembler | Transforma la solicitud de recuperación en un command. | Interface |
+| `UserAccountResponseFromEntityAssembler` | Assembler | Construye la respuesta pública de una cuenta a partir del resultado interno. | Interface |
+
 
 ### 5.X.3. Application Layer
 
