@@ -1527,7 +1527,32 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 # Capítulo V: Tactical-Level Software Design
 
-## 5.X. Bounded Context: <Bounded Context Name>
+El presente capítulo desarrolla el diseño táctico de la solución ElectroLink a partir de los Bounded Contexts definidos durante el Strategic-Level Domain-Driven Design. Mientras que el capítulo anterior establece los límites y relaciones entre los diferentes dominios del sistema, en esta etapa se profundiza en la estructura interna de cada contexto, identificando los elementos de software responsables de materializar sus reglas, comportamientos y capacidades.
+
+## 5.1. Bounded Context: dentity & Access Management Bounded Context
+
+Identity & Access Management Bounded Context es responsable de administrar la identidad de los usuarios y controlar su acceso a las funcionalidades protegidas de ElectroLink. Su alcance comprende el registro de cuentas, la autenticación, la asignación de roles y la deshabilitación de usuarios.
+
+Esta delimitación permite separar las responsabilidades relacionadas con seguridad y autorización de aquellas asociadas con la información personal del usuario, las cuales pertenecen al Bounded Context Profiles & Preferences. De esta manera, Identity & Access Management determina quién es el usuario y qué permisos posee, mientras que Profiles & Preferences administra posteriormente la información y configuración asociada a dicho usuario.
+
+El registro se encuentra representado principalmente mediante el aggregate UserAccount, encargado de mantener la identidad y estado de acceso de una cuenta dentro del sistema. Asimismo, el concepto Role representa la autorización asignada a un usuario y permite determinar las operaciones disponibles según sus responsabilidades dentro de ElectroLink.
+
+El evento UserRegistered constituye además un punto de integración con otros contextos. Una vez creada correctamente una cuenta, la política identificada durante el Event Storming establece la creación del perfil inicial del usuario, trasladando dicha responsabilidad hacia Profiles & Preferences. Esto evita que Identity & Access Management incorpore información que no pertenece directamente al control de identidad y acceso.
+
+A partir de los elementos actualmente establecidos en el Event Storming, el modelo inicial del contexto queda delimitado de la siguiente manera:
+
+| Elemento | Tipo | Propósito dentro del Bounded Context |
+|---|---|---|
+| `UserAccount` | Aggregate | Representa la cuenta de acceso del usuario y controla su estado dentro de ElectroLink. |
+| `Role` | Concepto de dominio | Representa el rol asignado al usuario y las responsabilidades de acceso asociadas. |
+| `RegisterUser` | Command | Solicita la creación de una nueva cuenta de usuario. |
+| `AuthenticateUser` | Command | Solicita validar la identidad de un usuario que intenta ingresar al sistema. |
+| `AssignRole` | Command | Solicita asignar un rol determinado a una cuenta registrada. |
+| `DisableUser` | Command | Solicita deshabilitar una cuenta para impedir su acceso al sistema. |
+| `UserRegistered` | Domain Event | Indica que una nueva cuenta fue registrada correctamente. |
+| `UserAuthenticated` | Domain Event | Indica que las credenciales del usuario fueron validadas correctamente. |
+| `RoleAssigned` | Domain Event | Indica que un rol fue asignado satisfactoriamente al usuario. |
+| `UserDisabled` | Domain Event | Indica que una cuenta dejó de estar habilitada para acceder a ElectroLink. |
 
 ### 5.X.1. Domain Layer
 
