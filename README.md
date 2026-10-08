@@ -4636,6 +4636,531 @@ El diagrama representa los componentes responsables del registro, configuración
 
 ![](assets-emergentes/DatabaseDiagram/Database-IoT.png)
 
+## 5.6. Electrical Monitoring Bounded Context
+
+El bounded context **Electrical Monitoring** recibe y valida las mediciones eléctricas provenientes de los dispositivos IoT, evalúa el estado de los equipos y detecta condiciones anómalas o umbrales excedidos. Esta responsabilidad está definida explícitamente en la documentación actual de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `ReceiveMeasurement`, `ValidateMeasurement`, `DetectAnomaly`, `Measurement`, `ElectricalMeasurement`, `ThresholdExceeded` y `AnomalyDetected`.
+
+### 5.6.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con las mediciones eléctricas, su validación y la evaluación de condiciones de riesgo.
+
+### Aggregate Root
+
+**ElectricalMonitoring** es el aggregate root principal. Representa el estado de monitoreo asociado a un dispositivo o equipo y coordina la evaluación de las mediciones recibidas.
+
+Sus principales responsabilidades son:
+
+-   registrar mediciones válidas;
+-   evaluar las mediciones frente a los umbrales configurados;
+-   detectar condiciones anómalas;
+-   mantener el estado actual del monitoreo.
+
+### Entity
+
+**ElectricalMeasurement** representa una medición eléctrica recibida desde un dispositivo IoT.
+
+Contiene los valores necesarios para evaluar el comportamiento eléctrico y térmico del equipo.
+
+### Value Objects
+
+**MonitoringId** identifica una instancia de monitoreo.
+
+**DeviceId** identifica el dispositivo que originó la medición.
+
+**EquipmentId** identifica el equipo monitoreado.
+
+**MeasurementValue** representa un valor medido junto con su unidad.
+
+**Threshold** representa los límites configurados utilizados para determinar si una medición se encuentra dentro de los valores permitidos.
+
+**MeasurementTimestamp** representa el instante en que se registró la medición.
+
+La documentación del proyecto contempla variables como corriente, voltaje, temperatura y consumo energético dentro de la telemetría eléctrica. README
+
+### Enumerations
+
+**MeasurementType** identifica el tipo de medición:
+
+```
+CURRENT
+VOLTAGE
+TEMPERATURE
+POWER
+ENERGY
+RESIDUAL_CURRENT
+```
+
+**MonitoringStatus** representa el estado calculado del equipo:
+
+```
+NORMAL
+WARNING
+CRITICAL
+```
+
+Esta clasificación es coherente con el modelo de semáforo utilizado en ElectroLink para representar estados seguros, preventivos y críticos. README
+
+### Repository Interfaces
+
+**IMonitoringRepository** define las operaciones necesarias para mantener el estado del monitoreo.
+
+```
+save(ElectricalMonitoring)
+findByEquipmentId(EquipmentId)
+update(ElectricalMonitoring)
+```
+
+**IMeasurementRepository** define las operaciones de persistencia y consulta de las mediciones.
+
+```
+save(ElectricalMeasurement)
+findByDeviceId(DeviceId)
+findByEquipmentId(EquipmentId)
+findLatestByEquipmentId(EquipmentId)
+```
+
+### Domain Services
+
+**MeasurementValidationService** valida que las mediciones recibidas sean consistentes antes de ser procesadas.
+
+```
+validate(ElectricalMeasurement)
+isValidRange(ElectricalMeasurement)
+```
+
+**ThresholdEvaluationService** compara una medición con los límites configurados.
+
+```
+evaluate(ElectricalMeasurement, Threshold)
+isExceeded(ElectricalMeasurement, Threshold)
+```
+
+**AnomalyDetectionService** determina si las mediciones representan un comportamiento anómalo del equipo.
+
+```
+detectAnomaly(ElectricalMeasurement)
+determineMonitoringStatus(ElectricalMeasurement)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+MeasurementReceived
+MeasurementValidated
+ThresholdExceeded
+AnomalyDetected
+```
+
+`ThresholdExceeded` y `AnomalyDetected` son especialmente importantes, ya que permiten que **Alert Management** genere las alertas correspondientes sin acoplar directamente ambos bounded contexts.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ElectricalMonitoring` | Aggregate Root | Gestiona el estado de monitoreo de un equipo. | Domain |
+| `ElectricalMeasurement` | Entity | Representa una medición eléctrica o térmica recibida. | Domain |
+| `MonitoringId` | Value Object | Identifica una instancia de monitoreo. | Domain |
+| `DeviceId` | Value Object | Identifica el dispositivo de origen. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo monitoreado. | Domain |
+| `MeasurementValue` | Value Object | Representa un valor medido y su unidad. | Domain |
+| `Threshold` | Value Object | Representa los límites de evaluación. | Domain |
+| `MeasurementTimestamp` | Value Object | Representa el instante de la medición. | Domain |
+| `MeasurementType` | Enumeration | Define el tipo de medición. | Domain |
+| `MonitoringStatus` | Enumeration | Define el estado resultante del monitoreo. | Domain |
+| `IMonitoringRepository` | Repository Interface | Define la persistencia del estado de monitoreo. | Domain |
+| `IMeasurementRepository` | Repository Interface | Define la persistencia y consulta de mediciones. | Domain |
+| `MeasurementValidationService` | Domain Service | Valida las mediciones recibidas. | Domain |
+| `ThresholdEvaluationService` | Domain Service | Evalúa las mediciones frente a umbrales. | Domain |
+| `AnomalyDetectionService` | Domain Service | Detecta comportamientos anómalos. | Domain |
+
+## 5.6.2. Interface Layer
+
+La **Interface Layer** del bounded context **Electrical Monitoring** recibe las mediciones provenientes de los dispositivos IoT y expone las consultas relacionadas con el estado eléctrico de los equipos.
+
+### Controllers
+
+**ElectricalMonitoringController** gestiona las operaciones de consulta del monitoreo eléctrico.
+
+Sus principales responsabilidades son:
+
+-   consultar el estado actual de un equipo;
+-   consultar la última medición registrada;
+-   consultar el historial reciente de mediciones.
+
+**MeasurementController** recibe y procesa las mediciones enviadas hacia el bounded context.
+
+Sus responsabilidades son:
+
+-   recibir nuevas mediciones;
+-   validar la estructura de la solicitud;
+-   delegar el procesamiento hacia la Application Layer.
+
+### Request DTOs
+
+**ReceiveMeasurementRequest**
+
+```
+ReceiveMeasurementRequest
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+### Response DTOs
+
+**MonitoringStatusResponse**
+
+```
+MonitoringStatusResponse
+- equipmentId
+- monitoringStatus
+- lastMeasurementAt
+```
+
+**ElectricalMeasurementResponse**
+
+```
+ElectricalMeasurementResponse
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+**MeasurementHistoryResponse**
+
+```
+MeasurementHistoryResponse
+- equipmentId
+- measurements
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+ReceiveMeasurementCommandFromRequestAssembler
+MonitoringStatusResponseAssembler
+ElectricalMeasurementResponseAssembler
+MeasurementHistoryResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para los consumidores del bounded context.
+
+### Consumers
+
+Debido a que las mediciones se originan en dispositivos IoT, la capa de interfaz también contempla un componente encargado de recibir dichos mensajes.
+
+**MeasurementConsumer** recibe la información proveniente de los dispositivos y la transforma en una solicitud compatible con el procesamiento de `ReceiveMeasurement`.
+
+La documentación actual de ElectroLink establece que la solución debe recibir continuamente información de sensores IoT y procesar variables como corriente, voltaje y temperatura. README
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ElectricalMonitoringController` | Controller | Gestiona las consultas relacionadas con el monitoreo eléctrico. | Interface |
+| `MeasurementController` | Controller | Recibe mediciones enviadas al bounded context. | Interface |
+| `MeasurementConsumer` | Consumer | Recibe mensajes de medición provenientes de dispositivos IoT. | Interface |
+| `ReceiveMeasurementRequest` | Request DTO | Contiene los datos de una medición recibida. | Interface |
+| `MonitoringStatusResponse` | Response DTO | Representa el estado actual de monitoreo de un equipo. | Interface |
+| `ElectricalMeasurementResponse` | Response DTO | Representa una medición eléctrica procesada. | Interface |
+| `MeasurementHistoryResponse` | Response DTO | Representa el historial de mediciones de un equipo. | Interface |
+| `ReceiveMeasurementCommandFromRequestAssembler` | Assembler | Convierte una solicitud de medición en un command. | Interface |
+| `MonitoringStatusResponseAssembler` | Assembler | Construye la respuesta del estado de monitoreo. | Interface |
+| `ElectricalMeasurementResponseAssembler` | Assembler | Construye la respuesta de una medición. | Interface |
+| `MeasurementHistoryResponseAssembler` | Assembler | Construye la respuesta del historial de mediciones. | Interface |
+
+## 5.6.3. Application Layer
+
+La **Application Layer** del bounded context **Electrical Monitoring** coordina los casos de uso relacionados con la recepción, validación y evaluación de mediciones eléctricas, además de la detección de umbrales excedidos y anomalías.
+
+### Commands
+
+**ReceiveMeasurementCommand**
+
+```
+ReceiveMeasurementCommand
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+**ValidateMeasurementCommand**
+
+```
+ValidateMeasurementCommand
+- measurementId
+```
+
+**EvaluateMeasurementCommand**
+
+```
+EvaluateMeasurementCommand
+- measurementId
+- equipmentId
+```
+
+### Command Handlers
+
+**ReceiveMeasurementCommandHandler** registra una nueva medición proveniente de un dispositivo IoT y genera `MeasurementReceived`.
+
+**ValidateMeasurementCommandHandler** verifica la consistencia de la medición mediante `MeasurementValidationService`. Si la medición es válida, genera `MeasurementValidated`.
+
+**EvaluateMeasurementCommandHandler** recupera la medición y los umbrales correspondientes al equipo, ejecuta la evaluación y determina el estado de monitoreo.
+
+Durante este proceso puede generar:
+
+```
+ThresholdExceeded
+AnomalyDetected
+```
+
+Estos eventos permiten que **Alert Management** continúe el flujo sin acoplar directamente la lógica de alertas con el procesamiento de mediciones.
+
+### Queries
+
+**GetMonitoringStatusQuery**
+
+```
+GetMonitoringStatusQuery
+- equipmentId
+```
+
+**GetLatestMeasurementQuery**
+
+```
+GetLatestMeasurementQuery
+- equipmentId
+```
+
+**GetMeasurementHistoryQuery**
+
+```
+GetMeasurementHistoryQuery
+- equipmentId
+- from
+- to
+```
+
+### Query Handlers
+
+**GetMonitoringStatusQueryHandler** recupera el estado actual de monitoreo del equipo.
+
+**GetLatestMeasurementQueryHandler** obtiene la medición más reciente registrada.
+
+**GetMeasurementHistoryQueryHandler** recupera las mediciones almacenadas dentro de un periodo determinado.
+
+### Event Handling
+
+**DeviceConnectedEventHandler** recibe `DeviceConnected` desde **IoT Device Management** y habilita el procesamiento de las mediciones provenientes del dispositivo.
+
+**DeviceDisconnectedEventHandler** recibe `DeviceDisconnected` y actualiza el estado de monitoreo para reflejar que el dispositivo dejó de transmitir.
+
+### Flujo de aplicación
+
+El flujo principal puede resumirse de la siguiente manera:
+
+```
+ReceiveMeasurementCommand
+        ↓
+ReceiveMeasurementCommandHandler
+        ↓
+MeasurementValidationService
+        ↓
+MeasurementValidated
+        ↓
+ThresholdEvaluationService
+        ↓
+AnomalyDetectionService
+        ↓
+ThresholdExceeded / AnomalyDetected
+```
+
+Este flujo responde a la responsabilidad del contexto de recibir información de sensores, validar las mediciones y detectar condiciones que puedan representar riesgos eléctricos u operativos. README
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ReceiveMeasurementCommand` | Command | Solicita registrar una nueva medición. | Application |
+| `ValidateMeasurementCommand` | Command | Solicita validar una medición registrada. | Application |
+| `EvaluateMeasurementCommand` | Command | Solicita evaluar la medición frente a las reglas del dominio. | Application |
+| `ReceiveMeasurementCommandHandler` | Command Handler | Coordina la recepción y registro de mediciones. | Application |
+| `ValidateMeasurementCommandHandler` | Command Handler | Coordina la validación de mediciones. | Application |
+| `EvaluateMeasurementCommandHandler` | Command Handler | Coordina la evaluación de umbrales y anomalías. | Application |
+| `GetMonitoringStatusQuery` | Query | Consulta el estado actual de un equipo. | Application |
+| `GetLatestMeasurementQuery` | Query | Consulta la medición más reciente. | Application |
+| `GetMeasurementHistoryQuery` | Query | Consulta el historial de mediciones. | Application |
+| `GetMonitoringStatusQueryHandler` | Query Handler | Recupera el estado actual de monitoreo. | Application |
+| `GetLatestMeasurementQueryHandler` | Query Handler | Recupera la última medición registrada. | Application |
+| `GetMeasurementHistoryQueryHandler` | Query Handler | Recupera mediciones dentro de un periodo. | Application |
+| `DeviceConnectedEventHandler` | Event Handler | Recibe la conexión de un dispositivo IoT. | Application |
+| `DeviceDisconnectedEventHandler` | Event Handler | Gestiona la desconexión de un dispositivo IoT. | Application |
+
+## 5.6.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Electrical Monitoring** implementa la persistencia de las mediciones y estados de monitoreo, además de los mecanismos necesarios para recibir telemetría y publicar los eventos detectados por el dominio.
+
+### Repository Implementations
+
+**MonitoringRepository** implementa `IMonitoringRepository` y gestiona la persistencia del estado actual de monitoreo de cada equipo.
+
+```
+save(ElectricalMonitoring)
+findByEquipmentId(EquipmentId)
+update(ElectricalMonitoring)
+```
+
+**MeasurementRepository** implementa `IMeasurementRepository` y administra el almacenamiento y consulta de las mediciones recibidas.
+
+```
+save(ElectricalMeasurement)
+findByDeviceId(DeviceId)
+findByEquipmentId(EquipmentId)
+findLatestByEquipmentId(EquipmentId)
+```
+
+### Persistence Context
+
+**ElectricalMonitoringDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+ElectricalMonitoring
+ElectricalMeasurement
+Threshold
+```
+
+### Persistence Entities
+
+**ElectricalMonitoringEntity**
+
+```
+ElectricalMonitoringEntity
+- Id
+- EquipmentId
+- Status
+- LastMeasurementAt
+- CreatedAt
+- UpdatedAt
+```
+
+**ElectricalMeasurementEntity**
+
+```
+ElectricalMeasurementEntity
+- Id
+- DeviceId
+- EquipmentId
+- MeasurementType
+- Value
+- Unit
+- MeasuredAt
+- CreatedAt
+```
+
+**ThresholdEntity**
+
+```
+ThresholdEntity
+- Id
+- EquipmentId
+- MeasurementType
+- WarningLimit
+- CriticalLimit
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**ElectricalMonitoringPersistenceMapper** transforma entre `ElectricalMonitoring` y `ElectricalMonitoringEntity`.
+
+**ElectricalMeasurementPersistenceMapper** transforma entre `ElectricalMeasurement` y `ElectricalMeasurementEntity`.
+
+**ThresholdPersistenceMapper** transforma entre `Threshold` y `ThresholdEntity`.
+
+### Telemetry Reception
+
+**TelemetryMessageConsumer** recibe los mensajes provenientes de los dispositivos o gateway IoT y los transforma en solicitudes compatibles con `ReceiveMeasurementCommand`.
+
+Su responsabilidad se limita a la recepción y adaptación de la telemetría; las reglas de validación y evaluación permanecen en las capas Application y Domain.
+
+### Threshold Configuration Access
+
+**ThresholdProvider** obtiene los umbrales configurados para cada equipo y tipo de medición, permitiendo que la Application Layer ejecute la evaluación correspondiente.
+
+Esto es relevante porque ElectroLink contempla la configuración de límites de temperatura y amperaje por equipo. README
+
+### Event Publishing
+
+**ElectricalMonitoringEventPublisher** publica los eventos relevantes generados por este bounded context:
+
+```
+MeasurementReceived
+MeasurementValidated
+ThresholdExceeded
+AnomalyDetected
+```
+
+`ThresholdExceeded` y `AnomalyDetected` son consumidos posteriormente por **Alert Management** para iniciar el ciclo de gestión de alertas.
+
+### Configurations
+
+**ElectricalMonitoringEntityConfiguration** define el mapeo del estado de monitoreo.
+
+**ElectricalMeasurementEntityConfiguration** define el almacenamiento de las mediciones recibidas.
+
+**ThresholdEntityConfiguration** define la persistencia y restricciones asociadas a los umbrales.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `MonitoringRepository` | Repository | Implementa la persistencia del estado de monitoreo. | Infrastructure |
+| `MeasurementRepository` | Repository | Implementa la persistencia y consulta de mediciones. | Infrastructure |
+| `ElectricalMonitoringDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `ElectricalMonitoringEntity` | Persistence Entity | Representa el estado de monitoreo almacenado. | Infrastructure |
+| `ElectricalMeasurementEntity` | Persistence Entity | Representa una medición persistida. | Infrastructure |
+| `ThresholdEntity` | Persistence Entity | Representa los umbrales configurados. | Infrastructure |
+| `ElectricalMonitoringPersistenceMapper` | Mapper | Convierte el estado de monitoreo entre dominio y persistencia. | Infrastructure |
+| `ElectricalMeasurementPersistenceMapper` | Mapper | Convierte las mediciones entre dominio y persistencia. | Infrastructure |
+| `ThresholdPersistenceMapper` | Mapper | Convierte los umbrales entre dominio y persistencia. | Infrastructure |
+| `TelemetryMessageConsumer` | Message Consumer | Recibe telemetría proveniente de dispositivos IoT. | Infrastructure |
+| `ThresholdProvider` | Infrastructure Service | Recupera los límites configurados por equipo. | Infrastructure |
+| `ElectricalMonitoringEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `ElectricalMonitoringEntityConfiguration` | Persistence Configuration | Define el mapeo del monitoreo. | Infrastructure |
+| `ElectricalMeasurementEntityConfiguration` | Persistence Configuration | Define el mapeo de mediciones. | Infrastructure |
+| `ThresholdEntityConfiguration` | Persistence Configuration | Define el mapeo de umbrales. | Infrastructure |
+
+### 5.6.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa el flujo desde la recepción de telemetría hasta la validación y evaluación de las mediciones. Cuando se detecta una condición fuera de los límites establecidos, se publican `ThresholdExceeded`  o `AnomalyDetected`  para **Alert Management**.
+
+![](assets-emergentes/C4Diagrams/ElectricalMonitoringComponentDiagram.png)
+
+#### 5.6.5.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/ElectricalUMLDiagram.png)
+
+#### 5.6.5.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/ElectricalDatabase.png)
+
 # Capítulo VI: Solution UX Design
 
 ## 6.1. Style Guidelines
