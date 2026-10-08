@@ -1529,7 +1529,7 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 
 El presente capítulo desarrolla el diseño táctico de la solución ElectroLink a partir de los Bounded Contexts definidos durante el Strategic-Level Domain-Driven Design. Mientras que el capítulo anterior establece los límites y relaciones entre los diferentes dominios del sistema, en esta etapa se profundiza en la estructura interna de cada contexto, identificando los elementos de software responsables de materializar sus reglas, comportamientos y capacidades.
 
-## 5.1. Bounded Context: dentity & Access Management Bounded Context
+## 5.1. Bounded Context: Identity & Access Management Bounded Context
 
 Identity & Access Management Bounded Context es responsable de administrar la identidad de los usuarios y controlar su acceso a las funcionalidades protegidas de ElectroLink. Su alcance comprende el registro de cuentas, la autenticación, la asignación de roles y la deshabilitación de usuarios.
 
@@ -2633,10 +2633,10 @@ En esta sección se presentan los diagramas a nivel de código correspondientes 
 
 El diagrama de la Domain Layer de Identity & Access Management (ElectroLink) se estructura en:
 
--Aggregate Root: UserAccount (administra rol, estado y credenciales).
--Value Objects: UserId, Email y Credential (con sus respectivas validaciones).
--Enumeraciones: UserRole, AccountStatus y AuthenticationType.
--Interfaces: Contratos de persistencia, seguridad, tokens y políticas independientes de infraestructura.
+- Aggregate Root: UserAccount (administra rol, estado y credenciales).
+- Value Objects: UserId, Email y Credential (con sus respectivas validaciones).
+- Enumeraciones: UserRole, AccountStatus y AuthenticationType.
+- Interfaces: Contratos de persistencia, seguridad, tokens y políticas independientes de infraestructura.
 
 #### 5.1.6.2. Bounded Context Database Design Diagram
 
@@ -2645,8 +2645,487 @@ El diagrama de la Domain Layer de Identity & Access Management (ElectroLink) se 
 El diagrama de base de datos de Identity & Access Management (ElectroLink) se estructura en PostgreSQL e incluye:
 
 - user_accounts: Almacena identificadores, roles, estados y credenciales hasheadas, diferenciando el acceso de managers (correo/contraseña) y trabajadores (DNI/PIN).
--password_reset_tokens: Gestiona las solicitudes temporales de recuperación en relación uno a muchos con las cuentas.
--Restricciones: Incorpora primary y foreign keys, restricciones de unicidad, checks e índices.
+- password_reset_tokens: Gestiona las solicitudes temporales de recuperación en relación uno a muchos con las cuentas.
+- Restricciones: Incorpora primary y foreign keys, restricciones de unicidad, checks e índices.
+---
+
+## 5.2. Bounded Context: Profile & Preferences
+
+### 5.2.1. Domain Layer
+
+La Domain Layer del bounded context Profiles & Preferences contiene las clases responsables de administrar la información del perfil del usuario y sus preferencias de comunicación dentro de ElectroLink.
+
+Este contexto se mantiene separado de Identity & Access Management, ya que no administra autenticación, credenciales ni roles. Su responsabilidad se limita a la información asociada al perfil y a las preferencias configuradas por el usuario. La documentación del proyecto define este bounded context como responsable de administrar los perfiles y sus preferencias, incluyendo la configuración de notificaciones.
+
+**Aggregate Root**
+
+UserProfile es el aggregate root principal del bounded context. Representa el perfil asociado a un usuario registrado y concentra la información necesaria para mantener sus datos y preferencias.
+
+Sus principales responsabilidades son:
+
+- crear el perfil asociado a un usuario;
+- actualizar la información del perfil;
+- mantener las preferencias de notificación;
+- asegurar que las preferencias configuradas sean válidas.
+
+El perfil se encuentra relacionado con el usuario mediante su identificador, sin incorporar información propia del bounded context de identidad.
+---
+
+**Notifcation Preference**
+
+NotificationPreference representa la configuración de canales de comunicación preferidos por el usuario.
+
+De acuerdo con la historia US29 Configuración de Notificaciones Preferidas, el Manager puede 
+seleccionar canales como WhatsApp, SMS o correo electrónico para recibir alertas.     
+
+Este elemento mantiene únicamente la preferencia del usuario. El envío efectivo de mensajes pertenece al bounded context Notifications.
+---
+
+**Value Objetcs**
+
+`ProfileId` representa el identificador único del perfil.
+
+`UserId` representa la referencia al usuario propietario del perfil.
+
+`ContactInformation` agrupa la información de contacto necesaria para las preferencias de comunicación.
+
+`NotificationChannel` representa los canales disponibles para el usuario, considerando inicialmente:
+```
+WHATSAPP
+SMS
+EMAIL
+```
+
+El Event Storming establece además la política “Use default channels when preferences are missing”, por lo que el dominio debe permitir definir un canal predeterminado cuando el usuario aún no haya registrado una preferencia específica.
+---
+
+**Repository Interface**
+
+`IUserProfileRepository` define el contrato necesario para persistir y recuperar perfiles sin acoplar el dominio al mecanismo de almacenamiento.
+
+Sus principales operaciones son:
+```
+save(UserProfile)
+findById(ProfileId)
+findByUserId(UserId)
+update(UserProfile)
+existsByUserId(UserId)
+```
+---
+
+**Domain Service**
+
+*NotificationPreferenceService* concentra las reglas relacionadas con la configuración de preferencias cuando estas no dependen únicamente de una instancia de `UserProfile`.
+
+Sus responsabilidades son:
+```
+validatePreferences()
+resolveDefaultChannel()
+updatePreferences()
+```
+
+Esto permite representar la policy identificada en el Event Storming sin trasladar dicha decisión a otras capas.
+---
+
+**Eventos de Dominio**
+
+Se identificaron los siguientes eventos de dominio:
+```
+ProfileCreated
+ProfileUpdated
+NotificationPreferencesUpdated
+```
+
+`ProfileCreated` se produce cuando se crea correctamente el perfil asociado a un usuario.
+
+`ProfileUpdated` indica que la información del perfil fue modificada.
+
+`NotificationPreferencesUpdated` indica que las preferencias de comunicación fueron actualizadas satisfactoriamente.
+---
+
+**Clases de la Domain Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfile` | Aggregate Root | Representa el perfil del usuario y mantiene su información y preferencias. | Domain |
+| `NotificationPreference` | Entity / Domain Concept | Representa las preferencias de comunicación configuradas por el usuario. | Domain |
+| `ProfileId` | Value Object | Identifica de manera única un perfil. | Domain |
+| `UserId` | Value Object | Referencia al usuario propietario del perfil. | Domain |
+| `ContactInformation` | Value Object | Agrupa la información de contacto asociada al perfil. | Domain |
+| `NotificationChannel` | Enumeration | Define los canales disponibles para notificaciones. | Domain |
+| `IUserProfileRepository` | Repository Interface | Define las operaciones de persistencia del perfil. | Domain |
+| `NotificationPreferenceService` | Domain Service | Gestiona las reglas relacionadas con preferencias y canales predeterminados. | Domain |
+
+### 5.2.2. Interface Layer
+
+La Interface Layer del bounded context Profiles & Preferences contiene las clases responsables de recibir las solicitudes relacionadas con la consulta y actualización del perfil del usuario, así como con la configuración de sus preferencias de notificación.
+
+Esta capa no contiene reglas de negocio; su función es recibir los datos, transformarlos y delegar el procesamiento hacia la Application Layer.
+
+**Controllers**
+
+UserProfileController gestiona las operaciones relacionadas con el perfil del usuario.
+Sus responsabilidades principales son:
+
+- consultar el perfil;
+- actualizar la información del perfil;
+- obtener las preferencias configuradas.
+
+**NotificationPreferenceController** gestiona las solicitudes relacionadas con la configuración de los canales de notificación.
+
+Su responsabilidad principal es permitir que el usuario consulte y actualice sus preferencias de comunicación, de acuerdo con la US29 Configuración de Notificaciones Preferidas.
+---
+
+**Request DTOs**
+UpdateProfileRequest contiene la información modificable del perfil:
+```
+UpdateProfileRequest
+- fullName
+- contactInformation
+```
+
+UpdateNotificationPreferencesRequest contiene los canales seleccionados por el usuario.
+```
+UpdateNotificationPreferencesRequest
+- channels
+```
+
+**Response DTOs**
+UserProfileResponse representa la información del perfil que puede ser expuesta al usuario.
+```
+UserProfileResponse
+- profileId
+- userId
+- fullName
+- contactInformation
+```
+
+NotificationPreferencesResponse representa las preferencias de comunicación registradas.
+```
+NotificationPreferencesResponse
+- channels
+```
+---
+
+**Assemblers**
+
+Los assemblers transforman los datos recibidos por la Interface Layer en commands o queries de la Application Layer.
+
+Se consideran:
+*UpdateProfileCommandFromRequestAssembler*
+```
+UpdateProfileRequest
+        ↓
+UpdateProfileCommand
+```
+
+*UpdateNotificationPreferencesCommandFromRequestAssembler*
+```
+UpdateNotificationPreferencesRequest
+        ↓
+UpdateNotificationPreferencesCommand
+```
+
+`UserProfileResponseAssembler` transforma el resultado obtenido desde la Application Layer en UserProfileResponse.
+
+`NotificationPreferencesResponseAssembler` construye la respuesta asociada a las preferencias configuradas.
+---
+
+**Clases de la Interface Layer**
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfileController` | Controller | Gestiona consultas y actualizaciones del perfil. | Interface |
+| `NotificationPreferenceController` | Controller | Gestiona la configuración de preferencias de notificación. | Interface |
+| `UpdateProfileRequest` | Request DTO | Contiene los datos requeridos para actualizar el perfil. | Interface |
+| `UpdateNotificationPreferencesRequest` | Request DTO | Contiene los canales seleccionados por el usuario. | Interface |
+| `UserProfileResponse` | Response DTO | Representa la información del perfil. | Interface |
+| `NotificationPreferencesResponse` | Response DTO | Representa las preferencias de comunicación configuradas. | Interface |
+| `UpdateProfileCommandFromRequestAssembler` | Assembler | Convierte la solicitud de actualización en un command. | Interface |
+| `UpdateNotificationPreferencesCommandFromRequestAssembler` | Assembler | Convierte la configuración recibida en un command. | Interface |
+| `UserProfileResponseAssembler` | Assembler | Construye la respuesta del perfil. | Interface |
+| `NotificationPreferencesResponseAssembler` | Assembler | Construye la respuesta de preferencias. | Interface |
+---
+
+### 5.2.3. Application Layer
+
+La Application Layer del bounded context Profiles & Preferences coordina los casos de uso relacionados con la creación y actualización del perfil del usuario, así como con la configuración de sus preferencias de notificación.
+
+Su función es recibir los comandos provenientes de la Interface Layer, utilizar los objetos del dominio correspondientes y coordinar la persistencia de los cambios.
+
+**Commands**
+
+Los commands principales se derivan directamente del Event Storming actual:
+
+*CreateProfileCommand*
+Representa la creación inicial de un perfil asociado a un usuario.
+```
+CreateProfileCommand
+- userId
+- fullName
+- contactInformation
+```
+
+*UpdateProfileCommand*
+Representa la actualización de la información del perfil.
+```
+UpdateProfileCommand
+- userId
+- fullName
+- contactInformation
+```
+
+*UpdateNotificationPreferencesCommand*
+Representa la modificación de los canales de comunicación preferidos por el usuario.
+```
+UpdateNotificationPreferencesCommand
+- userId
+- channels
+```
+
+Este último command se relaciona directamente con la US29 Configuración de Notificaciones Preferidas.
+---
+
+**Command Handlers**
+
+*CreateProfileCommandHandler* coordina la creación del perfil después de recibir un CreateProfileCommand.
+Sus principales responsabilidades son:
+
+- verificar que el usuario no tenga un perfil existente;
+- crear el aggregate `UserProfile`;
+- asignar valores iniciales;
+- persistir el perfil;
+- generar `ProfileCreated`.
+
+*UpdateProfileCommandHandler* coordina la modificación de los datos del perfil.
+Sus responsabilidades son:
+
+- recuperar el perfil mediante `IUserProfileRepository`;
+- aplicar los cambios permitidos;
+- persistir el nuevo estado;
+- generar `ProfileUpdated`.
+
+*UpdateNotificationPreferencesCommandHandler* coordina la actualización de las preferencias de comunicación.
+
+Sus responsabilidades son:
+- recuperar el perfil;
+- validar los canales seleccionados;
+- aplicar la política de canales predeterminados cuando corresponda;
+- actualizar `NotificationPreference`;
+- persistir los cambios;
+- generar `otificationPreferencesUpdated`.
+---
+
+**Queries**
+
+Las consultas permiten recuperar información sin modificar el estado del dominio.
+
+*GetUserProfileQuery*
+```
+GetUserProfileQuery
+- userId
+```
+
+Permite obtener la información asociada al perfil de un usuario.
+
+*GetNotificationPreferencesQuery*
+```
+GetNotificationPreferencesQuery
+- userId
+```
+
+Permite consultar los canales de notificación configurados.
+---
+
+**Query Handlers**
+
+*GetUserProfileQueryHandler* recupera el perfil mediante IUserProfileRepository y retorna la información necesaria para la Interface Layer.
+
+*GetNotificationPreferencesQueryHandler* consulta las preferencias asociadas al perfil y devuelve los canales configurados.
+---
+
+**Event Handler**
+
+El EventStorming establece que `UserRegistered`, originado en Identity & Access Management, debe activar la creación inicial del perfil.
+
+Por ello se define:
+
+*UserRegisteredEventHandler*
+Este handler recibe `UserRegistered` y genera internamente un `CreateProfileCommand`, manteniendo separadas las responsabilidades entre ambos bounded contexts.
+
+El flujo queda resumido de esta manera:
+
+```
+UserRegistered
+      ↓
+UserRegisteredEventHandler
+      ↓
+CreateProfileCommand
+      ↓
+CreateProfileCommandHandler
+      ↓
+ProfileCreated
+```
+---
+
+**Clases de la Application Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateProfileCommand` | Command | Solicita la creación inicial de un perfil. | Application |
+| `UpdateProfileCommand` | Command | Solicita la actualización de la información del perfil. | Application |
+| `UpdateNotificationPreferencesCommand` | Command | Solicita actualizar los canales preferidos. | Application |
+| `CreateProfileCommandHandler` | Command Handler | Crea y persiste el perfil del usuario. | Application |
+| `UpdateProfileCommandHandler` | Command Handler | Actualiza los datos del perfil. | Application |
+| `UpdateNotificationPreferencesCommandHandler` | Command Handler | Gestiona la modificación de preferencias de comunicación. | Application |
+| `GetUserProfileQuery` | Query | Solicita la información de un perfil. | Application |
+| `GetNotificationPreferencesQuery` | Query | Solicita las preferencias de notificación. | Application |
+| `GetUserProfileQueryHandler` | Query Handler | Recupera la información del perfil. | Application |
+| `GetNotificationPreferencesQueryHandler` | Query Handler | Recupera los canales de comunicación configurados. | Application |
+| `UserRegisteredEventHandler` | Event Handler | Reacciona a `UserRegistered` y solicita la creación del perfil inicial. | Application |
+---
+
+### 5.2.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context Profiles & Preferences implementa los mecanismos necesarios para persistir perfiles, almacenar preferencias de notificación y gestionar la integración con otros bounded contexts cuando corresponda.
+
+**Repository Implementations**
+
+UserProfileRepository implementa `IUserProfileRepository` y se encarga de almacenar y recuperar el aggregate `UserProfile`.
+
+Sus principales operaciones son:
+
+```
+save(UserProfile)
+findById(ProfileId)
+findByUserId(UserId)
+update(UserProfile)
+existsByUserId(UserId)
+```
+
+*NotificationPreferenceRepository* gestiona la persistencia de las preferencias asociadas al perfil cuando estas se almacenan de forma separada.
+
+```
+save(NotificationPreference)
+findByUserId(UserId)
+update(NotificationPreference)
+```
+---
+**Persistance Context**
+
+Se propone `ProfilesDbContext` como contexto de persistencia del bounded context.
+
+Su responsabilidad es gestionar el acceso a los datos asociados a:
+```
+UserProfile
+NotificationPreference
+```
+
+**Persistance Entities**
+
+*UserProfileEntity*
+
+Representa la estructura persistente del perfil.
+```
+UserProfileEntity
+- Id
+- UserId
+- FullName
+- Phone
+- Email
+- CreatedAt
+- UpdatedAt
+```
+
+*NotificationPreferenceEntity*
+
+Representa las preferencias configuradas por el usuario.
+```
+NotificationPreferenceEntity
+- Id
+- UserId
+- PrimaryChannel
+- WhatsAppEnabled
+- SmsEnabled
+- EmailEnabled
+- UpdatedAt
+```
+
+**Persistance Mappers**
+
+*UserProfilePersistenceMapper* convierte entre `UserProfile` y `UserProfileEntity`.
+
+*NotificationPreferencePersistenceMapper* convierte entre `NotificationPreference` y `NotificationPreferenceEntity`.
+
+Estos mappers permiten mantener separado el modelo de dominio de las estructuras utilizadas para persistencia.
+---
+
+**Event Integration**
+
+Este bounded context recibe el evento: `UserRegistered`proveniente de IAM.
+
+La infraestructura debe proporcionar el mecanismo necesario para entregar dicho evento al `UserRegisteredEventHandler`, que posteriormente inicia la creación del perfil.
+
+Asimismo, pueden publicarse los eventos:
+```
+ProfileCreated
+ProfileUpdated
+NotificationPreferencesUpdated
+```
+
+para que otros bounded contexts conozcan los cambios relevantes sin acceder directamente al modelo interno.
+
+Se propone ProfileEventPublisher como componente encargado de publicar dichos eventos.
+---
+
+**Integración con Notifications**
+
+`NotificationPreferencesUpdated` puede ser consumido por el bounded context *Notifications* para mantener actualizada la información necesaria para el envío de alertas.
+
+Esta integración permite que Profiles & Preferences administre únicamente la configuración del usuario, mientras que Notifications conserva la responsabilidad del envío efectivo.
+---
+
+**Configurations**
+
+*UserProfileEntityConfiguration* define el mapeo de `UserProfileEntity` hacia la base de datos.
+
+*NotificationPreferenceEntityConfiguration* define el mapeo de las preferencias de comunicación.
+
+Estas configuraciones establecen claves, relaciones, restricciones e índices necesarios para la persistencia.
+---
+
+**Clases de la Infrastructure Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfileRepository` | Repository | Implementa la persistencia de perfiles. | Infrastructure |
+| `NotificationPreferenceRepository` | Repository | Gestiona la persistencia de las preferencias de notificación. | Infrastructure |
+| `ProfilesDbContext` | Persistence Context | Administra el acceso a los datos del bounded context. | Infrastructure |
+| `UserProfileEntity` | Persistence Entity | Representa la estructura persistente del perfil. | Infrastructure |
+| `NotificationPreferenceEntity` | Persistence Entity | Representa las preferencias almacenadas. | Infrastructure |
+| `UserProfilePersistenceMapper` | Mapper | Convierte entre el aggregate y su representación persistente. | Infrastructure |
+| `NotificationPreferencePersistenceMapper` | Mapper | Convierte entre preferencias de dominio y persistencia. | Infrastructure |
+| `ProfileEventPublisher` | Event Publisher | Publica eventos generados por el bounded context. | Infrastructure |
+| `UserProfileEntityConfiguration` | Persistence Configuration | Define el mapeo relacional del perfil. | Infrastructure |
+| `NotificationPreferenceEntityConfiguration` | Persistence Configuration | Define el mapeo relacional de las preferencias. | Infrastructure |
+---
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram de Profiles & Preferences representa los componentes responsables de administrar perfiles y preferencias de comunicación. El contexto recibe `UserRegistered` desde Identity & Access Management para crear el perfil inicial y comunica los cambios de preferencias hacia Notifications.
+
+![](assets-emergentes/C4Diagrams/ProfilesPreferencesComponentDiagram.png)
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de código del bounded context Profiles & Preferences, detallando la estructura del modelo de dominio y su persistencia. De acuerdo con el enunciado, el diagrama de clases debe mostrar clases, interfaces, enumeraciones, atributos, métodos y relaciones con multiplicidad.
+
+#### 5.2.6.1. Bounded COntext Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/Profiles-Preferences-Diagram.png)
+
+#### 5.2.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Profiles-Preferences-Database.png)
 
 # Capítulo VI: Solution UX Design
 
