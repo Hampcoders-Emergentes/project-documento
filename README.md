@@ -6876,6 +6876,734 @@ El diagrama representa el flujo de registro de consumo energético, cálculo de 
 
 ![](assets-emergentes/DatabaseDiagram/energy_maintenance_database.png)
 
+## 5.10. Analytics Bounded Context
+
+El bounded context **Analytics** se encarga de consolidar información proveniente de los demás módulos para generar indicadores, tendencias, resúmenes de consumo y reportes orientados a la toma de decisiones. README
+
+En el Event Storming actual aparecen como elementos principales `Indicator`, `Trend`, `ConsumptionSummary`, `Report`, `GenerateReport` y `ReportGenerated`. Además, este contexto recibe eventos como `EnergyConsumptionRecorded`, `MaintenanceCompleted` y `AlertResolved`, que sirven como insumos para construir información analítica.
+
+### 5.10.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la consolidación de información, cálculo de indicadores, identificación de tendencias y generación lógica de reportes.
+
+### Aggregate Roots
+
+**AnalyticsReport** representa un reporte consolidado generado a partir de información histórica y operativa.
+
+Sus principales responsabilidades son:
+
+-   consolidar información relevante;
+-   asociar indicadores y tendencias;
+-   incluir resúmenes de consumo;
+-   definir el periodo analizado;
+-   mantener el estado de generación del reporte.
+
+**ConsumptionSummary** representa un resumen del consumo energético correspondiente a un equipo, local o periodo.
+
+Sus responsabilidades son:
+
+-   consolidar consumo energético;
+-   calcular valores acumulados;
+-   mantener costos asociados;
+-   permitir comparación entre periodos.
+
+### Entities
+
+**Indicator** representa una métrica calculada a partir de los datos consolidados del sistema.
+
+Ejemplos de información que puede representar son consumo energético, número de alertas o mantenimientos realizados.
+
+**Trend** representa la evolución de una métrica durante un periodo determinado y permite identificar variaciones en el comportamiento del sistema.
+
+### Value Objects
+
+**ReportId** identifica de manera única un reporte.
+
+**IndicatorId** identifica un indicador calculado.
+
+**Period** representa el intervalo de análisis.
+
+```
+Period
+- startDate
+- endDate
+```
+
+**MetricValue** representa el valor de un indicador.
+
+```
+MetricValue
+- value
+- unit
+```
+
+**PercentageVariation** representa la variación entre dos valores o periodos.
+
+```
+PercentageVariation
+- value
+```
+
+### Enumerations
+
+**ReportType**
+
+```
+ENERGY
+MAINTENANCE
+ALERTS
+GENERAL
+```
+
+**TrendDirection**
+
+```
+INCREASING
+DECREASING
+STABLE
+```
+
+Estas categorías permiten representar de manera simple la evolución de las métricas analizadas.
+
+### Repository Interfaces
+
+**IAnalyticsReportRepository**
+
+```
+save(AnalyticsReport)
+findById(ReportId)
+findByPeriod(Period)
+```
+
+**IConsumptionSummaryRepository**
+
+```
+save(ConsumptionSummary)
+findByEquipmentId(EquipmentId)
+findByPeriod(Period)
+```
+
+### Domain Services
+
+**IndicatorCalculationService** calcula indicadores a partir de los datos consolidados.
+
+```
+calculateIndicator()
+calculateVariation()
+```
+
+**TrendAnalysisService** determina la evolución de una métrica dentro de un periodo.
+
+```
+analyzeTrend()
+determineDirection()
+```
+
+**ReportGenerationService** organiza la información analítica que formará parte de un reporte.
+
+```
+generateReport()
+buildSummary()
+```
+
+La función de Analytics está alineada con la necesidad de ofrecer información histórica y en tiempo real, así como reportes e insights para facilitar la toma de decisiones. README
+
+### Eventos del dominio
+
+El principal evento generado por este bounded context es:
+
+```
+ReportGenerated
+```
+
+Este evento indica que un reporte analítico ha sido generado correctamente y se encuentra disponible para su consulta o exportación.
+
+### Eventos recibidos
+
+Analytics consolida información a partir de eventos generados en otros bounded contexts:
+
+```
+EnergyConsumptionRecorded
+MaintenanceCompleted
+AlertResolved
+```
+
+Estos eventos permiten actualizar progresivamente los datos necesarios para indicadores, tendencias y reportes sin consultar directamente los agregados internos de otros módulos.
+
+### Flujo principal
+
+```
+EnergyConsumptionRecorded
+MaintenanceCompleted
+AlertResolved
+        ↓
+   Consolidate Data
+        ↓
+ ┌───────────────┐
+ │   Indicator   │
+ │     Trend     │
+ │ConsumptionSummary│
+ └───────────────┘
+        ↓
+   GenerateReport
+        ↓
+  AnalyticsReport
+        ↓
+  ReportGenerated
+```
+
+Este flujo permite que el Manager disponga de información consolidada sobre consumo, incidencias y desempeño operativo de los establecimientos. README
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsReport` | Aggregate Root | Representa un reporte consolidado del sistema. | Domain |
+| `ConsumptionSummary` | Aggregate Root | Representa un resumen de consumo energético. | Domain |
+| `Indicator` | Entity | Representa una métrica calculada. | Domain |
+| `Trend` | Entity | Representa la evolución de una métrica. | Domain |
+| `ReportId` | Value Object | Identifica un reporte. | Domain |
+| `IndicatorId` | Value Object | Identifica un indicador. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo asociado a un resumen. | Domain |
+| `Period` | Value Object | Representa el intervalo analizado. | Domain |
+| `MetricValue` | Value Object | Representa el valor de una métrica. | Domain |
+| `PercentageVariation` | Value Object | Representa una variación porcentual. | Domain |
+| `ReportType` | Enumeration | Define el tipo de reporte. | Domain |
+| `TrendDirection` | Enumeration | Define la dirección de una tendencia. | Domain |
+| `IAnalyticsReportRepository` | Repository Interface | Define la persistencia de reportes. | Domain |
+| `IConsumptionSummaryRepository` | Repository Interface | Define la persistencia de resúmenes de consumo. | Domain |
+| `IndicatorCalculationService` | Domain Service | Calcula indicadores y variaciones. | Domain |
+| `TrendAnalysisService` | Domain Service | Analiza tendencias. | Domain |
+| `ReportGenerationService` | Domain Service | Organiza la información que compone un reporte. | Domain |
+
+### 5.10.2. Interface Layer
+
+La **Interface Layer** del bounded context **Analytics** recibe las solicitudes relacionadas con la consulta de indicadores, tendencias, resúmenes de consumo y generación de reportes.
+
+### Controllers
+
+**AnalyticsController** gestiona las consultas analíticas principales.
+
+Sus responsabilidades son:
+
+-   consultar indicadores;
+-   consultar tendencias;
+-   consultar resúmenes de consumo;
+-   solicitar la generación de reportes.
+
+**ReportController** gestiona las operaciones específicas relacionadas con los reportes analíticos.
+
+### Request DTOs
+
+**GenerateReportRequest**
+
+```
+GenerateReportRequest
+- reportType
+- startDate
+- endDate
+```
+
+**AnalyticsFilterRequest**
+
+```
+AnalyticsFilterRequest
+- equipmentId
+- startDate
+- endDate
+```
+
+### Response DTOs
+
+**IndicatorResponse**
+
+```
+IndicatorResponse
+- indicatorId
+- name
+- value
+- unit
+- periodStart
+- periodEnd
+```
+
+**TrendResponse**
+
+```
+TrendResponse
+- metric
+- direction
+- percentageVariation
+- startDate
+- endDate
+```
+
+**ConsumptionSummaryResponse**
+
+```
+ConsumptionSummaryResponse
+- equipmentId
+- totalConsumptionKwh
+- totalCost
+- currency
+- percentageVariation
+- startDate
+- endDate
+```
+
+**AnalyticsReportResponse**
+
+```
+AnalyticsReportResponse
+- reportId
+- reportType
+- startDate
+- endDate
+- generatedAt
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+GenerateReportCommandFromRequestAssembler
+IndicatorResponseAssembler
+TrendResponseAssembler
+ConsumptionSummaryResponseAssembler
+AnalyticsReportResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands o queries y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Event Consumers
+
+La capa de interfaz también recibe información generada por otros bounded contexts.
+
+**EnergyConsumptionRecordedConsumer** recibe `EnergyConsumptionRecorded` desde **Energy & Maintenance Management**.
+
+**MaintenanceCompletedConsumer** recibe `MaintenanceCompleted`.
+
+**AlertResolvedConsumer** recibe `AlertResolved` desde **Alert Management**.
+
+Estos eventos se transforman en solicitudes de actualización de la información analítica.
+
+### Flujo de entrada
+
+```
+EnergyConsumptionRecorded
+        ↓
+EnergyConsumptionRecordedConsumer
+        ↓
+UpdateConsumptionAnalytics
+```
+
+```
+MaintenanceCompleted
+        ↓
+MaintenanceCompletedConsumer
+        ↓
+UpdateMaintenanceAnalytics
+```
+
+```
+AlertResolved
+        ↓
+AlertResolvedConsumer
+        ↓
+UpdateAlertAnalytics
+```
+
+La capa de interfaz no realiza los cálculos de indicadores ni tendencias; únicamente recibe las solicitudes y las delega hacia la **Application Layer**.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsController` | Controller | Gestiona consultas de indicadores, tendencias y resúmenes. | Interface |
+| `ReportController` | Controller | Gestiona solicitudes relacionadas con reportes. | Interface |
+| `EnergyConsumptionRecordedConsumer` | Consumer | Recibe eventos de consumo energético. | Interface |
+| `MaintenanceCompletedConsumer` | Consumer | Recibe eventos de mantenimiento completado. | Interface |
+| `AlertResolvedConsumer` | Consumer | Recibe eventos de alertas resueltas. | Interface |
+| `GenerateReportRequest` | Request DTO | Contiene los parámetros para generar un reporte. | Interface |
+| `AnalyticsFilterRequest` | Request DTO | Contiene filtros para consultas analíticas. | Interface |
+| `IndicatorResponse` | Response DTO | Representa un indicador calculado. | Interface |
+| `TrendResponse` | Response DTO | Representa una tendencia calculada. | Interface |
+| `ConsumptionSummaryResponse` | Response DTO | Representa un resumen de consumo. | Interface |
+| `AnalyticsReportResponse` | Response DTO | Representa un reporte generado. | Interface |
+| `GenerateReportCommandFromRequestAssembler` | Assembler | Convierte una solicitud en command de generación de reporte. | Interface |
+| `IndicatorResponseAssembler` | Assembler | Construye respuestas de indicadores. | Interface |
+| `TrendResponseAssembler` | Assembler | Construye respuestas de tendencias. | Interface |
+| `ConsumptionSummaryResponseAssembler` | Assembler | Construye respuestas de consumo consolidado. | Interface |
+| `AnalyticsReportResponseAssembler` | Assembler | Construye respuestas de reportes. | Interface |
+
+### 5.10.3. Application Layer
+
+La **Application Layer** del bounded context **Analytics** coordina los casos de uso relacionados con la consolidación de datos, cálculo de indicadores y tendencias, generación de resúmenes y elaboración de reportes.
+
+### Commands
+
+**UpdateConsumptionAnalyticsCommand**
+
+```
+UpdateConsumptionAnalyticsCommand
+- equipmentId
+- consumptionKwh
+- energyCost
+- periodStart
+- periodEnd
+```
+
+**UpdateMaintenanceAnalyticsCommand**
+
+```
+UpdateMaintenanceAnalyticsCommand
+- maintenanceRequestId
+- equipmentId
+- completedAt
+```
+
+**UpdateAlertAnalyticsCommand**
+
+```
+UpdateAlertAnalyticsCommand
+- alertId
+- equipmentId
+- severity
+- resolvedAt
+```
+
+**GenerateReportCommand**
+
+```
+GenerateReportCommand
+- reportType
+- startDate
+- endDate
+```
+
+### Command Handlers
+
+**UpdateConsumptionAnalyticsCommandHandler** procesa los datos de consumo recibidos, actualiza el resumen correspondiente y prepara la información necesaria para indicadores y tendencias.
+
+**UpdateMaintenanceAnalyticsCommandHandler** incorpora la información de mantenimientos completados dentro de los datos analíticos.
+
+**UpdateAlertAnalyticsCommandHandler** registra la información de alertas resueltas para su posterior análisis.
+
+**GenerateReportCommandHandler** coordina la generación del reporte utilizando `ReportGenerationService` y genera el evento `ReportGenerated`.
+
+### Queries
+
+**GetIndicatorsQuery**
+
+```
+GetIndicatorsQuery
+- startDate
+- endDate
+```
+
+**GetTrendsQuery**
+
+```
+GetTrendsQuery
+- startDate
+- endDate
+```
+
+**GetConsumptionSummaryQuery**
+
+```
+GetConsumptionSummaryQuery
+- equipmentId
+- startDate
+- endDate
+```
+
+**GetReportByIdQuery**
+
+```
+GetReportByIdQuery
+- reportId
+```
+
+### Query Handlers
+
+**GetIndicatorsQueryHandler** obtiene los datos necesarios y utiliza `IndicatorCalculationService` para devolver los indicadores correspondientes al periodo solicitado.
+
+**GetTrendsQueryHandler** utiliza `TrendAnalysisService` para determinar la evolución de las métricas analizadas.
+
+**GetConsumptionSummaryQueryHandler** recupera el resumen de consumo asociado a un equipo y periodo.
+
+**GetReportByIdQueryHandler** obtiene un reporte previamente generado.
+
+### Event Handlers
+
+**EnergyConsumptionRecordedEventHandler** recibe `EnergyConsumptionRecorded` y genera `UpdateConsumptionAnalyticsCommand`.
+
+**MaintenanceCompletedEventHandler** recibe `MaintenanceCompleted` y genera `UpdateMaintenanceAnalyticsCommand`.
+
+**AlertResolvedEventHandler** recibe `AlertResolved` y genera `UpdateAlertAnalyticsCommand`.
+
+### Flujo de aplicación
+
+```
+EnergyConsumptionRecorded
+        ↓
+EnergyConsumptionRecordedEventHandler
+        ↓
+UpdateConsumptionAnalyticsCommand
+        ↓
+UpdateConsumptionAnalyticsCommandHandler
+        ↓
+ConsumptionSummary
+        ↓
+Indicator / Trend
+```
+
+```
+MaintenanceCompleted
+        ↓
+MaintenanceCompletedEventHandler
+        ↓
+UpdateMaintenanceAnalyticsCommand
+        ↓
+UpdateMaintenanceAnalyticsCommandHandler
+```
+
+```
+AlertResolved
+        ↓
+AlertResolvedEventHandler
+        ↓
+UpdateAlertAnalyticsCommand
+        ↓
+UpdateAlertAnalyticsCommandHandler
+```
+
+```
+GenerateReportCommand
+        ↓
+GenerateReportCommandHandler
+        ↓
+ReportGenerationService
+        ↓
+AnalyticsReport
+        ↓
+ReportGenerated
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UpdateConsumptionAnalyticsCommand` | Command | Solicita actualizar la información analítica de consumo. | Application |
+| `UpdateMaintenanceAnalyticsCommand` | Command | Solicita registrar información analítica de mantenimiento. | Application |
+| `UpdateAlertAnalyticsCommand` | Command | Solicita registrar información analítica de alertas. | Application |
+| `GenerateReportCommand` | Command | Solicita generar un reporte analítico. | Application |
+| `UpdateConsumptionAnalyticsCommandHandler` | Command Handler | Procesa y consolida datos de consumo. | Application |
+| `UpdateMaintenanceAnalyticsCommandHandler` | Command Handler | Procesa datos de mantenimientos completados. | Application |
+| `UpdateAlertAnalyticsCommandHandler` | Command Handler | Procesa datos de alertas resueltas. | Application |
+| `GenerateReportCommandHandler` | Command Handler | Coordina la generación del reporte. | Application |
+| `GetIndicatorsQuery` | Query | Consulta indicadores de un periodo. | Application |
+| `GetTrendsQuery` | Query | Consulta tendencias analíticas. | Application |
+| `GetConsumptionSummaryQuery` | Query | Consulta resúmenes de consumo. | Application |
+| `GetReportByIdQuery` | Query | Consulta un reporte específico. | Application |
+| `GetIndicatorsQueryHandler` | Query Handler | Recupera y calcula indicadores. | Application |
+| `GetTrendsQueryHandler` | Query Handler | Recupera y analiza tendencias. | Application |
+| `GetConsumptionSummaryQueryHandler` | Query Handler | Recupera resúmenes de consumo. | Application |
+| `GetReportByIdQueryHandler` | Query Handler | Recupera un reporte generado. | Application |
+| `EnergyConsumptionRecordedEventHandler` | Event Handler | Procesa eventos de consumo energético. | Application |
+| `MaintenanceCompletedEventHandler` | Event Handler | Procesa eventos de mantenimiento completado. | Application |
+| `AlertResolvedEventHandler` | Event Handler | Procesa eventos de alertas resueltas. | Application |
+
+### 5.10.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Analytics** implementa la persistencia de reportes y resúmenes analíticos, el consumo de eventos provenientes de otros bounded contexts y la generación física de reportes para consulta o exportación.
+
+### Repository Implementations
+
+**AnalyticsReportRepository** implementa `IAnalyticsReportRepository` y administra la persistencia de los reportes generados.
+
+```
+save(AnalyticsReport)
+findById(ReportId)
+findByPeriod(Period)
+```
+
+**ConsumptionSummaryRepository** implementa `IConsumptionSummaryRepository` y gestiona los resúmenes consolidados de consumo.
+
+```
+save(ConsumptionSummary)
+findByEquipmentId(EquipmentId)
+findByPeriod(Period)
+```
+
+### Persistence Context
+
+**AnalyticsDbContext** administra los datos correspondientes al bounded context.
+
+Gestiona principalmente:
+
+```
+AnalyticsReport
+ConsumptionSummary
+Indicator
+Trend
+```
+
+### Persistence Entities
+
+**AnalyticsReportEntity**
+
+```
+AnalyticsReportEntity
+- Id
+- ReportType
+- PeriodStart
+- PeriodEnd
+- GeneratedAt
+```
+
+**ConsumptionSummaryEntity**
+
+```
+ConsumptionSummaryEntity
+- Id
+- EquipmentId
+- TotalConsumptionKwh
+- TotalCost
+- Currency
+- PeriodStart
+- PeriodEnd
+- PercentageVariation
+- UpdatedAt
+```
+
+**IndicatorEntity**
+
+```
+IndicatorEntity
+- Id
+- Name
+- Value
+- Unit
+- PeriodStart
+- PeriodEnd
+```
+
+**TrendEntity**
+
+```
+TrendEntity
+- Id
+- Metric
+- Direction
+- PercentageVariation
+- PeriodStart
+- PeriodEnd
+```
+
+### Persistence Mappers
+
+**AnalyticsReportPersistenceMapper** transforma entre `AnalyticsReport` y `AnalyticsReportEntity`.
+
+**ConsumptionSummaryPersistenceMapper** transforma entre `ConsumptionSummary` y `ConsumptionSummaryEntity`.
+
+**IndicatorPersistenceMapper** convierte `Indicator` en su representación persistente.
+
+**TrendPersistenceMapper** realiza el mapeo de `Trend`.
+
+### Event Consumers
+
+**EnergyConsumptionRecordedEventConsumer** recibe `EnergyConsumptionRecorded` desde **Energy & Maintenance Management** y lo dirige hacia `EnergyConsumptionRecordedEventHandler`.
+
+**MaintenanceCompletedEventConsumer** recibe `MaintenanceCompleted` y lo deriva hacia `MaintenanceCompletedEventHandler`.
+
+**AlertResolvedEventConsumer** recibe `AlertResolved` desde **Alert Management** y lo dirige hacia `AlertResolvedEventHandler`.
+
+Estos consumers permiten que Analytics se mantenga actualizado a partir de eventos del sistema sin depender directamente de las bases de datos de otros bounded contexts.
+
+### Report Generation
+
+**ReportDocumentGenerator** se encarga de transformar `AnalyticsReport` en un documento descargable.
+
+```
+generatePdf(AnalyticsReport)
+generateExcel(AnalyticsReport)
+```
+
+Esto permite cubrir la necesidad de exportar reportes para análisis interno y revisión operativa. ElectroLink contempla reportes descargables y documentos PDF como parte de sus requerimientos de gestión y auditoría. README
+
+### Report Storage
+
+**ReportStorage** almacena los documentos generados y proporciona su referencia para posteriores consultas.
+
+```
+store(ReportDocument)
+getByReportId(ReportId)
+```
+
+### Event Publishing
+
+**AnalyticsEventPublisher** publica los eventos generados dentro del contexto.
+
+Principalmente:
+
+```
+ReportGenerated
+```
+
+### Configurations
+
+**AnalyticsReportEntityConfiguration** define el mapeo relacional del reporte.
+
+**ConsumptionSummaryEntityConfiguration** define el mapeo de los resúmenes energéticos.
+
+**IndicatorEntityConfiguration** configura la persistencia de indicadores.
+
+**TrendEntityConfiguration** configura la persistencia de tendencias.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsReportRepository` | Repository | Implementa la persistencia de reportes analíticos. | Infrastructure |
+| `ConsumptionSummaryRepository` | Repository | Implementa la persistencia de resúmenes de consumo. | Infrastructure |
+| `AnalyticsDbContext` | Persistence Context | Gestiona la información persistente del bounded context. | Infrastructure |
+| `AnalyticsReportEntity` | Persistence Entity | Representa un reporte almacenado. | Infrastructure |
+| `ConsumptionSummaryEntity` | Persistence Entity | Representa un resumen de consumo consolidado. | Infrastructure |
+| `IndicatorEntity` | Persistence Entity | Representa un indicador almacenado. | Infrastructure |
+| `TrendEntity` | Persistence Entity | Representa una tendencia almacenada. | Infrastructure |
+| `AnalyticsReportPersistenceMapper` | Mapper | Convierte reportes entre dominio y persistencia. | Infrastructure |
+| `ConsumptionSummaryPersistenceMapper` | Mapper | Convierte resúmenes de consumo. | Infrastructure |
+| `IndicatorPersistenceMapper` | Mapper | Convierte indicadores entre dominio y persistencia. | Infrastructure |
+| `TrendPersistenceMapper` | Mapper | Convierte tendencias entre dominio y persistencia. | Infrastructure |
+| `EnergyConsumptionRecordedEventConsumer` | Event Consumer | Recibe eventos de consumo energético. | Infrastructure |
+| `MaintenanceCompletedEventConsumer` | Event Consumer | Recibe eventos de mantenimiento completado. | Infrastructure |
+| `AlertResolvedEventConsumer` | Event Consumer | Recibe eventos de alertas resueltas. | Infrastructure |
+| `ReportDocumentGenerator` | Infrastructure Service | Genera documentos PDF y Excel. | Infrastructure |
+| `ReportStorage` | Infrastructure Service | Almacena los reportes generados. | Infrastructure |
+| `AnalyticsEventPublisher` | Event Publisher | Publica `ReportGenerated`. | Infrastructure |
+| `AnalyticsReportEntityConfiguration` | Persistence Configuration | Configura la persistencia de reportes. | Infrastructure |
+| `ConsumptionSummaryEntityConfiguration` | Persistence Configuration | Configura la persistencia de resúmenes. | Infrastructure |
+| `IndicatorEntityConfiguration` | Persistence Configuration | Configura la persistencia de indicadores. | Infrastructure |
+| `TrendEntityConfiguration` | Persistence Configuration | Configura la persistencia de tendencias. | Infrastructure |
+
+### 5.10.5 Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama representa cómo Analytics recibe información desde otros bounded contexts, consolida los datos y genera indicadores, tendencias, resúmenes y reportes.
+
+![](assets-emergentes/C4Diagrams/AnalyticsComponentDiagram.png)
+
+### 5.10.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.10.6.1. Bounded Context Domain Layer Class Diagram 
+
+![](assets-emergentes/ClassDiagrams/Analytics_UML.png)
+
+#### 5.10.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Analytcis_Database.png)
+
 # Capítulo VI: Solution UX Design
 
 ## 6.1. Style Guidelines
