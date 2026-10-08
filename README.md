@@ -1409,80 +1409,126 @@ El administrador solicita un reporte de cumplimiento para auditorías oficiales 
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
 
-## 1. Identity and Access Management (IAM)
-Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
+### 1. Identity & Access Management
+
+Gestiona el registro, autenticación, autorización, roles y control de acceso de los usuarios dentro de ElectroLink.
 
 ---
+
 \
-![](assets-emergentes/IAM-bd.PNG)
+
+![](assets-emergentes/IAM-Canvas.PNG)
 
 ---
-## 2. Subscription and Payments
-Gestión de planes, facturación y control de acceso a funcionalidades.
+
+### 2. Profiles & Preferences
+
+Administra los perfiles de usuario y sus preferencias personales, incluyendo la configuración de canales de notificación.
 
 ---
+
 \
-![](assets-emergentes/bd-subscription.PNG)
 
+![](assets-emergentes/Profiles-canvas.png.PNG)
+
+---
+
+### 3. Subscriptions & Payments
+
+Gestiona los planes de suscripción, activaciones, renovaciones, suspensiones y pagos asociados al acceso a ElectroLink.
 
 ---
 
-## 3. Profiles and Preferences
-Administración de perfiles de usuarios, técnicos y configuración personalizada.
-
----
 \
-![](assets-emergentes/bd-profiles.PNG)
 
+![](assets-emergentes/Subscriptions-canvas.PNG)
+
+---
+
+### 4. Store & Electrical Asset Management
+
+Administra los locales, áreas eléctricas y equipos que forman parte de la infraestructura monitoreada por ElectroLink.
 
 ---
 
-## 4. Service Design and Planning
-Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
-
----
 \
-![](assets-emergentes/service-desing-bd.PNG)
+
+![](assets-emergentes/Store-Electrical_canvas.PNG)
 
 ---
 
-## 5. Service Operation and Monitoring
-Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
+### 5. IoT Device Management
 
----
+Gestiona el registro, vinculación, configuración, conectividad y estado operativo de los dispositivos IoT asociados a los equipos eléctricos.
+
+----------
+
 \
-![](assets-emergentes/bd-service-operation.PNG)
 
+![](assets-emergentes/IoT-canvas.PNG)
+
+---
+
+### 6. Electrical Monitoring
+
+Recibe y valida las mediciones eléctricas, evalúa el estado de los equipos y detecta umbrales excedidos o anomalías.
 
 ---
 
-## 6. Assets and Resource Management
-Gestión de propiedades, dispositivos IoT e inventario de técnicos.
-
----
 \
-![](assets-emergentes/bd-assets.PNG)
+
+![](assets-emergentes/Electrical-canvas.PNG)
 
 ---
 
-## 7. IoT Monitoring and Edge Processing
-Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
+### 7. Alert Management
+
+Gestiona la creación, clasificación y ciclo de vida de las alertas generadas por condiciones eléctricas críticas o preventivas.
 
 ---
+
 \
-![](assets-emergentes/bd-iot.PNG)
+
+![](assets-emergentes/Alert-canvas.PNG)
 
 ---
 
-## 8. Analytics
-Visualización, reportes e insights a partir de datos históricos y en tiempo real.
+### 8. Notifications
+
+Distribuye alertas y notificaciones a los usuarios mediante los canales disponibles y administra los reintentos de entrega.
 
 ---
+
 \
-![](assets-emergentes/bd-analytics.PNG)
 
+![](assets-emergentes/Notifications-canvas.PNG)
 
 ---
+
+### 9. Energy & Maintenance Management
+
+Registra y analiza el consumo energético, calcula costos y gestiona solicitudes, programación y ejecución de actividades de mantenimiento.
+
+---
+
+\
+
+![](assets-emergentes/Energy-canvas.PNG)
+
+---
+
+### 10. Analytics
+
+Consolida información del sistema para generar indicadores, tendencias, resúmenes de consumo y reportes orientados a la toma de decisiones.
+
+---
+
+\
+
+![](assets-emergentes/Analytics-canvas.PNG)
+
+---
+
 
 ### 4.2.5. Context Mapping
 \
