@@ -2034,7 +2034,9 @@ Si los datos permiten continuar, utiliza `ICredentialHashingService` para proteg
 Después de una creación satisfactoria se produce el evento `UserRegistered`, identificado explícitamente en el EventStorming.
 
 El EventStorming también establece la política “Create initial profile after user registration”, por lo que `UserRegistered` funciona como punto de integración para que Profiles & Preferences pueda crear posteriormente el perfil correspondiente. Identity & Access Management no crea ni administra dicho perfil.
+
 ---
+
 **AuthenticateUserCommandHandler**
 `AuthenticateUserCommandHandler` coordina el acceso con un usuario.
 Su lfujo es:
@@ -2061,7 +2063,9 @@ Posteriormente delega la verificación de la credencial a `ICredentialHashingSer
 Si la autenticación es satisfactoria, solicita a `IAuthenticationTokenService` la generación de la credencial de acceso requerida por la sesión.
 
 Finalmente, el proceso genera `UserAuthenticated`.
+
 ---
+
 **AssignRoleCommandHandler**
 `AssignRoleCommandHandler` coordina la asignación de un rol a una cuenta registrada.
 El flujo es:
@@ -2084,7 +2088,9 @@ El handler recupera el aggregate correspondiente mediante `IUserAccountRepositor
 Posteriormente solicita al dominio validar la asignación mediante `IAccessPolicyService` y ejecuta `assignRole()` sobre `UserAccount`.
 
 Una vez persistido el nuevo estado se produce `RoleAssigned`, manteniendo correspondencia directa con el EventStorming.
+
 ---
+
 **DisableUserCommandHandler**
 `DisableUserCommandHandler` implementa el caso de uso asociado a la deshabilitación de una cuenta.
 ```
@@ -2108,6 +2114,7 @@ Cuando la operación es válida ejecuta `disable()` sobre el aggregate y persist
 Como resultado se genera el evento `UserDisabled`.
 
 A partir de este momento, posteriores intentos de autenticación deberán ser rechazados por las reglas de dominio asociadas al `AccountStatus`.
+
 ---
 
 **RequestPasswordResetCommandHandler**
@@ -2129,6 +2136,7 @@ Solicitar entrega del mecanismo de recuperación
 La historia de usuario establece que el Manager puede solicitar la restauración mediante su correo y recibir un enlace seguro con vigencia limitada.
 
 El Application Handler no envía directamente el correo ni implementa el proveedor de mensajería. Únicamente coordina el proceso. La implementación concreta de dicha integración corresponderá a Infrastructure Layer.
+
 ---
 
 **ResetPasswordCommandHandler**
@@ -2155,6 +2163,7 @@ Invalidar token
 La validez del `PasswordResetToken` se comprueba utilizando las reglas definidas en la Domain Layer.
 
 Después de establecer correctamente la nueva credencial, el token queda invalidado para impedir su reutilización.
+
 ---
 
 #### Queries
@@ -2178,6 +2187,7 @@ GetuserRoleIdQuery
 Permite conocer el rol actualmente asociado al usuario.
 
 No se incluye una consulta que devuelva credenciales, hashes, PIN ni tokens de recuperación debido a que dicha información no debe exponerse hacia las capas superiores.
+
 ---
 
 #### Query Handlers
@@ -2187,6 +2197,7 @@ consulta `IUserAccountRepository`, recupera la cuenta mediante su identificador 
 **GetUserRoleQueryHandler** recupera el usuario y retorna su `UserRole`, permitiendo que otras capacidades determinen la clasificación general de la cuenta sin acceder directamente al modelo persistente.
 
 La separación entre commands y queries mantiene coherencia con el enfoque empleado en el ejemplo del ciclo anterior, donde las operaciones que modifican estado se gestionan mediante Command Handlers y las lecturas se realizan mediante Query Handlers.
+
 ---
 
 #### Event Handling
@@ -2222,6 +2233,7 @@ Responsable de solicitar la publicación del evento generado después de registr
 La implementación técnica del mecanismo de mensajería no pertenece a Application Layer y será tratada en Infrastructure Layer.
 
 No conviene crear aquí un `CreateProfileEventHandler` porque eso trasladaría a IAM una responsabilidad que en el Event Storming pertenece a otro bounded context.
+
 ---
 
 #### Flujo completo de autenticación
@@ -2257,6 +2269,7 @@ La Application Layer actúa como orquestador del flujo, mientras que:
 - Infrastructure implementa persistencia y servicios tecnológicos.
 
 ---
+
 #### Clases de la Aplication Layer
 
 | Nombre | Tipo | Descripción | Capa |
@@ -2314,6 +2327,7 @@ findValidByUserId(UserId)
 invalidate(PasswordResetToken)
 ```
 ---
+
 #### Persistance Context
 Para encapsular el acceso a PostgreSQL se propone IdentityDbContext, implementado mediante Entity Framework Core.
 Conceptualmente contiene los conjuntos asociados a las entidades persistentes del contexto:
@@ -2332,7 +2346,9 @@ El DbContext no representa reglas del dominio. Su función es exclusivamente té
 - gestionar transacciones;
 - aplicar configuraciones y constraints;
 - persistir modificaciones.
+
 ---
+
 #### Persistance Mappers
 Para evitar que las entidades del dominio dependan directamente de Entity Framework Core se propone el uso de **Persistence Mappers**.
 **UserAccountPersistenceMapper** transforma:
@@ -2344,7 +2360,7 @@ UserAccountEntity
 
 De esta manera, anotaciones, configuraciones de tablas, foreign keys o particularidades de PostgreSQL permanecen fuera del modelo de dominio.
 **PasswordResetPersistenceMapper** realiza la misma función para `PasswordResetToken`.
----
+
 **CredentialHashingService**
 `CredentialHashingService` implementa `ICredentialHashingService`.
 
@@ -2362,6 +2378,7 @@ Este servicio es utilizado por:
 - ResetPasswordCommandHandler.
 
 ---
+
 **AuthenticationTokenService**
 `AuthenticationTokenService` implementa `IAuthenticationTokenService`.
 
@@ -2395,6 +2412,7 @@ JWT
 ```
 
 Esto permite que el backend mantenga una estrategia de autenticación centralizada y consistente con las decisiones arquitectónicas del proyecto.
+
 ---
 
 #### Authentication Middleware
@@ -2537,6 +2555,7 @@ Responsable de configurar:
 - constraints requeridos.
 
 Estas clases pertenecen exclusivamente a Infrastructure Layer.
+
 ---
 
 #### Flujo completo de registro
@@ -2564,6 +2583,7 @@ IdentityEventPublisher
 UserRegistered
 ```
 La capa de aplicación conoce las interfaces, pero no las clases concretas.
+
 ---
 
 #### Flujo completo de autenticación
@@ -2669,6 +2689,7 @@ Sus principales responsabilidades son:
 - asegurar que las preferencias configuradas sean válidas.
 
 El perfil se encuentra relacionado con el usuario mediante su identificador, sin incorporar información propia del bounded context de identidad.
+
 ---
 
 **Notifcation Preference**
@@ -2679,6 +2700,7 @@ De acuerdo con la historia US29 Configuración de Notificaciones Preferidas, el 
 seleccionar canales como WhatsApp, SMS o correo electrónico para recibir alertas.     
 
 Este elemento mantiene únicamente la preferencia del usuario. El envío efectivo de mensajes pertenece al bounded context Notifications.
+
 ---
 
 **Value Objetcs**
@@ -2725,6 +2747,7 @@ updatePreferences()
 ```
 
 Esto permite representar la policy identificada en el Event Storming sin trasladar dicha decisión a otras capas.
+
 ---
 
 **Eventos de Dominio**
@@ -2741,6 +2764,7 @@ NotificationPreferencesUpdated
 `ProfileUpdated` indica que la información del perfil fue modificada.
 
 `NotificationPreferencesUpdated` indica que las preferencias de comunicación fueron actualizadas satisfactoriamente.
+
 ---
 
 **Clases de la Domain Layer**
@@ -2774,6 +2798,7 @@ Sus responsabilidades principales son:
 **NotificationPreferenceController** gestiona las solicitudes relacionadas con la configuración de los canales de notificación.
 
 Su responsabilidad principal es permitir que el usuario consulte y actualice sus preferencias de comunicación, de acuerdo con la US29 Configuración de Notificaciones Preferidas.
+
 ---
 
 **Request DTOs**
@@ -2829,6 +2854,7 @@ UpdateNotificationPreferencesCommand
 `UserProfileResponseAssembler` transforma el resultado obtenido desde la Application Layer en UserProfileResponse.
 
 `NotificationPreferencesResponseAssembler` construye la respuesta asociada a las preferencias configuradas.
+
 ---
 
 **Clases de la Interface Layer**
@@ -2883,6 +2909,7 @@ UpdateNotificationPreferencesCommand
 ```
 
 Este último command se relaciona directamente con la US29 Configuración de Notificaciones Preferidas.
+
 ---
 
 **Command Handlers**
@@ -2913,6 +2940,7 @@ Sus responsabilidades son:
 - actualizar `NotificationPreference`;
 - persistir los cambios;
 - generar `otificationPreferencesUpdated`.
+
 ---
 
 **Queries**
@@ -2934,6 +2962,7 @@ GetNotificationPreferencesQuery
 ```
 
 Permite consultar los canales de notificación configurados.
+
 ---
 
 **Query Handlers**
@@ -2941,6 +2970,7 @@ Permite consultar los canales de notificación configurados.
 *GetUserProfileQueryHandler* recupera el perfil mediante IUserProfileRepository y retorna la información necesaria para la Interface Layer.
 
 *GetNotificationPreferencesQueryHandler* consulta las preferencias asociadas al perfil y devuelve los canales configurados.
+
 ---
 
 **Event Handler**
@@ -3057,6 +3087,7 @@ NotificationPreferenceEntity
 *NotificationPreferencePersistenceMapper* convierte entre `NotificationPreference` y `NotificationPreferenceEntity`.
 
 Estos mappers permiten mantener separado el modelo de dominio de las estructuras utilizadas para persistencia.
+
 ---
 
 **Event Integration**
@@ -3075,6 +3106,7 @@ NotificationPreferencesUpdated
 para que otros bounded contexts conozcan los cambios relevantes sin acceder directamente al modelo interno.
 
 Se propone ProfileEventPublisher como componente encargado de publicar dichos eventos.
+
 ---
 
 **Integración con Notifications**
@@ -3082,6 +3114,7 @@ Se propone ProfileEventPublisher como componente encargado de publicar dichos ev
 `NotificationPreferencesUpdated` puede ser consumido por el bounded context *Notifications* para mantener actualizada la información necesaria para el envío de alertas.
 
 Esta integración permite que Profiles & Preferences administre únicamente la configuración del usuario, mientras que Notifications conserva la responsabilidad del envío efectivo.
+
 ---
 
 **Configurations**
@@ -3091,6 +3124,7 @@ Esta integración permite que Profiles & Preferences administre únicamente la c
 *NotificationPreferenceEntityConfiguration* define el mapeo de las preferencias de comunicación.
 
 Estas configuraciones establecen claves, relaciones, restricciones e índices necesarios para la persistencia.
+
 ---
 
 **Clases de la Infrastructure Layer**
