@@ -6197,6 +6197,685 @@ El diagrama representa el flujo desde los eventos generados por Alert Management
 
 ![](assets-emergentes/DatabaseDiagram/notifications-database.png)
 
+## 5.9. Energy & Maintenance Management Bounded Context
+
+El bounded context **Energy & Maintenance Management** se encarga de registrar y analizar el consumo energético, calcular costos y gestionar las solicitudes y actividades de mantenimiento asociadas a los equipos eléctricos de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `EnergyConsumption`, `CalculateEnergyCost`, `MaintenanceRequest`, `ScheduleMaintenance`, `CompleteMaintenance`, `EnergyConsumptionRecorded`, `MaintenanceRequested`, `MaintenanceScheduled` y `MaintenanceCompleted`.
+
+### 5.9.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con el registro de consumo energético, cálculo de costos y ciclo de vida de las actividades de mantenimiento.
+
+### Aggregate Roots
+
+**EnergyConsumption** representa el consumo energético registrado para un equipo durante un periodo determinado.
+
+Sus principales responsabilidades son:
+
+-   registrar el consumo de un equipo;
+-   mantener el periodo asociado;
+-   calcular el costo energético;
+-   conservar el valor registrado en kWh.
+
+**MaintenanceRequest** representa una solicitud de mantenimiento asociada a un equipo.
+
+Sus responsabilidades son:
+
+-   registrar una solicitud;
+-   definir su prioridad;
+-   programar una fecha de mantenimiento;
+-   actualizar su estado;
+-   registrar su finalización.
+
+### Value Objects
+
+**EnergyConsumptionId** identifica un registro de consumo energético.
+
+**MaintenanceRequestId** identifica una solicitud de mantenimiento.
+
+**EquipmentId** identifica el equipo relacionado.
+
+**EnergyValue** representa la cantidad de energía consumida.
+
+```
+EnergyValue
+- value
+- unit
+```
+
+Para este contexto la unidad principal utilizada es `kWh`, ya que ElectroLink debe permitir consultar el consumo energético por equipo. README
+
+**EnergyCost** representa el costo calculado a partir del consumo.
+
+```
+EnergyCost
+- amount
+- currency
+```
+
+La moneda considerada para la gestión de costos es `PEN`, de acuerdo con los requerimientos del proyecto. README
+
+**ConsumptionPeriod** representa el intervalo asociado al registro energético.
+
+```
+ConsumptionPeriod
+- startDate
+- endDate
+```
+
+**MaintenanceDescription** contiene el detalle de la actividad requerida.
+
+**MaintenanceSchedule** representa la fecha programada para realizar el mantenimiento.
+
+### Enumerations
+
+**MaintenanceStatus**
+
+```
+REQUESTED
+SCHEDULED
+COMPLETED
+```
+
+**MaintenancePriority**
+
+```
+LOW
+MEDIUM
+HIGH
+```
+
+La prioridad permite distinguir actividades preventivas de aquellas que requieren una intervención más próxima.
+
+### Repository Interfaces
+
+**IEnergyConsumptionRepository**
+
+```
+save(EnergyConsumption)
+findById(EnergyConsumptionId)
+findByEquipmentId(EquipmentId)
+findByPeriod(ConsumptionPeriod)
+```
+
+**IMaintenanceRequestRepository**
+
+```
+save(MaintenanceRequest)
+findById(MaintenanceRequestId)
+findByEquipmentId(EquipmentId)
+findByStatus(MaintenanceStatus)
+update(MaintenanceRequest)
+```
+
+### Domain Services
+
+**EnergyCostCalculationService** calcula el costo asociado al consumo energético.
+
+```
+calculateCost(EnergyValue, Decimal tariff) EnergyCost
+```
+
+Esta responsabilidad está alineada con la necesidad de mostrar consumo en kWh y su costo asociado en soles. README
+
+**MaintenanceSchedulingService** valida la programación de una actividad de mantenimiento.
+
+```
+canSchedule(MaintenanceRequest)
+schedule(MaintenanceRequest, MaintenanceSchedule)
+```
+
+**MaintenanceCompletionService** controla la finalización de una actividad.
+
+```
+canComplete(MaintenanceRequest)
+complete(MaintenanceRequest)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+EnergyConsumptionRecorded
+MaintenanceRequested
+MaintenanceScheduled
+MaintenanceCompleted
+```
+
+Estos eventos permiten comunicar los cambios relevantes del bounded context sin acoplar directamente otros módulos a sus agregados.
+
+### Relación con otros bounded contexts
+
+**Electrical Monitoring** proporciona las mediciones que permiten obtener información de consumo energético.
+
+Por otro lado, una condición preventiva o una recomendación de mantenimiento puede originar una `MaintenanceRequest`. ElectroLink contempla precisamente la programación preventiva de revisiones antes de que una anomalía evolucione hacia una falla mayor. README
+
+El flujo principal puede resumirse así:
+
+```
+Electrical Measurements
+        ↓
+EnergyConsumption
+        ↓
+EnergyConsumptionRecorded
+        ↓
+CalculateEnergyCost
+
+
+NonCritical Condition
+        ↓
+MaintenanceRequest
+        ↓
+MaintenanceRequested
+        ↓
+ScheduleMaintenance
+        ↓
+MaintenanceScheduled
+        ↓
+CompleteMaintenance
+        ↓
+MaintenanceCompleted
+```
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyConsumption` | Aggregate Root | Representa el consumo energético registrado para un equipo. | Domain |
+| `MaintenanceRequest` | Aggregate Root | Representa una solicitud y su ciclo de mantenimiento. | Domain |
+| `EnergyConsumptionId` | Value Object | Identifica un registro de consumo. | Domain |
+| `MaintenanceRequestId` | Value Object | Identifica una solicitud de mantenimiento. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo relacionado. | Domain |
+| `EnergyValue` | Value Object | Representa el consumo energético registrado. | Domain |
+| `EnergyCost` | Value Object | Representa el costo asociado al consumo. | Domain |
+| `ConsumptionPeriod` | Value Object | Representa el periodo del consumo. | Domain |
+| `MaintenanceDescription` | Value Object | Representa el detalle de mantenimiento. | Domain |
+| `MaintenanceSchedule` | Value Object | Representa la programación del mantenimiento. | Domain |
+| `MaintenanceStatus` | Enumeration | Define el estado de una solicitud. | Domain |
+| `MaintenancePriority` | Enumeration | Define la prioridad de mantenimiento. | Domain |
+| `IEnergyConsumptionRepository` | Repository Interface | Define la persistencia de consumos energéticos. | Domain |
+| `IMaintenanceRequestRepository` | Repository Interface | Define la persistencia de solicitudes de mantenimiento. | Domain |
+| `EnergyCostCalculationService` | Domain Service | Calcula el costo asociado al consumo energético. | Domain |
+| `MaintenanceSchedulingService` | Domain Service | Gestiona las reglas de programación. | Domain |
+| `MaintenanceCompletionService` | Domain Service | Gestiona las reglas de finalización. | Domain |
+
+### 5.9.2. Interface Layer
+
+La **Interface Layer** del bounded context **Energy & Maintenance Management** recibe las solicitudes relacionadas con la consulta del consumo energético, cálculo de costos y gestión de actividades de mantenimiento.
+
+### Controllers
+
+**EnergyController** gestiona las operaciones asociadas al consumo energético.
+
+Sus responsabilidades son:
+
+-   consultar consumos por equipo;
+-   consultar consumos por periodo;
+-   consultar el costo energético calculado.
+
+**MaintenanceController** gestiona las operaciones relacionadas con mantenimiento.
+
+Sus responsabilidades son:
+
+-   crear solicitudes de mantenimiento;
+-   consultar solicitudes;
+-   programar actividades;
+-   completar mantenimientos.
+
+### Request DTOs
+
+**CreateMaintenanceRequest**
+
+```
+CreateMaintenanceRequest
+- equipmentId
+- description
+- priority
+```
+
+**ScheduleMaintenanceRequest**
+
+```
+ScheduleMaintenanceRequest
+- maintenanceRequestId
+- scheduledDate
+```
+
+**CompleteMaintenanceRequest**
+
+```
+CompleteMaintenanceRequest
+- maintenanceRequestId
+```
+
+### Response DTOs
+
+**EnergyConsumptionResponse**
+
+```
+EnergyConsumptionResponse
+- consumptionId
+- equipmentId
+- consumptionKwh
+- cost
+- currency
+- startDate
+- endDate
+```
+
+**MaintenanceRequestResponse**
+
+```
+MaintenanceRequestResponse
+- maintenanceRequestId
+- equipmentId
+- description
+- priority
+- status
+- scheduledDate
+- completedAt
+```
+
+**MaintenanceListResponse**
+
+```
+MaintenanceListResponse
+- maintenanceRequests
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+CreateMaintenanceCommandFromRequestAssembler
+ScheduleMaintenanceCommandFromRequestAssembler
+CompleteMaintenanceCommandFromRequestAssembler
+EnergyConsumptionResponseAssembler
+MaintenanceRequestResponseAssembler
+MaintenanceListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para la interfaz.
+
+### Event Consumers
+
+**EnergyMeasurementConsumer** recibe información relacionada con consumo proveniente de **Electrical Monitoring**y la transforma en una solicitud de registro de consumo energético.
+
+**NonCriticalAlertCreatedConsumer** recibe una alerta preventiva proveniente de **Alert Management** y permite iniciar una solicitud de mantenimiento cuando corresponde.
+
+### Flujo de entrada
+
+```
+Electrical Monitoring
+        ↓
+EnergyMeasurementConsumer
+        ↓
+RecordEnergyConsumptionCommand
+```
+
+```
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedConsumer
+        ↓
+CreateMaintenanceRequestCommand
+```
+
+La creación de solicitudes de mantenimiento está alineada con la necesidad de programar revisiones preventivas antes de que una condición no crítica evolucione hacia una falla mayor. README
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyController` | Controller | Gestiona consultas de consumo y costos energéticos. | Interface |
+| `MaintenanceController` | Controller | Gestiona solicitudes y actividades de mantenimiento. | Interface |
+| `EnergyMeasurementConsumer` | Consumer | Recibe información de consumo desde Electrical Monitoring. | Interface |
+| `NonCriticalAlertCreatedConsumer` | Consumer | Recibe alertas preventivas relacionadas con mantenimiento. | Interface |
+| `CreateMaintenanceRequest` | Request DTO | Contiene los datos para crear una solicitud de mantenimiento. | Interface |
+| `ScheduleMaintenanceRequest` | Request DTO | Contiene los datos para programar un mantenimiento. | Interface |
+| `CompleteMaintenanceRequest` | Request DTO | Contiene la solicitud para completar un mantenimiento. | Interface |
+| `EnergyConsumptionResponse` | Response DTO | Representa el consumo y costo energético de un equipo. | Interface |
+| `MaintenanceRequestResponse` | Response DTO | Representa una solicitud de mantenimiento. | Interface |
+| `MaintenanceListResponse` | Response DTO | Representa una colección de solicitudes. | Interface |
+| `CreateMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una solicitud en command. | Interface |
+| `ScheduleMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una programación en command. | Interface |
+| `CompleteMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una finalización en command. | Interface |
+| `EnergyConsumptionResponseAssembler` | Assembler | Construye respuestas de consumo energético. | Interface |
+| `MaintenanceRequestResponseAssembler` | Assembler | Construye respuestas de mantenimiento. | Interface |
+| `MaintenanceListResponseAssembler` | Assembler | Construye respuestas de colecciones de mantenimiento. | Interface |
+
+### 5.9.3. Application Layer
+
+La **Application Layer** del bounded context **Energy & Maintenance Management** coordina los casos de uso relacionados con el registro y consulta del consumo energético, cálculo de costos y gestión del ciclo de mantenimiento.
+
+### Commands
+
+**RecordEnergyConsumptionCommand**
+
+```
+RecordEnergyConsumptionCommand
+- equipmentId
+- consumptionKwh
+- startDate
+- endDate
+```
+
+**CalculateEnergyCostCommand**
+
+```
+CalculateEnergyCostCommand
+- energyConsumptionId
+- tariff
+```
+
+**CreateMaintenanceRequestCommand**
+
+```
+CreateMaintenanceRequestCommand
+- equipmentId
+- description
+- priority
+```
+
+**ScheduleMaintenanceCommand**
+
+```
+ScheduleMaintenanceCommand
+- maintenanceRequestId
+- scheduledDate
+```
+
+**CompleteMaintenanceCommand**
+
+```
+CompleteMaintenanceCommand
+- maintenanceRequestId
+```
+
+### Command Handlers
+
+**RecordEnergyConsumptionCommandHandler** crea un registro de consumo energético asociado a un equipo y genera `EnergyConsumptionRecorded`.
+
+**CalculateEnergyCostCommandHandler** recupera el consumo registrado y utiliza `EnergyCostCalculationService` para calcular su costo en función de la tarifa indicada.
+
+**CreateMaintenanceRequestCommandHandler** crea una nueva solicitud de mantenimiento y genera `MaintenanceRequested`.
+
+**ScheduleMaintenanceCommandHandler** valida la programación mediante `MaintenanceSchedulingService`, actualiza el estado a `SCHEDULED` y genera `MaintenanceScheduled`.
+
+**CompleteMaintenanceCommandHandler** verifica la finalización mediante `MaintenanceCompletionService`, actualiza el estado a `COMPLETED` y genera `MaintenanceCompleted`.
+
+### Queries
+
+**GetEnergyConsumptionByEquipmentQuery**
+
+```
+GetEnergyConsumptionByEquipmentQuery
+- equipmentId
+```
+
+**GetEnergyConsumptionByPeriodQuery**
+
+```
+GetEnergyConsumptionByPeriodQuery
+- startDate
+- endDate
+```
+
+**GetMaintenanceRequestByIdQuery**
+
+```
+GetMaintenanceRequestByIdQuery
+- maintenanceRequestId
+```
+
+**GetMaintenanceRequestsByEquipmentQuery**
+
+```
+GetMaintenanceRequestsByEquipmentQuery
+- equipmentId
+```
+
+**GetMaintenanceRequestsByStatusQuery**
+
+```
+GetMaintenanceRequestsByStatusQuery
+- status
+```
+
+### Query Handlers
+
+**GetEnergyConsumptionByEquipmentQueryHandler** recupera los registros energéticos asociados a un equipo.
+
+**GetEnergyConsumptionByPeriodQueryHandler** obtiene los consumos registrados dentro de un periodo determinado.
+
+**GetMaintenanceRequestByIdQueryHandler** recupera una solicitud específica.
+
+**GetMaintenanceRequestsByEquipmentQueryHandler** obtiene las solicitudes asociadas a un equipo.
+
+**GetMaintenanceRequestsByStatusQueryHandler** recupera solicitudes según su estado.
+
+### Event Handlers
+
+**EnergyMeasurementEventHandler** recibe información proveniente de **Electrical Monitoring** y genera `RecordEnergyConsumptionCommand`.
+
+**NonCriticalAlertCreatedEventHandler** recibe `NonCriticalAlertCreated` desde **Alert Management** y puede generar una solicitud de mantenimiento preventivo.
+
+### Flujo de aplicación
+
+```
+Electrical Monitoring
+        ↓
+EnergyMeasurementEventHandler
+        ↓
+RecordEnergyConsumptionCommand
+        ↓
+RecordEnergyConsumptionCommandHandler
+        ↓
+EnergyConsumptionRecorded
+        ↓
+CalculateEnergyCostCommand
+```
+
+```
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedEventHandler
+        ↓
+CreateMaintenanceRequestCommand
+        ↓
+CreateMaintenanceRequestCommandHandler
+        ↓
+MaintenanceRequested
+        ↓
+ScheduleMaintenanceCommand
+        ↓
+MaintenanceScheduled
+        ↓
+CompleteMaintenanceCommand
+        ↓
+MaintenanceCompleted
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RecordEnergyConsumptionCommand` | Command | Solicita registrar consumo energético. | Application |
+| `CalculateEnergyCostCommand` | Command | Solicita calcular el costo de un consumo. | Application |
+| `CreateMaintenanceRequestCommand` | Command | Solicita crear una actividad de mantenimiento. | Application |
+| `ScheduleMaintenanceCommand` | Command | Solicita programar una actividad de mantenimiento. | Application |
+| `CompleteMaintenanceCommand` | Command | Solicita finalizar un mantenimiento. | Application |
+| `RecordEnergyConsumptionCommandHandler` | Command Handler | Coordina el registro de consumo energético. | Application |
+| `CalculateEnergyCostCommandHandler` | Command Handler | Coordina el cálculo del costo energético. | Application |
+| `CreateMaintenanceRequestCommandHandler` | Command Handler | Coordina la creación de solicitudes de mantenimiento. | Application |
+| `ScheduleMaintenanceCommandHandler` | Command Handler | Coordina la programación del mantenimiento. | Application |
+| `CompleteMaintenanceCommandHandler` | Command Handler | Coordina la finalización del mantenimiento. | Application |
+| `GetEnergyConsumptionByEquipmentQuery` | Query | Consulta consumos por equipo. | Application |
+| `GetEnergyConsumptionByPeriodQuery` | Query | Consulta consumos por periodo. | Application |
+| `GetMaintenanceRequestByIdQuery` | Query | Consulta una solicitud específica. | Application |
+| `GetMaintenanceRequestsByEquipmentQuery` | Query | Consulta solicitudes por equipo. | Application |
+| `GetMaintenanceRequestsByStatusQuery` | Query | Consulta solicitudes por estado. | Application |
+| `GetEnergyConsumptionByEquipmentQueryHandler` | Query Handler | Recupera consumos de un equipo. | Application |
+| `GetEnergyConsumptionByPeriodQueryHandler` | Query Handler | Recupera consumos por periodo. | Application |
+| `GetMaintenanceRequestByIdQueryHandler` | Query Handler | Recupera una solicitud de mantenimiento. | Application |
+| `GetMaintenanceRequestsByEquipmentQueryHandler` | Query Handler | Recupera solicitudes por equipo. | Application |
+| `GetMaintenanceRequestsByStatusQueryHandler` | Query Handler | Recupera solicitudes por estado. | Application |
+| `EnergyMeasurementEventHandler` | Event Handler | Procesa información energética proveniente del monitoreo. | Application |
+| `NonCriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas preventivas y puede iniciar mantenimiento. | Application |
+
+### 5.9.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Energy & Maintenance Management** implementa la persistencia del consumo energético y de las solicitudes de mantenimiento, además de integrar los mecanismos necesarios para recibir eventos provenientes de otros bounded contexts y publicar los cambios relevantes del dominio.
+
+### Repository Implementations
+
+**EnergyConsumptionRepository** implementa `IEnergyConsumptionRepository` y gestiona la persistencia y consulta de los registros de consumo.
+
+```
+save(EnergyConsumption)
+findById(EnergyConsumptionId)
+findByEquipmentId(EquipmentId)
+findByPeriod(ConsumptionPeriod)
+```
+
+**MaintenanceRequestRepository** implementa `IMaintenanceRequestRepository` y administra el ciclo persistente de las solicitudes de mantenimiento.
+
+```
+save(MaintenanceRequest)
+findById(MaintenanceRequestId)
+findByEquipmentId(EquipmentId)
+findByStatus(MaintenanceStatus)
+update(MaintenanceRequest)
+```
+
+### Persistence Context
+
+**EnergyMaintenanceDbContext** administra los datos correspondientes a este bounded context.
+
+Gestiona principalmente:
+
+```
+EnergyConsumption
+MaintenanceRequest
+```
+
+### Persistence Entities
+
+**EnergyConsumptionEntity**
+
+```
+EnergyConsumptionEntity
+- Id
+- EquipmentId
+- ConsumptionKwh
+- EnergyCost
+- Currency
+- StartDate
+- EndDate
+- CreatedAt
+```
+
+**MaintenanceRequestEntity**
+
+```
+MaintenanceRequestEntity
+- Id
+- EquipmentId
+- Description
+- Priority
+- Status
+- ScheduledDate
+- CompletedAt
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**EnergyConsumptionPersistenceMapper** transforma entre `EnergyConsumption` y `EnergyConsumptionEntity`.
+
+**MaintenanceRequestPersistenceMapper** transforma entre `MaintenanceRequest` y `MaintenanceRequestEntity`.
+
+### Event Consumers
+
+**EnergyMeasurementEventConsumer** recibe información proveniente de **Electrical Monitoring** y la dirige hacia `EnergyMeasurementEventHandler`.
+
+**NonCriticalAlertCreatedEventConsumer** recibe `NonCriticalAlertCreated` desde **Alert Management** y lo deriva hacia `NonCriticalAlertCreatedEventHandler`.
+
+De esta manera, el bounded context puede reaccionar tanto a datos de consumo como a condiciones preventivas que requieran mantenimiento.
+
+### Event Publishing
+
+**EnergyMaintenanceEventPublisher** publica los eventos generados dentro del contexto:
+
+```
+EnergyConsumptionRecorded
+MaintenanceRequested
+MaintenanceScheduled
+MaintenanceCompleted
+```
+
+Estos eventos permiten que otros módulos, como **Analytics** o **Notifications**, reaccionen sin depender directamente de las entidades internas de este bounded context.
+
+### Tariff Access
+
+**EnergyTariffProvider** proporciona la tarifa utilizada para calcular el costo energético.
+
+```
+getCurrentTariff()
+```
+
+Su responsabilidad se limita a suministrar el valor requerido por `EnergyCostCalculationService`, evitando que la lógica del dominio dependa directamente de la fuente de datos de la tarifa.
+
+### Maintenance Document Storage
+
+**MaintenanceDocumentStorage** gestiona los documentos asociados a mantenimientos realizados, como constancias o comprobantes de servicio.
+
+Esto responde al requerimiento de mantener trazabilidad de reparaciones y evidencias de mantenimiento realizadas sobre los equipos. README
+
+### Configurations
+
+**EnergyConsumptionEntityConfiguration** define el mapeo relacional de los registros energéticos.
+
+**MaintenanceRequestEntityConfiguration** define el mapeo y restricciones de las solicitudes de mantenimiento.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyConsumptionRepository` | Repository | Implementa la persistencia y consulta del consumo energético. | Infrastructure |
+| `MaintenanceRequestRepository` | Repository | Implementa la persistencia y consulta de mantenimientos. | Infrastructure |
+| `EnergyMaintenanceDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `EnergyConsumptionEntity` | Persistence Entity | Representa un registro energético almacenado. | Infrastructure |
+| `MaintenanceRequestEntity` | Persistence Entity | Representa una solicitud de mantenimiento persistida. | Infrastructure |
+| `EnergyConsumptionPersistenceMapper` | Mapper | Convierte registros energéticos entre dominio y persistencia. | Infrastructure |
+| `MaintenanceRequestPersistenceMapper` | Mapper | Convierte solicitudes de mantenimiento entre dominio y persistencia. | Infrastructure |
+| `EnergyMeasurementEventConsumer` | Event Consumer | Recibe información energética desde Electrical Monitoring. | Infrastructure |
+| `NonCriticalAlertCreatedEventConsumer` | Event Consumer | Recibe alertas preventivas desde Alert Management. | Infrastructure |
+| `EnergyMaintenanceEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `EnergyTariffProvider` | Infrastructure Service | Proporciona la tarifa utilizada para calcular costos. | Infrastructure |
+| `MaintenanceDocumentStorage` | Infrastructure Service | Gestiona documentos asociados a mantenimientos. | Infrastructure |
+| `EnergyConsumptionEntityConfiguration` | Persistence Configuration | Define el mapeo de los registros de consumo. | Infrastructure |
+| `MaintenanceRequestEntityConfiguration` | Persistence Configuration | Define el mapeo de las solicitudes de mantenimiento. | Infrastructure |
+
+### 5.9.5. Bounded Context Software Architecture Component Level Diagram
+
+El diagrama representa el flujo de registro de consumo energético, cálculo de costos y gestión del ciclo de mantenimiento, incluyendo la recepción de información desde Electrical Monitoring y Alert Management.
+
+![](assets-emergentes/C4Diagrams/EnergyMaintenanceComponentDiagram-key.png)
+
+### 5.9.6. Bounded Context Software Architecture Code Level Diagram 
+#### 5.9.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/EnergyMaintenanceUMLDiagram.png)
+
+#### 5.9.6.2. Bounded COntext Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/energy_maintenance_database.png)
+
 # Capítulo VI: Solution UX Design
 
 ## 6.1. Style Guidelines
