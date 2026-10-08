@@ -3126,6 +3126,535 @@ En esta sección se presentan los diagramas de código del bounded context Profi
 #### 5.2.6.2. Bounded Context Database Design Diagram
 
 ![](assets-emergentes/DatabaseDiagram/Profiles-Preferences-Database.png)
+---
+
+## 5.3. Subscriptions & Payments Bounded Context
+
+El bounded context **Subscriptions & Payments** gestiona la creación, activación, renovación y suspensión de suscripciones, junto con los pagos asociados. También controla qué funcionalidades quedan disponibles según el estado de la suscripción. Esta responsabilidad está definida en la documentación actual de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `Subscription`, `Payment`, `RenewSubscription`, `SuspendSubscription`, `SubscriptionCreated`, `SubscriptionRenewed`, `SubscriptionSuspended` y `PaymentCompleted`. Además, la arquitectura establece que **Stripe** debe utilizarse para la facturación SaaS y el procesamiento de pagos de suscripción. README
+
+### 5.3.1. Domain Layer
+
+La **Domain Layer** contiene las reglas relacionadas con el ciclo de vida de las suscripciones y el registro de sus pagos.
+
+### Aggregate Root
+
+**Subscription** es el aggregate root principal. Representa la suscripción asociada a un cliente y mantiene su plan, estado y período de vigencia.
+
+Sus principales responsabilidades son:
+
+-   crear una suscripción;
+-   activarla después de un pago válido;
+-   renovarla;
+-   suspenderla;
+-   determinar si se encuentra activa.
+
+### Entity
+
+**Payment** representa un pago asociado a una suscripción.
+
+Mantiene la información necesaria para identificar el pago, su importe, estado y referencia del proveedor externo.
+
+### Value Objects y Enumerations
+
+**SubscriptionId** identifica de manera única una suscripción.
+
+**PaymentId** identifica un pago.
+
+**UserId** representa al usuario responsable de la suscripción.
+
+**Money** representa un importe monetario junto con su moneda.
+
+**SubscriptionStatus** representa el estado actual:
+
+```
+PENDING
+ACTIVE
+SUSPENDED
+```
+
+**PaymentStatus** representa el estado de un pago:
+
+```
+PENDING
+COMPLETED
+FAILED
+```
+
+**PlanType** representa el plan contratado. La definición exacta de sus valores debe mantenerse consistente con los planes comerciales vigentes del proyecto.
+
+### Repository Interfaces
+
+**ISubscriptionRepository** define las operaciones necesarias para persistir y consultar suscripciones.
+
+```
+save(Subscription)
+findById(SubscriptionId)
+findByUserId(UserId)
+update(Subscription)
+```
+
+**IPaymentRepository** define las operaciones asociadas a los pagos.
+
+```
+save(Payment)
+findById(PaymentId)
+findBySubscriptionId(SubscriptionId)
+update(Payment)
+```
+
+### Domain Service
+
+**SubscriptionPolicyService** concentra las reglas que determinan si una suscripción puede activarse, renovarse o suspenderse.
+
+Sus principales operaciones son:
+
+```
+canActivate(Subscription)
+canRenew(Subscription)
+canSuspend(Subscription)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+SubscriptionCreated
+SubscriptionActivated
+SubscriptionRenewed
+SubscriptionSuspended
+PaymentCompleted
+```
+
+`SubscriptionActivated` es especialmente relevante porque permite comunicar a otros bounded contexts que el usuario ya dispone de una suscripción habilitada.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Subscription` | Aggregate Root | Gestiona el ciclo de vida de una suscripción. | Domain |
+| `Payment` | Entity | Representa un pago asociado a una suscripción. | Domain |
+| `SubscriptionId` | Value Object | Identifica la suscripción. | Domain |
+| `PaymentId` | Value Object | Identifica el pago. | Domain |
+| `UserId` | Value Object | Identifica al responsable de la suscripción. | Domain |
+| `Money` | Value Object | Representa el importe de un pago. | Domain |
+| `PlanType` | Enumeration | Define el tipo de plan contratado. | Domain |
+| `SubscriptionStatus` | Enumeration | Define el estado de la suscripción. | Domain |
+| `PaymentStatus` | Enumeration | Define el estado del pago. | Domain |
+| `ISubscriptionRepository` | Repository Interface | Define la persistencia de suscripciones. | Domain |
+| `IPaymentRepository` | Repository Interface | Define la persistencia de pagos. | Domain |
+| `SubscriptionPolicyService` | Domain Service | Aplica reglas del ciclo de vida de la suscripción. | Domain |
+
+
+## 5.3.2. Interface Layer
+
+La **Interface Layer** del bounded context **Subscriptions & Payments** recibe las solicitudes relacionadas con la consulta, creación y gestión de suscripciones, así como con el registro de pagos.
+
+Su responsabilidad es exponer las operaciones del contexto y transformar los datos de entrada y salida, sin contener reglas de negocio.
+
+### Controllers
+
+**SubscriptionController** gestiona las operaciones relacionadas con las suscripciones.
+
+Sus principales responsabilidades son:
+
+-   consultar la suscripción actual;
+-   consultar los planes disponibles;
+-   activar una suscripción;
+-   renovar una suscripción;
+-   suspender una suscripción.
+
+**PaymentController** gestiona las operaciones relacionadas con pagos y su estado.
+
+Sus principales responsabilidades son:
+
+-   iniciar un pago;
+-   consultar el estado de un pago;
+-   recibir la confirmación del resultado del pago.
+
+### Request DTOs
+
+**ActivateSubscriptionRequest**
+
+```
+ActivateSubscriptionRequest
+- userId
+- planType
+```
+
+**RenewSubscriptionRequest**
+
+```
+RenewSubscriptionRequest
+- subscriptionId
+```
+
+**SuspendSubscriptionRequest**
+
+```
+SuspendSubscriptionRequest
+- subscriptionId
+```
+
+**CreatePaymentRequest**
+
+```
+CreatePaymentRequest
+- subscriptionId
+- amount
+- currency
+```
+
+### Response DTOs
+
+**SubscriptionResponse**
+
+```
+SubscriptionResponse
+- subscriptionId
+- userId
+- planType
+- status
+- startDate
+- endDate
+```
+
+**PaymentResponse**
+
+```
+PaymentResponse
+- paymentId
+- subscriptionId
+- amount
+- currency
+- status
+```
+
+### Assemblers
+
+Los assemblers convierten los DTOs de entrada en commands y transforman los resultados del dominio en respuestas.
+
+Se consideran:
+
+```
+ActivateSubscriptionCommandFromRequestAssembler
+RenewSubscriptionCommandFromRequestAssembler
+SuspendSubscriptionCommandFromRequestAssembler
+CreatePaymentCommandFromRequestAssembler
+SubscriptionResponseAssembler
+PaymentResponseAssembler
+```
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `SubscriptionController` | Controller | Gestiona consultas y operaciones sobre suscripciones. | Interface |
+| `PaymentController` | Controller | Gestiona las solicitudes relacionadas con pagos. | Interface |
+| `ActivateSubscriptionRequest` | Request DTO | Contiene los datos necesarios para activar una suscripción. | Interface |
+| `RenewSubscriptionRequest` | Request DTO | Contiene la información necesaria para renovar una suscripción. | Interface |
+| `SuspendSubscriptionRequest` | Request DTO | Contiene la información para suspender una suscripción. | Interface |
+| `CreatePaymentRequest` | Request DTO | Contiene los datos necesarios para registrar un pago. | Interface |
+| `SubscriptionResponse` | Response DTO | Representa la información de una suscripción. | Interface |
+| `PaymentResponse` | Response DTO | Representa la información de un pago. | Interface |
+| `ActivateSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de activación en un command. | Interface |
+| `RenewSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de renovación en un command. | Interface |
+| `SuspendSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de suspensión en un command. | Interface |
+| `CreatePaymentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de pago en un command. | Interface |
+| `SubscriptionResponseAssembler` | Assembler | Construye la respuesta de suscripción. | Interface |
+| `PaymentResponseAssembler` | Assembler | Construye la respuesta de pago. | Interface |
+
+## 5.3.3. Application Layer
+
+La **Application Layer** del bounded context **Subscriptions & Payments** coordina los casos de uso relacionados con la activación, renovación y suspensión de suscripciones, así como con el procesamiento y actualización del estado de los pagos.
+
+### Commands
+
+**ActivateSubscriptionCommand**
+
+```
+ActivateSubscriptionCommand
+- userId
+- planType
+```
+
+**RenewSubscriptionCommand**
+
+```
+RenewSubscriptionCommand
+- subscriptionId
+```
+
+**SuspendSubscriptionCommand**
+
+```
+SuspendSubscriptionCommand
+- subscriptionId
+```
+
+**CreatePaymentCommand**
+
+```
+CreatePaymentCommand
+- subscriptionId
+- amount
+- currency
+```
+
+**ConfirmPaymentCommand**
+
+```
+ConfirmPaymentCommand
+- paymentId
+- providerReference
+```
+
+### Command Handlers
+
+**ActivateSubscriptionCommandHandler** coordina la activación de una suscripción y registra su estado inicial.
+
+**RenewSubscriptionCommandHandler** valida la suscripción existente, actualiza su período de vigencia y genera `SubscriptionRenewed`.
+
+**SuspendSubscriptionCommandHandler** actualiza el estado de la suscripción y genera `SubscriptionSuspended`.
+
+**CreatePaymentCommandHandler** registra un nuevo pago asociado a una suscripción y delega su procesamiento al servicio correspondiente.
+
+**ConfirmPaymentCommandHandler** procesa la confirmación del pago, actualiza el estado de `Payment` y, cuando el pago es válido, permite activar o renovar la suscripción correspondiente.
+
+### Queries
+
+**GetSubscriptionByUserQuery**
+
+```
+GetSubscriptionByUserQuery
+- userId
+```
+
+Permite consultar la suscripción asociada a un usuario.
+
+**GetSubscriptionByIdQuery**
+
+```
+GetSubscriptionByIdQuery
+- subscriptionId
+```
+
+Permite recuperar una suscripción específica.
+
+**GetPaymentByIdQuery**
+
+```
+GetPaymentByIdQuery
+- paymentId
+```
+
+Permite consultar el estado de un pago.
+
+### Query Handlers
+
+**GetSubscriptionByUserQueryHandler** recupera la suscripción asociada al usuario mediante `ISubscriptionRepository`.
+
+**GetSubscriptionByIdQueryHandler** obtiene una suscripción mediante su identificador.
+
+**GetPaymentByIdQueryHandler** recupera la información de un pago mediante `IPaymentRepository`.
+
+### Event Handling
+
+**PaymentCompletedEventHandler** reacciona al evento `PaymentCompleted` y coordina la activación o renovación de la suscripción asociada.
+
+El flujo principal queda resumido así:
+
+```
+PaymentCompleted
+      ↓
+PaymentCompletedEventHandler
+      ↓
+ActivateSubscriptionCommand
+      o
+RenewSubscriptionCommand
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ActivateSubscriptionCommand` | Command | Solicita activar una suscripción. | Application |
+| `RenewSubscriptionCommand` | Command | Solicita renovar una suscripción. | Application |
+| `SuspendSubscriptionCommand` | Command | Solicita suspender una suscripción. | Application |
+| `CreatePaymentCommand` | Command | Solicita registrar un pago. | Application |
+| `ConfirmPaymentCommand` | Command | Confirma el resultado de un pago. | Application |
+| `ActivateSubscriptionCommandHandler` | Command Handler | Coordina la activación de una suscripción. | Application |
+| `RenewSubscriptionCommandHandler` | Command Handler | Coordina la renovación de una suscripción. | Application |
+| `SuspendSubscriptionCommandHandler` | Command Handler | Coordina la suspensión de una suscripción. | Application |
+| `CreatePaymentCommandHandler` | Command Handler | Coordina el registro y procesamiento del pago. | Application |
+| `ConfirmPaymentCommandHandler` | Command Handler | Actualiza el pago según la confirmación recibida. | Application |
+| `GetSubscriptionByUserQuery` | Query | Consulta la suscripción de un usuario. | Application |
+| `GetSubscriptionByIdQuery` | Query | Consulta una suscripción específica. | Application |
+| `GetPaymentByIdQuery` | Query | Consulta el estado de un pago. | Application |
+| `GetSubscriptionByUserQueryHandler` | Query Handler | Recupera la suscripción asociada al usuario. | Application |
+| `GetSubscriptionByIdQueryHandler` | Query Handler | Recupera una suscripción por identificador. | Application |
+| `GetPaymentByIdQueryHandler` | Query Handler | Recupera un pago por identificador. | Application |
+| `PaymentCompletedEventHandler` | Event Handler | Coordina la activación o renovación después de un pago completado. | Application |
+
+## 5.3.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Subscriptions & Payments** implementa la persistencia de suscripciones y pagos, además de la integración con el proveedor externo encargado del procesamiento de pagos.
+
+### Repository Implementations
+
+**SubscriptionRepository** implementa `ISubscriptionRepository` y gestiona la persistencia de las suscripciones.
+
+Sus principales operaciones son:
+
+```
+save(Subscription)
+findById(SubscriptionId)
+findByUserId(UserId)
+update(Subscription)
+```
+
+**PaymentRepository** implementa `IPaymentRepository` y gestiona el almacenamiento y consulta de los pagos.
+
+```
+save(Payment)
+findById(PaymentId)
+findBySubscriptionId(SubscriptionId)
+update(Payment)
+```
+
+### Persistence Context
+
+**SubscriptionsDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Subscription
+Payment
+```
+
+La persistencia se realiza en PostgreSQL, de acuerdo con las restricciones arquitectónicas definidas para ElectroLink. README
+
+### Persistence Entities
+
+**SubscriptionEntity**
+
+```
+SubscriptionEntity
+- Id
+- UserId
+- PlanType
+- Status
+- StartDate
+- EndDate
+- CreatedAt
+- UpdatedAt
+```
+
+**PaymentEntity**
+
+```
+PaymentEntity
+- Id
+- SubscriptionId
+- Amount
+- Currency
+- Status
+- ProviderReference
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**SubscriptionPersistenceMapper** transforma entre `Subscription` y `SubscriptionEntity`.
+
+**PaymentPersistenceMapper** transforma entre `Payment` y `PaymentEntity`.
+
+### Payment Integration
+
+La integración con pagos se realiza mediante un servicio que abstrae al proveedor externo.
+
+**IPaymentGateway** define el contrato para iniciar y validar pagos.
+
+```
+createPayment()
+verifyPayment()
+```
+
+**StripePaymentGateway** implementa `IPaymentGateway` y se comunica con Stripe, proveedor establecido por las restricciones del proyecto para la facturación SaaS. README
+
+### Webhook Processing
+
+**StripeWebhookHandler** procesa las confirmaciones enviadas por Stripe y transforma el resultado recibido en comandos o eventos internos.
+
+Sus principales responsabilidades son:
+
+```
+processPaymentCompleted()
+processPaymentFailed()
+```
+
+Cuando un pago es confirmado, se genera `PaymentCompleted`. Si el procesamiento no es exitoso, se registra el estado correspondiente del pago.
+
+### Event Publishing
+
+**SubscriptionEventPublisher** publica los eventos relevantes generados por este bounded context:
+
+```
+SubscriptionCreated
+SubscriptionActivated
+SubscriptionRenewed
+SubscriptionSuspended
+PaymentCompleted
+```
+
+Esto permite que otros bounded contexts reaccionen a cambios en el estado de la suscripción sin acceder directamente a sus datos internos.
+
+### Configurations
+
+**SubscriptionEntityConfiguration** define el mapeo relacional de las suscripciones.
+
+**PaymentEntityConfiguration** define las restricciones y relaciones de los pagos.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `SubscriptionRepository` | Repository | Implementa la persistencia de suscripciones. | Infrastructure |
+| `PaymentRepository` | Repository | Implementa la persistencia de pagos. | Infrastructure |
+| `SubscriptionsDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `SubscriptionEntity` | Persistence Entity | Representa una suscripción almacenada. | Infrastructure |
+| `PaymentEntity` | Persistence Entity | Representa un pago almacenado. | Infrastructure |
+| `SubscriptionPersistenceMapper` | Mapper | Convierte entre dominio y persistencia de suscripciones. | Infrastructure |
+| `PaymentPersistenceMapper` | Mapper | Convierte entre dominio y persistencia de pagos. | Infrastructure |
+| `IPaymentGateway` | Integration Interface | Define la comunicación con el proveedor de pagos. | Infrastructure |
+| `StripePaymentGateway` | External Service Adapter | Implementa la integración con Stripe. | Infrastructure |
+| `StripeWebhookHandler` | Webhook Handler | Procesa eventos recibidos desde Stripe. | Infrastructure |
+| `SubscriptionEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `SubscriptionEntityConfiguration` | Persistence Configuration | Define el mapeo de suscripciones. | Infrastructure |
+| `PaymentEntityConfiguration` | Persistence Configuration | Define el mapeo de pagos. | Infrastructure |
+
+### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram de Subscriptions & Payments representa los componentes encargados de gestionar el ciclo de vida de las suscripciones, registrar pagos e integrar ElectroLink con Stripe para su procesamiento.
+
+![](assets-emergentes/C4Diagrams/SubscriptionsPaymentsComponentDiagram.png)
+
+### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.3.6.1 Bounded Context Domain Layer Class Diagram.
+
+![](assets-emergentes/ClassDiagrams/P&PClassDiagram.png)
+
+#### 5.3.6.2 Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/P&PDatabase.png)
+---
+
+
 
 # Capítulo VI: Solution UX Design
 
