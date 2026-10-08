@@ -1761,7 +1761,43 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 
 ### 6.4.1. Applications Wireframes
 
+**Aplicación movil**</br>
+![Wireframes Movil 1](assets/cap6/wireframes/movil1.png)
+![Wireframes Movil 2](assets/cap6/wireframes/movil2.png)
+![Wireframes Movil 3](assets/cap6/wireframes/movil3.png)
+![Wireframes Movil 4](assets/cap6/wireframes/movil4.png)
+![Wireframes Movil 5](assets/cap6/wireframes/movil5.png)
+![Wireframes Movil 6](assets/cap6/wireframes/movil6.png)
+![Wireframes Movil 7](assets/cap6/wireframes/movil7.png)
+
+</br>**Aplicación web**</br>
+![Wireframes Web 1](assets/cap6/wireframes/web1.jpeg)
+![Wireframes Web 2](assets/cap6/wireframes/web2.jpeg)
+![Wireframes Web 3](assets/cap6/wireframes/web3.jpeg)
+![Wireframes Web 4](assets/cap6/wireframes/web4.jpeg)
+![Wireframes Web 5](assets/cap6/wireframes/web5.jpeg)
+![Wireframes Web 6](assets/cap6/wireframes/web6.jpeg)
+![Wireframes Web 7](assets/cap6/wireframes/web7.jpeg)
+![Wireframes Web 8](assets/cap6/wireframes/web8.jpeg)
+![Wireframes Web 9](assets/cap6/wireframes/web9.jpeg)
+![Wireframes Web 10](assets/cap6/wireframes/web10.jpeg)
+![Wireframes Web 11](assets/cap6/wireframes/web11.jpeg)
+![Wireframes Web 12](assets/cap6/wireframes/web12.jpeg)
+
 ### 6.4.2. Applications Wireflow Diagrams
+**Aplicación movil**</br>
+![Wireflow Movil 1](assets/cap6/wireflow/movil1.png)
+![Wireflow Movil 2](assets/cap6/wireflow/movil2.png)
+![Wireflow Movil 3](assets/cap6/wireflow/movil3.png)
+![Wireflow Movil 4](assets/cap6/wireflow/movil4.png)
+![Wireflow Movil 5](assets/cap6/wireflow/movil5.png)
+
+</br>**Aplicación web**</br>
+![Wireflow Web 5](assets/cap6/wireflow/web5.png)
+![Wireflow Web 4](assets/cap6/wireflow/web4.png)
+![Wireflow Web 3](assets/cap6/wireflow/web3.png)
+![Wireflow Web 2](assets/cap6/wireflow/web2.png)
+![Wireflow Web 1](assets/cap6/wireflow/web1.png)
 
 ### 6.4.2. Applications Mock-ups
 
