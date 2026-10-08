@@ -6865,7 +6865,7 @@ Esto responde al requerimiento de mantener trazabilidad de reparaciones y eviden
 
 El diagrama representa el flujo de registro de consumo energético, cálculo de costos y gestión del ciclo de mantenimiento, incluyendo la recepción de información desde Electrical Monitoring y Alert Management.
 
-![](assets-emergentes/C4Diagrams/EnergyMaintenanceComponentDiagram-key.png)
+![](assets-emergentes/C4Diagrams/EnergyMaintenanceComponentDiagram.png)
 
 ### 5.9.6. Bounded Context Software Architecture Code Level Diagram 
 #### 5.9.6.1. Bounded Context Domain Layer Class Diagram
