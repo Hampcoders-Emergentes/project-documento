@@ -1510,20 +1510,44 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 ## 4.3. Software Architecture
 
 ### 4.3.1. Software Architecture System Landscape Diagram
-\
-![](assets-emergentes/SystemContext.png)
 
-### 4.3.1. Software Architecture Context Level Diagrams
+El objetivo del diagrama es mostrar **quién utiliza ElectroLink y con qué sistemas externos se comunica**, manteniendo la solución alineada con su propósito actual: monitorear la infraestructura eléctrica de locales de comida rápida, detectar riesgos, gestionar alertas, controlar el consumo energético y apoyar el mantenimiento preventivo. El documento del curso exige precisamente que el sistema aparezca como un recuadro central rodeado de sus usuarios y sistemas externos. Trabajo Final_1ASI0728_202620
+
+### Elementos del contexto
+
+Los actores principales deben ser:
+
+-   **Trabajador del Local**: consulta el estado de seguridad de los equipos y recibe advertencias operativas.
+-   **Manager del Local**: administra el establecimiento, consulta monitoreo, alertas, consumos, mantenimiento y reportes.
+
+Los sistemas externos relevantes son:
+
+-   **Dispositivos IoT / Sensores eléctricos**: proporcionan telemetría de corriente, voltaje, temperatura y consumo.
+-   **Stripe**: procesa los pagos de las suscripciones SaaS.
+-   **FCM / APNs**: distribuye notificaciones Push.
+-   **Servicios de Mensajería**: permiten entregar SMS, correo o WhatsApp.
+-   **Mapbox / Google Maps**: proporciona servicios de geolocalización cuando las funcionalidades de la plataforma lo requieren.
+
+Stripe, FCM/APNs y Mapbox/Google Maps corresponden además a integraciones establecidas como restricciones del proyecto.
+
 \
-![](assets-emergentes/SystemContext.png)
+![](assets-emergentes/ElectroLinkSystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
+
+En el nivel Container abrimos el sistema ElectroLink para mostrar sus principales unidades ejecutables y de almacenamiento. Aquí debemos respetar una decisión importante del proyecto: el backend es un monolito modular, por lo que los 10 bounded contexts no deben representarse como 10 microservicios o containers distintos. Se implementan como módulos internos de una única API en ASP.NET Core.
+
 \
-![](assets-emergentes/Containers.png)
+![](assets-emergentes/ElectroLinkContainerDiagram.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
+
+El Deployment Diagram representa dónde se ejecutan físicamente los containers definidos para ElectroLink y cómo se distribuyen entre el establecimiento de comida rápida, los dispositivos de usuario y la infraestructura cloud.
+
+Para ElectroLink conviene separar claramente dos entornos: infraestructura local/Edge e infraestructura Cloud. Esta separación es necesaria porque las funciones críticas de seguridad deben continuar operativas incluso cuando se pierde temporalmente la conexión con Internet.
+
 \
-![](assets-emergentes/DeploymentDiagram-dark.png)
+![](assets-emergentes/ElectroLinkDeploymentDiagram.png)
 
 # Capítulo V: Tactical-Level Software Design
 
