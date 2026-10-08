@@ -4198,6 +4198,443 @@ Este diagrama representa los componentes encargados de administrar locales, áre
 
 ---
 
+## 5.5. IoT Device Management Bounded Context
+
+El bounded context **IoT Device Management** gestiona el registro, vinculación con equipos, configuración, conectividad y estado operativo de los dispositivos IoT de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `IoTDevice`, `LinkDeviceToEquipment`, `ConfigureDevice`, `DeviceRegistered`, `DeviceLinkedToEquipment`, `DeviceConfigured`, `DeviceConnected` y `DeviceDisconnected`.
+
+### 5.5.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la identidad, configuración, vinculación y estado operativo de los dispositivos IoT.
+
+### Aggregate Root
+
+**IoTDevice** es el aggregate root principal. Representa un dispositivo IoT registrado dentro de ElectroLink.
+
+Sus principales responsabilidades son:
+
+-   registrar el dispositivo;
+-   vincularlo con un equipo eléctrico;
+-   actualizar su configuración;
+-   controlar su estado de conectividad;
+-   registrar su última comunicación conocida.
+
+### Value Objects y Enumerations
+
+**DeviceId** identifica de manera única un dispositivo IoT.
+
+**EquipmentId** representa el equipo eléctrico al que se encuentra vinculado.
+
+**DeviceConfiguration** agrupa los parámetros de configuración necesarios para la operación del dispositivo.
+
+**DeviceStatus** representa el estado operativo:
+
+```
+REGISTERED
+CONFIGURED
+CONNECTED
+DISCONNECTED
+```
+
+**ConnectivityStatus** representa específicamente el estado de comunicación:
+
+```
+ONLINE
+OFFLINE
+```
+
+La detección de dispositivos desconectados es relevante para la confiabilidad del sistema, ya que ElectroLink debe identificar sensores que dejan de transmitir para evitar puntos ciegos de monitoreo. README
+
+### Repository Interface
+
+**IIoTDeviceRepository** define las operaciones necesarias para persistir y consultar dispositivos.
+
+```
+save(IoTDevice)
+findById(DeviceId)
+findByEquipmentId(EquipmentId)
+update(IoTDevice)
+exists(DeviceId)
+```
+
+### Domain Service
+
+**DeviceLinkingService** concentra las reglas relacionadas con la vinculación entre un dispositivo IoT y un equipo eléctrico.
+
+```
+canLink(IoTDevice, EquipmentId)
+linkToEquipment(IoTDevice, EquipmentId)
+```
+
+**DeviceConnectivityService** concentra la evaluación del estado de conectividad del dispositivo.
+
+```
+evaluateConnectivity(IoTDevice)
+markConnected(IoTDevice)
+markDisconnected(IoTDevice)
+```
+
+### Eventos del dominio
+
+Los eventos principales identificados son:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+`DeviceLinkedToEquipment` mantiene la relación con el bounded context anterior, mientras que `DeviceConnected` permite que los procesos posteriores de monitoreo sepan que el dispositivo se encuentra disponible para transmitir información.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDevice` | Aggregate Root | Representa un dispositivo IoT y su estado operativo. | Domain |
+| `DeviceId` | Value Object | Identifica de manera única un dispositivo. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo eléctrico vinculado. | Domain |
+| `DeviceConfiguration` | Value Object | Representa la configuración del dispositivo. | Domain |
+| `DeviceStatus` | Enumeration | Define el estado general del dispositivo. | Domain |
+| `ConnectivityStatus` | Enumeration | Define su estado de conectividad. | Domain |
+| `IIoTDeviceRepository` | Repository Interface | Define la persistencia de dispositivos IoT. | Domain |
+| `DeviceLinkingService` | Domain Service | Gestiona las reglas de vinculación con equipos. | Domain |
+| `DeviceConnectivityService` | Domain Service | Evalúa y actualiza el estado de conectividad. | Domain |
+
+## 5.5.2. Interface Layer
+
+La **Interface Layer** del bounded context **IoT Device Management** recibe las solicitudes relacionadas con el registro, vinculación, configuración y consulta del estado de los dispositivos IoT.
+
+### Controllers
+
+**IoTDeviceController** gestiona las operaciones principales sobre los dispositivos.
+
+Sus responsabilidades son:
+
+-   registrar dispositivos;
+-   consultar su información;
+-   consultar su estado;
+-   actualizar su configuración.
+
+**DeviceLinkController** gestiona la vinculación entre un dispositivo IoT y un equipo eléctrico.
+
+### Request DTOs
+
+**RegisterDeviceRequest**
+
+```
+RegisterDeviceRequest
+- deviceId
+- metadata
+```
+
+**LinkDeviceToEquipmentRequest**
+
+```
+LinkDeviceToEquipmentRequest
+- deviceId
+- equipmentId
+```
+
+**ConfigureDeviceRequest**
+
+```
+ConfigureDeviceRequest
+- deviceId
+- configuration
+```
+
+### Response DTOs
+
+**IoTDeviceResponse**
+
+```
+IoTDeviceResponse
+- deviceId
+- equipmentId
+- status
+- connectivityStatus
+- lastSeenAt
+```
+
+**DeviceConfigurationResponse**
+
+```
+DeviceConfigurationResponse
+- deviceId
+- configuration
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RegisterDeviceCommandFromRequestAssembler
+LinkDeviceToEquipmentCommandFromRequestAssembler
+ConfigureDeviceCommandFromRequestAssembler
+IoTDeviceResponseAssembler
+DeviceConfigurationResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDeviceController` | Controller | Gestiona el registro, consulta y configuración de dispositivos. | Interface |
+| `DeviceLinkController` | Controller | Gestiona la vinculación entre dispositivos y equipos. | Interface |
+| `RegisterDeviceRequest` | Request DTO | Contiene los datos necesarios para registrar un dispositivo. | Interface |
+| `LinkDeviceToEquipmentRequest` | Request DTO | Contiene la información para vincular un dispositivo. | Interface |
+| `ConfigureDeviceRequest` | Request DTO | Contiene la configuración del dispositivo. | Interface |
+| `IoTDeviceResponse` | Response DTO | Representa la información y estado del dispositivo. | Interface |
+| `DeviceConfigurationResponse` | Response DTO | Representa la configuración actual del dispositivo. | Interface |
+| `RegisterDeviceCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro en un command. | Interface |
+| `LinkDeviceToEquipmentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de vinculación en un command. | Interface |
+| `ConfigureDeviceCommandFromRequestAssembler` | Assembler | Convierte la configuración recibida en un command. | Interface |
+| `IoTDeviceResponseAssembler` | Assembler | Construye la respuesta del dispositivo. | Interface |
+| `DeviceConfigurationResponseAssembler` | Assembler | Construye la respuesta de configuración. | Interface |
+
+## 5.5.3. Application Layer
+
+La **Application Layer** del bounded context **IoT Device Management** coordina los casos de uso relacionados con el registro, vinculación, configuración y actualización del estado de los dispositivos IoT.
+
+### Commands
+
+**RegisterDeviceCommand**
+
+```
+RegisterDeviceCommand
+- deviceId
+- metadata
+```
+
+**LinkDeviceToEquipmentCommand**
+
+```
+LinkDeviceToEquipmentCommand
+- deviceId
+- equipmentId
+```
+
+**ConfigureDeviceCommand**
+
+```
+ConfigureDeviceCommand
+- deviceId
+- configuration
+```
+
+**UpdateDeviceConnectivityCommand**
+
+```
+UpdateDeviceConnectivityCommand
+- deviceId
+- connectivityStatus
+- lastSeenAt
+```
+
+### Command Handlers
+
+**RegisterDeviceCommandHandler** coordina el registro de un nuevo dispositivo y genera `DeviceRegistered`.
+
+**LinkDeviceToEquipmentCommandHandler** recupera el dispositivo, valida la vinculación con el equipo y genera `DeviceLinkedToEquipment`.
+
+**ConfigureDeviceCommandHandler** actualiza la configuración del dispositivo y genera `DeviceConfigured`.
+
+**UpdateDeviceConnectivityCommandHandler** actualiza el estado de conexión del dispositivo y genera `DeviceConnected`o `DeviceDisconnected`, según corresponda.
+
+### Queries
+
+**GetDeviceByIdQuery**
+
+```
+GetDeviceByIdQuery
+- deviceId
+```
+
+**GetDeviceByEquipmentQuery**
+
+```
+GetDeviceByEquipmentQuery
+- equipmentId
+```
+
+**GetDeviceStatusQuery**
+
+```
+GetDeviceStatusQuery
+- deviceId
+```
+
+### Query Handlers
+
+**GetDeviceByIdQueryHandler** recupera la información de un dispositivo por su identificador.
+
+**GetDeviceByEquipmentQueryHandler** obtiene el dispositivo asociado a un equipo eléctrico.
+
+**GetDeviceStatusQueryHandler** consulta el estado operativo y de conectividad del dispositivo.
+
+### Event Handling
+
+**EquipmentAssignedToAreaEventHandler** recibe el evento `EquipmentAssignedToArea` proveniente de **Store & Electrical Asset Management** y deja disponible el equipo para su posterior vinculación con un dispositivo IoT.
+
+Los principales eventos generados por esta capa son:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterDeviceCommand` | Command | Solicita registrar un dispositivo IoT. | Application |
+| `LinkDeviceToEquipmentCommand` | Command | Solicita vincular un dispositivo con un equipo. | Application |
+| `ConfigureDeviceCommand` | Command | Solicita actualizar la configuración del dispositivo. | Application |
+| `UpdateDeviceConnectivityCommand` | Command | Solicita actualizar su estado de conectividad. | Application |
+| `RegisterDeviceCommandHandler` | Command Handler | Coordina el registro del dispositivo. | Application |
+| `LinkDeviceToEquipmentCommandHandler` | Command Handler | Coordina la vinculación con un equipo. | Application |
+| `ConfigureDeviceCommandHandler` | Command Handler | Coordina la configuración del dispositivo. | Application |
+| `UpdateDeviceConnectivityCommandHandler` | Command Handler | Actualiza el estado de conexión. | Application |
+| `GetDeviceByIdQuery` | Query | Consulta un dispositivo por identificador. | Application |
+| `GetDeviceByEquipmentQuery` | Query | Consulta el dispositivo asociado a un equipo. | Application |
+| `GetDeviceStatusQuery` | Query | Consulta el estado del dispositivo. | Application |
+| `GetDeviceByIdQueryHandler` | Query Handler | Recupera un dispositivo. | Application |
+| `GetDeviceByEquipmentQueryHandler` | Query Handler | Recupera el dispositivo vinculado a un equipo. | Application |
+| `GetDeviceStatusQueryHandler` | Query Handler | Recupera el estado operativo y de conectividad. | Application |
+| `EquipmentAssignedToAreaEventHandler` | Event Handler | Recibe la disponibilidad del equipo desde el contexto de activos. | Application |
+
+## 5.5.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **IoT Device Management** implementa la persistencia de los dispositivos IoT, su configuración, su relación con equipos eléctricos y los mecanismos necesarios para actualizar su estado de conectividad.
+
+### Repository Implementation
+
+**IoTDeviceRepository** implementa `IIoTDeviceRepository` y gestiona la persistencia de los dispositivos registrados.
+
+Sus principales operaciones son:
+
+```
+save(IoTDevice)
+findById(DeviceId)
+findByEquipmentId(EquipmentId)
+update(IoTDevice)
+exists(DeviceId)
+```
+
+### Persistence Context
+
+**IoTDeviceDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+IoTDevice
+DeviceConfiguration
+```
+
+### Persistence Entities
+
+**IoTDeviceEntity**
+
+```
+IoTDeviceEntity
+- Id
+- EquipmentId
+- Status
+- ConnectivityStatus
+- LastSeenAt
+- CreatedAt
+- UpdatedAt
+```
+
+**DeviceConfigurationEntity**
+
+```
+DeviceConfigurationEntity
+- Id
+- DeviceId
+- ConfigurationData
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**IoTDevicePersistenceMapper** transforma entre `IoTDevice` y `IoTDeviceEntity`.
+
+**DeviceConfigurationPersistenceMapper** transforma entre `DeviceConfiguration` y `DeviceConfigurationEntity`.
+
+### Connectivity Monitoring
+
+**DeviceConnectivityMonitor** evalúa periódicamente la última comunicación registrada por cada dispositivo y determina si debe considerarse conectado o desconectado.
+
+Cuando detecta un cambio de estado, solicita la actualización correspondiente mediante `UpdateDeviceConnectivityCommand`.
+
+Esto resulta relevante porque ElectroLink debe detectar dispositivos que dejan de transmitir para reducir puntos ciegos en el monitoreo. README
+
+### Device Communication
+
+**DeviceMessageConsumer** recibe los mensajes enviados por los dispositivos IoT y obtiene la información necesaria para identificar al dispositivo y actualizar su actividad.
+
+La interpretación de las mediciones eléctricas no pertenece a este bounded context, sino a **Electrical Monitoring**. Aquí únicamente se mantiene el estado y disponibilidad del dispositivo.
+
+### Event Publishing
+
+**IoTDeviceEventPublisher** publica los eventos relevantes generados por este contexto:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+Estos eventos permiten comunicar cambios del dispositivo sin exponer directamente su modelo interno.
+
+### Configurations
+
+**IoTDeviceEntityConfiguration** define el mapeo relacional del dispositivo.
+
+**DeviceConfigurationEntityConfiguration** define la relación entre el dispositivo y su configuración.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDeviceRepository` | Repository | Implementa la persistencia de dispositivos IoT. | Infrastructure |
+| `IoTDeviceDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `IoTDeviceEntity` | Persistence Entity | Representa un dispositivo almacenado. | Infrastructure |
+| `DeviceConfigurationEntity` | Persistence Entity | Representa la configuración persistida. | Infrastructure |
+| `IoTDevicePersistenceMapper` | Mapper | Convierte entre dominio y persistencia del dispositivo. | Infrastructure |
+| `DeviceConfigurationPersistenceMapper` | Mapper | Convierte entre configuración de dominio y persistencia. | Infrastructure |
+| `DeviceConnectivityMonitor` | Infrastructure Service | Evalúa el estado de conectividad de los dispositivos. | Infrastructure |
+| `DeviceMessageConsumer` | Message Consumer | Recibe mensajes enviados por los dispositivos IoT. | Infrastructure |
+| `IoTDeviceEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `IoTDeviceEntityConfiguration` | Persistence Configuration | Define el mapeo del dispositivo. | Infrastructure |
+| `DeviceConfigurationEntityConfiguration` | Persistence Configuration | Define el mapeo de su configuración. | Infrastructure |
+
+### 5.5.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa los componentes responsables del registro, configuración, vinculación y seguimiento de conectividad de los dispositivos IoT. El contexto mantiene relación con Store & Electrical Asset Management para identificar los equipos disponibles y con Electrical Monitoring para permitir el procesamiento posterior de la información proveniente de los dispositivos.
+
+![](assets-emergentes/C4Diagrams/IoTDeviceManagementComponentDiagram.png)
+
+#### 5.5.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/IoTUML.png)
+
+#### 5.5.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Database-IoT.png)
 
 # Capítulo VI: Solution UX Design
 
