@@ -3688,6 +3688,515 @@ El Component Diagram de Subscriptions & Payments representa los componentes enca
 ![](assets-emergentes/DatabaseDiagram/P&PDatabase.png)
 ---
 
+## 5.4. Store & Electrical Asset Management Bounded Context
+
+El bounded context **Store & Electrical Asset Management** administra los locales, las áreas eléctricas y los equipos que forman parte de la infraestructura monitoreada por ElectroLink. Esta delimitación está alineada con la responsabilidad definida en la documentación actual del proyecto. README
+
+En el Event Storming actual aparecen como elementos principales `RegisterStore`, `RegisterEquipment`, `AssignEquipmentToArea`, `Store`, `Area`, `Equipment`, `AreaCreated`, `EquipmentRegistered` y `EquipmentAssignedToArea`.
+
+### 5.4.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la estructura física monitoreada: locales, áreas y equipos eléctricos.
+
+### Aggregate Root
+
+**Store** es el aggregate root principal. Representa un local registrado en ElectroLink y contiene las áreas eléctricas que forman parte de su infraestructura.
+
+Sus principales responsabilidades son:
+
+-   registrar el local;
+-   mantener sus áreas;
+-   asociar equipos a las áreas correspondientes;
+-   controlar que los equipos pertenezcan a una ubicación válida dentro del local.
+
+### Entities
+
+**Area** representa una zona dentro del local donde existen equipos eléctricos monitoreados.
+
+**Equipment** representa un activo eléctrico o equipo de cocina registrado dentro del establecimiento.
+
+La relación principal del modelo es:
+
+```
+Store
+  └── Area
+        └── Equipment
+```
+
+### Value Objects y Enumerations
+
+**StoreId** identifica de manera única un local.
+
+**AreaId** identifica un área dentro del local.
+
+**EquipmentId** identifica un equipo registrado.
+
+**EquipmentType** representa la categoría del equipo eléctrico.
+
+**EquipmentStatus** representa su estado operativo, considerando inicialmente:
+
+```
+ACTIVE
+INACTIVE
+OUT_OF_SERVICE
+```
+
+### Repository Interfaces
+
+**IStoreRepository** define las operaciones necesarias para persistir y consultar locales.
+
+```
+save(Store)
+findById(StoreId)
+update(Store)
+```
+
+**IEquipmentRepository** permite consultar y persistir equipos cuando se requiera acceso directo sobre ellos.
+
+```
+save(Equipment)
+findById(EquipmentId)
+findByAreaId(AreaId)
+update(Equipment)
+```
+
+### Domain Service
+
+**EquipmentAssignmentService** concentra las reglas asociadas a la asignación de equipos dentro de las áreas del local.
+
+Sus principales operaciones son:
+
+```
+canAssignEquipment(Equipment, Area)
+assignEquipment(Equipment, Area)
+```
+
+### Eventos del dominio
+
+Los principales eventos asociados a este bounded context son:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+`EquipmentAssignedToArea` resulta especialmente relevante porque permite que otros bounded contexts, como **IoT Device Management**, conozcan que un equipo ya tiene una ubicación definida dentro de la infraestructura.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Store` | Aggregate Root | Representa un local y organiza su infraestructura eléctrica. | Domain |
+| `Area` | Entity | Representa una zona del local. | Domain |
+| `Equipment` | Entity | Representa un equipo eléctrico registrado. | Domain |
+| `StoreId` | Value Object | Identifica un local. | Domain |
+| `AreaId` | Value Object | Identifica un área. | Domain |
+| `EquipmentId` | Value Object | Identifica un equipo. | Domain |
+| `EquipmentType` | Enumeration | Define la categoría del equipo. | Domain |
+| `EquipmentStatus` | Enumeration | Define el estado operativo del equipo. | Domain |
+| `IStoreRepository` | Repository Interface | Define la persistencia de locales. | Domain |
+| `IEquipmentRepository` | Repository Interface | Define la persistencia y consulta de equipos. | Domain |
+| `EquipmentAssignmentService` | Domain Service | Aplica las reglas de asignación de equipos a áreas. | Domain |
+
+## 5.4.2. Interface Layer
+
+La **Interface Layer** del bounded context **Store & Electrical Asset Management** recibe las solicitudes relacionadas con la gestión de locales, áreas y equipos eléctricos. Su función es transformar los datos de entrada y delegar el procesamiento hacia la Application Layer.
+
+### Controllers
+
+**StoreController** gestiona las operaciones relacionadas con los locales.
+
+Sus principales responsabilidades son:
+
+-   registrar un local;
+-   consultar la información de un local;
+-   actualizar sus datos principales.
+
+**AreaController** gestiona las áreas asociadas a un local.
+
+Sus responsabilidades son:
+
+-   crear áreas;
+-   consultar áreas por local;
+-   actualizar su información.
+
+**EquipmentController** gestiona los equipos eléctricos registrados.
+
+Sus principales responsabilidades son:
+
+-   registrar equipos;
+-   consultar equipos;
+-   actualizar su información;
+-   asignar equipos a un área.
+
+### Request DTOs
+
+**RegisterStoreRequest**
+
+```
+RegisterStoreRequest
+- name
+- address
+```
+
+**CreateAreaRequest**
+
+```
+CreateAreaRequest
+- storeId
+- name
+```
+
+**RegisterEquipmentRequest**
+
+```
+RegisterEquipmentRequest
+- storeId
+- name
+- equipmentType
+```
+
+**AssignEquipmentToAreaRequest**
+
+```
+AssignEquipmentToAreaRequest
+- equipmentId
+- areaId
+```
+
+### Response DTOs
+
+**StoreResponse**
+
+```
+StoreResponse
+- storeId
+- name
+- address
+```
+
+**AreaResponse**
+
+```
+AreaResponse
+- areaId
+- storeId
+- name
+```
+
+**EquipmentResponse**
+
+```
+EquipmentResponse
+- equipmentId
+- name
+- equipmentType
+- status
+- areaId
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RegisterStoreCommandFromRequestAssembler
+CreateAreaCommandFromRequestAssembler
+RegisterEquipmentCommandFromRequestAssembler
+AssignEquipmentToAreaCommandFromRequestAssembler
+StoreResponseAssembler
+AreaResponseAssembler
+EquipmentResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `StoreController` | Controller | Gestiona las operaciones sobre locales. | Interface |
+| `AreaController` | Controller | Gestiona las áreas asociadas a un local. | Interface |
+| `EquipmentController` | Controller | Gestiona los equipos eléctricos y su asignación. | Interface |
+| `RegisterStoreRequest` | Request DTO | Contiene los datos para registrar un local. | Interface |
+| `CreateAreaRequest` | Request DTO | Contiene los datos para crear un área. | Interface |
+| `RegisterEquipmentRequest` | Request DTO | Contiene los datos necesarios para registrar un equipo. | Interface |
+| `AssignEquipmentToAreaRequest` | Request DTO | Contiene la información necesaria para asignar un equipo a un área. | Interface |
+| `StoreResponse` | Response DTO | Representa la información de un local. | Interface |
+| `AreaResponse` | Response DTO | Representa la información de un área. | Interface |
+| `EquipmentResponse` | Response DTO | Representa la información de un equipo eléctrico. | Interface |
+| `RegisterStoreCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro en un command. | Interface |
+| `CreateAreaCommandFromRequestAssembler` | Assembler | Convierte la solicitud de creación de área en un command. | Interface |
+| `RegisterEquipmentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro de equipo en un command. | Interface |
+| `AssignEquipmentToAreaCommandFromRequestAssembler` | Assembler | Convierte la solicitud de asignación en un command. | Interface |
+| `StoreResponseAssembler` | Assembler | Construye la respuesta del local. | Interface |
+| `AreaResponseAssembler` | Assembler | Construye la respuesta del área. | Interface |
+| `EquipmentResponseAssembler` | Assembler | Construye la respuesta del equipo. | Interface |
+
+## 5.4.3. Application Layer
+
+La **Application Layer** del bounded context **Store & Electrical Asset Management** coordina los casos de uso relacionados con el registro de locales, creación de áreas, registro de equipos y asignación de equipos a una ubicación dentro del establecimiento.
+
+### Commands
+
+**RegisterStoreCommand**
+
+```
+RegisterStoreCommand
+- name
+- address
+```
+
+**CreateAreaCommand**
+
+```
+CreateAreaCommand
+- storeId
+- name
+```
+
+**RegisterEquipmentCommand**
+
+```
+RegisterEquipmentCommand
+- storeId
+- name
+- equipmentType
+```
+
+**AssignEquipmentToAreaCommand**
+
+```
+AssignEquipmentToAreaCommand
+- equipmentId
+- areaId
+```
+
+### Command Handlers
+
+**RegisterStoreCommandHandler** coordina el registro de un nuevo local y genera `StoreRegistered`.
+
+**CreateAreaCommandHandler** crea un área asociada a un local y genera `AreaCreated`.
+
+**RegisterEquipmentCommandHandler** registra un nuevo equipo eléctrico y genera `EquipmentRegistered`.
+
+**AssignEquipmentToAreaCommandHandler** valida la asignación del equipo, actualiza su ubicación dentro del local y genera `EquipmentAssignedToArea`.
+
+### Queries
+
+**GetStoreByIdQuery**
+
+```
+GetStoreByIdQuery
+- storeId
+```
+
+**GetAreasByStoreQuery**
+
+```
+GetAreasByStoreQuery
+- storeId
+```
+
+**GetEquipmentByIdQuery**
+
+```
+GetEquipmentByIdQuery
+- equipmentId
+```
+
+**GetEquipmentByAreaQuery**
+
+```
+GetEquipmentByAreaQuery
+- areaId
+```
+
+### Query Handlers
+
+**GetStoreByIdQueryHandler** recupera la información de un local.
+
+**GetAreasByStoreQueryHandler** consulta las áreas asociadas a un establecimiento.
+
+**GetEquipmentByIdQueryHandler** recupera la información de un equipo específico.
+
+**GetEquipmentByAreaQueryHandler** obtiene los equipos asignados a un área.
+
+### Event Publishing
+
+Los handlers de aplicación coordinan la generación de los eventos:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+`EquipmentAssignedToArea` es el evento más relevante para la integración con **IoT Device Management**, ya que indica que el equipo ya cuenta con una ubicación definida dentro del establecimiento.
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterStoreCommand` | Command | Solicita registrar un local. | Application |
+| `CreateAreaCommand` | Command | Solicita crear un área dentro de un local. | Application |
+| `RegisterEquipmentCommand` | Command | Solicita registrar un equipo eléctrico. | Application |
+| `AssignEquipmentToAreaCommand` | Command | Solicita asignar un equipo a un área. | Application |
+| `RegisterStoreCommandHandler` | Command Handler | Coordina el registro de locales. | Application |
+| `CreateAreaCommandHandler` | Command Handler | Coordina la creación de áreas. | Application |
+| `RegisterEquipmentCommandHandler` | Command Handler | Coordina el registro de equipos. | Application |
+| `AssignEquipmentToAreaCommandHandler` | Command Handler | Coordina la asignación de equipos a áreas. | Application |
+| `GetStoreByIdQuery` | Query | Consulta un local por su identificador. | Application |
+| `GetAreasByStoreQuery` | Query | Consulta las áreas de un local. | Application |
+| `GetEquipmentByIdQuery` | Query | Consulta un equipo específico. | Application |
+| `GetEquipmentByAreaQuery` | Query | Consulta los equipos de un área. | Application |
+| `GetStoreByIdQueryHandler` | Query Handler | Recupera un local. | Application |
+| `GetAreasByStoreQueryHandler` | Query Handler | Recupera las áreas asociadas a un local. | Application |
+| `GetEquipmentByIdQueryHandler` | Query Handler | Recupera un equipo eléctrico. | Application |
+| `GetEquipmentByAreaQueryHandler` | Query Handler | Recupera los equipos asignados a un área. | Application |
+
+## 5.4.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Store & Electrical Asset Management** implementa la persistencia de locales, áreas y equipos, además de los mecanismos necesarios para publicar los eventos generados por el contexto.
+
+### Repository Implementations
+
+**StoreRepository** implementa `IStoreRepository` y gestiona la persistencia de los locales y sus áreas.
+
+Sus principales operaciones son:
+
+```
+save(Store)
+findById(StoreId)
+update(Store)
+```
+
+**EquipmentRepository** implementa `IEquipmentRepository` y gestiona el almacenamiento y consulta de los equipos registrados.
+
+```
+save(Equipment)
+findById(EquipmentId)
+findByAreaId(AreaId)
+update(Equipment)
+```
+
+### Persistence Context
+
+**StoreAssetsDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Store
+Area
+Equipment
+```
+
+### Persistence Entities
+
+**StoreEntity**
+
+```
+StoreEntity
+- Id
+- Name
+- Address
+- CreatedAt
+- UpdatedAt
+```
+
+**AreaEntity**
+
+```
+AreaEntity
+- Id
+- StoreId
+- Name
+- CreatedAt
+- UpdatedAt
+```
+
+**EquipmentEntity**
+
+```
+EquipmentEntity
+- Id
+- StoreId
+- AreaId
+- Name
+- EquipmentType
+- Status
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**StorePersistenceMapper** transforma entre `Store` y `StoreEntity`.
+
+**AreaPersistenceMapper** transforma entre `Area` y `AreaEntity`.
+
+**EquipmentPersistenceMapper** transforma entre `Equipment` y `EquipmentEntity`.
+
+### Event Publishing
+
+**StoreAssetEventPublisher** publica los eventos relevantes generados por el bounded context:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+Estos eventos permiten que otros bounded contexts conozcan los cambios relevantes sin acceder directamente a la persistencia interna.
+
+### Configurations
+
+**StoreEntityConfiguration** define el mapeo relacional del local.
+
+**AreaEntityConfiguration** define la relación entre las áreas y su local correspondiente.
+
+**EquipmentEntityConfiguration** define la persistencia de los equipos y su asociación con las áreas.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `StoreRepository` | Repository | Implementa la persistencia de locales. | Infrastructure |
+| `EquipmentRepository` | Repository | Implementa la persistencia de equipos. | Infrastructure |
+| `StoreAssetsDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `StoreEntity` | Persistence Entity | Representa un local almacenado. | Infrastructure |
+| `AreaEntity` | Persistence Entity | Representa un área almacenada. | Infrastructure |
+| `EquipmentEntity` | Persistence Entity | Representa un equipo almacenado. | Infrastructure |
+| `StorePersistenceMapper` | Mapper | Convierte entre dominio y persistencia del local. | Infrastructure |
+| `AreaPersistenceMapper` | Mapper | Convierte entre dominio y persistencia del área. | Infrastructure |
+| `EquipmentPersistenceMapper` | Mapper | Convierte entre dominio y persistencia del equipo. | Infrastructure |
+| `StoreAssetEventPublisher` | Event Publisher | Publica los eventos generados por el bounded context. | Infrastructure |
+| `StoreEntityConfiguration` | Persistence Configuration | Define el mapeo del local. | Infrastructure |
+| `AreaEntityConfiguration` | Persistence Configuration | Define el mapeo de las áreas. | Infrastructure |
+| `EquipmentEntityConfiguration` | Persistence Configuration | Define el mapeo de los equipos. | Infrastructure |
+
+### 5.4.5 Bounded Context Software Architecture Component Level Diagrams.
+
+Este diagrama representa los componentes encargados de administrar locales, áreas y equipos eléctricos, además de publicar EquipmentAssignedToArea para su posterior uso por IoT Device Management.
+
+![](assets-emergentes/C4Diagrams/StoreElectricalAssetComponentDiagram.png)
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagram 
+
+![](assets-emergentes/ClassDiagrams/StoreElectricalUML.png)
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/StoreElectricalDatabase.png)
+
+---
 
 
 # Capítulo VI: Solution UX Design
