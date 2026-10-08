@@ -5673,6 +5673,530 @@ El diagrama representa la recepción de `ThresholdExceeded`  y `AnomalyDetected`
 
 ![](assets-emergentes/DatabaseDiagram/Alert_Database.png)
 
+## 5.8. Notifications Bounded Context
+
+El bounded context **Notifications** se encarga de distribuir las alertas hacia los usuarios mediante los canales de comunicación disponibles y gestionar los reintentos cuando una entrega falla. README
+
+En el Event Storming actual aparecen como elementos principales `Notification`, `SendNotification`, `RetryNotification`, `NotificationSent`, `NotificationDelivered` y `NotificationFailed`. Además, este contexto recibe `CriticalAlertCreated` y `NonCriticalAlertCreated` desde **Alert Management**.
+
+### 5.8.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la creación, envío, estado de entrega y reintentos de las notificaciones.
+
+### Aggregate Root
+
+**Notification** es el aggregate root principal del bounded context. Representa un mensaje que debe ser enviado a uno o más destinatarios por un canal determinado.
+
+Sus principales responsabilidades son:
+
+-   crear una notificación;
+-   definir su canal de envío;
+-   registrar su estado;
+-   controlar los intentos de entrega;
+-   determinar si puede reintentarse;
+-   marcarla como enviada, entregada o fallida.
+
+### Value Objects
+
+**NotificationId** identifica de manera única una notificación.
+
+**RecipientId** identifica al usuario destinatario.
+
+**NotificationContent** contiene el mensaje que será enviado.
+
+**DeliveryAttempt** representa el número de intentos realizados.
+
+### Enumerations
+
+**NotificationChannel** representa el canal utilizado:
+
+```
+PUSH
+SMS
+EMAIL
+WHATSAPP
+```
+
+La documentación del proyecto contempla preferencias configurables por WhatsApp, SMS o correo, además de notificaciones Push para alertas críticas. README
+
+**NotificationStatus** representa el estado de entrega:
+
+```
+PENDING
+SENT
+DELIVERED
+FAILED
+```
+
+### Repository Interface
+
+**INotificationRepository** define las operaciones necesarias para persistir y consultar notificaciones.
+
+```
+save(Notification)
+findById(NotificationId)
+findPending()
+findFailed()
+update(Notification)
+```
+
+### Domain Services
+
+**NotificationChannelService** determina qué canal debe utilizarse de acuerdo con las preferencias disponibles y la criticidad de la alerta.
+
+```
+selectChannel(RecipientId)
+validateChannel(NotificationChannel)
+```
+
+**NotificationRetryService** controla la lógica de reintentos de entrega.
+
+```
+canRetry(Notification)
+registerAttempt(Notification)
+markFailed(Notification)
+```
+
+### Eventos del dominio
+
+Los principales eventos son:
+
+```
+NotificationSent
+NotificationDelivered
+NotificationFailed
+```
+
+Estos eventos permiten registrar el resultado de cada intento de entrega y mantener trazabilidad sobre el proceso de comunicación.
+
+### Integración con Alert Management
+
+El contexto recibe principalmente:
+
+```
+CriticalAlertCreated
+NonCriticalAlertCreated
+```
+
+A partir de estos eventos se crea una `Notification` y se selecciona el canal correspondiente.
+
+El flujo principal es:
+
+```
+CriticalAlertCreated / NonCriticalAlertCreated
+                ↓
+        Create Notification
+                ↓
+          Select Channel
+                ↓
+        SendNotification
+           ↙         ↘
+       SUCCESS      FAILURE
+          ↓            ↓
+NotificationSent   NotificationFailed
+                         ↓
+                 RetryNotification
+```
+
+Para las notificaciones Push, la documentación establece el uso obligatorio de **Firebase Cloud Messaging (FCM/APNs)**. README
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Notification` | Aggregate Root | Representa una notificación y controla su entrega. | Domain |
+| `NotificationId` | Value Object | Identifica de manera única una notificación. | Domain |
+| `RecipientId` | Value Object | Identifica al destinatario de la notificación. | Domain |
+| `NotificationContent` | Value Object | Representa el contenido del mensaje. | Domain |
+| `DeliveryAttempt` | Value Object | Representa los intentos de entrega realizados. | Domain |
+| `NotificationChannel` | Enumeration | Define el canal de envío. | Domain |
+| `NotificationStatus` | Enumeration | Define el estado de entrega. | Domain |
+| `INotificationRepository` | Repository Interface | Define la persistencia y consulta de notificaciones. | Domain |
+| `NotificationChannelService` | Domain Service | Determina el canal de envío aplicable. | Domain |
+| `NotificationRetryService` | Domain Service | Gestiona las reglas de reintento. | Domain |
+
+### 5.8.2. Interface Layer
+
+La **Interface Layer** del bounded context **Notifications** recibe las solicitudes relacionadas con la consulta, envío y reintento de notificaciones, además de procesar los eventos provenientes de **Alert Management**.
+
+### Controllers
+
+**NotificationController** gestiona las operaciones principales sobre las notificaciones.
+
+Sus responsabilidades son:
+
+-   consultar una notificación;
+-   consultar notificaciones por destinatario;
+-   solicitar el reintento de una notificación fallida.
+
+### Event Consumers
+
+**CriticalAlertCreatedConsumer** recibe `CriticalAlertCreated` y transforma el evento en una solicitud de creación y envío de notificación.
+
+**NonCriticalAlertCreatedConsumer** recibe `NonCriticalAlertCreated` y delega la generación de una notificación según las preferencias configuradas.
+
+### Request DTOs
+
+**RetryNotificationRequest**
+
+```
+RetryNotificationRequest
+- notificationId
+```
+
+### Response DTOs
+
+**NotificationResponse**
+
+```
+NotificationResponse
+- notificationId
+- recipientId
+- channel
+- content
+- status
+- attempts
+- createdAt
+- sentAt
+- deliveredAt
+```
+
+**NotificationListResponse**
+
+```
+NotificationListResponse
+- notifications
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RetryNotificationCommandFromRequestAssembler
+NotificationResponseAssembler
+NotificationListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Flujo de entrada por eventos
+
+La principal entrada automática hacia este bounded context ocurre a través de eventos de alertas:
+
+```
+CriticalAlertCreated
+        ↓
+CriticalAlertCreatedConsumer
+        ↓
+CreateNotificationCommand
+
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedConsumer
+        ↓
+CreateNotificationCommand
+```
+
+La selección del canal no se realiza directamente en esta capa, sino que se delega hacia las capas Application y Domain, donde se consideran las preferencias del usuario.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `NotificationController` | Controller | Gestiona consultas y reintentos de notificaciones. | Interface |
+| `CriticalAlertCreatedConsumer` | Consumer | Recibe eventos de alertas críticas. | Interface |
+| `NonCriticalAlertCreatedConsumer` | Consumer | Recibe eventos de alertas no críticas. | Interface |
+| `RetryNotificationRequest` | Request DTO | Contiene la solicitud de reintento de una notificación. | Interface |
+| `NotificationResponse` | Response DTO | Representa la información de una notificación. | Interface |
+| `NotificationListResponse` | Response DTO | Representa una colección de notificaciones. | Interface |
+| `RetryNotificationCommandFromRequestAssembler` | Assembler | Convierte una solicitud de reintento en un command. | Interface |
+| `NotificationResponseAssembler` | Assembler | Construye la respuesta de una notificación. | Interface |
+| `NotificationListResponseAssembler` | Assembler | Construye la respuesta de una colección de notificaciones. | Interface |
+
+### 5.8.3. Application Layer
+
+La **Application Layer** del bounded context **Notifications** coordina los casos de uso relacionados con la creación, envío, consulta y reintento de notificaciones generadas a partir de las alertas del sistema.
+
+### Commands
+
+**CreateNotificationCommand**
+
+```
+CreateNotificationCommand
+- alertId
+- recipientId
+- severity
+- content
+```
+
+**SendNotificationCommand**
+
+```
+SendNotificationCommand
+- notificationId
+```
+
+**RetryNotificationCommand**
+
+```
+RetryNotificationCommand
+- notificationId
+```
+
+### Command Handlers
+
+**CreateNotificationCommandHandler** crea una nueva notificación a partir de una alerta recibida, determina el canal correspondiente y registra la notificación con estado `PENDING`.
+
+**SendNotificationCommandHandler** coordina el envío de la notificación mediante el canal seleccionado. Según el resultado, actualiza su estado y genera `NotificationSent`, `NotificationDelivered` o `NotificationFailed`.
+
+**RetryNotificationCommandHandler** verifica mediante `NotificationRetryService` si una notificación fallida puede volver a enviarse y, de ser válido, registra un nuevo intento.
+
+### Queries
+
+**GetNotificationByIdQuery**
+
+```
+GetNotificationByIdQuery
+- notificationId
+```
+
+**GetNotificationsByRecipientQuery**
+
+```
+GetNotificationsByRecipientQuery
+- recipientId
+```
+
+**GetFailedNotificationsQuery**
+
+```
+GetFailedNotificationsQuery
+```
+
+### Query Handlers
+
+**GetNotificationByIdQueryHandler** recupera una notificación específica.
+
+**GetNotificationsByRecipientQueryHandler** obtiene las notificaciones asociadas a un destinatario.
+
+**GetFailedNotificationsQueryHandler** recupera las notificaciones que no pudieron entregarse correctamente.
+
+### Event Handlers
+
+**CriticalAlertCreatedEventHandler** recibe `CriticalAlertCreated` desde **Alert Management** y genera `CreateNotificationCommand` con prioridad crítica.
+
+**NonCriticalAlertCreatedEventHandler** recibe `NonCriticalAlertCreated` y genera una notificación con el tratamiento correspondiente.
+
+### Flujo de aplicación
+
+```
+CriticalAlertCreated / NonCriticalAlertCreated
+                 ↓
+          Event Handler
+                 ↓
+     CreateNotificationCommand
+                 ↓
+  CreateNotificationCommandHandler
+                 ↓
+    NotificationChannelService
+                 ↓
+       SendNotificationCommand
+                 ↓
+    SendNotificationCommandHandler
+          ↙               ↘
+      SUCCESS            FAILURE
+         ↓                  ↓
+NotificationSent     NotificationFailed
+                           ↓
+               RetryNotificationCommand
+```
+
+La selección del canal considera las preferencias definidas por el usuario en **Profiles & Preferences**, mientras que la entrega Push debe integrarse posteriormente con FCM/APNs según las restricciones del proyecto. README
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateNotificationCommand` | Command | Solicita crear una notificación a partir de una alerta. | Application |
+| `SendNotificationCommand` | Command | Solicita enviar una notificación pendiente. | Application |
+| `RetryNotificationCommand` | Command | Solicita reintentar una notificación fallida. | Application |
+| `CreateNotificationCommandHandler` | Command Handler | Coordina la creación y selección del canal. | Application |
+| `SendNotificationCommandHandler` | Command Handler | Coordina el envío y actualización del estado. | Application |
+| `RetryNotificationCommandHandler` | Command Handler | Coordina el reintento de entrega. | Application |
+| `GetNotificationByIdQuery` | Query | Consulta una notificación específica. | Application |
+| `GetNotificationsByRecipientQuery` | Query | Consulta notificaciones por destinatario. | Application |
+| `GetFailedNotificationsQuery` | Query | Consulta notificaciones fallidas. | Application |
+| `GetNotificationByIdQueryHandler` | Query Handler | Recupera una notificación. | Application |
+| `GetNotificationsByRecipientQueryHandler` | Query Handler | Recupera notificaciones del destinatario. | Application |
+| `GetFailedNotificationsQueryHandler` | Query Handler | Recupera notificaciones con estado fallido. | Application |
+| `CriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas críticas. | Application |
+| `NonCriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas no críticas. | Application |
+
+### 5.8.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Notifications** implementa la persistencia de las notificaciones, la integración con proveedores externos de mensajería y los mecanismos necesarios para procesar eventos y reintentar entregas fallidas.
+
+### Repository Implementation
+
+**NotificationRepository** implementa `INotificationRepository` y administra la persistencia y consulta de las notificaciones.
+
+```
+save(Notification)
+findById(NotificationId)
+findPending()
+findFailed()
+update(Notification)
+```
+
+### Persistence Context
+
+**NotificationDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Notification
+```
+
+### Persistence Entity
+
+**NotificationEntity**
+
+```
+NotificationEntity
+- Id
+- AlertId
+- RecipientId
+- Channel
+- Content
+- Status
+- Attempts
+- CreatedAt
+- SentAt
+- DeliveredAt
+- UpdatedAt
+```
+
+### Persistence Mapper
+
+**NotificationPersistenceMapper** transforma entre el agregado `Notification` y `NotificationEntity`.
+
+Su responsabilidad es mantener separada la representación del dominio de la estructura utilizada para persistencia.
+
+### External Notification Providers
+
+La infraestructura implementa adaptadores para los canales utilizados por ElectroLink.
+
+**PushNotificationProvider** gestiona el envío de notificaciones Push mediante **Firebase Cloud Messaging (FCM/APNs)**, integración obligatoria definida por el proyecto. README
+
+**SmsNotificationProvider** gestiona el envío de mensajes SMS.
+
+**EmailNotificationProvider** gestiona el envío de notificaciones por correo electrónico.
+
+**WhatsAppNotificationProvider** gestiona el envío mediante WhatsApp cuando este canal se encuentra configurado para el usuario.
+
+Estos proveedores implementan una interfaz común que permite que la Application Layer solicite el envío sin depender de una implementación específica.
+
+### Notification Provider Interface
+
+**INotificationProvider** define el contrato utilizado por los proveedores externos.
+
+```
+send(Notification)
+supports(NotificationChannel)
+```
+
+### Notification Dispatcher
+
+**NotificationDispatcher** selecciona el proveedor correspondiente según `NotificationChannel` y ejecuta la entrega.
+
+```
+dispatch(Notification)
+```
+
+De esta forma, la selección técnica del proveedor permanece en infraestructura, mientras que la decisión del canal continúa siendo responsabilidad del dominio y la aplicación.
+
+### Event Consumers
+
+**CriticalAlertCreatedEventConsumer** recibe `CriticalAlertCreated` desde **Alert Management** y lo dirige hacia `CriticalAlertCreatedEventHandler`.
+
+**NonCriticalAlertCreatedEventConsumer** recibe `NonCriticalAlertCreated` y lo dirige hacia `NonCriticalAlertCreatedEventHandler`.
+
+### Retry Processing
+
+**NotificationRetryProcessor** identifica notificaciones con estado `FAILED` que pueden reintentarse y ejecuta nuevamente el proceso de envío.
+
+```
+processFailedNotifications()
+retry(Notification)
+```
+
+Este componente utiliza las reglas definidas por `NotificationRetryService`, evitando que la infraestructura determine por sí misma cuándo un reintento es válido.
+
+### Event Publishing
+
+**NotificationEventPublisher** publica los eventos generados durante el proceso de entrega:
+
+```
+NotificationSent
+NotificationDelivered
+NotificationFailed
+```
+
+### Configurations
+
+**NotificationEntityConfiguration** define el mapeo relacional de las notificaciones.
+
+Entre los principales campos configurados se encuentran:
+
+```
+Id
+AlertId
+RecipientId
+Channel
+Status
+Attempts
+CreatedAt
+SentAt
+DeliveredAt
+```
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `NotificationRepository` | Repository | Implementa la persistencia y consulta de notificaciones. | Infrastructure |
+| `NotificationDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `NotificationEntity` | Persistence Entity | Representa una notificación almacenada. | Infrastructure |
+| `NotificationPersistenceMapper` | Mapper | Convierte entre dominio y persistencia. | Infrastructure |
+| `INotificationProvider` | Provider Interface | Define el contrato común para los proveedores de envío. | Infrastructure |
+| `PushNotificationProvider` | External Provider | Gestiona notificaciones Push mediante FCM/APNs. | Infrastructure |
+| `SmsNotificationProvider` | External Provider | Gestiona el envío de SMS. | Infrastructure |
+| `EmailNotificationProvider` | External Provider | Gestiona el envío de correos electrónicos. | Infrastructure |
+| `WhatsAppNotificationProvider` | External Provider | Gestiona el envío mediante WhatsApp. | Infrastructure |
+| `NotificationDispatcher` | Infrastructure Service | Selecciona y ejecuta el proveedor correspondiente. | Infrastructure |
+| `CriticalAlertCreatedEventConsumer` | Event Consumer | Recibe eventos de alertas críticas. | Infrastructure |
+| `NonCriticalAlertCreatedEventConsumer` | Event Consumer | Recibe eventos de alertas no críticas. | Infrastructure |
+| `NotificationRetryProcessor` | Background Processor | Procesa reintentos de notificaciones fallidas. | Infrastructure |
+| `NotificationEventPublisher` | Event Publisher | Publica eventos de entrega de notificaciones. | Infrastructure |
+| `NotificationEntityConfiguration` | Persistence Configuration | Define el mapeo y restricciones de persistencia. | Infrastructure |
+
+### 5.8.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa el flujo desde los eventos generados por Alert Management hasta la selección del canal, envío de la notificación, persistencia del resultado y posible reintento.
+
+![](assets-emergentes/C4Diagrams/NotificationsComponentDiagram.png)
+
+### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.8.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/Notification_Class.png)
+
+#### 5.8.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/notifications-database.png)
+
 # Capítulo VI: Solution UX Design
 
 ## 6.1. Style Guidelines
