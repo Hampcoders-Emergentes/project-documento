@@ -5161,6 +5161,518 @@ El diagrama representa el flujo desde la recepción de telemetría hasta la vali
 
 ![](assets-emergentes/DatabaseDiagram/ElectricalDatabase.png)
 
+## 5.7. Alert Management Bounded Context
+
+El bounded context **Alert Management** se encarga de crear, clasificar y gestionar el ciclo de vida de las alertas generadas automática o manualmente dentro de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `Alert`, `ManualAlert`, `AlertCreated`, `CriticalAlertCreated`, `NonCriticalAlertCreated`, `AlertAcknowledged` y `AlertResolved`. Además, este contexto recibe `ThresholdExceeded` y `AnomalyDetected`provenientes de **Electrical Monitoring**.
+
+### 5.7.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la creación, clasificación, reconocimiento y resolución de las alertas.
+
+### Aggregate Root
+
+**Alert** es el aggregate root principal del bounded context. Representa una condición de riesgo o situación anómala que requiere seguimiento dentro de ElectroLink.
+
+Sus principales responsabilidades son:
+
+-   crear una alerta;
+-   determinar su severidad;
+-   asociarla con el equipo afectado;
+-   registrar su origen;
+-   marcarla como reconocida;
+-   resolverla;
+-   controlar las transiciones válidas de su estado.
+
+### Value Objects
+
+**AlertId** identifica de manera única una alerta.
+
+**EquipmentId** identifica el equipo relacionado con la alerta.
+
+**AlertDescription** contiene la descripción de la condición detectada.
+
+**AlertTimestamp** representa el momento en que la alerta fue generada.
+
+### Enumerations
+
+**AlertSeverity** representa la clasificación de la alerta:
+
+```
+CRITICAL
+NON_CRITICAL
+```
+
+Una alerta crítica corresponde a una condición que requiere atención inmediata, mientras que una alerta no crítica representa una anomalía preventiva que debe ser supervisada. Esta diferenciación forma parte del lenguaje del proyecto. README
+
+**AlertStatus** representa el estado dentro de su ciclo de vida:
+
+```
+OPEN
+ACKNOWLEDGED
+RESOLVED
+```
+
+**AlertSource** permite diferenciar el origen:
+
+```
+AUTOMATIC
+MANUAL
+```
+
+Esto permite que el mismo modelo represente tanto alertas generadas a partir de eventos del monitoreo como reportes creados manualmente.
+
+### Repository Interface
+
+**IAlertRepository** define las operaciones necesarias para persistir y consultar alertas.
+
+```
+save(Alert)
+findById(AlertId)
+findByEquipmentId(EquipmentId)
+findByStatus(AlertStatus)
+update(Alert)
+```
+
+### Domain Services
+
+**AlertClassificationService** determina la severidad que corresponde a una condición detectada.
+
+```
+classifyAlert(Alert)
+determineSeverity(Alert)
+```
+
+**AlertLifecycleService** valida las transiciones del ciclo de vida de una alerta.
+
+```
+canAcknowledge(Alert)
+acknowledge(Alert)
+canResolve(Alert)
+resolve(Alert)
+```
+
+La clasificación resulta importante porque ElectroLink debe categorizar los eventos detectados según su nivel de severidad antes de distribuirlos hacia los mecanismos correspondientes. README
+
+### Eventos del dominio
+
+Los principales eventos identificados son:
+
+```
+AlertCreated
+CriticalAlertCreated
+NonCriticalAlertCreated
+AlertAcknowledged
+AlertResolved
+```
+
+`CriticalAlertCreated` y `NonCriticalAlertCreated` permiten que otros bounded contexts reaccionen de manera diferente según la severidad.
+
+En particular, estos eventos serán utilizados posteriormente por **Notifications** para distribuir las alertas a los usuarios mediante los canales configurados.
+
+### Integración con Electrical Monitoring
+
+El contexto recibe principalmente:
+
+```
+ThresholdExceeded
+AnomalyDetected
+```
+
+A partir de estos eventos se crea una alerta y se determina su nivel de severidad.
+
+El flujo conceptual es:
+
+```
+ThresholdExceeded / AnomalyDetected
+              ↓
+         Create Alert
+              ↓
+     Classify Severity
+          ↙       ↘
+    CRITICAL    NON_CRITICAL
+        ↓            ↓
+CriticalAlertCreated NonCriticalAlertCreated
+```
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Alert` | Aggregate Root | Representa una alerta y controla su ciclo de vida. | Domain |
+| `AlertId` | Value Object | Identifica de manera única una alerta. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo relacionado con la alerta. | Domain |
+| `AlertDescription` | Value Object | Representa la descripción de la condición detectada. | Domain |
+| `AlertTimestamp` | Value Object | Representa el instante de creación de la alerta. | Domain |
+| `AlertSeverity` | Enumeration | Define la severidad de la alerta. | Domain |
+| `AlertStatus` | Enumeration | Define el estado de la alerta. | Domain |
+| `AlertSource` | Enumeration | Define si la alerta tiene origen automático o manual. | Domain |
+| `IAlertRepository` | Repository Interface | Define la persistencia y consulta de alertas. | Domain |
+| `AlertClassificationService` | Domain Service | Determina la severidad de una alerta. | Domain |
+| `AlertLifecycleService` | Domain Service | Gestiona las reglas de reconocimiento y resolución. | Domain |
+
+### 5.7.2. Interface Layer
+
+La **Interface Layer** del bounded context **Alert Management** recibe las solicitudes relacionadas con la creación manual, consulta, reconocimiento y resolución de alertas, además de exponer la información necesaria para su seguimiento.
+
+#### Controllers
+
+**AlertController** gestiona las operaciones principales sobre las alertas.
+
+Sus responsabilidades son:
+
+-   consultar alertas;
+-   consultar una alerta específica;
+-   reconocer una alerta;
+-   resolver una alerta;
+-   crear alertas manuales cuando corresponda.
+
+#### Request DTOs
+
+**CreateManualAlertRequest**
+
+```
+CreateManualAlertRequest
+- equipmentId
+- description
+```
+
+**AcknowledgeAlertRequest**
+
+```
+AcknowledgeAlertRequest
+- alertId
+```
+
+**ResolveAlertRequest**
+
+```
+ResolveAlertRequest
+- alertId
+```
+
+#### Response DTOs
+
+**AlertResponse**
+
+```
+AlertResponse
+- alertId
+- equipmentId
+- description
+- severity
+- status
+- source
+- createdAt
+- acknowledgedAt
+- resolvedAt
+```
+
+**AlertListResponse**
+
+```
+AlertListResponse
+- alerts
+```
+
+#### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+CreateManualAlertCommandFromRequestAssembler
+AcknowledgeAlertCommandFromRequestAssembler
+ResolveAlertCommandFromRequestAssembler
+AlertResponseAssembler
+AlertListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para la interfaz.
+
+#### Event Consumers
+
+La capa de interfaz también contempla consumidores para los eventos provenientes de **Electrical Monitoring**.
+
+**ThresholdExceededConsumer** recibe `ThresholdExceeded` y lo transforma en una solicitud de creación de alerta.
+
+**AnomalyDetectedConsumer** recibe `AnomalyDetected` y delega la creación y clasificación de la alerta correspondiente.
+
+#### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AlertController` | Controller | Gestiona consultas y operaciones sobre alertas. | Interface |
+| `ThresholdExceededConsumer` | Consumer | Recibe eventos de umbral excedido. | Interface |
+| `AnomalyDetectedConsumer` | Consumer | Recibe eventos de anomalías detectadas. | Interface |
+| `CreateManualAlertRequest` | Request DTO | Contiene los datos para registrar una alerta manual. | Interface |
+| `AcknowledgeAlertRequest` | Request DTO | Contiene la solicitud para reconocer una alerta. | Interface |
+| `ResolveAlertRequest` | Request DTO | Contiene la solicitud para resolver una alerta. | Interface |
+| `AlertResponse` | Response DTO | Representa la información completa de una alerta. | Interface |
+| `AlertListResponse` | Response DTO | Representa una colección de alertas. | Interface |
+| `CreateManualAlertCommandFromRequestAssembler` | Assembler | Convierte una solicitud manual en un command. | Interface |
+| `AcknowledgeAlertCommandFromRequestAssembler` | Assembler | Convierte la solicitud de reconocimiento en un command. | Interface |
+| `ResolveAlertCommandFromRequestAssembler` | Assembler | Convierte la solicitud de resolución en un command. | Interface |
+| `AlertResponseAssembler` | Assembler | Construye la respuesta de una alerta. | Interface |
+| `AlertListResponseAssembler` | Assembler | Construye la respuesta de una colección de alertas. | Interface |
+
+
+### 5.7.3. Application Layer
+
+La **Application Layer** del bounded context **Alert Management** coordina los casos de uso relacionados con la creación, clasificación, reconocimiento, consulta y resolución de alertas.
+
+#### Commands
+
+**CreateAlertCommand**
+
+```
+CreateAlertCommand
+- equipmentId
+- description
+- source
+```
+
+**CreateManualAlertCommand**
+
+```
+CreateManualAlertCommand
+- equipmentId
+- description
+```
+
+**AcknowledgeAlertCommand**
+
+```
+AcknowledgeAlertCommand
+- alertId
+```
+
+**ResolveAlertCommand**
+
+```
+ResolveAlertCommand
+- alertId
+```
+
+#### Command Handlers
+
+**CreateAlertCommandHandler** crea una nueva alerta a partir de un evento proveniente del monitoreo eléctrico, determina su severidad mediante `AlertClassificationService` y genera `AlertCreated`.
+
+Según la clasificación obtenida, también publica:
+
+```
+CriticalAlertCreated
+NonCriticalAlertCreated
+```
+
+**CreateManualAlertCommandHandler** registra una alerta creada manualmente y establece su origen como `MANUAL`.
+
+**AcknowledgeAlertCommandHandler** recupera la alerta, valida la transición mediante `AlertLifecycleService`, actualiza su estado a `ACKNOWLEDGED` y genera `AlertAcknowledged`.
+
+**ResolveAlertCommandHandler** valida que la alerta pueda finalizar su ciclo de vida, actualiza su estado a `RESOLVED` y genera `AlertResolved`.
+
+#### Queries
+
+**GetAlertByIdQuery**
+
+```
+GetAlertByIdQuery
+- alertId
+```
+
+**GetAlertsByEquipmentQuery**
+
+```
+GetAlertsByEquipmentQuery
+- equipmentId
+```
+
+**GetAlertsByStatusQuery**
+
+```
+GetAlertsByStatusQuery
+- status
+```
+
+#### Query Handlers
+
+**GetAlertByIdQueryHandler** recupera una alerta específica.
+
+**GetAlertsByEquipmentQueryHandler** obtiene las alertas relacionadas con un equipo.
+
+**GetAlertsByStatusQueryHandler** recupera las alertas según su estado dentro del ciclo de vida.
+
+#### Event Handlers
+
+**ThresholdExceededEventHandler** recibe `ThresholdExceeded` desde **Electrical Monitoring** y genera un `CreateAlertCommand`.
+
+**AnomalyDetectedEventHandler** recibe `AnomalyDetected` y solicita la creación y clasificación de la alerta correspondiente.
+
+#### Flujo de aplicación
+
+```
+ThresholdExceeded / AnomalyDetected
+              ↓
+      Event Handler
+              ↓
+      CreateAlertCommand
+              ↓
+     CreateAlertCommandHandler
+              ↓
+   AlertClassificationService
+          ↙           ↘
+     CRITICAL      NON_CRITICAL
+         ↓              ↓
+CriticalAlertCreated  NonCriticalAlertCreated
+```
+
+El bounded context mantiene así separada la detección técnica de anomalías de la gestión del ciclo de vida de las alertas.
+
+#### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateAlertCommand` | Command | Solicita crear una alerta automática. | Application |
+| `CreateManualAlertCommand` | Command | Solicita crear una alerta manual. | Application |
+| `AcknowledgeAlertCommand` | Command | Solicita reconocer una alerta. | Application |
+| `ResolveAlertCommand` | Command | Solicita resolver una alerta. | Application |
+| `CreateAlertCommandHandler` | Command Handler | Coordina la creación y clasificación de alertas. | Application |
+| `CreateManualAlertCommandHandler` | Command Handler | Coordina el registro de alertas manuales. | Application |
+| `AcknowledgeAlertCommandHandler` | Command Handler | Coordina el reconocimiento de una alerta. | Application |
+| `ResolveAlertCommandHandler` | Command Handler | Coordina la resolución de una alerta. | Application |
+| `GetAlertByIdQuery` | Query | Consulta una alerta específica. | Application |
+| `GetAlertsByEquipmentQuery` | Query | Consulta alertas asociadas a un equipo. | Application |
+| `GetAlertsByStatusQuery` | Query | Consulta alertas según su estado. | Application |
+| `GetAlertByIdQueryHandler` | Query Handler | Recupera una alerta por identificador. | Application |
+| `GetAlertsByEquipmentQueryHandler` | Query Handler | Recupera alertas de un equipo. | Application |
+| `GetAlertsByStatusQueryHandler` | Query Handler | Recupera alertas por estado. | Application |
+| `ThresholdExceededEventHandler` | Event Handler | Procesa eventos de umbral excedido. | Application |
+| `AnomalyDetectedEventHandler` | Event Handler | Procesa eventos de anomalías detectadas. | Application |
+
+### 5.7.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Alert Management** implementa la persistencia de las alertas, la recepción de eventos provenientes de otros contextos y la publicación de eventos relacionados con su ciclo de vida.
+
+#### Repository Implementation
+
+**AlertRepository** implementa `IAlertRepository` y gestiona la persistencia y consulta de las alertas.
+
+Sus principales operaciones son:
+
+```
+save(Alert)
+findById(AlertId)
+findByEquipmentId(EquipmentId)
+findByStatus(AlertStatus)
+update(Alert)
+```
+
+#### Persistence Context
+
+**AlertDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Alert
+```
+
+#### Persistence Entity
+
+**AlertEntity**
+
+```
+AlertEntity
+- Id
+- EquipmentId
+- Description
+- Severity
+- Status
+- Source
+- CreatedAt
+- AcknowledgedAt
+- ResolvedAt
+```
+
+#### Persistence Mapper
+
+**AlertPersistenceMapper** transforma entre el agregado `Alert` y `AlertEntity`.
+
+Su responsabilidad es mantener separada la representación del dominio de la estructura utilizada para persistencia.
+
+#### Event Consumers
+
+**ThresholdExceededEventConsumer** recibe el evento `ThresholdExceeded` proveniente de **Electrical Monitoring** y lo deriva hacia `ThresholdExceededEventHandler`.
+
+**AnomalyDetectedEventConsumer** recibe `AnomalyDetected` y lo deriva hacia `AnomalyDetectedEventHandler`.
+
+Estos consumidores permiten que Alert Management responda a eventos del monitoreo sin depender directamente de la implementación interna de dicho bounded context.
+
+#### Event Publishing
+
+**AlertEventPublisher** publica los eventos generados durante el ciclo de vida de una alerta:
+
+```
+AlertCreated
+CriticalAlertCreated
+NonCriticalAlertCreated
+AlertAcknowledged
+AlertResolved
+```
+
+Los eventos `CriticalAlertCreated` y `NonCriticalAlertCreated` permiten que el bounded context **Notifications** determine qué información debe distribuir a los usuarios según la severidad detectada.
+
+#### Configurations
+
+**AlertEntityConfiguration** define el mapeo relacional de las alertas y sus restricciones de persistencia.
+
+Entre los aspectos principales que configura se encuentran:
+
+```
+Primary Key
+EquipmentId
+Severity
+Status
+Source
+CreatedAt
+AcknowledgedAt
+ResolvedAt
+```
+
+#### Audit Support
+
+Debido a que ElectroLink requiere conservar registros de incidentes y acciones realizadas sobre las alertas, la infraestructura debe mantener las marcas de tiempo asociadas a su creación, reconocimiento y resolución.
+
+Esto permite conservar el historial necesario para posteriores consultas, análisis y generación de evidencias operativas.
+
+#### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AlertRepository` | Repository | Implementa la persistencia y consulta de alertas. | Infrastructure |
+| `AlertDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `AlertEntity` | Persistence Entity | Representa una alerta almacenada. | Infrastructure |
+| `AlertPersistenceMapper` | Mapper | Convierte entre el agregado de dominio y la entidad de persistencia. | Infrastructure |
+| `ThresholdExceededEventConsumer` | Event Consumer | Recibe eventos de umbral excedido. | Infrastructure |
+| `AnomalyDetectedEventConsumer` | Event Consumer | Recibe eventos de anomalías detectadas. | Infrastructure |
+| `AlertEventPublisher` | Event Publisher | Publica los eventos generados por el bounded context. | Infrastructure |
+| `AlertEntityConfiguration` | Persistence Configuration | Define el mapeo y restricciones de persistencia de las alertas. | Infrastructure |
+
+### 5.7.5 Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama representa la recepción de `ThresholdExceeded`  y `AnomalyDetected`, la creación y clasificación de las alertas, su posterior reconocimiento o resolución y la publicación de eventos hacia **Notifications**.
+
+![](assets-emergentes/C4Diagrams/AlertManagementComponentDiagram.png)
+
+### 5.7.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.7.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/AlertUMLClass.png)
+
+#### 5.7.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Alert_Database.png)
+
 # Capítulo VI: Solution UX Design
 
 ## 6.1. Style Guidelines
