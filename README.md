@@ -2619,13 +2619,34 @@ Protected Resource
 | `UserAccountEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de cuentas. | Infrastructure |
 | `PasswordResetEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de recuperación de contraseñas. | Infrastructure |
 
-### 5.X.6. Bounded Context Software Architecture Component Level Diagrams
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-### 5.X.7. Bounded Context Software Architecture Code Level Diagrams
+![](assets-emergentes/C4Diagrams/IAMComponentDiagram.png)
 
-#### 5.X.7.1. Bounded Context Domain Layer Class Diagrams
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
 
-#### 5.X.7.2. Bounded Context Database Design Diagram
+En esta sección se presentan los diagramas a nivel de código correspondientes al bounded context Identity & Access Management. El objetivo es representar con mayor detalle la estructura interna del dominio y la persistencia de los objetos definidos previamente en las capas tácticas. Para ello, se incluyen el diagrama de clases de la Domain Layer y el diagrama de base de datos asociado al contexto.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+![](assets-emergentes/ClassDiagrams/IAM-ClassDiagram.png)
+
+El diagrama de la Domain Layer de Identity & Access Management (ElectroLink) se estructura en:
+
+-Aggregate Root: UserAccount (administra rol, estado y credenciales).
+-Value Objects: UserId, Email y Credential (con sus respectivas validaciones).
+-Enumeraciones: UserRole, AccountStatus y AuthenticationType.
+-Interfaces: Contratos de persistencia, seguridad, tokens y políticas independientes de infraestructura.
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/IAM_Database.png)
+
+El diagrama de base de datos de Identity & Access Management (ElectroLink) se estructura en PostgreSQL e incluye:
+
+- user_accounts: Almacena identificadores, roles, estados y credenciales hasheadas, diferenciando el acceso de managers (correo/contraseña) y trabajadores (DNI/PIN).
+-password_reset_tokens: Gestiona las solicitudes temporales de recuperación en relación uno a muchos con las cuentas.
+-Restricciones: Incorpora primary y foreign keys, restricciones de unicidad, checks e índices.
 
 # Capítulo VI: Solution UX Design
 
