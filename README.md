@@ -40,7 +40,7 @@
   </tbody>
 </table>
 
-<div style="text-align:center; margin-top:18px;"> Diciembre 2026 </div>
+<div style="text-align:center; margin-top:18px;"> Octubre  2026 </div>
 
 <hr>
 
@@ -60,6 +60,12 @@ En esta sección se registra el historial de cambios del informe del proyecto El
 |   TB1   | 2026-09-19  | Contreras López, Leandro Saúl                                             | Redacción del Capítulo II con diseño de entrevistas por segmento, registro detallado de entrevistas a personal operativo y gerencial con evidencias audiovisuales y análisis del segmento Trabajador del Local, y avance del Capítulo IV con modelado de flujos de mensajes de dominio para los escenarios de detección de anomalías, reporte operativo, verificación de apagado, sincronización de telemetría, suscripción y evidencia normativa |
 |   TB1   | 2026-09-19  | Choy Robles, Vanessa May Lang                                             | Redacción integral del Capítulo III Requirements Specification con escenario futuro To Be de ambos segmentos, historias de usuario por épicas de seguridad operativa, monitoreo técnico, gestión energética, cumplimiento normativo y control de acceso con criterios de aceptación en formato Gherkin, mapa de impacto y backlog de producto priorizado con puntaje por historia |
 |   TB1   | 2026-09-19  | Machado Bracamonte, Ivo Marcelo                                           | Redacción del Capítulo IV Strategic Level Software Design con EventStorming, descubrimiento de contextos candidatos, lienzos de contextos delimitados para identidad y acceso, suscripción y pagos, perfiles, diseño y operación de servicios, activos, monitoreo IoT y analítica, mapa de contexto y arquitectura de software en niveles de paisaje, contexto, contenedores y despliegue, y apoyo en la matriz de trazabilidad |
+|   TP1   | 10 de octubre de 2026  | Arostegui Alzamora, Cesar Augusto                                         | Correciones del Capítulo III con historias de visitante para página de aterrizaje, historias técnicas con rol de desarrollo y criterios en formato Gherkin con escenarios felices, alternos y de error, reordenamiento del backlog por valor de negocio e implementación de secciones 6.1, 6.2 y 6.3 con guías de estilo, arquitectura de información, esquema estructural y maqueta de página de aterrizaje |
+|   TP1   | 10 de octubre de 2026  | Contreras López, Leandro Saúl y Machado Bracamonte, Ivo Marcelo                                           | Correciones del Capítulo IV en decisiones arquitectónicas con taller de atributos de calidad y matriz de patrones, redefinición de contextos hacia seguridad y monitoreo en cocina, lienzos delimitados, mapa de contextos y diagramas C4 con actores de local y panel local junto a pasarela de borde, y redacción íntegra del Capítulo V por contexto delimitado |
+|   TP1   | 10 de octubre de 2026  | Valverde Portuguez, Natalia Ximena                                       | Diseño de wireframes y wireflows de navegación de aplicación web para perfiles de trabajo operativo y gestión, en coherencia plena con historias, backlog y contextos de cocina |
+|   TP1   | 10 de octubre de 2026  | Choy Robles, Vanessa May Lang                                             | Diseño de wireframes y wireflows de navegación de aplicación móvil para perfiles de trabajo operativo y gestión, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda |
+
+
 
 </div>
 
@@ -85,11 +91,23 @@ El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones
 4. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo avanzaron el Capítulo IV con propósito de diseño, entradas de diseño guiado por atributos, drivers arquitectónicos, decisiones entre monolito modular y microservicios, refinamiento de escenarios, EventStorming, descubrimiento de contextos, flujos de mensajes, lienzos de contexto, mapa de contexto y diagramas de paisaje, contexto, contenedores y despliegue.
 5. El equipo configuró el control de versiones con ramas por capítulo, solicitudes de integración revisadas y registro de anexos con enlaces a organización, repositorio y carpeta compartida, asegurando revisión cruzada antes de la consolidación en la rama principal.
 
+### TP1
+
+1. Arostegui Alzamora Cesar Augusto corrigió el Capítulo III con historias de visitante para la página de aterrizaje, historias técnicas con escenarios de petición y respuesta en formato Gherkin, criterios ampliados con casos alternos y de error, y backlog reordenado por valor de negocio, y redactó las secciones 6.1, 6.2 y 6.3 con lineamientos de estilo, arquitectura de información, esquema estructural y maqueta de la página de aterrizaje.
+2. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo corrigieron el Capítulo IV en decisiones arquitectónicas mediante etapas de taller de atributos de calidad con matriz de patrones, redefinieron los contextos hacia seguridad y monitoreo en cocina, actualizaron lienzos, mapa de contextos y diagramas C4 con actores de local y panel local junto a pasarela de borde para operación aun sin internet, y redactaron el Capítulo V táctico por contexto delimitado.
+3. Valverde Portuguez Natalia Ximena diseñó wireframes y wireflows de navegación de la aplicación web, con recorridos diferenciados para trabajo operativo y gestión y coherencia plena con historias y backlog.
+4. Choy Robles Vanessa May Lang diseñó wireframes y wireflows de navegación de la aplicación móvil, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda.
+5. El equipo integró correcciones y nuevos capítulos mediante ramas por aporte, revisión cruzada y consolidación en la rama principal, y alineó artefactos de UXPressia, tablero de EventStorming, herramienta C4 y backlog con lo expuesto en video, con carátula actualizada a diciembre de 2026.
+
 ## Evidencia de colaboración en GitHub
 
 A continuación se presenta la evidencia de colaboración en GitHub correspondiente a la entrega TB1, con el historial de commits y la actividad del repositorio del informe:
 
 ![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-av1.png)
+
+A continuación se presenta la evidencia correspondiente a la entrega TP1, con historial de commits, revisión cruzada por ramas y consolidación en la rama principal.
+
+![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-tp1.png)
 
 ---
 
@@ -213,8 +231,8 @@ Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias. En 
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Logre ante el equipo el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Sinteticé la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Logre realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Dirigí entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustenté ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Conduje la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y expliqué al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia. | **TB1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa. |
-| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Redacté el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Redacté el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Documenté el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Documenté el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial. | **TB1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink. |
+| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Se logró el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br>**TP1:** Expuso la versión corregida de historias de visitante para página de aterrizaje, historias técnicas con escenarios de petición y respuesta, criterios ampliados con casos felices, alternos y de error, backlog reordenado por valor de negocio, guías de estilo, arquitectura de información, esquema estructural y maqueta, con argumentación serena ante perfiles técnicos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Sintetizó la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br>**TP1:** Expuso esquemas estructurales y flujos de navegación de aplicación móvil con énfasis en reporte inmediato y continuidad en tienda, donde se mejoró la claridad del recorrido y la legibilidad de cada estado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Se logró realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br>**TP1:** Expuso esquemas estructurales y flujos de navegación de aplicación web con recorridos diferenciados por perfil, donde se mejoró la coherencia entre necesidad detectada y recorrido propuesto.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Dirigió entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustentó ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br>**TP1:** Sustentó decisiones entre patrones con matriz comparativa, contextos redefinidos hacia seguridad y monitoreo en cocina, lienzos delimitados, mapa con patrón explícito por relación y diagramas de paisaje, contexto, contenedores y despliegue con panel local, donde se corrigió la trazabilidad entre riesgo y respuesta.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Condujo la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y explicó al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia.<br>**TP1:** Sustentó el modelado táctico por contexto delimitado y diagramas actualizados con actores de local y operación aun sin internet, donde se mejoró la precisión técnica y la explicación del valor para gestión multisede. | **TB1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa.<br><br>**TP1:** Se consolidó la comunicación oral mediante exposición a cámara con nombre y rol, muestra de artefactos en sus herramientas de origen y coherencia plena entre informe y video, con lo cual se atienden las observaciones de forma y se acredita solvencia comunicativa ante tribunal académico, personal operativo y gestión. |
+| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Redactó el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br>**TP1:** Redactó historias de visitante para página de aterrizaje, historias técnicas con escenarios de petición y respuesta, criterios ampliados en formato Gherkin, backlog reordenado por valor, guías de estilo, arquitectura de información, esquema estructural y maqueta, donde se corrigió la redacción de criterios y se mejoró la fundamentación del orden por valor.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Redactó y estructuró integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br>**TP1:** Documentó esquemas estructurales y flujos de navegación de aplicación móvil orientados a reporte inmediato y consulta de estado, donde se mejoró la descripción de cada paso y estado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Redactó el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br>**TP1:** Documentó esquemas estructurales y flujos de navegación de aplicación web con recorridos por perfil operativo y de gestión, donde se mejoró la trazabilidad entre necesidad y recorrido.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Documentó el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br>**TP1:** Documentó decisiones entre patrones con matriz comparativa, contextos de seguridad y monitoreo en cocina, lienzos delimitados y mapa con patrón explícito, donde se corrigió la coherencia entre texto y diagrama.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Documentó el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial.<br>**TP1:** Documentó modelado táctico por contexto, diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde, donde se mejoró la precisión descriptiva para lector técnico y gerencial. | **TB1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink.<br><br>**TP1:** Se afianzó la comunicación escrita donde se corrigió la redacción de historias, criterios y decisiones y se mejoró la articulación entre voz de campo, requerimientos, arquitectura y diseño de experiencia, con registro que acredita el aporte individual, con lo cual se sustenta el logro comunicativo ante audiencias técnicas, gerenciales y académicas.  |
 
 # Capítulo I: Introducción
 
@@ -7930,41 +7948,69 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 ### 6.4.1. Applications Wireframes
 
 **Aplicación movil**</br>
+
 ![Wireframes Movil 1](assets/cap6/wireframes/movil1.png)
+
 ![Wireframes Movil 2](assets/cap6/wireframes/movil2.png)
+
 ![Wireframes Movil 3](assets/cap6/wireframes/movil3.png)
+
 ![Wireframes Movil 4](assets/cap6/wireframes/movil4.png)
+
 ![Wireframes Movil 5](assets/cap6/wireframes/movil5.png)
+
 ![Wireframes Movil 6](assets/cap6/wireframes/movil6.png)
+
 ![Wireframes Movil 7](assets/cap6/wireframes/movil7.png)
 
 </br>**Aplicación web**</br>
+
 ![Wireframes Web 1](assets/cap6/wireframes/web1.jpeg)
+
 ![Wireframes Web 2](assets/cap6/wireframes/web2.jpeg)
+
 ![Wireframes Web 3](assets/cap6/wireframes/web3.jpeg)
+
 ![Wireframes Web 4](assets/cap6/wireframes/web4.jpeg)
+
 ![Wireframes Web 5](assets/cap6/wireframes/web5.jpeg)
+
 ![Wireframes Web 6](assets/cap6/wireframes/web6.jpeg)
+
 ![Wireframes Web 7](assets/cap6/wireframes/web7.jpeg)
+
 ![Wireframes Web 8](assets/cap6/wireframes/web8.jpeg)
+
 ![Wireframes Web 9](assets/cap6/wireframes/web9.jpeg)
+
 ![Wireframes Web 10](assets/cap6/wireframes/web10.jpeg)
+
 ![Wireframes Web 11](assets/cap6/wireframes/web11.jpeg)
+
 ![Wireframes Web 12](assets/cap6/wireframes/web12.jpeg)
 
 ### 6.4.2. Applications Wireflow Diagrams
 **Aplicación movil**</br>
 ![Wireflow Movil 1](assets/cap6/wireflow/movil1.png)
+
 ![Wireflow Movil 2](assets/cap6/wireflow/movil2.png)
+
 ![Wireflow Movil 3](assets/cap6/wireflow/movil3.png)
+
 ![Wireflow Movil 4](assets/cap6/wireflow/movil4.png)
+
 ![Wireflow Movil 5](assets/cap6/wireflow/movil5.png)
 
 </br>**Aplicación web**</br>
+
 ![Wireflow Web 5](assets/cap6/wireflow/web5.png)
+
 ![Wireflow Web 4](assets/cap6/wireflow/web4.png)
+
 ![Wireflow Web 3](assets/cap6/wireflow/web3.png)
+
 ![Wireflow Web 2](assets/cap6/wireflow/web2.png)
+
 ![Wireflow Web 1](assets/cap6/wireflow/web1.png)
 
 ### 6.4.2. Applications Mock-ups
@@ -8027,6 +8073,14 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 
 - El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
 
+- La experiencia consolidada en esta entrega acredita que la seguridad en entornos de alta exigencia se alcanza cuando la tecnología se comprende como resguardo de la vida y continuidad del servicio, no como mero instrumento de medición. Se recomienda perseverar en la validación en campo con personal operativo y de gestión, a fin de afianzar la confianza y la adopción sostenida.
+
+- El progreso alcanzado revela una correspondencia sólida entre la voz de los usuarios, la propuesta de valor y los artefactos elaborados, lo cual otorga legitimidad a lo avanzado y orienta con sensatez las decisiones venideras. Se recomienda mantener dicha coherencia mediante revisión colegiada permanente y evidencia verificable en cada avance.
+
+- La dinámica colaborativa exhibe una madurez comunicativa encomiable, sustentada en el reparto equitativo, la revisión cruzada y la presentación transparente de resultados ante audiencias diversas. Se recomienda perpetuar este rigor deliberativo y documentar con esmero cada aporte individual a fin de preservar la memoria del quehacer colectivo.
+
+- La proyección de la solución hacia su materialización exige prudencia, gradualidad y sentido ético, con atención prioritaria a la fiabilidad, la claridad de uso y el respeto por la integridad del personal. Se recomienda avanzar mediante pilotos acotados, aprendizaje continuo y ajuste sensible a lo observado en la realidad operativa.
+
 ## Video About-the-Team
 
 # Bibliografía
@@ -8062,3 +8116,5 @@ Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del con
 - Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
 
 - Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
+
+- Link del video de exposición de la entrega TP1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQANlVVNyZ0oS4iG1EMcddE6Ab9j8kwsQSIKWm1EfoZKee8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JIULa2>
