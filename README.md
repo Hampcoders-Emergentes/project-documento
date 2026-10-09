@@ -94,10 +94,11 @@ El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones
 ### TP1
 
 1. Arostegui Alzamora Cesar Augusto corrigió el Capítulo III con historias de visitante para la página de aterrizaje, historias técnicas con escenarios de petición y respuesta en formato Gherkin, criterios ampliados con casos alternos y de error, y backlog reordenado por valor de negocio, y redactó las secciones 6.1, 6.2 y 6.3 con lineamientos de estilo, arquitectura de información, esquema estructural y maqueta de la página de aterrizaje.
-2. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo corrigieron el Capítulo IV en decisiones arquitectónicas mediante etapas de taller de atributos de calidad con matriz de patrones, redefinieron los contextos hacia seguridad y monitoreo en cocina, actualizaron lienzos, mapa de contextos y diagramas C4 con actores de local y panel local junto a pasarela de borde para operación aun sin internet, y redactaron el Capítulo V táctico por contexto delimitado.
-3. Valverde Portuguez Natalia Ximena diseñó wireframes y wireflows de navegación de la aplicación web, con recorridos diferenciados para trabajo operativo y gestión y coherencia plena con historias y backlog.
-4. Choy Robles Vanessa May Lang diseñó wireframes y wireflows de navegación de la aplicación móvil, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda.
-5. El equipo integró correcciones y nuevos capítulos mediante ramas por aporte, revisión cruzada y consolidación en la rama principal, y alineó artefactos de UXPressia, tablero de EventStorming, herramienta C4 y backlog con lo expuesto en video, con carátula actualizada a diciembre de 2026.
+2. Contreras López Leandro Saúl corrigió decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance táctico en capas de dominio y aplicación.
+3. Machado Bracamonte Ivo Marcelo corrigió el mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualizó diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance táctico en componentes, código y base de datos por contexto.
+4. Valverde Portuguez Natalia Ximena diseñó wireframes y wireflows de navegación de la aplicación web, con recorridos diferenciados para trabajo operativo y gestión y coherencia plena con historias y backlog.
+5. Choy Robles Vanessa May Lang diseñó wireframes y wireflows de navegación de la aplicación móvil, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda.
+6. El equipo integró correcciones y nuevos capítulos mediante ramas por aporte, revisión cruzada y consolidación en la rama principal, y alineó artefactos de UXPressia, tablero de EventStorming, herramienta C4 y backlog con lo expuesto en video, con carátula actualizada a diciembre de 2026.
 
 ## Evidencia de colaboración en GitHub
 
