@@ -8011,21 +8011,13 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 ### 6.4.3. Applications User Flow Diagrams
 **Aplicación movil**</br>
 ![Userflow Móvil 1](assets/cap6/userflow/UF-MOVIL-1.png)
-![Userflow Móvil 1.2](assets/cap6/userflow/UF-MOVIL-diagram-1.png)
 ![Userflow Móvil 2](assets/cap6/userflow/UF-MOVIL-2.png)
-![Userflow Móvil 2.2](assets/cap6/userflow/UF-MOVIL-diagram-2.png)
 ![Userflow Móvil 3](assets/cap6/userflow/UF-MOVIL-3.png)
-![Userflow Móvil 3.2](assets/cap6/userflow/UF-MOVIL-diagram-3.png)
 ![Userflow Móvil 4](assets/cap6/userflow/UF-MOVIL-4.png)
-![Userflow Móvil 4.2](assets/cap6/userflow/UF-MOVIL-diagram-4.png)
 ![Userflow Móvil 5](assets/cap6/userflow/UF-MOVIL-5.png)
-![Userflow Móvil 5.2](assets/cap6/userflow/UF-MOVIL-diagram-5.png)
 ![Userflow Móvil 6](assets/cap6/userflow/UF-MOVIL-6.png)
-![Userflow Móvil 6.2](assets/cap6/userflow/UF-MOVIL-diagram-6.png)
 ![Userflow Móvil 7](assets/cap6/userflow/UF-MOVIL-7.png)
-![Userflow Móvil 7.2](assets/cap6/userflow/UF-MOVIL-diagram-7.png)
 ![Userflow Móvil 8](assets/cap6/userflow/UF-MOVIL-8.png)
-![Userflow Móvil 8.2](assets/cap6/userflow/UF-MOVIL-diagram-8.png)
 
 </br>**Aplicación web**</br>
 ![Userflow Web 1](assets/cap6/userflow/UF-WEB-1.png)
