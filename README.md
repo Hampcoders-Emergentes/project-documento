@@ -8041,6 +8041,12 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 
 ## 6.5. Applications Prototyping
 
+A continuación presentamos los prototipos de las aplicaciones tanto para web y móvil.
+
+Link de prototipo de aplicación móvil ElectroLink: <https://jovial-cucurucho-2764d3.netlify.app/>
+
+Link de prototipo de aplicación web ElectroLink: <https://keen-otter-58a86e.netlify.app/>
+
 # Capítulo VII: Product Implementation, Validation & Deployment
 
 ## 7.1. Software Configuration Management
