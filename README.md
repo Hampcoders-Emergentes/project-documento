@@ -8045,7 +8045,7 @@ A continuación presentamos los prototipos de las aplicaciones tanto para web y 
 
 Link de prototipo de aplicación móvil ElectroLink: <https://jovial-cucurucho-2764d3.netlify.app/>
 
-Link de prototipo de aplicación web ElectroLink: <https://keen-otter-58a86e.netlify.app/>
+Link de prototipo de aplicación web ElectroLink: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/IQBREkHf5XFaS7AWKWnMD0iHAWcZC1BPTIVgN-dcoEu2QBE?e=CV6ndK>
 
 # Capítulo VII: Product Implementation, Validation & Deployment
 
