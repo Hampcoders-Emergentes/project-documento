@@ -8043,9 +8043,13 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 
 A continuación presentamos los prototipos de las aplicaciones tanto para web y móvil.
 
-Link de prototipo de aplicación móvil ElectroLink: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a816_upc_edu_pe/IQASdKwHS2TnRbgnA3iQDyj2AXXlLHQpoR2aqx-BEgVIXNM?e=igUJu1>
+Link de prototipo de aplicación móvil ElectroLink: <https://jovial-cucurucho-2764d3.netlify.app/>
 
-Link de prototipo de aplicación web ElectroLink: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/IQBREkHf5XFaS7AWKWnMD0iHAWcZC1BPTIVgN-dcoEu2QBE?e=CV6ndK>
+Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a816_upc_edu_pe/IQASdKwHS2TnRbgnA3iQDyj2AXXlLHQpoR2aqx-BEgVIXNM?e=igUJu1>
+
+Link de prototipo de aplicación web ElectroLink: <https://keen-otter-58a86e.netlify.app/>
+
+Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/IQBREkHf5XFaS7AWKWnMD0iHAWcZC1BPTIVgN-dcoEu2QBE?e=CV6ndK>
 
 # Capítulo VII: Product Implementation, Validation & Deployment
 
