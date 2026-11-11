@@ -40,7 +40,7 @@
   </tbody>
 </table>
 
-<div style="text-align:center; margin-top:18px;"> Diciembre 2026 </div>
+<div style="text-align:center; margin-top:18px;"> Octubre  2026 </div>
 
 <hr>
 
@@ -60,6 +60,12 @@ En esta sección se registra el historial de cambios del informe del proyecto El
 |   TB1   | 2026-09-19  | Contreras López, Leandro Saúl                                             | Redacción del Capítulo II con diseño de entrevistas por segmento, registro detallado de entrevistas a personal operativo y gerencial con evidencias audiovisuales y análisis del segmento Trabajador del Local, y avance del Capítulo IV con modelado de flujos de mensajes de dominio para los escenarios de detección de anomalías, reporte operativo, verificación de apagado, sincronización de telemetría, suscripción y evidencia normativa |
 |   TB1   | 2026-09-19  | Choy Robles, Vanessa May Lang                                             | Redacción integral del Capítulo III Requirements Specification con escenario futuro To Be de ambos segmentos, historias de usuario por épicas de seguridad operativa, monitoreo técnico, gestión energética, cumplimiento normativo y control de acceso con criterios de aceptación en formato Gherkin, mapa de impacto y backlog de producto priorizado con puntaje por historia |
 |   TB1   | 2026-09-19  | Machado Bracamonte, Ivo Marcelo                                           | Redacción del Capítulo IV Strategic Level Software Design con EventStorming, descubrimiento de contextos candidatos, lienzos de contextos delimitados para identidad y acceso, suscripción y pagos, perfiles, diseño y operación de servicios, activos, monitoreo IoT y analítica, mapa de contexto y arquitectura de software en niveles de paisaje, contexto, contenedores y despliegue, y apoyo en la matriz de trazabilidad |
+|   TP1   | 2026-10-09  | Arostegui Alzamora, Cesar Augusto                                         | Correciones del Capítulo III con historias de visitante para página de aterrizaje, historias técnicas con rol de desarrollo y criterios en formato Gherkin con escenarios felices, alternos y de error, reordenamiento del backlog por valor de negocio e implementación de secciones 6.1, 6.2 y 6.3 con guías de estilo, arquitectura de información, esquema estructural y maqueta de página de aterrizaje |
+|   TP1   | 2026-10-09  | Contreras López, Leandro Saúl | Correción del Capítulo IV en decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance del Capítulo V en capas de dominio y aplicación con trazabilidad hacia riesgos de cocina |
+|   TP1   | 2026-10-09  | Machado Bracamonte, Ivo Marcelo | Correción del Capítulo IV en mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualización de diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance del Capítulo V en componentes, código y base de datos por contexto |
+|   TP1   | 2026-10-09  | Valverde Portuguez, Natalia Ximena                                       | Diseño de wireframes y wireflows de navegación de aplicación web para perfiles de trabajo operativo y gestión, en coherencia plena con historias, backlog y contextos de cocina |
+|   TP1   | 2026-10-09  | Choy Robles, Vanessa May Lang                                             | Diseño de wireframes y wireflows de navegación de aplicación móvil para perfiles de trabajo operativo y gestión, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda |
+
 
 </div>
 
@@ -85,11 +91,24 @@ El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones
 4. Contreras López Leandro Saúl y Machado Bracamonte Ivo Marcelo avanzaron el Capítulo IV con propósito de diseño, entradas de diseño guiado por atributos, drivers arquitectónicos, decisiones entre monolito modular y microservicios, refinamiento de escenarios, EventStorming, descubrimiento de contextos, flujos de mensajes, lienzos de contexto, mapa de contexto y diagramas de paisaje, contexto, contenedores y despliegue.
 5. El equipo configuró el control de versiones con ramas por capítulo, solicitudes de integración revisadas y registro de anexos con enlaces a organización, repositorio y carpeta compartida, asegurando revisión cruzada antes de la consolidación en la rama principal.
 
+### TP1
+
+1. Arostegui Alzamora Cesar Augusto corrigió el Capítulo III con historias de visitante para la página de aterrizaje, historias técnicas con escenarios de petición y respuesta en formato Gherkin, criterios ampliados con casos alternos y de error, y backlog reordenado por valor de negocio, y redactó las secciones 6.1, 6.2 y 6.3 con lineamientos de estilo, arquitectura de información, esquema estructural y maqueta de la página de aterrizaje.
+2. Contreras López Leandro Saúl corrigió decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance táctico en capas de dominio y aplicación.
+3. Machado Bracamonte Ivo Marcelo corrigió el mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualizó diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance táctico en componentes, código y base de datos por contexto.
+4. Valverde Portuguez Natalia Ximena diseñó wireframes y wireflows de navegación de la aplicación web, con recorridos diferenciados para trabajo operativo y gestión y coherencia plena con historias y backlog.
+5. Choy Robles Vanessa May Lang diseñó wireframes y wireflows de navegación de la aplicación móvil, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda.
+6. El equipo integró correcciones y nuevos capítulos mediante ramas por aporte, revisión cruzada y consolidación en la rama principal, y alineó artefactos de UXPressia, tablero de EventStorming, herramienta C4 y backlog con lo expuesto en video, con carátula actualizada a diciembre de 2026.
+
 ## Evidencia de colaboración en GitHub
 
 A continuación se presenta la evidencia de colaboración en GitHub correspondiente a la entrega TB1, con el historial de commits y la actividad del repositorio del informe:
 
 ![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-av1.png)
+
+A continuación se presenta la evidencia correspondiente a la entrega TP1, con historial de commits, revisión cruzada por ramas y consolidación en la rama principal.
+
+![Project Report Collaboration Insights](assets/general/project-report-collaboration-insights-tp1.png)
 
 ---
 
@@ -213,8 +232,8 @@ Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias. En 
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Logre ante el equipo el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Sinteticé la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Logre realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Dirigí entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustenté ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Conduje la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y expliqué al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia. | **TB1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa. |
-| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Redacté el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Redacté y estructuré integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Redacté el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Documenté el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Documenté el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial. | **TB1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink. |
+| **Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Se logró el análisis competitivo y el análisis de entrevistas del segmento Manager, traduciendo hallazgos técnicos sobre seguridad eléctrica y consumo energético a mensajes claros para perfiles operativos y gerenciales.<br>**TP1:** Expuso la versión corregida de historias de visitante para página de aterrizaje, historias técnicas con escenarios de petición y respuesta, criterios ampliados con casos felices, alternos y de error, backlog reordenado por valor de negocio, guías de estilo, arquitectura de información, esquema estructural y maqueta, con argumentación serena ante perfiles técnicos y gerenciales.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Sintetizó la dinámica del escenario futuro To Be explicando cómo la interacción con el sistema impacta en el flujo operativo del Trabajador del Local correspondiente a operarios y en las decisiones estratégicas del Manager del Local correspondiente a administradores.<br>**TP1:** Expuso esquemas estructurales y flujos de navegación de aplicación móvil con énfasis en reporte inmediato y continuidad en tienda, donde se mejoró la claridad del recorrido y la legibilidad de cada estado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Se logró realizar la visión de la startup HampCoders, la problemática del sector y el lienzo Lean UX ante el equipo, adaptando el mensaje a audiencia técnica y no técnica para alinear el alcance de ElectroLink.<br>**TP1:** Expuso esquemas estructurales y flujos de navegación de aplicación web con recorridos diferenciados por perfil, donde se mejoró la coherencia entre necesidad detectada y recorrido propuesto.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Dirigió entrevistas a personal operativo y gerencial explicando la propuesta IoT de monitoreo preventivo con lenguaje simple y empático, y sustentó ante el equipo los hallazgos sobre protocolos ante fallas, tiempos de respuesta y disposición hacia la suscripción.<br>**TP1:** Sustentó decisiones entre patrones con matriz comparativa, contextos redefinidos hacia seguridad y monitoreo en cocina, lienzos delimitados, mapa con patrón explícito por relación y diagramas de paisaje, contexto, contenedores y despliegue con panel local, donde se corrigió la trazabilidad entre riesgo y respuesta.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Condujo la entrevista a gerencia de tienda con comunicación objetiva y contextualizada al ritmo operativo de comida rápida, y explicó al equipo los flujos de dominio y la arquitectura estratégica con lenguaje técnico y funcional según la audiencia.<br>**TP1:** Sustentó el modelado táctico por contexto delimitado y diagramas actualizados con actores de local y operación aun sin internet, donde se mejoró la precisión técnica y la explicación del valor para gestión multisede. | **TB1:** Se logro comunicar oralmente ideas y resultados con objetividad ante personal operativo, gerencia de tienda y equipo técnico, adaptando el nivel de detalle y el vocabulario a cada audiencia, lo cual se evidencia en entrevistas conducidas con empatía, sustentaciones internas alineadas y explicación clara de flujos, arquitectura y valor de ElectroLink para la seguridad y la continuidad operativa.<br><br>**TP1:** Se consolidó la comunicación oral mediante exposición a cámara con nombre y rol, muestra de artefactos en sus herramientas de origen y coherencia plena entre informe y video, con lo cual se atienden las observaciones de forma y se acredita solvencia comunicativa ante tribunal académico, personal operativo y gestión. |
+| **Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería.** | **Arostegui Alzamora, Cesar Augusto**<br>**TB1:** Redactó el análisis competitivo, las estrategias frente a competidores, el análisis del segmento Manager, la matriz de tareas, los escenarios actuales y el lenguaje ubicuo del Capítulo II con redacción objetiva y estructurada para audiencia técnica y de negocio.<br>**TP1:** Redactó historias de visitante para página de aterrizaje, historias técnicas con escenarios de petición y respuesta, criterios ampliados en formato Gherkin, backlog reordenado por valor, guías de estilo, arquitectura de información, esquema estructural y maqueta, donde se corrigió la redacción de criterios y se mejoró la fundamentación del orden por valor.<br><br>**Choy Robles, Vanessa May Lang**<br>**TB1:** Redactó y estructuró integralmente la documentación técnica del Capítulo III, incluyendo el escenario futuro To Be, las historias de usuario con criterios de aceptación en formato Gherkin, el mapa de impacto alineado a objetivos y el backlog de producto consolidado.<br>**TP1:** Documentó esquemas estructurales y flujos de navegación de aplicación móvil orientados a reporte inmediato y consulta de estado, donde se mejoró la descripción de cada paso y estado.<br><br>**Valverde Portuguez, Natalia Ximena**<br>**TB1:** Redactó el Capítulo I con descripción de la startup, antecedentes y problemática con técnica de preguntas guía, proceso Lean UX completo y segmentos objetivo, con redacción clara orientada a público técnico, comercial y académico.<br>**TP1:** Documentó esquemas estructurales y flujos de navegación de aplicación web con recorridos por perfil operativo y de gestión, donde se mejoró la trazabilidad entre necesidad y recorrido.<br><br>**Contreras López, Leandro Saúl**<br>**TB1:** Documentó el diseño y registro de entrevistas de ambos segmentos con contexto, aspectos clave y evidencias, el análisis del segmento operativo y los flujos de mensajes de dominio del Capítulo IV, con trazabilidad entre voz del usuario y decisiones de diseño.<br>**TP1:** Documentó decisiones entre patrones con matriz comparativa, contextos de seguridad y monitoreo en cocina, lienzos delimitados y mapa con patrón explícito, donde se corrigió la coherencia entre texto y diagrama.<br><br>**Machado Bracamonte, Ivo Marcelo**<br>**TB1:** Documentó el EventStorming, el descubrimiento de contextos candidatos, los lienzos de contextos delimitados, el mapa de contexto y los diagramas de paisaje, contexto, contenedores y despliegue del Capítulo IV, con descripciones precisas para lector técnico y gerencial.<br>**TP1:** Documentó modelado táctico por contexto, diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde, donde se mejoró la precisión descriptiva para lector técnico y gerencial. | **TB1:** Se logro comunicar en forma escrita ideas y resultados con objetividad para audiencias técnicas, gerenciales y académicas, mediante capítulos articulados, trazabilidad entre hallazgos, historias, backlog y arquitectura, y uso consistente del lenguaje del dominio, lo cual sustenta el logro del resultado estudiantil correspondiente a comunicación efectiva en el marco del proyecto ElectroLink.<br><br>**TP1:** Se afianzó la comunicación escrita donde se corrigió la redacción de historias, criterios y decisiones y se mejoró la articulación entre voz de campo, requerimientos, arquitectura y diseño de experiencia, con registro que acredita el aporte individual, con lo cual se sustenta el logro comunicativo ante audiencias técnicas, gerenciales y académicas.  |
 
 # Capítulo I: Introducción
 
@@ -981,7 +1000,7 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 ### To-Be Scenario Mapping - Segmento 1: Trabajadores del Local (Staff Operativo y de Limpieza)
 
 | Fases | Fase 1: Inicio de Turno y Verificación | Fase 2: Operación Diaria de Equipos | Fase 3: Detección y Notificación de Anomalía | Fase 4: Protocolo de Limpieza Segura | Fase 5: Cierre de Turno y Reporte |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 | **Doing** | Revisa el panel táctil/señalizador local en cocina antes de encender freidoras y hornos. | Trabaja en la preparación de alimentos observando los indicadores visuales en verde. | Escucha una alerta auditiva local y ve que la pantalla cambia a indicador Rojo "Fuga Detectada". | Consulta el estado del equipo en la pantalla local antes de trapear o baldear la zona de cocina. | Presiona el botón de reporte rápido de fin de turno para confirmar equipos seguros. |
 | **Thinking** | "Es genial poder ver con una luz verde si los equipos están seguros antes de empezar a trabajar." | "Puedo concentrarme en sacar los pedidos rápido sin miedo a tocar una máquina en mal estado." | "El sistema me avisa de inmediato que hay peligro; debo alejarme y reportar según el protocolo." | "No debo preocuparme por un shock eléctrico al trapear la cocina porque la pantalla me confirma la seguridad." | "Terminé mi turno tranquilo sabiendo que dejé todo reportado sin trámites complicados." |
 | **Feeling** | Confianza y tranquilidad. | Seguridad y concentración. | Alerta pero respaldado por la señalización clara. | Alivio y protección. | Satisfacción y seguridad laboral. |
@@ -998,48 +1017,78 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 
 ## 3.2. User Stories
 
-| Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
-| :--- | :--- | :--- | :--- | :--- |
-| **EP01** | **Gestión de Seguridad Operativa en Tienda** | Módulo orientado a proteger la integridad física del staff operativo mediante monitoreo y señalización local. | N/A (Epic) | N/A |
-| **EP02** | **Monitoreo Técnico y Alertas para la Administración** | Módulo central para la gestión preventiva, supervisión de red y notificaciones ejecutivas. | N/A (Epic) | N/A |
-| **EP03** | **Gestión Energética y Costos Operativos** | Módulo para la visualización, desglose y optimización del consumo eléctrico en el local. | N/A (Epic) | N/A |
-| **EP04** | **Cumplimiento Normativo y Reportes de Seguridad** | Módulo para la generación de evidencias técnicas exigidas por entes reguladores (SUNAFIL, OSINERGMIN, INDECI). | N/A (Epic) | N/A |
-| **EP05** | **Configuración de Perfiles y Control de Acceso** | Módulo administrativo para la personalización de usuarios y acceso a datos del local. | N/A (Epic) | N/A |
-| **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | **Dado** que el trabajador se encuentra en el área de cocina, **cuando** el sensor registra una fuga de corriente o sobrecalentamiento, **entonces** la pantalla muestra el indicador en Rojo y despliega el mensaje "NO TOCAR". | EP01 |
-| **US02** | Botón de Reporte Rápido de Falla | Como Trabajador del Local, deseo presionar un botón de reporte en la pantalla local, para notificar al Manager sobre anomalías o ruidos en una máquina sin pausar la atención al cliente. | **Dado** que un equipo emite un ruido inusual, **cuando** el operario presiona "Reportar Falla", **entonces** el sistema envía una alerta inmediata al Dashboard del Manager con la máquina y hora registrada. | EP01 |
-| **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | **Dado** que ocurre una fuga de corriente crítica, **cuando** el sensor la detecta en tiempo real, **entonces** el sistema activa la bocina local y parpadea la pantalla en rojo con el instructivo de seguridad. | EP01 |
-| **US04** | Confirmación de Equipo Apagado | Como Trabajador del Local, deseo consultar en pantalla la confirmación de desenergización, para realizar el baldeado o trapeado del piso con total seguridad. | **Dado** que se va a iniciar la limpieza, **cuando** el trabajador selecciona "Verificar Limpieza", **entonces** la pantalla confirma que el circuito eléctrico del área está aislado y es seguro trapear. | EP01 |
-| **US05** | Consulta de Protocolo de Apagado | Como Trabajador del Local, deseo visualizar los pasos de apagado seguro en pantalla, para cortar la energía de una máquina en emergencia sin correr riesgos. | **Dado** que se activa una alerta de peligro, **cuando** el trabajador mira la pantalla local, **entonces** el sistema lista 3 pasos simples numerados para ejecutar el corte de energía seguro. | EP01 |
-| **US06** | Registro de Incidencia de Turno | Como Trabajador del Local, deseo confirmar la entrega de turno mediante un check rápido, para dejar constancia del estado de los equipos al siguiente grupo de trabajo. | **Dado** que finaliza el turno, **cuando** el operario presiona "Cerrar Turno Operativo", **entonces** el sistema registra el estado de las máquinas y envía un resumen al Manager. | EP01 |
-| **US07** | Guía Rápida de Primeros Auxilios Eléctricos | Como Trabajador del Local, deseo consultar un botón de ayuda rápida en pantalla, para conocer las acciones inmediatas en caso de contacto accidental de un compañero con corriente. | **Dado** que ocurre un incidente, **cuando** el trabajador presiona "Ayuda / Emergencia", **entonces** la pantalla despliega gráficos con las instrucciones de aislamiento y socorro. | EP01 |
-| **US08** | Alerta Visual de Humedad en Zona de Cocina | Como Trabajador del Local, deseo ver una advertencia en la interfaz cuando se detecte humedad excesiva cerca a tableros, para evitar conectar equipos en superficies mojadas. | **Dado** que el sensor ambiental detecta agua cerca al tablero, **cuando** el operario se aproxima, **entonces** el panel muestra una advertencia amarilla de "Superficie Húmeda". | EP01 |
-| **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | **Dado** que el Manager ingresa a la plataforma web, **cuando** carga la vista principal, **entonces** el sistema despliega el estado de salud técnica, voltaje y temperatura de todos los equipos del local. | EP02 |
-| **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | **Dado** que se sobrepasa el límite seguro de amperaje en un equipo, **cuando** el sensor registra el evento, **entonces** el sistema envía un mensaje SMS y notificación al teléfono del Manager. | EP02 |
-| **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | **Dado** que el Manager edita la ficha de una freidora, **cuando** ingresa los límites máximos permitidos y guarda, **entonces** el sistema actualiza la lógica de disparo de alertas para dicho equipo. | EP02 |
-| **US12** | Historial Filtrable de Alertas | Como Manager del Local, deseo filtrar las alertas por fecha, nivel de severidad y equipo, para analizar los patrones de fallas más recurrentes en la cocina. | **Dado** que el Manager accede al historial de eventos, **cuando** selecciona el filtro "Severidad Alta" y "Últimos 30 días", **entonces** el sistema muestra únicamente las alertas críticas registradas en ese periodo. | EP02 |
-| **US13** | Asignación de Tareas de Revisión | Como Manager del Local, deseo asignar una alerta no crítica al técnico de mantenimiento, para programar su revisión antes de que se convierta en una avería total. | **Dado** que se genera una alerta amarilla, **cuando** el Manager selecciona "Asignar a Técnico", **entonces** el sistema notifica al técnico designado con el detalle del equipo y nivel de urgencia. | EP02 |
-| **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | **Dado** que un sensor pierde conexión a la red local, **entonces** el Dashboard muestra el icono del equipo en gris e informa "Sensor Desconectado". | EP02 |
-| **US15** | Panel de Mantenimiento Preventivo | Como Manager del Local, deseo recibir recomendaciones automáticas de mantenimiento predictivo, para programar revisiones sin congelar la cocina en horas pico. | **Dado** que el sistema detecta desgaste en las resistencias de un horno, **cuando** la probabilidad de falla es alta, **entonces** sugiere agendar mantenimiento en las próximas 48 horas. | EP02 |
-| **US16** | Registro de Turnos del Personal Operativo | Como Manager del Local, deseo visualizar qué trabajador estuvo a cargo de la cocina durante una alerta, para realizar el seguimiento operativo correspondiente. | **Dado** que se registra una falla operativa, **cuando** el Manager consulta el detalle del evento, **entonces** el sistema muestra el turno y nombre del trabajador responsable en ese horario. | EP02 |
-| **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | **Dado** que el Manager entra al módulo de energía, **cuando** selecciona un rango de fechas, **entonces** el sistema muestra una gráfica interactiva con el gasto en PEN por cada equipo de cocina. | EP03 |
-| **US18** | Comparativa de Consumo Histórico | Como Manager del Local, deseo comparar el gasto energético del mes actual con el del mes anterior, para evaluar si las medidas de ahorro implementadas funcionaron. | **Dado** que el Manager selecciona "Comparar Periodos", **cuando** elige "Mes Actual vs Mes Anterior", **entonces** el sistema muestra la variación porcentual de consumo y costo. | EP03 |
-| **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | **Dado** que la tienda está fuera de horario comercial, **cuando** un equipo registra un consumo superior al modo de espera (standby), **entonces** el sistema envía una alerta de "Consumo Inusual Fuera de Horario". | EP03 |
-| **US20** | Proyección de Factura Eléctrica | Como Manager del Local, deseo ver una proyección del costo total de la factura eléctrica al cierre del mes, para ajustar los presupuestos operacionales del local. | **Dado** que transcurren los primeros 15 días del mes, **cuando** el Manager consulta la proyección, **entonces** el sistema estima el monto total final en PEN aplicando la tarifa eléctrica vigente. | EP03 |
-| **US21** | Exportación de Reportes de Eficiencia | Como Manager del Local, deseo descargar en Excel/PDF el reporte de consumo energético, para presentarlo en la reunión de revisión de costos con la gerencia general. | **Dado** que el Manager está en la vista de reportes, **cuando** hace clic en "Exportar Excel", **entonces** se descarga la hoja de cálculo con el desglose diario por circuito y equipo. | EP03 |
-| **US22** | Metas de Ahorro Energético por Tienda | Como Manager del Local, deseo fijar un tope de consumo mensual en kWh, para recibir alertas cuando la tienda esté próxima a superar el presupuesto energético. | **Dado** que el Manager ingresa un límite de 3000 kWh, **cuando** el consumo acumulado alcanza el 85%, **entonces** el sistema envía una notificación de advertencia de presupuesto. | EP03 |
-| **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | **Dado** que se realiza una auditoría oficial, **cuando** el Manager presiona "Exportar Reporte SST", **entonces** el sistema genera un documento PDF con registro cronológico de alertas resueltas. | EP04 |
-| **US24** | Checklist Digital de Inspección Eléctrica | Como Manager del Local, deseo completar un checklist digital semanal de la red, para registrar el cumplimiento de los estándares de seguridad industrial. | **Dado** que inicia la semana, **cuando** el Manager completa las preguntas del checklist en la plataforma, **entonces** el sistema guarda el registro asociado a la fecha y usuario. | EP04 |
-| **US25** | Registro de Mantenimientos Realizados | Como Manager del Local, deseo adjuntar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | **Dado** que concluye una reparación, **cuando** el Manager sube el comprobante escaneado a la ficha del equipo, **entonces** el sistema actualiza la fecha del último mantenimiento efectuado. | EP04 |
-| **US26** | Certificado de Salud Técnica del Local | Como Manager del Local, deseo consultar el nivel de cumplimiento normativo del local (0% a 100%), para corregir observaciones antes de una inspección municipal. | **Dado** que el Manager revisa el módulo de cumplimiento, **cuando** carga la página, **entonces** el sistema muestra el porcentaje global de salud técnica de la infraestructura del local. | EP04 |
-| **US27** | Recordatorio de Renovación de Mantenimiento | Como Manager del Local, deseo recibir alertas cuando venza el periodo de garantía o mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | **Dado** que faltan 7 días para el vencimiento de revisión de una congeladora, **cuando** el Manager ingresa a la app, **entonces** el sistema muestra una notificación en el panel de tareas. | EP04 |
-| **US28** | Creación de Cuentas para Trabajadores | Como Manager del Local, deseo registrar las cuentas de los operarios de cocina en el sistema, para que puedan identificarse al iniciar sus turnos en el panel local. | **Dado** que se contrata un nuevo trabajador, **cuando** el Manager ingresa su nombre y DNI, **entonces** el sistema genera un código PIN de 4 dígitos para su acceso rápido en tienda. | EP05 |
-| **US29** | Configuración de Notificaciones Preferidas | Como Manager del Local, deseo elegir si recibir alertas por WhatsApp, SMS o correo, para ajustar los canales de comunicación según mi disponibilidad de señal. | **Dado** que el Manager entra a su perfil, **cuando** selecciona "WhatsApp" como canal primario, **entonces** el sistema envía las alertas críticas prioritariamente a su número registrado. | EP05 |
-| **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | **Dado** que el Manager ingresa sus credenciales válidas en la página de login, **cuando** presiona "Ingresar", **entonces** el sistema le otorga acceso al Dashboard administrativo. | EP05 |
-| **US31** | Recuperación de Contraseña de Administrador | Como Manager del Local, deseo solicitar la restauración de mi clave por correo, para recuperar el acceso a la plataforma si la olvido. | **Dado** que el Manager presiona "Olvidé mi contraseña", **cuando** ingresa su correo corporativo, **entonces** el sistema envía un enlace seguro de restablecimiento con validez de 15 minutos. | EP05 |
-| **US32** | Personalización de Mapa de Cocina | Como Manager del Local, deseo organizar visualmente los iconos de los equipos según la distribución real de mi cocina, para ubicar rápidamente la máquina en falla. | **Dado** que el Manager está en la vista de configuración, **cuando** arrastra el icono "Freidora 1" a la zona izquierda, **entonces** la plataforma guarda el diseño espacial del local. | EP05 |
-| **US33** | Registro de Firma Digital de Conformidad | Como Manager del Local, deseo registrar mi firma digital en la plataforma, para validar automáticamente los reportes descargables de inspección SST. | **Dado** que el Manager adjunta su firma en formato imagen, **cuando** se genera un reporte PDF, **entonces** el sistema incluye la firma al pie del documento normativo. | EP05 |
-| **US34** | Visualización de Logs de Actividad en Tienda | Como Manager del Local, deseo revisar la bitácora de acciones realizadas en el panel local, para verificar quién atendió una alerta o registró un reporte rápido. | **Dado** que el Manager consulta la sección de auditoría, **cuando** filtra por fecha, **entonces** el sistema lista la hora, usuario y acción ejecutada en el panel de la cocina. | EP05 |
-| **US35** | Bloqueo Temporal de Teclado Local por Limpieza | Como Trabajador del Local, deseo activar la función "Modo Limpieza" en el panel táctil, para trapear la pantalla sin accionar botones por error. | **Dado** que el trabajador va a trapear el panel, **cuando** mantiene presionado el botón "Limpieza" por 3 segundos, **entonces** la pantalla inhabilita los toques táctiles durante 30 segundos. | EP01 |
+### Epics
+
+| Epic ID | Título | Descripción |
+| --- | --- | --- |
+| **EP01** | **Presentación y Acceso mediante Landing Page** | Módulo orientado a presentar la propuesta de valor de ElectroLink a visitantes y dirigir hacia la aplicación web. |
+| **EP02** | **Gestión de Seguridad Operativa en Tienda** | Módulo orientado a proteger la integridad física del staff operativo mediante monitoreo y señalización local. |
+| **EP03** | **Monitoreo Técnico y Alertas para la Administración** | Módulo central para la gestión preventiva, supervisión de red y notificaciones ejecutivas. |
+| **EP04** | **Gestión Energética y Costos Operativos** | Módulo para la visualización, desglose y optimización del consumo eléctrico en el local. |
+| **EP05** | **Cumplimiento Normativo y Reportes de Seguridad** | Módulo para la generación de evidencias técnicas exigidas por entes reguladores. |
+| **EP06** | **Configuración de Perfiles y Control de Acceso** | Módulo administrativo para la personalización de usuarios y acceso a datos del local. |
+
+---
+
+#### User Stories
+
+| ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
+| --- | --- | --- | --- | --- |
+| **US01** | Conocimiento de propuesta de valor y acceso a aplicación web | Como Visitante, desea conocer la propuesta de valor de ElectroLink en la sección principal de la landing page, para acceder a la aplicación web y explorar el monitoreo eléctrico. | Scenario 1: Consulta exitosa de propuesta de valor<br>**Given** el visitante accede a la sección principal de la landing page<br>**When** consulta el contenido de propuesta de valor<br>**Then** visualiza la descripción del monitoreo eléctrico y el vínculo hacia la aplicación web<br><br>Scenario 2: Acceso exitoso a aplicación web<br>**Given** el visitante selecciona el vínculo hacia la aplicación web<br>**When** el servicio de la aplicación responde<br>**Then** accede a la aplicación web y visualiza el inicio de sesión<br><br>Scenario 3: Vínculo hacia aplicación sin respuesta<br>**Given** el vínculo hacia la aplicación web no responde<br>**When** el visitante selecciona el acceso<br>**Then** visualiza un mensaje de servicio no disponible y recibe la opción de reintentar | EP01 |
+| **US02** | Comprensión de problemática operativa del sector | Como Visitante, desea comprender la problemática de seguridad eléctrica en cadenas de comida rápida, para valorar la necesidad de monitoreo continuo. | Scenario 1: Consulta exitosa de problemática<br>**Given** el visitante accede a la sección de problemática<br>**When** consulta el contenido<br>**Then** visualiza datos de riesgo eléctrico y consecuencias operativas<br><br>Scenario 2: Contenido sin carga por falla de red<br>**Given** el contenido de problemática no carga por falla de red<br>**When** el visitante intenta consultar la sección<br>**Then** visualiza un mensaje de contenido no disponible y recibe la opción de reintentar<br><br>Scenario 3: Consulta con conexión inestable<br>**Given** el visitante accede con conexión inestable<br>**When** consulta la sección<br>**Then** visualiza el contenido esencial y recibe el aviso de conexión limitada | EP01 |
+| **US03** | Consulta de beneficios de seguridad para personal operativo | Como Visitante del segmento Trabajador del Local, desea conocer los beneficios de seguridad operativa de ElectroLink, para valorar la protección durante la jornada en cocina. | Scenario 1: Consulta exitosa de beneficios operativos<br>**Given** el visitante del segmento Trabajador accede a la sección de beneficios operativos<br>**When** consulta el contenido<br>**Then** visualiza la explicación de alerta temprana y protocolo de actuación segura<br><br>Scenario 2: Equipo con sensor sin señal<br>**Given** el sensor de un equipo no emite señal<br>**When** el visitante consulta el ejemplo de monitoreo<br>**Then** visualiza el aviso de equipo sin supervisión y la recomendación de reporte al Manager<br><br>Scenario 3: Pérdida de conexión durante la consulta<br>**Given** la landing page pierde conexión a internet durante la consulta<br>**When** el visitante intenta ver los beneficios<br>**Then** visualiza el mensaje de reconexión y conserva el acceso al contenido ya cargado | EP01 |
+| **US04** | Consulta de beneficios de gestión para administración del local | Como Visitante del segmento Manager del Local, desea conocer los beneficios de gestión energética y control de costos, para valorar la suscripción al servicio. | Scenario 1: Consulta exitosa de beneficios de gestión<br>**Given** el visitante del segmento Manager accede a la sección de beneficios de gestión<br>**When** consulta el contenido<br>**Then** visualiza la explicación de ahorro energético y continuidad operativa<br><br>Scenario 2: Equipo con umbral sin configurar<br>**Given** el umbral de un equipo no se encuentra configurado<br>**When** el visitante consulta el ejemplo de alerta<br>**Then** visualiza el aviso de configuración pendiente y la explicación del valor por defecto<br><br>Scenario 3: Acceso exitoso desde beneficios de gestión<br>**Given** el visitante selecciona el vínculo hacia la aplicación web desde esta sección<br>**When** el servicio responde<br>**Then** accede a la aplicación web y visualiza el inicio de sesión | EP01 |
+| **US05** | Comprensión del funcionamiento del ecosistema conectado | Como Visitante, desea comprender el funcionamiento del ecosistema de sensores y analítica, para entender el flujo desde la detección hasta la alerta. | Scenario 1: Consulta exitosa de funcionamiento<br>**Given** el visitante accede a la sección de funcionamiento<br>**When** consulta el contenido<br>**Then** visualiza la explicación del ciclo de medición y generación de alertas<br><br>Scenario 2: Sensor con pérdida de conexión<br>**Given** un sensor pierde conexión con la plataforma<br>**When** el visitante consulta el ejemplo de estado<br>**Then** visualiza el aviso de sensor desconectado y la explicación de almacenamiento temporal<br><br>Scenario 3: Contenido multimedia sin carga<br>**Given** el contenido multimedia no carga<br>**When** el visitante consulta la sección<br>**Then** visualiza la descripción textual alternativa y conserva el acceso al vínculo hacia la aplicación web | EP01 |
+| **US06** | Consulta de planes y evidencia para cumplimiento normativo | Como Visitante del segmento Manager del Local, desea conocer los planes de suscripción y la evidencia para fiscalización, para evaluar la contratación del servicio. | Scenario 1: Consulta exitosa de planes<br>**Given** el visitante del segmento Manager accede a la sección de planes<br>**When** consulta el contenido<br>**Then** visualiza la descripción de planes por local y la evidencia para fiscalización<br><br>Scenario 2: Información de precios sin disponibilidad<br>**Given** la información de precios no se encuentra disponible por falla del servicio<br>**When** el visitante consulta la sección<br>**Then** visualiza el mensaje de información temporalmente no disponible y la opción de contacto<br><br>Scenario 3: Vínculo hacia aplicación sin respuesta desde planes<br>**Given** el visitante selecciona el vínculo hacia la aplicación web desde la sección de planes<br>**When** el servicio no responde<br>**Then** visualiza el mensaje de reintento y conserva el acceso al contenido de planes | EP01 |
+| **US07** | Solicitud de demostración y contacto comercial | Como Visitante, desea solicitar una demostración del servicio mediante los datos de contacto, para recibir atención comercial y acceso guiado a la aplicación web. | Scenario 1: Solicitud exitosa de demostración<br>**Given** el visitante accede a la sección de contacto<br>**When** registra datos válidos de contacto y solicita la demostración<br>**Then** recibe la confirmación de solicitud y el vínculo hacia la aplicación web<br><br>Scenario 2: Registro con datos inválidos<br>**Given** el visitante registra datos inválidos de contacto<br>**When** solicita la demostración<br>**Then** visualiza el mensaje de datos inválidos y recibe la indicación de corrección<br><br>Scenario 3: Servicio de registro sin respuesta<br>**Given** el servicio de registro no responde<br>**When** el visitante solicita la demostración<br>**Then** visualiza el mensaje de intento no procesado y conserva los datos ingresados para reintentar | EP01 |
+| **US08** | Consulta de nivel de riesgo operativo por equipo | Como Trabajador del Local, desea conocer el nivel de riesgo operativo de cada equipo, para decidir su manipulación con seguridad durante la jornada. | Scenario 1: Detección exitosa de condición riesgosa<br>**Given** el sensor registra una fuga de corriente en un equipo<br>**When** el sistema evalúa la medición recibida<br>**Then** comunica el nivel de peligro del equipo y la indicación de no manipulación<br><br>Scenario 2: Sensor sin señal<br>**Given** el sensor de un equipo no emite señal<br>**When** el sistema evalúa el estado de supervisión<br>**Then** comunica el estado sin supervisión y la recomendación de reporte al Manager<br><br>Scenario 3: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador consulta el estado de un equipo<br>**Then** conserva la señal local de riesgo y registra el evento para sincronización posterior | EP02 |
+| **US09** | Reporte operativo de anomalía en equipo | Como Trabajador del Local, desea reportar una anomalía percibida en un equipo, para alertar al Manager sin interrumpir la atención. | Scenario 1: Reporte exitoso de anomalía<br>**Given** el trabajador percibe un ruido inusual en un equipo<br>**When** registra el reporte operativo con la identificación del equipo<br>**Then** el Manager recibe la alerta con equipo, hora y responsable de turno<br><br>Scenario 2: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador registra el reporte operativo<br>**Then** el sistema conserva el reporte en almacenamiento local y lo sincroniza al recuperar la conexión<br><br>Scenario 3: Reporte duplicado para el mismo equipo<br>**Given** existe un reporte abierto para el mismo equipo<br>**When** el trabajador registra un nuevo reporte<br>**Then** el sistema vincula el reporte al caso existente y comunica la confirmación al trabajador | EP02 |
+| **US10** | Recepción de aviso sonoro ante fuga crítica | Como Trabajador del Local, desea recibir un aviso sonoro local ante una fuga crítica, para alejarse del equipo con rapidez. | Scenario 1: Fuga crítica con aviso exitoso<br>**Given** el sensor registra una fuga de corriente crítica en un equipo<br>**When** el sistema evalúa la medición recibida<br>**Then** emite el aviso sonoro local y comunica la indicación de alejamiento<br><br>Scenario 2: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el sensor registra una fuga crítica<br>**Then** emite el aviso sonoro local y registra el evento para sincronización posterior<br><br>Scenario 3: Sensor sin señal<br>**Given** el sensor de un equipo no emite señal<br>**When** el sistema evalúa el estado de supervisión<br>**Then** comunica el estado sin supervisión y la recomendación de reporte al Manager | EP02 |
+| **US11** | Confirmación de condición segura para limpieza | Como Trabajador del Local, desea confirmar la condición segura del área antes de la limpieza, para realizar el aseo sin riesgo eléctrico. | Scenario 1: Confirmación exitosa de condición segura<br>**Given** el circuito del área se encuentra aislado<br>**When** el trabajador consulta la condición de seguridad del área<br>**Then** recibe la confirmación de área segura para limpieza<br><br>Scenario 2: Condición insegura del área<br>**Given** el circuito del área mantiene energía<br>**When** el trabajador consulta la condición de seguridad del área<br>**Then** recibe la indicación de no limpieza y la recomendación de reporte al Manager<br><br>Scenario 3: Sensor sin señal<br>**Given** el sensor del área no emite señal<br>**When** el trabajador consulta la condición de seguridad del área<br>**Then** recibe el aviso de estado sin verificación y la recomendación de no limpieza | EP02 |
+| **US12** | Consulta de protocolo de apagado seguro | Como Trabajador del Local, desea conocer el protocolo de apagado seguro de un equipo, para actuar con seguridad ante una alerta. | Scenario 1: Consulta exitosa de protocolo<br>**Given** el equipo cuenta con protocolo de apagado definido<br>**When** el trabajador consulta el protocolo del equipo en alerta<br>**Then** recibe la secuencia de pasos seguros para el corte de energía<br><br>Scenario 2: Protocolo sin definir para el equipo<br>**Given** el equipo no cuenta con protocolo de apagado definido<br>**When** el trabajador consulta el protocolo del equipo<br>**Then** recibe la indicación de no manipulación y la recomendación de reporte al Manager<br><br>Scenario 3: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador consulta el protocolo de un equipo<br>**Then** recibe el protocolo conservado en almacenamiento local | EP02 |
+| **US13** | Registro de estado de equipos al cierre de turno | Como Trabajador del Local, desea registrar el estado de los equipos al cierre de turno, para dejar constancia al siguiente grupo de trabajo. | Scenario 1: Cierre de turno con registro exitoso<br>**Given** el trabajador finaliza su turno en cocina<br>**When** registra el cierre con el estado de los equipos<br>**Then** el sistema conserva el registro con responsable y hora y lo comunica al Manager<br><br>Scenario 2: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador registra el cierre de turno<br>**Then** el sistema conserva el registro en almacenamiento local y lo sincroniza al recuperar la conexión<br><br>Scenario 3: Cierre sin responsable identificado<br>**Given** ningún trabajador se encuentra identificado en el turno<br>**When** se intenta registrar el cierre de turno<br>**Then** el sistema solicita la identificación del responsable y conserva el intento como pendiente | EP02 |
+| **US14** | Consulta de guía de actuación ante incidente eléctrico | Como Trabajador del Local, desea conocer la guía de actuación ante un incidente eléctrico, para apoyar con seguridad a un compañero afectado. | Scenario 1: Consulta exitosa de guía<br>**Given** ocurre un incidente eléctrico en cocina<br>**When** el trabajador consulta la guía de actuación<br>**Then** recibe las instrucciones de aislamiento y socorro inmediato<br><br>Scenario 2: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador consulta la guía de actuación<br>**Then** recibe la guía conservada en almacenamiento local<br><br>Scenario 3: Guía sin contenido disponible<br>**Given** la guía de actuación no se encuentra disponible para el local<br>**When** el trabajador consulta la guía<br>**Then** recibe la indicación de no intervención directa y la recomendación de aviso al Manager | EP02 |
+| **US15** | Advertencia por humedad cerca de tableros | Como Trabajador del Local, desea conocer la condición de humedad cerca de tableros, para evitar la operación en superficie riesgosa. | Scenario 1: Detección exitosa de humedad<br>**Given** el sensor ambiental registra humedad excesiva cerca del tablero<br>**When** el sistema evalúa la medición recibida<br>**Then** comunica la advertencia de superficie húmeda y la recomendación de no conexión<br><br>Scenario 2: Sensor ambiental sin señal<br>**Given** el sensor ambiental no emite señal<br>**When** el sistema evalúa el estado de supervisión<br>**Then** comunica el estado sin supervisión ambiental y la recomendación de precaución<br><br>Scenario 3: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el sensor ambiental registra humedad excesiva<br>**Then** conserva la advertencia local y registra el evento para sincronización posterior | EP02 |
+| **US16** | Consulta de estado de la red eléctrica del local | Como Manager del Local, desea conocer el estado de la red eléctrica del local, para anticipar fallas en horas de alta demanda. | Scenario 1: Consulta exitosa del estado de red<br>**Given** los sensores del local emiten señal con normalidad<br>**When** el Manager consulta el estado de la red eléctrica<br>**Then** recibe el estado técnico con voltaje y temperatura por equipo<br><br>Scenario 2: Sensor sin señal<br>**Given** el sensor de un equipo no emite señal<br>**When** el Manager consulta el estado de la red eléctrica<br>**Then** recibe el estado sin supervisión para ese equipo con la recomendación de revisión<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet del local se interrumpe<br>**When** el Manager consulta el estado de la red eléctrica<br>**Then** recibe el último estado sincronizado con el aviso de datos no actualizados | EP03 |
+| **US17** | Recepción de alertas automáticas de emergencia | Como Manager del Local, desea recibir alertas automáticas ante sobrevoltajes o fugas de energía, para actuar con rapidez. | Scenario 1: Alerta exitosa ante sobrecorriente<br>**Given** el sensor registra amperaje sobre el límite seguro en un equipo<br>**When** el sistema evalúa la medición recibida<br>**Then** envía la alerta de emergencia al Manager con equipo y nivel de severidad<br><br>Scenario 2: Canal principal sin disponibilidad<br>**Given** el canal principal de notificación no se encuentra disponible<br>**When** el sistema genera una alerta crítica<br>**Then** envía la alerta por el canal alternativo y registra el cambio de canal<br><br>Scenario 3: Umbral sin configurar<br>**Given** el umbral del equipo no se encuentra configurado<br>**When** el sensor registra una medición elevada<br>**Then** aplica el valor por defecto y comunica el aviso de configuración pendiente | EP03 |
+| **US18** | Definición de límites de temperatura y amperaje por equipo | Como Manager del Local, desea definir los límites de temperatura y amperaje por equipo, para adaptar las alertas a cada máquina. | Scenario 1: Definición exitosa de límites<br>**Given** el Manager define límites dentro del rango válido para una freidora<br>**When** guarda la configuración del equipo<br>**Then** el sistema aplica la nueva lógica de alertas para ese equipo<br><br>Scenario 2: Valor fuera de rango válido<br>**Given** el Manager define un límite fuera del rango válido<br>**When** intenta guardar la configuración<br>**Then** el sistema rechaza el valor y solicita la corrección con el rango permitido<br><br>Scenario 3: Equipo con umbral sin configurar<br>**Given** un equipo no cuenta con umbral configurado<br>**When** el Manager consulta la configuración del equipo<br>**Then** el sistema muestra el valor por defecto con el aviso de configuración pendiente | EP03 |
+| **US19** | Consulta de historial de alertas con filtros | Como Manager del Local, desea consultar el historial de alertas con filtros por fecha, severidad y equipo, para analizar patrones de falla recurrentes. | Scenario 1: Consulta exitosa con filtros<br>**Given** existen alertas registradas en el periodo consultado<br>**When** el Manager aplica filtros por severidad y equipo<br>**Then** recibe el listado de alertas que cumplen los filtros<br><br>Scenario 2: Consulta sin resultados<br>**Given** no existen alertas para los filtros aplicados<br>**When** el Manager aplica los filtros<br>**Then** recibe el mensaje de búsqueda sin resultados y la opción de ampliar el periodo<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet se interrumpe<br>**When** el Manager consulta el historial<br>**Then** recibe el último historial sincronizado con el aviso de datos no actualizados | EP03 |
+| **US20** | Asignación de alerta a técnico de mantenimiento | Como Manager del Local, desea asignar una alerta a un técnico de mantenimiento, para programar la revisión oportuna del equipo. | Scenario 1: Asignación exitosa de alerta<br>**Given** existe una alerta pendiente de atención<br>**When** el Manager asigna la alerta a un técnico disponible<br>**Then** el técnico recibe el detalle del equipo con nivel de urgencia y plazo sugerido<br><br>Scenario 2: Técnico sin disponibilidad<br>**Given** el técnico seleccionado no se encuentra disponible<br>**When** el Manager asigna la alerta<br>**Then** el sistema sugiere un técnico alternativo y conserva la alerta como pendiente<br><br>Scenario 3: Alerta ya atendida<br>**Given** la alerta ya cuenta con atención registrada<br>**When** el Manager intenta asignarla<br>**Then** el sistema informa el estado atendido y vincula el intento al caso existente | EP03 |
+| **US21** | Consulta de estado de conexión de sensores | Como Manager del Local, desea conocer el estado de conexión de cada sensor, para asegurar cobertura total de monitoreo en cocina. | Scenario 1: Consulta exitosa de conectividad<br>**Given** los sensores emiten señal con normalidad<br>**When** el Manager consulta la conectividad<br>**Then** recibe el estado conectado por sensor y equipo asociado<br><br>Scenario 2: Sensor sin señal<br>**Given** un sensor deja de emitir señal<br>**When** el sistema evalúa la comunicación esperada<br>**Then** comunica el estado desconectado con hora de última señal y equipo afectado<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet del local se interrumpe<br>**When** el Manager consulta la conectividad<br>**Then** recibe el último estado sincronizado con el aviso de verificación pendiente | EP03 |
+| **US22** | Recepción de recomendaciones de mantenimiento predictivo | Como Manager del Local, desea recibir recomendaciones de mantenimiento predictivo, para programar revisiones sin afectar la venta. | Scenario 1: Recomendación exitosa de mantenimiento<br>**Given** el sistema detecta desgaste elevado en un horno<br>**When** la probabilidad de falla supera el límite definido<br>**Then** el Manager recibe la recomendación con ventana sugerida fuera de hora pico<br><br>Scenario 2: Datos insuficientes para recomendación<br>**Given** el equipo cuenta con pocas mediciones históricas<br>**When** el sistema evalúa la probabilidad de falla<br>**Then** comunica la espera de más mediciones y conserva el monitoreo reforzado<br><br>Scenario 3: Sensor sin señal<br>**Given** el sensor del equipo no emite señal<br>**When** el sistema evalúa la necesidad de mantenimiento<br>**Then** comunica la recomendación de revisión de conectividad antes del mantenimiento | EP03 |
+| **US23** | Consulta de responsable de turno durante alerta | Como Manager del Local, desea conocer el responsable de turno durante una alerta, para el seguimiento operativo correspondiente. | Scenario 1: Consulta exitosa de responsable<br>**Given** una alerta cuenta con turno y responsable registrados<br>**When** el Manager consulta el detalle de la alerta<br>**Then** recibe el nombre del trabajador y el turno correspondiente<br><br>Scenario 2: Alerta sin responsable identificado<br>**Given** la alerta no cuenta con responsable identificado<br>**When** el Manager consulta el detalle<br>**Then** recibe el aviso de responsable sin identificar y la opción de completar el registro<br><br>Scenario 3: Turno sin conexión a internet<br>**Given** la conexión a internet se interrumpe durante el turno<br>**When** el Manager consulta el responsable de una alerta<br>**Then** recibe el último registro sincronizado con el aviso de verificación pendiente | EP03 |
+| **US24** | Consulta de consumo eléctrico por equipo | Como Manager del Local, desea conocer el consumo eléctrico detallado por máquina, para identificar los equipos que elevan la factura mensual. | Scenario 1: Consulta exitosa por periodo<br>**Given** existen mediciones registradas en el periodo consultado<br>**When** el Manager consulta el consumo por equipo<br>**Then** recibe el detalle en energía y costo estimado por máquina<br><br>Scenario 2: Periodo sin mediciones<br>**Given** no existen mediciones en el periodo consultado<br>**When** el Manager consulta el consumo por equipo<br>**Then** recibe el mensaje de periodo sin datos y la opción de ampliar el rango<br><br>Scenario 3: Sensor sin señal<br>**Given** el sensor de un equipo no emite señal<br>**When** el Manager consulta el consumo por equipo<br>**Then** recibe el consumo parcial con el aviso de equipo sin supervisión | EP04 |
+| **US25** | Comparación de consumo entre periodos | Como Manager del Local, desea comparar el gasto energético entre periodos, para evaluar si las medidas de ahorro generan resultado. | Scenario 1: Comparación exitosa entre meses<br>**Given** existen mediciones en ambos periodos comparados<br>**When** el Manager solicita la comparación mensual<br>**Then** recibe la variación porcentual de consumo y costo<br><br>Scenario 2: Periodo sin mediciones<br>**Given** uno de los periodos no cuenta con mediciones<br>**When** el Manager solicita la comparación<br>**Then** recibe el aviso de comparación parcial con el periodo disponible<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet se interrumpe<br>**When** el Manager solicita la comparación<br>**Then** recibe la última comparación sincronizada con el aviso de datos no actualizados | EP04 |
+| **US26** | Detección de consumo fuera de horario comercial | Como Manager del Local, desea conocer consumos registrados fuera del horario comercial, para detectar máquinas encendidas por error. | Scenario 1: Detección exitosa fuera de horario<br>**Given** un equipo registra consumo sobre el modo reposo con local cerrado<br>**When** el sistema evalúa la medición recibida<br>**Then** envía la alerta de consumo inusual con equipo y hora<br><br>Scenario 2: Consumo dentro del modo reposo<br>**Given** el equipo mantiene consumo dentro del modo reposo<br>**When** el sistema evalúa la medición<br>**Then** conserva el registro sin generar alerta<br><br>Scenario 3: Sensor sin señal<br>**Given** el sensor del equipo no emite señal durante la noche<br>**When** el sistema evalúa la cobertura nocturna<br>**Then** comunica el estado sin supervisión nocturna y la recomendación de revisión | EP04 |
+| **US27** | Proyección de costo eléctrico al cierre de mes | Como Manager del Local, desea conocer la proyección del costo eléctrico al cierre del mes, para ajustar el presupuesto operativo del local. | Scenario 1: Proyección exitosa con datos suficientes<br>**Given** el mes cuenta con mediciones suficientes para estimación<br>**When** el Manager consulta la proyección<br>**Then** recibe el monto total estimado con la tarifa vigente<br><br>Scenario 2: Datos insuficientes para proyección<br>**Given** el mes cuenta con pocas mediciones registradas<br>**When** el Manager consulta la proyección<br>**Then** recibe el aviso de estimación preliminar y la fecha sugerida de nueva consulta<br><br>Scenario 3: Tarifa sin actualizar<br>**Given** la tarifa eléctrica no se encuentra actualizada<br>**When** el Manager consulta la proyección<br>**Then** recibe la estimación con la última tarifa disponible y el aviso de actualización pendiente | EP04 |
+| **US28** | Descarga de reporte de eficiencia energética | Como Manager del Local, desea descargar el reporte de consumo energético, para presentarlo en la revisión de costos con gerencia. | Scenario 1: Descarga exitosa de reporte<br>**Given** existen mediciones en el periodo solicitado<br>**When** el Manager solicita la descarga del reporte<br>**Then** recibe el archivo con el desglose diario por equipo<br><br>Scenario 2: Periodo sin mediciones<br>**Given** no existen mediciones en el periodo solicitado<br>**When** el Manager solicita la descarga<br>**Then** recibe el mensaje de reporte sin datos y la opción de cambiar el periodo<br><br>Scenario 3: Servicio de generación sin respuesta<br>**Given** el servicio de generación no responde<br>**When** el Manager solicita la descarga<br>**Then** recibe el mensaje de intento no procesado y conserva la solicitud como pendiente | EP04 |
+| **US29** | Definición de meta mensual de consumo por tienda | Como Manager del Local, desea definir una meta mensual de consumo para la tienda, para recibir avisos antes de superar el presupuesto energético. | Scenario 1: Definición exitosa de meta<br>**Given** el Manager define una meta dentro del rango válido<br>**When** guarda la meta mensual<br>**Then** el sistema aplica el seguimiento con aviso al alcanzar el porcentaje definido<br><br>Scenario 2: Meta fuera de rango válido<br>**Given** el Manager define una meta fuera del rango válido<br>**When** intenta guardar la meta<br>**Then** el sistema rechaza el valor y solicita la corrección<br><br>Scenario 3: Consumo próximo a la meta<br>**Given** el consumo acumulado se acerca a la meta definida<br>**When** el sistema evalúa el avance mensual<br>**Then** envía la advertencia de presupuesto con el avance actual | EP04 |
+| **US30** | Descarga de reporte de seguridad para fiscalización | Como Manager del Local, desea descargar el historial de eventos de seguridad eléctrica, para presentar evidencia formal ante inspecciones. | Scenario 1: Descarga exitosa de reporte<br>**Given** existen eventos de seguridad registrados en el periodo<br>**When** el Manager solicita la descarga del reporte<br>**Then** recibe el documento con el registro cronológico de alertas atendidas<br><br>Scenario 2: Periodo sin eventos registrados<br>**Given** no existen eventos en el periodo solicitado<br>**When** el Manager solicita la descarga<br>**Then** recibe el mensaje de reporte sin datos y la opción de cambiar el periodo<br><br>Scenario 3: Servicio de generación sin respuesta<br>**Given** el servicio de generación no responde<br>**When** el Manager solicita la descarga<br>**Then** recibe el mensaje de intento no procesado y conserva la solicitud como pendiente | EP05 |
+| **US31** | Registro de lista de verificación semanal de red | Como Manager del Local, desea completar la lista de verificación semanal de la red, para dejar constancia del cumplimiento de estándares de seguridad. | Scenario 1: Registro exitoso de verificación<br>**Given** inicia la semana con verificación pendiente<br>**When** el Manager completa la lista de verificación<br>**Then** el sistema guarda el registro con fecha y responsable<br><br>Scenario 2: Verificación incompleta<br>**Given** la lista cuenta con preguntas sin responder<br>**When** el Manager intenta guardar el registro<br>**Then** el sistema informa las preguntas pendientes y conserva el avance como borrador<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet se interrumpe<br>**When** el Manager completa la verificación<br>**Then** el sistema conserva el registro local y lo sincroniza al recuperar la conexión | EP05 |
+| **US32** | Registro de constancia de mantenimiento realizado | Como Manager del Local, desea registrar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | Scenario 1: Registro exitoso de constancia<br>**Given** concluye la reparación de un equipo<br>**When** el Manager registra la constancia del técnico en la ficha del equipo<br>**Then** el sistema actualiza la fecha del último mantenimiento efectuado<br><br>Scenario 2: Constancia con datos inválidos<br>**Given** la constancia presenta datos inválidos<br>**When** el Manager intenta registrarla<br>**Then** el sistema rechaza el registro y solicita la corrección<br><br>Scenario 3: Equipo sin historial previo<br>**Given** el equipo no cuenta con mantenimientos previos<br>**When** el Manager registra la primera constancia<br>**Then** el sistema crea el historial del equipo con la fecha registrada | EP05 |
+| **US33** | Consulta de nivel de cumplimiento normativo del local | Como Manager del Local, desea conocer el nivel de cumplimiento normativo del local, para corregir observaciones antes de una inspección. | Scenario 1: Consulta exitosa de cumplimiento<br>**Given** el local cuenta con registros de verificación y mantenimientos<br>**When** el Manager consulta el cumplimiento normativo<br>**Then** recibe el porcentaje global de salud técnica del local<br><br>Scenario 2: Registros insuficientes para cálculo<br>**Given** el local cuenta con pocos registros de verificación<br>**When** el Manager consulta el cumplimiento<br>**Then** recibe el cálculo parcial con la lista de registros faltantes<br><br>Scenario 3: Sensor sin señal<br>**Given** varios sensores no emiten señal<br>**When** el Manager consulta el cumplimiento<br>**Then** recibe el nivel calculado con el aviso de cobertura parcial de monitoreo | EP05 |
+| **US34** | Recepción de aviso de vencimiento de mantenimiento | Como Manager del Local, desea recibir avisos antes del vencimiento del mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | Scenario 1: Aviso exitoso de vencimiento próximo<br>**Given** faltan pocos días para el vencimiento de revisión de un equipo<br>**When** el Manager consulta el panel de tareas<br>**Then** recibe la notificación con equipo y fecha de vencimiento<br><br>Scenario 2: Equipo sin fecha de mantenimiento<br>**Given** un equipo no cuenta con fecha de mantenimiento registrada<br>**When** el sistema evalúa los vencimientos<br>**Then** comunica el aviso de fecha pendiente con la opción de registro<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet se interrumpe<br>**When** se acerca un vencimiento<br>**Then** el sistema conserva el aviso local y lo sincroniza al recuperar la conexión | EP05 |
+| **US35** | Registro de cuentas para trabajadores | Como Manager del Local, desea registrar cuentas para los operarios de cocina, para permitir su identificación al inicio de turnos. | Scenario 1: Registro exitoso de cuenta<br>**Given** se incorpora un nuevo trabajador al local<br>**When** el Manager registra sus datos laborales<br>**Then** el sistema crea la cuenta con credencial de acceso rápido para tienda<br><br>Scenario 2: Datos inválidos de trabajador<br>**Given** los datos del trabajador presentan errores<br>**When** el Manager intenta registrar la cuenta<br>**Then** el sistema rechaza el registro y solicita la corrección<br><br>Scenario 3: Cuenta duplicada<br>**Given** ya existe una cuenta activa para el mismo trabajador<br>**When** el Manager intenta registrar una nueva cuenta<br>**Then** el sistema informa la duplicidad y conserva la cuenta existente | EP06 |
+| **US36** | Selección de canales de notificación preferidos | Como Manager del Local, desea elegir los canales de recepción de alertas, para ajustar la comunicación a su disponibilidad de señal. | Scenario 1: Selección exitosa de canal<br>**Given** el Manager elige un canal disponible como primario<br>**When** guarda su preferencia de notificación<br>**Then** el sistema dirige las alertas críticas al canal elegido<br><br>Scenario 2: Canal primario sin disponibilidad<br>**Given** el canal primario no se encuentra disponible<br>**When** el sistema genera una alerta crítica<br>**Then** envía la alerta por el canal alternativo y registra el cambio<br><br>Scenario 3: Preferencia sin definir<br>**Given** el Manager no define canal preferido<br>**When** el sistema genera una alerta<br>**Then** aplica el canal por defecto y comunica la opción de personalización | EP06 |
+| **US37** | Acceso seguro a la plataforma web | Como Manager del Local, desea acceder con credenciales seguras a la plataforma, para proteger la información operativa del local. | Scenario 1: Acceso exitoso con credenciales válidas<br>**Given** el Manager cuenta con credenciales válidas<br>**When** ingresa sus credenciales en el inicio de sesión<br>**Then** el sistema otorga acceso a la gestión del local<br><br>Scenario 2: Credenciales inválidas<br>**Given** las credenciales ingresadas no son válidas<br>**When** el Manager intenta acceder<br>**Then** el sistema rechaza el acceso y registra el intento fallido<br><br>Scenario 3: Cuenta bloqueada por intentos reiterados<br>**Given** la cuenta supera los intentos fallidos permitidos<br>**When** el Manager intenta acceder<br>**Then** el sistema mantiene el bloqueo temporal y comunica la opción de recuperación | EP06 |
+| **US38** | Recuperación de acceso mediante correo | Como Manager del Local, desea recuperar el acceso mediante correo electrónico, para restablecer su clave con seguridad. | Scenario 1: Solicitud exitosa de recuperación<br>**Given** el correo se encuentra registrado en la plataforma<br>**When** el Manager solicita la recuperación<br>**Then** recibe el enlace seguro de restablecimiento con vigencia limitada<br><br>Scenario 2: Correo sin registro<br>**Given** el correo no se encuentra registrado<br>**When** el Manager solicita la recuperación<br>**Then** recibe el mensaje de correo sin registro y la opción de contacto con soporte<br><br>Scenario 3: Enlace vencido<br>**Given** el enlace de restablecimiento supera la vigencia permitida<br>**When** el Manager intenta usarlo<br>**Then** el sistema rechaza el enlace y ofrece la generación de uno nuevo | EP06 |
+| **US39** | Ordenamiento de equipos según distribución de cocina | Como Manager del Local, desea ordenar la ubicación de los equipos según la distribución real de la cocina, para ubicar con rapidez la máquina en falla. | Scenario 1: Ordenamiento exitoso de equipos<br>**Given** el local cuenta con equipos registrados<br>**When** el Manager registra la ubicación de cada equipo<br>**Then** el sistema conserva el diseño espacial del local<br><br>Scenario 2: Ubicación duplicada<br>**Given** dos equipos comparten la misma ubicación registrada<br>**When** el Manager guarda el diseño<br>**Then** el sistema informa la duplicidad y solicita la corrección<br><br>Scenario 3: Equipo sin ubicación registrada<br>**Given** un equipo no cuenta con ubicación registrada<br>**When** el Manager consulta el diseño espacial<br>**Then** el sistema muestra el equipo en la lista de pendientes de ubicación | EP06 |
+| **US40** | Registro de firma de conformidad | Como Manager del Local, desea registrar su firma de conformidad, para validar los reportes descargables de inspección. | Scenario 1: Registro exitoso de firma<br>**Given** la firma cumple el formato permitido<br>**When** el Manager registra su firma<br>**Then** el sistema la asocia a su cuenta para futuros reportes<br><br>Scenario 2: Firma con formato inválido<br>**Given** la firma no cumple el formato permitido<br>**When** el Manager intenta registrarla<br>**Then** el sistema rechaza el archivo y solicita un formato válido<br><br>Scenario 3: Generación de reporte con firma<br>**Given** el Manager cuenta con firma registrada<br>**When** solicita la descarga de un reporte normativo<br>**Then** el sistema incluye la firma al pie del documento generado | EP06 |
+| **US41** | Consulta de bitácora de acciones en tienda | Como Manager del Local, desea consultar la bitácora de acciones realizadas en tienda, para verificar quién atendió cada alerta. | Scenario 1: Consulta exitosa por fecha<br>**Given** existen acciones registradas en la fecha consultada<br>**When** el Manager consulta la bitácora con filtro de fecha<br>**Then** recibe el listado con hora, responsable y acción ejecutada<br><br>Scenario 2: Fecha sin acciones registradas<br>**Given** no existen acciones en la fecha consultada<br>**When** el Manager consulta la bitácora<br>**Then** recibe el mensaje de fecha sin registros y la opción de ampliar el rango<br><br>Scenario 3: Conexión a internet interrumpida<br>**Given** la conexión a internet se interrumpe<br>**When** el Manager consulta la bitácora<br>**Then** recibe la última bitácora sincronizada con el aviso de datos no actualizados | EP06 |
+| **US42** | Activación de pausa temporal de interacción del panel | Como Trabajador del Local, desea activar la pausa temporal de interacción del panel, para asear el equipo sin generar acciones involuntarias. | Scenario 1: Activación exitosa de pausa<br>**Given** el trabajador inicia el aseo del panel<br>**When** activa la pausa temporal de interacción<br>**Then** el panel conserva la señal de riesgo visible e ignora interacciones durante el periodo definido<br><br>Scenario 2: Alerta crítica durante la pausa<br>**Given** la pausa temporal se encuentra activa<br>**When** el sensor registra una fuga crítica<br>**Then** el sistema interrumpe la pausa y emite el aviso sonoro con la indicación de alejamiento<br><br>Scenario 3: Panel local sin conexión a internet<br>**Given** el panel local pierde conexión a internet<br>**When** el trabajador activa la pausa temporal<br>**Then** el sistema aplica la pausa local y registra el evento para sincronización posterior | EP02 |
+
+---
+
+### Technical Stories
+
+| ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
+| --- | --- | --- | --- | --- |
+| **TS01** | Ingesta de lecturas de sensores mediante API | Como Developer, desea exponer la ingesta de lecturas de sensores mediante API, para persistir telemetría con trazabilidad por dispositivo y equipo. | Scenario 1: Ingesta exitosa de lectura válida<br>**Given** el gateway envía una lectura válida con identificación de dispositivo y equipo<br>**When** la API recibe la solicitud de ingesta<br>**Then** responde éxito y persiste la medición con marca temporal y origen<br><br>Scenario 2: Carga útil inválida<br>**Given** el gateway envía una lectura con datos inválidos<br>**When** la API recibe la solicitud de ingesta<br>**Then** responde error de validación y descarta la medición con registro de causa<br><br>Scenario 3: Lectura duplicada<br>**Given** la API recibe una lectura ya persistida con igual identificador<br>**When** evalúa la solicitud recibida<br>**Then** responde éxito sin duplicar el registro y conserva la trazabilidad original | EP03 |
+| **TS02** | Distribución de alertas mediante API | Como Developer, desea exponer la distribución de alertas mediante API, para clasificar eventos por severidad y dirigir cada aviso al destino definido. | Scenario 1: Distribución exitosa de alerta crítica<br>**Given** existe un evento clasificado como crítico<br>**When** la API recibe la solicitud de distribución<br>**Then** responde éxito y dirige el aviso al panel local y al Manager con severidad y equipo<br><br>Scenario 2: Evento con severidad sin clasificar<br>**Given** el evento no cuenta con severidad clasificada<br>**When** la API recibe la solicitud de distribución<br>**Then** responde error de clasificación y conserva el evento como pendiente de revisión<br><br>Scenario 3: Destino sin disponibilidad<br>**Given** el destino principal no se encuentra disponible<br>**When** la API distribuye la alerta<br>**Then** responde éxito parcial y redirige al destino alternativo con registro del cambio | EP03 |
+| **TS03** | Sincronización del panel tras pérdida de conexión | Como Developer, desea implementar la sincronización del panel tras la pérdida de conexión, para recuperar mediciones y eventos sin pérdida de información. | Scenario 1: Sincronización exitosa con eventos pendientes<br>**Given** el panel conserva eventos en almacenamiento local tras la interrupción<br>**When** la conexión se restablece y solicita la sincronización<br>**Then** responde éxito y persiste los eventos con marca temporal original<br><br>Scenario 2: Sincronización sin eventos pendientes<br>**Given** el panel no conserva eventos pendientes<br>**When** solicita la sincronización<br>**Then** responde éxito sin cambios y actualiza la hora de última sincronización<br><br>Scenario 3: Almacenamiento local al límite<br>**Given** el almacenamiento local alcanza el límite definido<br>**When** el panel intenta conservar un nuevo evento<br>**Then** prioriza el evento crítico más reciente y registra la rotación aplicada | EP02 |
+| **TS04** | Generación de reporte SST mediante servicio dedicado | Como Developer, desea implementar la generación del reporte SST mediante servicio dedicado, para entregar evidencia inmutable con firma de conformidad. | Scenario 1: Generación exitosa de reporte<br>**Given** existen eventos y firma registrados en el periodo<br>**When** el servicio recibe la solicitud de generación<br>**Then** responde éxito y entrega el documento con registro cronológico y firma incluida<br><br>Scenario 2: Periodo sin eventos registrados<br>**Given** no existen eventos en el periodo solicitado<br>**When** el servicio recibe la solicitud<br>**Then** responde éxito con documento sin eventos y mensaje de periodo sin datos<br><br>Scenario 3: Servicio de generación sin respuesta<br>**Given** el servicio de generación no responde dentro del tiempo definido<br>**When** se solicita el reporte<br>**Then** responde error temporal y conserva la solicitud como pendiente de reintento | EP05 |
+| **TS05** | Autenticación y autorización con registro de auditoría | Como Developer, desea implementar la autenticación y autorización con registro de auditoría, para proteger los recursos y trazabilizar modificaciones críticas. | Scenario 1: Autenticación exitosa<br>**Given** las credenciales recibidas son válidas<br>**When** el servicio recibe la solicitud de acceso<br>**Then** responde éxito con credencial temporal de sesión y registra el ingreso<br><br>Scenario 2: Credenciales inválidas<br>**Given** las credenciales recibidas no son válidas<br>**When** el servicio recibe la solicitud de acceso<br>**Then** responde error de autenticación y registra el intento fallido<br><br>Scenario 3: Acceso a recurso protegido sin autorización<br>**Given** la sesión no cuenta con permiso para el recurso solicitado<br>**When** el servicio recibe la solicitud<br>**Then** responde error de autorización y registra el intento en la bitácora | EP06 |
+| **TS06** | Envío de notificaciones mediante proveedor externo | Como Developer, desea integrar el envío de notificaciones mediante proveedor externo, para entregar avisos críticos por canales alternativos con confirmación. | Scenario 1: Envío exitoso mediante proveedor<br>**Given** existe una alerta clasificada como crítica<br>**When** el servicio solicita el envío al proveedor externo<br>**Then** responde éxito y registra la confirmación de entrega por canal<br><br>Scenario 2: Proveedor sin disponibilidad<br>**Given** el proveedor externo no se encuentra disponible<br>**When** el servicio solicita el envío<br>**Then** responde error temporal y conserva el aviso para reintento con canal alternativo<br><br>Scenario 3: Destinatario sin canal registrado<br>**Given** el destinatario no cuenta con canal registrado<br>**When** el servicio solicita el envío<br>**Then** responde error de destino y conserva el aviso como pendiente de configuración | EP03 |
 
 ---
 
@@ -1049,43 +1098,66 @@ En esta sección se modela la situación operativa y de gestión actual ("As-Is"
 
 ## 3.4. Product Backlog
 
-| # Orden | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
-| :---: | :---: | :--- | :--- | :---: |
-| 1 | **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | 3 |
-| 2 | **US02** | Botón de Reporte Rápido de Falla | Como Trabajador del Local, deseo presionar un botón de reporte en la pantalla local, para notificar al Manager sobre anomalías o ruidos en una máquina sin pausar la atención al cliente. | 2 |
-| 3 | **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | 3 |
-| 4 | **US04** | Confirmación de Equipo Apagado | Como Trabajador del Local, deseo consultar en pantalla la confirmación de desenergización, para realizar el baldeado o trapeado del piso con total seguridad. | 2 |
-| 5 | **US05** | Consulta de Protocolo de Apagado | Como Trabajador del Local, deseo visualizar los pasos de apagado seguro en pantalla, para cortar la energía de una máquina en emergencia sin correr riesgos. | 2 |
-| 6 | **US06** | Registro de Incidencia de Turno | Como Trabajador del Local, deseo confirmar la entrega de turno mediante un check rápido, para dejar constancia del estado de los equipos al siguiente grupo de trabajo. | 2 |
-| 7 | **US07** | Guía Rápida de Primeros Auxilios Eléctricos | Como Trabajador del Local, deseo consultar un botón de ayuda rápida en pantalla, para conocer las acciones inmediatas en caso de contacto accidental de un compañero con corriente. | 2 |
-| 8 | **US08** | Alerta Visual de Humedad en Zona de Cocina | Como Trabajador del Local, deseo ver una advertencia en la interfaz cuando se detecte humedad excesiva cerca a tableros, para evitar conectar equipos en superficies mojadas. | 2 |
-| 9 | **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | 5 |
-| 10 | **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | 3 |
-| 11 | **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | 3 |
-| 12 | **US12** | Historial Filtrable de Alertas | Como Manager del Local, deseo filtrar las alertas por fecha, nivel de severidad y equipo, para analizar los patrones de fallas más recurrentes en la cocina. | 3 |
-| 13 | **US13** | Asignación de Tareas de Revisión | Como Manager del Local, deseo asignar una alerta no crítica al técnico de mantenimiento, para programar su revisión antes de que se convierta en una avería total. | 3 |
-| 14 | **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | 2 |
-| 15 | **US15** | Panel de Mantenimiento Preventivo | Como Manager del Local, deseo recibir recomendaciones automáticas de mantenimiento predictivo, para programar revisiones sin congelar la cocina en horas pico. | 8 |
-| 16 | **US16** | Registro de Turnos del Personal Operativo | Como Manager del Local, deseo visualizar qué trabajador estuvo a cargo de la cocina durante una alerta, para realizar el seguimiento operativo correspondiente. | 2 |
-| 17 | **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | 8 |
-| 18 | **US18** | Comparativa de Consumo Histórico | Como Manager del Local, deseo comparar el gasto energético del mes actual con el del mes anterior, para evaluar si las medidas de ahorro implementadas funcionaron. | 5 |
-| 19 | **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | 3 |
-| 20 | **US20** | Proyección de Factura Eléctrica | Como Manager del Local, deseo ver una proyección del costo total de la factura eléctrica al cierre del mes, para ajustar los presupuestos operacionales del local. | 5 |
-| 21 | **US21** | Exportación de Reportes de Eficiencia | Como Manager del Local, deseo descargar en Excel/PDF el reporte de consumo energético, para presentarlo en la reunión de revisión de costos con la gerencia general. | 3 |
-| 22 | **US22** | Metas de Ahorro Energético por Tienda | Como Manager del Local, deseo fijar un tope de consumo mensual en kWh, para recibir alertas cuando la tienda esté próxima a superar el presupuesto energético. | 3 |
-| 23 | **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | 5 |
-| 24 | **US24** | Checklist Digital de Inspección Eléctrica | Como Manager del Local, deseo completar un checklist digital semanal de la red, para registrar el cumplimiento de los estándares de seguridad industrial. | 3 |
-| 25 | **US25** | Registro de Mantenimientos Realizados | Como Manager del Local, deseo adjuntar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | 2 |
-| 26 | **US26** | Certificado de Salud Técnica del Local | Como Manager del Local, deseo consultar el nivel de cumplimiento normativo del local (0% a 100%), para corregir observaciones antes de una inspección municipal. | 3 |
-| 27 | **US27** | Recordatorio de Renovación de Mantenimiento | Como Manager del Local, deseo recibir alertas cuando venza el periodo de garantía o mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | 2 |
-| 28 | **US28** | Creación de Cuentas para Trabajadores | Como Manager del Local, deseo registrar las cuentas de los operarios de cocina en el sistema, para que puedan identificarse al iniciar sus turnos en el panel local. | 3 |
-| 29 | **US29** | Configuración de Notificaciones Preferidas | Como Manager del Local, deseo elegir si recibir alertas por WhatsApp, SMS o correo, para ajustar los canales de comunicación según mi disponibilidad de señal. | 2 |
-| 30 | **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | 3 |
-| 31 | **US31** | Recuperación de Contraseña de Administrador | Como Manager del Local, deseo solicitar la restauración de mi clave por correo, para recuperar el acceso a la plataforma si la olvido. | 2 |
-| 32 | **US32** | Personalización de Mapa de Cocina | Como Manager del Local, deseo organizar visualmente los iconos de los equipos según la distribución real de mi cocina, para ubicar rápidamente la máquina en falla. | 5 |
-| 33 | **US33** | Registro de Firma Digital de Conformidad | Como Manager del Local, deseo registrar mi firma digital en la plataforma, para validar automáticamente los reportes descargables de inspección SST. | 2 |
-| 34 | **US34** | Visualización de Logs de Actividad en Tienda | Como Manager del Local, deseo revisar la bitácora de acciones realizadas en el panel local, para verificar quién atendió una alerta o registró un reporte rápido. | 3 |
-| 35 | **US35** | Bloqueo Temporal de Teclado Local por Limpieza | Como Trabajador del Local, deseo activar la función "Modo Limpieza" en el panel táctil, para trapear la pantalla sin accionar botones por error. | 1 |
+Criterio: el backlog se ordena por valor de negocio de mayor a menor y se estima con la serie Fibonacci. La prioridad sigue seguridad operativa primero, continuidad del monitoreo después, cumplimiento normativo luego, eficiencia energética a continuación, acceso y control después y descubrimiento mediante landing al final.
+
+| Puntaje | Significado |
+| --- | --- |
+| 1 | Esfuerzo mínimo y alcance acotado |
+| 2 | Esfuerzo bajo con dependencias escasas |
+| 3 | Esfuerzo medio con lógica de negocio incluida |
+| 5 | Esfuerzo alto con integración entre módulos |
+| 8 | Esfuerzo máximo con procesamiento IoT o cálculo complejo |
+
+| # Orden | ID | Título | Descripción | Story Points Fibonacci |
+| :---: | :--- | :--- | :--- | :---: |
+| 1 | **US10** | Recepción de aviso sonoro ante fuga crítica | Como Trabajador del Local, desea recibir un aviso sonoro local ante una fuga crítica, para alejarse del equipo con rapidez. | 3 |
+| 2 | **US08** | Consulta de nivel de riesgo operativo por equipo | Como Trabajador del Local, desea conocer el nivel de riesgo operativo de cada equipo, para decidir su manipulación con seguridad durante la jornada. | 3 |
+| 3 | **US17** | Recepción de alertas automáticas de emergencia | Como Manager del Local, desea recibir alertas automáticas ante sobrevoltajes o fugas de energía, para actuar con rapidez. | 3 |
+| 4 | **TS01** | Ingesta de lecturas de sensores mediante API | Como Developer, desea exponer la ingesta de lecturas de sensores mediante API, para persistir telemetría con trazabilidad por dispositivo y equipo. | 8 |
+| 5 | **TS02** | Distribución de alertas mediante API | Como Developer, desea exponer la distribución de alertas mediante API, para clasificar eventos por severidad y dirigir cada aviso al destino definido. | 5 |
+| 6 | **US16** | Consulta de estado de la red eléctrica del local | Como Manager del Local, desea conocer el estado de la red eléctrica del local, para anticipar fallas en horas de alta demanda. | 5 |
+| 7 | **US21** | Consulta de estado de conexión de sensores | Como Manager del Local, desea conocer el estado de conexión de cada sensor, para asegurar cobertura total de monitoreo en cocina. | 2 |
+| 8 | **TS03** | Sincronización del panel tras pérdida de conexión | Como Developer, desea implementar la sincronización del panel tras la pérdida de conexión, para recuperar mediciones y eventos sin pérdida de información. | 8 |
+| 9 | **US18** | Definición de límites de temperatura y amperaje por equipo | Como Manager del Local, desea definir los límites de temperatura y amperaje por equipo, para adaptar las alertas a cada máquina. | 3 |
+| 10 | **US11** | Confirmación de condición segura para limpieza | Como Trabajador del Local, desea confirmar la condición segura del área antes de la limpieza, para realizar el aseo sin riesgo eléctrico. | 2 |
+| 11 | **US12** | Consulta de protocolo de apagado seguro | Como Trabajador del Local, desea conocer el protocolo de apagado seguro de un equipo, para actuar con seguridad ante una alerta. | 2 |
+| 12 | **US09** | Reporte operativo de anomalía en equipo | Como Trabajador del Local, desea reportar una anomalía percibida en un equipo, para alertar al Manager sin interrumpir la atención. | 2 |
+| 13 | **US14** | Consulta de guía de actuación ante incidente eléctrico | Como Trabajador del Local, desea conocer la guía de actuación ante un incidente eléctrico, para apoyar con seguridad a un compañero afectado. | 2 |
+| 14 | **US15** | Advertencia por humedad cerca de tableros | Como Trabajador del Local, desea conocer la condición de humedad cerca de tableros, para evitar la operación en superficie riesgosa. | 2 |
+| 15 | **US30** | Descarga de reporte de seguridad para fiscalización | Como Manager del Local, desea descargar el historial de eventos de seguridad eléctrica, para presentar evidencia formal ante inspecciones. | 5 |
+| 16 | **TS04** | Generación de reporte SST mediante servicio dedicado | Como Developer, desea implementar la generación del reporte SST mediante servicio dedicado, para entregar evidencia inmutable con firma de conformidad. | 5 |
+| 17 | **US33** | Consulta de nivel de cumplimiento normativo del local | Como Manager del Local, desea conocer el nivel de cumplimiento normativo del local, para corregir observaciones antes de una inspección. | 3 |
+| 18 | **US31** | Registro de lista de verificación semanal de red | Como Manager del Local, desea completar la lista de verificación semanal de la red, para dejar constancia del cumplimiento de estándares de seguridad. | 3 |
+| 19 | **US32** | Registro de constancia de mantenimiento realizado | Como Manager del Local, desea registrar la constancia de mantenimiento emitida por el técnico, para mantener la trazabilidad de reparaciones ante auditorías. | 2 |
+| 20 | **US34** | Recepción de aviso de vencimiento de mantenimiento | Como Manager del Local, desea recibir avisos antes del vencimiento del mantenimiento de un equipo, para evitar operar con maquinaria sin certificación. | 2 |
+| 21 | **US19** | Consulta de historial de alertas con filtros | Como Manager del Local, desea consultar el historial de alertas con filtros por fecha, severidad y equipo, para analizar patrones de falla recurrentes. | 3 |
+| 22 | **US20** | Asignación de alerta a técnico de mantenimiento | Como Manager del Local, desea asignar una alerta a un técnico de mantenimiento, para programar la revisión oportuna del equipo. | 3 |
+| 23 | **US22** | Recepción de recomendaciones de mantenimiento predictivo | Como Manager del Local, desea recibir recomendaciones de mantenimiento predictivo, para programar revisiones sin afectar la venta. | 8 |
+| 24 | **US13** | Registro de estado de equipos al cierre de turno | Como Trabajador del Local, desea registrar el estado de los equipos al cierre de turno, para dejar constancia al siguiente grupo de trabajo. | 2 |
+| 25 | **US23** | Consulta de responsable de turno durante alerta | Como Manager del Local, desea conocer el responsable de turno durante una alerta, para el seguimiento operativo correspondiente. | 2 |
+| 26 | **US41** | Consulta de bitácora de acciones en tienda | Como Manager del Local, desea consultar la bitácora de acciones realizadas en tienda, para verificar quién atendió cada alerta. | 3 |
+| 27 | **US24** | Consulta de consumo eléctrico por equipo | Como Manager del Local, desea conocer el consumo eléctrico detallado por máquina, para identificar los equipos que elevan la factura mensual. | 8 |
+| 28 | **US26** | Detección de consumo fuera de horario comercial | Como Manager del Local, desea conocer consumos registrados fuera del horario comercial, para detectar máquinas encendidas por error. | 3 |
+| 29 | **US25** | Comparación de consumo entre periodos | Como Manager del Local, desea comparar el gasto energético entre periodos, para evaluar si las medidas de ahorro generan resultado. | 5 |
+| 30 | **US27** | Proyección de costo eléctrico al cierre de mes | Como Manager del Local, desea conocer la proyección del costo eléctrico al cierre del mes, para ajustar el presupuesto operativo del local. | 5 |
+| 31 | **US28** | Descarga de reporte de eficiencia energética | Como Manager del Local, desea descargar el reporte de consumo energético, para presentarlo en la revisión de costos con gerencia. | 3 |
+| 32 | **US29** | Definición de meta mensual de consumo por tienda | Como Manager del Local, desea definir una meta mensual de consumo para la tienda, para recibir avisos antes de superar el presupuesto energético. | 3 |
+| 33 | **US37** | Acceso seguro a la plataforma web | Como Manager del Local, desea acceder con credenciales seguras a la plataforma, para proteger la información operativa del local. | 3 |
+| 34 | **TS05** | Autenticación y autorización con registro de auditoría | Como Developer, desea implementar la autenticación y autorización con registro de auditoría, para proteger los recursos y trazabilizar modificaciones críticas. | 5 |
+| 35 | **US38** | Recuperación de acceso mediante correo | Como Manager del Local, desea recuperar el acceso mediante correo electrónico, para restablecer su clave con seguridad. | 2 |
+| 36 | **US35** | Registro de cuentas para trabajadores | Como Manager del Local, desea registrar cuentas para los operarios de cocina, para permitir su identificación al inicio de turnos. | 3 |
+| 37 | **TS06** | Envío de notificaciones mediante proveedor externo | Como Developer, desea integrar el envío de notificaciones mediante proveedor externo, para entregar avisos críticos por canales alternativos con confirmación. | 3 |
+| 38 | **US36** | Selección de canales de notificación preferidos | Como Manager del Local, desea elegir los canales de recepción de alertas, para ajustar la comunicación a su disponibilidad de señal. | 2 |
+| 39 | **US39** | Ordenamiento de equipos según distribución de cocina | Como Manager del Local, desea ordenar la ubicación de los equipos según la distribución real de la cocina, para ubicar con rapidez la máquina en falla. | 5 |
+| 40 | **US40** | Registro de firma de conformidad | Como Manager del Local, desea registrar su firma de conformidad, para validar los reportes descargables de inspección. | 2 |
+| 41 | **US01** | Conocimiento de propuesta de valor y acceso a aplicación web | Como Visitante, desea conocer la propuesta de valor de ElectroLink en la sección principal de la landing page, para acceder a la aplicación web y explorar el monitoreo eléctrico. | 2 |
+| 42 | **US04** | Consulta de beneficios de gestión para administración del local | Como Visitante del segmento Manager del Local, desea conocer los beneficios de gestión energética y control de costos, para valorar la suscripción al servicio. | 2 |
+| 43 | **US03** | Consulta de beneficios de seguridad para personal operativo | Como Visitante del segmento Trabajador del Local, desea conocer los beneficios de seguridad operativa de ElectroLink, para valorar la protección durante la jornada en cocina. | 2 |
+| 44 | **US06** | Consulta de planes y evidencia para cumplimiento normativo | Como Visitante del segmento Manager del Local, desea conocer los planes de suscripción y la evidencia para fiscalización, para evaluar la contratación del servicio. | 2 |
+| 45 | **US05** | Comprensión del funcionamiento del ecosistema conectado | Como Visitante, desea comprender el funcionamiento del ecosistema de sensores y analítica, para entender el flujo desde la detección hasta la alerta. | 2 |
+| 46 | **US02** | Comprensión de problemática operativa del sector | Como Visitante, desea comprender la problemática de seguridad eléctrica en cadenas de comida rápida, para valorar la necesidad de monitoreo continuo. | 1 |
+| 47 | **US07** | Solicitud de demostración y contacto comercial | Como Visitante, desea solicitar una demostración del servicio mediante los datos de contacto, para recibir atención comercial y acceso guiado a la aplicación web. | 2 |
+| 48 | **US42** | Activación de pausa temporal de interacción del panel | Como Trabajador del Local, desea activar la pausa temporal de interacción del panel, para asear el equipo sin generar acciones involuntarias. | 1 |
 
 ---
 
@@ -1128,16 +1200,16 @@ Para el proceso de Attribute-Driven Design (ADD) de ElectroLink se han seleccion
 
 | Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
-| **US01** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | **Dado** que el trabajador se encuentra en el área de cocina, **cuando** el sensor registra una fuga de corriente o sobrecalentamiento, **entonces** la pantalla muestra el indicador en Rojo y despliega el mensaje "NO TOCAR". | EP01 |
-| **US03** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | **Dado** que ocurre una fuga de corriente crítica, **cuando** el sensor la detecta en tiempo real, **entonces** el sistema activa la bocina local y parpadea la pantalla en rojo con el instructivo de seguridad. | EP01 |
-| **US09** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | **Dado** que el Manager ingresa a la plataforma web, **cuando** carga la vista principal, **entonces** el sistema despliega el estado de salud técnica, voltaje y temperatura de todos los equipos del local. | EP02 |
-| **US10** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | **Dado** que se sobrepasa el límite seguro de amperaje en un equipo, **cuando** el sensor registra el evento, **entonces** el sistema envía un mensaje SMS y notificación al teléfono del Manager. | EP02 |
-| **US11** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | **Dado** que el Manager edita la ficha de una freidora, **cuando** ingresa los límites máximos permitidos y guarda, **entonces** el sistema actualiza la lógica de disparo de alertas para dicho equipo. | EP02 |
-| **US14** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | **Dado** que un sensor pierde conexión a la red local, **entonces** el Dashboard muestra el icono del equipo en gris e informa "Sensor Desconectado". | EP02 |
-| **US17** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | **Dado** que el Manager entra al módulo de energía, **cuando** selecciona un rango de fechas, **entonces** el sistema muestra una gráfica interactiva con el gasto en PEN por cada equipo de cocina. | EP03 |
-| **US19** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | **Dado** que la tienda está fuera de horario comercial, **cuando** un equipo registra un consumo superior al modo de espera (standby), **entonces** el sistema envía una alerta de "Consumo Inusual Fuera de Horario". | EP03 |
-| **US23** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | **Dado** que se realiza una auditoría oficial, **cuando** el Manager presiona "Exportar Reporte SST", **entonces** el sistema genera un documento PDF con registro cronológico de alertas resueltas. | EP04 |
-| **US30** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | **Dado** que el Manager ingresa sus credenciales válidas en la página de login, **cuando** presiona "Ingresar", **entonces** el sistema le otorga acceso al Dashboard administrativo. | EP05 |
+| **US08** | Visualización de Semáforo Operativo | Como Trabajador del Local, deseo ver una señalización de colores (Verde/Amarillo/Rojo) en el panel de cocina, para saber de forma inmediata si un equipo es seguro de manipular o trapear a su alrededor. | **Dado** que el trabajador se encuentra en el área de cocina, **cuando** el sensor registra una fuga de corriente o sobrecalentamiento, **entonces** la pantalla muestra el indicador en Rojo y despliega el mensaje "NO TOCAR". | EP02 |
+| **US10** | Alarma Sonora de Emergencia | Como Trabajador del Local, deseo escuchar una alerta auditiva local, para evacuar o alejarme de inmediato del equipo de cocina si ocurre una fuga a tierra crítica. | **Dado** que ocurre una fuga de corriente crítica, **cuando** el sensor la detecta en tiempo real, **entonces** el sistema activa la bocina local y parpadea la pantalla en rojo con el instructivo de seguridad. | EP02 |
+| **US16** | Dashboard de Red en Tiempo Real | Como Manager del Local, deseo visualizar un Dashboard centralizado con el estado de la red eléctrica, para identificar qué equipos presentan ineficiencias o riesgos antes de una falla en hora pico. | **Dado** que el Manager ingresa a la plataforma web, **cuando** carga la vista principal, **entonces** el sistema despliega el estado de salud técnica, voltaje y temperatura de todos los equipos del local. | EP03 |
+| **US17** | Alertas Push y SMS de Emergencia | Como Manager del Local, deseo recibir alertas automáticas por SMS y notificación Push, para tomar acciones inmediatas ante sobrevoltajes o fugas de energía. | **Dado** que se sobrepasa el límite seguro de amperaje en un equipo, **cuando** el sensor registra el evento, **entonces** el sistema envía un mensaje SMS y notificación al teléfono del Manager. | EP03 |
+| **US18** | Configuración de Umbrales Térmicos | Como Manager del Local, deseo personalizar los límites tolerables de temperatura y amperaje por equipo, para adaptar las alertas a la maquinaria antigua o nueva. | **Dado** que el Manager edita la ficha de una freidora, **cuando** ingresa los límites máximos permitidos y guarda, **entonces** el sistema actualiza la lógica de disparo de alertas para dicho equipo. | EP03 |
+| **US21** | Estado de Conectividad de Sensores | Como Manager del Local, deseo ver un indicador de estado de conexión de cada sensor IoT, para asegurar que toda la cocina esté siendo monitoreada sin puntos ciegos. | **Dado** que un sensor pierde conexión a la red local, **entonces** el Dashboard muestra el icono del equipo en gris e informa "Sensor Desconectado". | EP03 |
+| **US24** | Desglose de Consumo por Equipo | Como Manager del Local, deseo consultar el consumo eléctrico en kWh y Soles (PEN) desglosado por máquina, para identificar cuáles elevan la factura mensual. | **Dado** que el Manager entra al módulo de energía, **cuando** selecciona un rango de fechas, **entonces** el sistema muestra una gráfica interactiva con el gasto en PEN por cada equipo de cocina. | EP04 |
+| **US26** | Detección de Consumo Anómalo Fuera de Horario | Como Manager del Local, deseo recibir un reporte de consumos registrados durante la madrugada o local cerrado, para detectar máquinas dejadas encendidas por error. | **Dado** que la tienda está fuera de horario comercial, **cuando** un equipo registra un consumo superior al modo de espera (standby), **entonces** el sistema envía una alerta de "Consumo Inusual Fuera de Horario". | EP04 |
+| **US30** | Generación de Reporte SST en PDF | Como Manager del Local, deseo descargar un PDF del historial de eventos de seguridad eléctrica, para presentar evidencias formales ante inspecciones de SUNAFIL o INDECI. | **Dado** que se realiza una auditoría oficial, **cuando** el Manager presiona "Exportar Reporte SST", **entonces** el sistema genera un documento PDF con registro cronológico de alertas resueltas. | EP05 |
+| **US37** | Autenticación Segura en Plataforma Web | Como Manager del Local, deseo iniciar sesión con correo y contraseña encriptada, para proteger la información financiera y operativa de mi local. | **Dado** que el Manager ingresa sus credenciales válidas en la página de login, **cuando** presiona "Ingresar", **entonces** el sistema le otorga acceso al Dashboard administrativo. | EP06 |
 
 En conjunto, estas funcionalidades influyen directamente en decisiones posteriores relacionadas con los mecanismos de comunicación entre dispositivos, procesamiento de eventos, almacenamiento de telemetría, generación de alertas, gestión de identidad y acceso, así como en la disponibilidad y escalabilidad de la plataforma.
 
@@ -1324,17 +1396,56 @@ Como resultado, se refinaron los escenarios relacionados con **rendimiento, conf
 
 ### 4.2.1. EventStorming
 \
-![](assets-emergentes/EventStorming1.png)
+![](assets-emergentes/EventStorming/core_domain_events.png)
 \
-![](assets-emergentes/EventStorming2.png)
+![](assets-emergentes/EventStorming/commands_actors.png)
 \
-![](assets-emergentes/EventStorming3.png)
+![](assets-emergentes/EventStorming/timeline.png)
 \
-![](assets-emergentes/EventStorming4.png)
+![](assets-emergentes/EventStorming/legend.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_IAM.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Profiles.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Subscriptions.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Assets.png)
+\ 
+![](assets-emergentes/EventStorming/EventStorming_IoT_Management.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Monitoring.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Alerts.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Notiications.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Maintenance.png)
+\
+![](assets-emergentes/EventStorming/EventStorming_Analytics.png)
 
 ### 4.2.2. Candidate Context Discovery
+A partir de los eventos, comandos, actores, políticas y agregados identificados durante el EventStorming de ElectroLink, se analizaron las responsabilidades del dominio y sus relaciones con el objetivo de identificar agrupaciones funcionales con alta cohesión interna y límites claros de responsabilidad.
+
+Este análisis permitió descubrir diez contextos candidatos que representan las principales capacidades de negocio de la solución. La separación propuesta busca evitar que responsabilidades como monitoreo eléctrico, generación de alertas, distribución de notificaciones y mantenimiento sean tratadas como una única unidad, permitiendo que cada contexto mantenga su propio modelo y lenguaje del dominio.
+
+| Candidate Context | Responsabilidad principal |
+| --- | --- |
+| **Identity & Access Management** | Gestionar el registro, autenticación, roles y control de acceso de los usuarios de la plataforma. |
+| **Profiles & Preferences** | Administrar los perfiles de usuario y sus preferencias, incluyendo la configuración de notificaciones. |
+| **Subscriptions & Payments** | Gestionar la creación, activación, renovación y suspensión de suscripciones, así como sus pagos asociados. |
+| **Store & Electrical Asset Management** | Administrar los locales, áreas eléctricas y equipos que forman parte de la infraestructura monitoreada. |
+| **IoT Device Management** | Gestionar el registro, vinculación con equipos, configuración, conectividad y estado operativo de los dispositivos IoT. |
+| **Electrical Monitoring** | Recibir y validar mediciones eléctricas, evaluar el estado de los equipos y detectar umbrales excedidos o anomalías. |
+| **Alert Management** | Crear, clasificar y gestionar el ciclo de vida de las alertas generadas automática o manualmente. |
+| **Notifications** | Distribuir las alertas a los usuarios mediante los canales de comunicación disponibles y gestionar los reintentos de entrega. |
+| **Energy & Maintenance Management** | Registrar y analizar el consumo energético, calcular costos y gestionar las solicitudes y actividades de mantenimiento. |
+| **Analytics** | Consolidar información del sistema para generar indicadores, tendencias, resúmenes de consumo y reportes. |
+
+La identificación de estos contextos candidatos establece una primera delimitación del dominio de ElectroLink. Posteriormente, estos límites serán refinados mediante el análisis de los flujos de mensajes entre contextos, los Bounded Context Canvases y el Context Mapping.
+
 \
-![](assets-emergentes/CCD.png)
+![](assets-emergentes/CDD/New_CDD.png)
 
 ### 4.2.3. Domain Message Flows Modeling
 
@@ -1370,80 +1481,126 @@ El administrador solicita un reporte de cumplimiento para auditorías oficiales 
 
 En esta sección se presentan los bounded contexts identificados para la solución ElectroLink, definidos a partir del análisis del dominio y siguiendo un enfoque de Domain-Driven Design (DDD). Cada contexto delimita responsabilidades claras, lenguaje ubicuo y reglas de negocio específicas, permitiendo una adecuada separación de preocupaciones y escalabilidad del sistema.
 
-## 1. Identity and Access Management (IAM)
-Gestión de autenticación, autorización y control de acceso de usuarios al sistema, incluyendo registro, inicio de sesión y manejo de roles.
+### 1. Identity & Access Management
+
+Gestiona el registro, autenticación, autorización, roles y control de acceso de los usuarios dentro de ElectroLink.
 
 ---
+
 \
-![](assets-emergentes/IAM-bd.PNG)
+
+![](assets-emergentes/IAM-Canvas.PNG)
 
 ---
-## 2. Subscription and Payments
-Gestión de planes, facturación y control de acceso a funcionalidades.
+
+### 2. Profiles & Preferences
+
+Administra los perfiles de usuario y sus preferencias personales, incluyendo la configuración de canales de notificación.
 
 ---
+
 \
-![](assets-emergentes/bd-subscription.PNG)
 
+![](assets-emergentes/Profiles-canvas.png.PNG)
+
+---
+
+### 3. Subscriptions & Payments
+
+Gestiona los planes de suscripción, activaciones, renovaciones, suspensiones y pagos asociados al acceso a ElectroLink.
 
 ---
 
-## 3. Profiles and Preferences
-Administración de perfiles de usuarios, técnicos y configuración personalizada.
-
----
 \
-![](assets-emergentes/bd-profiles.PNG)
 
+![](assets-emergentes/Subscriptions-canvas.PNG)
+
+---
+
+### 4. Store & Electrical Asset Management
+
+Administra los locales, áreas eléctricas y equipos que forman parte de la infraestructura monitoreada por ElectroLink.
 
 ---
 
-## 4. Service Design and Planning
-Orquestación de servicios, solicitudes y asignación inteligente de técnicos.
-
----
 \
-![](assets-emergentes/service-desing-bd.PNG)
+
+![](assets-emergentes/Store-Electrical_canvas.PNG)
 
 ---
 
-## 5. Service Operation and Monitoring
-Ejecución, seguimiento y cierre de servicios con evidencia y evaluación.
+### 5. IoT Device Management
 
----
+Gestiona el registro, vinculación, configuración, conectividad y estado operativo de los dispositivos IoT asociados a los equipos eléctricos.
+
+----------
+
 \
-![](assets-emergentes/bd-service-operation.PNG)
 
+![](assets-emergentes/IoT-canvas.PNG)
+
+---
+
+### 6. Electrical Monitoring
+
+Recibe y valida las mediciones eléctricas, evalúa el estado de los equipos y detecta umbrales excedidos o anomalías.
 
 ---
 
-## 6. Assets and Resource Management
-Gestión de propiedades, dispositivos IoT e inventario de técnicos.
-
----
 \
-![](assets-emergentes/bd-assets.PNG)
+
+![](assets-emergentes/Electrical-canvas.PNG)
 
 ---
 
-## 7. IoT Monitoring and Edge Processing
-Procesamiento de datos en tiempo real y detección de anomalías eléctricas.
+### 7. Alert Management
+
+Gestiona la creación, clasificación y ciclo de vida de las alertas generadas por condiciones eléctricas críticas o preventivas.
 
 ---
+
 \
-![](assets-emergentes/bd-iot.PNG)
+
+![](assets-emergentes/Alert-canvas.PNG)
 
 ---
 
-## 8. Analytics
-Visualización, reportes e insights a partir de datos históricos y en tiempo real.
+### 8. Notifications
+
+Distribuye alertas y notificaciones a los usuarios mediante los canales disponibles y administra los reintentos de entrega.
 
 ---
+
 \
-![](assets-emergentes/bd-analytics.PNG)
 
+![](assets-emergentes/Notifications-canvas.PNG)
 
 ---
+
+### 9. Energy & Maintenance Management
+
+Registra y analiza el consumo energético, calcula costos y gestiona solicitudes, programación y ejecución de actividades de mantenimiento.
+
+---
+
+\
+
+![](assets-emergentes/Energy-canvas.PNG)
+
+---
+
+### 10. Analytics
+
+Consolida información del sistema para generar indicadores, tendencias, resúmenes de consumo y reportes orientados a la toma de decisiones.
+
+---
+
+\
+
+![](assets-emergentes/Analytics-canvas.PNG)
+
+---
+
 
 ### 4.2.5. Context Mapping
 \
@@ -1471,70 +1628,6391 @@ A continuación, se presenta el Context Map elegido que resume visualmente estas
 ## 4.3. Software Architecture
 
 ### 4.3.1. Software Architecture System Landscape Diagram
-\
-![](assets-emergentes/SystemContext.png)
 
-### 4.3.1. Software Architecture Context Level Diagrams
+El objetivo del diagrama es mostrar **quién utiliza ElectroLink y con qué sistemas externos se comunica**, manteniendo la solución alineada con su propósito actual: monitorear la infraestructura eléctrica de locales de comida rápida, detectar riesgos, gestionar alertas, controlar el consumo energético y apoyar el mantenimiento preventivo. El documento del curso exige precisamente que el sistema aparezca como un recuadro central rodeado de sus usuarios y sistemas externos. Trabajo Final_1ASI0728_202620
+
+### Elementos del contexto
+
+Los actores principales deben ser:
+
+-   **Trabajador del Local**: consulta el estado de seguridad de los equipos y recibe advertencias operativas.
+-   **Manager del Local**: administra el establecimiento, consulta monitoreo, alertas, consumos, mantenimiento y reportes.
+
+Los sistemas externos relevantes son:
+
+-   **Dispositivos IoT / Sensores eléctricos**: proporcionan telemetría de corriente, voltaje, temperatura y consumo.
+-   **Stripe**: procesa los pagos de las suscripciones SaaS.
+-   **FCM / APNs**: distribuye notificaciones Push.
+-   **Servicios de Mensajería**: permiten entregar SMS, correo o WhatsApp.
+-   **Mapbox / Google Maps**: proporciona servicios de geolocalización cuando las funcionalidades de la plataforma lo requieren.
+
+Stripe, FCM/APNs y Mapbox/Google Maps corresponden además a integraciones establecidas como restricciones del proyecto.
+
 \
-![](assets-emergentes/SystemContext.png)
+![](assets-emergentes/ElectroLinkSystemContext.png)
 
 ### 4.3.2. Software Architecture Container Level Diagrams
+
+En el nivel Container abrimos el sistema ElectroLink para mostrar sus principales unidades ejecutables y de almacenamiento. Aquí debemos respetar una decisión importante del proyecto: el backend es un monolito modular, por lo que los 10 bounded contexts no deben representarse como 10 microservicios o containers distintos. Se implementan como módulos internos de una única API en ASP.NET Core.
+
 \
-![](assets-emergentes/Containers.png)
+![](assets-emergentes/ElectroLinkContainerDiagram.png)
 
 ### 4.3.3. Software Architecture Deployment Diagrams
+
+El Deployment Diagram representa dónde se ejecutan físicamente los containers definidos para ElectroLink y cómo se distribuyen entre el establecimiento de comida rápida, los dispositivos de usuario y la infraestructura cloud.
+
+Para ElectroLink conviene separar claramente dos entornos: infraestructura local/Edge e infraestructura Cloud. Esta separación es necesaria porque las funciones críticas de seguridad deben continuar operativas incluso cuando se pierde temporalmente la conexión con Internet.
+
 \
-![](assets-emergentes/DeploymentDiagram-dark.png)
+![](assets-emergentes/ElectroLinkDeploymentDiagram.png)
 
 # Capítulo V: Tactical-Level Software Design
 
-## 5.X. Bounded Context: <Bounded Context Name>
+El presente capítulo desarrolla el diseño táctico de la solución ElectroLink a partir de los Bounded Contexts definidos durante el Strategic-Level Domain-Driven Design. Mientras que el capítulo anterior establece los límites y relaciones entre los diferentes dominios del sistema, en esta etapa se profundiza en la estructura interna de cada contexto, identificando los elementos de software responsables de materializar sus reglas, comportamientos y capacidades.
 
-### 5.X.1. Domain Layer
+## 5.1. Bounded Context: Identity & Access Management Bounded Context
 
-### 5.X.2. Interface Layer
+Identity & Access Management Bounded Context es responsable de administrar la identidad de los usuarios y controlar su acceso a las funcionalidades protegidas de ElectroLink. Su alcance comprende el registro de cuentas, la autenticación, la asignación de roles y la deshabilitación de usuarios.
 
-### 5.X.3. Application Layer
+Esta delimitación permite separar las responsabilidades relacionadas con seguridad y autorización de aquellas asociadas con la información personal del usuario, las cuales pertenecen al Bounded Context Profiles & Preferences. De esta manera, Identity & Access Management determina quién es el usuario y qué permisos posee, mientras que Profiles & Preferences administra posteriormente la información y configuración asociada a dicho usuario.
 
-### 5.X.4. Infrastructure Layer
+El registro se encuentra representado principalmente mediante el aggregate UserAccount, encargado de mantener la identidad y estado de acceso de una cuenta dentro del sistema. Asimismo, el concepto Role representa la autorización asignada a un usuario y permite determinar las operaciones disponibles según sus responsabilidades dentro de ElectroLink.
 
-### 5.X.6. Bounded Context Software Architecture Component Level Diagrams
+El evento UserRegistered constituye además un punto de integración con otros contextos. Una vez creada correctamente una cuenta, la política identificada durante el Event Storming establece la creación del perfil inicial del usuario, trasladando dicha responsabilidad hacia Profiles & Preferences. Esto evita que Identity & Access Management incorpore información que no pertenece directamente al control de identidad y acceso.
 
-### 5.X.7. Bounded Context Software Architecture Code Level Diagrams
+A partir de los elementos actualmente establecidos en el Event Storming, el modelo inicial del contexto queda delimitado de la siguiente manera:
 
-#### 5.X.7.1. Bounded Context Domain Layer Class Diagrams
+| Elemento | Tipo | Propósito dentro del Bounded Context |
+|---|---|---|
+| `UserAccount` | Aggregate | Representa la cuenta de acceso del usuario y controla su estado dentro de ElectroLink. |
+| `Role` | Concepto de dominio | Representa el rol asignado al usuario y las responsabilidades de acceso asociadas. |
+| `RegisterUser` | Command | Solicita la creación de una nueva cuenta de usuario. |
+| `AuthenticateUser` | Command | Solicita validar la identidad de un usuario que intenta ingresar al sistema. |
+| `AssignRole` | Command | Solicita asignar un rol determinado a una cuenta registrada. |
+| `DisableUser` | Command | Solicita deshabilitar una cuenta para impedir su acceso al sistema. |
+| `UserRegistered` | Domain Event | Indica que una nueva cuenta fue registrada correctamente. |
+| `UserAuthenticated` | Domain Event | Indica que las credenciales del usuario fueron validadas correctamente. |
+| `RoleAssigned` | Domain Event | Indica que un rol fue asignado satisfactoriamente al usuario. |
+| `UserDisabled` | Domain Event | Indica que una cuenta dejó de estar habilitada para acceder a ElectroLink. |
 
-#### 5.X.7.2. Bounded Context Database Design Diagram
+### 5.1.1. Domain Layer
+
+La Domain Layer del bounded context Identity & Access Management contiene las clases que representan el núcleo relacionado con la identidad, autenticación, autorización y estado de acceso de los usuarios de ElectroLink. Esta capa concentra las reglas necesarias para registrar cuentas, validar su estado, administrar roles y controlar las credenciales utilizadas por los diferentes tipos de usuario.
+
+El alcance del contexto se mantiene limitado a la identidad y el control de acceso. Por ello, información como preferencias de notificación o datos configurables del perfil no forma parte de esta capa, debido a que dichas responsabilidades pertenecen al bounded context Profiles & Preferences.
+
+#### Aggregate Roots
+
+UserAccount constituye el aggregate root principal del bounded context. Representa una cuenta con capacidad para autenticarse en ElectroLink y controla las reglas que determinan si esta puede utilizarse para acceder al sistema.
+
+El aggregate mantiene la identidad del usuario, sus credenciales, el rol asignado y el estado actual de la cuenta. Asimismo, centraliza las operaciones que modifican estos elementos, evitando que otras capas alteren directamente su estado interno.
+
+Entre sus pricipales responsabilidades se encuentran:
+
+- registrar una neuva cuenta con credenciales válidas;
+- verificar si la cuenta se encuentra habilitada para autenticarse;
+- asignar o cambiar el rol correspondiente;
+- deshabilitar una cuenta cuando esta ya no debe tener acceso;
+- actualizar las credenciales cuando corresponda a un proceso válido de recuperación.
+
+A partir de estas responsabilidades, `User Account` considera los siguientes elementos principales:
+
+| Atributo | Tipo propuesto | Propósito |
+|---|---|---|
+| `userId` | `UserId` | Identificador único de la cuenta. |
+| `email` | `Email` | Correo utilizado principalmente por el Manager para autenticarse y recuperar su acceso. |
+| `credential` | `Credential` | Representa de manera protegida las credenciales utilizadas para acceder al sistema. |
+| `role` | `UserRole` | Determina el rol asignado a la cuenta. |
+| `status` | `AccountStatus` | Determina si la cuenta puede acceder actualmente a ElectroLink. |
+| `createdAt` | `DateTime` | Fecha de creación de la cuenta. |
+| `updatedAt` | `DateTime` | Última modificación relevante de la cuenta. |
+
+#### Role 
+
+El Event Storming identifica explícitamente Role como un aggregate asociado al comando `AssignRole`y al evento `RoleAssigned`. En el diseño táctico se modela mediante UserRole, que representa los roles reconocidos por ElectroLink y permite establecer las capacidades generales asociadas a una cuenta.
+
+Para el alcance actualmente definido por las historias de usuario y los segmentos de ElectroLink, se consideran principalmente:
+- `MANAGER`
+- `WORKER`
+
+El Manager del Local utiliza la aplicación administrativa y posee responsabilidades como registrar trabajadores, mientras que el Trabajador del Local interactúa principalmente con las capacidades operativas disponibles en el establecimiento.
+
+#### Value Objects
+
+La Domain Layer propone los siguientes Value Objects para encapsular información que posee reglas propias pero que no requiere una identidad independiente.
+
+`UserId` representa el identificador único e inmutable de una cuenta dentro de ElectroLink. Permite distinguir inequívocamente a cada usuario independientemente de que posteriormente modifique otros datos.
+
+Email representa una dirección de correo válida utilizada como identificador de autenticación para las cuentas que emplean acceso mediante correo y contraseña. También permite soportar el proceso de recuperación de contraseña establecido para el Manager en la US31.     
+
+Credential representa la información necesaria para verificar la identidad de un usuario sin exponer directamente su valor sensible. El dominio distingue la existencia de diferentes mecanismos de acceso: la autenticación del Manager mediante correo y contraseña, contemplada en la US30, y el acceso rápido del trabajador mediante el PIN de cuatro dígitos definido en la US28.  
+
+La transformación criptográfica o comparación técnica de estas credenciales no se realiza directamente dentro del Value Object, debido a que dichos mecanismos dependen de servicios de infraestructura.
+
+AccountStatus representa el estado de una cuenta y controla si esta puede utilizarse para autenticación. Para el alcance establecido por el Event Storming se consideran inicialmente los estados:
+- `ACTIVE` — la cuenta se encuentra habilitada para acceder a ElectroLink.
+- `DISABLED` — la cuenta ha sido deshabilitada y no debe obtener acceso al sistema.
+
+Esta distinción permite materializar dentro del modelo de dominio el comando DisableUser y su correspondiente evento UserDisabled, identificados en el Event Storming.
+
+Password Reset
+
+La historia US31 Recuperación de Contraseña de Administrador establece que el Manager puede solicitar un mecanismo de restauración mediante su correo corporativo y que el enlace seguro posee una vigencia limitada.
+
+Para representar esta regla sin incorporar todavía detalles de correo electrónico o enlaces HTTP dentro del dominio, se propone el Value Object PasswordResetToken, encargado de mantener conceptualmente:
+
+| Atributo | Propósito |
+|---|---|
+| `tokenId` | Identifica la solicitud de recuperación. |
+| `userId` | Indica la cuenta asociada. |
+| `expiresAt` | Define el momento en que deja de ser válido. |
+| `used` | Indica si ya fue utilizado. |
+
+#### Repository Interfaces 
+
+La Domain Layer define contratos de persistencia sin conocer qué motor de base de datos será utilizado. Esta separación permite mantener el dominio independiente de decisiones tecnológicas, siguiendo el mismo criterio aplicado en el ejemplo proporcionado.
+
+Se propone la interfaz **IUserAccountRepository**, responsable de persistir y recuperar el aggregate `UserAccount`.
+
+Sus operaciones principales son:
+
+```
+save(UserAccount)
+findById(UserId)
+findByEmail(Email)
+existsByEmail(Email)
+update(UserAccount)
+```
+
+`findById()` permite recuperar una cuenta a partir de su identificador.
+`findByEmail()` permite localizar la cuenta utilizada durante autenticación o recuperación de acceso.
+`existsByEmail()` permite verificar que no se registren cuentas administrativas duplicadas con el mismo correo.
+`save()` y `update()` permiten persistir la creación y los cambios válidos realizados sobre el aggregate.
+
+Para los procesos de recuperación se propone adicionalmente IPasswordResetRepository, encargado únicamente del ciclo de vida de las solicitudes de recuperación:
+
+```
+save(PasswordResetToken)
+findValidByUserId(UserId)
+invalidate(PasswordResetToken)
+
+```
+#### Domain Services 
+
+Algunas reglas relacionadas con identidad requieren colaborar con mecanismos que no pertenecen directamente a una única entidad. Para ello se definen contratos de dominio que serán implementados posteriormente por la infraestructura.
+
+**ICredentialHashingService** representa el contrato requerido para proteger y comprobar credenciales sensibles. Su objetivo es evitar que `UserAccount` conozca algoritmos específicos de hashing
+
+```
+hash(rawCredential)
+verify(rawCredential, hashedCredential)
+```
+
+**IAuthenticationTokenService** representa la capacidad requerida por el sistema para producir una credencial de acceso después de una autenticación válida. La Domain Layer únicamente establece el contrato; tecnologías concretas como JWT no se fijan en este nivel.
+
+`generateToken(UserAccount)``
+
+**IAccessPolicyService** concreta las validaciones relacionadas con el acceso de una cuenta y su rol cuando dichas reglas requieran evaluar más de un elemento del dominio.
+
+```
+canAuthenticate(UserAccount)
+canAssignRole(UserAccount, UserRole)
+canDisableAccount(UserAccount)
+```
+
+#### Reglas principales del dominio
+
+Con base en el Event Storming y las historias de usuario, la Domain Layer debe preservar las siguientes invariantes:
+
+1. Cada `UserAccount` posse un identificador único.
+2. Una cuenta debe posser un mecanismo válido de identificación antes de poder autenticarse.
+3. Una cuenta deshabilitada no puede obtener acceso a ElectroLink.
+4. La asignación de un rol debe corresponder a uno de los roles reocnoces por el dominio.
+5. Las credenciales sensibles no se almacenan ni manipulan como texto plano.
+6. Una solicitud de recuperación solo puede utilizarse mientras permanezca vigente y no haya sido consumida previamente.
+7. La autenticación de un usuario no modifica información correspondiente a `Profiles & Preferences`.
+8. La creación de una cuenta puede originar posteriormente la creación de un perfil inicial en otro bounded context, pero dicho perfil no pertenece al aggregate `UserAccount`.
+
+##### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccount` | Aggregate Root | Representa la cuenta de acceso y controla identidad, rol, credenciales y estado. | Domain |
+| `UserRole` | Value Object / Domain Concept | Representa el rol asignado al usuario, como Manager o Worker. | Domain |
+| `UserId` | Value Object | Identificador único e inmutable de la cuenta. | Domain |
+| `Email` | Value Object | Representa y valida el correo utilizado para autenticación y recuperación. | Domain |
+| `Credential` | Value Object | Encapsula la representación protegida de las credenciales de acceso. | Domain |
+| `AccountStatus` | Value Object | Representa si una cuenta está activa o deshabilitada. | Domain |
+| `PasswordResetToken` | Value Object | Representa una solicitud temporal de recuperación de acceso. | Domain |
+| `IUserAccountRepository` | Repository Interface | Contrato para persistir y recuperar cuentas. | Domain |
+| `IPasswordResetRepository` | Repository Interface | Contrato para gestionar solicitudes de recuperación. | Domain |
+| `ICredentialHashingService` | Domain/Outbound Service | Define las operaciones requeridas para proteger y verificar credenciales. | Domain |
+| `IAuthenticationTokenService` | Outbound Service | Define la generación de credenciales de sesión después de una autenticación válida. | Domain |
+| `IAccessPolicyService` | Domain Service | Centraliza reglas de autorización y validación de acceso. | Domain |
+
+### 5.1.2. Interface Layer
+
+La Interface Layer del bounded context Identity & Access Management constituye el punto de entrada para las operaciones relacionadas con registro, autenticación, asignación de roles, administración del estado de las cuentas y recuperación de acceso.
+
+Su responsabilidad consiste en recibir las solicitudes provenientes de las aplicaciones de ElectroLink, realizar validaciones básicas sobre la estructura de los datos recibidos y transformarlos en objetos que puedan ser procesados posteriormente por la Application Layer.
+
+Esta capa no implementa reglas relacionadas con la validez de una cuenta, asignación permitida de roles, verificación de credenciales o autorización. Dichas reglas permanecen encapsuladas en la Domain Layer y son coordinadas mediante los casos de uso definidos en la Application Layer.
+
+#### Controllers 
+
+Se proponen tres controllers principales para exponer las capacidades del bounded context.
+
+**UserAccountController** concentra las operaciones relacionadas con la administración de las cuentas de usuario.
+
+Sus responsabilidades incluyen recibir solicitudes para:
+
+- registrar un nueva cuenta;
+- obtener información básica sobre una cuenta;
+- deshabilitar una cuenta;
+- iniciar procesos relacionados con la admnistarción del estado del usuario.
+
+Este controller permite representar desde la capa de presentación los comandos `RegisterUser` y `DisableUser` identificados durante el EventStorming. 
+
+**AuthenticationController** recibe las solicitudes relacionadas con el acceso de los usuarios del sistema.
+
+Su responsabilidad es exponer las operaciones necesarias para: 
+
+- autenticar a un Manager mediante sus credenciales;
+- autenticar a un trabajador mediante el mecanismo de acceso definido para el panel local;
+- solicitar la recuperación de una contraseña;
+- completar el restablecimiento de una credencial cuando el proceso de recuperación sea válido.
+
+El controller no comprueba directamente contraseñas, PIN ni estados de cuenta. Únicamente recibe la información y la envía hacia los casos de uso correspondientes.
+
+*+RoleController** expone las oepraciones ivnculadas con la asignación de roles dentro del sistema.
+
+Su principal responsabilidad es recibir la solicitud de asignación de un rol a una cuenta y transformarla en la intención correspondiente para la Application Layer, representando el comando `AssignRole` definido en el EventStorming.
+
+#### Request DTOs
+
+Los **Request DTOS** representan los datos que la Interface Layer recibe desde las aplicaciones cliente. Su propósito es impedir que los objetos del dominio sean expuestos directamente hacia el exterior.
+
+Se proponen los siguentes objetos de entrada:
+
+**RegisterUserRequest** contiene la información necesaria para solicitar la creación de una cuenta.
+```
+RegisterUserRequest
+- email
+- credential
+- role
+- authenticationType
+```
+
+En el caso de cuentas de trabajadores, la información requerida desde la experiencia de usuario puede diferir debido a que la US28 establece un acceso mediante PIN. La generación y las reglas asociadas a dicho PIN no son responsabilidad del DTO, sino del flujo de aplicación correspondiente.
+
+**AuthenticateUserRequest** contiene las credenciales presentadas por un usuario al intentar acceder al sistema.
+```
+AuthenticateUserRequest
+- identifier
+- credential
+- authenticationType
+```
+
+**AssignRoleRequest** representa la solicitud para asignar un rol a una cuenta existente.
+```
+AssignRoleRequest
+- userId
+- role
+```
+
+**DisableUserRequest** contiene la información necesaria para solicitar la deshabilitación de una cuenta.
+```
+DisableUserRequest
+- userId
+```
+
+**RequestPasswordResetRequest** representa el inicio del proceso de recuperación contemplado en US31.
+```
+RequestPasswordResetRequest
+- email
+```
+
+**ResetPasswordRequest** contiene la información requerida para completar una recuperación previamente autorizada.
+```
+ResetPasswordRequest
+- resetToken
+- newCredential
+```
+Estos DTOs únicamente validan aspectos estructurales como la presencia de valores obligatorios o un formato de solicitud correcto. La vigencia del token, la validez del usuario o las políticas de modificación de credenciales corresponden al dominio.
+
+#### Response DTOs
+
+La Interface Layer también define objetos de salida destinados a entregar información al cliente sin exponer directamente entidades o Value Objects internos.
+
+**UserAccountResponse** proporciona información básica y segura sobre una cuenta.
+```
+UserAccountResponse
+- userId
+- role
+- status
+```
+
+**AuthenticationResponse** representa el resultado satisfactorio de una operación de autenticación.
+```
+AuthenticationResponse
+- userId
+- role
+- accessToken
+```
+
+El `accessToken` representa de manera abstracta la credencial que permite continuar utilizando recursos protegidos. La tecnología concreta empleada para producirlo se definirá en Infrastructure Layer.
+
+**PasswordResetResponse** comunica el resultado del inicio o finalización del proceso de recuperación sin exponer información sensible.
+```
+PasswordResetResponse
+- accepted
+- message
+```
+
+#### Assemblers
+
+Para mantener desacoplada la API respecto al modelo interno se utilizan Assemblers, responsables de transformar DTOs en comandos o resultados de aplicación en objetos de respuesta.
+
+Este patrón también se emplea en el ejemplo del ciclo anterior, donde se utilizan ensambladores para evitar que los Controllers trabajen directamente con las entidades del dominio.
+
+**RegisterUserCommandFromRequestAssembler**
+Transforma:
+```
+RegisterUserRequest
+        ↓
+RegisterUserCommand
+```
+
+**AuthenticateUserCommandFromRequestAssembler**
+Transforma:
+```
+AuthenticateUserRequest
+        ↓
+AuthenticateUserCommand
+```
+
+**AssignRoleCommandFromRequestAssembler**
+Transforma:
+```
+AssignRoleRequest
+        ↓
+AssignRoleCommand
+```
+
+**DisableUserCommandFromRequestAssembler**
+Transforma:
+```
+DisableUserRequest
+        ↓
+DisableUserCommand
+```
+
+**RequestPasswordResetCommandFromRequestAssembler** Transforma la solicitud de recuperación en la intención correspondiente de la Application Layer.
+**UserAccountResponseFromEntityAssembler** Transforma los datos retornados por el caso de uso en un `UserAccountResponse`, evitando exponer directamente el aggregate `UserAccount`.
+
+#### Flujo de interacción de la capa
+
+La interación general de esta capa puede expresarse de la siguiente manera:
+```
+Web App / Local Panel
+        ↓
+Controller
+        ↓
+Request DTO
+        ↓
+Assembler
+        ↓
+Command / Query
+        ↓
+Application Layer
+```
+
+Para lar espuesta se aplica el flujo inverso:
+```
+Application Layer
+        ↓
+Resultado
+        ↓
+Response Assembler
+        ↓
+Response DTO
+        ↓
+Web App / Local Panel
+```
+
+Por ejemplo, para la autenticación del Manager:
+```
+Manager
+   ↓
+AuthenticationController
+   ↓
+AuthenticateUserRequest
+   ↓
+AuthenticateUserCommandFromRequestAssembler
+   ↓
+AuthenticateUserCommand
+   ↓
+Application Layer
+```
+
+#### Validaciones de la Interface Layer
+Es importante diferenciar las validaciones estructurales de las reglas del dominio.
+
+La Interface Layer sí puede validar aspectos como:
+- campos obligatorios ausentes;
+- estructura incorrecta de una solicitud;
+- tipos de datos inválidos;
+- formato general de los parámetros recibidos;
+- solicitudes incompletas.
+
+Sin embargo, no debe decidir:
+- si las credenciales son correctas;
+- si una cuenta está autorizada para ingresar;
+- si una cuenta deshabilitada puede autenticarse;
+- si un rol puede ser asignado;
+- si un token de recuperación sigue vigente;
+- si una contraseña o PIN satisface las reglas del negocio;
+- si debe generarse un evento de dominio.
+
+Estas decisiones deben permanecer fuera de la capa de presentación.
+
+#### Clases dde lo Interface Layer
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccountController` | Controller | Recibe solicitudes relacionadas con registro y administración del estado de las cuentas. | Interface |
+| `AuthenticationController` | Controller | Expone autenticación y recuperación de acceso. | Interface |
+| `RoleController` | Controller | Recibe solicitudes relacionadas con asignación de roles. | Interface |
+| `RegisterUserRequest` | Request DTO | Datos recibidos para solicitar el registro de una cuenta. | Interface |
+| `AuthenticateUserRequest` | Request DTO | Credenciales proporcionadas durante un intento de autenticación. | Interface |
+| `AssignRoleRequest` | Request DTO | Datos requeridos para solicitar la asignación de un rol. | Interface |
+| `DisableUserRequest` | Request DTO | Identifica la cuenta que se solicita deshabilitar. | Interface |
+| `RequestPasswordResetRequest` | Request DTO | Datos requeridos para iniciar una recuperación de acceso. | Interface |
+| `ResetPasswordRequest` | Request DTO | Datos utilizados para establecer una nueva credencial después de una recuperación válida. | Interface |
+| `UserAccountResponse` | Response DTO | Expone información no sensible de una cuenta. | Interface |
+| `AuthenticationResponse` | Response DTO | Representa el resultado de una autenticación satisfactoria. | Interface |
+| `PasswordResetResponse` | Response DTO | Representa el resultado del proceso de recuperación. | Interface |
+| `RegisterUserCommandFromRequestAssembler` | Assembler | Convierte una solicitud de registro en un command. | Interface |
+| `AuthenticateUserCommandFromRequestAssembler` | Assembler | Convierte los datos de autenticación en un command. | Interface |
+| `AssignRoleCommandFromRequestAssembler` | Assembler | Convierte una solicitud de asignación de rol en un command. | Interface |
+| `DisableUserCommandFromRequestAssembler` | Assembler | Convierte una solicitud de deshabilitación en un command. | Interface |
+| `RequestPasswordResetCommandFromRequestAssembler` | Assembler | Transforma la solicitud de recuperación en un command. | Interface |
+| `UserAccountResponseFromEntityAssembler` | Assembler | Construye la respuesta pública de una cuenta a partir del resultado interno. | Interface |
+
+### 5.1.3. Application Layer
+
+La Application Layer del bounded context Identity & Access Management coordina los casos de uso relacionados con el registro, autenticación, asignación de roles, deshabilitación de cuentas y recuperación de acceso en ElectroLink.
+
+Su responsabilidad consiste en recibir las intenciones provenientes de la Interface Layer, recuperar o crear los objetos de dominio correspondientes, invocar las reglas definidas en `UserAccount` y los Domain Services, utilizar las abstracciones de persistencia y producir los resultados necesarios para la capa superior.
+
+Esta capa no contiene reglas propias del negocio. Por ejemplo, no determina directamente si una cuenta deshabilitada puede autenticarse ni implementa los algoritmos utilizados para proteger contraseñas. En su lugar, coordina los elementos definidos en la Domain Layer para ejecutar cada flujo.
+
+#### Commands
+Los **Commands** representan intenciones de modificar el estado del bounded context.
+
+**RegisterUserCommand**
+Representa la solicitud de creación de una nueva cuenta.
+```
+RegisterUserCommand
+- email
+- credential
+- role
+- authenticationType
+```
+
+Para una cuenta administrativa se utiliza principalmente correo y credencial. En el caso de trabajadores, el flujo debe considerar el mecanismo de acceso rápido mediante PIN requerido por US28.
+
+**AuthenticateUserCommand**
+Representa un intento de autenticación.
+```
+AuthenticateUserCommand
+- identifier
+- credential
+- authenticationType
+```
+
+**AsignRoleCommand**
+Representa la intención de asigna un rol a una cuenta existente.
+```
+AssignRoleCommand
+- userId
+- role
+```
+
+**DisableUserCommand**
+Representa la intención de impedar que una cuenta continúe accediento a ElectroLink.
+```
+DisableUserCommand
+- userId
+```
+
+#### Command Handlers
+
+Los Command Handlers implementan la coordinación de cada caso de uso. Siguen el mismo patrón observado en el ejemplo entregado: recuperan aggregates, invocan servicios, persisten cambios y coordinan dependencias externas sin incorporar reglas propias del dominio.
+
+**RegisterUserCommandHandler**
+`RegisterUserCommandHandler` coordina el registro de una nueva cuenta.
+Su flujo general es:
+```
+RegisterUserCommand
+        ↓
+Verificar duplicidad
+        ↓
+Proteger credencial
+        ↓
+Crear UserAccount
+        ↓
+Asignar Role
+        ↓
+Persistir UserAccount
+        ↓
+UserRegistered
+```
+
+El handler utiliza `IUserAccountRepository` para comprobar si ya existe una cuenta asociada al identificador recibido.
+
+Si los datos permiten continuar, utiliza `ICredentialHashingService` para proteger la credencial y crea el aggregate `UserAccount`. Finalmente lo persiste mediante `IUserAccountRepository`.
+
+Después de una creación satisfactoria se produce el evento `UserRegistered`, identificado explícitamente en el EventStorming.
+
+El EventStorming también establece la política “Create initial profile after user registration”, por lo que `UserRegistered` funciona como punto de integración para que Profiles & Preferences pueda crear posteriormente el perfil correspondiente. Identity & Access Management no crea ni administra dicho perfil.
+
+---
+
+**AuthenticateUserCommandHandler**
+`AuthenticateUserCommandHandler` coordina el acceso con un usuario.
+Su lfujo es:
+```
+AuthenticateUserCommand
+        ↓
+Buscar UserAccount
+        ↓
+Comprobar estado
+        ↓
+Verificar credencial
+        ↓
+Autorizar autenticación
+        ↓
+Generar credencial de acceso
+        ↓
+UserAuthenticated
+```
+
+El handler recupera la cuenta mediante `IUserAccountRepository`.
+
+Posteriormente delega la verificación de la credencial a `ICredentialHashingService` y utiliza las reglas del aggregate o de `IAccessPolicyService` para determinar si la cuenta puede autenticarse.
+
+Si la autenticación es satisfactoria, solicita a `IAuthenticationTokenService` la generación de la credencial de acceso requerida por la sesión.
+
+Finalmente, el proceso genera `UserAuthenticated`.
+
+---
+
+**AssignRoleCommandHandler**
+`AssignRoleCommandHandler` coordina la asignación de un rol a una cuenta registrada.
+El flujo es:
+```
+AssignRoleCommand
+        ↓
+Recuperar UserAccount
+        ↓
+Validar asignación
+        ↓
+UserAccount.assignRole()
+        ↓
+Persistir cambios
+        ↓
+RoleAssigned
+```
+
+El handler recupera el aggregate correspondiente mediante `IUserAccountRepository`.
+
+Posteriormente solicita al dominio validar la asignación mediante `IAccessPolicyService` y ejecuta `assignRole()` sobre `UserAccount`.
+
+Una vez persistido el nuevo estado se produce `RoleAssigned`, manteniendo correspondencia directa con el EventStorming.
+
+---
+
+**DisableUserCommandHandler**
+`DisableUserCommandHandler` implementa el caso de uso asociado a la deshabilitación de una cuenta.
+```
+DisableUserCommand
+        ↓
+Recuperar UserAccount
+        ↓
+Validar operación
+        ↓
+UserAccount.disable()
+        ↓
+Persistir cambios
+        ↓
+UserDisabled
+```
+
+El handler recupera la cuenta y delega al dominio la validación de la operación.
+
+Cuando la operación es válida ejecuta `disable()` sobre el aggregate y persiste su nuevo estado.
+
+Como resultado se genera el evento `UserDisabled`.
+
+A partir de este momento, posteriores intentos de autenticación deberán ser rechazados por las reglas de dominio asociadas al `AccountStatus`.
+
+---
+
+**RequestPasswordResetCommandHandler**
+Este handler coordina el inicio de la recuperación de contraseña requerida por US31.
+Su flujo es:
+
+```
+RequestPasswordResetCommand
+        ↓
+Buscar cuenta por Email
+        ↓
+Crear PasswordResetToken
+        ↓
+Persistir solicitud
+        ↓
+Solicitar entrega del mecanismo de recuperación
+```
+
+La historia de usuario establece que el Manager puede solicitar la restauración mediante su correo y recibir un enlace seguro con vigencia limitada.
+
+El Application Handler no envía directamente el correo ni implementa el proveedor de mensajería. Únicamente coordina el proceso. La implementación concreta de dicha integración corresponderá a Infrastructure Layer.
+
+---
+
+**ResetPasswordCommandHandler**
+`ResetPasswordCommandHandler` coordina la utilización de una solicitud previamente generada.
+
+```
+ResetPasswordCommand
+        ↓
+Recuperar PasswordResetToken
+        ↓
+Comprobar vigencia
+        ↓
+Recuperar UserAccount
+        ↓
+Proteger nueva credencial
+        ↓
+UserAccount.changeCredential()
+        ↓
+Persistir cambios
+        ↓
+Invalidar token
+```
+
+La validez del `PasswordResetToken` se comprueba utilizando las reglas definidas en la Domain Layer.
+
+Después de establecer correctamente la nueva credencial, el token queda invalidado para impedir su reutilización.
+
+---
+
+#### Queries
+A diferencia de los comandos, las **Queries** permiten consultar información del bounded context sin modificar el estado del dominio.
+
+Para el alcance actual se consideran dos consultas básicas.
+
+**GetUserAccountByIDQuery**
+```
+GetUserAccountByIdQuery
+- userId
+```
+Permite recuperar información básico de una cuenta registrada.
+
+**GetUserRoleQuery**
+```
+GetuserRoleIdQuery
+- userId
+```
+
+Permite conocer el rol actualmente asociado al usuario.
+
+No se incluye una consulta que devuelva credenciales, hashes, PIN ni tokens de recuperación debido a que dicha información no debe exponerse hacia las capas superiores.
+
+---
+
+#### Query Handlers
+**GetUserAccountByIdQueryHandler** 
+consulta `IUserAccountRepository`, recupera la cuenta mediante su identificador y devuelve únicamente la información necesaria para construir un `UserAccountResponse`.
+
+**GetUserRoleQueryHandler** recupera el usuario y retorna su `UserRole`, permitiendo que otras capacidades determinen la clasificación general de la cuenta sin acceder directamente al modelo persistente.
+
+La separación entre commands y queries mantiene coherencia con el enfoque empleado en el ejemplo del ciclo anterior, donde las operaciones que modifican estado se gestionan mediante Command Handlers y las lecturas se realizan mediante Query Handlers.
+
+---
+
+#### Event Handling
+Los eventos indetificados dentro de este bounded context son:
+```
+UserRegistered
+UserAuthenticated
+RoleAssigned
+UserDisabled
+```
+
+En particular, **UserRegistered** tiene relevancia fuera del propio contexto. El Event Storming establece que después del registro debe crearse el perfil inicial del usuario.
+
+El flujo entre contextos queda conceptualmente de esta manera:
+```
+Identity & Access Management
+        ↓
+UserRegistered
+        ↓
+Profiles & Preferences
+        ↓
+CreateProfile
+        ↓
+ProfileCreated
+```
+El IAM únicamente publica la ocurrencia de `UserRegistered`. La reacción que crea el perfil debe pertenecer al bounded context Profiles & Preferences, evitando que IAM asuma una responsabilidad ajena a su dominio.
+
+Por esta razón, dentro de este contexto se propone:
+
+**UserRegisteredEventPublisher**
+Responsable de solicitar la publicación del evento generado después de registrar correctamente una cuenta.
+
+La implementación técnica del mecanismo de mensajería no pertenece a Application Layer y será tratada en Infrastructure Layer.
+
+No conviene crear aquí un `CreateProfileEventHandler` porque eso trasladaría a IAM una responsabilidad que en el Event Storming pertenece a otro bounded context.
+
+---
+
+#### Flujo completo de autenticación
+
+La interacción entre las capas para el escenario de US30 se puede representar de esta manera:
+```
+Manager
+   ↓
+AuthenticationController
+   ↓
+AuthenticateUserRequest
+   ↓
+AuthenticateUserCommand
+   ↓
+AuthenticateUserCommandHandler
+   ↓
+IUserAccountRepository
+   ↓
+UserAccount
+   ↓
+ICredentialHashingService
+   ↓
+IAccessPolicyService
+   ↓
+IAuthenticationTokenService
+   ↓
+AuthenticationResponse
+```
+
+La Application Layer actúa como orquestador del flujo, mientras que:
+- Interface recibe y devuelve información.
+- Domain decide las reglas.
+- Infrastructure implementa persistencia y servicios tecnológicos.
+
+---
+
+#### Clases de la Aplication Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterUserCommand` | Command | Contiene los datos necesarios para registrar una cuenta. | Application |
+| `AuthenticateUserCommand` | Command | Representa un intento de autenticación. | Application |
+| `AssignRoleCommand` | Command | Solicita asignar un rol a una cuenta. | Application |
+| `DisableUserCommand` | Command | Solicita deshabilitar una cuenta. | Application |
+| `RequestPasswordResetCommand` | Command | Inicia la recuperación de contraseña requerida por US31. | Application |
+| `ResetPasswordCommand` | Command | Solicita establecer una nueva credencial mediante una recuperación válida. | Application |
+| `RegisterUserCommandHandler` | Command Handler | Valida duplicidad, crea y persiste `UserAccount`. | Application |
+| `AuthenticateUserCommandHandler` | Command Handler | Coordina la validación de identidad y generación del acceso. | Application |
+| `AssignRoleCommandHandler` | Command Handler | Recupera una cuenta, asigna el rol y persiste el cambio. | Application |
+| `DisableUserCommandHandler` | Command Handler | Deshabilita una cuenta y persiste el nuevo estado. | Application |
+| `RequestPasswordResetCommandHandler` | Command Handler | Coordina el inicio de la recuperación de acceso. | Application |
+| `ResetPasswordCommandHandler` | Command Handler | Coordina el establecimiento de una nueva credencial. | Application |
+| `GetUserAccountByIdQuery` | Query | Solicita información básica de una cuenta. | Application |
+| `GetUserRoleQuery` | Query | Solicita el rol de una cuenta. | Application |
+| `GetUserAccountByIdQueryHandler` | Query Handler | Recupera la información de una cuenta sin modificarla. | Application |
+| `GetUserRoleQueryHandler` | Query Handler | Recupera el rol asociado a una cuenta. | Application |
+| `UserRegisteredEventPublisher` | Event Publisher | Coordina la publicación de `UserRegistered` para otros bounded contexts. | Application |
+
+### 5.1.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context Identity & Access Management implementa los contratos definidos en la Domain Layer y proporciona los mecanismos técnicos necesarios para persistencia, protección de credenciales, generación de tokens de acceso, recuperación de contraseña y publicación de eventos de integración.
+
+#### Repository Implementations
+
+Las interfaces definidas en Domain Layer se implementan mediante repositorios concretos que utilizan Entity Framework Core para comunicarse con PostgreSQL.
+
+**UserAccountRepository** implementa `IUserAccountRepository` y es responsable de persistir y recuperar el aggregate `UserAccount`.
+
+Entre sus principales operaciones se encuentran:
+```
+save(UserAccount)
+findById(UserId)
+findByEmail(Email)
+existsByEmail(Email)
+update(UserAccount)
+```
+
+Su responsabilidad técnica incluye:
+- registrar nuevas cuentas;
+- consultar usuarios por identificador;
+- localizar cuentas mediante correo;
+- verificar duplicidad de cuentas;
+- actualizar rol, estado y credenciales;
+- reconstruir un UserAccount desde la información persistida.
+
+**PasswordResetRepository** implementa `IPasswordResetRepository` y administra la persistencia técnica de las solicitudes de recuperación.
+Sus operaciones principales son:
+```
+save(PasswordResetToken)
+findValidByUserId(UserId)
+invalidate(PasswordResetToken)
+```
+---
+
+#### Persistance Context
+Para encapsular el acceso a PostgreSQL se propone IdentityDbContext, implementado mediante Entity Framework Core.
+Conceptualmente contiene los conjuntos asociados a las entidades persistentes del contexto:
+
+```
+IdentityDbContext
+
+DbSet<UserAccountEntity> UserAccounts
+DbSet<PasswordResetEntity> PasswordResets
+```
+
+El DbContext no representa reglas del dominio. Su función es exclusivamente técnica:
+- establecer la conexión con PostgreSQL;
+- mapear entidades de persistencia;
+- ejecutar consultas;
+- gestionar transacciones;
+- aplicar configuraciones y constraints;
+- persistir modificaciones.
+
+---
+
+#### Persistance Mappers
+Para evitar que las entidades del dominio dependan directamente de Entity Framework Core se propone el uso de **Persistence Mappers**.
+**UserAccountPersistenceMapper** transforma:
+```
+UserAccount
+   ↕
+UserAccountEntity
+```
+
+De esta manera, anotaciones, configuraciones de tablas, foreign keys o particularidades de PostgreSQL permanecen fuera del modelo de dominio.
+**PasswordResetPersistenceMapper** realiza la misma función para `PasswordResetToken`.
+
+**CredentialHashingService**
+`CredentialHashingService` implementa `ICredentialHashingService`.
+
+Su responsabilidad consiste en proteger las credenciales antes de almacenarlas y comparar las credenciales proporcionadas durante una autenticación.
+
+Conceptualmente implementa:
+
+```
+hash(rawCredential)
+verify(rawCredential, hashedCredential)
+```
+Este servicio es utilizado por:
+- RegisterUserCommandHandler;
+- AuthenticateUserCommandHandler;
+- ResetPasswordCommandHandler.
+
+---
+
+**AuthenticationTokenService**
+`AuthenticationTokenService` implementa `IAuthenticationTokenService`.
+
+Su responsabilidad es generar la credencial de acceso después de que A`uthenticateUserCommandHandler` haya validado correctamente la cuenta.
+
+La documentación estratégica de ElectroLink ya indica que la seguridad centralizada debe utilizar tokens JWT para autenticar y controlar el acceso a las APIs.     
+
+Por ello, la implementación concreta puede denominarse: **JwtTokenService** sus responsabilidades son:
+
+```
+generateToken(UserAccount)
+validateToken(token)
+```
+
+El token puede incorporar información necesaria para autorización, como:
+```
+userId
+role
+expiration
+```
+
+De modo conceptual:
+```
+AuthenticateUserCommandHandler
+           ↓
+IAuthenticationTokenService
+           ↓
+JwtTokenService
+           ↓
+JWT
+```
+
+Esto permite que el backend mantenga una estrategia de autenticación centralizada y consistente con las decisiones arquitectónicas del proyecto.
+
+---
+
+#### Authentication Middleware
+
+Debido a que el sistema utiliza ASP.NET Core y JWT, se requiere un mecanismo técnico que intercepte las solicitudes dirigidas a recursos protegidos.
+
+Se propone **JwtAuthenticationMiddleware**, encargado de:
+- obtener el token enviado por el cliente;
+- comprobar que se encuentre presente;
+- validar su integridad y vigencia;
+- obtener el `userId` y `role`;
+- incorporar la identidad autenticada al contexto de la petición;
+- rechazar solicitudes que no posean una autenticación válida.
+
+El middleware no decide reglas funcionales propias del negocio. Su responsabilidad es únicamente validar técnicamente la identidad presentada.
+El flujo conceptual es:
+
+```
+HTTP Request
+     ↓
+JwtAuthenticationMiddleware
+     ↓
+Validate JWT
+     ↓
+Authenticated User Context
+     ↓
+Controller
+```
+---
+
+#### Password Recovery Infrastructre
+
+El Manager puede solicitar la recuperación de contraseña mediante su correo y recibir un enlace temporal. El documento especifica además una vigencia de 15 minutos para dicho mecanismo.
+
+Para soportar esta capacidad se propone **PasswordResetService**, responsable de generar técnicamente el token que después será representado por `PasswordResetToken`.
+
+Sus responsabilidades incluyen:
+
+```
+generateResetToken()
+buildResetLink()
+```
+
+La vigencia del token pertenece al modelo definido en la Domain Layer, mientras que la generación segura del valor corresponde a Infrastructure.
+
+También se requiere **EmailService**, cuya responsabilidad consiste en enviar el enlace generado al correo asociado a la cuenta.
+
+Conceptualmente:
+
+```
+RequestPasswordResetCommandHandler
+             ↓
+PasswordResetService
+             ↓
+PasswordResetRepository
+             ↓
+EmailService
+             ↓
+Manager
+```
+---
+
+#### Event Publisher
+
+El EventStorming establece que, después de `UserRegistered`, debe iniciarse la creación del perfil en Profiles & Preferences.
+
+Para soportar esta interacción se propone **IdentityEventPublisher**, responsable de publicar eventos originados por IAM.
+
+Entre ellos:
+```
+UserRegistered
+RoleAssigned
+UserDisabled
+```
+
+El evento con mayor relevancia inmediata para la integración es:
+`UserRegistered`
+
+porque activa el flujo posterior:
+```
+Identity & Access Management
+           ↓
+UserRegistered
+           ↓
+Profiles & Preferences
+           ↓
+CreateProfile
+```
+---
+#### Persistence Entities
+
+Para evitar contaminar las entidades de dominio con preocupaciones de infraestructura se utilizan objetos específicos para persistencia.
+
+**UserAccountEntity**
+```
+UserAccountEntity
+- Id
+- Email
+- CredentialHash
+- Role
+- Status
+- CreatedAt
+- UpdatedAt
+```
+
+**PasswordRestEntity**
+```
+PasswordResetEntity
+- Id
+- UserId
+- TokenHash
+- ExpiresAt
+- Used
+- CreatedAt
+```
+---
+
+#### Configurations
+
+Entity Framework Core requiere configuraciones específicas para traducir correctamente los objetos hacia PostgreSQL.
+Se proponen:
+
+**UserAccountEntityConfiguration**
+
+Responsable de definir:
+- tabla asociada;
+- primary key;
+- longitud y obligatoriedad de campos;
+- índice único del correo;
+- conversión de `UserRole`;
+- conversión de `AccountStatus`.
+
+**PasswordResetEntityConfiguration**
+
+Responsable de configurar:
+- primary key;
+- foreign key hacia la cuenta;
+- fecha de expiración;
+- estado de utilización;
+- constraints requeridos.
+
+Estas clases pertenecen exclusivamente a Infrastructure Layer.
+
+---
+
+#### Flujo completo de registro
+El flujo técnico puede visualizarse de la siguiente manera:
+
+```
+RegisterUserCommandHandler
+          ↓
+ICredentialHashingService
+          ↓
+CredentialHashingService
+          ↓
+UserAccount
+          ↓
+IUserAccountRepository
+          ↓
+UserAccountRepository
+          ↓
+Entity Framework Core
+          ↓
+PostgreSQL
+          ↓
+IdentityEventPublisher
+          ↓
+UserRegistered
+```
+La capa de aplicación conoce las interfaces, pero no las clases concretas.
+
+---
+
+#### Flujo completo de autenticación
+```
+AuthenticateUserCommandHandler
+            ↓
+IUserAccountRepository
+            ↓
+UserAccountRepository
+            ↓
+PostgreSQL
+            ↓
+ICredentialHashingService
+            ↓
+CredentialHashingService
+            ↓
+IAuthenticationTokenService
+            ↓
+JwtTokenService
+            ↓
+JWT
+```
+
+Posteriormente, cada solicitud protegida utiliza:
+```
+JWT
+ ↓
+JwtAuthenticationMiddleware
+ ↓
+Authenticated User
+ ↓
+Protected Resource
+```
+---
+
+#### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserAccountRepository` | Repository | Implementa `IUserAccountRepository` mediante Entity Framework Core y PostgreSQL. | Infrastructure |
+| `PasswordResetRepository` | Repository | Implementa `IPasswordResetRepository`. | Infrastructure |
+| `IdentityDbContext` | Persistence Context | Gestiona la conexión y persistencia del módulo IAM. | Infrastructure |
+| `UserAccountEntity` | Persistence Entity | Representación persistente de una cuenta de usuario. | Infrastructure |
+| `PasswordResetEntity` | Persistence Entity | Representación persistente de una solicitud de recuperación. | Infrastructure |
+| `UserAccountPersistenceMapper` | Mapper | Convierte entre `UserAccount` y `UserAccountEntity`. | Infrastructure |
+| `PasswordResetPersistenceMapper` | Mapper | Convierte entre `PasswordResetToken` y su representación persistente. | Infrastructure |
+| `CredentialHashingService` | Infrastructure Service | Implementa la protección y verificación de credenciales. | Infrastructure |
+| `JwtTokenService` | Infrastructure Service | Implementa generación y validación de JWT. | Infrastructure |
+| `JwtAuthenticationMiddleware` | Middleware | Valida el JWT en las solicitudes protegidas. | Infrastructure |
+| `PasswordResetService` | Infrastructure Service | Genera técnicamente los tokens y enlaces de recuperación. | Infrastructure |
+| `EmailService` | Infrastructure Service | Envía el mecanismo de recuperación al correo del usuario. | Infrastructure |
+| `IdentityEventPublisher` | Event Publisher | Publica eventos del bounded context hacia otros módulos. | Infrastructure |
+| `UserAccountEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de cuentas. | Infrastructure |
+| `PasswordResetEntityConfiguration` | Persistence Configuration | Configura el mapping relacional de recuperación de contraseñas. | Infrastructure |
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+![](assets-emergentes/C4Diagrams/IAMComponentDiagram.png)
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código correspondientes al bounded context Identity & Access Management. El objetivo es representar con mayor detalle la estructura interna del dominio y la persistencia de los objetos definidos previamente en las capas tácticas. Para ello, se incluyen el diagrama de clases de la Domain Layer y el diagrama de base de datos asociado al contexto.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+![](assets-emergentes/ClassDiagrams/IAM-ClassDiagram.png)
+
+El diagrama de la Domain Layer de Identity & Access Management (ElectroLink) se estructura en:
+
+- Aggregate Root: UserAccount (administra rol, estado y credenciales).
+- Value Objects: UserId, Email y Credential (con sus respectivas validaciones).
+- Enumeraciones: UserRole, AccountStatus y AuthenticationType.
+- Interfaces: Contratos de persistencia, seguridad, tokens y políticas independientes de infraestructura.
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/IAM_Database.png)
+
+El diagrama de base de datos de Identity & Access Management (ElectroLink) se estructura en PostgreSQL e incluye:
+
+- user_accounts: Almacena identificadores, roles, estados y credenciales hasheadas, diferenciando el acceso de managers (correo/contraseña) y trabajadores (DNI/PIN).
+- password_reset_tokens: Gestiona las solicitudes temporales de recuperación en relación uno a muchos con las cuentas.
+- Restricciones: Incorpora primary y foreign keys, restricciones de unicidad, checks e índices.
+---
+
+## 5.2. Bounded Context: Profile & Preferences
+
+### 5.2.1. Domain Layer
+
+La Domain Layer del bounded context Profiles & Preferences contiene las clases responsables de administrar la información del perfil del usuario y sus preferencias de comunicación dentro de ElectroLink.
+
+Este contexto se mantiene separado de Identity & Access Management, ya que no administra autenticación, credenciales ni roles. Su responsabilidad se limita a la información asociada al perfil y a las preferencias configuradas por el usuario. La documentación del proyecto define este bounded context como responsable de administrar los perfiles y sus preferencias, incluyendo la configuración de notificaciones.
+
+**Aggregate Root**
+
+UserProfile es el aggregate root principal del bounded context. Representa el perfil asociado a un usuario registrado y concentra la información necesaria para mantener sus datos y preferencias.
+
+Sus principales responsabilidades son:
+
+- crear el perfil asociado a un usuario;
+- actualizar la información del perfil;
+- mantener las preferencias de notificación;
+- asegurar que las preferencias configuradas sean válidas.
+
+El perfil se encuentra relacionado con el usuario mediante su identificador, sin incorporar información propia del bounded context de identidad.
+
+---
+
+**Notifcation Preference**
+
+NotificationPreference representa la configuración de canales de comunicación preferidos por el usuario.
+
+De acuerdo con la historia US29 Configuración de Notificaciones Preferidas, el Manager puede 
+seleccionar canales como WhatsApp, SMS o correo electrónico para recibir alertas.     
+
+Este elemento mantiene únicamente la preferencia del usuario. El envío efectivo de mensajes pertenece al bounded context Notifications.
+
+---
+
+**Value Objetcs**
+
+`ProfileId` representa el identificador único del perfil.
+
+`UserId` representa la referencia al usuario propietario del perfil.
+
+`ContactInformation` agrupa la información de contacto necesaria para las preferencias de comunicación.
+
+`NotificationChannel` representa los canales disponibles para el usuario, considerando inicialmente:
+```
+WHATSAPP
+SMS
+EMAIL
+```
+
+El Event Storming establece además la política “Use default channels when preferences are missing”, por lo que el dominio debe permitir definir un canal predeterminado cuando el usuario aún no haya registrado una preferencia específica.
+---
+
+**Repository Interface**
+
+`IUserProfileRepository` define el contrato necesario para persistir y recuperar perfiles sin acoplar el dominio al mecanismo de almacenamiento.
+
+Sus principales operaciones son:
+```
+save(UserProfile)
+findById(ProfileId)
+findByUserId(UserId)
+update(UserProfile)
+existsByUserId(UserId)
+```
+---
+
+**Domain Service**
+
+*NotificationPreferenceService* concentra las reglas relacionadas con la configuración de preferencias cuando estas no dependen únicamente de una instancia de `UserProfile`.
+
+Sus responsabilidades son:
+```
+validatePreferences()
+resolveDefaultChannel()
+updatePreferences()
+```
+
+Esto permite representar la policy identificada en el Event Storming sin trasladar dicha decisión a otras capas.
+
+---
+
+**Eventos de Dominio**
+
+Se identificaron los siguientes eventos de dominio:
+```
+ProfileCreated
+ProfileUpdated
+NotificationPreferencesUpdated
+```
+
+`ProfileCreated` se produce cuando se crea correctamente el perfil asociado a un usuario.
+
+`ProfileUpdated` indica que la información del perfil fue modificada.
+
+`NotificationPreferencesUpdated` indica que las preferencias de comunicación fueron actualizadas satisfactoriamente.
+
+---
+
+**Clases de la Domain Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfile` | Aggregate Root | Representa el perfil del usuario y mantiene su información y preferencias. | Domain |
+| `NotificationPreference` | Entity / Domain Concept | Representa las preferencias de comunicación configuradas por el usuario. | Domain |
+| `ProfileId` | Value Object | Identifica de manera única un perfil. | Domain |
+| `UserId` | Value Object | Referencia al usuario propietario del perfil. | Domain |
+| `ContactInformation` | Value Object | Agrupa la información de contacto asociada al perfil. | Domain |
+| `NotificationChannel` | Enumeration | Define los canales disponibles para notificaciones. | Domain |
+| `IUserProfileRepository` | Repository Interface | Define las operaciones de persistencia del perfil. | Domain |
+| `NotificationPreferenceService` | Domain Service | Gestiona las reglas relacionadas con preferencias y canales predeterminados. | Domain |
+
+### 5.2.2. Interface Layer
+
+La Interface Layer del bounded context Profiles & Preferences contiene las clases responsables de recibir las solicitudes relacionadas con la consulta y actualización del perfil del usuario, así como con la configuración de sus preferencias de notificación.
+
+Esta capa no contiene reglas de negocio; su función es recibir los datos, transformarlos y delegar el procesamiento hacia la Application Layer.
+
+**Controllers**
+
+UserProfileController gestiona las operaciones relacionadas con el perfil del usuario.
+Sus responsabilidades principales son:
+
+- consultar el perfil;
+- actualizar la información del perfil;
+- obtener las preferencias configuradas.
+
+**NotificationPreferenceController** gestiona las solicitudes relacionadas con la configuración de los canales de notificación.
+
+Su responsabilidad principal es permitir que el usuario consulte y actualice sus preferencias de comunicación, de acuerdo con la US29 Configuración de Notificaciones Preferidas.
+
+---
+
+**Request DTOs**
+UpdateProfileRequest contiene la información modificable del perfil:
+```
+UpdateProfileRequest
+- fullName
+- contactInformation
+```
+
+UpdateNotificationPreferencesRequest contiene los canales seleccionados por el usuario.
+```
+UpdateNotificationPreferencesRequest
+- channels
+```
+
+**Response DTOs**
+UserProfileResponse representa la información del perfil que puede ser expuesta al usuario.
+```
+UserProfileResponse
+- profileId
+- userId
+- fullName
+- contactInformation
+```
+
+NotificationPreferencesResponse representa las preferencias de comunicación registradas.
+```
+NotificationPreferencesResponse
+- channels
+```
+---
+
+**Assemblers**
+
+Los assemblers transforman los datos recibidos por la Interface Layer en commands o queries de la Application Layer.
+
+Se consideran:
+*UpdateProfileCommandFromRequestAssembler*
+```
+UpdateProfileRequest
+        ↓
+UpdateProfileCommand
+```
+
+*UpdateNotificationPreferencesCommandFromRequestAssembler*
+```
+UpdateNotificationPreferencesRequest
+        ↓
+UpdateNotificationPreferencesCommand
+```
+
+`UserProfileResponseAssembler` transforma el resultado obtenido desde la Application Layer en UserProfileResponse.
+
+`NotificationPreferencesResponseAssembler` construye la respuesta asociada a las preferencias configuradas.
+
+---
+
+**Clases de la Interface Layer**
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfileController` | Controller | Gestiona consultas y actualizaciones del perfil. | Interface |
+| `NotificationPreferenceController` | Controller | Gestiona la configuración de preferencias de notificación. | Interface |
+| `UpdateProfileRequest` | Request DTO | Contiene los datos requeridos para actualizar el perfil. | Interface |
+| `UpdateNotificationPreferencesRequest` | Request DTO | Contiene los canales seleccionados por el usuario. | Interface |
+| `UserProfileResponse` | Response DTO | Representa la información del perfil. | Interface |
+| `NotificationPreferencesResponse` | Response DTO | Representa las preferencias de comunicación configuradas. | Interface |
+| `UpdateProfileCommandFromRequestAssembler` | Assembler | Convierte la solicitud de actualización en un command. | Interface |
+| `UpdateNotificationPreferencesCommandFromRequestAssembler` | Assembler | Convierte la configuración recibida en un command. | Interface |
+| `UserProfileResponseAssembler` | Assembler | Construye la respuesta del perfil. | Interface |
+| `NotificationPreferencesResponseAssembler` | Assembler | Construye la respuesta de preferencias. | Interface |
+---
+
+### 5.2.3. Application Layer
+
+La Application Layer del bounded context Profiles & Preferences coordina los casos de uso relacionados con la creación y actualización del perfil del usuario, así como con la configuración de sus preferencias de notificación.
+
+Su función es recibir los comandos provenientes de la Interface Layer, utilizar los objetos del dominio correspondientes y coordinar la persistencia de los cambios.
+
+**Commands**
+
+Los commands principales se derivan directamente del Event Storming actual:
+
+*CreateProfileCommand*
+Representa la creación inicial de un perfil asociado a un usuario.
+```
+CreateProfileCommand
+- userId
+- fullName
+- contactInformation
+```
+
+*UpdateProfileCommand*
+Representa la actualización de la información del perfil.
+```
+UpdateProfileCommand
+- userId
+- fullName
+- contactInformation
+```
+
+*UpdateNotificationPreferencesCommand*
+Representa la modificación de los canales de comunicación preferidos por el usuario.
+```
+UpdateNotificationPreferencesCommand
+- userId
+- channels
+```
+
+Este último command se relaciona directamente con la US29 Configuración de Notificaciones Preferidas.
+
+---
+
+**Command Handlers**
+
+*CreateProfileCommandHandler* coordina la creación del perfil después de recibir un CreateProfileCommand.
+Sus principales responsabilidades son:
+
+- verificar que el usuario no tenga un perfil existente;
+- crear el aggregate `UserProfile`;
+- asignar valores iniciales;
+- persistir el perfil;
+- generar `ProfileCreated`.
+
+*UpdateProfileCommandHandler* coordina la modificación de los datos del perfil.
+Sus responsabilidades son:
+
+- recuperar el perfil mediante `IUserProfileRepository`;
+- aplicar los cambios permitidos;
+- persistir el nuevo estado;
+- generar `ProfileUpdated`.
+
+*UpdateNotificationPreferencesCommandHandler* coordina la actualización de las preferencias de comunicación.
+
+Sus responsabilidades son:
+- recuperar el perfil;
+- validar los canales seleccionados;
+- aplicar la política de canales predeterminados cuando corresponda;
+- actualizar `NotificationPreference`;
+- persistir los cambios;
+- generar `otificationPreferencesUpdated`.
+
+---
+
+**Queries**
+
+Las consultas permiten recuperar información sin modificar el estado del dominio.
+
+*GetUserProfileQuery*
+```
+GetUserProfileQuery
+- userId
+```
+
+Permite obtener la información asociada al perfil de un usuario.
+
+*GetNotificationPreferencesQuery*
+```
+GetNotificationPreferencesQuery
+- userId
+```
+
+Permite consultar los canales de notificación configurados.
+
+---
+
+**Query Handlers**
+
+*GetUserProfileQueryHandler* recupera el perfil mediante IUserProfileRepository y retorna la información necesaria para la Interface Layer.
+
+*GetNotificationPreferencesQueryHandler* consulta las preferencias asociadas al perfil y devuelve los canales configurados.
+
+---
+
+**Event Handler**
+
+El EventStorming establece que `UserRegistered`, originado en Identity & Access Management, debe activar la creación inicial del perfil.
+
+Por ello se define:
+
+*UserRegisteredEventHandler*
+Este handler recibe `UserRegistered` y genera internamente un `CreateProfileCommand`, manteniendo separadas las responsabilidades entre ambos bounded contexts.
+
+El flujo queda resumido de esta manera:
+
+```
+UserRegistered
+      ↓
+UserRegisteredEventHandler
+      ↓
+CreateProfileCommand
+      ↓
+CreateProfileCommandHandler
+      ↓
+ProfileCreated
+```
+---
+
+**Clases de la Application Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateProfileCommand` | Command | Solicita la creación inicial de un perfil. | Application |
+| `UpdateProfileCommand` | Command | Solicita la actualización de la información del perfil. | Application |
+| `UpdateNotificationPreferencesCommand` | Command | Solicita actualizar los canales preferidos. | Application |
+| `CreateProfileCommandHandler` | Command Handler | Crea y persiste el perfil del usuario. | Application |
+| `UpdateProfileCommandHandler` | Command Handler | Actualiza los datos del perfil. | Application |
+| `UpdateNotificationPreferencesCommandHandler` | Command Handler | Gestiona la modificación de preferencias de comunicación. | Application |
+| `GetUserProfileQuery` | Query | Solicita la información de un perfil. | Application |
+| `GetNotificationPreferencesQuery` | Query | Solicita las preferencias de notificación. | Application |
+| `GetUserProfileQueryHandler` | Query Handler | Recupera la información del perfil. | Application |
+| `GetNotificationPreferencesQueryHandler` | Query Handler | Recupera los canales de comunicación configurados. | Application |
+| `UserRegisteredEventHandler` | Event Handler | Reacciona a `UserRegistered` y solicita la creación del perfil inicial. | Application |
+---
+
+### 5.2.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context Profiles & Preferences implementa los mecanismos necesarios para persistir perfiles, almacenar preferencias de notificación y gestionar la integración con otros bounded contexts cuando corresponda.
+
+**Repository Implementations**
+
+UserProfileRepository implementa `IUserProfileRepository` y se encarga de almacenar y recuperar el aggregate `UserProfile`.
+
+Sus principales operaciones son:
+
+```
+save(UserProfile)
+findById(ProfileId)
+findByUserId(UserId)
+update(UserProfile)
+existsByUserId(UserId)
+```
+
+*NotificationPreferenceRepository* gestiona la persistencia de las preferencias asociadas al perfil cuando estas se almacenan de forma separada.
+
+```
+save(NotificationPreference)
+findByUserId(UserId)
+update(NotificationPreference)
+```
+---
+**Persistance Context**
+
+Se propone `ProfilesDbContext` como contexto de persistencia del bounded context.
+
+Su responsabilidad es gestionar el acceso a los datos asociados a:
+```
+UserProfile
+NotificationPreference
+```
+
+**Persistance Entities**
+
+*UserProfileEntity*
+
+Representa la estructura persistente del perfil.
+```
+UserProfileEntity
+- Id
+- UserId
+- FullName
+- Phone
+- Email
+- CreatedAt
+- UpdatedAt
+```
+
+*NotificationPreferenceEntity*
+
+Representa las preferencias configuradas por el usuario.
+```
+NotificationPreferenceEntity
+- Id
+- UserId
+- PrimaryChannel
+- WhatsAppEnabled
+- SmsEnabled
+- EmailEnabled
+- UpdatedAt
+```
+
+**Persistance Mappers**
+
+*UserProfilePersistenceMapper* convierte entre `UserProfile` y `UserProfileEntity`.
+
+*NotificationPreferencePersistenceMapper* convierte entre `NotificationPreference` y `NotificationPreferenceEntity`.
+
+Estos mappers permiten mantener separado el modelo de dominio de las estructuras utilizadas para persistencia.
+
+---
+
+**Event Integration**
+
+Este bounded context recibe el evento: `UserRegistered`proveniente de IAM.
+
+La infraestructura debe proporcionar el mecanismo necesario para entregar dicho evento al `UserRegisteredEventHandler`, que posteriormente inicia la creación del perfil.
+
+Asimismo, pueden publicarse los eventos:
+```
+ProfileCreated
+ProfileUpdated
+NotificationPreferencesUpdated
+```
+
+para que otros bounded contexts conozcan los cambios relevantes sin acceder directamente al modelo interno.
+
+Se propone ProfileEventPublisher como componente encargado de publicar dichos eventos.
+
+---
+
+**Integración con Notifications**
+
+`NotificationPreferencesUpdated` puede ser consumido por el bounded context *Notifications* para mantener actualizada la información necesaria para el envío de alertas.
+
+Esta integración permite que Profiles & Preferences administre únicamente la configuración del usuario, mientras que Notifications conserva la responsabilidad del envío efectivo.
+
+---
+
+**Configurations**
+
+*UserProfileEntityConfiguration* define el mapeo de `UserProfileEntity` hacia la base de datos.
+
+*NotificationPreferenceEntityConfiguration* define el mapeo de las preferencias de comunicación.
+
+Estas configuraciones establecen claves, relaciones, restricciones e índices necesarios para la persistencia.
+
+---
+
+**Clases de la Infrastructure Layer**
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UserProfileRepository` | Repository | Implementa la persistencia de perfiles. | Infrastructure |
+| `NotificationPreferenceRepository` | Repository | Gestiona la persistencia de las preferencias de notificación. | Infrastructure |
+| `ProfilesDbContext` | Persistence Context | Administra el acceso a los datos del bounded context. | Infrastructure |
+| `UserProfileEntity` | Persistence Entity | Representa la estructura persistente del perfil. | Infrastructure |
+| `NotificationPreferenceEntity` | Persistence Entity | Representa las preferencias almacenadas. | Infrastructure |
+| `UserProfilePersistenceMapper` | Mapper | Convierte entre el aggregate y su representación persistente. | Infrastructure |
+| `NotificationPreferencePersistenceMapper` | Mapper | Convierte entre preferencias de dominio y persistencia. | Infrastructure |
+| `ProfileEventPublisher` | Event Publisher | Publica eventos generados por el bounded context. | Infrastructure |
+| `UserProfileEntityConfiguration` | Persistence Configuration | Define el mapeo relacional del perfil. | Infrastructure |
+| `NotificationPreferenceEntityConfiguration` | Persistence Configuration | Define el mapeo relacional de las preferencias. | Infrastructure |
+---
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram de Profiles & Preferences representa los componentes responsables de administrar perfiles y preferencias de comunicación. El contexto recibe `UserRegistered` desde Identity & Access Management para crear el perfil inicial y comunica los cambios de preferencias hacia Notifications.
+
+![](assets-emergentes/C4Diagrams/ProfilesPreferencesComponentDiagram.png)
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas de código del bounded context Profiles & Preferences, detallando la estructura del modelo de dominio y su persistencia. De acuerdo con el enunciado, el diagrama de clases debe mostrar clases, interfaces, enumeraciones, atributos, métodos y relaciones con multiplicidad.
+
+#### 5.2.6.1. Bounded COntext Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/Profiles-Preferences-Diagram.png)
+
+#### 5.2.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Profiles-Preferences-Database.png)
+---
+
+## 5.3. Subscriptions & Payments Bounded Context
+
+El bounded context **Subscriptions & Payments** gestiona la creación, activación, renovación y suspensión de suscripciones, junto con los pagos asociados. También controla qué funcionalidades quedan disponibles según el estado de la suscripción. Esta responsabilidad está definida en la documentación actual de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `Subscription`, `Payment`, `RenewSubscription`, `SuspendSubscription`, `SubscriptionCreated`, `SubscriptionRenewed`, `SubscriptionSuspended` y `PaymentCompleted`. Además, la arquitectura establece que **Stripe** debe utilizarse para la facturación SaaS y el procesamiento de pagos de suscripción. README
+
+### 5.3.1. Domain Layer
+
+La **Domain Layer** contiene las reglas relacionadas con el ciclo de vida de las suscripciones y el registro de sus pagos.
+
+### Aggregate Root
+
+**Subscription** es el aggregate root principal. Representa la suscripción asociada a un cliente y mantiene su plan, estado y período de vigencia.
+
+Sus principales responsabilidades son:
+
+-   crear una suscripción;
+-   activarla después de un pago válido;
+-   renovarla;
+-   suspenderla;
+-   determinar si se encuentra activa.
+
+### Entity
+
+**Payment** representa un pago asociado a una suscripción.
+
+Mantiene la información necesaria para identificar el pago, su importe, estado y referencia del proveedor externo.
+
+### Value Objects y Enumerations
+
+**SubscriptionId** identifica de manera única una suscripción.
+
+**PaymentId** identifica un pago.
+
+**UserId** representa al usuario responsable de la suscripción.
+
+**Money** representa un importe monetario junto con su moneda.
+
+**SubscriptionStatus** representa el estado actual:
+
+```
+PENDING
+ACTIVE
+SUSPENDED
+```
+
+**PaymentStatus** representa el estado de un pago:
+
+```
+PENDING
+COMPLETED
+FAILED
+```
+
+**PlanType** representa el plan contratado. La definición exacta de sus valores debe mantenerse consistente con los planes comerciales vigentes del proyecto.
+
+### Repository Interfaces
+
+**ISubscriptionRepository** define las operaciones necesarias para persistir y consultar suscripciones.
+
+```
+save(Subscription)
+findById(SubscriptionId)
+findByUserId(UserId)
+update(Subscription)
+```
+
+**IPaymentRepository** define las operaciones asociadas a los pagos.
+
+```
+save(Payment)
+findById(PaymentId)
+findBySubscriptionId(SubscriptionId)
+update(Payment)
+```
+
+### Domain Service
+
+**SubscriptionPolicyService** concentra las reglas que determinan si una suscripción puede activarse, renovarse o suspenderse.
+
+Sus principales operaciones son:
+
+```
+canActivate(Subscription)
+canRenew(Subscription)
+canSuspend(Subscription)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+SubscriptionCreated
+SubscriptionActivated
+SubscriptionRenewed
+SubscriptionSuspended
+PaymentCompleted
+```
+
+`SubscriptionActivated` es especialmente relevante porque permite comunicar a otros bounded contexts que el usuario ya dispone de una suscripción habilitada.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Subscription` | Aggregate Root | Gestiona el ciclo de vida de una suscripción. | Domain |
+| `Payment` | Entity | Representa un pago asociado a una suscripción. | Domain |
+| `SubscriptionId` | Value Object | Identifica la suscripción. | Domain |
+| `PaymentId` | Value Object | Identifica el pago. | Domain |
+| `UserId` | Value Object | Identifica al responsable de la suscripción. | Domain |
+| `Money` | Value Object | Representa el importe de un pago. | Domain |
+| `PlanType` | Enumeration | Define el tipo de plan contratado. | Domain |
+| `SubscriptionStatus` | Enumeration | Define el estado de la suscripción. | Domain |
+| `PaymentStatus` | Enumeration | Define el estado del pago. | Domain |
+| `ISubscriptionRepository` | Repository Interface | Define la persistencia de suscripciones. | Domain |
+| `IPaymentRepository` | Repository Interface | Define la persistencia de pagos. | Domain |
+| `SubscriptionPolicyService` | Domain Service | Aplica reglas del ciclo de vida de la suscripción. | Domain |
+
+
+## 5.3.2. Interface Layer
+
+La **Interface Layer** del bounded context **Subscriptions & Payments** recibe las solicitudes relacionadas con la consulta, creación y gestión de suscripciones, así como con el registro de pagos.
+
+Su responsabilidad es exponer las operaciones del contexto y transformar los datos de entrada y salida, sin contener reglas de negocio.
+
+### Controllers
+
+**SubscriptionController** gestiona las operaciones relacionadas con las suscripciones.
+
+Sus principales responsabilidades son:
+
+-   consultar la suscripción actual;
+-   consultar los planes disponibles;
+-   activar una suscripción;
+-   renovar una suscripción;
+-   suspender una suscripción.
+
+**PaymentController** gestiona las operaciones relacionadas con pagos y su estado.
+
+Sus principales responsabilidades son:
+
+-   iniciar un pago;
+-   consultar el estado de un pago;
+-   recibir la confirmación del resultado del pago.
+
+### Request DTOs
+
+**ActivateSubscriptionRequest**
+
+```
+ActivateSubscriptionRequest
+- userId
+- planType
+```
+
+**RenewSubscriptionRequest**
+
+```
+RenewSubscriptionRequest
+- subscriptionId
+```
+
+**SuspendSubscriptionRequest**
+
+```
+SuspendSubscriptionRequest
+- subscriptionId
+```
+
+**CreatePaymentRequest**
+
+```
+CreatePaymentRequest
+- subscriptionId
+- amount
+- currency
+```
+
+### Response DTOs
+
+**SubscriptionResponse**
+
+```
+SubscriptionResponse
+- subscriptionId
+- userId
+- planType
+- status
+- startDate
+- endDate
+```
+
+**PaymentResponse**
+
+```
+PaymentResponse
+- paymentId
+- subscriptionId
+- amount
+- currency
+- status
+```
+
+### Assemblers
+
+Los assemblers convierten los DTOs de entrada en commands y transforman los resultados del dominio en respuestas.
+
+Se consideran:
+
+```
+ActivateSubscriptionCommandFromRequestAssembler
+RenewSubscriptionCommandFromRequestAssembler
+SuspendSubscriptionCommandFromRequestAssembler
+CreatePaymentCommandFromRequestAssembler
+SubscriptionResponseAssembler
+PaymentResponseAssembler
+```
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `SubscriptionController` | Controller | Gestiona consultas y operaciones sobre suscripciones. | Interface |
+| `PaymentController` | Controller | Gestiona las solicitudes relacionadas con pagos. | Interface |
+| `ActivateSubscriptionRequest` | Request DTO | Contiene los datos necesarios para activar una suscripción. | Interface |
+| `RenewSubscriptionRequest` | Request DTO | Contiene la información necesaria para renovar una suscripción. | Interface |
+| `SuspendSubscriptionRequest` | Request DTO | Contiene la información para suspender una suscripción. | Interface |
+| `CreatePaymentRequest` | Request DTO | Contiene los datos necesarios para registrar un pago. | Interface |
+| `SubscriptionResponse` | Response DTO | Representa la información de una suscripción. | Interface |
+| `PaymentResponse` | Response DTO | Representa la información de un pago. | Interface |
+| `ActivateSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de activación en un command. | Interface |
+| `RenewSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de renovación en un command. | Interface |
+| `SuspendSubscriptionCommandFromRequestAssembler` | Assembler | Convierte la solicitud de suspensión en un command. | Interface |
+| `CreatePaymentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de pago en un command. | Interface |
+| `SubscriptionResponseAssembler` | Assembler | Construye la respuesta de suscripción. | Interface |
+| `PaymentResponseAssembler` | Assembler | Construye la respuesta de pago. | Interface |
+
+## 5.3.3. Application Layer
+
+La **Application Layer** del bounded context **Subscriptions & Payments** coordina los casos de uso relacionados con la activación, renovación y suspensión de suscripciones, así como con el procesamiento y actualización del estado de los pagos.
+
+### Commands
+
+**ActivateSubscriptionCommand**
+
+```
+ActivateSubscriptionCommand
+- userId
+- planType
+```
+
+**RenewSubscriptionCommand**
+
+```
+RenewSubscriptionCommand
+- subscriptionId
+```
+
+**SuspendSubscriptionCommand**
+
+```
+SuspendSubscriptionCommand
+- subscriptionId
+```
+
+**CreatePaymentCommand**
+
+```
+CreatePaymentCommand
+- subscriptionId
+- amount
+- currency
+```
+
+**ConfirmPaymentCommand**
+
+```
+ConfirmPaymentCommand
+- paymentId
+- providerReference
+```
+
+### Command Handlers
+
+**ActivateSubscriptionCommandHandler** coordina la activación de una suscripción y registra su estado inicial.
+
+**RenewSubscriptionCommandHandler** valida la suscripción existente, actualiza su período de vigencia y genera `SubscriptionRenewed`.
+
+**SuspendSubscriptionCommandHandler** actualiza el estado de la suscripción y genera `SubscriptionSuspended`.
+
+**CreatePaymentCommandHandler** registra un nuevo pago asociado a una suscripción y delega su procesamiento al servicio correspondiente.
+
+**ConfirmPaymentCommandHandler** procesa la confirmación del pago, actualiza el estado de `Payment` y, cuando el pago es válido, permite activar o renovar la suscripción correspondiente.
+
+### Queries
+
+**GetSubscriptionByUserQuery**
+
+```
+GetSubscriptionByUserQuery
+- userId
+```
+
+Permite consultar la suscripción asociada a un usuario.
+
+**GetSubscriptionByIdQuery**
+
+```
+GetSubscriptionByIdQuery
+- subscriptionId
+```
+
+Permite recuperar una suscripción específica.
+
+**GetPaymentByIdQuery**
+
+```
+GetPaymentByIdQuery
+- paymentId
+```
+
+Permite consultar el estado de un pago.
+
+### Query Handlers
+
+**GetSubscriptionByUserQueryHandler** recupera la suscripción asociada al usuario mediante `ISubscriptionRepository`.
+
+**GetSubscriptionByIdQueryHandler** obtiene una suscripción mediante su identificador.
+
+**GetPaymentByIdQueryHandler** recupera la información de un pago mediante `IPaymentRepository`.
+
+### Event Handling
+
+**PaymentCompletedEventHandler** reacciona al evento `PaymentCompleted` y coordina la activación o renovación de la suscripción asociada.
+
+El flujo principal queda resumido así:
+
+```
+PaymentCompleted
+      ↓
+PaymentCompletedEventHandler
+      ↓
+ActivateSubscriptionCommand
+      o
+RenewSubscriptionCommand
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ActivateSubscriptionCommand` | Command | Solicita activar una suscripción. | Application |
+| `RenewSubscriptionCommand` | Command | Solicita renovar una suscripción. | Application |
+| `SuspendSubscriptionCommand` | Command | Solicita suspender una suscripción. | Application |
+| `CreatePaymentCommand` | Command | Solicita registrar un pago. | Application |
+| `ConfirmPaymentCommand` | Command | Confirma el resultado de un pago. | Application |
+| `ActivateSubscriptionCommandHandler` | Command Handler | Coordina la activación de una suscripción. | Application |
+| `RenewSubscriptionCommandHandler` | Command Handler | Coordina la renovación de una suscripción. | Application |
+| `SuspendSubscriptionCommandHandler` | Command Handler | Coordina la suspensión de una suscripción. | Application |
+| `CreatePaymentCommandHandler` | Command Handler | Coordina el registro y procesamiento del pago. | Application |
+| `ConfirmPaymentCommandHandler` | Command Handler | Actualiza el pago según la confirmación recibida. | Application |
+| `GetSubscriptionByUserQuery` | Query | Consulta la suscripción de un usuario. | Application |
+| `GetSubscriptionByIdQuery` | Query | Consulta una suscripción específica. | Application |
+| `GetPaymentByIdQuery` | Query | Consulta el estado de un pago. | Application |
+| `GetSubscriptionByUserQueryHandler` | Query Handler | Recupera la suscripción asociada al usuario. | Application |
+| `GetSubscriptionByIdQueryHandler` | Query Handler | Recupera una suscripción por identificador. | Application |
+| `GetPaymentByIdQueryHandler` | Query Handler | Recupera un pago por identificador. | Application |
+| `PaymentCompletedEventHandler` | Event Handler | Coordina la activación o renovación después de un pago completado. | Application |
+
+## 5.3.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Subscriptions & Payments** implementa la persistencia de suscripciones y pagos, además de la integración con el proveedor externo encargado del procesamiento de pagos.
+
+### Repository Implementations
+
+**SubscriptionRepository** implementa `ISubscriptionRepository` y gestiona la persistencia de las suscripciones.
+
+Sus principales operaciones son:
+
+```
+save(Subscription)
+findById(SubscriptionId)
+findByUserId(UserId)
+update(Subscription)
+```
+
+**PaymentRepository** implementa `IPaymentRepository` y gestiona el almacenamiento y consulta de los pagos.
+
+```
+save(Payment)
+findById(PaymentId)
+findBySubscriptionId(SubscriptionId)
+update(Payment)
+```
+
+### Persistence Context
+
+**SubscriptionsDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Subscription
+Payment
+```
+
+La persistencia se realiza en PostgreSQL, de acuerdo con las restricciones arquitectónicas definidas para ElectroLink. README
+
+### Persistence Entities
+
+**SubscriptionEntity**
+
+```
+SubscriptionEntity
+- Id
+- UserId
+- PlanType
+- Status
+- StartDate
+- EndDate
+- CreatedAt
+- UpdatedAt
+```
+
+**PaymentEntity**
+
+```
+PaymentEntity
+- Id
+- SubscriptionId
+- Amount
+- Currency
+- Status
+- ProviderReference
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**SubscriptionPersistenceMapper** transforma entre `Subscription` y `SubscriptionEntity`.
+
+**PaymentPersistenceMapper** transforma entre `Payment` y `PaymentEntity`.
+
+### Payment Integration
+
+La integración con pagos se realiza mediante un servicio que abstrae al proveedor externo.
+
+**IPaymentGateway** define el contrato para iniciar y validar pagos.
+
+```
+createPayment()
+verifyPayment()
+```
+
+**StripePaymentGateway** implementa `IPaymentGateway` y se comunica con Stripe, proveedor establecido por las restricciones del proyecto para la facturación SaaS. README
+
+### Webhook Processing
+
+**StripeWebhookHandler** procesa las confirmaciones enviadas por Stripe y transforma el resultado recibido en comandos o eventos internos.
+
+Sus principales responsabilidades son:
+
+```
+processPaymentCompleted()
+processPaymentFailed()
+```
+
+Cuando un pago es confirmado, se genera `PaymentCompleted`. Si el procesamiento no es exitoso, se registra el estado correspondiente del pago.
+
+### Event Publishing
+
+**SubscriptionEventPublisher** publica los eventos relevantes generados por este bounded context:
+
+```
+SubscriptionCreated
+SubscriptionActivated
+SubscriptionRenewed
+SubscriptionSuspended
+PaymentCompleted
+```
+
+Esto permite que otros bounded contexts reaccionen a cambios en el estado de la suscripción sin acceder directamente a sus datos internos.
+
+### Configurations
+
+**SubscriptionEntityConfiguration** define el mapeo relacional de las suscripciones.
+
+**PaymentEntityConfiguration** define las restricciones y relaciones de los pagos.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `SubscriptionRepository` | Repository | Implementa la persistencia de suscripciones. | Infrastructure |
+| `PaymentRepository` | Repository | Implementa la persistencia de pagos. | Infrastructure |
+| `SubscriptionsDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `SubscriptionEntity` | Persistence Entity | Representa una suscripción almacenada. | Infrastructure |
+| `PaymentEntity` | Persistence Entity | Representa un pago almacenado. | Infrastructure |
+| `SubscriptionPersistenceMapper` | Mapper | Convierte entre dominio y persistencia de suscripciones. | Infrastructure |
+| `PaymentPersistenceMapper` | Mapper | Convierte entre dominio y persistencia de pagos. | Infrastructure |
+| `IPaymentGateway` | Integration Interface | Define la comunicación con el proveedor de pagos. | Infrastructure |
+| `StripePaymentGateway` | External Service Adapter | Implementa la integración con Stripe. | Infrastructure |
+| `StripeWebhookHandler` | Webhook Handler | Procesa eventos recibidos desde Stripe. | Infrastructure |
+| `SubscriptionEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `SubscriptionEntityConfiguration` | Persistence Configuration | Define el mapeo de suscripciones. | Infrastructure |
+| `PaymentEntityConfiguration` | Persistence Configuration | Define el mapeo de pagos. | Infrastructure |
+
+### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram de Subscriptions & Payments representa los componentes encargados de gestionar el ciclo de vida de las suscripciones, registrar pagos e integrar ElectroLink con Stripe para su procesamiento.
+
+![](assets-emergentes/C4Diagrams/SubscriptionsPaymentsComponentDiagram.png)
+
+### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.3.6.1 Bounded Context Domain Layer Class Diagram.
+
+![](assets-emergentes/ClassDiagrams/P&PClassDiagram.png)
+
+#### 5.3.6.2 Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/P&PDatabase.png)
+---
+
+## 5.4. Store & Electrical Asset Management Bounded Context
+
+El bounded context **Store & Electrical Asset Management** administra los locales, las áreas eléctricas y los equipos que forman parte de la infraestructura monitoreada por ElectroLink. Esta delimitación está alineada con la responsabilidad definida en la documentación actual del proyecto. README
+
+En el Event Storming actual aparecen como elementos principales `RegisterStore`, `RegisterEquipment`, `AssignEquipmentToArea`, `Store`, `Area`, `Equipment`, `AreaCreated`, `EquipmentRegistered` y `EquipmentAssignedToArea`.
+
+### 5.4.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la estructura física monitoreada: locales, áreas y equipos eléctricos.
+
+### Aggregate Root
+
+**Store** es el aggregate root principal. Representa un local registrado en ElectroLink y contiene las áreas eléctricas que forman parte de su infraestructura.
+
+Sus principales responsabilidades son:
+
+-   registrar el local;
+-   mantener sus áreas;
+-   asociar equipos a las áreas correspondientes;
+-   controlar que los equipos pertenezcan a una ubicación válida dentro del local.
+
+### Entities
+
+**Area** representa una zona dentro del local donde existen equipos eléctricos monitoreados.
+
+**Equipment** representa un activo eléctrico o equipo de cocina registrado dentro del establecimiento.
+
+La relación principal del modelo es:
+
+```
+Store
+  └── Area
+        └── Equipment
+```
+
+### Value Objects y Enumerations
+
+**StoreId** identifica de manera única un local.
+
+**AreaId** identifica un área dentro del local.
+
+**EquipmentId** identifica un equipo registrado.
+
+**EquipmentType** representa la categoría del equipo eléctrico.
+
+**EquipmentStatus** representa su estado operativo, considerando inicialmente:
+
+```
+ACTIVE
+INACTIVE
+OUT_OF_SERVICE
+```
+
+### Repository Interfaces
+
+**IStoreRepository** define las operaciones necesarias para persistir y consultar locales.
+
+```
+save(Store)
+findById(StoreId)
+update(Store)
+```
+
+**IEquipmentRepository** permite consultar y persistir equipos cuando se requiera acceso directo sobre ellos.
+
+```
+save(Equipment)
+findById(EquipmentId)
+findByAreaId(AreaId)
+update(Equipment)
+```
+
+### Domain Service
+
+**EquipmentAssignmentService** concentra las reglas asociadas a la asignación de equipos dentro de las áreas del local.
+
+Sus principales operaciones son:
+
+```
+canAssignEquipment(Equipment, Area)
+assignEquipment(Equipment, Area)
+```
+
+### Eventos del dominio
+
+Los principales eventos asociados a este bounded context son:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+`EquipmentAssignedToArea` resulta especialmente relevante porque permite que otros bounded contexts, como **IoT Device Management**, conozcan que un equipo ya tiene una ubicación definida dentro de la infraestructura.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Store` | Aggregate Root | Representa un local y organiza su infraestructura eléctrica. | Domain |
+| `Area` | Entity | Representa una zona del local. | Domain |
+| `Equipment` | Entity | Representa un equipo eléctrico registrado. | Domain |
+| `StoreId` | Value Object | Identifica un local. | Domain |
+| `AreaId` | Value Object | Identifica un área. | Domain |
+| `EquipmentId` | Value Object | Identifica un equipo. | Domain |
+| `EquipmentType` | Enumeration | Define la categoría del equipo. | Domain |
+| `EquipmentStatus` | Enumeration | Define el estado operativo del equipo. | Domain |
+| `IStoreRepository` | Repository Interface | Define la persistencia de locales. | Domain |
+| `IEquipmentRepository` | Repository Interface | Define la persistencia y consulta de equipos. | Domain |
+| `EquipmentAssignmentService` | Domain Service | Aplica las reglas de asignación de equipos a áreas. | Domain |
+
+## 5.4.2. Interface Layer
+
+La **Interface Layer** del bounded context **Store & Electrical Asset Management** recibe las solicitudes relacionadas con la gestión de locales, áreas y equipos eléctricos. Su función es transformar los datos de entrada y delegar el procesamiento hacia la Application Layer.
+
+### Controllers
+
+**StoreController** gestiona las operaciones relacionadas con los locales.
+
+Sus principales responsabilidades son:
+
+-   registrar un local;
+-   consultar la información de un local;
+-   actualizar sus datos principales.
+
+**AreaController** gestiona las áreas asociadas a un local.
+
+Sus responsabilidades son:
+
+-   crear áreas;
+-   consultar áreas por local;
+-   actualizar su información.
+
+**EquipmentController** gestiona los equipos eléctricos registrados.
+
+Sus principales responsabilidades son:
+
+-   registrar equipos;
+-   consultar equipos;
+-   actualizar su información;
+-   asignar equipos a un área.
+
+### Request DTOs
+
+**RegisterStoreRequest**
+
+```
+RegisterStoreRequest
+- name
+- address
+```
+
+**CreateAreaRequest**
+
+```
+CreateAreaRequest
+- storeId
+- name
+```
+
+**RegisterEquipmentRequest**
+
+```
+RegisterEquipmentRequest
+- storeId
+- name
+- equipmentType
+```
+
+**AssignEquipmentToAreaRequest**
+
+```
+AssignEquipmentToAreaRequest
+- equipmentId
+- areaId
+```
+
+### Response DTOs
+
+**StoreResponse**
+
+```
+StoreResponse
+- storeId
+- name
+- address
+```
+
+**AreaResponse**
+
+```
+AreaResponse
+- areaId
+- storeId
+- name
+```
+
+**EquipmentResponse**
+
+```
+EquipmentResponse
+- equipmentId
+- name
+- equipmentType
+- status
+- areaId
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RegisterStoreCommandFromRequestAssembler
+CreateAreaCommandFromRequestAssembler
+RegisterEquipmentCommandFromRequestAssembler
+AssignEquipmentToAreaCommandFromRequestAssembler
+StoreResponseAssembler
+AreaResponseAssembler
+EquipmentResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `StoreController` | Controller | Gestiona las operaciones sobre locales. | Interface |
+| `AreaController` | Controller | Gestiona las áreas asociadas a un local. | Interface |
+| `EquipmentController` | Controller | Gestiona los equipos eléctricos y su asignación. | Interface |
+| `RegisterStoreRequest` | Request DTO | Contiene los datos para registrar un local. | Interface |
+| `CreateAreaRequest` | Request DTO | Contiene los datos para crear un área. | Interface |
+| `RegisterEquipmentRequest` | Request DTO | Contiene los datos necesarios para registrar un equipo. | Interface |
+| `AssignEquipmentToAreaRequest` | Request DTO | Contiene la información necesaria para asignar un equipo a un área. | Interface |
+| `StoreResponse` | Response DTO | Representa la información de un local. | Interface |
+| `AreaResponse` | Response DTO | Representa la información de un área. | Interface |
+| `EquipmentResponse` | Response DTO | Representa la información de un equipo eléctrico. | Interface |
+| `RegisterStoreCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro en un command. | Interface |
+| `CreateAreaCommandFromRequestAssembler` | Assembler | Convierte la solicitud de creación de área en un command. | Interface |
+| `RegisterEquipmentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro de equipo en un command. | Interface |
+| `AssignEquipmentToAreaCommandFromRequestAssembler` | Assembler | Convierte la solicitud de asignación en un command. | Interface |
+| `StoreResponseAssembler` | Assembler | Construye la respuesta del local. | Interface |
+| `AreaResponseAssembler` | Assembler | Construye la respuesta del área. | Interface |
+| `EquipmentResponseAssembler` | Assembler | Construye la respuesta del equipo. | Interface |
+
+## 5.4.3. Application Layer
+
+La **Application Layer** del bounded context **Store & Electrical Asset Management** coordina los casos de uso relacionados con el registro de locales, creación de áreas, registro de equipos y asignación de equipos a una ubicación dentro del establecimiento.
+
+### Commands
+
+**RegisterStoreCommand**
+
+```
+RegisterStoreCommand
+- name
+- address
+```
+
+**CreateAreaCommand**
+
+```
+CreateAreaCommand
+- storeId
+- name
+```
+
+**RegisterEquipmentCommand**
+
+```
+RegisterEquipmentCommand
+- storeId
+- name
+- equipmentType
+```
+
+**AssignEquipmentToAreaCommand**
+
+```
+AssignEquipmentToAreaCommand
+- equipmentId
+- areaId
+```
+
+### Command Handlers
+
+**RegisterStoreCommandHandler** coordina el registro de un nuevo local y genera `StoreRegistered`.
+
+**CreateAreaCommandHandler** crea un área asociada a un local y genera `AreaCreated`.
+
+**RegisterEquipmentCommandHandler** registra un nuevo equipo eléctrico y genera `EquipmentRegistered`.
+
+**AssignEquipmentToAreaCommandHandler** valida la asignación del equipo, actualiza su ubicación dentro del local y genera `EquipmentAssignedToArea`.
+
+### Queries
+
+**GetStoreByIdQuery**
+
+```
+GetStoreByIdQuery
+- storeId
+```
+
+**GetAreasByStoreQuery**
+
+```
+GetAreasByStoreQuery
+- storeId
+```
+
+**GetEquipmentByIdQuery**
+
+```
+GetEquipmentByIdQuery
+- equipmentId
+```
+
+**GetEquipmentByAreaQuery**
+
+```
+GetEquipmentByAreaQuery
+- areaId
+```
+
+### Query Handlers
+
+**GetStoreByIdQueryHandler** recupera la información de un local.
+
+**GetAreasByStoreQueryHandler** consulta las áreas asociadas a un establecimiento.
+
+**GetEquipmentByIdQueryHandler** recupera la información de un equipo específico.
+
+**GetEquipmentByAreaQueryHandler** obtiene los equipos asignados a un área.
+
+### Event Publishing
+
+Los handlers de aplicación coordinan la generación de los eventos:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+`EquipmentAssignedToArea` es el evento más relevante para la integración con **IoT Device Management**, ya que indica que el equipo ya cuenta con una ubicación definida dentro del establecimiento.
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterStoreCommand` | Command | Solicita registrar un local. | Application |
+| `CreateAreaCommand` | Command | Solicita crear un área dentro de un local. | Application |
+| `RegisterEquipmentCommand` | Command | Solicita registrar un equipo eléctrico. | Application |
+| `AssignEquipmentToAreaCommand` | Command | Solicita asignar un equipo a un área. | Application |
+| `RegisterStoreCommandHandler` | Command Handler | Coordina el registro de locales. | Application |
+| `CreateAreaCommandHandler` | Command Handler | Coordina la creación de áreas. | Application |
+| `RegisterEquipmentCommandHandler` | Command Handler | Coordina el registro de equipos. | Application |
+| `AssignEquipmentToAreaCommandHandler` | Command Handler | Coordina la asignación de equipos a áreas. | Application |
+| `GetStoreByIdQuery` | Query | Consulta un local por su identificador. | Application |
+| `GetAreasByStoreQuery` | Query | Consulta las áreas de un local. | Application |
+| `GetEquipmentByIdQuery` | Query | Consulta un equipo específico. | Application |
+| `GetEquipmentByAreaQuery` | Query | Consulta los equipos de un área. | Application |
+| `GetStoreByIdQueryHandler` | Query Handler | Recupera un local. | Application |
+| `GetAreasByStoreQueryHandler` | Query Handler | Recupera las áreas asociadas a un local. | Application |
+| `GetEquipmentByIdQueryHandler` | Query Handler | Recupera un equipo eléctrico. | Application |
+| `GetEquipmentByAreaQueryHandler` | Query Handler | Recupera los equipos asignados a un área. | Application |
+
+## 5.4.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Store & Electrical Asset Management** implementa la persistencia de locales, áreas y equipos, además de los mecanismos necesarios para publicar los eventos generados por el contexto.
+
+### Repository Implementations
+
+**StoreRepository** implementa `IStoreRepository` y gestiona la persistencia de los locales y sus áreas.
+
+Sus principales operaciones son:
+
+```
+save(Store)
+findById(StoreId)
+update(Store)
+```
+
+**EquipmentRepository** implementa `IEquipmentRepository` y gestiona el almacenamiento y consulta de los equipos registrados.
+
+```
+save(Equipment)
+findById(EquipmentId)
+findByAreaId(AreaId)
+update(Equipment)
+```
+
+### Persistence Context
+
+**StoreAssetsDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Store
+Area
+Equipment
+```
+
+### Persistence Entities
+
+**StoreEntity**
+
+```
+StoreEntity
+- Id
+- Name
+- Address
+- CreatedAt
+- UpdatedAt
+```
+
+**AreaEntity**
+
+```
+AreaEntity
+- Id
+- StoreId
+- Name
+- CreatedAt
+- UpdatedAt
+```
+
+**EquipmentEntity**
+
+```
+EquipmentEntity
+- Id
+- StoreId
+- AreaId
+- Name
+- EquipmentType
+- Status
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**StorePersistenceMapper** transforma entre `Store` y `StoreEntity`.
+
+**AreaPersistenceMapper** transforma entre `Area` y `AreaEntity`.
+
+**EquipmentPersistenceMapper** transforma entre `Equipment` y `EquipmentEntity`.
+
+### Event Publishing
+
+**StoreAssetEventPublisher** publica los eventos relevantes generados por el bounded context:
+
+```
+StoreRegistered
+AreaCreated
+EquipmentRegistered
+EquipmentAssignedToArea
+```
+
+Estos eventos permiten que otros bounded contexts conozcan los cambios relevantes sin acceder directamente a la persistencia interna.
+
+### Configurations
+
+**StoreEntityConfiguration** define el mapeo relacional del local.
+
+**AreaEntityConfiguration** define la relación entre las áreas y su local correspondiente.
+
+**EquipmentEntityConfiguration** define la persistencia de los equipos y su asociación con las áreas.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `StoreRepository` | Repository | Implementa la persistencia de locales. | Infrastructure |
+| `EquipmentRepository` | Repository | Implementa la persistencia de equipos. | Infrastructure |
+| `StoreAssetsDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `StoreEntity` | Persistence Entity | Representa un local almacenado. | Infrastructure |
+| `AreaEntity` | Persistence Entity | Representa un área almacenada. | Infrastructure |
+| `EquipmentEntity` | Persistence Entity | Representa un equipo almacenado. | Infrastructure |
+| `StorePersistenceMapper` | Mapper | Convierte entre dominio y persistencia del local. | Infrastructure |
+| `AreaPersistenceMapper` | Mapper | Convierte entre dominio y persistencia del área. | Infrastructure |
+| `EquipmentPersistenceMapper` | Mapper | Convierte entre dominio y persistencia del equipo. | Infrastructure |
+| `StoreAssetEventPublisher` | Event Publisher | Publica los eventos generados por el bounded context. | Infrastructure |
+| `StoreEntityConfiguration` | Persistence Configuration | Define el mapeo del local. | Infrastructure |
+| `AreaEntityConfiguration` | Persistence Configuration | Define el mapeo de las áreas. | Infrastructure |
+| `EquipmentEntityConfiguration` | Persistence Configuration | Define el mapeo de los equipos. | Infrastructure |
+
+### 5.4.5 Bounded Context Software Architecture Component Level Diagrams.
+
+Este diagrama representa los componentes encargados de administrar locales, áreas y equipos eléctricos, además de publicar EquipmentAssignedToArea para su posterior uso por IoT Device Management.
+
+![](assets-emergentes/C4Diagrams/StoreElectricalAssetComponentDiagram.png)
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagram 
+
+![](assets-emergentes/ClassDiagrams/StoreElectricalUML.png)
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/StoreElectricalDatabase.png)
+
+---
+
+## 5.5. IoT Device Management Bounded Context
+
+El bounded context **IoT Device Management** gestiona el registro, vinculación con equipos, configuración, conectividad y estado operativo de los dispositivos IoT de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `IoTDevice`, `LinkDeviceToEquipment`, `ConfigureDevice`, `DeviceRegistered`, `DeviceLinkedToEquipment`, `DeviceConfigured`, `DeviceConnected` y `DeviceDisconnected`.
+
+### 5.5.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la identidad, configuración, vinculación y estado operativo de los dispositivos IoT.
+
+### Aggregate Root
+
+**IoTDevice** es el aggregate root principal. Representa un dispositivo IoT registrado dentro de ElectroLink.
+
+Sus principales responsabilidades son:
+
+-   registrar el dispositivo;
+-   vincularlo con un equipo eléctrico;
+-   actualizar su configuración;
+-   controlar su estado de conectividad;
+-   registrar su última comunicación conocida.
+
+### Value Objects y Enumerations
+
+**DeviceId** identifica de manera única un dispositivo IoT.
+
+**EquipmentId** representa el equipo eléctrico al que se encuentra vinculado.
+
+**DeviceConfiguration** agrupa los parámetros de configuración necesarios para la operación del dispositivo.
+
+**DeviceStatus** representa el estado operativo:
+
+```
+REGISTERED
+CONFIGURED
+CONNECTED
+DISCONNECTED
+```
+
+**ConnectivityStatus** representa específicamente el estado de comunicación:
+
+```
+ONLINE
+OFFLINE
+```
+
+La detección de dispositivos desconectados es relevante para la confiabilidad del sistema, ya que ElectroLink debe identificar sensores que dejan de transmitir para evitar puntos ciegos de monitoreo. README
+
+### Repository Interface
+
+**IIoTDeviceRepository** define las operaciones necesarias para persistir y consultar dispositivos.
+
+```
+save(IoTDevice)
+findById(DeviceId)
+findByEquipmentId(EquipmentId)
+update(IoTDevice)
+exists(DeviceId)
+```
+
+### Domain Service
+
+**DeviceLinkingService** concentra las reglas relacionadas con la vinculación entre un dispositivo IoT y un equipo eléctrico.
+
+```
+canLink(IoTDevice, EquipmentId)
+linkToEquipment(IoTDevice, EquipmentId)
+```
+
+**DeviceConnectivityService** concentra la evaluación del estado de conectividad del dispositivo.
+
+```
+evaluateConnectivity(IoTDevice)
+markConnected(IoTDevice)
+markDisconnected(IoTDevice)
+```
+
+### Eventos del dominio
+
+Los eventos principales identificados son:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+`DeviceLinkedToEquipment` mantiene la relación con el bounded context anterior, mientras que `DeviceConnected` permite que los procesos posteriores de monitoreo sepan que el dispositivo se encuentra disponible para transmitir información.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDevice` | Aggregate Root | Representa un dispositivo IoT y su estado operativo. | Domain |
+| `DeviceId` | Value Object | Identifica de manera única un dispositivo. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo eléctrico vinculado. | Domain |
+| `DeviceConfiguration` | Value Object | Representa la configuración del dispositivo. | Domain |
+| `DeviceStatus` | Enumeration | Define el estado general del dispositivo. | Domain |
+| `ConnectivityStatus` | Enumeration | Define su estado de conectividad. | Domain |
+| `IIoTDeviceRepository` | Repository Interface | Define la persistencia de dispositivos IoT. | Domain |
+| `DeviceLinkingService` | Domain Service | Gestiona las reglas de vinculación con equipos. | Domain |
+| `DeviceConnectivityService` | Domain Service | Evalúa y actualiza el estado de conectividad. | Domain |
+
+## 5.5.2. Interface Layer
+
+La **Interface Layer** del bounded context **IoT Device Management** recibe las solicitudes relacionadas con el registro, vinculación, configuración y consulta del estado de los dispositivos IoT.
+
+### Controllers
+
+**IoTDeviceController** gestiona las operaciones principales sobre los dispositivos.
+
+Sus responsabilidades son:
+
+-   registrar dispositivos;
+-   consultar su información;
+-   consultar su estado;
+-   actualizar su configuración.
+
+**DeviceLinkController** gestiona la vinculación entre un dispositivo IoT y un equipo eléctrico.
+
+### Request DTOs
+
+**RegisterDeviceRequest**
+
+```
+RegisterDeviceRequest
+- deviceId
+- metadata
+```
+
+**LinkDeviceToEquipmentRequest**
+
+```
+LinkDeviceToEquipmentRequest
+- deviceId
+- equipmentId
+```
+
+**ConfigureDeviceRequest**
+
+```
+ConfigureDeviceRequest
+- deviceId
+- configuration
+```
+
+### Response DTOs
+
+**IoTDeviceResponse**
+
+```
+IoTDeviceResponse
+- deviceId
+- equipmentId
+- status
+- connectivityStatus
+- lastSeenAt
+```
+
+**DeviceConfigurationResponse**
+
+```
+DeviceConfigurationResponse
+- deviceId
+- configuration
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RegisterDeviceCommandFromRequestAssembler
+LinkDeviceToEquipmentCommandFromRequestAssembler
+ConfigureDeviceCommandFromRequestAssembler
+IoTDeviceResponseAssembler
+DeviceConfigurationResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDeviceController` | Controller | Gestiona el registro, consulta y configuración de dispositivos. | Interface |
+| `DeviceLinkController` | Controller | Gestiona la vinculación entre dispositivos y equipos. | Interface |
+| `RegisterDeviceRequest` | Request DTO | Contiene los datos necesarios para registrar un dispositivo. | Interface |
+| `LinkDeviceToEquipmentRequest` | Request DTO | Contiene la información para vincular un dispositivo. | Interface |
+| `ConfigureDeviceRequest` | Request DTO | Contiene la configuración del dispositivo. | Interface |
+| `IoTDeviceResponse` | Response DTO | Representa la información y estado del dispositivo. | Interface |
+| `DeviceConfigurationResponse` | Response DTO | Representa la configuración actual del dispositivo. | Interface |
+| `RegisterDeviceCommandFromRequestAssembler` | Assembler | Convierte la solicitud de registro en un command. | Interface |
+| `LinkDeviceToEquipmentCommandFromRequestAssembler` | Assembler | Convierte la solicitud de vinculación en un command. | Interface |
+| `ConfigureDeviceCommandFromRequestAssembler` | Assembler | Convierte la configuración recibida en un command. | Interface |
+| `IoTDeviceResponseAssembler` | Assembler | Construye la respuesta del dispositivo. | Interface |
+| `DeviceConfigurationResponseAssembler` | Assembler | Construye la respuesta de configuración. | Interface |
+
+## 5.5.3. Application Layer
+
+La **Application Layer** del bounded context **IoT Device Management** coordina los casos de uso relacionados con el registro, vinculación, configuración y actualización del estado de los dispositivos IoT.
+
+### Commands
+
+**RegisterDeviceCommand**
+
+```
+RegisterDeviceCommand
+- deviceId
+- metadata
+```
+
+**LinkDeviceToEquipmentCommand**
+
+```
+LinkDeviceToEquipmentCommand
+- deviceId
+- equipmentId
+```
+
+**ConfigureDeviceCommand**
+
+```
+ConfigureDeviceCommand
+- deviceId
+- configuration
+```
+
+**UpdateDeviceConnectivityCommand**
+
+```
+UpdateDeviceConnectivityCommand
+- deviceId
+- connectivityStatus
+- lastSeenAt
+```
+
+### Command Handlers
+
+**RegisterDeviceCommandHandler** coordina el registro de un nuevo dispositivo y genera `DeviceRegistered`.
+
+**LinkDeviceToEquipmentCommandHandler** recupera el dispositivo, valida la vinculación con el equipo y genera `DeviceLinkedToEquipment`.
+
+**ConfigureDeviceCommandHandler** actualiza la configuración del dispositivo y genera `DeviceConfigured`.
+
+**UpdateDeviceConnectivityCommandHandler** actualiza el estado de conexión del dispositivo y genera `DeviceConnected`o `DeviceDisconnected`, según corresponda.
+
+### Queries
+
+**GetDeviceByIdQuery**
+
+```
+GetDeviceByIdQuery
+- deviceId
+```
+
+**GetDeviceByEquipmentQuery**
+
+```
+GetDeviceByEquipmentQuery
+- equipmentId
+```
+
+**GetDeviceStatusQuery**
+
+```
+GetDeviceStatusQuery
+- deviceId
+```
+
+### Query Handlers
+
+**GetDeviceByIdQueryHandler** recupera la información de un dispositivo por su identificador.
+
+**GetDeviceByEquipmentQueryHandler** obtiene el dispositivo asociado a un equipo eléctrico.
+
+**GetDeviceStatusQueryHandler** consulta el estado operativo y de conectividad del dispositivo.
+
+### Event Handling
+
+**EquipmentAssignedToAreaEventHandler** recibe el evento `EquipmentAssignedToArea` proveniente de **Store & Electrical Asset Management** y deja disponible el equipo para su posterior vinculación con un dispositivo IoT.
+
+Los principales eventos generados por esta capa son:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RegisterDeviceCommand` | Command | Solicita registrar un dispositivo IoT. | Application |
+| `LinkDeviceToEquipmentCommand` | Command | Solicita vincular un dispositivo con un equipo. | Application |
+| `ConfigureDeviceCommand` | Command | Solicita actualizar la configuración del dispositivo. | Application |
+| `UpdateDeviceConnectivityCommand` | Command | Solicita actualizar su estado de conectividad. | Application |
+| `RegisterDeviceCommandHandler` | Command Handler | Coordina el registro del dispositivo. | Application |
+| `LinkDeviceToEquipmentCommandHandler` | Command Handler | Coordina la vinculación con un equipo. | Application |
+| `ConfigureDeviceCommandHandler` | Command Handler | Coordina la configuración del dispositivo. | Application |
+| `UpdateDeviceConnectivityCommandHandler` | Command Handler | Actualiza el estado de conexión. | Application |
+| `GetDeviceByIdQuery` | Query | Consulta un dispositivo por identificador. | Application |
+| `GetDeviceByEquipmentQuery` | Query | Consulta el dispositivo asociado a un equipo. | Application |
+| `GetDeviceStatusQuery` | Query | Consulta el estado del dispositivo. | Application |
+| `GetDeviceByIdQueryHandler` | Query Handler | Recupera un dispositivo. | Application |
+| `GetDeviceByEquipmentQueryHandler` | Query Handler | Recupera el dispositivo vinculado a un equipo. | Application |
+| `GetDeviceStatusQueryHandler` | Query Handler | Recupera el estado operativo y de conectividad. | Application |
+| `EquipmentAssignedToAreaEventHandler` | Event Handler | Recibe la disponibilidad del equipo desde el contexto de activos. | Application |
+
+## 5.5.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **IoT Device Management** implementa la persistencia de los dispositivos IoT, su configuración, su relación con equipos eléctricos y los mecanismos necesarios para actualizar su estado de conectividad.
+
+### Repository Implementation
+
+**IoTDeviceRepository** implementa `IIoTDeviceRepository` y gestiona la persistencia de los dispositivos registrados.
+
+Sus principales operaciones son:
+
+```
+save(IoTDevice)
+findById(DeviceId)
+findByEquipmentId(EquipmentId)
+update(IoTDevice)
+exists(DeviceId)
+```
+
+### Persistence Context
+
+**IoTDeviceDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+IoTDevice
+DeviceConfiguration
+```
+
+### Persistence Entities
+
+**IoTDeviceEntity**
+
+```
+IoTDeviceEntity
+- Id
+- EquipmentId
+- Status
+- ConnectivityStatus
+- LastSeenAt
+- CreatedAt
+- UpdatedAt
+```
+
+**DeviceConfigurationEntity**
+
+```
+DeviceConfigurationEntity
+- Id
+- DeviceId
+- ConfigurationData
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**IoTDevicePersistenceMapper** transforma entre `IoTDevice` y `IoTDeviceEntity`.
+
+**DeviceConfigurationPersistenceMapper** transforma entre `DeviceConfiguration` y `DeviceConfigurationEntity`.
+
+### Connectivity Monitoring
+
+**DeviceConnectivityMonitor** evalúa periódicamente la última comunicación registrada por cada dispositivo y determina si debe considerarse conectado o desconectado.
+
+Cuando detecta un cambio de estado, solicita la actualización correspondiente mediante `UpdateDeviceConnectivityCommand`.
+
+Esto resulta relevante porque ElectroLink debe detectar dispositivos que dejan de transmitir para reducir puntos ciegos en el monitoreo. README
+
+### Device Communication
+
+**DeviceMessageConsumer** recibe los mensajes enviados por los dispositivos IoT y obtiene la información necesaria para identificar al dispositivo y actualizar su actividad.
+
+La interpretación de las mediciones eléctricas no pertenece a este bounded context, sino a **Electrical Monitoring**. Aquí únicamente se mantiene el estado y disponibilidad del dispositivo.
+
+### Event Publishing
+
+**IoTDeviceEventPublisher** publica los eventos relevantes generados por este contexto:
+
+```
+DeviceRegistered
+DeviceLinkedToEquipment
+DeviceConfigured
+DeviceConnected
+DeviceDisconnected
+```
+
+Estos eventos permiten comunicar cambios del dispositivo sin exponer directamente su modelo interno.
+
+### Configurations
+
+**IoTDeviceEntityConfiguration** define el mapeo relacional del dispositivo.
+
+**DeviceConfigurationEntityConfiguration** define la relación entre el dispositivo y su configuración.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `IoTDeviceRepository` | Repository | Implementa la persistencia de dispositivos IoT. | Infrastructure |
+| `IoTDeviceDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `IoTDeviceEntity` | Persistence Entity | Representa un dispositivo almacenado. | Infrastructure |
+| `DeviceConfigurationEntity` | Persistence Entity | Representa la configuración persistida. | Infrastructure |
+| `IoTDevicePersistenceMapper` | Mapper | Convierte entre dominio y persistencia del dispositivo. | Infrastructure |
+| `DeviceConfigurationPersistenceMapper` | Mapper | Convierte entre configuración de dominio y persistencia. | Infrastructure |
+| `DeviceConnectivityMonitor` | Infrastructure Service | Evalúa el estado de conectividad de los dispositivos. | Infrastructure |
+| `DeviceMessageConsumer` | Message Consumer | Recibe mensajes enviados por los dispositivos IoT. | Infrastructure |
+| `IoTDeviceEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `IoTDeviceEntityConfiguration` | Persistence Configuration | Define el mapeo del dispositivo. | Infrastructure |
+| `DeviceConfigurationEntityConfiguration` | Persistence Configuration | Define el mapeo de su configuración. | Infrastructure |
+
+### 5.5.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa los componentes responsables del registro, configuración, vinculación y seguimiento de conectividad de los dispositivos IoT. El contexto mantiene relación con Store & Electrical Asset Management para identificar los equipos disponibles y con Electrical Monitoring para permitir el procesamiento posterior de la información proveniente de los dispositivos.
+
+![](assets-emergentes/C4Diagrams/IoTDeviceManagementComponentDiagram.png)
+
+#### 5.5.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/IoTUML.png)
+
+#### 5.5.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Database-IoT.png)
+
+## 5.6. Electrical Monitoring Bounded Context
+
+El bounded context **Electrical Monitoring** recibe y valida las mediciones eléctricas provenientes de los dispositivos IoT, evalúa el estado de los equipos y detecta condiciones anómalas o umbrales excedidos. Esta responsabilidad está definida explícitamente en la documentación actual de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `ReceiveMeasurement`, `ValidateMeasurement`, `DetectAnomaly`, `Measurement`, `ElectricalMeasurement`, `ThresholdExceeded` y `AnomalyDetected`.
+
+### 5.6.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con las mediciones eléctricas, su validación y la evaluación de condiciones de riesgo.
+
+### Aggregate Root
+
+**ElectricalMonitoring** es el aggregate root principal. Representa el estado de monitoreo asociado a un dispositivo o equipo y coordina la evaluación de las mediciones recibidas.
+
+Sus principales responsabilidades son:
+
+-   registrar mediciones válidas;
+-   evaluar las mediciones frente a los umbrales configurados;
+-   detectar condiciones anómalas;
+-   mantener el estado actual del monitoreo.
+
+### Entity
+
+**ElectricalMeasurement** representa una medición eléctrica recibida desde un dispositivo IoT.
+
+Contiene los valores necesarios para evaluar el comportamiento eléctrico y térmico del equipo.
+
+### Value Objects
+
+**MonitoringId** identifica una instancia de monitoreo.
+
+**DeviceId** identifica el dispositivo que originó la medición.
+
+**EquipmentId** identifica el equipo monitoreado.
+
+**MeasurementValue** representa un valor medido junto con su unidad.
+
+**Threshold** representa los límites configurados utilizados para determinar si una medición se encuentra dentro de los valores permitidos.
+
+**MeasurementTimestamp** representa el instante en que se registró la medición.
+
+La documentación del proyecto contempla variables como corriente, voltaje, temperatura y consumo energético dentro de la telemetría eléctrica. README
+
+### Enumerations
+
+**MeasurementType** identifica el tipo de medición:
+
+```
+CURRENT
+VOLTAGE
+TEMPERATURE
+POWER
+ENERGY
+RESIDUAL_CURRENT
+```
+
+**MonitoringStatus** representa el estado calculado del equipo:
+
+```
+NORMAL
+WARNING
+CRITICAL
+```
+
+Esta clasificación es coherente con el modelo de semáforo utilizado en ElectroLink para representar estados seguros, preventivos y críticos. README
+
+### Repository Interfaces
+
+**IMonitoringRepository** define las operaciones necesarias para mantener el estado del monitoreo.
+
+```
+save(ElectricalMonitoring)
+findByEquipmentId(EquipmentId)
+update(ElectricalMonitoring)
+```
+
+**IMeasurementRepository** define las operaciones de persistencia y consulta de las mediciones.
+
+```
+save(ElectricalMeasurement)
+findByDeviceId(DeviceId)
+findByEquipmentId(EquipmentId)
+findLatestByEquipmentId(EquipmentId)
+```
+
+### Domain Services
+
+**MeasurementValidationService** valida que las mediciones recibidas sean consistentes antes de ser procesadas.
+
+```
+validate(ElectricalMeasurement)
+isValidRange(ElectricalMeasurement)
+```
+
+**ThresholdEvaluationService** compara una medición con los límites configurados.
+
+```
+evaluate(ElectricalMeasurement, Threshold)
+isExceeded(ElectricalMeasurement, Threshold)
+```
+
+**AnomalyDetectionService** determina si las mediciones representan un comportamiento anómalo del equipo.
+
+```
+detectAnomaly(ElectricalMeasurement)
+determineMonitoringStatus(ElectricalMeasurement)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+MeasurementReceived
+MeasurementValidated
+ThresholdExceeded
+AnomalyDetected
+```
+
+`ThresholdExceeded` y `AnomalyDetected` son especialmente importantes, ya que permiten que **Alert Management** genere las alertas correspondientes sin acoplar directamente ambos bounded contexts.
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ElectricalMonitoring` | Aggregate Root | Gestiona el estado de monitoreo de un equipo. | Domain |
+| `ElectricalMeasurement` | Entity | Representa una medición eléctrica o térmica recibida. | Domain |
+| `MonitoringId` | Value Object | Identifica una instancia de monitoreo. | Domain |
+| `DeviceId` | Value Object | Identifica el dispositivo de origen. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo monitoreado. | Domain |
+| `MeasurementValue` | Value Object | Representa un valor medido y su unidad. | Domain |
+| `Threshold` | Value Object | Representa los límites de evaluación. | Domain |
+| `MeasurementTimestamp` | Value Object | Representa el instante de la medición. | Domain |
+| `MeasurementType` | Enumeration | Define el tipo de medición. | Domain |
+| `MonitoringStatus` | Enumeration | Define el estado resultante del monitoreo. | Domain |
+| `IMonitoringRepository` | Repository Interface | Define la persistencia del estado de monitoreo. | Domain |
+| `IMeasurementRepository` | Repository Interface | Define la persistencia y consulta de mediciones. | Domain |
+| `MeasurementValidationService` | Domain Service | Valida las mediciones recibidas. | Domain |
+| `ThresholdEvaluationService` | Domain Service | Evalúa las mediciones frente a umbrales. | Domain |
+| `AnomalyDetectionService` | Domain Service | Detecta comportamientos anómalos. | Domain |
+
+## 5.6.2. Interface Layer
+
+La **Interface Layer** del bounded context **Electrical Monitoring** recibe las mediciones provenientes de los dispositivos IoT y expone las consultas relacionadas con el estado eléctrico de los equipos.
+
+### Controllers
+
+**ElectricalMonitoringController** gestiona las operaciones de consulta del monitoreo eléctrico.
+
+Sus principales responsabilidades son:
+
+-   consultar el estado actual de un equipo;
+-   consultar la última medición registrada;
+-   consultar el historial reciente de mediciones.
+
+**MeasurementController** recibe y procesa las mediciones enviadas hacia el bounded context.
+
+Sus responsabilidades son:
+
+-   recibir nuevas mediciones;
+-   validar la estructura de la solicitud;
+-   delegar el procesamiento hacia la Application Layer.
+
+### Request DTOs
+
+**ReceiveMeasurementRequest**
+
+```
+ReceiveMeasurementRequest
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+### Response DTOs
+
+**MonitoringStatusResponse**
+
+```
+MonitoringStatusResponse
+- equipmentId
+- monitoringStatus
+- lastMeasurementAt
+```
+
+**ElectricalMeasurementResponse**
+
+```
+ElectricalMeasurementResponse
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+**MeasurementHistoryResponse**
+
+```
+MeasurementHistoryResponse
+- equipmentId
+- measurements
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+ReceiveMeasurementCommandFromRequestAssembler
+MonitoringStatusResponseAssembler
+ElectricalMeasurementResponseAssembler
+MeasurementHistoryResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para los consumidores del bounded context.
+
+### Consumers
+
+Debido a que las mediciones se originan en dispositivos IoT, la capa de interfaz también contempla un componente encargado de recibir dichos mensajes.
+
+**MeasurementConsumer** recibe la información proveniente de los dispositivos y la transforma en una solicitud compatible con el procesamiento de `ReceiveMeasurement`.
+
+La documentación actual de ElectroLink establece que la solución debe recibir continuamente información de sensores IoT y procesar variables como corriente, voltaje y temperatura. README
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ElectricalMonitoringController` | Controller | Gestiona las consultas relacionadas con el monitoreo eléctrico. | Interface |
+| `MeasurementController` | Controller | Recibe mediciones enviadas al bounded context. | Interface |
+| `MeasurementConsumer` | Consumer | Recibe mensajes de medición provenientes de dispositivos IoT. | Interface |
+| `ReceiveMeasurementRequest` | Request DTO | Contiene los datos de una medición recibida. | Interface |
+| `MonitoringStatusResponse` | Response DTO | Representa el estado actual de monitoreo de un equipo. | Interface |
+| `ElectricalMeasurementResponse` | Response DTO | Representa una medición eléctrica procesada. | Interface |
+| `MeasurementHistoryResponse` | Response DTO | Representa el historial de mediciones de un equipo. | Interface |
+| `ReceiveMeasurementCommandFromRequestAssembler` | Assembler | Convierte una solicitud de medición en un command. | Interface |
+| `MonitoringStatusResponseAssembler` | Assembler | Construye la respuesta del estado de monitoreo. | Interface |
+| `ElectricalMeasurementResponseAssembler` | Assembler | Construye la respuesta de una medición. | Interface |
+| `MeasurementHistoryResponseAssembler` | Assembler | Construye la respuesta del historial de mediciones. | Interface |
+
+## 5.6.3. Application Layer
+
+La **Application Layer** del bounded context **Electrical Monitoring** coordina los casos de uso relacionados con la recepción, validación y evaluación de mediciones eléctricas, además de la detección de umbrales excedidos y anomalías.
+
+### Commands
+
+**ReceiveMeasurementCommand**
+
+```
+ReceiveMeasurementCommand
+- deviceId
+- equipmentId
+- measurementType
+- value
+- unit
+- timestamp
+```
+
+**ValidateMeasurementCommand**
+
+```
+ValidateMeasurementCommand
+- measurementId
+```
+
+**EvaluateMeasurementCommand**
+
+```
+EvaluateMeasurementCommand
+- measurementId
+- equipmentId
+```
+
+### Command Handlers
+
+**ReceiveMeasurementCommandHandler** registra una nueva medición proveniente de un dispositivo IoT y genera `MeasurementReceived`.
+
+**ValidateMeasurementCommandHandler** verifica la consistencia de la medición mediante `MeasurementValidationService`. Si la medición es válida, genera `MeasurementValidated`.
+
+**EvaluateMeasurementCommandHandler** recupera la medición y los umbrales correspondientes al equipo, ejecuta la evaluación y determina el estado de monitoreo.
+
+Durante este proceso puede generar:
+
+```
+ThresholdExceeded
+AnomalyDetected
+```
+
+Estos eventos permiten que **Alert Management** continúe el flujo sin acoplar directamente la lógica de alertas con el procesamiento de mediciones.
+
+### Queries
+
+**GetMonitoringStatusQuery**
+
+```
+GetMonitoringStatusQuery
+- equipmentId
+```
+
+**GetLatestMeasurementQuery**
+
+```
+GetLatestMeasurementQuery
+- equipmentId
+```
+
+**GetMeasurementHistoryQuery**
+
+```
+GetMeasurementHistoryQuery
+- equipmentId
+- from
+- to
+```
+
+### Query Handlers
+
+**GetMonitoringStatusQueryHandler** recupera el estado actual de monitoreo del equipo.
+
+**GetLatestMeasurementQueryHandler** obtiene la medición más reciente registrada.
+
+**GetMeasurementHistoryQueryHandler** recupera las mediciones almacenadas dentro de un periodo determinado.
+
+### Event Handling
+
+**DeviceConnectedEventHandler** recibe `DeviceConnected` desde **IoT Device Management** y habilita el procesamiento de las mediciones provenientes del dispositivo.
+
+**DeviceDisconnectedEventHandler** recibe `DeviceDisconnected` y actualiza el estado de monitoreo para reflejar que el dispositivo dejó de transmitir.
+
+### Flujo de aplicación
+
+El flujo principal puede resumirse de la siguiente manera:
+
+```
+ReceiveMeasurementCommand
+        ↓
+ReceiveMeasurementCommandHandler
+        ↓
+MeasurementValidationService
+        ↓
+MeasurementValidated
+        ↓
+ThresholdEvaluationService
+        ↓
+AnomalyDetectionService
+        ↓
+ThresholdExceeded / AnomalyDetected
+```
+
+Este flujo responde a la responsabilidad del contexto de recibir información de sensores, validar las mediciones y detectar condiciones que puedan representar riesgos eléctricos u operativos. README
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `ReceiveMeasurementCommand` | Command | Solicita registrar una nueva medición. | Application |
+| `ValidateMeasurementCommand` | Command | Solicita validar una medición registrada. | Application |
+| `EvaluateMeasurementCommand` | Command | Solicita evaluar la medición frente a las reglas del dominio. | Application |
+| `ReceiveMeasurementCommandHandler` | Command Handler | Coordina la recepción y registro de mediciones. | Application |
+| `ValidateMeasurementCommandHandler` | Command Handler | Coordina la validación de mediciones. | Application |
+| `EvaluateMeasurementCommandHandler` | Command Handler | Coordina la evaluación de umbrales y anomalías. | Application |
+| `GetMonitoringStatusQuery` | Query | Consulta el estado actual de un equipo. | Application |
+| `GetLatestMeasurementQuery` | Query | Consulta la medición más reciente. | Application |
+| `GetMeasurementHistoryQuery` | Query | Consulta el historial de mediciones. | Application |
+| `GetMonitoringStatusQueryHandler` | Query Handler | Recupera el estado actual de monitoreo. | Application |
+| `GetLatestMeasurementQueryHandler` | Query Handler | Recupera la última medición registrada. | Application |
+| `GetMeasurementHistoryQueryHandler` | Query Handler | Recupera mediciones dentro de un periodo. | Application |
+| `DeviceConnectedEventHandler` | Event Handler | Recibe la conexión de un dispositivo IoT. | Application |
+| `DeviceDisconnectedEventHandler` | Event Handler | Gestiona la desconexión de un dispositivo IoT. | Application |
+
+## 5.6.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Electrical Monitoring** implementa la persistencia de las mediciones y estados de monitoreo, además de los mecanismos necesarios para recibir telemetría y publicar los eventos detectados por el dominio.
+
+### Repository Implementations
+
+**MonitoringRepository** implementa `IMonitoringRepository` y gestiona la persistencia del estado actual de monitoreo de cada equipo.
+
+```
+save(ElectricalMonitoring)
+findByEquipmentId(EquipmentId)
+update(ElectricalMonitoring)
+```
+
+**MeasurementRepository** implementa `IMeasurementRepository` y administra el almacenamiento y consulta de las mediciones recibidas.
+
+```
+save(ElectricalMeasurement)
+findByDeviceId(DeviceId)
+findByEquipmentId(EquipmentId)
+findLatestByEquipmentId(EquipmentId)
+```
+
+### Persistence Context
+
+**ElectricalMonitoringDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+ElectricalMonitoring
+ElectricalMeasurement
+Threshold
+```
+
+### Persistence Entities
+
+**ElectricalMonitoringEntity**
+
+```
+ElectricalMonitoringEntity
+- Id
+- EquipmentId
+- Status
+- LastMeasurementAt
+- CreatedAt
+- UpdatedAt
+```
+
+**ElectricalMeasurementEntity**
+
+```
+ElectricalMeasurementEntity
+- Id
+- DeviceId
+- EquipmentId
+- MeasurementType
+- Value
+- Unit
+- MeasuredAt
+- CreatedAt
+```
+
+**ThresholdEntity**
+
+```
+ThresholdEntity
+- Id
+- EquipmentId
+- MeasurementType
+- WarningLimit
+- CriticalLimit
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**ElectricalMonitoringPersistenceMapper** transforma entre `ElectricalMonitoring` y `ElectricalMonitoringEntity`.
+
+**ElectricalMeasurementPersistenceMapper** transforma entre `ElectricalMeasurement` y `ElectricalMeasurementEntity`.
+
+**ThresholdPersistenceMapper** transforma entre `Threshold` y `ThresholdEntity`.
+
+### Telemetry Reception
+
+**TelemetryMessageConsumer** recibe los mensajes provenientes de los dispositivos o gateway IoT y los transforma en solicitudes compatibles con `ReceiveMeasurementCommand`.
+
+Su responsabilidad se limita a la recepción y adaptación de la telemetría; las reglas de validación y evaluación permanecen en las capas Application y Domain.
+
+### Threshold Configuration Access
+
+**ThresholdProvider** obtiene los umbrales configurados para cada equipo y tipo de medición, permitiendo que la Application Layer ejecute la evaluación correspondiente.
+
+Esto es relevante porque ElectroLink contempla la configuración de límites de temperatura y amperaje por equipo. README
+
+### Event Publishing
+
+**ElectricalMonitoringEventPublisher** publica los eventos relevantes generados por este bounded context:
+
+```
+MeasurementReceived
+MeasurementValidated
+ThresholdExceeded
+AnomalyDetected
+```
+
+`ThresholdExceeded` y `AnomalyDetected` son consumidos posteriormente por **Alert Management** para iniciar el ciclo de gestión de alertas.
+
+### Configurations
+
+**ElectricalMonitoringEntityConfiguration** define el mapeo del estado de monitoreo.
+
+**ElectricalMeasurementEntityConfiguration** define el almacenamiento de las mediciones recibidas.
+
+**ThresholdEntityConfiguration** define la persistencia y restricciones asociadas a los umbrales.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `MonitoringRepository` | Repository | Implementa la persistencia del estado de monitoreo. | Infrastructure |
+| `MeasurementRepository` | Repository | Implementa la persistencia y consulta de mediciones. | Infrastructure |
+| `ElectricalMonitoringDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `ElectricalMonitoringEntity` | Persistence Entity | Representa el estado de monitoreo almacenado. | Infrastructure |
+| `ElectricalMeasurementEntity` | Persistence Entity | Representa una medición persistida. | Infrastructure |
+| `ThresholdEntity` | Persistence Entity | Representa los umbrales configurados. | Infrastructure |
+| `ElectricalMonitoringPersistenceMapper` | Mapper | Convierte el estado de monitoreo entre dominio y persistencia. | Infrastructure |
+| `ElectricalMeasurementPersistenceMapper` | Mapper | Convierte las mediciones entre dominio y persistencia. | Infrastructure |
+| `ThresholdPersistenceMapper` | Mapper | Convierte los umbrales entre dominio y persistencia. | Infrastructure |
+| `TelemetryMessageConsumer` | Message Consumer | Recibe telemetría proveniente de dispositivos IoT. | Infrastructure |
+| `ThresholdProvider` | Infrastructure Service | Recupera los límites configurados por equipo. | Infrastructure |
+| `ElectricalMonitoringEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `ElectricalMonitoringEntityConfiguration` | Persistence Configuration | Define el mapeo del monitoreo. | Infrastructure |
+| `ElectricalMeasurementEntityConfiguration` | Persistence Configuration | Define el mapeo de mediciones. | Infrastructure |
+| `ThresholdEntityConfiguration` | Persistence Configuration | Define el mapeo de umbrales. | Infrastructure |
+
+### 5.6.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa el flujo desde la recepción de telemetría hasta la validación y evaluación de las mediciones. Cuando se detecta una condición fuera de los límites establecidos, se publican `ThresholdExceeded`  o `AnomalyDetected`  para **Alert Management**.
+
+![](assets-emergentes/C4Diagrams/ElectricalMonitoringComponentDiagram.png)
+
+#### 5.6.5.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/ElectricalUMLDiagram.png)
+
+#### 5.6.5.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/ElectricalDatabase.png)
+
+## 5.7. Alert Management Bounded Context
+
+El bounded context **Alert Management** se encarga de crear, clasificar y gestionar el ciclo de vida de las alertas generadas automática o manualmente dentro de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `Alert`, `ManualAlert`, `AlertCreated`, `CriticalAlertCreated`, `NonCriticalAlertCreated`, `AlertAcknowledged` y `AlertResolved`. Además, este contexto recibe `ThresholdExceeded` y `AnomalyDetected`provenientes de **Electrical Monitoring**.
+
+### 5.7.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la creación, clasificación, reconocimiento y resolución de las alertas.
+
+### Aggregate Root
+
+**Alert** es el aggregate root principal del bounded context. Representa una condición de riesgo o situación anómala que requiere seguimiento dentro de ElectroLink.
+
+Sus principales responsabilidades son:
+
+-   crear una alerta;
+-   determinar su severidad;
+-   asociarla con el equipo afectado;
+-   registrar su origen;
+-   marcarla como reconocida;
+-   resolverla;
+-   controlar las transiciones válidas de su estado.
+
+### Value Objects
+
+**AlertId** identifica de manera única una alerta.
+
+**EquipmentId** identifica el equipo relacionado con la alerta.
+
+**AlertDescription** contiene la descripción de la condición detectada.
+
+**AlertTimestamp** representa el momento en que la alerta fue generada.
+
+### Enumerations
+
+**AlertSeverity** representa la clasificación de la alerta:
+
+```
+CRITICAL
+NON_CRITICAL
+```
+
+Una alerta crítica corresponde a una condición que requiere atención inmediata, mientras que una alerta no crítica representa una anomalía preventiva que debe ser supervisada. Esta diferenciación forma parte del lenguaje del proyecto. README
+
+**AlertStatus** representa el estado dentro de su ciclo de vida:
+
+```
+OPEN
+ACKNOWLEDGED
+RESOLVED
+```
+
+**AlertSource** permite diferenciar el origen:
+
+```
+AUTOMATIC
+MANUAL
+```
+
+Esto permite que el mismo modelo represente tanto alertas generadas a partir de eventos del monitoreo como reportes creados manualmente.
+
+### Repository Interface
+
+**IAlertRepository** define las operaciones necesarias para persistir y consultar alertas.
+
+```
+save(Alert)
+findById(AlertId)
+findByEquipmentId(EquipmentId)
+findByStatus(AlertStatus)
+update(Alert)
+```
+
+### Domain Services
+
+**AlertClassificationService** determina la severidad que corresponde a una condición detectada.
+
+```
+classifyAlert(Alert)
+determineSeverity(Alert)
+```
+
+**AlertLifecycleService** valida las transiciones del ciclo de vida de una alerta.
+
+```
+canAcknowledge(Alert)
+acknowledge(Alert)
+canResolve(Alert)
+resolve(Alert)
+```
+
+La clasificación resulta importante porque ElectroLink debe categorizar los eventos detectados según su nivel de severidad antes de distribuirlos hacia los mecanismos correspondientes. README
+
+### Eventos del dominio
+
+Los principales eventos identificados son:
+
+```
+AlertCreated
+CriticalAlertCreated
+NonCriticalAlertCreated
+AlertAcknowledged
+AlertResolved
+```
+
+`CriticalAlertCreated` y `NonCriticalAlertCreated` permiten que otros bounded contexts reaccionen de manera diferente según la severidad.
+
+En particular, estos eventos serán utilizados posteriormente por **Notifications** para distribuir las alertas a los usuarios mediante los canales configurados.
+
+### Integración con Electrical Monitoring
+
+El contexto recibe principalmente:
+
+```
+ThresholdExceeded
+AnomalyDetected
+```
+
+A partir de estos eventos se crea una alerta y se determina su nivel de severidad.
+
+El flujo conceptual es:
+
+```
+ThresholdExceeded / AnomalyDetected
+              ↓
+         Create Alert
+              ↓
+     Classify Severity
+          ↙       ↘
+    CRITICAL    NON_CRITICAL
+        ↓            ↓
+CriticalAlertCreated NonCriticalAlertCreated
+```
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Alert` | Aggregate Root | Representa una alerta y controla su ciclo de vida. | Domain |
+| `AlertId` | Value Object | Identifica de manera única una alerta. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo relacionado con la alerta. | Domain |
+| `AlertDescription` | Value Object | Representa la descripción de la condición detectada. | Domain |
+| `AlertTimestamp` | Value Object | Representa el instante de creación de la alerta. | Domain |
+| `AlertSeverity` | Enumeration | Define la severidad de la alerta. | Domain |
+| `AlertStatus` | Enumeration | Define el estado de la alerta. | Domain |
+| `AlertSource` | Enumeration | Define si la alerta tiene origen automático o manual. | Domain |
+| `IAlertRepository` | Repository Interface | Define la persistencia y consulta de alertas. | Domain |
+| `AlertClassificationService` | Domain Service | Determina la severidad de una alerta. | Domain |
+| `AlertLifecycleService` | Domain Service | Gestiona las reglas de reconocimiento y resolución. | Domain |
+
+### 5.7.2. Interface Layer
+
+La **Interface Layer** del bounded context **Alert Management** recibe las solicitudes relacionadas con la creación manual, consulta, reconocimiento y resolución de alertas, además de exponer la información necesaria para su seguimiento.
+
+#### Controllers
+
+**AlertController** gestiona las operaciones principales sobre las alertas.
+
+Sus responsabilidades son:
+
+-   consultar alertas;
+-   consultar una alerta específica;
+-   reconocer una alerta;
+-   resolver una alerta;
+-   crear alertas manuales cuando corresponda.
+
+#### Request DTOs
+
+**CreateManualAlertRequest**
+
+```
+CreateManualAlertRequest
+- equipmentId
+- description
+```
+
+**AcknowledgeAlertRequest**
+
+```
+AcknowledgeAlertRequest
+- alertId
+```
+
+**ResolveAlertRequest**
+
+```
+ResolveAlertRequest
+- alertId
+```
+
+#### Response DTOs
+
+**AlertResponse**
+
+```
+AlertResponse
+- alertId
+- equipmentId
+- description
+- severity
+- status
+- source
+- createdAt
+- acknowledgedAt
+- resolvedAt
+```
+
+**AlertListResponse**
+
+```
+AlertListResponse
+- alerts
+```
+
+#### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+CreateManualAlertCommandFromRequestAssembler
+AcknowledgeAlertCommandFromRequestAssembler
+ResolveAlertCommandFromRequestAssembler
+AlertResponseAssembler
+AlertListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para la interfaz.
+
+#### Event Consumers
+
+La capa de interfaz también contempla consumidores para los eventos provenientes de **Electrical Monitoring**.
+
+**ThresholdExceededConsumer** recibe `ThresholdExceeded` y lo transforma en una solicitud de creación de alerta.
+
+**AnomalyDetectedConsumer** recibe `AnomalyDetected` y delega la creación y clasificación de la alerta correspondiente.
+
+#### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AlertController` | Controller | Gestiona consultas y operaciones sobre alertas. | Interface |
+| `ThresholdExceededConsumer` | Consumer | Recibe eventos de umbral excedido. | Interface |
+| `AnomalyDetectedConsumer` | Consumer | Recibe eventos de anomalías detectadas. | Interface |
+| `CreateManualAlertRequest` | Request DTO | Contiene los datos para registrar una alerta manual. | Interface |
+| `AcknowledgeAlertRequest` | Request DTO | Contiene la solicitud para reconocer una alerta. | Interface |
+| `ResolveAlertRequest` | Request DTO | Contiene la solicitud para resolver una alerta. | Interface |
+| `AlertResponse` | Response DTO | Representa la información completa de una alerta. | Interface |
+| `AlertListResponse` | Response DTO | Representa una colección de alertas. | Interface |
+| `CreateManualAlertCommandFromRequestAssembler` | Assembler | Convierte una solicitud manual en un command. | Interface |
+| `AcknowledgeAlertCommandFromRequestAssembler` | Assembler | Convierte la solicitud de reconocimiento en un command. | Interface |
+| `ResolveAlertCommandFromRequestAssembler` | Assembler | Convierte la solicitud de resolución en un command. | Interface |
+| `AlertResponseAssembler` | Assembler | Construye la respuesta de una alerta. | Interface |
+| `AlertListResponseAssembler` | Assembler | Construye la respuesta de una colección de alertas. | Interface |
+
+
+### 5.7.3. Application Layer
+
+La **Application Layer** del bounded context **Alert Management** coordina los casos de uso relacionados con la creación, clasificación, reconocimiento, consulta y resolución de alertas.
+
+#### Commands
+
+**CreateAlertCommand**
+
+```
+CreateAlertCommand
+- equipmentId
+- description
+- source
+```
+
+**CreateManualAlertCommand**
+
+```
+CreateManualAlertCommand
+- equipmentId
+- description
+```
+
+**AcknowledgeAlertCommand**
+
+```
+AcknowledgeAlertCommand
+- alertId
+```
+
+**ResolveAlertCommand**
+
+```
+ResolveAlertCommand
+- alertId
+```
+
+#### Command Handlers
+
+**CreateAlertCommandHandler** crea una nueva alerta a partir de un evento proveniente del monitoreo eléctrico, determina su severidad mediante `AlertClassificationService` y genera `AlertCreated`.
+
+Según la clasificación obtenida, también publica:
+
+```
+CriticalAlertCreated
+NonCriticalAlertCreated
+```
+
+**CreateManualAlertCommandHandler** registra una alerta creada manualmente y establece su origen como `MANUAL`.
+
+**AcknowledgeAlertCommandHandler** recupera la alerta, valida la transición mediante `AlertLifecycleService`, actualiza su estado a `ACKNOWLEDGED` y genera `AlertAcknowledged`.
+
+**ResolveAlertCommandHandler** valida que la alerta pueda finalizar su ciclo de vida, actualiza su estado a `RESOLVED` y genera `AlertResolved`.
+
+#### Queries
+
+**GetAlertByIdQuery**
+
+```
+GetAlertByIdQuery
+- alertId
+```
+
+**GetAlertsByEquipmentQuery**
+
+```
+GetAlertsByEquipmentQuery
+- equipmentId
+```
+
+**GetAlertsByStatusQuery**
+
+```
+GetAlertsByStatusQuery
+- status
+```
+
+#### Query Handlers
+
+**GetAlertByIdQueryHandler** recupera una alerta específica.
+
+**GetAlertsByEquipmentQueryHandler** obtiene las alertas relacionadas con un equipo.
+
+**GetAlertsByStatusQueryHandler** recupera las alertas según su estado dentro del ciclo de vida.
+
+#### Event Handlers
+
+**ThresholdExceededEventHandler** recibe `ThresholdExceeded` desde **Electrical Monitoring** y genera un `CreateAlertCommand`.
+
+**AnomalyDetectedEventHandler** recibe `AnomalyDetected` y solicita la creación y clasificación de la alerta correspondiente.
+
+#### Flujo de aplicación
+
+```
+ThresholdExceeded / AnomalyDetected
+              ↓
+      Event Handler
+              ↓
+      CreateAlertCommand
+              ↓
+     CreateAlertCommandHandler
+              ↓
+   AlertClassificationService
+          ↙           ↘
+     CRITICAL      NON_CRITICAL
+         ↓              ↓
+CriticalAlertCreated  NonCriticalAlertCreated
+```
+
+El bounded context mantiene así separada la detección técnica de anomalías de la gestión del ciclo de vida de las alertas.
+
+#### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateAlertCommand` | Command | Solicita crear una alerta automática. | Application |
+| `CreateManualAlertCommand` | Command | Solicita crear una alerta manual. | Application |
+| `AcknowledgeAlertCommand` | Command | Solicita reconocer una alerta. | Application |
+| `ResolveAlertCommand` | Command | Solicita resolver una alerta. | Application |
+| `CreateAlertCommandHandler` | Command Handler | Coordina la creación y clasificación de alertas. | Application |
+| `CreateManualAlertCommandHandler` | Command Handler | Coordina el registro de alertas manuales. | Application |
+| `AcknowledgeAlertCommandHandler` | Command Handler | Coordina el reconocimiento de una alerta. | Application |
+| `ResolveAlertCommandHandler` | Command Handler | Coordina la resolución de una alerta. | Application |
+| `GetAlertByIdQuery` | Query | Consulta una alerta específica. | Application |
+| `GetAlertsByEquipmentQuery` | Query | Consulta alertas asociadas a un equipo. | Application |
+| `GetAlertsByStatusQuery` | Query | Consulta alertas según su estado. | Application |
+| `GetAlertByIdQueryHandler` | Query Handler | Recupera una alerta por identificador. | Application |
+| `GetAlertsByEquipmentQueryHandler` | Query Handler | Recupera alertas de un equipo. | Application |
+| `GetAlertsByStatusQueryHandler` | Query Handler | Recupera alertas por estado. | Application |
+| `ThresholdExceededEventHandler` | Event Handler | Procesa eventos de umbral excedido. | Application |
+| `AnomalyDetectedEventHandler` | Event Handler | Procesa eventos de anomalías detectadas. | Application |
+
+### 5.7.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Alert Management** implementa la persistencia de las alertas, la recepción de eventos provenientes de otros contextos y la publicación de eventos relacionados con su ciclo de vida.
+
+#### Repository Implementation
+
+**AlertRepository** implementa `IAlertRepository` y gestiona la persistencia y consulta de las alertas.
+
+Sus principales operaciones son:
+
+```
+save(Alert)
+findById(AlertId)
+findByEquipmentId(EquipmentId)
+findByStatus(AlertStatus)
+update(Alert)
+```
+
+#### Persistence Context
+
+**AlertDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Alert
+```
+
+#### Persistence Entity
+
+**AlertEntity**
+
+```
+AlertEntity
+- Id
+- EquipmentId
+- Description
+- Severity
+- Status
+- Source
+- CreatedAt
+- AcknowledgedAt
+- ResolvedAt
+```
+
+#### Persistence Mapper
+
+**AlertPersistenceMapper** transforma entre el agregado `Alert` y `AlertEntity`.
+
+Su responsabilidad es mantener separada la representación del dominio de la estructura utilizada para persistencia.
+
+#### Event Consumers
+
+**ThresholdExceededEventConsumer** recibe el evento `ThresholdExceeded` proveniente de **Electrical Monitoring** y lo deriva hacia `ThresholdExceededEventHandler`.
+
+**AnomalyDetectedEventConsumer** recibe `AnomalyDetected` y lo deriva hacia `AnomalyDetectedEventHandler`.
+
+Estos consumidores permiten que Alert Management responda a eventos del monitoreo sin depender directamente de la implementación interna de dicho bounded context.
+
+#### Event Publishing
+
+**AlertEventPublisher** publica los eventos generados durante el ciclo de vida de una alerta:
+
+```
+AlertCreated
+CriticalAlertCreated
+NonCriticalAlertCreated
+AlertAcknowledged
+AlertResolved
+```
+
+Los eventos `CriticalAlertCreated` y `NonCriticalAlertCreated` permiten que el bounded context **Notifications** determine qué información debe distribuir a los usuarios según la severidad detectada.
+
+#### Configurations
+
+**AlertEntityConfiguration** define el mapeo relacional de las alertas y sus restricciones de persistencia.
+
+Entre los aspectos principales que configura se encuentran:
+
+```
+Primary Key
+EquipmentId
+Severity
+Status
+Source
+CreatedAt
+AcknowledgedAt
+ResolvedAt
+```
+
+#### Audit Support
+
+Debido a que ElectroLink requiere conservar registros de incidentes y acciones realizadas sobre las alertas, la infraestructura debe mantener las marcas de tiempo asociadas a su creación, reconocimiento y resolución.
+
+Esto permite conservar el historial necesario para posteriores consultas, análisis y generación de evidencias operativas.
+
+#### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AlertRepository` | Repository | Implementa la persistencia y consulta de alertas. | Infrastructure |
+| `AlertDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `AlertEntity` | Persistence Entity | Representa una alerta almacenada. | Infrastructure |
+| `AlertPersistenceMapper` | Mapper | Convierte entre el agregado de dominio y la entidad de persistencia. | Infrastructure |
+| `ThresholdExceededEventConsumer` | Event Consumer | Recibe eventos de umbral excedido. | Infrastructure |
+| `AnomalyDetectedEventConsumer` | Event Consumer | Recibe eventos de anomalías detectadas. | Infrastructure |
+| `AlertEventPublisher` | Event Publisher | Publica los eventos generados por el bounded context. | Infrastructure |
+| `AlertEntityConfiguration` | Persistence Configuration | Define el mapeo y restricciones de persistencia de las alertas. | Infrastructure |
+
+### 5.7.5 Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama representa la recepción de `ThresholdExceeded`  y `AnomalyDetected`, la creación y clasificación de las alertas, su posterior reconocimiento o resolución y la publicación de eventos hacia **Notifications**.
+
+![](assets-emergentes/C4Diagrams/AlertManagementComponentDiagram.png)
+
+### 5.7.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.7.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/AlertUMLClass.png)
+
+#### 5.7.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Alert_Database.png)
+
+## 5.8. Notifications Bounded Context
+
+El bounded context **Notifications** se encarga de distribuir las alertas hacia los usuarios mediante los canales de comunicación disponibles y gestionar los reintentos cuando una entrega falla. README
+
+En el Event Storming actual aparecen como elementos principales `Notification`, `SendNotification`, `RetryNotification`, `NotificationSent`, `NotificationDelivered` y `NotificationFailed`. Además, este contexto recibe `CriticalAlertCreated` y `NonCriticalAlertCreated` desde **Alert Management**.
+
+### 5.8.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la creación, envío, estado de entrega y reintentos de las notificaciones.
+
+### Aggregate Root
+
+**Notification** es el aggregate root principal del bounded context. Representa un mensaje que debe ser enviado a uno o más destinatarios por un canal determinado.
+
+Sus principales responsabilidades son:
+
+-   crear una notificación;
+-   definir su canal de envío;
+-   registrar su estado;
+-   controlar los intentos de entrega;
+-   determinar si puede reintentarse;
+-   marcarla como enviada, entregada o fallida.
+
+### Value Objects
+
+**NotificationId** identifica de manera única una notificación.
+
+**RecipientId** identifica al usuario destinatario.
+
+**NotificationContent** contiene el mensaje que será enviado.
+
+**DeliveryAttempt** representa el número de intentos realizados.
+
+### Enumerations
+
+**NotificationChannel** representa el canal utilizado:
+
+```
+PUSH
+SMS
+EMAIL
+WHATSAPP
+```
+
+La documentación del proyecto contempla preferencias configurables por WhatsApp, SMS o correo, además de notificaciones Push para alertas críticas. README
+
+**NotificationStatus** representa el estado de entrega:
+
+```
+PENDING
+SENT
+DELIVERED
+FAILED
+```
+
+### Repository Interface
+
+**INotificationRepository** define las operaciones necesarias para persistir y consultar notificaciones.
+
+```
+save(Notification)
+findById(NotificationId)
+findPending()
+findFailed()
+update(Notification)
+```
+
+### Domain Services
+
+**NotificationChannelService** determina qué canal debe utilizarse de acuerdo con las preferencias disponibles y la criticidad de la alerta.
+
+```
+selectChannel(RecipientId)
+validateChannel(NotificationChannel)
+```
+
+**NotificationRetryService** controla la lógica de reintentos de entrega.
+
+```
+canRetry(Notification)
+registerAttempt(Notification)
+markFailed(Notification)
+```
+
+### Eventos del dominio
+
+Los principales eventos son:
+
+```
+NotificationSent
+NotificationDelivered
+NotificationFailed
+```
+
+Estos eventos permiten registrar el resultado de cada intento de entrega y mantener trazabilidad sobre el proceso de comunicación.
+
+### Integración con Alert Management
+
+El contexto recibe principalmente:
+
+```
+CriticalAlertCreated
+NonCriticalAlertCreated
+```
+
+A partir de estos eventos se crea una `Notification` y se selecciona el canal correspondiente.
+
+El flujo principal es:
+
+```
+CriticalAlertCreated / NonCriticalAlertCreated
+                ↓
+        Create Notification
+                ↓
+          Select Channel
+                ↓
+        SendNotification
+           ↙         ↘
+       SUCCESS      FAILURE
+          ↓            ↓
+NotificationSent   NotificationFailed
+                         ↓
+                 RetryNotification
+```
+
+Para las notificaciones Push, la documentación establece el uso obligatorio de **Firebase Cloud Messaging (FCM/APNs)**. README
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `Notification` | Aggregate Root | Representa una notificación y controla su entrega. | Domain |
+| `NotificationId` | Value Object | Identifica de manera única una notificación. | Domain |
+| `RecipientId` | Value Object | Identifica al destinatario de la notificación. | Domain |
+| `NotificationContent` | Value Object | Representa el contenido del mensaje. | Domain |
+| `DeliveryAttempt` | Value Object | Representa los intentos de entrega realizados. | Domain |
+| `NotificationChannel` | Enumeration | Define el canal de envío. | Domain |
+| `NotificationStatus` | Enumeration | Define el estado de entrega. | Domain |
+| `INotificationRepository` | Repository Interface | Define la persistencia y consulta de notificaciones. | Domain |
+| `NotificationChannelService` | Domain Service | Determina el canal de envío aplicable. | Domain |
+| `NotificationRetryService` | Domain Service | Gestiona las reglas de reintento. | Domain |
+
+### 5.8.2. Interface Layer
+
+La **Interface Layer** del bounded context **Notifications** recibe las solicitudes relacionadas con la consulta, envío y reintento de notificaciones, además de procesar los eventos provenientes de **Alert Management**.
+
+### Controllers
+
+**NotificationController** gestiona las operaciones principales sobre las notificaciones.
+
+Sus responsabilidades son:
+
+-   consultar una notificación;
+-   consultar notificaciones por destinatario;
+-   solicitar el reintento de una notificación fallida.
+
+### Event Consumers
+
+**CriticalAlertCreatedConsumer** recibe `CriticalAlertCreated` y transforma el evento en una solicitud de creación y envío de notificación.
+
+**NonCriticalAlertCreatedConsumer** recibe `NonCriticalAlertCreated` y delega la generación de una notificación según las preferencias configuradas.
+
+### Request DTOs
+
+**RetryNotificationRequest**
+
+```
+RetryNotificationRequest
+- notificationId
+```
+
+### Response DTOs
+
+**NotificationResponse**
+
+```
+NotificationResponse
+- notificationId
+- recipientId
+- channel
+- content
+- status
+- attempts
+- createdAt
+- sentAt
+- deliveredAt
+```
+
+**NotificationListResponse**
+
+```
+NotificationListResponse
+- notifications
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+RetryNotificationCommandFromRequestAssembler
+NotificationResponseAssembler
+NotificationListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Flujo de entrada por eventos
+
+La principal entrada automática hacia este bounded context ocurre a través de eventos de alertas:
+
+```
+CriticalAlertCreated
+        ↓
+CriticalAlertCreatedConsumer
+        ↓
+CreateNotificationCommand
+
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedConsumer
+        ↓
+CreateNotificationCommand
+```
+
+La selección del canal no se realiza directamente en esta capa, sino que se delega hacia las capas Application y Domain, donde se consideran las preferencias del usuario.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `NotificationController` | Controller | Gestiona consultas y reintentos de notificaciones. | Interface |
+| `CriticalAlertCreatedConsumer` | Consumer | Recibe eventos de alertas críticas. | Interface |
+| `NonCriticalAlertCreatedConsumer` | Consumer | Recibe eventos de alertas no críticas. | Interface |
+| `RetryNotificationRequest` | Request DTO | Contiene la solicitud de reintento de una notificación. | Interface |
+| `NotificationResponse` | Response DTO | Representa la información de una notificación. | Interface |
+| `NotificationListResponse` | Response DTO | Representa una colección de notificaciones. | Interface |
+| `RetryNotificationCommandFromRequestAssembler` | Assembler | Convierte una solicitud de reintento en un command. | Interface |
+| `NotificationResponseAssembler` | Assembler | Construye la respuesta de una notificación. | Interface |
+| `NotificationListResponseAssembler` | Assembler | Construye la respuesta de una colección de notificaciones. | Interface |
+
+### 5.8.3. Application Layer
+
+La **Application Layer** del bounded context **Notifications** coordina los casos de uso relacionados con la creación, envío, consulta y reintento de notificaciones generadas a partir de las alertas del sistema.
+
+### Commands
+
+**CreateNotificationCommand**
+
+```
+CreateNotificationCommand
+- alertId
+- recipientId
+- severity
+- content
+```
+
+**SendNotificationCommand**
+
+```
+SendNotificationCommand
+- notificationId
+```
+
+**RetryNotificationCommand**
+
+```
+RetryNotificationCommand
+- notificationId
+```
+
+### Command Handlers
+
+**CreateNotificationCommandHandler** crea una nueva notificación a partir de una alerta recibida, determina el canal correspondiente y registra la notificación con estado `PENDING`.
+
+**SendNotificationCommandHandler** coordina el envío de la notificación mediante el canal seleccionado. Según el resultado, actualiza su estado y genera `NotificationSent`, `NotificationDelivered` o `NotificationFailed`.
+
+**RetryNotificationCommandHandler** verifica mediante `NotificationRetryService` si una notificación fallida puede volver a enviarse y, de ser válido, registra un nuevo intento.
+
+### Queries
+
+**GetNotificationByIdQuery**
+
+```
+GetNotificationByIdQuery
+- notificationId
+```
+
+**GetNotificationsByRecipientQuery**
+
+```
+GetNotificationsByRecipientQuery
+- recipientId
+```
+
+**GetFailedNotificationsQuery**
+
+```
+GetFailedNotificationsQuery
+```
+
+### Query Handlers
+
+**GetNotificationByIdQueryHandler** recupera una notificación específica.
+
+**GetNotificationsByRecipientQueryHandler** obtiene las notificaciones asociadas a un destinatario.
+
+**GetFailedNotificationsQueryHandler** recupera las notificaciones que no pudieron entregarse correctamente.
+
+### Event Handlers
+
+**CriticalAlertCreatedEventHandler** recibe `CriticalAlertCreated` desde **Alert Management** y genera `CreateNotificationCommand` con prioridad crítica.
+
+**NonCriticalAlertCreatedEventHandler** recibe `NonCriticalAlertCreated` y genera una notificación con el tratamiento correspondiente.
+
+### Flujo de aplicación
+
+```
+CriticalAlertCreated / NonCriticalAlertCreated
+                 ↓
+          Event Handler
+                 ↓
+     CreateNotificationCommand
+                 ↓
+  CreateNotificationCommandHandler
+                 ↓
+    NotificationChannelService
+                 ↓
+       SendNotificationCommand
+                 ↓
+    SendNotificationCommandHandler
+          ↙               ↘
+      SUCCESS            FAILURE
+         ↓                  ↓
+NotificationSent     NotificationFailed
+                           ↓
+               RetryNotificationCommand
+```
+
+La selección del canal considera las preferencias definidas por el usuario en **Profiles & Preferences**, mientras que la entrega Push debe integrarse posteriormente con FCM/APNs según las restricciones del proyecto. README
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `CreateNotificationCommand` | Command | Solicita crear una notificación a partir de una alerta. | Application |
+| `SendNotificationCommand` | Command | Solicita enviar una notificación pendiente. | Application |
+| `RetryNotificationCommand` | Command | Solicita reintentar una notificación fallida. | Application |
+| `CreateNotificationCommandHandler` | Command Handler | Coordina la creación y selección del canal. | Application |
+| `SendNotificationCommandHandler` | Command Handler | Coordina el envío y actualización del estado. | Application |
+| `RetryNotificationCommandHandler` | Command Handler | Coordina el reintento de entrega. | Application |
+| `GetNotificationByIdQuery` | Query | Consulta una notificación específica. | Application |
+| `GetNotificationsByRecipientQuery` | Query | Consulta notificaciones por destinatario. | Application |
+| `GetFailedNotificationsQuery` | Query | Consulta notificaciones fallidas. | Application |
+| `GetNotificationByIdQueryHandler` | Query Handler | Recupera una notificación. | Application |
+| `GetNotificationsByRecipientQueryHandler` | Query Handler | Recupera notificaciones del destinatario. | Application |
+| `GetFailedNotificationsQueryHandler` | Query Handler | Recupera notificaciones con estado fallido. | Application |
+| `CriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas críticas. | Application |
+| `NonCriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas no críticas. | Application |
+
+### 5.8.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Notifications** implementa la persistencia de las notificaciones, la integración con proveedores externos de mensajería y los mecanismos necesarios para procesar eventos y reintentar entregas fallidas.
+
+### Repository Implementation
+
+**NotificationRepository** implementa `INotificationRepository` y administra la persistencia y consulta de las notificaciones.
+
+```
+save(Notification)
+findById(NotificationId)
+findPending()
+findFailed()
+update(Notification)
+```
+
+### Persistence Context
+
+**NotificationDbContext** administra el acceso a los datos del bounded context.
+
+Gestiona principalmente:
+
+```
+Notification
+```
+
+### Persistence Entity
+
+**NotificationEntity**
+
+```
+NotificationEntity
+- Id
+- AlertId
+- RecipientId
+- Channel
+- Content
+- Status
+- Attempts
+- CreatedAt
+- SentAt
+- DeliveredAt
+- UpdatedAt
+```
+
+### Persistence Mapper
+
+**NotificationPersistenceMapper** transforma entre el agregado `Notification` y `NotificationEntity`.
+
+Su responsabilidad es mantener separada la representación del dominio de la estructura utilizada para persistencia.
+
+### External Notification Providers
+
+La infraestructura implementa adaptadores para los canales utilizados por ElectroLink.
+
+**PushNotificationProvider** gestiona el envío de notificaciones Push mediante **Firebase Cloud Messaging (FCM/APNs)**, integración obligatoria definida por el proyecto. README
+
+**SmsNotificationProvider** gestiona el envío de mensajes SMS.
+
+**EmailNotificationProvider** gestiona el envío de notificaciones por correo electrónico.
+
+**WhatsAppNotificationProvider** gestiona el envío mediante WhatsApp cuando este canal se encuentra configurado para el usuario.
+
+Estos proveedores implementan una interfaz común que permite que la Application Layer solicite el envío sin depender de una implementación específica.
+
+### Notification Provider Interface
+
+**INotificationProvider** define el contrato utilizado por los proveedores externos.
+
+```
+send(Notification)
+supports(NotificationChannel)
+```
+
+### Notification Dispatcher
+
+**NotificationDispatcher** selecciona el proveedor correspondiente según `NotificationChannel` y ejecuta la entrega.
+
+```
+dispatch(Notification)
+```
+
+De esta forma, la selección técnica del proveedor permanece en infraestructura, mientras que la decisión del canal continúa siendo responsabilidad del dominio y la aplicación.
+
+### Event Consumers
+
+**CriticalAlertCreatedEventConsumer** recibe `CriticalAlertCreated` desde **Alert Management** y lo dirige hacia `CriticalAlertCreatedEventHandler`.
+
+**NonCriticalAlertCreatedEventConsumer** recibe `NonCriticalAlertCreated` y lo dirige hacia `NonCriticalAlertCreatedEventHandler`.
+
+### Retry Processing
+
+**NotificationRetryProcessor** identifica notificaciones con estado `FAILED` que pueden reintentarse y ejecuta nuevamente el proceso de envío.
+
+```
+processFailedNotifications()
+retry(Notification)
+```
+
+Este componente utiliza las reglas definidas por `NotificationRetryService`, evitando que la infraestructura determine por sí misma cuándo un reintento es válido.
+
+### Event Publishing
+
+**NotificationEventPublisher** publica los eventos generados durante el proceso de entrega:
+
+```
+NotificationSent
+NotificationDelivered
+NotificationFailed
+```
+
+### Configurations
+
+**NotificationEntityConfiguration** define el mapeo relacional de las notificaciones.
+
+Entre los principales campos configurados se encuentran:
+
+```
+Id
+AlertId
+RecipientId
+Channel
+Status
+Attempts
+CreatedAt
+SentAt
+DeliveredAt
+```
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `NotificationRepository` | Repository | Implementa la persistencia y consulta de notificaciones. | Infrastructure |
+| `NotificationDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `NotificationEntity` | Persistence Entity | Representa una notificación almacenada. | Infrastructure |
+| `NotificationPersistenceMapper` | Mapper | Convierte entre dominio y persistencia. | Infrastructure |
+| `INotificationProvider` | Provider Interface | Define el contrato común para los proveedores de envío. | Infrastructure |
+| `PushNotificationProvider` | External Provider | Gestiona notificaciones Push mediante FCM/APNs. | Infrastructure |
+| `SmsNotificationProvider` | External Provider | Gestiona el envío de SMS. | Infrastructure |
+| `EmailNotificationProvider` | External Provider | Gestiona el envío de correos electrónicos. | Infrastructure |
+| `WhatsAppNotificationProvider` | External Provider | Gestiona el envío mediante WhatsApp. | Infrastructure |
+| `NotificationDispatcher` | Infrastructure Service | Selecciona y ejecuta el proveedor correspondiente. | Infrastructure |
+| `CriticalAlertCreatedEventConsumer` | Event Consumer | Recibe eventos de alertas críticas. | Infrastructure |
+| `NonCriticalAlertCreatedEventConsumer` | Event Consumer | Recibe eventos de alertas no críticas. | Infrastructure |
+| `NotificationRetryProcessor` | Background Processor | Procesa reintentos de notificaciones fallidas. | Infrastructure |
+| `NotificationEventPublisher` | Event Publisher | Publica eventos de entrega de notificaciones. | Infrastructure |
+| `NotificationEntityConfiguration` | Persistence Configuration | Define el mapeo y restricciones de persistencia. | Infrastructure |
+
+### 5.8.5 Bounded Context Software Architecture Component Level Diagrams.
+
+El diagrama representa el flujo desde los eventos generados por Alert Management hasta la selección del canal, envío de la notificación, persistencia del resultado y posible reintento.
+
+![](assets-emergentes/C4Diagrams/NotificationsComponentDiagram.png)
+
+### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.8.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/Notification_Class.png)
+
+#### 5.8.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/notifications-database.png)
+
+## 5.9. Energy & Maintenance Management Bounded Context
+
+El bounded context **Energy & Maintenance Management** se encarga de registrar y analizar el consumo energético, calcular costos y gestionar las solicitudes y actividades de mantenimiento asociadas a los equipos eléctricos de ElectroLink. README
+
+En el Event Storming actual aparecen como elementos principales `EnergyConsumption`, `CalculateEnergyCost`, `MaintenanceRequest`, `ScheduleMaintenance`, `CompleteMaintenance`, `EnergyConsumptionRecorded`, `MaintenanceRequested`, `MaintenanceScheduled` y `MaintenanceCompleted`.
+
+### 5.9.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con el registro de consumo energético, cálculo de costos y ciclo de vida de las actividades de mantenimiento.
+
+### Aggregate Roots
+
+**EnergyConsumption** representa el consumo energético registrado para un equipo durante un periodo determinado.
+
+Sus principales responsabilidades son:
+
+-   registrar el consumo de un equipo;
+-   mantener el periodo asociado;
+-   calcular el costo energético;
+-   conservar el valor registrado en kWh.
+
+**MaintenanceRequest** representa una solicitud de mantenimiento asociada a un equipo.
+
+Sus responsabilidades son:
+
+-   registrar una solicitud;
+-   definir su prioridad;
+-   programar una fecha de mantenimiento;
+-   actualizar su estado;
+-   registrar su finalización.
+
+### Value Objects
+
+**EnergyConsumptionId** identifica un registro de consumo energético.
+
+**MaintenanceRequestId** identifica una solicitud de mantenimiento.
+
+**EquipmentId** identifica el equipo relacionado.
+
+**EnergyValue** representa la cantidad de energía consumida.
+
+```
+EnergyValue
+- value
+- unit
+```
+
+Para este contexto la unidad principal utilizada es `kWh`, ya que ElectroLink debe permitir consultar el consumo energético por equipo. README
+
+**EnergyCost** representa el costo calculado a partir del consumo.
+
+```
+EnergyCost
+- amount
+- currency
+```
+
+La moneda considerada para la gestión de costos es `PEN`, de acuerdo con los requerimientos del proyecto. README
+
+**ConsumptionPeriod** representa el intervalo asociado al registro energético.
+
+```
+ConsumptionPeriod
+- startDate
+- endDate
+```
+
+**MaintenanceDescription** contiene el detalle de la actividad requerida.
+
+**MaintenanceSchedule** representa la fecha programada para realizar el mantenimiento.
+
+### Enumerations
+
+**MaintenanceStatus**
+
+```
+REQUESTED
+SCHEDULED
+COMPLETED
+```
+
+**MaintenancePriority**
+
+```
+LOW
+MEDIUM
+HIGH
+```
+
+La prioridad permite distinguir actividades preventivas de aquellas que requieren una intervención más próxima.
+
+### Repository Interfaces
+
+**IEnergyConsumptionRepository**
+
+```
+save(EnergyConsumption)
+findById(EnergyConsumptionId)
+findByEquipmentId(EquipmentId)
+findByPeriod(ConsumptionPeriod)
+```
+
+**IMaintenanceRequestRepository**
+
+```
+save(MaintenanceRequest)
+findById(MaintenanceRequestId)
+findByEquipmentId(EquipmentId)
+findByStatus(MaintenanceStatus)
+update(MaintenanceRequest)
+```
+
+### Domain Services
+
+**EnergyCostCalculationService** calcula el costo asociado al consumo energético.
+
+```
+calculateCost(EnergyValue, Decimal tariff) EnergyCost
+```
+
+Esta responsabilidad está alineada con la necesidad de mostrar consumo en kWh y su costo asociado en soles. README
+
+**MaintenanceSchedulingService** valida la programación de una actividad de mantenimiento.
+
+```
+canSchedule(MaintenanceRequest)
+schedule(MaintenanceRequest, MaintenanceSchedule)
+```
+
+**MaintenanceCompletionService** controla la finalización de una actividad.
+
+```
+canComplete(MaintenanceRequest)
+complete(MaintenanceRequest)
+```
+
+### Eventos del dominio
+
+Los eventos principales son:
+
+```
+EnergyConsumptionRecorded
+MaintenanceRequested
+MaintenanceScheduled
+MaintenanceCompleted
+```
+
+Estos eventos permiten comunicar los cambios relevantes del bounded context sin acoplar directamente otros módulos a sus agregados.
+
+### Relación con otros bounded contexts
+
+**Electrical Monitoring** proporciona las mediciones que permiten obtener información de consumo energético.
+
+Por otro lado, una condición preventiva o una recomendación de mantenimiento puede originar una `MaintenanceRequest`. ElectroLink contempla precisamente la programación preventiva de revisiones antes de que una anomalía evolucione hacia una falla mayor. README
+
+El flujo principal puede resumirse así:
+
+```
+Electrical Measurements
+        ↓
+EnergyConsumption
+        ↓
+EnergyConsumptionRecorded
+        ↓
+CalculateEnergyCost
+
+
+NonCritical Condition
+        ↓
+MaintenanceRequest
+        ↓
+MaintenanceRequested
+        ↓
+ScheduleMaintenance
+        ↓
+MaintenanceScheduled
+        ↓
+CompleteMaintenance
+        ↓
+MaintenanceCompleted
+```
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyConsumption` | Aggregate Root | Representa el consumo energético registrado para un equipo. | Domain |
+| `MaintenanceRequest` | Aggregate Root | Representa una solicitud y su ciclo de mantenimiento. | Domain |
+| `EnergyConsumptionId` | Value Object | Identifica un registro de consumo. | Domain |
+| `MaintenanceRequestId` | Value Object | Identifica una solicitud de mantenimiento. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo relacionado. | Domain |
+| `EnergyValue` | Value Object | Representa el consumo energético registrado. | Domain |
+| `EnergyCost` | Value Object | Representa el costo asociado al consumo. | Domain |
+| `ConsumptionPeriod` | Value Object | Representa el periodo del consumo. | Domain |
+| `MaintenanceDescription` | Value Object | Representa el detalle de mantenimiento. | Domain |
+| `MaintenanceSchedule` | Value Object | Representa la programación del mantenimiento. | Domain |
+| `MaintenanceStatus` | Enumeration | Define el estado de una solicitud. | Domain |
+| `MaintenancePriority` | Enumeration | Define la prioridad de mantenimiento. | Domain |
+| `IEnergyConsumptionRepository` | Repository Interface | Define la persistencia de consumos energéticos. | Domain |
+| `IMaintenanceRequestRepository` | Repository Interface | Define la persistencia de solicitudes de mantenimiento. | Domain |
+| `EnergyCostCalculationService` | Domain Service | Calcula el costo asociado al consumo energético. | Domain |
+| `MaintenanceSchedulingService` | Domain Service | Gestiona las reglas de programación. | Domain |
+| `MaintenanceCompletionService` | Domain Service | Gestiona las reglas de finalización. | Domain |
+
+### 5.9.2. Interface Layer
+
+La **Interface Layer** del bounded context **Energy & Maintenance Management** recibe las solicitudes relacionadas con la consulta del consumo energético, cálculo de costos y gestión de actividades de mantenimiento.
+
+### Controllers
+
+**EnergyController** gestiona las operaciones asociadas al consumo energético.
+
+Sus responsabilidades son:
+
+-   consultar consumos por equipo;
+-   consultar consumos por periodo;
+-   consultar el costo energético calculado.
+
+**MaintenanceController** gestiona las operaciones relacionadas con mantenimiento.
+
+Sus responsabilidades son:
+
+-   crear solicitudes de mantenimiento;
+-   consultar solicitudes;
+-   programar actividades;
+-   completar mantenimientos.
+
+### Request DTOs
+
+**CreateMaintenanceRequest**
+
+```
+CreateMaintenanceRequest
+- equipmentId
+- description
+- priority
+```
+
+**ScheduleMaintenanceRequest**
+
+```
+ScheduleMaintenanceRequest
+- maintenanceRequestId
+- scheduledDate
+```
+
+**CompleteMaintenanceRequest**
+
+```
+CompleteMaintenanceRequest
+- maintenanceRequestId
+```
+
+### Response DTOs
+
+**EnergyConsumptionResponse**
+
+```
+EnergyConsumptionResponse
+- consumptionId
+- equipmentId
+- consumptionKwh
+- cost
+- currency
+- startDate
+- endDate
+```
+
+**MaintenanceRequestResponse**
+
+```
+MaintenanceRequestResponse
+- maintenanceRequestId
+- equipmentId
+- description
+- priority
+- status
+- scheduledDate
+- completedAt
+```
+
+**MaintenanceListResponse**
+
+```
+MaintenanceListResponse
+- maintenanceRequests
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+CreateMaintenanceCommandFromRequestAssembler
+ScheduleMaintenanceCommandFromRequestAssembler
+CompleteMaintenanceCommandFromRequestAssembler
+EnergyConsumptionResponseAssembler
+MaintenanceRequestResponseAssembler
+MaintenanceListResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands y transforman los resultados de aplicación en respuestas para la interfaz.
+
+### Event Consumers
+
+**EnergyMeasurementConsumer** recibe información relacionada con consumo proveniente de **Electrical Monitoring**y la transforma en una solicitud de registro de consumo energético.
+
+**NonCriticalAlertCreatedConsumer** recibe una alerta preventiva proveniente de **Alert Management** y permite iniciar una solicitud de mantenimiento cuando corresponde.
+
+### Flujo de entrada
+
+```
+Electrical Monitoring
+        ↓
+EnergyMeasurementConsumer
+        ↓
+RecordEnergyConsumptionCommand
+```
+
+```
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedConsumer
+        ↓
+CreateMaintenanceRequestCommand
+```
+
+La creación de solicitudes de mantenimiento está alineada con la necesidad de programar revisiones preventivas antes de que una condición no crítica evolucione hacia una falla mayor. README
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyController` | Controller | Gestiona consultas de consumo y costos energéticos. | Interface |
+| `MaintenanceController` | Controller | Gestiona solicitudes y actividades de mantenimiento. | Interface |
+| `EnergyMeasurementConsumer` | Consumer | Recibe información de consumo desde Electrical Monitoring. | Interface |
+| `NonCriticalAlertCreatedConsumer` | Consumer | Recibe alertas preventivas relacionadas con mantenimiento. | Interface |
+| `CreateMaintenanceRequest` | Request DTO | Contiene los datos para crear una solicitud de mantenimiento. | Interface |
+| `ScheduleMaintenanceRequest` | Request DTO | Contiene los datos para programar un mantenimiento. | Interface |
+| `CompleteMaintenanceRequest` | Request DTO | Contiene la solicitud para completar un mantenimiento. | Interface |
+| `EnergyConsumptionResponse` | Response DTO | Representa el consumo y costo energético de un equipo. | Interface |
+| `MaintenanceRequestResponse` | Response DTO | Representa una solicitud de mantenimiento. | Interface |
+| `MaintenanceListResponse` | Response DTO | Representa una colección de solicitudes. | Interface |
+| `CreateMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una solicitud en command. | Interface |
+| `ScheduleMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una programación en command. | Interface |
+| `CompleteMaintenanceCommandFromRequestAssembler` | Assembler | Convierte una finalización en command. | Interface |
+| `EnergyConsumptionResponseAssembler` | Assembler | Construye respuestas de consumo energético. | Interface |
+| `MaintenanceRequestResponseAssembler` | Assembler | Construye respuestas de mantenimiento. | Interface |
+| `MaintenanceListResponseAssembler` | Assembler | Construye respuestas de colecciones de mantenimiento. | Interface |
+
+### 5.9.3. Application Layer
+
+La **Application Layer** del bounded context **Energy & Maintenance Management** coordina los casos de uso relacionados con el registro y consulta del consumo energético, cálculo de costos y gestión del ciclo de mantenimiento.
+
+### Commands
+
+**RecordEnergyConsumptionCommand**
+
+```
+RecordEnergyConsumptionCommand
+- equipmentId
+- consumptionKwh
+- startDate
+- endDate
+```
+
+**CalculateEnergyCostCommand**
+
+```
+CalculateEnergyCostCommand
+- energyConsumptionId
+- tariff
+```
+
+**CreateMaintenanceRequestCommand**
+
+```
+CreateMaintenanceRequestCommand
+- equipmentId
+- description
+- priority
+```
+
+**ScheduleMaintenanceCommand**
+
+```
+ScheduleMaintenanceCommand
+- maintenanceRequestId
+- scheduledDate
+```
+
+**CompleteMaintenanceCommand**
+
+```
+CompleteMaintenanceCommand
+- maintenanceRequestId
+```
+
+### Command Handlers
+
+**RecordEnergyConsumptionCommandHandler** crea un registro de consumo energético asociado a un equipo y genera `EnergyConsumptionRecorded`.
+
+**CalculateEnergyCostCommandHandler** recupera el consumo registrado y utiliza `EnergyCostCalculationService` para calcular su costo en función de la tarifa indicada.
+
+**CreateMaintenanceRequestCommandHandler** crea una nueva solicitud de mantenimiento y genera `MaintenanceRequested`.
+
+**ScheduleMaintenanceCommandHandler** valida la programación mediante `MaintenanceSchedulingService`, actualiza el estado a `SCHEDULED` y genera `MaintenanceScheduled`.
+
+**CompleteMaintenanceCommandHandler** verifica la finalización mediante `MaintenanceCompletionService`, actualiza el estado a `COMPLETED` y genera `MaintenanceCompleted`.
+
+### Queries
+
+**GetEnergyConsumptionByEquipmentQuery**
+
+```
+GetEnergyConsumptionByEquipmentQuery
+- equipmentId
+```
+
+**GetEnergyConsumptionByPeriodQuery**
+
+```
+GetEnergyConsumptionByPeriodQuery
+- startDate
+- endDate
+```
+
+**GetMaintenanceRequestByIdQuery**
+
+```
+GetMaintenanceRequestByIdQuery
+- maintenanceRequestId
+```
+
+**GetMaintenanceRequestsByEquipmentQuery**
+
+```
+GetMaintenanceRequestsByEquipmentQuery
+- equipmentId
+```
+
+**GetMaintenanceRequestsByStatusQuery**
+
+```
+GetMaintenanceRequestsByStatusQuery
+- status
+```
+
+### Query Handlers
+
+**GetEnergyConsumptionByEquipmentQueryHandler** recupera los registros energéticos asociados a un equipo.
+
+**GetEnergyConsumptionByPeriodQueryHandler** obtiene los consumos registrados dentro de un periodo determinado.
+
+**GetMaintenanceRequestByIdQueryHandler** recupera una solicitud específica.
+
+**GetMaintenanceRequestsByEquipmentQueryHandler** obtiene las solicitudes asociadas a un equipo.
+
+**GetMaintenanceRequestsByStatusQueryHandler** recupera solicitudes según su estado.
+
+### Event Handlers
+
+**EnergyMeasurementEventHandler** recibe información proveniente de **Electrical Monitoring** y genera `RecordEnergyConsumptionCommand`.
+
+**NonCriticalAlertCreatedEventHandler** recibe `NonCriticalAlertCreated` desde **Alert Management** y puede generar una solicitud de mantenimiento preventivo.
+
+### Flujo de aplicación
+
+```
+Electrical Monitoring
+        ↓
+EnergyMeasurementEventHandler
+        ↓
+RecordEnergyConsumptionCommand
+        ↓
+RecordEnergyConsumptionCommandHandler
+        ↓
+EnergyConsumptionRecorded
+        ↓
+CalculateEnergyCostCommand
+```
+
+```
+NonCriticalAlertCreated
+        ↓
+NonCriticalAlertCreatedEventHandler
+        ↓
+CreateMaintenanceRequestCommand
+        ↓
+CreateMaintenanceRequestCommandHandler
+        ↓
+MaintenanceRequested
+        ↓
+ScheduleMaintenanceCommand
+        ↓
+MaintenanceScheduled
+        ↓
+CompleteMaintenanceCommand
+        ↓
+MaintenanceCompleted
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `RecordEnergyConsumptionCommand` | Command | Solicita registrar consumo energético. | Application |
+| `CalculateEnergyCostCommand` | Command | Solicita calcular el costo de un consumo. | Application |
+| `CreateMaintenanceRequestCommand` | Command | Solicita crear una actividad de mantenimiento. | Application |
+| `ScheduleMaintenanceCommand` | Command | Solicita programar una actividad de mantenimiento. | Application |
+| `CompleteMaintenanceCommand` | Command | Solicita finalizar un mantenimiento. | Application |
+| `RecordEnergyConsumptionCommandHandler` | Command Handler | Coordina el registro de consumo energético. | Application |
+| `CalculateEnergyCostCommandHandler` | Command Handler | Coordina el cálculo del costo energético. | Application |
+| `CreateMaintenanceRequestCommandHandler` | Command Handler | Coordina la creación de solicitudes de mantenimiento. | Application |
+| `ScheduleMaintenanceCommandHandler` | Command Handler | Coordina la programación del mantenimiento. | Application |
+| `CompleteMaintenanceCommandHandler` | Command Handler | Coordina la finalización del mantenimiento. | Application |
+| `GetEnergyConsumptionByEquipmentQuery` | Query | Consulta consumos por equipo. | Application |
+| `GetEnergyConsumptionByPeriodQuery` | Query | Consulta consumos por periodo. | Application |
+| `GetMaintenanceRequestByIdQuery` | Query | Consulta una solicitud específica. | Application |
+| `GetMaintenanceRequestsByEquipmentQuery` | Query | Consulta solicitudes por equipo. | Application |
+| `GetMaintenanceRequestsByStatusQuery` | Query | Consulta solicitudes por estado. | Application |
+| `GetEnergyConsumptionByEquipmentQueryHandler` | Query Handler | Recupera consumos de un equipo. | Application |
+| `GetEnergyConsumptionByPeriodQueryHandler` | Query Handler | Recupera consumos por periodo. | Application |
+| `GetMaintenanceRequestByIdQueryHandler` | Query Handler | Recupera una solicitud de mantenimiento. | Application |
+| `GetMaintenanceRequestsByEquipmentQueryHandler` | Query Handler | Recupera solicitudes por equipo. | Application |
+| `GetMaintenanceRequestsByStatusQueryHandler` | Query Handler | Recupera solicitudes por estado. | Application |
+| `EnergyMeasurementEventHandler` | Event Handler | Procesa información energética proveniente del monitoreo. | Application |
+| `NonCriticalAlertCreatedEventHandler` | Event Handler | Procesa alertas preventivas y puede iniciar mantenimiento. | Application |
+
+### 5.9.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Energy & Maintenance Management** implementa la persistencia del consumo energético y de las solicitudes de mantenimiento, además de integrar los mecanismos necesarios para recibir eventos provenientes de otros bounded contexts y publicar los cambios relevantes del dominio.
+
+### Repository Implementations
+
+**EnergyConsumptionRepository** implementa `IEnergyConsumptionRepository` y gestiona la persistencia y consulta de los registros de consumo.
+
+```
+save(EnergyConsumption)
+findById(EnergyConsumptionId)
+findByEquipmentId(EquipmentId)
+findByPeriod(ConsumptionPeriod)
+```
+
+**MaintenanceRequestRepository** implementa `IMaintenanceRequestRepository` y administra el ciclo persistente de las solicitudes de mantenimiento.
+
+```
+save(MaintenanceRequest)
+findById(MaintenanceRequestId)
+findByEquipmentId(EquipmentId)
+findByStatus(MaintenanceStatus)
+update(MaintenanceRequest)
+```
+
+### Persistence Context
+
+**EnergyMaintenanceDbContext** administra los datos correspondientes a este bounded context.
+
+Gestiona principalmente:
+
+```
+EnergyConsumption
+MaintenanceRequest
+```
+
+### Persistence Entities
+
+**EnergyConsumptionEntity**
+
+```
+EnergyConsumptionEntity
+- Id
+- EquipmentId
+- ConsumptionKwh
+- EnergyCost
+- Currency
+- StartDate
+- EndDate
+- CreatedAt
+```
+
+**MaintenanceRequestEntity**
+
+```
+MaintenanceRequestEntity
+- Id
+- EquipmentId
+- Description
+- Priority
+- Status
+- ScheduledDate
+- CompletedAt
+- CreatedAt
+- UpdatedAt
+```
+
+### Persistence Mappers
+
+**EnergyConsumptionPersistenceMapper** transforma entre `EnergyConsumption` y `EnergyConsumptionEntity`.
+
+**MaintenanceRequestPersistenceMapper** transforma entre `MaintenanceRequest` y `MaintenanceRequestEntity`.
+
+### Event Consumers
+
+**EnergyMeasurementEventConsumer** recibe información proveniente de **Electrical Monitoring** y la dirige hacia `EnergyMeasurementEventHandler`.
+
+**NonCriticalAlertCreatedEventConsumer** recibe `NonCriticalAlertCreated` desde **Alert Management** y lo deriva hacia `NonCriticalAlertCreatedEventHandler`.
+
+De esta manera, el bounded context puede reaccionar tanto a datos de consumo como a condiciones preventivas que requieran mantenimiento.
+
+### Event Publishing
+
+**EnergyMaintenanceEventPublisher** publica los eventos generados dentro del contexto:
+
+```
+EnergyConsumptionRecorded
+MaintenanceRequested
+MaintenanceScheduled
+MaintenanceCompleted
+```
+
+Estos eventos permiten que otros módulos, como **Analytics** o **Notifications**, reaccionen sin depender directamente de las entidades internas de este bounded context.
+
+### Tariff Access
+
+**EnergyTariffProvider** proporciona la tarifa utilizada para calcular el costo energético.
+
+```
+getCurrentTariff()
+```
+
+Su responsabilidad se limita a suministrar el valor requerido por `EnergyCostCalculationService`, evitando que la lógica del dominio dependa directamente de la fuente de datos de la tarifa.
+
+### Maintenance Document Storage
+
+**MaintenanceDocumentStorage** gestiona los documentos asociados a mantenimientos realizados, como constancias o comprobantes de servicio.
+
+Esto responde al requerimiento de mantener trazabilidad de reparaciones y evidencias de mantenimiento realizadas sobre los equipos. README
+
+### Configurations
+
+**EnergyConsumptionEntityConfiguration** define el mapeo relacional de los registros energéticos.
+
+**MaintenanceRequestEntityConfiguration** define el mapeo y restricciones de las solicitudes de mantenimiento.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `EnergyConsumptionRepository` | Repository | Implementa la persistencia y consulta del consumo energético. | Infrastructure |
+| `MaintenanceRequestRepository` | Repository | Implementa la persistencia y consulta de mantenimientos. | Infrastructure |
+| `EnergyMaintenanceDbContext` | Persistence Context | Gestiona los datos del bounded context. | Infrastructure |
+| `EnergyConsumptionEntity` | Persistence Entity | Representa un registro energético almacenado. | Infrastructure |
+| `MaintenanceRequestEntity` | Persistence Entity | Representa una solicitud de mantenimiento persistida. | Infrastructure |
+| `EnergyConsumptionPersistenceMapper` | Mapper | Convierte registros energéticos entre dominio y persistencia. | Infrastructure |
+| `MaintenanceRequestPersistenceMapper` | Mapper | Convierte solicitudes de mantenimiento entre dominio y persistencia. | Infrastructure |
+| `EnergyMeasurementEventConsumer` | Event Consumer | Recibe información energética desde Electrical Monitoring. | Infrastructure |
+| `NonCriticalAlertCreatedEventConsumer` | Event Consumer | Recibe alertas preventivas desde Alert Management. | Infrastructure |
+| `EnergyMaintenanceEventPublisher` | Event Publisher | Publica eventos del bounded context. | Infrastructure |
+| `EnergyTariffProvider` | Infrastructure Service | Proporciona la tarifa utilizada para calcular costos. | Infrastructure |
+| `MaintenanceDocumentStorage` | Infrastructure Service | Gestiona documentos asociados a mantenimientos. | Infrastructure |
+| `EnergyConsumptionEntityConfiguration` | Persistence Configuration | Define el mapeo de los registros de consumo. | Infrastructure |
+| `MaintenanceRequestEntityConfiguration` | Persistence Configuration | Define el mapeo de las solicitudes de mantenimiento. | Infrastructure |
+
+### 5.9.5. Bounded Context Software Architecture Component Level Diagram
+
+El diagrama representa el flujo de registro de consumo energético, cálculo de costos y gestión del ciclo de mantenimiento, incluyendo la recepción de información desde Electrical Monitoring y Alert Management.
+
+![](assets-emergentes/C4Diagrams/EnergyMaintenanceComponentDiagram.png)
+
+### 5.9.6. Bounded Context Software Architecture Code Level Diagram 
+#### 5.9.6.1. Bounded Context Domain Layer Class Diagram
+
+![](assets-emergentes/ClassDiagrams/EnergyMaintenanceUMLDiagram.png)
+
+#### 5.9.6.2. Bounded COntext Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/energy_maintenance_database.png)
+
+## 5.10. Analytics Bounded Context
+
+El bounded context **Analytics** se encarga de consolidar información proveniente de los demás módulos para generar indicadores, tendencias, resúmenes de consumo y reportes orientados a la toma de decisiones. README
+
+En el Event Storming actual aparecen como elementos principales `Indicator`, `Trend`, `ConsumptionSummary`, `Report`, `GenerateReport` y `ReportGenerated`. Además, este contexto recibe eventos como `EnergyConsumptionRecorded`, `MaintenanceCompleted` y `AlertResolved`, que sirven como insumos para construir información analítica.
+
+### 5.10.1. Domain Layer
+
+La **Domain Layer** concentra las reglas relacionadas con la consolidación de información, cálculo de indicadores, identificación de tendencias y generación lógica de reportes.
+
+### Aggregate Roots
+
+**AnalyticsReport** representa un reporte consolidado generado a partir de información histórica y operativa.
+
+Sus principales responsabilidades son:
+
+-   consolidar información relevante;
+-   asociar indicadores y tendencias;
+-   incluir resúmenes de consumo;
+-   definir el periodo analizado;
+-   mantener el estado de generación del reporte.
+
+**ConsumptionSummary** representa un resumen del consumo energético correspondiente a un equipo, local o periodo.
+
+Sus responsabilidades son:
+
+-   consolidar consumo energético;
+-   calcular valores acumulados;
+-   mantener costos asociados;
+-   permitir comparación entre periodos.
+
+### Entities
+
+**Indicator** representa una métrica calculada a partir de los datos consolidados del sistema.
+
+Ejemplos de información que puede representar son consumo energético, número de alertas o mantenimientos realizados.
+
+**Trend** representa la evolución de una métrica durante un periodo determinado y permite identificar variaciones en el comportamiento del sistema.
+
+### Value Objects
+
+**ReportId** identifica de manera única un reporte.
+
+**IndicatorId** identifica un indicador calculado.
+
+**Period** representa el intervalo de análisis.
+
+```
+Period
+- startDate
+- endDate
+```
+
+**MetricValue** representa el valor de un indicador.
+
+```
+MetricValue
+- value
+- unit
+```
+
+**PercentageVariation** representa la variación entre dos valores o periodos.
+
+```
+PercentageVariation
+- value
+```
+
+### Enumerations
+
+**ReportType**
+
+```
+ENERGY
+MAINTENANCE
+ALERTS
+GENERAL
+```
+
+**TrendDirection**
+
+```
+INCREASING
+DECREASING
+STABLE
+```
+
+Estas categorías permiten representar de manera simple la evolución de las métricas analizadas.
+
+### Repository Interfaces
+
+**IAnalyticsReportRepository**
+
+```
+save(AnalyticsReport)
+findById(ReportId)
+findByPeriod(Period)
+```
+
+**IConsumptionSummaryRepository**
+
+```
+save(ConsumptionSummary)
+findByEquipmentId(EquipmentId)
+findByPeriod(Period)
+```
+
+### Domain Services
+
+**IndicatorCalculationService** calcula indicadores a partir de los datos consolidados.
+
+```
+calculateIndicator()
+calculateVariation()
+```
+
+**TrendAnalysisService** determina la evolución de una métrica dentro de un periodo.
+
+```
+analyzeTrend()
+determineDirection()
+```
+
+**ReportGenerationService** organiza la información analítica que formará parte de un reporte.
+
+```
+generateReport()
+buildSummary()
+```
+
+La función de Analytics está alineada con la necesidad de ofrecer información histórica y en tiempo real, así como reportes e insights para facilitar la toma de decisiones. README
+
+### Eventos del dominio
+
+El principal evento generado por este bounded context es:
+
+```
+ReportGenerated
+```
+
+Este evento indica que un reporte analítico ha sido generado correctamente y se encuentra disponible para su consulta o exportación.
+
+### Eventos recibidos
+
+Analytics consolida información a partir de eventos generados en otros bounded contexts:
+
+```
+EnergyConsumptionRecorded
+MaintenanceCompleted
+AlertResolved
+```
+
+Estos eventos permiten actualizar progresivamente los datos necesarios para indicadores, tendencias y reportes sin consultar directamente los agregados internos de otros módulos.
+
+### Flujo principal
+
+```
+EnergyConsumptionRecorded
+MaintenanceCompleted
+AlertResolved
+        ↓
+   Consolidate Data
+        ↓
+ ┌───────────────┐
+ │   Indicator   │
+ │     Trend     │
+ │ConsumptionSummary│
+ └───────────────┘
+        ↓
+   GenerateReport
+        ↓
+  AnalyticsReport
+        ↓
+  ReportGenerated
+```
+
+Este flujo permite que el Manager disponga de información consolidada sobre consumo, incidencias y desempeño operativo de los establecimientos. README
+
+### Clases de la Domain Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsReport` | Aggregate Root | Representa un reporte consolidado del sistema. | Domain |
+| `ConsumptionSummary` | Aggregate Root | Representa un resumen de consumo energético. | Domain |
+| `Indicator` | Entity | Representa una métrica calculada. | Domain |
+| `Trend` | Entity | Representa la evolución de una métrica. | Domain |
+| `ReportId` | Value Object | Identifica un reporte. | Domain |
+| `IndicatorId` | Value Object | Identifica un indicador. | Domain |
+| `EquipmentId` | Value Object | Identifica el equipo asociado a un resumen. | Domain |
+| `Period` | Value Object | Representa el intervalo analizado. | Domain |
+| `MetricValue` | Value Object | Representa el valor de una métrica. | Domain |
+| `PercentageVariation` | Value Object | Representa una variación porcentual. | Domain |
+| `ReportType` | Enumeration | Define el tipo de reporte. | Domain |
+| `TrendDirection` | Enumeration | Define la dirección de una tendencia. | Domain |
+| `IAnalyticsReportRepository` | Repository Interface | Define la persistencia de reportes. | Domain |
+| `IConsumptionSummaryRepository` | Repository Interface | Define la persistencia de resúmenes de consumo. | Domain |
+| `IndicatorCalculationService` | Domain Service | Calcula indicadores y variaciones. | Domain |
+| `TrendAnalysisService` | Domain Service | Analiza tendencias. | Domain |
+| `ReportGenerationService` | Domain Service | Organiza la información que compone un reporte. | Domain |
+
+### 5.10.2. Interface Layer
+
+La **Interface Layer** del bounded context **Analytics** recibe las solicitudes relacionadas con la consulta de indicadores, tendencias, resúmenes de consumo y generación de reportes.
+
+### Controllers
+
+**AnalyticsController** gestiona las consultas analíticas principales.
+
+Sus responsabilidades son:
+
+-   consultar indicadores;
+-   consultar tendencias;
+-   consultar resúmenes de consumo;
+-   solicitar la generación de reportes.
+
+**ReportController** gestiona las operaciones específicas relacionadas con los reportes analíticos.
+
+### Request DTOs
+
+**GenerateReportRequest**
+
+```
+GenerateReportRequest
+- reportType
+- startDate
+- endDate
+```
+
+**AnalyticsFilterRequest**
+
+```
+AnalyticsFilterRequest
+- equipmentId
+- startDate
+- endDate
+```
+
+### Response DTOs
+
+**IndicatorResponse**
+
+```
+IndicatorResponse
+- indicatorId
+- name
+- value
+- unit
+- periodStart
+- periodEnd
+```
+
+**TrendResponse**
+
+```
+TrendResponse
+- metric
+- direction
+- percentageVariation
+- startDate
+- endDate
+```
+
+**ConsumptionSummaryResponse**
+
+```
+ConsumptionSummaryResponse
+- equipmentId
+- totalConsumptionKwh
+- totalCost
+- currency
+- percentageVariation
+- startDate
+- endDate
+```
+
+**AnalyticsReportResponse**
+
+```
+AnalyticsReportResponse
+- reportId
+- reportType
+- startDate
+- endDate
+- generatedAt
+```
+
+### Assemblers
+
+Se consideran los siguientes assemblers:
+
+```
+GenerateReportCommandFromRequestAssembler
+IndicatorResponseAssembler
+TrendResponseAssembler
+ConsumptionSummaryResponseAssembler
+AnalyticsReportResponseAssembler
+```
+
+Estos componentes convierten las solicitudes recibidas en commands o queries y transforman los resultados obtenidos en respuestas para la interfaz.
+
+### Event Consumers
+
+La capa de interfaz también recibe información generada por otros bounded contexts.
+
+**EnergyConsumptionRecordedConsumer** recibe `EnergyConsumptionRecorded` desde **Energy & Maintenance Management**.
+
+**MaintenanceCompletedConsumer** recibe `MaintenanceCompleted`.
+
+**AlertResolvedConsumer** recibe `AlertResolved` desde **Alert Management**.
+
+Estos eventos se transforman en solicitudes de actualización de la información analítica.
+
+### Flujo de entrada
+
+```
+EnergyConsumptionRecorded
+        ↓
+EnergyConsumptionRecordedConsumer
+        ↓
+UpdateConsumptionAnalytics
+```
+
+```
+MaintenanceCompleted
+        ↓
+MaintenanceCompletedConsumer
+        ↓
+UpdateMaintenanceAnalytics
+```
+
+```
+AlertResolved
+        ↓
+AlertResolvedConsumer
+        ↓
+UpdateAlertAnalytics
+```
+
+La capa de interfaz no realiza los cálculos de indicadores ni tendencias; únicamente recibe las solicitudes y las delega hacia la **Application Layer**.
+
+### Clases de la Interface Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsController` | Controller | Gestiona consultas de indicadores, tendencias y resúmenes. | Interface |
+| `ReportController` | Controller | Gestiona solicitudes relacionadas con reportes. | Interface |
+| `EnergyConsumptionRecordedConsumer` | Consumer | Recibe eventos de consumo energético. | Interface |
+| `MaintenanceCompletedConsumer` | Consumer | Recibe eventos de mantenimiento completado. | Interface |
+| `AlertResolvedConsumer` | Consumer | Recibe eventos de alertas resueltas. | Interface |
+| `GenerateReportRequest` | Request DTO | Contiene los parámetros para generar un reporte. | Interface |
+| `AnalyticsFilterRequest` | Request DTO | Contiene filtros para consultas analíticas. | Interface |
+| `IndicatorResponse` | Response DTO | Representa un indicador calculado. | Interface |
+| `TrendResponse` | Response DTO | Representa una tendencia calculada. | Interface |
+| `ConsumptionSummaryResponse` | Response DTO | Representa un resumen de consumo. | Interface |
+| `AnalyticsReportResponse` | Response DTO | Representa un reporte generado. | Interface |
+| `GenerateReportCommandFromRequestAssembler` | Assembler | Convierte una solicitud en command de generación de reporte. | Interface |
+| `IndicatorResponseAssembler` | Assembler | Construye respuestas de indicadores. | Interface |
+| `TrendResponseAssembler` | Assembler | Construye respuestas de tendencias. | Interface |
+| `ConsumptionSummaryResponseAssembler` | Assembler | Construye respuestas de consumo consolidado. | Interface |
+| `AnalyticsReportResponseAssembler` | Assembler | Construye respuestas de reportes. | Interface |
+
+### 5.10.3. Application Layer
+
+La **Application Layer** del bounded context **Analytics** coordina los casos de uso relacionados con la consolidación de datos, cálculo de indicadores y tendencias, generación de resúmenes y elaboración de reportes.
+
+### Commands
+
+**UpdateConsumptionAnalyticsCommand**
+
+```
+UpdateConsumptionAnalyticsCommand
+- equipmentId
+- consumptionKwh
+- energyCost
+- periodStart
+- periodEnd
+```
+
+**UpdateMaintenanceAnalyticsCommand**
+
+```
+UpdateMaintenanceAnalyticsCommand
+- maintenanceRequestId
+- equipmentId
+- completedAt
+```
+
+**UpdateAlertAnalyticsCommand**
+
+```
+UpdateAlertAnalyticsCommand
+- alertId
+- equipmentId
+- severity
+- resolvedAt
+```
+
+**GenerateReportCommand**
+
+```
+GenerateReportCommand
+- reportType
+- startDate
+- endDate
+```
+
+### Command Handlers
+
+**UpdateConsumptionAnalyticsCommandHandler** procesa los datos de consumo recibidos, actualiza el resumen correspondiente y prepara la información necesaria para indicadores y tendencias.
+
+**UpdateMaintenanceAnalyticsCommandHandler** incorpora la información de mantenimientos completados dentro de los datos analíticos.
+
+**UpdateAlertAnalyticsCommandHandler** registra la información de alertas resueltas para su posterior análisis.
+
+**GenerateReportCommandHandler** coordina la generación del reporte utilizando `ReportGenerationService` y genera el evento `ReportGenerated`.
+
+### Queries
+
+**GetIndicatorsQuery**
+
+```
+GetIndicatorsQuery
+- startDate
+- endDate
+```
+
+**GetTrendsQuery**
+
+```
+GetTrendsQuery
+- startDate
+- endDate
+```
+
+**GetConsumptionSummaryQuery**
+
+```
+GetConsumptionSummaryQuery
+- equipmentId
+- startDate
+- endDate
+```
+
+**GetReportByIdQuery**
+
+```
+GetReportByIdQuery
+- reportId
+```
+
+### Query Handlers
+
+**GetIndicatorsQueryHandler** obtiene los datos necesarios y utiliza `IndicatorCalculationService` para devolver los indicadores correspondientes al periodo solicitado.
+
+**GetTrendsQueryHandler** utiliza `TrendAnalysisService` para determinar la evolución de las métricas analizadas.
+
+**GetConsumptionSummaryQueryHandler** recupera el resumen de consumo asociado a un equipo y periodo.
+
+**GetReportByIdQueryHandler** obtiene un reporte previamente generado.
+
+### Event Handlers
+
+**EnergyConsumptionRecordedEventHandler** recibe `EnergyConsumptionRecorded` y genera `UpdateConsumptionAnalyticsCommand`.
+
+**MaintenanceCompletedEventHandler** recibe `MaintenanceCompleted` y genera `UpdateMaintenanceAnalyticsCommand`.
+
+**AlertResolvedEventHandler** recibe `AlertResolved` y genera `UpdateAlertAnalyticsCommand`.
+
+### Flujo de aplicación
+
+```
+EnergyConsumptionRecorded
+        ↓
+EnergyConsumptionRecordedEventHandler
+        ↓
+UpdateConsumptionAnalyticsCommand
+        ↓
+UpdateConsumptionAnalyticsCommandHandler
+        ↓
+ConsumptionSummary
+        ↓
+Indicator / Trend
+```
+
+```
+MaintenanceCompleted
+        ↓
+MaintenanceCompletedEventHandler
+        ↓
+UpdateMaintenanceAnalyticsCommand
+        ↓
+UpdateMaintenanceAnalyticsCommandHandler
+```
+
+```
+AlertResolved
+        ↓
+AlertResolvedEventHandler
+        ↓
+UpdateAlertAnalyticsCommand
+        ↓
+UpdateAlertAnalyticsCommandHandler
+```
+
+```
+GenerateReportCommand
+        ↓
+GenerateReportCommandHandler
+        ↓
+ReportGenerationService
+        ↓
+AnalyticsReport
+        ↓
+ReportGenerated
+```
+
+### Clases de la Application Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `UpdateConsumptionAnalyticsCommand` | Command | Solicita actualizar la información analítica de consumo. | Application |
+| `UpdateMaintenanceAnalyticsCommand` | Command | Solicita registrar información analítica de mantenimiento. | Application |
+| `UpdateAlertAnalyticsCommand` | Command | Solicita registrar información analítica de alertas. | Application |
+| `GenerateReportCommand` | Command | Solicita generar un reporte analítico. | Application |
+| `UpdateConsumptionAnalyticsCommandHandler` | Command Handler | Procesa y consolida datos de consumo. | Application |
+| `UpdateMaintenanceAnalyticsCommandHandler` | Command Handler | Procesa datos de mantenimientos completados. | Application |
+| `UpdateAlertAnalyticsCommandHandler` | Command Handler | Procesa datos de alertas resueltas. | Application |
+| `GenerateReportCommandHandler` | Command Handler | Coordina la generación del reporte. | Application |
+| `GetIndicatorsQuery` | Query | Consulta indicadores de un periodo. | Application |
+| `GetTrendsQuery` | Query | Consulta tendencias analíticas. | Application |
+| `GetConsumptionSummaryQuery` | Query | Consulta resúmenes de consumo. | Application |
+| `GetReportByIdQuery` | Query | Consulta un reporte específico. | Application |
+| `GetIndicatorsQueryHandler` | Query Handler | Recupera y calcula indicadores. | Application |
+| `GetTrendsQueryHandler` | Query Handler | Recupera y analiza tendencias. | Application |
+| `GetConsumptionSummaryQueryHandler` | Query Handler | Recupera resúmenes de consumo. | Application |
+| `GetReportByIdQueryHandler` | Query Handler | Recupera un reporte generado. | Application |
+| `EnergyConsumptionRecordedEventHandler` | Event Handler | Procesa eventos de consumo energético. | Application |
+| `MaintenanceCompletedEventHandler` | Event Handler | Procesa eventos de mantenimiento completado. | Application |
+| `AlertResolvedEventHandler` | Event Handler | Procesa eventos de alertas resueltas. | Application |
+
+### 5.10.4. Infrastructure Layer
+
+La **Infrastructure Layer** del bounded context **Analytics** implementa la persistencia de reportes y resúmenes analíticos, el consumo de eventos provenientes de otros bounded contexts y la generación física de reportes para consulta o exportación.
+
+### Repository Implementations
+
+**AnalyticsReportRepository** implementa `IAnalyticsReportRepository` y administra la persistencia de los reportes generados.
+
+```
+save(AnalyticsReport)
+findById(ReportId)
+findByPeriod(Period)
+```
+
+**ConsumptionSummaryRepository** implementa `IConsumptionSummaryRepository` y gestiona los resúmenes consolidados de consumo.
+
+```
+save(ConsumptionSummary)
+findByEquipmentId(EquipmentId)
+findByPeriod(Period)
+```
+
+### Persistence Context
+
+**AnalyticsDbContext** administra los datos correspondientes al bounded context.
+
+Gestiona principalmente:
+
+```
+AnalyticsReport
+ConsumptionSummary
+Indicator
+Trend
+```
+
+### Persistence Entities
+
+**AnalyticsReportEntity**
+
+```
+AnalyticsReportEntity
+- Id
+- ReportType
+- PeriodStart
+- PeriodEnd
+- GeneratedAt
+```
+
+**ConsumptionSummaryEntity**
+
+```
+ConsumptionSummaryEntity
+- Id
+- EquipmentId
+- TotalConsumptionKwh
+- TotalCost
+- Currency
+- PeriodStart
+- PeriodEnd
+- PercentageVariation
+- UpdatedAt
+```
+
+**IndicatorEntity**
+
+```
+IndicatorEntity
+- Id
+- Name
+- Value
+- Unit
+- PeriodStart
+- PeriodEnd
+```
+
+**TrendEntity**
+
+```
+TrendEntity
+- Id
+- Metric
+- Direction
+- PercentageVariation
+- PeriodStart
+- PeriodEnd
+```
+
+### Persistence Mappers
+
+**AnalyticsReportPersistenceMapper** transforma entre `AnalyticsReport` y `AnalyticsReportEntity`.
+
+**ConsumptionSummaryPersistenceMapper** transforma entre `ConsumptionSummary` y `ConsumptionSummaryEntity`.
+
+**IndicatorPersistenceMapper** convierte `Indicator` en su representación persistente.
+
+**TrendPersistenceMapper** realiza el mapeo de `Trend`.
+
+### Event Consumers
+
+**EnergyConsumptionRecordedEventConsumer** recibe `EnergyConsumptionRecorded` desde **Energy & Maintenance Management** y lo dirige hacia `EnergyConsumptionRecordedEventHandler`.
+
+**MaintenanceCompletedEventConsumer** recibe `MaintenanceCompleted` y lo deriva hacia `MaintenanceCompletedEventHandler`.
+
+**AlertResolvedEventConsumer** recibe `AlertResolved` desde **Alert Management** y lo dirige hacia `AlertResolvedEventHandler`.
+
+Estos consumers permiten que Analytics se mantenga actualizado a partir de eventos del sistema sin depender directamente de las bases de datos de otros bounded contexts.
+
+### Report Generation
+
+**ReportDocumentGenerator** se encarga de transformar `AnalyticsReport` en un documento descargable.
+
+```
+generatePdf(AnalyticsReport)
+generateExcel(AnalyticsReport)
+```
+
+Esto permite cubrir la necesidad de exportar reportes para análisis interno y revisión operativa. ElectroLink contempla reportes descargables y documentos PDF como parte de sus requerimientos de gestión y auditoría. README
+
+### Report Storage
+
+**ReportStorage** almacena los documentos generados y proporciona su referencia para posteriores consultas.
+
+```
+store(ReportDocument)
+getByReportId(ReportId)
+```
+
+### Event Publishing
+
+**AnalyticsEventPublisher** publica los eventos generados dentro del contexto.
+
+Principalmente:
+
+```
+ReportGenerated
+```
+
+### Configurations
+
+**AnalyticsReportEntityConfiguration** define el mapeo relacional del reporte.
+
+**ConsumptionSummaryEntityConfiguration** define el mapeo de los resúmenes energéticos.
+
+**IndicatorEntityConfiguration** configura la persistencia de indicadores.
+
+**TrendEntityConfiguration** configura la persistencia de tendencias.
+
+### Clases de la Infrastructure Layer
+
+| Nombre | Tipo | Descripción | Capa |
+|---|---|---|---|
+| `AnalyticsReportRepository` | Repository | Implementa la persistencia de reportes analíticos. | Infrastructure |
+| `ConsumptionSummaryRepository` | Repository | Implementa la persistencia de resúmenes de consumo. | Infrastructure |
+| `AnalyticsDbContext` | Persistence Context | Gestiona la información persistente del bounded context. | Infrastructure |
+| `AnalyticsReportEntity` | Persistence Entity | Representa un reporte almacenado. | Infrastructure |
+| `ConsumptionSummaryEntity` | Persistence Entity | Representa un resumen de consumo consolidado. | Infrastructure |
+| `IndicatorEntity` | Persistence Entity | Representa un indicador almacenado. | Infrastructure |
+| `TrendEntity` | Persistence Entity | Representa una tendencia almacenada. | Infrastructure |
+| `AnalyticsReportPersistenceMapper` | Mapper | Convierte reportes entre dominio y persistencia. | Infrastructure |
+| `ConsumptionSummaryPersistenceMapper` | Mapper | Convierte resúmenes de consumo. | Infrastructure |
+| `IndicatorPersistenceMapper` | Mapper | Convierte indicadores entre dominio y persistencia. | Infrastructure |
+| `TrendPersistenceMapper` | Mapper | Convierte tendencias entre dominio y persistencia. | Infrastructure |
+| `EnergyConsumptionRecordedEventConsumer` | Event Consumer | Recibe eventos de consumo energético. | Infrastructure |
+| `MaintenanceCompletedEventConsumer` | Event Consumer | Recibe eventos de mantenimiento completado. | Infrastructure |
+| `AlertResolvedEventConsumer` | Event Consumer | Recibe eventos de alertas resueltas. | Infrastructure |
+| `ReportDocumentGenerator` | Infrastructure Service | Genera documentos PDF y Excel. | Infrastructure |
+| `ReportStorage` | Infrastructure Service | Almacena los reportes generados. | Infrastructure |
+| `AnalyticsEventPublisher` | Event Publisher | Publica `ReportGenerated`. | Infrastructure |
+| `AnalyticsReportEntityConfiguration` | Persistence Configuration | Configura la persistencia de reportes. | Infrastructure |
+| `ConsumptionSummaryEntityConfiguration` | Persistence Configuration | Configura la persistencia de resúmenes. | Infrastructure |
+| `IndicatorEntityConfiguration` | Persistence Configuration | Configura la persistencia de indicadores. | Infrastructure |
+| `TrendEntityConfiguration` | Persistence Configuration | Configura la persistencia de tendencias. | Infrastructure |
+
+### 5.10.5 Bounded Context Software Architecture Component Level Diagrams
+
+El diagrama representa cómo Analytics recibe información desde otros bounded contexts, consolida los datos y genera indicadores, tendencias, resúmenes y reportes.
+
+![](assets-emergentes/C4Diagrams/AnalyticsComponentDiagram.png)
+
+### 5.10.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.10.6.1. Bounded Context Domain Layer Class Diagram 
+
+![](assets-emergentes/ClassDiagrams/Analytics_UML.png)
+
+#### 5.10.6.2. Bounded Context Database Design Diagram
+
+![](assets-emergentes/DatabaseDiagram/Analytcis_Database.png)
 
 # Capítulo VI: Solution UX Design
 
+En este capítulo se presentan los lineamientos de diseño de experiencia de usuario y la arquitectura de información que guiarán la implementación de la solución ElectroLink. Se detallan las pautas de estilo, la estructura de navegación, los flujos de interacción y los prototipos visuales que aseguran una experiencia coherente, intuitiva y alineada con los objetivos del proyecto.
+
 ## 6.1. Style Guidelines
+
+El sistema de diseño de ElectroLink adopta una identidad visual basada en la paleta general unificada, orientada a conferir un acabado sobrio, tecnológico y de precisión industrial para entornos críticos de monitoreo IoT y automatización RPA. La paleta es única para los tres productos: landing page, web application y mobile application.
 
 ### 6.1.1. General Style Guidelines
 
+**Branding**
+
+El logo de ElectroLink representa el mensaje que nosotros queremos dar con nuestra startup que es una búsqueda de seguridad eléctrica y continuidad operativa en cadenas de comida rápida. El logo se compone de un rayo estilizado integrado a un nodo de conexión, utilizado para referenciar la telemetría en tiempo real de tableros y equipos de cocina. Asimismo, se incorpora el nombre en tipografía geométrica, con esto queremos dar a entender que los locales monitoreados gracias al servicio de ElectroLink serán supervisados con precisión preventiva y respuesta inmediata ante fugas o sobrecargas. Los colores azul principal y cian que hemos elegido para nuestro proyecto transmiten una sensación de estar en un servicio industrial confiable, sobrio y eficaz.
+
+**Variantes del Logo**
+
+#### Logo
+
+<img src="assets/cap6/logo/electrolink-logo.svg" width="200" height="100">
+
+**Typography**
+
+Nuestra tipografía Exo 2 proyecta una imagen de profesionalidad y confianza que se alinea con la misión de ElectroLink. Con su estilo moderno y geométrico, transmite una sensación de tecnología e innovación, mostrando que estamos al día con las últimas herramientas del mundo IoT industrial. Además, su claridad y legibilidad refuerzan la transparencia de nuestro servicio. Utilizaremos Exo 2 en sus variantes más gruesas para títulos, métricas de telemetría y llamadas a la acción, aportando un dinamismo que capta la atención. Para el cuerpo del texto, optaremos por un estilo más ligero, garantizando que toda la información sea fácil de leer, lo que contribuye a una experiencia de usuario que se percibe como limpia, ordenada y fiable. Todo esto se ve reforzado con los colores azul y cian que impulsan y agilizan la lectura dentro de la página web. Todas las visualizaciones numéricas de corriente, tensión y costos en soles configuran `font-feature-settings: "tnum" 1` para evitar oscilaciones cuando los datos IoT varían en tiempo real.
+
+| Jerarquía | Peso | Tamaño / Interlineado |
+| :--- | :--- | :--- |
+| Hero Display / Alerta Crítica | Exo 2 Bold (700) | 40px (Line-height: 48px) |
+| Métrica Principal IoT / KPIs | Exo 2 Bold (700) | 32px (Line-height: 38px, tnum) |
+| Heading 1 (Vistas Principales) | Exo 2 Bold (700) | 28px (Line-height: 36px) |
+| Heading 2 (Títulos de Tarjeta) | Exo 2 SemiBold (600) | 20px (Line-height: 28px) |
+| Controles / Botones / Tabs | Exo 2 Medium (500) | 16px (Line-height: 24px) |
+| Cuerpo de Texto (Body) | Exo 2 Regular (400) | 16px (Line-height: 24px) |
+| Metadatos, Badges y Leyendas | Exo 2 Regular (400) | 13px (Line-height: 18px) |
+
+**Colors**
+
+La paleta de colores elegida para la web de ElectroLink fue diseñada para transmitir un mensaje dirigido a los consumidores. El azul principal se asocia con la seguridad, la profesionalidad y la fiabilidad, convirtiéndose en el color principal de la marca. El azul oscuro tiene la función de reforzar estados hover y fondos de secciones oscuras. El cian actúa como acento de conectividad IoT y visualización de datos. El azul noche y el fondo claro transmiten sobriedad industrial, limpieza y frescura, con estos colores nuestra página es más ligera a la hora de navegar en ella. El semáforo funcional (verde, ámbar, rojo) refuerza la seguridad eléctrica y la criticidad, mientras que el gris pizarra aporta equilibrio para sensores desconectados.
+
+#### Estilos
+
+![Paleta de colores](assets/cap6/style-guidelines/palette.png)
+
+**Paleta general unificada**
+| Color | Código HEX | Uso general |
+| :--- | :--- | :--- |
+| Azul principal | `#1D4ED8` | Color principal de marca: botones, enlaces, navegación activa, foco, iconos destacados y elementos clave de la landing |
+| Azul oscuro | `#1E40AF` | Hover de controles primarios, fondos de secciones oscuras y detalles de marca |
+| Cian | `#0891B2` | Conectividad IoT, visualizaciones de datos, ilustraciones técnicas y detalles secundarios |
+| Azul noche | `#0B2239` | Hero y footer de la landing, sidebar, top bar y modo oscuro en pantallas operativas |
+| Fondo claro | `#F8FAFC` | Fondo general de la web app y la app móvil; secciones claras de la landing |
+| Blanco | `#FFFFFF` | Cards, inputs, modales, tablas y contenedores elevados |
+| Tinta | `#172033` | Títulos, métricas, texto principal y contenido de alta prioridad |
+| Gris pizarra | `#475569` | Descripciones, labels, metadata y texto auxiliar |
+| Gris borde | `#CBD5E1` | Bordes, separadores, estados inactivos y estructura visual de formularios |
+| Verde seguro | `#15803D` | Operación completada, dispositivo saludable, conexión confirmada y condición eléctrica segura |
+| Ámbar alerta | `#B45309` | Mantenimiento requerido, consumo elevado, advertencia operativa o acción pendiente |
+| Rojo peligro | `#B91C1C` | Alerta crítica, riesgo eléctrico, fuga detectada y apagado de emergencia |
+| Gris offline | `#64748B` | Sensor desconectado, ausencia de telemetría o dispositivo no disponible |
+
+**Aplicación por producto**
+| Producto | Predominio visual | Uso de color |
+| :--- | :--- | :--- |
+| Landing page | Azul noche, azul principal, cian y superficies claras | Hero oscuro, acentos cian en diagramas de la integración IoT y RPA, secciones alternadas claras y oscuras |
+| Web application | Fondo claro, blanco, tinta y gris borde | Interfaz clara orientada a dashboards, tablas, formularios, gestión y análisis operativo |
+| Mobile application | Fondo claro, blanco, azul principal y estados semánticos | Flujos simples, acciones táctiles claras, tarjetas ligeras y alertas visibles pero no invasivas |
+
+**Reglas de consistencia**
+- El azul principal representa la acción principal; no lo reutilices para alertas ni estados de seguridad.
+- El cian representa información técnica o conectividad, no una condición segura.
+- El verde seguro, el ámbar alerta, el rojo peligro y el gris offline deben aparecer con icono y etiqueta de texto, no dependas solo del color. WCAG indica que el color no debe ser el único medio para comunicar información o estados.
+- Reserva el rojo peligro únicamente para riesgo eléctrico real. Para un error normal de formulario o autenticación, muestra una descripción textual y un borde/estado visual no asociado a emergencias.
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+Respecto al estilo de la estructura de la web, se ha empleado el patrón Persistent Navigation, con una barra lateral (Sidebar) en azul noche mediante la cual el usuario podrá tener acceso a las secciones principales sin perderse en el flujo y con la posibilidad de volver. Con este patrón se puede cumplir la heurística de visibilidad del estado del sistema donde el menú de navegación resaltará la sección activa con barra de 3px en azul principal y fondo azul suave en todo momento.
+El patrón de diseño Card Layout es visible en el dashboard y landing, este se encarga de organizar telemetría, consumos y planes en bloques con fondo blanco y borde sutil en gris borde.
+En la web de ElectroLink se puede visualizar el uso de la heurística de brindar retroalimentación al usuario mediante badges de estado con icono, texto y barras de progreso RPA que permiten rastrear si un proceso de mantenimiento preventivo está en curso o finalizado. Los acentos cian se reservan para conectividad y datos, no para estados seguros.
+En cuanto a los botones, destaca el patrón Primary Call to Action en azul principal con hover en azul oscuro, con el que se permite destacar lo importante mediante un contraste mínimo 4.5:1 y se guía al usuario hacia acciones críticas. En cocina se aplica jerarquía de un solo toque con áreas táctiles amplias y pausa táctil de limpieza de 30 segundos que se interrumpe ante fuga mayor a 30 mA con fondo en rojo peligro y alerta sonora. El rojo peligro se reserva solo para riesgo eléctrico real.
 
 ## 6.2. Information Architecture
 
+En esta sección se detallará parte importante de la estructura y etiquetado del aplicativo.
+
 ### 6.2.2. Labeling Systems
+
+| Sección | Etiqueta | Descripción |
+| :--- | :--- | :--- |
+| Menú principal | Monitoreo en tiempo real | Apartado que muestra el estado eléctrico de tableros y equipos por local. Este se mostrará tanto para el Manager del Local como para el Trabajador del Local en vista simplificada |
+|  | Alertas | Muestra fugas a tierra, sobrecargas y desviaciones térmicas con severidad y protocolo de acción |
+|  | Consumos | Visualiza kWh por máquina, costos en soles y desvíos sobre la meta presupuestada |
+|  | Mantenimiento | Contiene órdenes preventivas derivadas por RPA y su estado de atención |
+| Perfil | Editar perfil | Botón que permitirá que el usuario pueda cambiar información de su perfil |
+| Locales | Agregar local | Permite que un Manager con más de un local los pueda registrar según sus necesidades |
+| Equipos | Registrar equipo | El Manager deberá registrar freidoras, hornos y congeladores para asociarles sensores |
+|  | Verificar seguridad | Es un apartado diseñado para que el Trabajador pueda verificar si un equipo es apto para contacto o limpieza |
+| Historial | Historial de eventos | Contiene información relevante sobre alertas, consumos y mantenimientos ya atendidos |
+| Reportes | Reporte SST | Muestra el reporte descargable para fiscalizaciones SUNAFIL, INDECI y OSINERGMIN |
+| Configuración | Cambiar contraseña | Se le brinda a ambos tipos de usuario la posibilidad de cambiar las contraseñas que correspondan a la cuenta |
+|  | Suscripción | Muestra el plan de suscripción SaaS adquirido por local monitoreado |
+|  | Modo limpieza | Permite que el Trabajador pueda activar la pausa táctil de 30 segundos para aseo de pantalla |
 
 ### 6.2.3. Searching Systems
 
+ElectroLink cuenta con un sistema de búsqueda que permite al usuario poder encontrar locales, equipos y eventos que sean más críticos para su operación, esto a través de múltiples filtros:
+
+| Filtros | Descripción |
+| :--- | :--- |
+| Sede / Local | Filtro geográfico que ayuda a encontrar los locales monitoreados en Lima Metropolitana. |
+| Equipo | Filtra por freidoras, hornos, congeladores o tableros según el activo registrado. |
+| Estado | Filtra por seguro, preventivo, peligro u offline según el semáforo funcional. |
+| Severidad | Filtro que muestra eventos críticos o preventivos según prioridad. |
+| Rango de fechas | Filtra el historial de telemetría y eventos para auditoría y análisis de consumo. |
+
 ### 6.2.4. SEO Tags and Meta Tags
+
+**Landing Page Title:** ElectroLink
+
+**Description:** ElectroLink es una startup que se especializa en el desarrollo de soluciones IoT para monitoreo eléctrico. Con ElectroLink, facilitamos la prevención de accidentes por fugas a tierra y la optimización del consumo energético en cadenas de comida rápida, lo que facilita la conexión entre sensores en cocina y decisiones gerenciales.
+
+**Meta Keywords:** Monitoreo eléctrico IoT, seguridad eléctrica cocina, fuga a tierra, eficiencia energética restaurantes, mantenimiento preventivo.
+
+**Meta Author:** HampCoders
+
+**Meta Description:** Prevenir accidentes laborales y optimizar el consumo energético con telemetría en tiempo real, alertas locales y dashboard multisede.
+
+**Title:** ElectroLink
+
+**Description:** ElectroLink, la plataforma de HampCoders, conecta tableros y equipos de cocina con alertas inmediatas y analítica centralizada, ofreciendo seguridad operativa y cumplimiento normativo con una experiencia moderna, clara y eficiente.
+
+**Meta Author:** HampCoders
 
 ### 6.2.5. Navigation Systems
 
+Los sistemas de navegación de ElectroLink han sido diseñados para poder guiar de forma intuitiva a los usuarios a través de la Landing Page y dentro de la aplicación, facilitando la exploración del contenido y el acceso a las distintas funcionalidades que la aplicación ofrece. ElectroLink sigue una estructura lógica clara que permite al usuario encontrar rápidamente lo que necesita mediante menús jerárquicos, enlaces destacados y botones de acción visibles para el usuario.
+
+| Icono | Funcionalidad |
+| :--- | :--- |
+| <img src="assets/cap6/icons/home.svg"> | Este ícono permite que el usuario pueda dirigirse a la pantalla inicial que brinda información vital sobre el funcionamiento de ElectroLink. |
+| <img src="assets/cap6/icons/chart-bar.svg"> | Este ícono, que pertenece al Manager del Local, permite visualizar el estado multisede de tableros y equipos. |
+| <img src="assets/cap6/icons/alert-triangle.svg"> | Este ícono permite visualizar fugas, sobrecargas y su protocolo de parada segura. |
+| <img src="assets/cap6/icons/search.svg"> | Este ícono permite buscar un equipo y verificar si es apto para contacto o limpieza. |
+| <img src="assets/cap6/icons/history.svg"> | Este ícono dirige al usuario al apartado de Historial, donde podrá visualizar eventos y mantenimientos anteriores. |
+| <img src="assets/cap6/icons/tool.svg"> | Permite visualizar las órdenes preventivas derivadas por RPA dentro del local. |
+| <img src="assets/cap6/icons/report-analytics.svg"> | Permite gestionar y descargar evidencias para fiscalización SST. |
+| <img src="assets/cap6/icons/user.svg"> | Permite al usuario visualizar el perfil con el que se ha registrado, brindando información pertinente como nombres, sede, rol, etc. |
+
 ## 6.3. Landing Page UI Design
+
+A continuación se mostrarán los diseños realizados en Figma para la creación de la landing page de ElectroLink.
 
 ### 6.3.1. Landing Page Wireframe
 
+![Landing Page Wireframe 1](assets/cap6/wireframes/landing/landing-wireframe-1.png)
+
+![Landing Page Wireframe 2](assets/cap6/wireframes/landing/landing-wireframe-2.png)
+
+![Landing Page Wireframe 3](assets/cap6/wireframes/landing/landing-wireframe-3.png)
+
+![Landing Page Wireframe 4](assets/cap6/wireframes/landing/landing-wireframe-4.png)
+
+![Landing Page Wireframe 5](assets/cap6/wireframes/landing/landing-wireframe-5.png)
+
+![Landing Page Wireframe 6](assets/cap6/wireframes/landing/landing-wireframe-6.png)
+
+![Landing Page Wireframe 7](assets/cap6/wireframes/landing/landing-wireframe-7.png)
+
+![Landing Page Wireframe 8](assets/cap6/wireframes/landing/landing-wireframe-8.png)
+
+![Landing Page Wireframe 9](assets/cap6/wireframes/landing/landing-wireframe-9.png)
+
+Los wireframes muestran la estructura y disposición de los elementos en la landing page, incluyendo encabezados, secciones de contenido, botones de acción y áreas de navegación. Estos diseños preliminares sirven como guía para el desarrollo visual y funcional, asegurando que la experiencia del usuario sea coherente y efectiva.
+
+---
+
 ### 6.3.2. Landing Page Mock-up
+
+![Landing Page Mock-up 1](assets/cap6/mockups/landing/landing-mockup-1.png)
+
+![Landing Page Mock-up 2](assets/cap6/mockups/landing/landing-mockup-2.png)
+
+![Landing Page Mock-up 3](assets/cap6/mockups/landing/landing-mockup-3.png)
+
+![Landing Page Mock-up 4](assets/cap6/mockups/landing/landing-mockup-4.png)
+
+![Landing Page Mock-up 5](assets/cap6/mockups/landing/landing-mockup-5.png)
+
+![Landing Page Mock-up 6](assets/cap6/mockups/landing/landing-mockup-6.png)
+
+![Landing Page Mock-up 7](assets/cap6/mockups/landing/landing-mockup-7.png)
+
+![Landing Page Mock-up 8](assets/cap6/mockups/landing/landing-mockup-8.png)
+
+![Landing Page Mock-up 9](assets/cap6/mockups/landing/landing-mockup-9.png)
+
+Con la acentuación de los colores azul principal y cian, los mock-ups presentan una interfaz visualmente atractiva y profesional, destacando la información crítica y facilitando la navegación intuitiva para los usuarios. La disposición de los elementos asegura que los usuarios puedan acceder rápidamente a las funcionalidades clave de ElectroLink, mientras que el diseño responsivo garantiza una experiencia consistente en diferentes dispositivos.
+
+---
 
 ## 6.4. Applications UX/UI Design
 
 ### 6.4.1. Applications Wireframes
 
+**Aplicación movil**</br>
+
+![Wireframes Movil 1](assets/cap6/wireframes/movil1.png)
+
+![Wireframes Movil 2](assets/cap6/wireframes/movil2.png)
+
+![Wireframes Movil 3](assets/cap6/wireframes/movil3.png)
+
+![Wireframes Movil 4](assets/cap6/wireframes/movil4.png)
+
+![Wireframes Movil 5](assets/cap6/wireframes/movil5.png)
+
+![Wireframes Movil 6](assets/cap6/wireframes/movil6.png)
+
+![Wireframes Movil 7](assets/cap6/wireframes/movil7.png)
+
+</br>**Aplicación web**</br>
+
+![Wireframes Web 1](assets/cap6/wireframes/web1.jpeg)
+
+![Wireframes Web 2](assets/cap6/wireframes/web2.jpeg)
+
+![Wireframes Web 3](assets/cap6/wireframes/web3.jpeg)
+
+![Wireframes Web 4](assets/cap6/wireframes/web4.jpeg)
+
+![Wireframes Web 5](assets/cap6/wireframes/web5.jpeg)
+
+![Wireframes Web 6](assets/cap6/wireframes/web6.jpeg)
+
+![Wireframes Web 7](assets/cap6/wireframes/web7.jpeg)
+
+![Wireframes Web 8](assets/cap6/wireframes/web8.jpeg)
+
+![Wireframes Web 9](assets/cap6/wireframes/web9.jpeg)
+
+![Wireframes Web 10](assets/cap6/wireframes/web10.jpeg)
+
+![Wireframes Web 11](assets/cap6/wireframes/web11.jpeg)
+
+![Wireframes Web 12](assets/cap6/wireframes/web12.jpeg)
+
 ### 6.4.2. Applications Wireflow Diagrams
+**Aplicación movil**</br>
+![Wireflow Movil 1](assets/cap6/wireflow/movil1.png)
+
+![Wireflow Movil 2](assets/cap6/wireflow/movil2.png)
+
+![Wireflow Movil 3](assets/cap6/wireflow/movil3.png)
+
+![Wireflow Movil 4](assets/cap6/wireflow/movil4.png)
+
+![Wireflow Movil 5](assets/cap6/wireflow/movil5.png)
+
+</br>**Aplicación web**</br>
+
+![Wireflow Web 5](assets/cap6/wireflow/web5.png)
+
+![Wireflow Web 4](assets/cap6/wireflow/web4.png)
+
+![Wireflow Web 3](assets/cap6/wireflow/web3.png)
+
+![Wireflow Web 2](assets/cap6/wireflow/web2.png)
+
+![Wireflow Web 1](assets/cap6/wireflow/web1.png)
 
 ### 6.4.2. Applications Mock-ups
 
@@ -1914,6 +8392,14 @@ El alcance de esta evaluación incluye la revisión de la usabilidad y la experi
 
 - El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
 
+- La experiencia consolidada en esta entrega acredita que la seguridad en entornos de alta exigencia se alcanza cuando la tecnología se comprende como resguardo de la vida y continuidad del servicio, no como mero instrumento de medición. Se recomienda perseverar en la validación en campo con personal operativo y de gestión, a fin de afianzar la confianza y la adopción sostenida.
+
+- El progreso alcanzado revela una correspondencia sólida entre la voz de los usuarios, la propuesta de valor y los artefactos elaborados, lo cual otorga legitimidad a lo avanzado y orienta con sensatez las decisiones venideras. Se recomienda mantener dicha coherencia mediante revisión colegiada permanente y evidencia verificable en cada avance.
+
+- La dinámica colaborativa exhibe una madurez comunicativa encomiable, sustentada en el reparto equitativo, la revisión cruzada y la presentación transparente de resultados ante audiencias diversas. Se recomienda perpetuar este rigor deliberativo y documentar con esmero cada aporte individual a fin de preservar la memoria del quehacer colectivo.
+
+- La proyección de la solución hacia su materialización exige prudencia, gradualidad y sentido ético, con atención prioritaria a la fiabilidad, la claridad de uso y el respeto por la integridad del personal. Se recomienda avanzar mediante pilotos acotados, aprendizaje continuo y ajuste sensible a lo observado en la realidad operativa.
+
 ## Video About-the-Team
 
 # Bibliografía
@@ -1949,3 +8435,5 @@ Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del con
 - Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
 
 - Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
+
+- Link del video de exposición de la entrega TP1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQANlVVNyZ0oS4iG1EMcddE6Ab9j8kwsQSIKWm1EfoZKee8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JIULa2>
