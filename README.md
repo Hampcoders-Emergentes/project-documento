@@ -8147,6 +8147,44 @@ Las preguntas se organizaron por pantalla y se formularon después de la demostr
 
 ### 7.3.2. Registro de Entrevistas
 
+
+**Segmento #1: Trabajadores del Local (Staff Operativo y de Limpieza)**
+
+
+**Segmento #2: Manager del Local (Administrador / Jefe de Tienda)**
+
+* Entrevista: Juan Carrion
+* Edad: 30 años
+* Link: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/IQBLfOuiYFAXQZPw9HL0O7cQATHkdi0Fhix2aBrRg8MbGAc?e=SCqzWo&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIuOX19
+* Inicia en: 0:00
+* Duración: 5:18
+* Entrevistador: Vanessa May Lang Choy Robles
+
+![Evidencia de entrevista - Juan Carrion](assets/cap7/interviews/entrevista1-segmento2.png)
+
+C:\Users\USUARIO\Documents\GitHub\project-documento\
+
+**Contexto de la entrevista** Esta entrevista explora la validación de la aplicación web desde la perspectiva de la gestión administrativa y operativa en el rubro de comida rápida (con Juan Carrión, administrador), evaluando la usabilidad de cada módulo de monitoreo eléctrico, gestión de alertas, cumplimiento normativo y operación multi-local.
+
+**Aspectos clave mencionados por el entrevistado (Validación de la Plataforma Web):**
+
+* **Inicio de Sesión:** El acceso mediante correo y contraseña resulta muy intuitivo para ingresar con rapidez ante una emergencia operativa. Asimismo, el flujo para recuperar la contraseña está claro y visible, aunque destaca la importancia de que el restablecimiento sea inmediato para no frenar la gestión de la tienda.
+* **Dashboard de Red:** La información visualizada permite verificar de un vistazo si la red eléctrica se encuentra en buen estado e identificar con facilidad el equipo crítico que presenta mayor riesgo (como cocinas o refrigeración). Además, el aviso de sensor desconectado es claro y se diferencia bien de una falla eléctrica real.
+* **Alertas y Asignación:** Las alertas brindan información suficiente para actuar de inmediato y facilitan la asignación de la revisión a un técnico certificado. Sin embargo, considera indispensable que el tiempo de respuesta del técnico (SLA) se muestre directamente en esta pantalla, ya que la atención urgente es crítica en comida rápida.
+
+**Gestión energética, historial y control de seguridad:**
+
+* **Consumo Energético:** Visualizar el gasto directamente en soles por equipo resulta fácil de comprender a nivel administrativo, y la proyección de factura es muy útil para la toma de decisiones presupuestales. No obstante, señala que indicadores técnicos como el factor de potencia requieren una breve explicación o guía visual para entenderse sin conocimiento especializado.
+* **Historial y Umbrales:** Filtrar las alertas por severidad y fecha es práctico para realizar evaluaciones preventivas. Respecto a modificar los umbrales de los equipos, considera seguro el proceso siempre que tenga confirmación, pero afirma que no deben configurarse sin apoyo técnico para no comprometer la integridad ni la seguridad del local.
+
+**Cumplimiento normativo y administración multi-sede:**
+
+* **Cumplimiento Normativo:** El reporte SST contiene la información operativa base para una inspección y el porcentaje de salud técnica del local resulta muy útil como indicador rápido. Para presentarlo formalmente ante SUNAFIL o INDECI, sugiere añadir los certificados firmados por el técnico colegiado y las facturas formales de los servicios realizados.
+* **Gestión Multi-local:** Considera necesario poder cambiar de local sin tener que cerrar sesión para agilizar la supervisión, así como contar con una vista comparativa entre sedes que permita detectar qué tiendas presentan mayores incidencias o sobrecostos energéticos.
+* **Perfil y Notificaciones:** Configurar los canales de notificación es sencillo y clave para recibir avisos críticos al instante. Asimismo, la opción de cierre de sesión está claramente ubicada para mantener la seguridad de la cuenta en equipos compartidos del local.
+
+
+
 ### 7.3.3. Evaluaciones según heurísticas
 
 #### Evaluación Heurística de Usabilidad y Diseño Inclusivo de ElectroLink
