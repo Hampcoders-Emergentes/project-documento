@@ -8091,6 +8091,7 @@ Durante el sprint se desarrolló la primera versión del backend de ElectroLink,
 ![Primera versión del Backend](assets-emergentes/back1.jpeg)
 \
 ![Primera versión del Backend](assets-emergentes/back2.jpeg)
+
 ##### Demo de la Aplicación Web
 
 Se implementó una demo de la aplicación web orientada al Manager del Local, trasladando a una interfaz navegable las principales vistas y recorridos definidos previamente en los mock-ups y wireflows.
@@ -8106,7 +8107,7 @@ La demo permite visualizar la propuesta de interacción para funcionalidades com
 ![Demo Aplicación Web](assets-emergentes/front3.jpeg)
 \
 ![Demo Aplicación Web](assets-emergentes/front4.jpeg)
-\
+
 ##### Demo de la Aplicación Móvil
 
 También se implementó una demo de la aplicación móvil orientada al Trabajador del Local. Esta versión representa los principales flujos operativos y de seguridad planteados durante el diseño de la solución.
@@ -8115,8 +8116,9 @@ La implementación permite demostrar visualmente cómo el trabajador interactuar
 
 
 
-![Demo Aplicación Móvil](ruta-evidencia-mobile.png)
-
+![Demo Aplicación Móvil](assets-emergentes/mobile1.jpeg)
+\
+![Demo Aplicación Móvil](assets-emergentes/mobile2.jpeg)
 La evidencia presentada corresponde al alcance de esta primera iteración. Las vistas relacionadas con monitoreo eléctrico representan el comportamiento esperado de ElectroLink a nivel de interfaz, pero durante este sprint no se implementó comunicación con dispositivos IoT ni procesamiento de telemetría real.
 
 #### 7.2.X.4. Testing Suite Evidence for Sprint Review
