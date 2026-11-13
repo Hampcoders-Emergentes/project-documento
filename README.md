@@ -8017,10 +8017,88 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 ![Wireflow Web 1](assets/cap6/wireflow/web1.png)
 
 ### 6.4.2. Applications Mock-ups
+**Aplicación movil**</br>
+![Mock-ups Mobil 1](assets/cap6/mockups/movil/movil1.png)
+![Mock-ups Mobil 2](assets/cap6/mockups/movil/movil2.png)
+![Mock-ups Mobil 3](assets/cap6/mockups/movil/movil3.png)
+![Mock-ups Mobil 4](assets/cap6/mockups/movil/movil4.png)
+![Mock-ups Mobil 5](assets/cap6/mockups/movil/movil5.png)
+![Mock-ups Mobil 6](assets/cap6/mockups/movil/movil6.png)
+![Mock-ups Mobil 7](assets/cap6/mockups/movil/movil7.png)
+![Mock-ups Mobil 8](assets/cap6/mockups/movil/movil8.png)
+![Mock-ups Mobil 9](assets/cap6/mockups/movil/movil9.png)
+![Mock-ups Mobil 10](assets/cap6/mockups/movil/movil10.png)
+![Mock-ups Mobil 11](assets/cap6/mockups/movil/movil11.png)
+![Mock-ups Mobil 12](assets/cap6/mockups/movil/movil12.png)
+![Mock-ups Mobil 13](assets/cap6/mockups/movil/movil13.png)
+![Mock-ups Mobil 14](assets/cap6/mockups/movil/movil14.png)
+![Mock-ups Mobil 15](assets/cap6/mockups/movil/movil15.png)
+![Mock-ups Mobil 16](assets/cap6/mockups/movil/movil16.png)
+
+</br>**Aplicación web**</br>
+![Mock-ups Web 1](assets/cap6/mockups/web/web1.png)
+![Mock-ups Web 2](assets/cap6/mockups/web/web2.png)
+![Mock-ups Web 3](assets/cap6/mockups/web/web3.png)
+![Mock-ups Web 4](assets/cap6/mockups/web/web4.png)
+![Mock-ups Web 5](assets/cap6/mockups/web/web5.png)
+![Mock-ups Web 6](assets/cap6/mockups/web/web6.png)
+![Mock-ups Web 7](assets/cap6/mockups/web/web7.png)
+![Mock-ups Web 8](assets/cap6/mockups/web/web8.png)
+![Mock-ups Web 9](assets/cap6/mockups/web/web9.png)
+![Mock-ups Web 10](assets/cap6/mockups/web/web10.png)
+![Mock-ups Web 11](assets/cap6/mockups/web/web11.png)
+![Mock-ups Web 12](assets/cap6/mockups/web/web12.png)
+![Mock-ups Web 13](assets/cap6/mockups/web/web13.png)
+![Mock-ups Web 14](assets/cap6/mockups/web/web14.png)
+![Mock-ups Web 15](assets/cap6/mockups/web/web15.png)
+![Mock-ups Web 16](assets/cap6/mockups/web/web16.png)
+![Mock-ups Web 17](assets/cap6/mockups/web/web17.png)
+![Mock-ups Web 18](assets/cap6/mockups/web/web18.png)
+![Mock-ups Web 19](assets/cap6/mockups/web/web19.png)
+![Mock-ups Web 20](assets/cap6/mockups/web/web20.png)
 
 ### 6.4.3. Applications User Flow Diagrams
+**Aplicación movil**</br>
+![Userflow Móvil 1](assets/cap6/userflow/UF-MOVIL-1.png)
+![Userflow Móvil 2](assets/cap6/userflow/UF-MOVIL-2.png)
+![Userflow Móvil 3](assets/cap6/userflow/UF-MOVIL-3.png)
+![Userflow Móvil 4](assets/cap6/userflow/UF-MOVIL-4.png)
+![Userflow Móvil 5](assets/cap6/userflow/UF-MOVIL-5.png)
+![Userflow Móvil 6](assets/cap6/userflow/UF-MOVIL-6.png)
+![Userflow Móvil 7](assets/cap6/userflow/UF-MOVIL-7.png)
+![Userflow Móvil 8](assets/cap6/userflow/UF-MOVIL-8.png)
+
+</br>**Aplicación web**</br>
+![Userflow Web 1](assets/cap6/userflow/UF-WEB-1.png)
+![Userflow Web 1.2](assets/cap6/userflow/UF-WEB-diagram-1.png)
+![Userflow Web 2](assets/cap6/userflow/UF-WEB-2.png)
+![Userflow Web 2.2](assets/cap6/userflow/UF-WEB-diagram-2.png)
+![Userflow Web 3](assets/cap6/userflow/UF-WEB-3.png)
+![Userflow Web 3.2](assets/cap6/userflow/UF-WEB-diagram-3.png)
+![Userflow Web 4](assets/cap6/userflow/UF-WEB-4.png)
+![Userflow Web 4.2](assets/cap6/userflow/UF-WEB-diagram-4.png)
+![Userflow Web 5](assets/cap6/userflow/UF-WEB-5.png)
+![Userflow Web 5.2](assets/cap6/userflow/UF-WEB-diagram-5.png)
+![Userflow Web 6](assets/cap6/userflow/UF-WEB-6.png)
+![Userflow Web 6.2](assets/cap6/userflow/UF-WEB-diagram-6.png)
+![Userflow Web 7](assets/cap6/userflow/UF-WEB-7.png)
+![Userflow Web 7.2](assets/cap6/userflow/UF-WEB-diagram-7.png)
+![Userflow Web 8](assets/cap6/userflow/UF-WEB-8.png)
+![Userflow Web 8.2](assets/cap6/userflow/UF-WEB-diagram-8.png)
+![Userflow Web 9](assets/cap6/userflow/UF-WEB-9.png)
+![Userflow Web 9.2](assets/cap6/userflow/UF-WEB-diagram-9.png)
 
 ## 6.5. Applications Prototyping
+
+A continuación presentamos los prototipos de las aplicaciones tanto para web y móvil.
+
+Link de prototipo de aplicación móvil ElectroLink: <https://jovial-cucurucho-2764d3.netlify.app/>
+
+Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231a816_upc_edu_pe/IQASdKwHS2TnRbgnA3iQDyj2AXXlLHQpoR2aqx-BEgVIXNM?e=igUJu1>
+
+Link de prototipo de aplicación web ElectroLink: <https://keen-otter-58a86e.netlify.app/>
+
+Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/IQBREkHf5XFaS7AWKWnMD0iHAWcZC1BPTIVgN-dcoEu2QBE?e=CV6ndK>
 
 # Capítulo VII: Product Implementation, Validation & Deployment
 
@@ -8550,5 +8628,3 @@ Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del con
 - Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
 
 - Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
-
-- Link del video de exposición de la entrega TP1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQANlVVNyZ0oS4iG1EMcddE6Ab9j8kwsQSIKWm1EfoZKee8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=JIULa2>
