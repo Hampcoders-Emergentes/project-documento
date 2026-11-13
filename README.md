@@ -8239,8 +8239,6 @@ Las preguntas se organizaron por pantalla y se formularon después de la demostr
 
 ![Evidencia de entrevista - Juan Carrion](assets/cap7/interviews/entrevista1-segmento2.png)
 
-C:\Users\USUARIO\Documents\GitHub\project-documento\
-
 **Contexto de la entrevista** Esta entrevista explora la validación de la aplicación web desde la perspectiva de la gestión administrativa y operativa en el rubro de comida rápida (con Juan Carrión, administrador), evaluando la usabilidad de cada módulo de monitoreo eléctrico, gestión de alertas, cumplimiento normativo y operación multi-local.
 
 **Aspectos clave mencionados por el entrevistado (Validación de la Plataforma Web):**
