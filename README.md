@@ -8036,13 +8036,88 @@ Con la acentuación de los colores azul principal y cian, los mock-ups presentan
 
 ## 7.2. Solution Implementation
 
-### 7.2.X. Sprint n
+### 7.2.1. Sprint 1
 
-#### 7.2.X.1. Sprint Planning n
+Durante el primer sprint de implementación se estableció la primera versión del producto ElectroLink. El trabajo se concentró en construir una base inicial del backend y en desarrollar una demo del frontend que permitiera representar y validar los principales flujos definidos durante las etapas de diseño UX/UI.
 
-#### 7.2.X.2. Sprint Backlog n
+En este sprint no se implementó la integración con dispositivos IoT ni la recepción de telemetría proveniente de sensores físicos. El alcance estuvo orientado a disponer de una primera versión demostrable de la solución y una estructura de backend que sirviera como base para posteriores iteraciones.
 
-#### 7.2.X.3. Development Evidence for Sprint Review
+#### 7.2.1.1. Sprint Planning n
+
+El objetivo del Sprint 1 fue establecer una primera versión de ElectroLink que permitiera demostrar visualmente los principales flujos de la aplicación y contar con una base inicial del backend sobre la cual continuar el desarrollo del producto.
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Sprint** | Sprint 1 |
+| **Sprint Goal** | Desarrollar una primera versión del backend de ElectroLink y una demo del frontend que represente los principales flujos de interacción definidos para la solución. |
+| **Producto** | ElectroLink |
+| **Equipo** | HampCoders |
+| **Alcance Backend** | Implementación de la primera estructura funcional del backend y de los componentes base necesarios para continuar el desarrollo de los módulos del sistema. |
+| **Alcance Frontend** | Desarrollo de una demo navegable de las interfaces web y móvil de ElectroLink basada en los mock-ups y flujos definidos en el Capítulo VI. |
+| **Fuera del alcance** | Integración con dispositivos IoT, recepción de telemetría real, procesamiento de sensores físicos y comunicación con hardware. |
+| **Resultado esperado** | Contar con una primera versión demostrable de la solución y una base técnica que permita continuar la implementación en siguientes iteraciones. |
+
+La planificación priorizó la construcción de una base de software coherente con la arquitectura y el diseño UX/UI previamente definidos. Debido al alcance del sprint, las funcionalidades relacionadas con monitoreo mediante sensores y comunicación IoT quedaron reservadas para posteriores iteraciones.
+
+#### 7.2.1.2. Sprint Backlog n
+
+El Sprint Backlog estuvo orientado principalmente a la construcción de la primera versión del backend y a la implementación visual de los principales flujos de las aplicaciones de ElectroLink.
+
+| Sprint Backlog ID | Área | Tarea | Resultado esperado | Estado |
+| :---: | :--- | :--- | :--- | :---: |
+| **SB01** | Backend | Establecer la estructura inicial del backend de ElectroLink. | Base del backend preparada para incorporar progresivamente la lógica de los distintos módulos del sistema. | Done |
+| **SB02** | Backend | Implementar los componentes y configuraciones iniciales necesarios para la ejecución de la aplicación. | Primera versión ejecutable del backend. | Done |
+| **SB03** | Frontend Web | Implementar la estructura visual de la aplicación web a partir de los mock-ups definidos. | Demo navegable de la aplicación orientada al Manager del Local. | Done |
+| **SB04** | Frontend Web | Implementar las principales vistas de gestión y monitoreo contempladas en el diseño. | Representación visual de los principales flujos administrativos de ElectroLink. | Done |
+| **SB05** | Frontend Mobile | Implementar la estructura visual de la aplicación móvil a partir de los mock-ups definidos. | Demo navegable orientada al Trabajador del Local. | Done |
+| **SB06** | Frontend Mobile | Implementar las principales pantallas relacionadas con seguridad y operación dentro del local. | Representación visual de los principales flujos operativos de ElectroLink. | Done |
+| **SB07** | Integración visual | Verificar la navegación entre las principales pantallas de las demos. | Flujo demostrable y coherente con los wireflows y prototipos definidos. | Done |
+| **SB08** | Validación | Revisar la correspondencia entre las interfaces implementadas y el diseño UX/UI planteado. | Primera versión del producto preparada para demostración y posterior validación. | Done |
+
+Las tareas relacionadas con sensores, telemetría y comunicación IoT no fueron incluidas en este Sprint Backlog, debido a que esta primera iteración se concentró en la construcción de la base de software y la demostración de la experiencia de usuario.
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+Como resultado del Sprint 1 se obtuvo una primera versión del backend de ElectroLink y una demo del frontend de las aplicaciones web y móvil. Estas implementaciones permitieron representar los principales recorridos definidos durante la etapa de diseño y disponer de una versión demostrable para revisión.
+
+La evidencia del desarrollo se organiza de acuerdo con los principales componentes trabajados durante el sprint.
+
+##### Primera versión del Backend
+
+Durante el sprint se desarrolló la primera versión del backend de ElectroLink, estableciendo la estructura inicial sobre la cual se continuará incorporando la lógica del sistema y sus distintos módulos.
+
+> **Evidencia:** insertar captura de la estructura del proyecto backend, ejecución del backend o repositorio correspondiente.
+\
+![Primera versión del Backend](assets-emergentes/back1.jpeg)
+\
+![Primera versión del Backend](assets-emergentes/back2.jpeg)
+##### Demo de la Aplicación Web
+
+Se implementó una demo de la aplicación web orientada al Manager del Local, trasladando a una interfaz navegable las principales vistas y recorridos definidos previamente en los mock-ups y wireflows.
+
+La demo permite visualizar la propuesta de interacción para funcionalidades como el acceso a la plataforma, consulta general del estado del local, gestión de alertas, visualización de consumo, historial y otras funciones contempladas en el diseño.
+
+> **Evidencia:** insertar capturas de las principales vistas implementadas en la aplicación web.
+\
+![Demo Aplicación Web](assets-emergentes/front1.jpeg)
+\
+![Demo Aplicación Web](assets-emergentes/front2.jpeg)
+\
+![Demo Aplicación Web](assets-emergentes/front3.jpeg)
+\
+![Demo Aplicación Web](assets-emergentes/front4.jpeg)
+\
+##### Demo de la Aplicación Móvil
+
+También se implementó una demo de la aplicación móvil orientada al Trabajador del Local. Esta versión representa los principales flujos operativos y de seguridad planteados durante el diseño de la solución.
+
+La implementación permite demostrar visualmente cómo el trabajador interactuaría con ElectroLink durante actividades como la consulta del estado de los equipos, recepción de alertas, reporte de incidencias y consulta de información de seguridad.
+
+> **Evidencia:** insertar capturas de las principales pantallas implementadas en la aplicación móvil.
+
+![Demo Aplicación Móvil](ruta-evidencia-mobile.png)
+
+La evidencia presentada corresponde al alcance de esta primera iteración. Las vistas relacionadas con monitoreo eléctrico representan el comportamiento esperado de ElectroLink a nivel de interfaz, pero durante este sprint no se implementó comunicación con dispositivos IoT ni procesamiento de telemetría real.
 
 #### 7.2.X.4. Testing Suite Evidence for Sprint Review
 
