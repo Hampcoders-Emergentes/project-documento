@@ -8086,7 +8086,7 @@ La evidencia del desarrollo se organiza de acuerdo con los principales component
 
 Durante el sprint se desarrolló la primera versión del backend de ElectroLink, estableciendo la estructura inicial sobre la cual se continuará incorporando la lógica del sistema y sus distintos módulos.
 
-> **Evidencia:** insertar captura de la estructura del proyecto backend, ejecución del backend o repositorio correspondiente.
+
 \
 ![Primera versión del Backend](assets-emergentes/back1.jpeg)
 \
@@ -8097,7 +8097,7 @@ Se implementó una demo de la aplicación web orientada al Manager del Local, tr
 
 La demo permite visualizar la propuesta de interacción para funcionalidades como el acceso a la plataforma, consulta general del estado del local, gestión de alertas, visualización de consumo, historial y otras funciones contempladas en el diseño.
 
-> **Evidencia:** insertar capturas de las principales vistas implementadas en la aplicación web.
+
 \
 ![Demo Aplicación Web](assets-emergentes/front1.jpeg)
 \
@@ -8113,7 +8113,7 @@ También se implementó una demo de la aplicación móvil orientada al Trabajado
 
 La implementación permite demostrar visualmente cómo el trabajador interactuaría con ElectroLink durante actividades como la consulta del estado de los equipos, recepción de alertas, reporte de incidencias y consulta de información de seguridad.
 
-> **Evidencia:** insertar capturas de las principales pantallas implementadas en la aplicación móvil.
+
 
 ![Demo Aplicación Móvil](ruta-evidencia-mobile.png)
 
