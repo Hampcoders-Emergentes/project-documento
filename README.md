@@ -8179,54 +8179,144 @@ Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/
 
 ### 7.2.1. Sprint 1
 
-Durante el primer sprint de implementación se estableció la primera versión del producto ElectroLink. El trabajo se concentró en construir una base inicial del backend y en desarrollar una demo del frontend que permitiera representar y validar los principales flujos definidos durante las etapas de diseño UX/UI.
+Durante el primer sprint de implementación se estableció la primera versión de ElectroLink en tres frentes: la landing page de presentación, la aplicación web para el Manager del Local y la primera versión del backend modular que sostiene ambas. El trabajo se concentró en construir la base técnica de cada frente y en representar, sobre la aplicación web, los flujos definidos durante el diseño UX/UI.
 
-En este sprint no se implementó la integración con dispositivos IoT ni la recepción de telemetría proveniente de sensores físicos. El alcance estuvo orientado a disponer de una primera versión demostrable de la solución y una estructura de backend que sirviera como base para posteriores iteraciones.
+En este sprint no se implementó la integración con dispositivos IoT ni la recepción de telemetría proveniente de sensores físicos. Las historias relacionadas con esos componentes quedaron fuera del alcance y se planificarán en iteraciones posteriores.
 
-#### 7.2.1.1. Sprint Planning n
 
-El objetivo del Sprint 1 fue establecer una primera versión de ElectroLink que permitiera demostrar visualmente los principales flujos de la aplicación y contar con una base inicial del backend sobre la cual continuar el desarrollo del producto.
+#### 7.2.1.1. Sprint Planning 1
+
+En esta sección se especifican los aspectos principales del Sprint Planning Meeting del Sprint 1. Se inicia con una introducción y a continuación se coloca el cuadro de resumen del sprint planning meeting.
+
+El objetivo del Sprint 1 fue establecer una primera versión de ElectroLink compuesta por la landing page, la aplicación web del Manager del Local y el backend modular, de modo que los flujos de las historias seleccionadas pudieran demostrarse y sirvieran de base para las iteraciones siguientes. Las historias seleccionadas corresponden a los tres frentes: landing page (EP01), aplicación web (EP03 a EP06) y backend (historias técnicas TS02, TS04, TS05 y TS06) del Capítulo III. La aplicación móvil no forma parte de este sprint: no tiene implementación asociada en el periodo y se planificará en la siguiente iteración.
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Sprint** | Sprint 1 |
-| **Sprint Goal** | Desarrollar una primera versión del backend de ElectroLink y una demo del frontend que represente los principales flujos de interacción definidos para la solución. |
-| **Producto** | ElectroLink |
-| **Equipo** | HampCoders |
-| **Alcance Backend** | Implementación de la primera estructura funcional del backend y de los componentes base necesarios para continuar el desarrollo de los módulos del sistema. |
-| **Alcance Frontend** | Desarrollo de una demo navegable de las interfaces web y móvil de ElectroLink basada en los mock-ups y flujos definidos en el Capítulo VI. |
-| **Fuera del alcance** | Integración con dispositivos IoT, recepción de telemetría real, procesamiento de sensores físicos y comunicación con hardware. |
-| **Resultado esperado** | Contar con una primera versión demostrable de la solución y una base técnica que permita continuar la implementación en siguientes iteraciones. |
+| **Sprint #** | Sprint 1 |
+| **Sprint Planning Background** | |
+| Date | 2026-11-01 |
+| Time | 07:00 PM |
+| Location | Virtual |
+| Prepared By | Arostegui Alzamora, César Augusto |
+| Attendees (to planning meeting) | Choy Robles, Vanessa May Lang / Valverde Portuguez, Natalia Ximena / Contreras López, Leandro Saúl / Machado Bracamonte, Ivo Marcelo / Arostegui Alzamora, César Augusto |
+| Sprint 0 Review Summary | No aplica. Sprint 1 es el primer sprint de implementación del proyecto. |
+| Sprint 0 Retrospective Summary | No aplica. La retrospectiva del Sprint 1 se registrará al cierre del sprint. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Desarrollar la primera versión de ElectroLink: landing page de presentación, aplicación web del Manager del Local con los flujos de acceso, monitoreo, alertas, consumo, cumplimiento y bitácora, y el backend modular que los sostiene. **Métrica de cumplimiento:** las historias seleccionadas navegables en la demo web y landing, con sus endpoints disponibles en el backend. |
+| Sprint 1 Velocity | **54 story points** completados. Es la suma de los story points de las 16 historias del sprint (TS02, TS04, TS06, US01, US07, US16, US17, US18, US21, US24, US31, US33, US36, US37, US38, US41), todas con sus tareas en estado Done. Es el primer sprint, por lo que no hay velocidad histórica para comparar. |
+| Sum of Story Points | **54 story points** comprometidos en el sprint, según la estimación Fibonacci del Product Backlog. |
 
-La planificación priorizó la construcción de una base de software coherente con la arquitectura y el diseño UX/UI previamente definidos. Debido al alcance del sprint, las funcionalidades relacionadas con monitoreo mediante sensores y comunicación IoT quedaron reservadas para posteriores iteraciones.
+Fuera del alcance del sprint: integración con dispositivos IoT, recepción de telemetría real, procesamiento de sensores físicos y comunicación con hardware.
 
-#### 7.2.1.2. Sprint Backlog n
+#### 7.2.1.2. Sprint Backlog 1
 
-El Sprint Backlog estuvo orientado principalmente a la construcción de la primera versión del backend y a la implementación visual de los principales flujos de las aplicaciones de ElectroLink.
+El Sprint Backlog 1 tiene como objetivo principal llevar a una primera versión demostrable la landing page, la aplicación web y el backend de ElectroLink, cubriendo las historias de usuario de esos tres frentes. Las tareas se controlan en el tablero de Trello del equipo.
 
-| Sprint Backlog ID | Área | Tarea | Resultado esperado | Estado |
-| :---: | :--- | :--- | :--- | :---: |
-| **SB01** | Backend | Establecer la estructura inicial del backend de ElectroLink. | Base del backend preparada para incorporar progresivamente la lógica de los distintos módulos del sistema. | Done |
-| **SB02** | Backend | Implementar los componentes y configuraciones iniciales necesarios para la ejecución de la aplicación. | Primera versión ejecutable del backend. | Done |
-| **SB03** | Frontend Web | Implementar la estructura visual de la aplicación web a partir de los mock-ups definidos. | Demo navegable de la aplicación orientada al Manager del Local. | Done |
-| **SB04** | Frontend Web | Implementar las principales vistas de gestión y monitoreo contempladas en el diseño. | Representación visual de los principales flujos administrativos de ElectroLink. | Done |
-| **SB05** | Frontend Mobile | Implementar la estructura visual de la aplicación móvil a partir de los mock-ups definidos. | Demo navegable orientada al Trabajador del Local. | Done |
-| **SB06** | Frontend Mobile | Implementar las principales pantallas relacionadas con seguridad y operación dentro del local. | Representación visual de los principales flujos operativos de ElectroLink. | Done |
-| **SB07** | Integración visual | Verificar la navegación entre las principales pantallas de las demos. | Flujo demostrable y coherente con los wireflows y prototipos definidos. | Done |
-| **SB08** | Validación | Revisar la correspondencia entre las interfaces implementadas y el diseño UX/UI planteado. | Primera versión del producto preparada para demostración y posterior validación. | Done |
+| User Story Id | User Story Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US01 | Conocimiento de propuesta de valor y acceso a aplicación web | T01 | Implementar la landing page | Secciones de propuesta de valor, navegación y vínculo hacia la aplicación web. | 16 | Arostegui Alzamora, César Augusto | Done |
+| US01 | Conocimiento de propuesta de valor y acceso a aplicación web | T02 | Página Community con video del producto | Páginas /comunidad y /en/community con video, checklist de funcionalidades y llamada a la acción, enlazadas desde cabecera y pie. | 6 | Arostegui Alzamora, César Augusto | Done |
+| US07 | Solicitud de demostración y contacto comercial | T03 | Endpoint público de solicitud de demostración | Registro de solicitudes de demo, consulta pública del recibo por id y listado de leads para administración. | 8 | Arostegui Alzamora, César Augusto | Done |
+| US37 | Acceso seguro a la plataforma web | T04 | Vista de inicio de sesión y registro en la web | Formularios de acceso y registro con mapeo de los códigos de error del backend. | 8 | Arostegui Alzamora, César Augusto | Done |
+| US37 | Acceso seguro a la plataforma web | T05 | Rutas de autenticación y validación JWT | Rutas /api/v1/auth, rotación de refresh tokens, validación de emisor, audiencia y vigencia, y autorización por recurso. | 12 | Arostegui Alzamora, César Augusto | Done |
+| US37 | Acceso seguro a la plataforma web | T06 | Control de acceso por propiedad y refresco de claims | Propiedad de recursos en IAM y suscripciones; claims releídos en cada solicitud y token renovado en la cabecera X-Refreshed-Token. | 10 | Contreras López, Leandro Saúl / Arostegui Alzamora, César Augusto | Done |
+| US38 | Recuperación de acceso mediante correo | T07 | Recuperación de contraseña y envío por correo | Token de reinicio con hash SHA-256, vigencia de 15 minutos y uso único; puerto de correo con adaptadores SMTP y de registro. | 10 | Arostegui Alzamora, César Augusto | Done |
+| US16, US21 | Estado de la red eléctrica del local y conectividad de sensores | T08 | Vistas de monitoreo en la web | Dashboard, detalle de equipos y estado de conectividad de sensores en la aplicación web. | 10 | Arostegui Alzamora, César Augusto | Done |
+| US16, US18 | Estado de la red eléctrica y umbrales por equipo | T09 | Resumen de monitoreo y umbrales en backend | Resumen del dashboard en una sola consulta, riesgo de equipo, estado de red, conectividad de sensores y umbrales configurables por equipo. | 12 | Arostegui Alzamora, César Augusto | Done |
+| US17 | Recepción de alertas automáticas de emergencia | T10 | Sincronización de alertas en tiempo real en la web | Cliente SignalR para el hub de alertas con reconexión y respaldo por sondeo; control de secuencia de alertas. | 12 | Arostegui Alzamora, César Augusto | Done |
+| US17, TS02 | Recepción de alertas y distribución de alertas | T11 | Distribución, secuencia y reintentos de alertas en backend | Secuencia transaccional de cambios, endpoint delta de alertas, reportes manuales de anomalía con webhooks y reintentos con dead-letter en el outbox. | 14 | Arostegui Alzamora, César Augusto | Done |
+| US36, TS06 | Selección de canales de notificación | T12 | Disponibilidad de canales y envío por canales externos | Endpoint de disponibilidad de canales (EMAIL, SMS, DASHBOARD_PUSH, WEBHOOK) y despacho de alertas a canales externos. | 10 | Arostegui Alzamora, César Augusto | Done |
+| US36 | Selección de canales de notificación | T13 | Vista de preferencias de notificación | Vista de preferencias de canales de alerta en la aplicación web. | 6 | Arostegui Alzamora, César Augusto | Done |
+| US24 | Consulta de consumo eléctrico por equipo | T14 | Vistas de consumo energético en la web | Vistas de energía y mapeo de la API de consumo. | 8 | Arostegui Alzamora, César Augusto | Done |
+| US24 | Consulta de consumo eléctrico por equipo | T15 | Consumo en kWh, costos y calidad de datos en backend | Integración de potencia en kWh por equipo y periodo, reportes de costo, pronóstico y eficiencia, y marca de calidad de datos (dataQuality). | 14 | Arostegui Alzamora, César Augusto | Done |
+| US31, US33 | Registro de checklist semanal y nivel de cumplimiento | T16 | Checklists, certificados, puntaje y dossier SST en backend | Registro de checklists y certificados, cálculo del puntaje de cumplimiento y dossier SST. | 10 | Arostegui Alzamora, César Augusto | Done |
+| US31, US33 | Registro de checklist semanal y nivel de cumplimiento | T17 | Vistas de cumplimiento en la web | Vistas de certificados, checklist, puntaje y firma de conformidad. | 8 | Arostegui Alzamora, César Augusto | Done |
+| US41 | Consulta de bitácora de acciones en tienda | T18 | Bitácora de auditoría con filtros | Vista de bitácora en la web y filtros por operador y recurso en backend. | 8 | Arostegui Alzamora, César Augusto | Done |
+| TS04 | Generación de reporte SST | T19 | Generación de reportes PDF sin duplicados | Escritor PDF compartido, límite de intervalo configurable y respuesta 409 ante reportes duplicados en curso. | 8 | Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G01 | Estructura base del backend | Monolito modular sobre .NET 11, migraciones de EF Core, retiro de EnsureCreated, limpieza de material heredado y primera versión del backend. | 20 | Contreras López, Leandro Saúl / Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G02 | Contratos de API | Errores RFC 7807 con códigos estables, listas paginadas, creación idempotente, límite de tasa, CORS configurable y documentación con Scalar. | 18 | Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G03 | Perfiles y usuarios | Creación de personal con cabecera Location y listado paginado de usuarios para administración. | 10 | Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G04 | Pruebas y contenedores | Proyecto de pruebas unitarias xUnit y exclusiones del contexto de imagen Docker. | 8 | Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G05 | Base de la aplicación web | Ocho contextos acotados con TypeScript estricto, alias, fuentes e iconos, primitivas compartidas, modo lanzador, directorio de tiendas y contratos de integración documentados. | 24 | Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G06 | Despliegue del frontend | Contenedor, configuración para Vercel y generación de variables de entorno de runtime. | 4 | Arostegui Alzamora, César Augusto | Done |
 
-Las tareas relacionadas con sensores, telemetría y comunicación IoT no fueron incluidas en este Sprint Backlog, debido a que esta primera iteración se concentró en la construcción de la base de software y la demostración de la experiencia de usuario.
+Las tareas G01 a G06 no dependen de una historia de usuario específica: son restricciones generales que la primera versión del backend y de la aplicación web requieren para ejecutarse, desplegarse y ser verificadas. Las tareas relacionadas con sensores, telemetría e integración IoT no fueron incluidas en este Sprint Backlog.
 
 #### 7.2.1.3. Development Evidence for Sprint Review
 
-Como resultado del Sprint 1 se obtuvo una primera versión del backend de ElectroLink y una demo del frontend de las aplicaciones web y móvil. Estas implementaciones permitieron representar los principales recorridos definidos durante la etapa de diseño y disponer de una versión demostrable para revisión.
+Como resultado del Sprint 1 se obtuvo la landing page, la primera versión de la aplicación web del Manager del Local y la primera versión del backend de ElectroLink. La tabla registra, por repositorio, los commits relacionados con la implementación de las tareas del Sprint Backlog 1, identificados por su Task Id. Se excluyeron los commits de integración IoT y telemetría, los merges sin contenido propio y las plantillas iniciales de los repositorios. Los commits de pruebas se presentan en la sección 7.2.1.4.
 
-La evidencia del desarrollo se organiza de acuerdo con los principales componentes trabajados durante el sprint.
+| Repository | Branch | Task Id | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| Hampcoders-Emergentes/project-landing-page | develop | T01 | e48d65f | feat: Implement landing page | — | 2026-10-05 |
+| Hampcoders-Emergentes/project-landing-page | develop | T01 | 0c07b7b | fix: Simplify data attribute assignment in navigation groups | — | 2026-10-05 |
+| Hampcoders-Emergentes/project-landing-page | develop | T01 | 7d856e3 | chore: Remove unused electrolink icon SVG file | — | 2026-10-05 |
+| Hampcoders-Emergentes/project-landing-page | develop | T02 | c5f2e1e | feat(community): add Community page with product video | Agrega /comunidad y /en/community con el video del producto, checklist de funcionalidades y llamada a la acción, en ambos idiomas. | 2026-11-14 |
+| Hampcoders-Emergentes/project-landing-page | develop | T02 | 97e355e | feat(nav): link Community page from header and footer | — | 2026-11-14 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 42b9fb8 | feat: publish accumulated ElectroLink backend migration | Publica la base acumulada del backend: telemetría y alertas, acceso JWT, inventario, persistencia en PostgreSQL y reportes de migración. | 2026-10-27 |
+| Hampcoders-Emergentes/project-backend-api | develop | T06 | a0d99f7 | feat: harden backend ownership and profile access | Refuerza la propiedad de recursos y el acceso a perfiles en IAM, catálogo y suscripciones. | 2026-10-29 |
+| Hampcoders-Emergentes/project-backend-api | develop | T05 | 1582e0b | fix: Improve authorization and integrations | Refuerza la autorización por recurso con respuestas 403/404 y pruebas de regresión; mejora la seguridad de integraciones y webhooks idempotentes. | 2026-11-04 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 6aa6bb4 | build: target .NET 11 | Migra API, herramientas e imágenes a net11.0 con EF Core y Npgsql 10; reemplaza Swashbuckle por Microsoft.AspNetCore.OpenApi y Scalar. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | a231384 | chore: remove legacy handoff docs, task notes, tests and opencode skills | Retira la suite de pruebas previa y el material de traspaso que la fase 1 reemplaza. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | bcbd093 | refactor(analytics): rename homeowner references to client | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 44646ad | feat(db): add EF Core migrations and remove EnsureCreated | Migraciones iniciales de AppDbContext y StoreManagementDbContext, aplicadas al iniciar; se eliminan los scripts SQL preliminares. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 908c5b9 | feat(db): add migration for operations, alert routing, reports and audit | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 3284913 | feat(store): wire new services and reset database schema setup | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T07 | b1935bb | feat(iam): add audit trail and harden password recovery | Tokens de reinicio guardados como hash SHA-256, vigencia de 15 minutos y de uso único; las decisiones de autorización quedan auditadas por middleware. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T07 | 53d9f32 | feat(shared): add email delivery port with SMTP and logging adapters | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T09 | 37899c8 | feat(store): add equipment risk, grid status and sensor connectivity | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T09 | 77e8016 | feat(store): add dashboard summary, equipment thresholds and realtime alerts | Los equipos gestionan sus umbrales; GET dashboard-summary en un conjunto de consultas; alertas CRITICAL se envían a los grupos del hub tras confirmar la transacción. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T11 | 8236c87 | fix(outbox): retry failed messages with backoff and dead-letter them | Reintenta con backoff exponencial y envía a dead-letter tras 8 intentos; una caída de la base de datos ya no detiene el host. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T15 | 0e1b7fb | feat(analytics): add energy cost, forecast and efficiency reports | Tarifas leídas desde configuración; reportes almacenados durante 24 horas. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T15 | f7ae861 | feat(analytics): replace homeowner analytics with store energy consumption | Integra la potencia medida en kWh por equipo y periodo (huecos mayores a 15 minutos no se integran); expone endpoints JSON y CSV de consumo. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 5f3d6e7 | feat(api): replace Swagger with Scalar and harden CORS and JWT config | OpenAPI en /openapi/v1.json y Scalar en /scalar/v1; CORS con orígenes explícitos; validación JWT con los parámetros de TokenSettings. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T05 | 406e071 | refactor(iam): move authentication routes to /api/v1/auth | La recuperación de contraseña se unifica en el mismo controlador; el prefijo anterior queda como alias oculto. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T05 | 4c247dd | feat(iam): add refresh token rotation and anti-enumeration password reset | Rotación de refresh tokens con revocación de sesiones ante reúso; access tokens de 20 minutos; forgot-password responde siempre 200. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 83d7e5b | feat(api): unify error responses as RFC 7807 problem details | Toda respuesta 4xx/5xx usa application/problem+json, incluidos el middleware IAM y los desafíos JWT; se agregan el filtro Idempotency-Key y `PagedResponse<T>`. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G03 | f6acdd1 | feat(iam): let admins read any user and page the user list | GET /users/{id} para el dueño o administradores; GET /users paginado con totales; creación de personal idempotente con Location. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G03 | abce0a1 | feat(profiles): return the created or updated staff member | POST /staff-members responde 201 con StaffMemberResponse y Location; revocar la certificación responde 204. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T06 | 9e92e3e | feat(profiles): mark profile and subscription changes for token refresh | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T06 | 1c22710 | feat(iam): refresh profile claims per request and return new tokens | Los claims de rol y perfil se releen del estado actual; los cambios de perfil y la cancelación devuelven el token en X-Refreshed-Token. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | a65599f | feat(api): page list endpoints and make creation POSTs idempotent | Listas con `PagedResponse<T>` o envolvente jerárquica; creaciones de informes, checklists, certificados y solicitudes con Idempotency-Key. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | bfb6a14 | feat(api): register error handling, string enums and claim refresh | Registra el manejador de problemas, el almacén de idempotencia, la transformación de claims y el conversor de enums; expone cabeceras en CORS y mapea el hub de alertas. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T03 | ce870dc | feat(subscriptions): add public demo request endpoint | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T03 | 41bd5c9 | feat(subscriptions): make demo requests queryable | Consulta pública de recibo por id de solicitud y listado de leads para Admin/SuperAdmin con filtros y paginación. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T12 | 6ec0fd1 | feat(alerts): dispatch alerts to realtime and external channels | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T11 | 3a1aad5 | feat(alerts): add manual anomaly reports, technician assignment and webhooks | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T16 | 15921c5 | feat(store): add compliance checklists, certificates, score and OHS dossier | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T18 | 9b63191 | feat(iam): filter store audit logs by operator and resource | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T19 | 7c6ed10 | refactor(shared): move PDF writer to shared and make interval limit configurable | — | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | T15 | 40dabf5 | feat(analytics): flag insufficient telemetry in predictions and comparisons | Las comparaciones incluyen dataQuality (SUFFICIENT o INSUFFICIENT_DATA), sampleCount y minimumSamples. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | T11 | 0184732 | feat(alerts): sequence alert changes and expose a delta endpoint | Cada creación o cambio de estado toma la siguiente secuencia en la misma transacción; GET /alerts/changes?afterSequence= devuelve los cambios desde ese cursor. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | T12 | 1e4713c | feat(alerts): expose notification channel readiness | GET /notification-channels informa EMAIL, SMS, DASHBOARD_PUSH y WEBHOOK como DELIVERED o LOG_ONLY, sin hosts ni credenciales. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | T19 | e66505c | feat(reports): reject a duplicate in-flight report with 409 | Una segunda solicitud del mismo informe en generación responde 409 REPORT_IN_PROGRESS. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 423db73 | feat(errors): add stable error codes and sanitized problem details | Cada problema incluye errorCode; los errores de campo son listas de códigos (por ejemplo EMAIL_ALREADY_REGISTERED); detail se sanitiza. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 6560fe2 | feat(api): add global rate limiting and configurable CORS origins | Límite por usuario o por IP con 429, cabecera Retry-After y errorCode RATE_LIMITED; orígenes adicionales por configuración. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 6a9c951 | feat(cors): allow the Vercel frontend origin | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | develop | G04 | 4225b24 | build(docker): exclude tests, docs, tools and local dev settings from context | El contexto de la imagen omite artefactos de compilación, herramientas, documentación y la configuración local de desarrollo. | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | d202dcf | feat(web): implement the store-manager web application | Ocho contextos acotados (iam, stores, monitoring, alerts, analytics, compliance, notifications, audit) con capas de dominio, aplicación, infraestructura y presentación; traducciones en y es. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 415d8ef | build: configure strict TypeScript, path aliases and environments | Activa strict y strictTemplates, alias por contexto, archivos de entorno apiOrigin y tokens de diseño globales. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | ebda818 | chore(assets): add fonts, icon sprite and favicon | Fuentes Exo 2, sprite de iconos Tabler y favicon SVG propio. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | bf3e4f0 | docs: add backend integration contracts and frontend architecture | Guía de integración con el backend, referencia de endpoints y enums, contrato de errores y reglas de arquitectura. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T10 | 896f13d | feat(realtime): connect to alerts hub with polling fallback | Cliente SignalR para /hubs/alerts con token en memoria, JoinStore/LeaveStore y reconexión con backoff; el sondeo solo corre si el hub no está conectado. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T10 | 0a35042 | build: add @microsoft/signalr dependency | Cliente aprobado para el hub de alertas. | 2026-11-11 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T04 | 4f39a29 | feat(iam): add sign-up view and error code mapping | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T08 | ab706be | feat(monitoring): update dashboard, equipment and connectivity views | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T10 | a97cee2 | feat(alerts): sync active alerts and enforce alert sequence rules | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 1049733 | feat(shared): add data-quality, skeleton, toast and error primitives | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 0850552 | docs(api): sync backend integration contracts and error examples | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T14 | 06e767f | feat(analytics): update energy views and API mapping | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T17 | 515c4f8 | feat(compliance): update certificates, checklist, score and signature views | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T13 | 2e05918 | feat(notifications): update preferences view | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | T18 | 050403e | feat(audit): update audit log view | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 9f9e228 | feat(shell): add launcher mode without sidebar and grouped navigation | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 6166f2b | feat(stores): add onboarding and store card grid to directory | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G05 | 5bc637b | style(stores): replace repeated inline styles with utility classes | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-frontend-web | develop | G06 | 9eea8e8 | build: add container, Vercel and runtime environment generation | — | 2026-11-12 |
+
+Las demostraciones de la primera versión del backend y de la aplicación web se presentan a continuación como evidencia visual complementaria.
 
 ##### Primera versión del Backend
-
-Durante el sprint se desarrolló la primera versión del backend de ElectroLink, estableciendo la estructura inicial sobre la cual se continuará incorporando la lógica del sistema y sus distintos módulos.
-
 
 \
 ![Primera versión del Backend](assets-emergentes/back1.jpeg)
@@ -8235,10 +8325,7 @@ Durante el sprint se desarrolló la primera versión del backend de ElectroLink,
 
 ##### Demo de la Aplicación Web
 
-Se implementó una demo de la aplicación web orientada al Manager del Local, trasladando a una interfaz navegable las principales vistas y recorridos definidos previamente en los mock-ups y wireflows.
-
-La demo permite visualizar la propuesta de interacción para funcionalidades como el acceso a la plataforma, consulta general del estado del local, gestión de alertas, visualización de consumo, historial y otras funciones contempladas en el diseño.
-
+La demo de la aplicación web está orientada al Manager del Local y traslada a una interfaz navegable las vistas y recorridos definidos en los mock-ups y wireflows. Permite visualizar el acceso a la plataforma, el estado general del local, la gestión de alertas, la visualización de consumo, el historial y otras funciones contempladas en el diseño.
 
 \
 ![Demo Aplicación Web](assets-emergentes/front1.jpeg)
@@ -8249,20 +8336,43 @@ La demo permite visualizar la propuesta de interacción para funcionalidades com
 \
 ![Demo Aplicación Web](assets-emergentes/front4.jpeg)
 
-##### Demo de la Aplicación Móvil
+Las vistas de monitoreo eléctrico representan el comportamiento esperado de ElectroLink a nivel de interfaz; durante este sprint no se implementó comunicación con dispositivos IoT ni procesamiento de telemetría real.
 
-También se implementó una demo de la aplicación móvil orientada al Trabajador del Local. Esta versión representa los principales flujos operativos y de seguridad planteados durante el diseño de la solución.
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
-La implementación permite demostrar visualmente cómo el trabajador interactuaría con ElectroLink durante actividades como la consulta del estado de los equipos, recepción de alertas, reporte de incidencias y consulta de información de seguridad.
+En esta sección se presenta el conjunto de pruebas automatizadas del Sprint 1 para los Web Services relacionados con las historias de usuario planificadas: pruebas unitarias del backend y escenarios de aceptación escritos en Gherkin (BDD). Los escenarios de aceptación cubren las historias de la landing page, la aplicación web y el backend que se seleccionaron en el Sprint Backlog 1.
 
+El estado actual de las pruebas es el siguiente:
 
+- **Pruebas unitarias:** proyecto xUnit `Electrolink.Backend.UnitTests` con 876 pruebas, que cubren las capas Application, ACL y Transform de los contextos acotados del backend.
+- **Pruebas de aceptación BDD:** archivos `.feature` en Gherkin, uno por historia de usuario (US01 a US42). Los archivos de pasos (steps) aún no están implementados en el repositorio, por lo que estos escenarios constituyen la especificación ejecutable que se completará en el siguiente sprint.
+- **Pruebas de integración:** no se incluyen en este sprint. El frontend y la landing page no registran pruebas automatizadas en los commits del periodo.
 
-![Demo Aplicación Móvil](assets-emergentes/mobile1.jpeg)
+##### Repositorios de control de versiones de Testing
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :---: | :--- | :--- | :---: |
+| Hampcoders-Emergentes/project-backend-api | feat/testing | f485295 | test(unit): add unit test project for application, ACL and transform layers | Reemplaza el proyecto de caracterización retirado con 876 pruebas xUnit para Application/Internal, Interfaces/ACL e Interfaces/REST/Transform en todos los contextos acotados. Usa un fake basado en DispatchProxy en lugar de una librería de mocking. | 2026-11-12 |
+| Hampcoders-Emergentes/project-backend-api | feat/testing | ccaffe8 | build(tests): point solution at the unit test project | — | 2026-11-12 |
+| Hampcoders-Emergentes/project-acceptance-tests | master | 68804ae | feat(acceptance-tests): Add feature files for monitoring, energy management, compliance, and access control | — | 2026-11-14 |
+
+##### Pruebas unitarias
+
+Capturas de la ejecución de las pruebas unitarias del backend (`Electrolink.Backend.UnitTests`).
+
 \
-![Demo Aplicación Móvil](assets-emergentes/mobile2.jpeg)
-La evidencia presentada corresponde al alcance de esta primera iteración. Las vistas relacionadas con monitoreo eléctrico representan el comportamiento esperado de ElectroLink a nivel de interfaz, pero durante este sprint no se implementó comunicación con dispositivos IoT ni procesamiento de telemetría real.
+![Resultados de pruebas unitarias del backend](assets/cap7/sprint1/testing-suite-evidence/unit-tests-api-screenshot-1.png)
+\
+![Carpeta de pruebas unitarias del backend](assets/cap7/sprint1/testing-suite-evidence/unit-tests-api-screenshot-2.png)
 
-#### 7.2.X.4. Testing Suite Evidence for Sprint Review
+##### Pruebas de aceptación BDD
+
+Capturas de la ejecución de los escenarios de aceptación del repositorio `project-acceptance-tests`.
+
+\
+![Repositorio de pruebas de aceptación BDD](assets/cap7/sprint1/testing-suite-evidence/acceptance-tests-screenshot-1.png)
+\
+![Primera User Story de pruebas de aceptación BDD](assets/cap7/sprint1/testing-suite-evidence/acceptance-tests-screenshot-2.png)
 
 #### 7.2.X.5. Execution Evidence for Sprint Review
 
