@@ -8958,6 +8958,12 @@ El alcance de esta evaluación incluye la revisión de la usabilidad y la experi
 
 ## 7.4. Video About-the-Product
 
+![Captura de pantalla del video About-the-Product](assets/cap7/video-about-the-product.png)
+
+Link del video About-the-Product en OneDrive: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQCZZbvT-J-FSpPizhInd8O9AWAKa7EnJPTWXL8rHnijqy4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=52aVOA>
+
+Link del video About-the-Product en YouTube: [https://youtu.be/WRk7asmM5is](https://youtu.be/WRk7asmM5is)
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
@@ -9013,3 +9019,7 @@ Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del con
 - Link de la carpeta de OneDrive: <https://upcedupe-my.sharepoint.com/:f:/g/personal/u202114548_upc_edu_pe/IgA4hH36P5pgSYS2dliiBXpTAQwy_m72jpCcivmkVy_gEvc?e=ng0PdU>
 
 - Link del video de exposición de la entrega TB1: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQAgfZvBGriXQYK-cVEkAiJaAZU3dnjm4p9MaKorcmwxG6M?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=in1M8u>
+
+- Link del video de exposición de la entrega TP: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQANlVVNyZ0oS4iG1EMcddE6ARcv8EUSligrH-EQ79K26cE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=uaiunr>
+
+-Link del video de exposición de la entrega TB2: <>
