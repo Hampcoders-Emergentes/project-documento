@@ -8403,6 +8403,218 @@ Las preguntas se organizaron por pantalla y se formularon después de la demostr
 
 ### 7.3.3. Evaluaciones según heurísticas
 
+#### Evaluación Heurística de Usabilidad y Diseño Inclusivo de TarjePAFI
+
+| Campo | Descripción |
+| :--- | :--- |
+| **Carrera** | Ingeniería de Software |
+| **Curso** | Arquitecturas de Software Emergentes |
+| **Sección** | 9056 |
+| **Profesor** | Enrique Alejandro Valdivia Verde |
+| **Auditor(es)** | Grupo 1 |
+| **Cliente(s)** | Grupo 3 |
+| **Fecha de la evaluación** | 2026-11-12 |
+| **Tipo de evaluación** | Auditoría  de usabilidad y diseño inclusivo sobre la versión demostrada en las entrevistas de validación |
+
+**SITE o APP A EVALUAR:**
+
+ **TarjePAFI** – Landing Page y aplicación web 
+
+**Escala de severidad**
+
+| Nivel | Descripción |
+| :---: | :--- |
+| **1** | Problema superficial: fácilmente superable, ocurre con poca frecuencia. No requiere atención inmediata. |
+| **2** | Problema menor: aparece con algo más de frecuencia o genera leve dificultad. Requiere revisión en próximas versiones. |
+| **3** | Problema mayor: ocurre con frecuencia o afecta notablemente la experiencia del usuario. Debe corregirse con prioridad alta. |
+| **4** | Problema muy grave: impide el uso normal del sistema. Debe corregirse antes del lanzamiento. |
+
+**Tareas a evaluar**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad y la experiencia de usuario en las siguientes tareas:
+
+1. Conocer la propuesta de valor desde la sección principal (Landing Page).
+2. Revisar las funcionalidades y cómo funciona el sistema (Landing Page).
+3. Identificar a quién está dirigido TarjePAFI (Landing Page).
+4. Consultar las preguntas frecuentes (Landing Page).
+5. Enviar una consulta desde el formulario de contacto (Landing Page).
+6. Cambiar el idioma y navegar desde un celular (Landing Page).
+7. Iniciar sesión (aplicación web).
+8. Interpretar el resumen del día en el Dashboard (aplicación web).
+9. Buscar una credencial y revisar su detalle e historial (aplicación web).
+10. Bloquear, reportar la pérdida o reactivar una tarjeta (aplicación web).
+11. Conceder un permiso de acceso por excepción (aplicación web).
+12. Ejecutar la verificación de matrículas (aplicación web).
+13. Revisar el estado de los lectores y su detalle (aplicación web).
+14. Simular la lectura de una tarjeta (aplicación web).
+15. Consultar los registros de acceso (aplicación web).
+16. Generar y exportar un reporte (aplicación web).
+17. Consultar las sesiones del día (aplicación web).
+18. Revisar y editar la asistencia de una clase (aplicación web).
+19. Consultar el historial de asistencia docente y las reuniones (aplicación web).
+20. Cambiar el idioma, revisar el perfil y cerrar sesión (aplicación web).
+
+**Tabla resumen de problemas**
+
+| # | Aplicación | Problema identificado | Escala de severidad | Heurística / Principio violado(a) |
+| :---: | :---: | :--- | :---: | :--- |
+| 1 | Landing | No existe un botón para ingresar a la plataforma web; el visitante que ya es usuario no tiene cómo llegar a ella. | 3 | **Usability:** Flexibilidad y eficiencia de uso |
+| 2 | Landing | La página se abre en inglés aunque el público es peruano, y en español mezcla el trato de "tú" y "usted". | 3 | **Usability:** Correspondencia entre el sistema y el mundo real |
+| 3 | Landing | La opción de contacto se repite en cinco lugares y el formulario aparece dos veces, en la página y en una ventana emergente. | 2 | **Usability:** Diseño estético y minimalista |
+| 4 | Landing | Los textos usan términos técnicos como "idempotente", "lector IoT" o "Segmentos". | 2 | **Usability:** Correspondencia entre el sistema y el mundo real |
+| 5 | Landing | La sección "¿Para quién es TarjePAFI?" solo presenta a administradores y estudiantes; faltan docentes y trabajadores. | 2 | **Information Architecture:** Is it communicative? |
+| 6 | Landing | No hay sección de equipo ni testimonios, y el enlace "Redes sociales" lleva a un repositorio de código. | 2 | **Information Architecture:** Is it credible? |
+| 7 | Landing | El selector de idioma, las etiquetas de las fotos y el pie de página usan letras muy pequeñas. | 2 | **Inclusive Design:** Accesibilidad visual |
+| 8 | Web | La interfaz muestra términos técnicos o en inglés como "heartbeat", "health check", "Degradado", "UID" o "Dashboard". | 3 | **Usability:** Correspondencia entre el sistema y el mundo real |
+| 9 | Web | Un mismo estado cambia de color según la pantalla, como "Pendiente", "Mantenimiento" o "Accesos concedidos". | 3 | **Usability:** Consistencia y estándares |
+| 10 | Web | Hay demasiados colores de estado: dos azules casi iguales con significados distintos, y "Pendiente" y "Tarde" con el mismo ámbar. | 2 | **Inclusive Design:** Proporciona experiencias comparables |
+| 11 | Web | Predominan las letras pequeñas en tablas, menú y tarjetas, y el texto blanco de los botones celestes se lee con dificultad. | 2 | **Inclusive Design:** Accesibilidad visual |
+| 12 | Web | Casi todas las pantallas empiezan con una fila de 4 o 5 tarjetas de indicadores que repiten datos y compiten por la atención. | 2 | **Usability:** Diseño estético y minimalista |
+| 13 | Web | En "Lectores IoT" el estado se muestra y se filtra tres veces: tarjetas, chips de colores y un filtro desplegable. | 2 | **Information Architecture:** Is it usable? |
+| 14 | Web | El botón "Ver historial" del Dashboard lleva al Simulador NFC y no a "Registros de acceso". | 3 | **Information Architecture:** Is it findable? |
+| 15 | Web | Se muestran códigos de tarjeta y de lector en lugar de los nombres de personas y espacios. | 2 | **Usability:** Reconocer antes que recordar |
+| 16 | Web | El menú lateral tiene secciones de un solo elemento y nombres repetidos, como "Credenciales > Credenciales". | 1 | **Information Architecture:** Is it findable? |
+| 17 | Web | Las acciones sobre una tarjeta se repiten en la fila y en el menú, con el botón rojo como el más llamativo. | 2 | **Usability:** Prevención de errores |
+| 18 | Web | Un mismo concepto recibe nombres distintos: "Usuario" y "Titular"; "Lecturas" e "Intentos"; "Ver asistencia" y "Abrir". | 2 | **Information Architecture:** Consistencia y lenguaje del usuario |
+| 19 | Web | La tarjeta "Próxima sesión" muestra dos estados que se repiten o se contradicen, y la sesión vuelve a aparecer en la tabla. | 2 | **Usability:** Diseño estético y minimalista |
+
+**Descripción de problemas**
+
+**PROBLEMA #1: Sin acceso a la plataforma desde la Landing Page**
+
+- **Severidad:** 3
+- **Heurística violada:** Usability – Flexibilidad y eficiencia de uso
+- **Descripción:** La cabecera solo ofrece secciones informativas y el botón de contacto. Un administrador o docente que entra a la página para usar el sistema no encuentra un botón de ingreso y debe conocer la dirección de la plataforma por otro medio.
+- **Recomendación:** Añadir un botón "Iniciar sesión" visible en la cabecera, diferenciado del botón de contacto, que lleve a la plataforma web.
+
+**PROBLEMA #2: Idioma inicial en inglés y trato inconsistente**
+
+- **Severidad:** 3
+- **Heurística violada:** Usability – Correspondencia entre el sistema y el mundo real
+- **Descripción:** La página carga en inglés y el visitante debe encontrar el pequeño selector "ES" para leerla en español, aunque el producto se dirige a universidades peruanas. En la versión en español se alternan frases con "tú" ("tu campus") y con "usted" ("Conecte", "Déjenos").
+- **Recomendación:** Mostrar el español por defecto y usar un solo tipo de trato en todos los textos.
+
+**PROBLEMA #3: Contacto repetido y formulario duplicado**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Diseño estético y minimalista
+- **Descripción:** El contacto aparece en el menú, en el botón de la cabecera, en la sección principal, en un botón flotante y en el pie de página. Además, existe un formulario idéntico en la sección "Contacto" y en una ventana emergente, y el visitante no sabe cuál usar.
+- **Recomendación:** Mantener un solo formulario en la sección de contacto y hacer que todos los botones lleven a ese mismo lugar.
+
+**PROBLEMA #4: Lenguaje técnico en los textos**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Correspondencia entre el sistema y el mundo real
+- **Descripción:** Se usan términos como "lectura idempotente", "lector IoT", "infraestructura de hardware distribuida" y el menú "Segmentos". Un coordinador o un docente que visita la página no entiende estos términos y pierde interés.
+- **Recomendación:** Redactar con palabras cotidianas, por ejemplo "lectura sin duplicados", "lector de tarjetas" y "¿Para quién es?".
+
+**PROBLEMA #5: Público incompleto en "¿Para quién es TarjePAFI?"**
+
+- **Severidad:** 2
+- **Heurística violada:** Information Architecture – Is it communicative?
+- **Descripción:** La sección solo muestra dos perfiles: administradores y estudiantes. Docentes y trabajadores, que también usan la tarjeta para registrar asistencia y jornada, no se ven reflejados.
+- **Recomendación:** Agregar tarjetas para docentes y trabajadores con el beneficio principal de cada uno.
+
+**PROBLEMA #6: Pocos elementos de confianza**
+
+- **Severidad:** 2
+- **Heurística violada:** Information Architecture – Is it credible?
+- **Descripción:** No hay una sección del equipo, testimonios ni casos de uso. El enlace "Redes sociales" del pie de página lleva a un repositorio de código, lo que resta seriedad para un cliente institucional.
+- **Recomendación:** Incluir una sección "Equipo" y enlaces a redes sociales reales, o retirar el enlace hasta tenerlas.
+
+**PROBLEMA #7: Letras pequeñas en la Landing Page**
+
+- **Severidad:** 2
+- **Heurística violada:** Inclusive Design – Accesibilidad visual
+- **Descripción:** El selector de idioma EN/ES, las etiquetas de las fotos, los mensajes de error del formulario y el pie de página tienen letras muy pequeñas. En celular son difíciles de leer y el selector de idioma es difícil de tocar.
+- **Recomendación:** Aumentar el tamaño de esos textos y del selector de idioma, en especial en la versión móvil.
+
+**PROBLEMA #8: Términos técnicos y en inglés en la aplicación web**
+
+- **Severidad:** 3
+- **Heurística violada:** Usability – Correspondencia entre el sistema y el mundo real
+- **Descripción:** Las pantallas muestran "heartbeat", "Ejecutar health check", "Degradado", "UID", "prueba de idempotencia" y el título "Dashboard". El administrador debe adivinar qué significan antes de actuar.
+- **Recomendación:** Usar lenguaje cotidiano: "Señal de conexión", "Comprobar conexión", "Funcionamiento parcial", "Código de tarjeta" y "Panel general".
+
+**PROBLEMA #9: Colores distintos para un mismo estado**
+
+- **Severidad:** 3
+- **Heurística violada:** Usability – Consistencia y estándares
+- **Descripción:** "Pendiente" es ámbar en la lista de asistencia y celeste en su tarjeta de indicador. "Mantenimiento" es gris en la etiqueta y ámbar en la tarjeta de la misma pantalla. "Accesos concedidos" es verde en una vista y celeste en otra. El usuario no puede confiar en el color para reconocer un estado.
+- **Recomendación:** Definir una leyenda única de colores por estado y aplicarla igual en todas las pantallas.
+
+**PROBLEMA #10: Exceso de colores de estado**
+
+- **Severidad:** 2
+- **Heurística violada:** Inclusive Design – Proporciona experiencias comparables
+- **Descripción:** Las etiquetas usan seis tonos, entre ellos dos azules casi iguales que significan cosas distintas ("Programada" y "En curso"). "Pendiente" y "Tarde" comparten el mismo ámbar y no se distinguen al recorrer una lista de 40 estudiantes, menos aún para una persona con daltonismo.
+- **Recomendación:** Reducir la paleta a cuatro tonos (correcto, atención, error y neutro) y diferenciar "Pendiente" y "Tarde" con color e ícono.
+
+**PROBLEMA #11: Letras pequeñas y botones poco legibles**
+
+- **Severidad:** 2
+- **Heurística violada:** Inclusive Design – Accesibilidad visual
+- **Descripción:** Los subtítulos, los encabezados de tabla en mayúsculas, los títulos del menú lateral y los textos de las tarjetas de indicadores son muy pequeños. Además, el texto blanco sobre el celeste de los botones principales tiene poco contraste.
+- **Recomendación:** Aumentar el tamaño mínimo del texto informativo y oscurecer el celeste de los botones principales.
+
+**PROBLEMA #12: Tarjetas de indicadores en todas las pantallas**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Diseño estético y minimalista
+- **Descripción:** Dashboard, Credenciales, Lectores IoT, Registros de acceso, Sesión de clase y Reportes empiezan con 4 o 5 tarjetas de colores. Varias repiten datos del Dashboard y empujan hacia abajo la tabla que el usuario viene a buscar.
+- **Recomendación:** Dejar las tarjetas en el Dashboard y en los reportes, y usar un resumen breve en una línea en las demás pantallas.
+
+**PROBLEMA #13: Estado de lectores repetido tres veces**
+
+- **Severidad:** 2
+- **Heurística violada:** Information Architecture – Is it usable?
+- **Descripción:** En "Lectores IoT" el estado aparece en cuatro tarjetas, en una fila de seis chips de colores que filtran y en un filtro desplegable "Estado". Los chips y el desplegable hacen lo mismo y el usuario no sabe cuál usar.
+- **Recomendación:** Mantener solo los chips con su conteo y eliminar el filtro desplegable "Estado".
+
+**PROBLEMA #14: "Ver historial" lleva a otra pantalla**
+
+- **Severidad:** 3
+- **Heurística violada:** Information Architecture – Is it findable?
+- **Descripción:** En el Dashboard, el botón "Ver historial" de "Actividad reciente" abre el Simulador NFC en lugar de "Registros de acceso". El administrador termina en una herramienta de prueba cuando buscaba un listado.
+- **Recomendación:** Enlazar el botón a "Registros de acceso" y nombrarlo según su destino.
+
+**PROBLEMA #15: Códigos en lugar de nombres**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Reconocer antes que recordar
+- **Descripción:** La actividad reciente muestra el código de la tarjeta en lugar del nombre de la persona, y los lectores aparecen como "RDR-A-301" antes que con el nombre del espacio. El subtítulo del detalle de una credencial también es su código.
+- **Recomendación:** Mostrar primero el nombre de la persona y del espacio, y dejar los códigos como dato secundario.
+
+**PROBLEMA #16: Menú con secciones redundantes**
+
+- **Severidad:** 1
+- **Heurística violada:** Information Architecture – Is it findable?
+- **Descripción:** Las secciones "General" y "Datos" contienen una sola opción, y la sección "Credenciales" tiene una opción con el mismo nombre. Los títulos de sección agregan texto sin ayudar a orientarse.
+- **Recomendación:** Eliminar las secciones de una sola opción y renombrar las que se repiten.
+
+**PROBLEMA #17: Acciones de tarjeta repetidas y sin jerarquía**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Prevención de errores
+- **Descripción:** Cada fila de "Credenciales" muestra "Bloquear" en rojo junto a "Ver detalle" y repite la acción en el menú de tres puntos. En el detalle hay hasta cuatro botones con estilos distintos, y el más llamativo es "Dar de baja", la acción más difícil de revertir.
+- **Recomendación:** Dejar en la fila solo "Ver detalle" y agrupar los cambios de estado en un único botón "Cambiar estado".
+
+**PROBLEMA #18: Nombres distintos para lo mismo**
+
+- **Severidad:** 2
+- **Heurística violada:** Information Architecture – Consistencia y lenguaje del usuario
+- **Descripción:** La persona dueña de la tarjeta se llama "Usuario" en una tabla y "Titular" en otras. Una pasada de tarjeta se llama "Lectura", "Intento" o "Evento" según la pantalla, y en "Mis sesiones" la misma acción dice "Ver asistencia" o "Abrir".
+- **Recomendación:** Definir un glosario de la interfaz y usar el mismo término en todas las pantallas.
+
+**PROBLEMA #19: Estados duplicados en "Próxima sesión"**
+
+- **Severidad:** 2
+- **Heurística violada:** Usability – Diseño estético y minimalista
+- **Descripción:** La tarjeta muestra dos indicadores juntos, como "Marcación abierta" y "Programada", o "En curso" dos veces. Además, la misma sesión vuelve a aparecer en la tabla de sesiones de hoy.
+- **Recomendación:** Mostrar un solo estado claro y resaltar la próxima sesión dentro de la tabla en lugar de repetirla.
+
+---
+
 #### Evaluación Heurística de Usabilidad y Diseño Inclusivo de ElectroLink
 
 | Campo | Descripción |
@@ -8411,7 +8623,7 @@ Las preguntas se organizaron por pantalla y se formularon después de la demostr
 | **Curso** | Arquitecturas de Software Emergentes |
 | **Sección** | 9056 |
 | **Profesor** | Enrique Alejandro Valdivia Verde |
-| **Auditor(es)** | Grupo X |
+| **Auditor(es)** | Grupo 3 |
 | **Cliente(s)** | Grupor 1 |
 | **Site / App a Evaluar** | **ElectroLink** – aplicación web y aplicación móvil |
 | **Fecha de la evaluación** | 2026-11-07 |
