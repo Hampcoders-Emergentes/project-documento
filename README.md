@@ -8414,7 +8414,7 @@ Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto 
 
 **2. Creación del repositorio**
 - Hicimos clic en el botón **“New”** para generar un nuevo repositorio.
-- Le asignamos el nombre **“frontend”** dentro de nuestra organización **Hampcoders-Emergentes**.
+- Le asignamos el nombre **“project-frontend-web”** dentro de nuestra organización **Hampcoders-Emergentes**.
 
 **3. Configuración del repositorio**
 - Nos aseguramos de que el repositorio tenga visibilidad **pública** para permitir la integración con Vercel.
@@ -8428,7 +8428,7 @@ Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto 
 **5. Configuración en Vercel**
 - Iniciamos sesión en [Vercel](https://vercel.com).
 - Seleccionamos la opción **“New Project”** y vinculamos nuestra cuenta de GitHub.
-- Importamos el repositorio **frontend**.
+- Importamos el repositorio **project-frontend-web**.
 - Configuramos el framework en **Angular** (Vercel lo detecta automáticamente en la mayoría de los casos).
 - Definimos la rama de despliegue (`main`/`master`).
 - Colocamos todas las variables de entorno necesarias para el correcto funcionamiento de la aplicación.
@@ -8443,7 +8443,7 @@ Para que nuestro RESTful Web Services esté disponible para todos nuestros usuar
 
 **1. Registro en GitHub**
 Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código del RESTful Web Services de **ElectroLink**.
-- Creamos un repositorio llamado **backend** dentro de nuestra organización **Hampcoders-Emergentes**.
+- Creamos un repositorio llamado **project-backend-api** dentro de nuestra organización **Hampcoders-Emergentes**.
 
 **2. Base de datos en Railway**
 - Creamos un servicio de base de datos PostgreSQL en Railway para almacenar los datos de la aplicación.
@@ -8451,7 +8451,7 @@ Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto 
 - Obtenemos la URL de conexión (DATABASE_URL) para configurarla en el backend.
 
 **3. Build en Railway**
-- Conectamos el repositorio de GitHub **backend** con Railway.
+- Conectamos el repositorio de GitHub **project-backend-api** con Railway.
 - Railway detecta automáticamente el `Dockerfile` y compila el proyecto de C# y .NET 11.
 - Se construye la imagen Docker y se despliega automáticamente.
 
