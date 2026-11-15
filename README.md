@@ -8259,6 +8259,8 @@ Aquí se encuentran los repositorios de GitHub utilizados para el desarrollo del
 
 **Repositorios de GitHub:**
 
+![Captura de los repositorios de GitHub](assets/cap7/software-configuration/repositories-github.png)
+
 Organización de GitHub: https://github.com/Hampcoders-Emergentes
 
 - Landing Page de ElectroLink: https://github.com/Hampcoders-Emergentes/project-landing-page
