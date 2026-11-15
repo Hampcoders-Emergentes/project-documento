@@ -8464,17 +8464,19 @@ Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto 
 
 - Compilación de APK/AAB para Android y IPA para iOS.
 - Firma con keystores/certificados almacenados como secretos del CI.
-- Publicación en Google Play y App Store.
+- Distribución de las builds a los testers/stakeholders mediante **Firebase App Distribution**, enviando las invitaciones por correo electrónico.
+- Publicación final en Google Play y App Store.
 
-#### **Despliegue del Edge API (Flask) y la Aplicación Embebida (C++ / Arduino)**
+#### **Despliegue del Edge API (Flask)**
 
-- **Edge API:** despliegue como servicio en el borde (gateway industrial) o contenedor en la nube; variables de entorno para broker MQTT y endpoint del backend.
+- El Edge API se despliega en un **contenedor de Docker en Railway**.
+- La imagen Docker se construye a partir del `Dockerfile` del proyecto Flask y se publica en Railway.
+- Variables de entorno configuradas en Railway para el broker MQTT y el endpoint del backend.
+- Escalado y monitoreo gestionados por la plataforma.
+
+#### **Despliegue de la Aplicación Embebida (C++ / Arduino)**
+
 - **Aplicación embebida:** desarrollo y compilación del firmware directamente en el navegador con Wokwi (compilador en la nube para Arduino/ESP32), simulación en línea del circuito y el código; flasheo/exportación del firmware (`bin`/`hex`) cuando se requiera desplegar en hardware físico; actualización OTA opcional en producción; configuración de pines y credenciales Wi-Fi en el sketch por dispositivo.
-
-#### **Despliegue de las Pruebas de Aceptación (Gherkin)**
-
-- Ejecución en el pipeline contra el backend desplegado en staging.
-- Reportes publicados como artefactos.
 
 ---
 
