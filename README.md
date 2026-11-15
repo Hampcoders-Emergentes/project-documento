@@ -223,6 +223,7 @@ A continuación se presenta la evidencia correspondiente a la entrega TP1, con h
   - [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
+  - [Servicios desplegados en el Sprint 1](#servicios-desplegados-en-el-sprint-1)
 
 # Student Outcome
 
@@ -8502,7 +8503,7 @@ El objetivo del Sprint 1 fue establecer una primera versión de ElectroLink comp
 | :--- | :--- |
 | **Sprint #** | Sprint 1 |
 | **Sprint Planning Background** | |
-| Date | 2026-11-01 |
+| Date | 2026-10-01 |
 | Time | 07:00 PM |
 | Location | Virtual |
 | Prepared By | Arostegui Alzamora, César Augusto |
@@ -8527,7 +8528,7 @@ El Sprint Backlog 1 tiene como objetivo principal llevar a una primera versión 
 | US07 | Solicitud de demostración y contacto comercial | T03 | Endpoint público de solicitud de demostración | Registro de solicitudes de demo, consulta pública del recibo por id y listado de leads para administración. | 8 | Arostegui Alzamora, César Augusto | Done |
 | US37 | Acceso seguro a la plataforma web | T04 | Vista de inicio de sesión y registro en la web | Formularios de acceso y registro con mapeo de los códigos de error del backend. | 8 | Arostegui Alzamora, César Augusto | Done |
 | US37 | Acceso seguro a la plataforma web | T05 | Rutas de autenticación y validación JWT | Rutas /api/v1/auth, rotación de refresh tokens, validación de emisor, audiencia y vigencia, y autorización por recurso. | 12 | Arostegui Alzamora, César Augusto | Done |
-| US37 | Acceso seguro a la plataforma web | T06 | Control de acceso por propiedad y refresco de claims | Propiedad de recursos en IAM y suscripciones; claims releídos en cada solicitud y token renovado en la cabecera X-Refreshed-Token. | 10 | Contreras López, Leandro Saúl / Arostegui Alzamora, César Augusto | Done |
+| US37 | Acceso seguro a la plataforma web | T06 | Control de acceso por propiedad y refresco de claims | Propiedad de recursos en IAM y suscripciones; claims releídos en cada solicitud y token renovado en la cabecera X-Refreshed-Token. | 10 | Contreras López, Leandro Saúl | Done |
 | US38 | Recuperación de acceso mediante correo | T07 | Recuperación de contraseña y envío por correo | Token de reinicio con hash SHA-256, vigencia de 15 minutos y uso único; puerto de correo con adaptadores SMTP y de registro. | 10 | Arostegui Alzamora, César Augusto | Done |
 | US16, US21 | Estado de la red eléctrica del local y conectividad de sensores | T08 | Vistas de monitoreo en la web | Dashboard, detalle de equipos y estado de conectividad de sensores en la aplicación web. | 10 | Arostegui Alzamora, César Augusto | Done |
 | US16, US18 | Estado de la red eléctrica y umbrales por equipo | T09 | Resumen de monitoreo y umbrales en backend | Resumen del dashboard en una sola consulta, riesgo de equipo, estado de red, conectividad de sensores y umbrales configurables por equipo. | 12 | Arostegui Alzamora, César Augusto | Done |
@@ -8541,7 +8542,7 @@ El Sprint Backlog 1 tiene como objetivo principal llevar a una primera versión 
 | US31, US33 | Registro de checklist semanal y nivel de cumplimiento | T17 | Vistas de cumplimiento en la web | Vistas de certificados, checklist, puntaje y firma de conformidad. | 8 | Arostegui Alzamora, César Augusto | Done |
 | US41 | Consulta de bitácora de acciones en tienda | T18 | Bitácora de auditoría con filtros | Vista de bitácora en la web y filtros por operador y recurso en backend. | 8 | Arostegui Alzamora, César Augusto | Done |
 | TS04 | Generación de reporte SST | T19 | Generación de reportes PDF sin duplicados | Escritor PDF compartido, límite de intervalo configurable y respuesta 409 ante reportes duplicados en curso. | 8 | Arostegui Alzamora, César Augusto | Done |
-| — | Sin historia de usuario (restricción general) | G01 | Estructura base del backend | Monolito modular sobre .NET 11, migraciones de EF Core, retiro de EnsureCreated, limpieza de material heredado y primera versión del backend. | 20 | Contreras López, Leandro Saúl / Arostegui Alzamora, César Augusto | Done |
+| — | Sin historia de usuario (restricción general) | G01 | Estructura base del backend | Monolito modular sobre .NET 11, migraciones de EF Core, retiro de EnsureCreated, limpieza de material heredado y primera versión del backend. | 20 | Contreras López, Leandro Saúl | Done |
 | — | Sin historia de usuario (restricción general) | G02 | Contratos de API | Errores RFC 7807 con códigos estables, listas paginadas, creación idempotente, límite de tasa, CORS configurable y documentación con Scalar. | 18 | Arostegui Alzamora, César Augusto | Done |
 | — | Sin historia de usuario (restricción general) | G03 | Perfiles y usuarios | Creación de personal con cabecera Location y listado paginado de usuarios para administración. | 10 | Arostegui Alzamora, César Augusto | Done |
 | — | Sin historia de usuario (restricción general) | G04 | Pruebas y contenedores | Proyecto de pruebas unitarias xUnit y exclusiones del contexto de imagen Docker. | 8 | Arostegui Alzamora, César Augusto | Done |
@@ -8561,10 +8562,10 @@ Como resultado del Sprint 1 se obtuvo la landing page, la primera versión de la
 | Hampcoders-Emergentes/project-landing-page | develop | T01 | 7d856e3 | chore: Remove unused electrolink icon SVG file | — | 2026-10-05 |
 | Hampcoders-Emergentes/project-landing-page | develop | T02 | c5f2e1e | feat(community): add Community page with product video | Agrega /comunidad y /en/community con el video del producto, checklist de funcionalidades y llamada a la acción, en ambos idiomas. | 2026-11-14 |
 | Hampcoders-Emergentes/project-landing-page | develop | T02 | 97e355e | feat(nav): link Community page from header and footer | — | 2026-11-14 |
+| Hampcoders-Emergentes/project-landing-page | develop | T01 | 6089a63 | chore(config): point web app link to deployed frontend | — | 2026-11-14 |
 | Hampcoders-Emergentes/project-backend-api | develop | G01 | 42b9fb8 | feat: publish accumulated ElectroLink backend migration | Publica la base acumulada del backend: telemetría y alertas, acceso JWT, inventario, persistencia en PostgreSQL y reportes de migración. | 2026-10-27 |
 | Hampcoders-Emergentes/project-backend-api | develop | T06 | a0d99f7 | feat: harden backend ownership and profile access | Refuerza la propiedad de recursos y el acceso a perfiles en IAM, catálogo y suscripciones. | 2026-10-29 |
 | Hampcoders-Emergentes/project-backend-api | develop | T05 | 1582e0b | fix: Improve authorization and integrations | Refuerza la autorización por recurso con respuestas 403/404 y pruebas de regresión; mejora la seguridad de integraciones y webhooks idempotentes. | 2026-11-04 |
-| Hampcoders-Emergentes/project-backend-api | develop | G01 | 6aa6bb4 | build: target .NET 11 | Migra API, herramientas e imágenes a net11.0 con EF Core y Npgsql 10; reemplaza Swashbuckle por Microsoft.AspNetCore.OpenApi y Scalar. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | G01 | a231384 | chore: remove legacy handoff docs, task notes, tests and opencode skills | Retira la suite de pruebas previa y el material de traspaso que la fase 1 reemplaza. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | G01 | bcbd093 | refactor(analytics): rename homeowner references to client | — | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | G01 | 44646ad | feat(db): add EF Core migrations and remove EnsureCreated | Migraciones iniciales de AppDbContext y StoreManagementDbContext, aplicadas al iniciar; se eliminan los scripts SQL preliminares. | 2026-11-11 |
@@ -8577,7 +8578,6 @@ Como resultado del Sprint 1 se obtuvo la landing page, la primera versión de la
 | Hampcoders-Emergentes/project-backend-api | develop | T11 | 8236c87 | fix(outbox): retry failed messages with backoff and dead-letter them | Reintenta con backoff exponencial y envía a dead-letter tras 8 intentos; una caída de la base de datos ya no detiene el host. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T15 | 0e1b7fb | feat(analytics): add energy cost, forecast and efficiency reports | Tarifas leídas desde configuración; reportes almacenados durante 24 horas. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T15 | f7ae861 | feat(analytics): replace homeowner analytics with store energy consumption | Integra la potencia medida en kWh por equipo y periodo (huecos mayores a 15 minutos no se integran); expone endpoints JSON y CSV de consumo. | 2026-11-11 |
-| Hampcoders-Emergentes/project-backend-api | develop | G02 | 5f3d6e7 | feat(api): replace Scalar with Scalar and harden CORS and JWT config | OpenAPI en /openapi/v1.json y Scalar en /scalar/v1; CORS con orígenes explícitos; validación JWT con los parámetros de TokenSettings. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T05 | 406e071 | refactor(iam): move authentication routes to /api/v1/auth | La recuperación de contraseña se unifica en el mismo controlador; el prefijo anterior queda como alias oculto. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T05 | 4c247dd | feat(iam): add refresh token rotation and anti-enumeration password reset | Rotación de refresh tokens con revocación de sesiones ante reúso; access tokens de 20 minutos; forgot-password responde siempre 200. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | G02 | 83d7e5b | feat(api): unify error responses as RFC 7807 problem details | Toda respuesta 4xx/5xx usa application/problem+json, incluidos el middleware IAM y los desafíos JWT; se agregan el filtro Idempotency-Key y `PagedResponse<T>`. | 2026-11-11 |
@@ -8684,11 +8684,122 @@ Capturas de la ejecución de los escenarios de aceptación del repositorio `proj
 
 #### 7.2.1.5. Execution Evidence for Sprint Review
 
+Durante el Sprint 1 el equipo entregó una primera versión demostrable de tres frentes de ElectroLink: la landing page, la aplicación web del Manager del Local y el backend. La aplicación web permite iniciar sesión, consultar el dashboard de monitoreo del local, revisar alertas, consumo energético, cumplimiento SST y la bitácora de auditoría, y la landing page presenta la propuesta de valor y dirige a la aplicación web.
+
+Acceso a la aplicación web desplegada:
+
+- **URL de la aplicación web:** [https://project-frontend-web-gamma.vercel.app/](https://project-frontend-web-gamma.vercel.app/)
+- **URL de la landing page:** [https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app](https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app)
+
+**Capturas de las principales vistas implementadas**
+
+![Captura 1: Landing page (vista principal)](assets/cap7/sprint1/execution-evidence/landing-page.png)
+
+![Captura 2: Landing page (sección Community)](assets/cap7/sprint1/execution-evidence/landing-community.png)
+
+![Captura 3: Inicio de sesión en la aplicación web](assets/cap7/sprint1/execution-evidence/web-login.png)
+
+![Captura 4: Dashboard de monitoreo del local](assets/cap7/sprint1/execution-evidence/web-dashboard.png)
+
+![Captura 5: Detalle de equipos y conectividad de sensores](assets/cap7/sprint1/execution-evidence/web-equipment-detail.png)
+
+![Captura 6: Alertas en tiempo real](assets/cap7/sprint1/execution-evidence/web-alerts.png)
+
+![Captura 7: Consumo energético por equipo](assets/cap7/sprint1/execution-evidence/web-energy.png)
+
+![Captura 8: Cumplimiento SST (checklist, certificados y puntaje)](assets/cap7/sprint1/execution-evidence/web-compliance.png)
+
+![Captura 9: Bitácora de auditoría con filtros](assets/cap7/sprint1/execution-evidence/web-audit-log.png)
+
+**Video de demostración**: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQCVTxSy3QwyT6rULfyloh23AeC2VBWMO70tcxfV6sF3SM8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=vHKlVB>
+
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+En este Sprint se logró documentar los Web Services del backend con OpenAPI, publicada mediante Scalar en el despliegue de producción. La documentación incluye la descripción de cada endpoint, sus parámetros, los verbos HTTP soportados y los esquemas de respuesta, lo que permite a los integrantes del equipo y a los consumidores de la API probar las llamadas directamente desde el navegador. Los endpoints implementados en este Sprint se asocian con las tareas T03 (solicitud de demostración), T05 y T07 (autenticación y recuperación de contraseña), y T09 (resumen del dashboard de monitoreo) del Sprint Backlog 1.
+
+- **URL de la documentación desplegada (Scalar):** [https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1](https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1)
+- **Repositorio de Web Services:** [https://github.com/Hampcoders-Emergentes/project-backend-api](https://github.com/Hampcoders-Emergentes/project-backend-api)
+
+**Endpoints documentados en el Sprint 1**
+
+| Historia / Tarea | Acción implementada | Verbo HTTP | Endpoint | Parámetros principales |
+| :---: | :--- | :---: | :--- | :--- |
+| US07 / T03 | Registrar solicitud de demostración | POST | `/api/v1/contact-requests` | Cuerpo JSON con los datos de contacto |
+| US07 / T03 | Consultar solicitudes de demostración (administración) | GET | `/api/v1/contact-requests` | `page`, `pageSize`, `status` |
+| US07 / T03 | Consultar recibo de una solicitud por id | GET | `/api/v1/contact-requests/{requestId}` | `requestId` (ruta) |
+| US37 / T05 | Iniciar sesión | POST | `/api/v1/auth/sign-in` | Cuerpo JSON con credenciales |
+| US37 / T05 | Registrar cuenta | POST | `/api/v1/auth/sign-up` | Cuerpo JSON con datos de registro |
+| US37 / T05 | Renovar sesión con refresh token | POST | `/api/v1/auth/refresh` | Refresh token |
+| US37 / T06 | Refrescar claims de autorización | POST | `/api/v1/auth/refresh-claims` | Token de sesión vigente |
+| US38 / T07 | Solicitar restablecimiento de contraseña | POST | `/api/v1/auth/forgot-password` | Cuerpo JSON con correo |
+| US38 / T07 | Restablecer contraseña con token | POST | `/api/v1/auth/reset-password` | Token de un solo uso y nueva contraseña |
+| US16, US18 / T09 | Obtener resumen del dashboard de monitoreo | GET | `/api/v1/stores/{storeId}/dashboard-summary` | `storeId` (ruta) |
+
+**Sintaxis de llamada, ejemplo y explicación de respuesta por acción**
+
+Para cada acción se detalla el verbo, la sintaxis de la llamada, los parámetros, un ejemplo con datos de muestra y la explicación del response. Estos detalles se completan con la documentación de Scalar.
+
+![Acción: Registrar solicitud de demostración (POST /api/v1/contact-requests)](assets/cap7/sprint1/services-documentation-evidence/post-contact-requests.png)
+
+![Acción: Consultar solicitudes de demostración (GET /api/v1/contact-requests)](assets/cap7/sprint1/services-documentation-evidence/get-contact-requests.png)
+
+![Acción: Iniciar sesión (POST /api/v1/auth/sign-in)](assets/cap7/sprint1/services-documentation-evidence/post-sign-in.png)
+
+![Acción: Restablecer contraseña (POST /api/v1/auth/reset-password)](assets/cap7/sprint1/services-documentation-evidence/post-reset-password.png)
+
+![Acción: Resumen del dashboard de monitoreo (GET /api/v1/stores/{storeId}/dashboard-summary)](assets/cap7/sprint1/services-documentation-evidence/get-dashboard-summary.png)
+
+**Commits relacionados con la documentación de Web Services en este Sprint**
+
+| Repository | Branch | Task Id | Commit Id | Commit Message | Commited on (Date) |
+| :--- | :--- | :---: | :---: | :--- | :---: |
+| Hampcoders-Emergentes/project-backend-api | develop | G01 | 6aa6bb4 | build: target .NET 11 | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 5f3d6e7 | feat(api): replace Scalar with Scalar and harden CORS and JWT config | 2026-11-11 |
 
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
-#### 7.2.1.8. Team Collaboration Insights during Sprint
+En este Sprint el equipo desplegó los productos digitales de ElectroLink en proveedores cloud, de forma que la landing page, la aplicación web y el backend fueran accesibles desde internet para la revisión del Sprint. Las tareas de despliegue corresponden a G06 (despliegue del frontend) y a la configuración del contenedor y de las variables de entorno del backend (G01 y G02 del Sprint Backlog 1).
+
+Los procesos realizados fueron los siguientes:
+
+1. **Creación de cuentas en los proveedores cloud:** cuenta de GitHub de la organización Hampcoders-Emergentes para el control de versiones, cuenta de Vercel para la landing page y la aplicación web, y cuenta de Railway para el backend.
+2. **Configuración de recursos en Vercel:** conexión del repositorio del frontend, configuración de build y generación de variables de entorno de runtime a partir de la configuración del contenedor (G06).
+3. **Configuración de recursos en Railway:** creación del servicio del backend a partir del repositorio, configuración de variables de entorno, cadena de conexión a la base de datos y dominio público de la API.
+4. **Contenedorización del backend:** construcción de la imagen Docker del backend con exclusiones del contexto de imagen para reducir su tamaño (G04).
+5. **Verificación del despliegue:** comprobación de que la landing page, la aplicación web y la documentación Scalar responden en sus URL públicas.
+
+**Productos desplegados**
+
+| Producto | Proveedor cloud | URL de producción | Configuración relevante |
+| :--- | :---: | :--- | :--- |
+| Landing page | Vercel | [https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app](https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app) | - |
+| Aplicación web (Manager del Local) | Vercel | [https://project-frontend-web-gamma.vercel.app/](https://project-frontend-web-gamma.vercel.app/) | Variables de entorno de runtime, contenedor y configuración para Vercel |
+| Backend (Web Services y documentación Scalar) | Railway | [https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1](https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1) | Imagen Docker, variables de entorno y dominio público |
+
+**Capturas de los pasos de despliegue**
+
+![Captura 1: Cuenta y organización en GitHub](assets/cap7/sprint1/deployment-evidence/github-organization.png)
+
+![Captura 2: Proyecto de la landing page en Vercel (despliegue en producción)](assets/cap7/sprint1/deployment-evidence/vercel-landing.png)
+
+![Captura 3: Proyecto de la aplicación web en Vercel (variables de entorno)](assets/cap7/sprint1/deployment-evidence/vercel-frontend.png)
+
+![Captura 4: Servicio del backend en Railway (despliegue y variables de entorno)](assets/cap7/sprint1/deployment-evidence/railway-backend.png)
+
+#### 7.2.1.8. Team Collaboration Insights for Sprint Review
+
+En esta sección se presentan los analíticos de colaboración del equipo de desarrollo durante el Sprint 1, obtenidos de los repositorios de control de versiones en GitHub.
+
+**Analíticos de colaboración en GitHub**
+
+![Captura: Analíticos de contribución (commits por integrante) del repositorio project-landing-page](assets/cap7/sprint1/team-collaboration-insights/contributors-landing-page.png)
+
+![Captura: Analíticos de contribución (commits por integrante) del repositorio project-backend-api](assets/cap7/sprint1/team-collaboration-insights/contributors-backend-api.png)
+
+![Captura: Analíticos de contribución (commits por integrante) del repositorio project-frontend-web](assets/cap7/sprint1/team-collaboration-insights/contributors-frontend-web.png)
+
+
+---
 
 ## 7.3. Validation Interviews
 
@@ -9331,3 +9442,16 @@ Tamayo, J., Vásquez, A., & García, R. (2013, febrero). *La protección del con
 - Link del video de exposición de la entrega TP: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202114548_upc_edu_pe/IQANlVVNyZ0oS4iG1EMcddE6ARcv8EUSligrH-EQ79K26cE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=uaiunr>
 
 -Link del video de exposición de la entrega TB2: <>
+
+
+## Servicios desplegados en el Sprint 1
+
+Servicios en producción al cierre del Sprint 1, con su proveedor cloud y su URL pública.
+
+| Servicio | Proveedor cloud | URL pública | Descripción |
+| :--- | :---: | :--- | :--- |
+| Landing page | Vercel | [https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app](https://project-landing-page-btvxs9m9l-legendnts-projects.vercel.app) | Presentación de ElectroLink y acceso a la aplicación web. |
+| Aplicación web (Manager del Local) | Vercel | [https://project-frontend-web-gamma.vercel.app/](https://project-frontend-web-gamma.vercel.app/) | Aplicación web para el Manager del Local (acceso, monitoreo, alertas, consumo, cumplimiento y bitácora). |
+| Backend (Web Services) | Railway | [https://project-backend-api-production-94da4e71.up.railway.app](https://project-backend-api-production-94da4e71.up.railway.app) | API REST del backend modular de ElectroLink. |
+| Documentación de Web Services (Scalar) | Railway | [https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1](https://project-backend-api-production-94da4e71.up.railway.app/scalar/v1) | Documentación interactiva de los endpoints con Scalar. |
+| Especificación OpenAPI | Railway | [https://project-backend-api-production-94da4e71.up.railway.app/openapi/v1.json](https://project-backend-api-production-94da4e71.up.railway.app/openapi/v1.json) | Especificación OpenAPI (JSON) de la API que consume Scalar. |
