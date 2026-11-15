@@ -8167,13 +8167,317 @@ Video: <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202317450_upc_edu_pe/
 
 ## 7.1. Software Configuration Management
 
+En esta sección se describen los lineamientos de gestión de la configuración del software, incluyendo la configuración del entorno de desarrollo, la gestión del código fuente, las guías de estilo y convenciones, y la configuración del despliegue del software.
+
 ### 7.1.1. Software Development Environment Configuration
+
+En esta sección se describen las herramientas, frameworks y entornos de desarrollo utilizados para la implementación de los distintos componentes de ElectroLink, organizados en tablas por componente. Los logos se referencian con placeholders en la carpeta `assets/`.
+
+#### **Landing Page Development**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/astro.png" width="40" alt="Logo"> | Astro | Astro 7 | Proyecto en `landing/`; build estático; estilos con TailwindCSS | [https://astro.build/](https://astro.build/) |
+| <img src="assets/cap7/logos/html.png" width="40" alt="Logo"> | HTML | HTML5 | Etiquetas semánticas; indentación de 2 espacios | [https://developer.mozilla.org/es/docs/Web/HTML](https://developer.mozilla.org/es/docs/Web/HTML) |
+| <img src="assets/cap7/logos/typescript.png" width="40" alt="Logo"> | TypeScript | TypeScript 7 | Tipado obligatorio; `tsconfig.json` estricto | [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/) |
+| <img src="assets/cap7/logos/tailwindcss.png" width="40" alt="Logo"> | TailwindCSS | TailwindCSS 4.3 | Clases utilitarias; `tailwind.config.mjs` | [https://tailwindcss.com/](https://tailwindcss.com/) |
+| <img src="assets/cap7/logos/vscode.png" width="40" alt="Logo"> | Visual Studio Code | VS Code | Resaltado de sintaxis, autocompletado, terminal integrado | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
+
+#### **Frontend Web Applications Development**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/angular.png" width="40" alt="Logo"> | Angular | Angular 22 | `angular.json`; entornos en `src/environments/`; alias por contexto | [https://angular.io/](https://angular.io/) |
+| <img src="assets/cap7/logos/html.png" width="40" alt="Logo"> | HTML | HTML5 | Etiquetas semánticas; indentación de 2 espacios | [https://developer.mozilla.org/es/docs/Web/HTML](https://developer.mozilla.org/es/docs/Web/HTML) |
+| <img src="assets/cap7/logos/css.png" width="40" alt="Logo"> | CSS | CSS3 | Estilos modulares; variables globales | [https://developer.mozilla.org/es/docs/Web/CSS](https://developer.mozilla.org/es/docs/Web/CSS) |
+| <img src="assets/cap7/logos/typescript.png" width="40" alt="Logo"> | TypeScript | TypeScript 7 | `strict` y `strictTemplates`; tipado obligatorio | [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/) |
+| <img src="assets/cap7/logos/intellij.png" width="40" alt="Logo"> | IntelliJ IDEA | IntelliJ IDEA | Resaltado de sintaxis, autocompletado, terminal integrado | [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/) |
+
+#### **Backend Development**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/csharp.png" width="40" alt="Logo"> | C# | C# 12 / .NET 11 | Lenguaje principal; sintaxis moderna | [https://learn.microsoft.com/dotnet/csharp/](https://learn.microsoft.com/dotnet/csharp/) |
+| <img src="assets/cap7/logos/dotnet.png" width="40" alt="Logo"> | .NET | .NET 11 | Runtime y SDK; configuración en `appsettings.json` por ambiente | [https://dotnet.microsoft.com/](https://dotnet.microsoft.com/) |
+| <img src="assets/cap7/logos/visualstudio.png" width="40" alt="Logo"> | Visual Studio | Visual Studio / Rider | Resaltado de sintaxis, autocompletado, terminal integrado | [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/) |
+
+#### **Mobile Development (Flutter)**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/flutter.png" width="40" alt="Logo"> | Flutter | Flutter 3 | `flutter pub get`; firma de depuración Android | [https://flutter.dev/](https://flutter.dev/) |
+| <img src="assets/cap7/logos/dart.png" width="40" alt="Logo"> | Dart | Dart 3| Type safety; null-safety | [https://dart.dev/](https://dart.dev/) |
+| <img src="assets/cap7/logos/androidstudio.png" width="40" alt="Logo"> | Android Studio | Android Studio | Emulador Android; firma de depuración | [https://developer.android.com/studio](https://developer.android.com/studio) |
+
+#### **Embedded Development (C++ / Arduino)**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/cpp.png" width="40" alt="Logo"> | C++ | C++ | Sketch en `embedded/`; configuración de pines en `config.h` | [https://isocpp.org/](https://isocpp.org/) |
+| <img src="assets/cap7/logos/arduino.png" width="40" alt="Logo"> | Arduino | Arduino IDE 2 | Librerías `Wire`, `SPI`, `PubSubClient`; baud rate 115200 | [https://www.arduino.cc/](https://www.arduino.cc/) |
+
+#### **Edge API Development (Flask / Python)**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/python.png" width="40" alt="Logo"> | Python | Python 3.11 | Entorno virtual `venv/`; dependencias en `requirements.txt` | [https://www.python.org/](https://www.python.org/) |
+| <img src="assets/cap7/logos/flask.png" width="40" alt="Logo"> | Flask | Flask 3 | Variables en `.env` (broker MQTT, endpoint del backend) | [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/) |
+
+#### **Acceptance Tests (Gherkin)**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/gherkin.png" width="40" alt="Logo"> | Gherkin | Gherkin | Archivos `.feature` por historia de usuario | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/) |
+| <img src="assets/cap7/logos/cucumber.png" width="40" alt="Logo"> | Cucumber | Cucumber-JVM / Cucumber-JS | Steps en `stepdefinitions/` | [https://cucumber.io/](https://cucumber.io/) |
+
+#### **Diseño UX/UI de Producto**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/uxpressia.png" width="40" alt="Logo"> | UXPressia | UXPressia | User personas, mapas de empatía y journey maps | [https://uxpressia.com](https://uxpressia.com) |
+
+#### **Control de versiones**
+
+| Logo | Tecnología | Herramientas y versiones | Configuración del entorno | Ruta de referencia |
+|---|---|---|---|---|
+| <img src="assets/cap7/logos/git.png" width="40" alt="Logo"> | Git | Git 2 | Repositorios en GitHub; flujo de trabajo GitFlow | [https://git-scm.com/](https://git-scm.com/) |
+| <img src="assets/cap7/logos/github.png" width="40" alt="Logo"> | GitHub | GitHub | Repositorios; ramas protegidas; pull requests | [https://github.com/](https://github.com/) |
+
 
 ### 7.1.2. Source Code Management
 
+A continuación, se muestran las convenciones para los nombres de las ramas features:
+
+| Tipo de rama | Prefijo | Convención | Ejemplo |
+|--------------|---------|------------|---------|
+| Feature      | feature/ | snake_case | feature/login-form |
+| Bugfix       | bugfix/  | snake_case | bugfix/fix-navbar |
+| Hotfix       | hotfix/  | snake_case | hotfix/fix-critical-bug |
+| Release      | release/ | semantic_versioning | release/v0.1.0 |
+
+Aquí se encuentran los repositorios de GitHub utilizados para el desarrollo del proyecto ElectroLink:
+
+**Repositorios de GitHub:**
+
+Organización de GitHub: https://github.com/Hampcoders-Emergentes
+
+- Landing Page de ElectroLink: https://github.com/Hampcoders-Emergentes/project-landing-page
+- Frontend Web Application de ElectroLink: https://github.com/Hampcoders-Emergentes/project-frontend-web
+- RESTful Web Services de ElectroLink: https://github.com/Hampcoders-Emergentes/project-backend-api
+- Aplicación móvil de ElectroLink: https://github.com/Hampcoders-Emergentes/project-mobile-app
+- Pruebas de aceptación de ElectroLink: https://github.com/Hampcoders-Emergentes/project-acceptance-tests
+- Edge API de ElectroLink: https://github.com/Hampcoders-Emergentes/project-edge-api-iot
+- Aplicación embebida de ElectroLink: https://github.com/Hampcoders-Emergentes/project-iot-device-layer
+
+**Flujo de trabajo GitFlow:** se emplea Git junto con GitHub para mantener un historial de cambios claro, compartir el código con el equipo y llevar un buen manejo de ramas y solicitudes de incorporación. Se utiliza Git Flow como estrategia de ramificación para gestionar el desarrollo de manera organizada, permitiendo trabajar en nuevas funcionalidades, correcciones y lanzamientos de forma paralela sin afectar la rama principal.
+
+#### Estructura de Ramas (Branches)
+
+##### Rama principal (Main branch)
+Esta rama será la base del proyecto y contendrá las versiones **estables y definitivas** de la aplicación. Únicamente se integrarán cambios que hayan sido previamente **probados y validados** en ramas de desarrollo o prueba.
+
+##### Rama de desarrollo (Develop branch)
+Su propósito es centralizar el trabajo en equipo y mantener el código en constante evolución. Aquí se integran las diferentes funcionalidades antes de pasar a la rama principal.
+
+##### Ramas de funcionalidades (Feature branches)
+Cada nueva característica o módulo se desarrollará en una rama independiente. Una vez completada y validada, se fusionará con la rama de desarrollo. Las convenciones para nombrar las ramas de funcionalidad seguirán un patrón descriptivo, por ejemplo, `feature/nombre-de-la-funcionalidad`.
+
+##### Ramas de lanzamiento (Release branches)
+Estas ramas se emplearán para preparar **versiones estables** del proyecto que provienen de la rama de desarrollo y que están listas para integrarse en la rama principal.
+
+##### Ramas de corrección (Hotfix branches)
+Se crearán para resolver **errores críticos** detectados en la rama principal que afectan de forma significativa a los usuarios.
+
+**Convenciones de Commits:** Para los mensajes de los commits realizados, se utilizará la especificación Conventional Commits basada en Angular Commit Guidelines, siguiendo el estándar de [Conventional Commits](https://www.conventionalcommits.org/) y el versionado [Semantic Versioning](https://semver.org/).
+
+`git commit -m "<type>[optional scope]: <description>"`
+
 ### 7.1.3. Source Code Style Guide & Conventions
 
+En esta sección se detallan las convenciones de estilo y buenas prácticas que se deben seguir al momento de escribir código en los lenguajes y frameworks seleccionados para el proyecto.
+
+#### Landing Page (Astro / TailwindCSS / HTML / TypeScript)
+
+**Resumen:** Como principales tecnologías, usamos Astro, Tailwind CSS, HTML y TypeScript. Componentes pequeños y tipados, comunicación clara por props, y estilos utilitarios y organizados.
+
+| **Tecnología** | **Convenciones principales** | **Convenciones para código** |
+|---|---|---|
+| **Tailwind CSS** | - Usar solo clases utilitarias de Tailwind.<br>- Ordenar clases en bloques: Layout → Box Model → Tipografía → Colores/Fondos → Otros.<br>- Mantener legibilidad en clases largas. | - Usar `@apply` para estilos reutilizables.<br>- Evitar clases condicionales en el HTML.<br>- Usar clases de estado (hover, focus, etc.) en lugar de JavaScript para interacciones simples.<br>- Mantener la estructura de carpetas organizada y coherente.<br>- Reutilizar el máximo de clases de Tailwind. |
+| **HTML** | - Usar etiquetas semánticas (`header`, `main`, `section`, etc.).<br>- Indentación de 2 espacios.<br>- Atributos entre comillas dobles `"`.<br>- Orden de atributos: `id`, `class` → accesibilidad (`aria-*`) → funcionales (`src`, `href`, `alt`).<br>- Nombres en kebab-case (`main-section`). | - Mantener el HTML limpio y libre de código comentado.<br>- Usar comentarios para secciones complejas o importantes.<br>- Usar `data-*` atributos para información adicional.<br>- Evitar el uso de inline styles. |
+| **TypeScript** | - Variables/funciones en `camelCase`.<br>- Clases/interfaces en `PascalCase`.<br>- Constantes en `UPPER_SNAKE_CASE`.<br>- Tipado obligatorio en variables, parámetros y retornos.<br>- Ordenar imports de externos a internos. | - Usar `readonly` para propiedades que no deben cambiar.<br>- Preferir funciones puras y evitar efectos secundarios.<br>- Usar destructuración para extraer valores de objetos y arrays. |
+| **Astro** | - Archivos `.astro` en `PascalCase`.<br>- Orden del archivo: frontmatter → HTML/JSX → estilos `<style>`.<br>- Props siempre tipadas con TypeScript.<br>- Importaciones cortas y claras.<br>- Componentes pequeños y reutilizables. | - Mantener la lógica de los componentes en el archivo `.astro` y evitar la lógica compleja en el frontmatter.<br>- Usar `Astro.fetch` para obtener datos de manera eficiente.<br>- Utilización de props para comunicación entre componentes. |
+
+#### Front-End (Angular / HTML / CSS / TypeScript)
+
+**Resumen:** Como principales tecnologías, usamos Angular, HTML, CSS y TypeScript. Componentes pequeños y tipados, comunicación clara por props/emits, y manejo de estado y APIs mantenible.
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **HTML5** | Uso semántico de etiquetas (`header`, `main`, `section`, `footer`). Atributos en comillas dobles. Indentación de 2 espacios. | - Mantener el HTML limpio y libre de código comentado.<br>- Usar comentarios para secciones complejas o importantes.<br>- Usar `data-*` atributos para información adicional.<br>- Evitar el uso de inline styles. |
+| **CSS3** | Estilos modulares y reutilizables. Variables globales para colores/tipografía. Evitar `!important`. | - Usar BEM (Block Element Modifier) para nombrar clases.<br>- Mantener la especificidad baja y evitar selectores complejos.<br>- Utilizar preprocesadores como SASS o LESS si es necesario. |
+| **TypeScript** | - Variables/funciones en `camelCase`.<br>- Clases/interfaces en `PascalCase`.<br>- Constantes en `UPPER_SNAKE_CASE`.<br>- Tipado obligatorio en variables, parámetros y retornos.<br>- Ordenar imports de externos a internos. | - Usar `readonly` para propiedades que no deben cambiar.<br>- Preferir funciones puras y evitar efectos secundarios.<br>- Usar destructuración para extraer valores de objetos y arrays. |
+| **Angular** | - Componentes en `PascalCase`.<br>- Servicios en `camelCase`.<br>- Módulos en `PascalCase`.<br>- Uso de `@Input` y `@Output` para comunicación entre componentes. | - Mantener los componentes pequeños y enfocados en una sola responsabilidad.<br>- Utilización de nuevas directivas como `@if`, `@for` o `@else` de Angular versión 20.<br>- No utilizar NgModules por nuevas recomendaciones de Angular versión 20. |
+
+#### Back-End (C# / .NET)
+
+**Resumen:** Como principales tecnologías, C# y .NET 11, enfocándose en un código limpio, seguro y mantenible bajo buenas prácticas de arquitectura, nomenclatura, validación, seguridad y pruebas.
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **C#** | Lenguaje principal. Usar sintaxis moderna (C# 12), convenciones de nomenclatura estándar de Microsoft, y programación orientada a objetos junto con patrones modernos (LINQ, records, async/await, etc.). | - Mantener el código limpio y bien estructurado.<br>- Usar comentarios para explicar la lógica compleja.<br>- Seguir las convenciones de nomenclatura de Microsoft. |
+| **.NET** | Framework principal para el backend. Uso de **arquitectura en capas** (API, Application, Domain, Infrastructure). Enfoque en modularidad, mantenibilidad y soporte multiplataforma. | - Seguir las mejores prácticas de diseño de API REST.<br>- Utilizar anotaciones de validación para entradas de usuario.<br>- Implementar manejo de errores y excepciones de manera consistente. |
+| **NuGet** | Herramienta de gestión y construcción del proyecto. Uso de un `.csproj` bien estructurado para gestionar dependencias, paquetes y perfiles de construcción. | - Mantener una estructura de proyecto coherente y organizada.<br>- Utilizar versiones específicas de dependencias para evitar conflictos.<br>- Documentar la configuración del `.csproj` para facilitar su comprensión. |
+| **Entity Framework Core** | Framework de mapeo objeto-relacional. Uso de migraciones y anotaciones para definir entidades, relaciones y consultas. Enfoque en la eficiencia y optimización de acceso a datos. | - Definir entidades claras y bien estructuradas.<br>- Utilizar LINQ para operaciones complejas.<br>- Implementar estrategias de caché para mejorar el rendimiento. |
+| **Scalar / OpenAPI** | Generación automática de documentación de la API REST. Versionado claro (`/api/v1`, `/api/v2`) y contratos visibles para clientes externos. | - Incluir ejemplos de solicitudes y respuestas en la documentación.<br>- Mantener la documentación actualizada con los cambios en la API.<br>- Utilizar herramientas de generación de documentación para automatizar el proceso. |
+
+#### Mobile (Flutter / Dart)
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **Dart** | Lenguaje principal. Seguir Effective Dart; nombres de archivos en `snake_case`. | - Preferir `const` constructors.<br>- Widgets pequeños y reutilizables.<br>- Tipado estricto y null-safety. |
+| **Flutter** | Framework multiplataforma. Separación por features y capas (presentation, domain, data). | - Mantener los widgets enfocados en una sola responsabilidad.<br>- Uso de `StatelessWidget` cuando sea posible.<br>- Reutilizar componentes compartidos. |
+
+#### Embedded (C++ / Arduino)
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **C++** | Lenguaje principal. Seguir el Arduino Style Guide. | - Constantes en `UPPER_SNAKE_CASE`.<br>- Funciones en `camelCase`.<br>- Configuración de pines centralizada en `config.h`. |
+| **Arduino** | Framework embebido. Sketch modular con librerías `Wire`, `SPI`, `PubSubClient`. | - Comentarios en código complejo.<br>- Evitar bloqueos en el loop principal.<br>- Manejo de errores de conexión MQTT. |
+
+#### Edge API (Python / Flask)
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **Python** | Lenguaje principal. Seguir PEP 8. | - Type hints obligatorios.<br>- Docstrings en funciones públicas.<br>- Variables en `snake_case`. |
+| **Flask** | Framework ligero para la API de borde. | - Blueprints por recurso.<br>- Manejo consistente de errores.<br>- Variables de entorno para configuración. |
+
+#### Acceptance Tests (Gherkin / Cucumber)
+
+| **Tecnología** | **Convención** | **Convenciones para código** |
+|----------------|----------------|------------------------------|
+| **Gherkin** | Lenguaje BDD. Un escenario por comportamiento. | - Uso de `Given/When/Then`.<br>- Nombres de archivos `.feature` por historia de usuario. |
+| **Cucumber** | Framework de ejecución de escenarios. | - Steps reutilizables.<br>- Mantener escenarios sincronizados con el backlog. |
+
 ### 7.1.4. Software Deployment Configuration
+
+En esta sección se documenta el proceso de despliegue de la Landing Page y la Frontend Web Application utilizando GitHub y Vercel como plataforma de hosting. Por otra parte, se despliega el RESTful Web Services utilizando **Railway** como plataforma de infraestructura en la nube.
+
+#### **Despliegue de la Landing Page**
+
+Para que nuestra landing page esté disponible para todos nuestros usuarios, la publicamos como un sitio web utilizando la plataforma de GitHub. El proceso se llevó a cabo de la siguiente manera:
+
+**1. Registro en GitHub**
+Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Landing Page de **ElectroLink**.
+
+**2. Creación del repositorio**
+- Hicimos clic en el botón **“New”** para generar un nuevo repositorio.
+- Le asignamos el nombre **“project-landing-page”** dentro de nuestra organización **Hampcoders-Emergentes**.
+
+---
+**3. Configuración del repositorio**
+- Nos aseguramos de que el repositorio tenga visibilidad **pública** para permitir la integración con Vercel.
+- Añadimos un archivo `README.md` inicial y configuramos un `.gitignore` adecuado para excluir archivos innecesarios.
+
+---
+**4. Carga de los archivos de la landing page**
+- Accedimos al repositorio creado.
+- Subimos los archivos generados del proyecto (HTML, TailwindCSS, TypeScript, Astro).
+- Verificamos que los cambios se hicieran en la rama principal (`main`/`master`).
+- Finalmente, confirmamos la acción con **“Commit changes”** para guardar los archivos.
+
+---
+**5. Configuración en Vercel**
+- Iniciamos sesión en [Vercel](https://vercel.com).
+- Seleccionamos la opción **“New Project”** y vinculamos nuestra cuenta de GitHub.
+- Importamos el repositorio **project-landing-page**.
+- Configuramos el framework en **Astro** (Vercel lo detecta automáticamente en la mayoría de los casos).
+- Definimos la rama de despliegue (`main`/`master`).
+
+---
+**6. Verificación del sitio web**
+En pocos minutos, Vercel genera la URL pública del proyecto. Accedemos a esta dirección desde el navegador para confirmar que el sitio está activo y funcionando correctamente.
+
+---
+**7. Actualización del sitio**
+- Cuando necesitemos modificar el sitio, solo debemos realizar commits en el repositorio y hacer **push** hacia la rama `main`/`master`.
+- Vercel detecta automáticamente los cambios, vuelve a compilar el proyecto y lo despliega en línea.
+- Los cambios estarán disponibles en producción en cuestión de segundos.
+
+#### **Despliegue del Frontend Web Applications**
+
+Para que nuestra Frontend Web Application esté disponible para todos nuestros usuarios, la publicamos como un sitio web utilizando la plataforma de GitHub. El proceso se llevó a cabo de la siguiente manera:
+
+**1. Registro en GitHub**
+Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Frontend Web Application de **ElectroLink**.
+
+**2. Creación del repositorio**
+- Hicimos clic en el botón **“New”** para generar un nuevo repositorio.
+- Le asignamos el nombre **“frontend”** dentro de nuestra organización **Hampcoders-Emergentes**.
+
+**3. Configuración del repositorio**
+- Nos aseguramos de que el repositorio tenga visibilidad **pública** para permitir la integración con Vercel.
+- Añadimos un archivo `README.md` inicial y configuramos un `.gitignore` adecuado para excluir archivos innecesarios.
+
+**4. Carga de los archivos de la Frontend Web Application**
+- Accedimos al repositorio creado.
+- Subimos los archivos generados del proyecto (HTML, CSS, TypeScript, Angular).
+- Verificamos que los cambios se hicieran en la rama principal (`main`/`master`).
+
+**5. Configuración en Vercel**
+- Iniciamos sesión en [Vercel](https://vercel.com).
+- Seleccionamos la opción **“New Project”** y vinculamos nuestra cuenta de GitHub.
+- Importamos el repositorio **frontend**.
+- Configuramos el framework en **Angular** (Vercel lo detecta automáticamente en la mayoría de los casos).
+- Definimos la rama de despliegue (`main`/`master`).
+- Colocamos todas las variables de entorno necesarias para el correcto funcionamiento de la aplicación.
+- Finalmente, hicimos clic en **“Deploy”** para iniciar el proceso de despliegue.
+
+**6. Verificación del sitio web**
+En pocos minutos, Vercel genera la URL pública del proyecto. Accedemos a esta dirección desde el navegador para confirmar que el sitio está activo y funcionando correctamente.
+
+#### **Despliegue del RESTful Web Services (Railway)**
+
+Para que nuestro RESTful Web Services esté disponible para todos nuestros usuarios, lo desplegamos utilizando **Railway** como plataforma de infraestructura en la nube. El proceso se llevó a cabo de la siguiente manera:
+
+**1. Registro en GitHub**
+Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código del RESTful Web Services de **ElectroLink**.
+- Creamos un repositorio llamado **backend** dentro de nuestra organización **Hampcoders-Emergentes**.
+
+**2. Base de datos en Railway**
+- Creamos un servicio de base de datos PostgreSQL en Railway para almacenar los datos de la aplicación.
+- Configuramos los parámetros de la base de datos, incluyendo tamaño y credenciales de acceso.
+- Obtenemos la URL de conexión (DATABASE_URL) para configurarla en el backend.
+
+**3. Build en Railway**
+- Conectamos el repositorio de GitHub **backend** con Railway.
+- Railway detecta automáticamente el `Dockerfile` y compila el proyecto de C# y .NET 11.
+- Se construye la imagen Docker y se despliega automáticamente.
+
+**4. Configuración de variables de entorno**
+- Configuramos las variables de entorno necesarias en Railway (DATABASE_URL, JWT_SECRET, etc.).
+- Definimos la configuración de escalado automático para manejar la carga de tráfico.
+
+**5. Verificación del servicio web**
+- Accedemos a la URL proporcionada por Railway para confirmar que el servicio web está activo y funcionando correctamente.
+
+#### **Despliegue de la Aplicación Móvil (Flutter)**
+
+- Compilación de APK/AAB para Android y IPA para iOS.
+- Firma con keystores/certificados almacenados como secretos del CI.
+- Publicación en Google Play y App Store.
+
+#### **Despliegue del Edge API (Flask) y la Aplicación Embebida (C++ / Arduino)**
+
+- **Edge API:** despliegue como servicio en el borde (gateway industrial) o contenedor en la nube; variables de entorno para broker MQTT y endpoint del backend.
+- **Aplicación embebida:** desarrollo y compilación del firmware directamente en el navegador con Wokwi (compilador en la nube para Arduino/ESP32), simulación en línea del circuito y el código; flasheo/exportación del firmware (`bin`/`hex`) cuando se requiera desplegar en hardware físico; actualización OTA opcional en producción; configuración de pines y credenciales Wi-Fi en el sketch por dispositivo.
+
+#### **Despliegue de las Pruebas de Aceptación (Gherkin)**
+
+- Ejecución en el pipeline contra el backend desplegado en staging.
+- Reportes publicados como artefactos.
+
+---
+
 
 ## 7.2. Solution Implementation
 
@@ -8269,7 +8573,7 @@ Como resultado del Sprint 1 se obtuvo la landing page, la primera versión de la
 | Hampcoders-Emergentes/project-backend-api | develop | T11 | 8236c87 | fix(outbox): retry failed messages with backoff and dead-letter them | Reintenta con backoff exponencial y envía a dead-letter tras 8 intentos; una caída de la base de datos ya no detiene el host. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T15 | 0e1b7fb | feat(analytics): add energy cost, forecast and efficiency reports | Tarifas leídas desde configuración; reportes almacenados durante 24 horas. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T15 | f7ae861 | feat(analytics): replace homeowner analytics with store energy consumption | Integra la potencia medida en kWh por equipo y periodo (huecos mayores a 15 minutos no se integran); expone endpoints JSON y CSV de consumo. | 2026-11-11 |
-| Hampcoders-Emergentes/project-backend-api | develop | G02 | 5f3d6e7 | feat(api): replace Swagger with Scalar and harden CORS and JWT config | OpenAPI en /openapi/v1.json y Scalar en /scalar/v1; CORS con orígenes explícitos; validación JWT con los parámetros de TokenSettings. | 2026-11-11 |
+| Hampcoders-Emergentes/project-backend-api | develop | G02 | 5f3d6e7 | feat(api): replace Scalar with Scalar and harden CORS and JWT config | OpenAPI en /openapi/v1.json y Scalar en /scalar/v1; CORS con orígenes explícitos; validación JWT con los parámetros de TokenSettings. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T05 | 406e071 | refactor(iam): move authentication routes to /api/v1/auth | La recuperación de contraseña se unifica en el mismo controlador; el prefijo anterior queda como alias oculto. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | T05 | 4c247dd | feat(iam): add refresh token rotation and anti-enumeration password reset | Rotación de refresh tokens con revocación de sesiones ante reúso; access tokens de 20 minutos; forgot-password responde siempre 200. | 2026-11-11 |
 | Hampcoders-Emergentes/project-backend-api | develop | G02 | 83d7e5b | feat(api): unify error responses as RFC 7807 problem details | Toda respuesta 4xx/5xx usa application/problem+json, incluidos el middleware IAM y los desafíos JWT; se agregan el filtro Idempotency-Key y `PagedResponse<T>`. | 2026-11-11 |
@@ -8374,13 +8678,13 @@ Capturas de la ejecución de los escenarios de aceptación del repositorio `proj
 \
 ![Primera User Story de pruebas de aceptación BDD](assets/cap7/sprint1/testing-suite-evidence/acceptance-tests-screenshot-2.png)
 
-#### 7.2.X.5. Execution Evidence for Sprint Review
+#### 7.2.1.5. Execution Evidence for Sprint Review
 
-#### 7.2.X.6. Services Documentation Evidence for Sprint Review
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
-#### 7.2.X.7. Software Deployment Evidence for Sprint Review
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
-#### 7.2.X.8. Team Collaboration Insights during Sprint
+#### 7.2.1.8. Team Collaboration Insights during Sprint
 
 ## 7.3. Validation Interviews
 
