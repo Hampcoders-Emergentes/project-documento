@@ -60,9 +60,9 @@ En esta sección se registra el historial de cambios del informe del proyecto El
 |   TB1   | 2026-09-19  | Contreras López, Leandro Saúl                                             | Redacción del Capítulo II con diseño de entrevistas por segmento, registro detallado de entrevistas a personal operativo y gerencial con evidencias audiovisuales y análisis del segmento Trabajador del Local, y avance del Capítulo IV con modelado de flujos de mensajes de dominio para los escenarios de detección de anomalías, reporte operativo, verificación de apagado, sincronización de telemetría, suscripción y evidencia normativa |
 |   TB1   | 2026-09-19  | Choy Robles, Vanessa May Lang                                             | Redacción integral del Capítulo III Requirements Specification con escenario futuro To Be de ambos segmentos, historias de usuario por épicas de seguridad operativa, monitoreo técnico, gestión energética, cumplimiento normativo y control de acceso con criterios de aceptación en formato Gherkin, mapa de impacto y backlog de producto priorizado con puntaje por historia |
 |   TB1   | 2026-09-19  | Machado Bracamonte, Ivo Marcelo                                           | Redacción del Capítulo IV Strategic Level Software Design con EventStorming, descubrimiento de contextos candidatos, lienzos de contextos delimitados para identidad y acceso, suscripción y pagos, perfiles, diseño y operación de servicios, activos, monitoreo IoT y analítica, mapa de contexto y arquitectura de software en niveles de paisaje, contexto, contenedores y despliegue, y apoyo en la matriz de trazabilidad |
-|   TP1   | 2026-10-09  | Arostegui Alzamora, Cesar Augusto                                         | Correciones del Capítulo III con historias de visitante para página de aterrizaje, historias técnicas con rol de desarrollo y criterios en formato Gherkin con escenarios felices, alternos y de error, reordenamiento del backlog por valor de negocio e implementación de secciones 6.1, 6.2 y 6.3 con guías de estilo, arquitectura de información, esquema estructural y maqueta de página de aterrizaje |
-|   TP1   | 2026-10-09  | Contreras López, Leandro Saúl | Correción del Capítulo IV en decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance del Capítulo V en capas de dominio y aplicación con trazabilidad hacia riesgos de cocina |
-|   TP1   | 2026-10-09  | Machado Bracamonte, Ivo Marcelo | Correción del Capítulo IV en mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualización de diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance del Capítulo V en componentes, código y base de datos por contexto |
+|   TP1   | 2026-10-09  | Arostegui Alzamora, Cesar Augusto                                         | Correcciones del Capítulo III con historias de visitante para página de aterrizaje, historias técnicas con rol de desarrollo y criterios en formato Gherkin con escenarios felices, alternos y de error, reordenamiento del backlog por valor de negocio, e implementación de las Secciones 6.1, 6.2 y 6.3 del Capítulo VI (Solution UX Design) con guías de estilo, arquitectura de información, esquema estructural y maqueta de página de aterrizaje |
+|   TP1   | 2026-10-09  | Contreras López, Leandro Saúl | Corrección del Capítulo IV en decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance del Capítulo V (Tactical-Level Software Design) en capas de dominio y aplicación con trazabilidad hacia riesgos de cocina |
+|   TP1   | 2026-10-09  | Machado Bracamonte, Ivo Marcelo | Corrección del Capítulo IV en mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualización de diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance del Capítulo V (Tactical-Level Software Design) en componentes, código y base de datos por contexto |
 |   TP1   | 2026-10-09  | Valverde Portuguez, Natalia Ximena                                       | Diseño de wireframes y wireflows de navegación de aplicación web para perfiles de trabajo operativo y gestión, en coherencia plena con historias, backlog y contextos de cocina |
 |   TP1   | 2026-10-09  | Choy Robles, Vanessa May Lang                                             | Diseño de wireframes y wireflows de navegación de aplicación móvil para perfiles de trabajo operativo y gestión, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda |
 
@@ -94,8 +94,8 @@ El equipo ha trabajado de manera colaborativa siguiendo un registro de versiones
 ### TP1
 
 1. Arostegui Alzamora Cesar Augusto corrigió el Capítulo III con historias de visitante para la página de aterrizaje, historias técnicas con escenarios de petición y respuesta en formato Gherkin, criterios ampliados con casos alternos y de error, y backlog reordenado por valor de negocio, y redactó las secciones 6.1, 6.2 y 6.3 con lineamientos de estilo, arquitectura de información, esquema estructural y maqueta de la página de aterrizaje.
-2. Contreras López Leandro Saúl corrigió decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance táctico en capas de dominio y aplicación.
-3. Machado Bracamonte Ivo Marcelo corrigió el mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualizó diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance táctico en componentes, código y base de datos por contexto.
+2. Contreras López Leandro Saúl corrigió decisiones mediante etapas de taller de atributos de calidad con matriz comparativa de patrones, corrección de EventStorming con técnica explícita, redefinición del dominio central hacia seguridad y monitoreo en cocina con lienzos delimitados y flujos actualizados, y avance del Capítulo V (Tactical-Level Software Design) en capas de dominio y aplicación.
+3. Machado Bracamonte Ivo Marcelo corrigió el mapa de contextos con sentido ascendente y descendente y patrón explícito por relación, actualizó diagramas de paisaje, contexto, contenedores y despliegue con panel local junto a pasarela de borde y detección de anomalías para operación aun sin internet, y avance del Capítulo V (Tactical-Level Software Design) en componentes, código y base de datos por contexto.
 4. Valverde Portuguez Natalia Ximena diseñó wireframes y wireflows de navegación de la aplicación web, con recorridos diferenciados para trabajo operativo y gestión y coherencia plena con historias y backlog.
 5. Choy Robles Vanessa May Lang diseñó wireframes y wireflows de navegación de la aplicación móvil, con énfasis en reporte inmediato, consulta de estado y continuidad operativa en tienda.
 6. El equipo integró correcciones y nuevos capítulos mediante ramas por aporte, revisión cruzada y consolidación en la rama principal, y alineó artefactos de UXPressia, tablero de EventStorming, herramienta C4 y backlog con lo expuesto en video, con carátula actualizada a diciembre de 2026.
@@ -204,15 +204,15 @@ A continuación se presenta la evidencia correspondiente a la entrega TP1, con h
     - [7.1.3. Source Code Style Guide & Conventions](#713-source-code-style-guide--conventions)
     - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
   - [7.2. Solution Implementation](#72-solution-implementation)
-    - [7.2.X. Sprint n](#72x-sprint-n)
-      - [7.2.X.1. Sprint Planning n](#72x1-sprint-planning-n)
-      - [7.2.X.2. Sprint Backlog n](#72x2-sprint-backlog-n)
-      - [7.2.X.3. Development Evidence for Sprint Review](#72x3-development-evidence-for-sprint-review)
-      - [7.2.X.4. Testing Suite Evidence for Sprint Review](#72x4-testing-suite-evidence-for-sprint-review)
-      - [7.2.X.5. Execution Evidence for Sprint Review](#72x5-execution-evidence-for-sprint-review)
-      - [7.2.X.6. Services Documentation Evidence for Sprint Review](#72x6-services-documentation-evidence-for-sprint-review)
-      - [7.2.X.7. Software Deployment Evidence for Sprint Review](#72x7-software-deployment-evidence-for-sprint-review)
-      - [7.2.X.8. Team Collaboration Insights during Sprint](#72x8-team-collaboration-insights-during-sprint)
+    - [7.2.1. Sprint 1](#721-sprint-1)
+      - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+      - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+      - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+      - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+      - [7.2.1.5. Execution Evidence for Sprint Review](#7215-execution-evidence-for-sprint-review)
+      - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+      - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+      - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
   - [7.3. Validation Interviews](#73-validation-interviews)
     - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
     - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
@@ -1240,7 +1240,7 @@ Las restricciones arquitectónicas para el proyecto ElectroLink se han categoriz
 | CON-03 | Persistencia en PostgreSQL | Toda la información relacional, incluyendo datos de usuarios, credenciales, locales e historiales de mantenimiento, debe persistirse obligatoriamente en PostgreSQL. | Escenario 1: Almacenamiento de transaccionesDado que un manager registra la asignación de un técnico,Cuando el sistema guarda la transacción,Entonces los datos se persisten asegurando atomicidad dentro de la base de datos PostgreSQL. | Todas |
 | CON-04 | Frontend Segregado (Angular y Flutter) | El ecosistema cliente debe separar la tecnología: la web administrativa (SPA) se construirá con Typescript/Angular, mientras que la aplicación móvil se desarrollará con Dart/Flutter. | Escenario 1: Uso de dashboard administrativoDado que el manager de tienda abre la plataforma web,Cuando visualiza el consumo eléctrico en tiempo real,Entonces la interfaz reacciona de forma fluida e interactiva usando componentes de Angular.Escenario 2: Notificaciones en campoDado que un técnico o trabajador usa la app móvil,Cuando recibe una alerta de voltaje,Entonces la experiencia nativa es soportada por el framework Flutter. | EP02 y EP03 |
 | CON-05 | Infraestructura Cloud en Microsoft Azure | El despliegue de la solución (API backend, frontend SPA y base de datos) debe realizarse exclusivamente sobre la nube de Microsoft Azure, usando Azure App Service. | Escenario 1: Despliegue en producciónDado que se finaliza un sprint y se lanza una nueva versión,Cuando el pipeline de CI/CD publica la API, el frontend y las migraciones de base de datos,Entonces estos se alojan en Azure App Service dentro de la infraestructura de Azure. | Todas | 
-| CON-06 | Integraciones de Terceros Obligatorias | La plataforma está restringida a usar Stripe para la facturación SaaS, Firebase Cloud Messaging (FCM/APNs) para alertas Push, y Mapbox/Google Maps para geolocalización. | Escenario 1: Pago de suscripciónDado que una cadena de comida rápida adquiere el plan Premium,Cuando realiza el pago mensual,Entonces el cobro se procesa obligatoriamente a través de los webhooks de Stripe.Escenario 2: Alerta Crítica PushDado que el sistema detecta una fuga de corriente,Cuando dispara la alerta móvil,Entonces la notificación viaja a través de FCM/APNs. | EP02 y EP05 |
+| CON-06 | Integraciones de Terceros Obligatorias | La plataforma está restringida a usar Stripe para la facturación SaaS y Firebase Cloud Messaging (FCM) para alertas Push. No se requiere integración de geolocalización, ya que la ubicación que maneja la solución se refiere a la ubicación dentro de la cocina del local. | Escenario 1: Pago de suscripciónDado que una cadena de comida rápida adquiere el plan Premium,Cuando realiza el pago mensual,Entonces el cobro se procesa obligatoriamente a través de los webhooks de Stripe.Escenario 2: Alerta Crítica PushDado que el sistema detecta una fuga de corriente,Cuando dispara la alerta móvil,Entonces la notificación viaja a través de FCM. | EP02 y EP05 |
 | CON-07 | Cumplimiento Normativo SST | El sistema debe generar evidencias, bitácoras y reportes inmutables de incidentes que cumplan estrictamente con los estándares legales peruanos (SUNAFIL, OSINERGMIN, INDECI). | Escenario 1: Auditoría de seguridad oficialDado que el local recibe una inspección inopinada de SUNAFIL,Cuando el administrador exporta el reporte de salud técnica,Entonces el PDF generado contiene firmas digitales y un registro inalterable que sustenta el cumplimiento legal del local. | EP04 |
 
 La tabla de restricciones arquitectónicas establece las condiciones que deben cumplirse durante el diseño del proyecto, evitando dudas o decisiones técnicas innecesarias desde el inicio. Estas restricciones tecnológicas, operativas y legales se organizan mediante escenarios BDD (Dado/Cuando/Entonces), lo que permite definir pruebas claras para validar su cumplimiento. Para ElectroLink, esta tabla ayuda a garantizar que la arquitectura funcione correctamente en el entorno de una cocina de comida rápida y cumpla con las normas de seguridad y regulación correspondientes (SUNAFIL/INDECI). De esta manera, se busca que la solución tecnológica sea viable y contribuya a los objetivos del negocio.
@@ -1647,9 +1647,8 @@ Los sistemas externos relevantes son:
 -   **Stripe**: procesa los pagos de las suscripciones SaaS.
 -   **FCM / APNs**: distribuye notificaciones Push.
 -   **Servicios de Mensajería**: permiten entregar SMS, correo o WhatsApp.
--   **Mapbox / Google Maps**: proporciona servicios de geolocalización cuando las funcionalidades de la plataforma lo requieren.
 
-Stripe, FCM/APNs y Mapbox/Google Maps corresponden además a integraciones establecidas como restricciones del proyecto.
+Stripe y FCM/APNs corresponden además a integraciones establecidas como restricciones del proyecto. La solución no utiliza servicios de geolocalización, puesto que la ubicación que maneja se refiere a la ubicación dentro de la cocina del local.
 
 \
 ![](assets-emergentes/ElectroLinkSystemContext.png)
@@ -7901,6 +7900,8 @@ A continuación se mostrarán los diseños realizados en Figma para la creación
 
 ### 6.3.1. Landing Page Wireframe
 
+#### Desktop Web Browser
+
 ![Landing Page Wireframe 1](assets/cap6/wireframes/landing/landing-wireframe-1.png)
 
 ![Landing Page Wireframe 2](assets/cap6/wireframes/landing/landing-wireframe-2.png)
@@ -7919,11 +7920,17 @@ A continuación se mostrarán los diseños realizados en Figma para la creación
 
 ![Landing Page Wireframe 9](assets/cap6/wireframes/landing/landing-wireframe-9.png)
 
+#### Mobile Web Browser
+
+Los wireframes de la versión Mobile Web Browser adaptan la misma estructura de la landing page a pantallas de menor tamaño, manteniendo los encabezados, secciones de contenido, botones de acción y áreas de navegación. Los call-to-action de la landing redirigen a la aplicación web para la toma de decisión de compra y al sitio de descarga de la aplicación móvil, ya que el Manager del Local utiliza la app móvil para recibir y atender las alertas.
+
 Los wireframes muestran la estructura y disposición de los elementos en la landing page, incluyendo encabezados, secciones de contenido, botones de acción y áreas de navegación. Estos diseños preliminares sirven como guía para el desarrollo visual y funcional, asegurando que la experiencia del usuario sea coherente y efectiva.
 
 ---
 
 ### 6.3.2. Landing Page Mock-up
+
+#### Desktop Web Browser
 
 ![Landing Page Mock-up 1](assets/cap6/mockups/landing/landing-mockup-1.png)
 
@@ -7942,6 +7949,10 @@ Los wireframes muestran la estructura y disposición de los elementos en la land
 ![Landing Page Mock-up 8](assets/cap6/mockups/landing/landing-mockup-8.png)
 
 ![Landing Page Mock-up 9](assets/cap6/mockups/landing/landing-mockup-9.png)
+
+#### Mobile Web Browser
+
+Los mock-ups de la versión Mobile Web Browser adaptan la interfaz de la landing page a pantallas de menor tamaño, manteniendo la identidad visual con los colores azul principal y cian. Los call-to-action redirigen a la aplicación web, para la toma de decisión de compra, y al sitio de descarga de la aplicación móvil, ya que el Manager del Local utiliza la app móvil para recibir y atender las alertas.
 
 Con la acentuación de los colores azul principal y cian, los mock-ups presentan una interfaz visualmente atractiva y profesional, destacando la información crítica y facilitando la navegación intuitiva para los usuarios. La disposición de los elementos asegura que los usuarios puedan acceder rápidamente a las funcionalidades clave de ElectroLink, mientras que el diseño responsivo garantiza una experiencia consistente en diferentes dispositivos.
 
