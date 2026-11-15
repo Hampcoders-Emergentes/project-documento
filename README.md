@@ -9482,7 +9482,7 @@ Link del video About-the-Product en YouTube: [https://youtu.be/WRk7asmM5is](http
 
 - El análisis competitivo confirma que el valor diferencial de ElectroLink está en la prevención de accidentes y en la generación de evidencia para fiscalización, más que en la sola medición de consumo, lo cual da sustento a lo definido en historias, backlog y arquitectura. Se recomienda priorizar en la implementación las funciones de historial por equipo, facturación formal y reporte para fiscalización, pues son las que justifican el pago de la suscripción ante la gerencia regional.
 
-- El diseño estratégico logrado en la entrega AV1, con arquitectura de monolito modular, ingesta IoT y alertas tempranas, deja una base viable y escalable para avanzar hacia la implementación sin necesidad de un rediseño mayor. Se recomienda incorporar desde el inicio el almacenamiento local y la sincronización posterior de telemetría, para mantener la alerta local activa aun con pérdida de conectividad y evitar vacíos de información.
+- El diseño estratégico logrado en la entrega TB1, con arquitectura de monolito modular, ingesta IoT y alertas tempranas, deja una base viable y escalable para avanzar hacia la implementación sin necesidad de un rediseño mayor. Se recomienda incorporar desde el inicio el almacenamiento local y la sincronización posterior de telemetría, para mantener la alerta local activa aun con pérdida de conectividad y evitar vacíos de información.
 
 - El trabajo colaborativo con reparto por capítulos, ramas por avance y revisión cruzada permitió articular hallazgos de campo con decisiones técnicas, manteniendo coherencia entre problemática, requerimientos y propuesta arquitectónica. Se recomienda definir umbrales, roles y protocolos de apagado seguro junto a un especialista eléctrico, para evitar falsas alarmas y asegurar un uso correcto por parte de personal operativo sin formación técnica.
 
@@ -9493,6 +9493,12 @@ Link del video About-the-Product en YouTube: [https://youtu.be/WRk7asmM5is](http
 - La dinámica colaborativa exhibe una madurez comunicativa encomiable, sustentada en el reparto equitativo, la revisión cruzada y la presentación transparente de resultados ante audiencias diversas. Se recomienda perpetuar este rigor deliberativo y documentar con esmero cada aporte individual a fin de preservar la memoria del quehacer colectivo.
 
 - La proyección de la solución hacia su materialización exige prudencia, gradualidad y sentido ético, con atención prioritaria a la fiabilidad, la claridad de uso y el respeto por la integridad del personal. Se recomienda avanzar mediante pilotos acotados, aprendizaje continuo y ajuste sensible a lo observado en la realidad operativa.
+
+- El diseño de la experiencia de uso evidencia que la interfaz debe adaptarse a cada perfil, ofreciendo flujos simples y orientados a la acción inmediata para el personal operativo y vistas consolidadas para la gestión, lo cual facilita la adopción y reduce la fricción. Se recomienda validar los prototipos con usuarios reales antes de la implementación definitiva, ajustando la navegación y la terminología a las rutinas de cada perfil.
+
+- La implementación del primer sprint demuestra que es viable construir de forma incremental la solución, integrando frontend, servicios backend y despliegue, y que la evidencia de desarrollo, pruebas y despliegue aporta trazabilidad al trabajo del equipo. Se recomienda mantener la cadencia de sprints con revisiones cruzadas y documentación de evidencias, para asegurar la calidad y la continuidad del producto.
+
+- La validación con usuarios mediante entrevistas heurísticas confirma que los flujos propuestos responden a las necesidades de reporte, seguimiento y consulta de estado, aunque también revela oportunidades de mejora en claridad y accesibilidad. Se recomienda incorporar las observaciones de usabilidad de forma priorizada en los siguientes incrementos, con especial atención a la legibilidad de las alertas y a la simplicidad de los reportes.
 
 ## Video About-the-Team
 
